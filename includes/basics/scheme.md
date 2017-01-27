@@ -1,0 +1,1 @@
+For security, the {{ stache.config.api_type_name }} communicates exclusively over HTTPS.

@@ -1,0 +1,16 @@
+# =============================================
+# URLs
+# each Blackbaud product will have a dedicated route for the Authorization endpoint
+# (and we’re still evaluating whether the Token endpoint should follow this pattern or not)
+# =============================================
+sub_domain: blackbaud.com
+portal_product_route_prefix: sky
+authorization_hostname: oauth2.sky.<%= stache.config.sub_domain %>
+developer_app_management_url: https://developerapp.sky.blackbaud.com/applications
+
+# =============================================
+# ADMIN TOOLBAR
+# =============================================
+github_branch: prod
+bbauth:
+  isEnabled: false

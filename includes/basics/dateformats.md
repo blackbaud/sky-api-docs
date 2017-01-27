@@ -1,0 +1,3 @@
+Unless otherwise specified, dates are represented within the {{ stache.config.api_type_name }} in <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format.  Some endpoints may further support time components or <a href="https://en.wikipedia.org/wiki/ISO_8601#UTC" target="_blank">Coordinated Universal Time (UTC)</a> format.  Refer to the specific endpoint documentation for details on what date formats are supported.
+
+Note that fuzzy dates are handled differently from the ISO-8601 standard.  For more information on fuzzy dates, see <a href="#fuzzy-dates" class="smooth-scroll">fuzzy dates</a>.

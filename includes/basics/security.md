@@ -1,0 +1,1 @@
+When calling the SKY API or when manually working with data in the underlying products, remember that specific operations and access to data follow the same rules. Required fields on records, business rules, and your user security (including advanced security) are all considered. For further information, review endpoint descriptions.

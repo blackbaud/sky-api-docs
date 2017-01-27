@@ -1,0 +1,1 @@
+Unless otherwise noted, all endpoints within the {{ stache.config.api_type_name }} accept and return data formatted as <a href="http://www.json.org/" target="_blank">JSON</a>. The `Content-Type` request header with a value of `application/json` is required when providing content on the body of a request.

@@ -1,0 +1,505 @@
+# =============================================
+# PRODUCT
+# =============================================
+product_name_long: SKY API
+product_name_short: SKY API
+api_type_name: SKY API
+title: <%= stache.config.product_name_short %> Developer Portal
+authorization_service_name: Blackbaud Authorization Service
+access_token_expiration_minutes: 60 minutes
+refresh_token_expiration_days: 60 days
+portal_name: Blackbaud Developer Portal
+dev_console_name: SKY API Console
+api_product: API product
+api_product_name: SKY API Standard Edition
+sandbox_name: Developer Sandbox
+renxt: "Raiser's Edge NXT"
+fenxt: Financial Edge NXT
+
+# =============================================
+# ADMIN TOOLBAR
+# =============================================
+showAdminToolbar: false
+github_org: blackbaud
+github_repo: sky-api-documentation
+github_branch: develop
+omnibar:
+  enableHelp: false
+  enableSearch: true
+  serviceName: SKY API
+  serviceNameLink: <%= stache.config.portal %>
+  delegationUri: <%= stache.config.portal_signin %>
+showOmnibar: true
+
+# =============================================
+# Custom Partials
+# =============================================
+partial_header_nav: includes/partial-header-profile.hbs
+partial_footer_navigation: includes/partial-footer-profile.hbs
+partial_footer_logo: includes/partial-footer-logo.hbs
+copyright: includes/partial-copyright.hbs
+partial_header_edit: includes/partial-header-edit.hbs
+partial_disqus: includes/partial-disqus.hbs
+
+# =============================================
+# Custom Styles and JavaScript
+# =============================================
+files:
+  css:
+  - /assets/css/custom.css
+  js:
+    - /assets/js/scrollreveal.js
+    - /assets/js/custom.js
+
+# =============================================
+# GitHub config
+# =============================================
+github: https://github.com/blackbaud/
+github_repo_web_api_authorization: <%= stache.config.github %>sky-api-tutorial-auth-code-nodejs/
+github_repo_web_api_authorization_c_sharp: <%= stache.config.github %>sky-api-tutorial-auth-code-c-sharp/
+github_repo_web_api_authorization_chrome_extension: <%= stache.config.github %>sky-api-tutorial-bff-pattern/
+github_repo_barkbaud_nodejs: <%= stache.config.github %>barkbaud/
+github_repo_implicit_flow_chrome_extension: <%= stache.config.github %>sky-api-tutorial-implicit-flow-chrome-extension/
+github_repo_implicit_flow_angular: <%= stache.config.github %>sky-api-tutorial-implicit-flow-angular/
+github_repo_implicit_flow_angular2: <%= stache.config.github %>sky-api-tutorial-implicit-flow-angular2/
+
+# =============================================
+# Disqus config
+# =============================================
+comments_key: sky-api
+
+
+# =============================================
+# Docs > Guide
+# =============================================
+guide: <%= stache.config.base %>docs/
+guide_getting_started: <%= stache.config.base %>docs/getting-started/
+guide_overview: <%= stache.config.base %>docs/overview/
+guide_basics: <%= stache.config.base %>docs/basics/
+guide_basics_subscription: <%= stache.config.base %>docs/basics/#subscription
+guide_basics_apiconsole: <%= stache.config.base %>docs/basics/#activating-the-sky-api-console
+guide_code: <%= stache.config.base %>docs/code/
+guide_code_barkbaud: <%= stache.config.guide_code %>app-showcase/
+guide_registering_your_app: <%= stache.config.guide %>apps/
+guide_web_api_authorization: <%= stache.config.guide %>authorization/
+guide_web_api_authorization_auth_code_flow: <%= stache.config.guide %>authorization/auth-code-flow/
+guide_web_api_authorization_implicit_flow: <%= stache.config.guide %>authorization/implicit-flow/
+guide_web_api_common_auth_issues: <%= stache.config.guide %>authorization/common-auth-issues
+guide_web_api_activate_application: <%= stache.config.guide %>apps/#activate-your-application
+guide_web_api_authorization_auth_code_flow_tutorial_home:  <%= stache.config.guide %>code/auth-code-flow/
+guide_web_api_authorization_auth_code_flow_tutorial: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>nodejs/
+guide_web_api_authorization_auth_code_flow_tutorial_c_sharp: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>c-sharp/
+guide_apps_client_id_name: Application ID
+guide_apps_client_secret_name: Application secret
+guide_apps_client_regenerate_menuitem_name: Regenerate secret
+guide_tutorial: <%= stache.config.base %>docs/tutorials/
+guide_tutorial_application: <%= stache.config.base %>docs/tutorials/application
+
+# =============================================
+# Docs > Support
+# =============================================
+support: <%= stache.config.base %>support/
+support_community: https://community.blackbaud.com/developer
+support_changelog: <%= stache.config.support %>changelog/
+support_changelog_gl: <%= stache.config.support %>changelog/gl
+support_ideas: <%= stache.config.support %>ideas/
+support_ideas_url: https://blackbaud-developer.ideas.aha.io/ideas
+support_faq: <%= stache.config.support %>faq/
+support_issues: <%= stache.config.support %>issues/
+support_status: https://skyapi.statuspage.io
+support_need_help_url: https://www.blackbaud.com/support/needhelp.aspx
+
+# =============================================
+# URLs
+# each Blackbaud product will have a dedicated route for the Authorization endpoint
+# (and we’re still evaluating whether the Token endpoint should follow this pattern or not)
+# PROD URLs are located in stache.prod.yml and override variables with same name in stache.yml.
+#  stache.prod.yml values are respected at build time via the build bash script which looks toward
+#  a kudu website variable to decide with dev or prod mode.
+# =============================================
+
+# External URLs
+tutorial_barkbaud_live_demo: 'https://barkbaud.herokuapp.com'
+tutorial_auth_code_flow_dotnet_live_demo: 'https://dotnetauthcode.azurewebsites.net/'
+skyux: http://skyux.developer.blackbaud.com/ 
+partner_program: https://www.blackbaud.com/partners/become-a-partner
+
+# Dev URLs
+sub_domain: blackbaud.com
+accounts_payable_suffix: /accountspayable
+constituent_api_suffix: /constituent
+gl_api_suffix: /generalledger
+
+# Portal URLs
+portal_product_route_prefix: sky
+portal: https://developer.<%= stache.config.portal_product_route_prefix %>.<%= stache.config.sub_domain %>/
+
+# Auth URLs
+authorization_product_route_prefix: renxt
+authorization_hostname: oauth2.apim.<%= stache.config.sub_domain %>
+authorization_base_url: https://<%= stache.config.authorization_hostname %>/
+authorization_endpoint: <%= stache.config.authorization_base_url %>authorization
+token_endpoint: <%= stache.config.authorization_base_url %>token
+
+# Base URLs
+resource_hostname: api.<%= stache.config.portal_product_route_prefix %>.<%= stache.config.sub_domain %>
+resource_url: https://<%= stache.config.resource_hostname %>/constituent
+api_proxy_base_url: https://<%= stache.config.resource_hostname %>
+skyux: http://skyux.developer.blackbaud.com/
+
+# API Terms of Use URL  https://developer.sky.blackbaud.com/constituent-entity-reference#Action
+terms_of_use_url: <%= stache.config.portal %>terms
+
+# =============================================
+# Azure API Mgt Developer PORTAL
+# =============================================
+portal_user: bbapidev
+portal_analytics: <%= stache.config.portal %>developer/analytics/
+portal_signin: <%= stache.config.portal %>signin/
+portal_signup: <%= stache.config.portal %>signup/
+portal_products: <%= stache.config.portal %>products/
+portal_endpoints: <%= stache.config.portal %>docs/services/
+portal_ratelimit: <%= stache.config.portal %>usage-increase
+
+# =============================================
+# CONSTITUENT API ENDPOINTS
+# =============================================
+
+# Constituent API
+portal_endpoints_constituent: <%= stache.config.portal_endpoints %>56b76470069a0509c8f1c5b3/
+portal_endpoints_constituent_create: <%= stache.config.portal_endpoints_constituent %>operations/578d324da9db950becc619fe
+portal_endpoints_constituent_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f09
+portal_endpoints_constituent_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5707c92ca9db9509d054ad37
+portal_endpoints_constituent_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0a
+portal_endpoints_constituent_search: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2d
+
+# Constituent Actions
+portal_endpoints_constituent_action_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efa/
+portal_endpoints_constituent_action_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7ef9/
+portal_endpoints_constituent_action_add: <%= stache.config.portal_endpoints_constituent %>operations/56b76471069a050520297715/
+portal_endpoints_constituent_action_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efb/
+portal_endpoints_constituent_action_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efc/
+
+# Action Types
+portal_endpoints_action_types_get: <%= stache.config.portal_endpoints_constituent %>operations/574f4bc7d7dcde0740edb969/
+
+# Action Statuses
+portal_endpoints_action_statuses_get: <%= stache.config.portal_endpoints_constituent %>operations/574f4bc7d7dcde0740edb96a/
+
+# Constituent Address
+portal_endpoints_constituent_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f03
+portal_endpoints_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5808fd85a9db9503b8d3de93
+portal_endpoints_constituent_address_create: <%= stache.config.portal_endpoints_constituent %>operations/5759e449a9db950830404ae0
+portal_endpoints_constituent_address_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f05
+portal_endpoints_constituent_addresstypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5744a7efd7dcde29b07a4d8e
+
+portal_endpoints_constituent_address_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f04
+
+# Constituent Attachments
+portal_endpoints_constituent_attachment_create: <%= stache.config.portal_endpoints_constituent %>operations/57c73331a9db950f507ab01e/
+portal_endpoints_constituent_attachment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f00/
+portal_endpoints_constituent_attachment_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f02/
+portal_endpoints_constituent_attachment_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f01/
+
+# Constituent Code
+portal_endpoints_constituent_code_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0b/
+portal_endpoints_all_constituent_code_get_list: <%= stache.config.portal_endpoints_constituent %>operations/582a40e2d7dcde0bdc6e6e49/
+portal_endpoints_constituent_code_add: <%= stache.config.portal_endpoints_constituent %>operations/571e7ec0d7dcde163ca5394a/
+portal_endpoints_constituent_code_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0c/
+portal_endpoints_constituent_code_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0d/
+
+# Constituent code types (Get list)
+portal_endpoints_constituentcodetypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/573f727fd7dcde29b07a4d7f/
+
+# Constituent Memberships
+portal_endpoints_constituent_membership_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1b/
+
+# Constituent Education
+portal_endpoints_constituent_education_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f12/
+
+# Constituent Email Address
+portal_endpoints_constituent_email_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f13/
+portal_endpoints_email_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5808fd85a9db9503b8d3de94/
+portal_endpoints_constituent_email_address_add: <%= stache.config.portal_endpoints_constituent %>operations/571e7ec0d7dcde163ca5394c/
+portal_endpoints_constituent_email_address_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f14/
+portal_endpoints_constituent_email_address_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f15/
+
+# Email address types
+portal_endpoints_constituent_emailaddresstypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/573f727fd7dcde29b07a4d80/
+
+# Constituent Name Format
+portal_endpoints_constituent_name_format_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1c/
+
+# Constituent Notes
+portal_endpoints_constituent_note_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1e/
+portal_endpoints_constituent_note_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1d/
+portal_endpoints_constituent_note_add: <%= stache.config.portal_endpoints_constituent %>operations/56b76471069a050520297722/
+portal_endpoints_constituent_note_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1f/
+portal_endpoints_constituent_note_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f20/
+
+# Note types
+portal_endpoints_note_types_get: <%= stache.config.portal_endpoints_constituent %>operations/574854c1d7dcde0740edb942/
+
+# Constituent Online Presence
+portal_endpoints_constituent_online_presence_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f21/
+portal_endpoints_online_presence_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5808fd85a9db9503b8d3de95/
+portal_endpoints_constituent_online_presence_add: <%= stache.config.portal_endpoints_constituent %>operations/57113151d7dcde074428f28d
+portal_endpoints_constituent_online_presence_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f22
+portal_endpoints_constituent_online_presence_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f22
+
+# Online presence types (Get list)
+portal_endpoints_constituent_onlinepresencetypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/573f727fd7dcde29b07a4d81/
+
+# Constituent Phone
+portal_endpoints_constituent_phone_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f24/
+portal_endpoints_phone_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5808fd85a9db9503b8d3de96/
+portal_endpoints_constituent_phone_add: <%= stache.config.portal_endpoints_constituent %>operations/573f727fd7dcde29b07a4d83/
+portal_endpoints_constituent_phone_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f25/
+portal_endpoints_constituent_phone_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f26/
+
+# Phone types (Get list)
+portal_endpoints_constituent_phonetypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/573f727fd7dcde29b07a4d85/
+
+# Constituent Profile Pics
+portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f27/
+
+# Constituent Relationship
+portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
+
+# Constituent Gifts Lifetime Giving
+portal_endpoints_constituent_lifetimegiving_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1a/
+portal_endpoints_constituent_firstgift_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f16/
+portal_endpoints_constituent_latestgift_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f19/
+portal_endpoints_constituent_greatestgift_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f18/
+
+# Constituent Custom Field
+portal_endpoints_constituent_customfield_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0e/
+portal_endpoints_all_constituent_custom_field_get_list: <%= stache.config.portal_endpoints_constituent %>operations/582a40e2d7dcde0bdc6e6e4a/
+portal_endpoints_constituent_customfield_create: <%= stache.config.portal_endpoints_constituent %>operations/5792743ba9db950cc00caa91/
+portal_endpoints_constituent_customfield_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f10/
+portal_endpoints_constituent_customfield_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f11/
+portal_endpoints_constituent_customfield_value_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0f/
+
+# Constituent Ratings
+portal_endpoints_constituent_ratings_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f29/
+portal_endpoints_constituent_ratings_create: <%= stache.config.portal_endpoints_constituent %>operations/57d02d5ca9db950f507ab048/
+portal_endpoints_constituent_ratings_edit: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2a/
+portal_endpoints_constituent_ratings_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2b/
+portal_endpoints_constituent_ratings_sources_get: <%= stache.config.portal_endpoints_constituent %>operations/57d97f1fd7dcde099c1c7e2c/
+portal_endpoints_constituent_ratings_categories_get: <%= stache.config.portal_endpoints_constituent %>operations/57d97f1fd7dcde099c1c7e2b/
+portal_endpoints_constituent_ratings_category_values_get: <%= stache.config.portal_endpoints_constituent %>operations/584f0e96a9db950f30fd9b44/
+
+# Custom Field Catagories - Constituent
+portal_endpoints_customfieldcatagories_constituent_get_list: <%= stache.config.portal_endpoints_constituent %>operations/577e6f83a9db950becc6199e/
+
+# Types - Titles
+portal_endpoints_constituent_titles_get_list:  <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf2/
+
+# Types - Suffixes
+portal_endpoints_constituent_suffixes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf1/
+
+# Types - Marital Statuses
+portal_endpoints_constituent_maritalstatustypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf0/
+
+# Currency Configurations
+portal_endpoints_currency_configuration_get: <%= stache.config.portal_endpoints_constituent %>operations/57bb5b29a9db951840d1d207/
+
+# Constituent Communication Preferences
+portal_endpoints_constituent_communication_preferences_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f06/
+portal_endpoints_constituent_communication_preferences_create: <%= stache.config.portal_endpoints_constituent %>operations/57ac8b82d7dcde1010c0647c/
+portal_endpoints_constituent_communication_preferences_edit: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f07
+portal_endpoints_constituent_communication_preferences_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f08/
+portal_endpoints_constituent_communication_preferences_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57ac8b82d7dcde1010c0647b/
+
+# Action Attachments
+portal_endpoints_action_attachment_create: <%= stache.config.portal_endpoints_constituent %>operations/57c73331a9db950f507ab01d/
+portal_endpoints_action_attachment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efd/
+portal_endpoints_action_attachment_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7eff/
+portal_endpoints_action_attachment_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efe/
+
+# Action Custom Fields
+portal_endpoints_action_custom_fields_create: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f7/
+portal_endpoints_action_custom_fields_edit: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f8/
+portal_endpoints_action_custom_fields_delete: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f9/
+portal_endpoints_action_custom_fields_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f4/
+portal_endpoints_action_custom_fields_get_categories: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f5/
+portal_endpoints_action_custom_fields_get_category_values: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f6/
+
+# Fundraiser
+portal_endpoints_fundraiser_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f17/
+portal_endpoints_constituent_fundraiser_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/*TODO*/
+
+# Prospect Status
+portal_endpoints_prospect_status_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f28/
+
+# =============================================
+# 			General Ledger API ENDPOINTS
+# =============================================
+
+# General Ledger API
+portal_endpoints_GL: <%= stache.config.portal_endpoints %>56eb17a0a9db9516c46bff6f/
+
+# Transaction Distribution Search
+portal_endpoints_transaction_distribution_search: <%= stache.config.portal_endpoints_GL %>operations/576aaed7a9db950830404b56/
+
+# Journal Entry Batch Edit
+portal_endpoints_journal_entry_batch_edit: <%= stache.config.portal_endpoints_GL %>operations/572cf64ed7dcde0a9076b759/
+
+# Account Search
+portal_endpoints_account_search: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1da/
+
+# Account Get
+portal_endpoints_account_get: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e0/
+
+# Account Cashflows Get
+portal_endpoints_account_cashflows_get: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e2/
+
+# Account Working Capitals List
+portal_endpoints_account_working_capitals_list: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e3/
+
+# Account Custom Fields List
+portal_endpoints_account_custom_fields_list: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e1/
+
+# Project Get
+portal_endpoints_project_get: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e4/
+
+# Project Search
+portal_endpoints_project_search: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1e4/
+
+# Project Search
+portal_endpoints_project_create: <%= stache.config.portal_endpoints_GL %>operations/5818add4a9db9503b8d3deed/
+
+# Project Search
+portal_endpoints_project_contact_create: <%= stache.config.portal_endpoints_GL %>operations/5818add4a9db9503b8d3deee/
+
+# Journal Entry Batch List
+portal_endpoints_journal_entry_batch_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1df/
+
+# Journal Entry Post
+portal_endpoints_journal_entry_post: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d73d/
+
+# Journal Entry Batch Get
+portal_endpoints_journal_entry_batch_get: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d739/
+
+# Fiscal Year List
+portal_endpoints_fiscal_year_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d738/
+
+# Class List
+portal_endpoints_class_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d737/
+
+# Account Structure
+portal_endpoints_account_structure: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d734/
+
+# Account Segment Value List
+portal_endpoints_account_segment_value_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d733/
+
+# Account Code List
+portal_endpoints_account_code_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d735/
+
+# Account Fund List
+portal_endpoints_account_fund_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d736/
+
+# Project Type List
+portal_endpoints_project_type_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d73f/
+
+# Project Status List
+portal_endpoints_project_status_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d740/
+
+# Project Division List
+portal_endpoints_project_division_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d741/
+
+# Project Department List
+portal_endpoints_project_department_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d743/
+
+# Project Location List
+portal_endpoints_project_location_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d742/
+
+# Project Post
+portal_endpoints_project_post: <%= stache.config.portal_endpoints_GL %>operations/5818add4a9db9503b8d3deed/
+
+# Journal Code List
+portal_endpoints_journal_code_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1db/
+
+# Transaction Code List
+portal_endpoints_transaction_code_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1e5/
+
+# Transaction Code List
+portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d744/
+
+# Journal Entry Custom Field List
+portal_endpoints_journal_entry_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a44/
+
+# Project Custom Field List
+portal_endpoints_project_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a45/
+
+# Budget Get
+portal_endpoints_budget_get: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a42/
+
+# Budget List
+portal_endpoints_budget_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a41/
+
+# Budget Account List
+portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a43/
+
+# Ledger Summary List
+portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a46/
+
+# =============================================
+# 			Accounts Payable API ENDPOINTS
+# =============================================
+
+# Accounts Payable API
+portal_endpoints_AP: <%= stache.config.portal_endpoints %>57a342f1d7dcde1c28a749fe/
+
+# Invoice List
+portal_endpoints_invoice_list: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d8/
+
+# Vendor List
+portal_endpoints_vendor_list: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063db/
+
+# Address List
+portal_endpoints_address_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24e/
+
+# Contact method List
+portal_endpoints_contact_method_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c250/
+
+# Note List
+portal_endpoints_note_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c252/
+
+# Invoice Get
+portal_endpoints_invoice_get: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24c/
+
+# Invoice Post
+portal_endpoints_invoice_post: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d9/
+
+# Vendor Get
+portal_endpoints_vendor_get: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24d/
+
+# Vendor Post
+portal_endpoints_vendor_post: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063dc/
+
+# Invoice Custom Field List
+portal_endpoints_invoice_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a49/
+
+# Vendor Custom Field List
+portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a4a/
+
+# Sample portal contract url  https://developer.sky.blackbaud.com/constituent-entity-reference#Action
+portal_contracts_menu: <%= stache.config.portal %>entity-reference
+portal_contracts: <%= stache.config.portal %>constituent-entity-reference
+portal_profile: <%= stache.config.portal %>developer/
+portal_auth_dropdown: "Blackbaud OAuth 2.0 Service"
+
+# =============================================
+# API Terms
+# =============================================
+subscription_keyname: bb-api-subscription-key
+
+bbauth:
+  isEnabled: true
+  clientId: sky-api-test.docs.blackbaud.com
+  authAddress: https://signin.blackbaud.com/
+  rootUrl: https://sky-api-test.docs.blackbaud.com
+
+# Sky UX
+latest_sky_release: '1.9.2'

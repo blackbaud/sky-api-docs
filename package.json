@@ -1,0 +1,25 @@
+{
+  "author": {
+    "name": "Blackbaud"
+  },
+  "engines": {
+    "node": "0.10.32"
+  },
+  "name": "renxt-api-docs",
+  "version": "0.0.19",
+  "description": "Blackbaud Documentation",
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "blackbaud-stache": "latest"
+  },
+  "devDependencies": {
+    "amdefine": "^1.0.0",
+    "blackbaud-stache-cli": "^0.3.16",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-sass": "^1.1.0"
+  }
+}
