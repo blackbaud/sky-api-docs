@@ -4,7 +4,7 @@ Third-party contributions are essential to keep the SKY API documentation useful
 
 ## Submit an issue
 
-See something missing? Want to suggest a new feature? [Submit an issue!](https://github.com/blackbaud/sky-api-documentation/issues) 
+See something missing? Want to suggest a new feature? [Submit an issue!](https://github.com/blackbaud/sky-api-docs/issues) 
 
 ## Submit a pull request
 
