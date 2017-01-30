@@ -12,6 +12,8 @@ showBreadcrumbs: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # Authorization Code Flow - NodeJS
 
 <a class="btn btn-primary" href="{{ stache.config.github_repo_web_api_authorization }}" target="blank"><i class="fa fa-github fa-lg"></i> GitHub</a>
@@ -468,3 +470,4 @@ function get(request, endpoint, callback) {
 [auth-tutorial-authorize]: /assets/img/auth_tutorial_authorize.png
 [auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent.png
 
+{{ include stache.config.partial_disqus }}

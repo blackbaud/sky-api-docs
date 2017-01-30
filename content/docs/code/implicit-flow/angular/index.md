@@ -11,6 +11,8 @@ showBreadcrumbs: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # Implicit Flow - {{ name }}
 
 <a class="btn btn-primary" href="{{ stache.config.github_repo_implicit_flow_angular }}" target="blank"><i class="fa fa-github fa-lg"></i> GitHub</a>
@@ -19,3 +21,4 @@ Learn how to create an AngularJS app that interacts with SKY API constituent dat
 
 <a href="{{ stache.config.github_repo_implicit_flow_angular }}" target="_blank">View the source on GitHub <i class="fa fa-external-link"></i></a>
 
+{{ include stache.config.partial_disqus }}

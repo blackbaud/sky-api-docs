@@ -21,7 +21,7 @@ fenxt: Financial Edge NXT
 # =============================================
 showAdminToolbar: false
 github_org: blackbaud
-github_repo: sky-api-documentation
+github_repo: sky-api-docs
 github_branch: develop
 omnibar:
   enableHelp: false

@@ -10,6 +10,8 @@ showInFooter: true
 priority: high
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # Authorization
 
 {{ stache.config.api_type_name }} uses the <a href="http://oauth.net/2/">OAuth 2.0</a> protocol to authorize API requests.  This provides a mechanism for your application to access Blackbaud customer data without exposing any user credentials (username/password) to your application. Instead, users must provide consent to your application to access data on their behalf.
@@ -69,3 +71,4 @@ If your access token was obtained using the <a href="{{ stache.config.guide_web_
 
 OAuth 2.0 Scopes are not yet supported within {{ stache.config.api_type_name }} - in the future, applications may be able to express intent via scopes but for now API access is always within the context of an authenticated user, which means that API access respects the user's security permissions defined within the product.
 
+{{ include stache.config.partial_disqus }}

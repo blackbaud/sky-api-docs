@@ -10,6 +10,7 @@ showInFooter: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
 
 # {{ name }}
 
@@ -75,3 +76,4 @@ The following information provides an overview of some key concepts within the {
 
 {{ include 'includes/basics/skyapiconsole.md' }}
 
+{{ include stache.config.partial_disqus }}

@@ -8,6 +8,8 @@ showInNav: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # {{ name }}
 
 You may encounter one of the following common issues when initiating authorization and calling the {{ stache.config.product_name_short }}.
@@ -105,3 +107,4 @@ The access token expires in {{ stache.config.access_token_expiration_minutes }} 
 
 If your access token _and_ refresh token have expired, the user will have to re-authenticate and consent.
 
+{{ include stache.config.partial_disqus }}

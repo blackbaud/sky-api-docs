@@ -7,6 +7,7 @@ icon: fa fa-fw fa-chrome
 showBreadcrumbs: true
 ---
 
+{{ include stache.config.partial_header_edit }}
 
 # Implicit Flow - {{ name }}
 
@@ -15,3 +16,5 @@ showBreadcrumbs: true
 Learn how to create a Chrome browser extension that interacts with Google's InboxSDK and SKY API constituent data via the OAuth 2.0 Implicit Flow.
 
 <a href="{{ stache.config.github_repo_implicit_flow_chrome_extension }}" target="_blank">View the source on GitHub <i class="fa fa-external-link"></i></a>
+
+{{ include stache.config.partial_disqus }}

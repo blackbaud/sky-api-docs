@@ -12,6 +12,7 @@ tutorial: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
 
 # Authorization Code Flow - C&#35; .NET Core
 
@@ -312,3 +313,5 @@ That's it!
 - Check out the [README]({{ stache.config.github_repo_web_api_authorization_c_sharp }}/blob/master/README.md) where you can view a live demo of the application hosted on Microsoft Azure.
 - The README also contains instructions for deploying to Azure App Services rather than your local development environment.
 - You can [create an issue]({{ stache.config.github_repo_web_api_authorization_c_sharp }}issues) to report a bug or request a feature for this code sample.  For all other feature requests, see [ideas]({{ stache.config.support_ideas }}).
+
+{{ include stache.config.partial_disqus }}
