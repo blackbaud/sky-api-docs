@@ -13,6 +13,14 @@ back_to_top: true
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-01-31
+ 
+#### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+
+We are updating some properties on the [education]({{ stache.config.portal_contracts }}#Education) entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.
+- The `major` and `minor` properties will both be updated to return an array of strings. They will also be renamed `majors` and `minors`.
+- The `subject_of_study` property will no longer be returned in the `major` property. Instead, it will use a dedicated property for UK-formatted databases. 
+
 ##2017-01-11
 
 ### Changed
