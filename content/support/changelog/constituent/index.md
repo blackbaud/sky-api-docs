@@ -224,13 +224,13 @@ Added the following endpoints:
 
 
 #### Changed
-We added the `date_added` and `date_modified` properties to the [address](https://developer.sky.blackbaud.com/constituent-entity-reference#Address), [email address](https://developer.sky.blackbaud.com/constituent-entity-reference#EmailAddress), [online presence](https://developer.sky.blackbaud.com/constituent-entity-reference#OnlinePresence), and [phone](https://developer.sky.blackbaud.com/constituent-entity-reference#Phone) entities.
+We added the `date_added` and `date_modified` properties to the [address]({{ stache.config.constituent_entity_reference }}#Address), [email address]({{ stache.config.constituent_entity_reference }}#EmailAddress), [online presence]({{ stache.config.constituent_entity_reference }}#OnlinePresence), and [phone]({{ stache.config.constituent_entity_reference }}#Phone) entities.
 
 ###2016-10-17
 
 #### Changed
 
-The `fundraisers` property on the [action](https://developer.sky.blackbaud.com/constituent-entity-reference#Action) entity now contains an array of strings populated with the `constituent_id` of fundraisers instead of an array of action fundraiser entities.
+The `fundraisers` property on the [action]({{ stache.config.constituent_entity_reference }}#Action) entity now contains an array of strings populated with the `constituent_id` of fundraisers instead of an array of action fundraiser entities.
 
 #### New
 
@@ -328,7 +328,7 @@ Added the following endpoints:
 
 #### Announcement: Breaking Changes Planned for [Constituent API]({{stache.config.portal_endpoints_constituent}})
 
-We will change the `fundraisers` property on the [action](https://developer.sky.blackbaud.com/constituent-entity-reference#Action) entity so that it contains a list of strings populated with the `constituent_id` of fundraisers instead of an array of action fundraiser entities.
+We will change the `fundraisers` property on the [action]({{ stache.config.constituent_entity_reference }}#Action) entity so that it contains a list of strings populated with the `constituent_id` of fundraisers instead of an array of action fundraiser entities.
 
 ### 2016-09-23
 
