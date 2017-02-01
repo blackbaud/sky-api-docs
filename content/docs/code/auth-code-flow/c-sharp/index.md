@@ -261,7 +261,7 @@ public ActionResult Callback()
 <pre><code class="language-markup" ng-non-bindable>&lt;div ng-if="isAuthenticated">
   &lt;h3>Constituent: {{ constituent.name }}&lt;/h3>
   &lt;p>
-    See &lt;a href="https://developer.sky.blackbaud.com/constituent-entity-reference" target="_blank">Constituent&lt;/a>
+    See &lt;a href="{{ stache.config.constituent_entity_reference }}">Constituent&lt;/a>
     within the SKY API entity reference for a full listing of properties.
   &lt;/p>
   &lt;p ng-if="::constituent.error" ng-bind="::constituent.error" class="alert alert-danger">&lt;/p>

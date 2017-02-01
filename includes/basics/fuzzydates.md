@@ -7,7 +7,7 @@ Fuzzy date fields generally allow the following formats:
 
 Some entities may support additional formats, so be sure to reference the specific documentation for an endpoint that accepts or returns a fuzzy date.
 
-For example, the <a href="{{ stache.config.portal }}constituent-entity-reference#Constituent" target="_blank">constituent</a> entity `birthdate` field is a fuzzy date that supports "month and day" as well as the above formats.  In the below sample JSON representation, only the `y` property of the fuzzy date is shown which indicates that only the year value is known:
+For example, the <a href="{{ stache.config.constituent_entity_reference }}#Constituent" target="_blank">constituent</a> entity `birthdate` field is a fuzzy date that supports "month and day" as well as the above formats.  In the below sample JSON representation, only the `y` property of the fuzzy date is shown which indicates that only the year value is known:
 
 <pre><code class="language-http">Date: Tue, 24 May 2016 19:47:44 GMT
 Content-Type: application/json; charset=utf-8
@@ -29,7 +29,7 @@ Content-Type: application/json; charset=utf-8
   }
 }</code></pre>
 
-The following example shows a partial collection of <a href="{{ stache.config.portal }}constituent-entity-reference#Note" target="_blank">notes</a> for a constituent. The `date` property is a fuzzy date, and in the first note the value represented is June, 2007.
+The following example shows a partial collection of <a href="{{ stache.config.constituent_entity_reference }}#Note" target="_blank">notes</a> for a constituent. The `date` property is a fuzzy date, and in the first note the value represented is June, 2007.
 
 <pre><code class="language-http">Date: Tue, 24 May 2016 19:47:44 GMT
 Content-Type: application/json; charset=utf-8
@@ -64,4 +64,4 @@ Content-Type: application/json; charset=utf-8
 <p class="alert alert-info">Fuzzy dates are <em>not</em> traditional <a href="#date-formats" class="smooth-scroll">dates</a> and do <em>not</em> conform to the <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> standard.</p>
 
 
-For additional information about fuzzy dates, see the <a href="{{ stache.config.portal }}constituent-management-contract-reference#FuzzyDate" target="_blank">entity reference</a>.
+For additional information about fuzzy dates, see the <a href="{{ stache.config.constituent_entity_reference }}#FuzzyDate" target="_blank">entity reference</a>.

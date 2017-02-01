@@ -1,0 +1,273 @@
+---
+layout: layout-container
+name: Opportunity Entity Reference
+order: 70
+published: false
+showInNav: false
+back_to_top: true
+---
+
+<h1>{{ name}}</h1>
+
+<p>Updated: November 30, 2016</p>
+
+
+    <p>This topic describes the entity and type representations for common items that the Opportunity API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
+    <ul>
+        <li><p><a href="#Campaign">Campaign</a></p></li>
+        <li><p><a href="#Collection">Collection</a></p></li>
+        <li><p><a href="#Currency">Currency</a></p></li>
+        <li><p><a href="#Fund">Fund</a></p></li>
+        <li><p><a href="#Fundraiser">Fundraiser</a></p></li>
+        <li><p><a href="#Opportunity">Opportunity</a></p></li>
+    </ul>
+
+
+<a id="Campaign"></a>
+<p>&nbsp;</p>
+<h2>Campaign</h2>
+<p>The <b>campaign</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The campaign identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The campaign description.</td>
+            </tr>
+            <tr>
+                <td>lookup_id</td>
+                <td>string</td>
+                <td>The campaign's lookup identifier.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Collection"></a>
+<p>&nbsp;</p>
+<h2>Collection</h2>
+<p>The <b>collection</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>count</td>
+                <td>integer</td>
+                <td>The total number of items in the collection.</td>
+            </tr>
+            <tr>
+                <td>next_link</td>
+                <td>URI</td>
+                <td>For paginated responses, this represents the URI for the next page of results.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>list</td>
+                <td>Contains a collection of items included in this response (which may be a subset of the total items in the collection).</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Currency"></a>
+<p>&nbsp;</p>
+<h2>Currency</h2>
+<p>The <b>currency</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>value</td>
+                <td>decimal</td>
+                <td>The monetary value.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Fund"></a>
+<p>&nbsp;</p>
+<h2>Fund</h2>
+<p>The <b>fund</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The fund identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The fund description.</td>
+            </tr>
+            <tr>
+                <td>lookup_id</td>
+                <td>string</td>
+                <td>The fund's lookup identifier.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Fundraiser"></a>
+<p>&nbsp;</p>
+<h2>Fundraiser</h2>
+<p>The <b>fundraiser</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The opportunity fundraiser identifier.</td>
+            </tr>
+            <tr>
+                <td>constituent_id</td>
+                <td>string</td>
+                <td>The fundraiser identifier</td>
+            </tr>
+            <tr>
+                <td>credit_amount</td>
+                <td><a href="#Currency">currency</a></td>
+                <td>The amount the fundraiser is credited for the opportunity.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Opportunity"></a>
+<p>&nbsp;</p>
+<h2>Opportunity</h2>
+<p>The <b>opportunity</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The opportunity identifier.</td>
+            </tr>
+            <tr>
+                <td>constituent_id</td>
+                <td>string</td>
+                <td>The constituent identifier.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The opportunity name.</td>
+            </tr>
+            <tr>
+                <td>purpose</td>
+                <td>string</td>
+                <td>The purpose of the opportunity.</td>
+            </tr>
+            <tr>
+                <td>status</td>
+                <td>string</td>
+                <td>The status of the opportunity.</td>
+            </tr>
+            <tr>
+                <td>deadline</td>
+                <td>dateTime</td>
+                <td>The opportunity deadline.</td>
+            </tr>
+            <tr>
+                <td>ask_date</td>
+                <td>dateTime</td>
+                <td>The ask date.</td>
+            </tr>
+            <tr>
+                <td>ask_amount</td>
+                <td><a href="#Currency">currency</a></td>
+                <td>The ask amount.</td>
+            </tr>
+            <tr>
+                <td>expected_date</td>
+                <td>dateTime</td>
+                <td>The expected date.</td>
+            </tr>
+            <tr>
+                <td>funded_date</td>
+                <td>dateTime</td>
+                <td>The opportunity description.</td>
+            </tr>
+            <tr>
+                <td>funded_amunt</td>
+                <td><a href="#Currency">currency</a></td>
+                <td>The funded amount.</td>
+            </tr>
+            <tr>
+                <td>campaign</td>
+                <td><a href="#Campaaign">campaign</a></td>
+                <td>The campaign related to the opportunity.</td>
+            </tr>
+            <tr>
+                <td>fund</td>
+                <td><a href="#Fund">fund</a></td>
+                <td>The fund related to the opportunity.</td>
+            </tr>
+            <tr>
+                <td>fundraisers</td>
+                <td>array of <a href="#Fundraiser">action fundraiser</a> entities.</td>
+                <td>The fundraisers assigned to the opportunity.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

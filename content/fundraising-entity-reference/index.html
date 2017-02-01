@@ -1,0 +1,54 @@
+---
+layout: layout-container
+name: Fundraising Entity Reference
+order: 30
+published: false
+showInNav: false
+back_to_top: true
+---
+
+<h1>{{ name}}</h1>
+
+
+<p>Updated: November 30, 2016</p>
+
+
+    <p>This topic describes the entity and type representations for common items that the Fundraising API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
+    <ul>
+		<li><p><a href="#Collection">Collection</a></p></li>
+    </ul>
+
+
+<a id="Collection"></a>
+<p>&nbsp;</p>
+<h2>Collection</h2>
+<p>The <b>collection</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>count</td>
+                <td>integer</td>
+                <td>The total number of items in the collection.</td>
+            </tr>
+            <tr>
+                <td>next_link</td>
+                <td>URI</td>
+                <td>For paginated responses, this represents the URI for the next page of results.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>list</td>
+                <td>Contains a collection of items included in this response (which may be a subset of the total items in the collection).</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,164 @@
+---
+layout: layout-container
+name: Volunteer Entity Reference
+order: 90
+published: false
+showInNav: false
+back_to_top: true
+---
+
+<h1>{{ name}}</h1>
+
+
+<p>Updated: January 26, 2017</p>
+
+<div class="introduction">
+    <p>This topic describes the entity and type representations for common items that the Volunteer API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="https://apidocs.sky.blackbaud.com/docs/getting-started">Getting Started</a> guide.</p>
+    <ul class="unordered">
+        <li><p><a href="#Assignment">Assignment</a></p></li>
+        <li><p><a href="#Availability">Availability</a></p></li>
+        <li><p><a href="#Summary">Summary</a></p></li>
+    </ul>
+</div>
+
+<a id="Assignment"></a>
+<p>&nbsp;</p>
+<h2>Assignment</h2>
+<p>The <b>assignment</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>constituent_id</td>
+                <td>string</td>
+                <td>The constituent identifier for the volunteer.</td>
+            </tr>
+            <tr>
+                <td>job_name</td>
+                <td>string</td>
+                <td>The name of the assigned job.</td>
+            </tr>
+            <tr>
+                <td>location</td>
+                <td>string</td>
+                <td>The location of the assignment.</td>
+            </tr>
+            <tr>
+                <td>department</td>
+                <td>string</td>
+                <td>The department of the assignment.</td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>dateTime</td>
+                <td>The start date of the assignment.</td>
+            </tr>
+            <tr>
+                <td>end</td>
+                <td>dateTime</td>
+                <td>The end date of the assignment.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Availability"></a>
+<p>&nbsp;</p>
+<h2>Availability</h2>
+<p>The <b>availability</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>days</td>
+                <td>string</td>
+                <td>The days when the volunteer is available. Available values are <i>sundays, mondays, tuesdays, wednesdays, thursdays, fridays, saturdays, alldays, weekdays, weekends, and notspecified</i>.</td>
+            </tr>
+            <tr>
+                <td>from</td>
+                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
+                <td>The date when the volunteer becomes available.</td>
+            </tr>
+            <tr>
+                <td>to</td>
+                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
+                <td>The date when the volunteer ceases to be available.</td>
+            </tr>
+            <tr>
+                <td>start_time</td>
+                <td>timespan</td>
+                <td>The time when the volunteer becomes available.</td>
+            </tr>
+            <tr>
+                <td>end_time</td>
+                <td>timespan</td>
+                <td>The time when the volunteer ceases to be available.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Summary"></a>
+<p>&nbsp;</p>
+<h2>Summary</h2>
+<p>The <b>summary</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>first_year_volunteered</td>
+                <td>integer</td>
+                <td>The first year volunteered.</td>
+            </tr>
+            <tr>
+                <td>total_hours</td>
+                <td>decimal</td>
+                <td>The total hours volunteered.</td>
+            </tr>
+            <tr>
+                <td>total_value</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>Estimated monetary value of the work that the volunteer completed.</td>
+            </tr>
+            <tr>
+                <td>total_years_volunteered</td>
+                <td>integer</td>
+                <td>The total years volunteered.</td>
+            </tr>
+            <tr>
+                <td>first_assignment</td>
+                <td><a href="#Assignment">assignment</a></td>
+                <td>The volunteer's first assignment.</td>
+            </tr>
+            <tr>
+                <td>last_assignment</td>
+                <td><a href="#Assignment">assignment</a></td>
+                <td>The volunteer's most recent assignment.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
