@@ -96,6 +96,21 @@ guide_tutorial: <%= stache.config.base %>docs/tutorials/
 guide_tutorial_application: <%= stache.config.base %>docs/tutorials/application
 
 # =============================================
+# Docs > Entity Reference
+# =============================================
+
+entity_reference: <%= stache.config.base %>entity-reference/
+accounts_payable_entity_reference: <%= stache.config.base %>accounts-payable-entity-reference/
+constituent_entity_reference: <%= stache.config.base %>constituent-entity-reference/
+fundraising_entity_reference: <%= stache.config.base %>fundraising-entity-reference/
+general_ledger_entity_reference: <%= stache.config.base %>general-ledger-entity-reference/
+gift_entity_reference: <%= stache.config.base %>gift-entity-reference/
+list_entity_reference: <%= stache.config.base %>list-entity-reference
+opportunity_entity_reference: <%= stache.config.base %>opportunity-entity-reference/
+treasury_entity_reference: <%= stache.config.base %>treasury-entity-reference/
+volunteer_entity_reference: <%= stache.config.base %>volunteer-entity-reference/
+
+# =============================================
 # Docs > Support
 # =============================================
 support: <%= stache.config.base %>support/
@@ -485,8 +500,8 @@ portal_endpoints_invoice_custom_field_list: <%= stache.config.portal_endpoints_A
 portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a4a/
 
 # Sample portal contract url  https://developer.sky.blackbaud.com/constituent-entity-reference#Action
-portal_contracts_menu: <%= stache.config.portal %>entity-reference
-portal_contracts: <%= stache.config.portal %>constituent-entity-reference
+portal_contracts_menu: <%= stache.config.base %>entity-reference/
+portal_contracts: <%= stache.config.base %>constituent-entity-reference
 portal_profile: <%= stache.config.portal %>developer/
 portal_auth_dropdown: "Blackbaud OAuth 2.0 Service"
 
