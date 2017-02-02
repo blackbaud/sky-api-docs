@@ -470,4 +470,3 @@ function get(request, endpoint, callback) {
 [auth-tutorial-authorize]: /assets/img/auth_tutorial_authorize.png
 [auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent.png
 
-{{ include stache.config.partial_disqus }}

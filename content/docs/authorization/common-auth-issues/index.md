@@ -107,4 +107,3 @@ The access token expires in {{ stache.config.access_token_expiration_minutes }} 
 
 If your access token _and_ refresh token have expired, the user will have to re-authenticate and consent.
 
-{{ include stache.config.partial_disqus }}

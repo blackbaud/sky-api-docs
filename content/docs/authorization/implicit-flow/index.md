@@ -189,4 +189,3 @@ Authorization: Bearer eyJ0eXAiOiJKV1...CTtP0CQ
 bb-api-subscription-key: 77f137116...480d633
 </code></pre>
 
-{{ include stache.config.partial_disqus }}

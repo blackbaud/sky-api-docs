@@ -52,4 +52,3 @@ To activate your application in a customer's tenant, have the **tenant administr
 
 Your application will then appear in the list of activated applications for the tenant.
 
-{{ include stache.config.partial_disqus }}

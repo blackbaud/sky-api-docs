@@ -31,4 +31,3 @@ This tutorial shows you how to try out the {{ stache.config.product_name_short }
 ## Step 6 - Next steps
 {{ include 'includes/shared/nxt-web-api/getting-started/step6.md' }}
 
-{{ include stache.config.partial_disqus }}

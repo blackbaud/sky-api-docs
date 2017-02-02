@@ -20,4 +20,4 @@ Learn how to create a Chrome browser extension that interacts with Google's Inbo
 
 <a href="{{ stache.config.github_repo_web_api_authorization_chrome_extension }}" target="_blank">View the source on GitHub <i class="fa fa-external-link"></i></a>
 
-{{ include stache.config.partial_disqus }}
+

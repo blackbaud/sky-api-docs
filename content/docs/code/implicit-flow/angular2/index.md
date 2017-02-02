@@ -21,4 +21,3 @@ Learn how to create an Angular 2 app that interacts with SKY API constituent dat
 
 <a href="{{ stache.config.github_repo_implicit_flow_angular2 }}" target="_blank">View the source on GitHub <i class="fa fa-external-link"></i></a>
 
-{{ include stache.config.partial_disqus }}
