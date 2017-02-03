@@ -100,15 +100,15 @@ guide_tutorial_application: <%= stache.config.base %>docs/tutorials/application
 # =============================================
 
 entity_reference: <%= stache.config.base %>api/entity-reference/
-accounts_payable_entity_reference: <%= stache.config.base %>api/accounts-payable-entity-reference/
-constituent_entity_reference: <%= stache.config.base %>api/constituent-entity-reference/
-fundraising_entity_reference: <%= stache.config.base %>api/fundraising-entity-reference/
-general_ledger_entity_reference: <%= stache.config.base %>api/general-ledger-entity-reference/
-gift_entity_reference: <%= stache.config.base %>api/gift-entity-reference/
-list_entity_reference: <%= stache.config.base %>api/list-entity-reference
-opportunity_entity_reference: <%= stache.config.base %>api/opportunity-entity-reference/
-treasury_entity_reference: <%= stache.config.base %>api/treasury-entity-reference/
-volunteer_entity_reference: <%= stache.config.base %>api/volunteer-entity-reference/
+accounts_payable_entity_reference: <%= stache.config.entity_reference %>accounts-payable
+constituent_entity_reference: <%= stache.config.entity_reference %>constituent
+fundraising_entity_reference: <%= stache.config.entity_reference %>fundraising
+general_ledger_entity_reference: <%= stache.config.entity_reference %>general-ledger
+gift_entity_reference: <%= stache.config.entity_reference %>gift
+list_entity_reference: <%= stache.config.entity_reference %>list
+opportunity_entity_reference: <%= stache.config.entity_reference %>opportunity
+treasury_entity_reference: <%= stache.config.entity_reference %>treasury
+volunteer_entity_reference: <%= stache.config.entity_reference %>volunteer
 
 # =============================================
 # Docs > Support
@@ -501,7 +501,7 @@ portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP
 
 # Sample portal contract url  https://apidocs.sky.blackbaud.com/api/constituent-entity-reference#Action
 portal_contracts_menu: <%= stache.config.base %>api/entity-reference/
-portal_contracts: <%= stache.config.base %>api/constituent-entity-reference
+portal_contracts: <%= stache.config.base %>api/entity-reference/constituent
 portal_profile: <%= stache.config.portal %>developer/
 portal_auth_dropdown: "Blackbaud OAuth 2.0 Service"
 
