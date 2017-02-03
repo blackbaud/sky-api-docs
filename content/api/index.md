@@ -18,7 +18,7 @@ showBreadcrumbs: true
                     <h2>
                         <a href="{{ stache.config.portal_endpoints }}">Endpoint Reference</a>
                     </h2>
-                    <p>Explore the endpoints available to you with the {{ stache.config.product_name_short }}</p>
+                    <p>Explore the endpoints available to you with the {{ stache.config.product_name_short }}.</p>
                 </div>
             </div>
 
