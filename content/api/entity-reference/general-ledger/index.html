@@ -1,0 +1,1004 @@
+---
+layout: layout-container
+name: General Ledger Entity Reference
+order: 40
+published: true
+showInNav: true
+back_to_top: true
+showBreadcrumbs: true
+---
+
+<h1>{{ name}}</h1>
+
+<p>Updated: July 06, 2016</p>
+
+
+    <p>This topic describes the entity and type representations for common items used by the General Ledger API.</p>
+    <ul>
+        <li><p><a href="#Account">Account</a></p></li>
+        <li><p><a href="#AccountCode">Account code</a></p></li>
+        <li><p><a href="#AccountSegmentDetail">Account segment detail</a></p></li>
+        <li><p><a href="#AccountSegmentValue">Account segment value</a></p></li>
+        <li><p><a href="#AccountStructure">Account structure detail</a></p></li>
+        <li><p><a href="#Class">Class</a></p></li>
+        <li><p><a href="#Distribution">Distribution</a></p></li>
+        <li><p><a href="#FiscalPeriod">Fiscal period</a></p></li>
+        <li><p><a href="#FiscalYear">Fiscal year</a></p></li>
+        <li><p><a href="#Fund">Fund</a></p></li>
+        <li><p><a href="#JournalCode">Journal code</a></p></li>
+        <li><p><a href="#JournalEntry">Journal entry</a></p></li>
+        <li><p><a href="#JournalEntryBatch">Journal entry batch</a></p></li>
+        <li><p><a href="#Project">Project</a></p></li>
+        <li><p><a href="#ProjectType">Project type</a></p></li>
+        <li><p><a href="#ProjectStatus">Project status</a></p></li>
+        <li><p><a href="#ProjectDivision">Project division</a></p></li>
+        <li><p><a href="#ProjectLocation">Project location</a></p></li>
+        <li><p><a href="#ProjectDepartment">Project department</a></p></li>
+        <li><p><a href="#TransactionCode">Transaction code</a></p></li>
+        <li><p><a href="#TransactionCodeValue">Transaction code value</a></p></li>
+        <li><p><a href="#TransactionDistribution">Transaction distribution</a></p></li>
+    </ul>
+    <p>For more information about working with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
+
+
+<a id="Account"></a>
+<p>&nbsp;</p>
+<h2>Account</h2>
+<p>The <b>account</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>account_id</td>
+            <td>string</td>
+            <td>The account identifier.</td>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>string</td>
+            <td>The account number.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The account description.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="AccountCode"></a>
+<p>&nbsp;</p>
+<h2>Account code</h2>
+<p>The <b>account code</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>account_code_id</td>
+                <td>string</td>
+                <td>The account code identifier.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>integer</td>
+                <td>The value of this account code.</td>
+            </tr>
+        <tr>
+            <td>category</td>
+            <td>string</td>
+            <td>The category for this account code.</td>
+        </tr>
+        <tr>
+            <td>class</td>
+            <td>string</td>
+            <td>The class of this account code.</td>
+        </tr>
+        <tr>
+            <td>is_contra</td>
+            <td>boolean</td>
+            <td>Whether this account code is contra.</td>
+        </tr>
+        <tr>
+            <td>is_control</td>
+            <td>boolean</td>
+            <td>Whether this account code is controlled.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The description for this account code.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="AccountSegmentDetail"></a>
+<p>&nbsp;</p>
+<h2>Account segment detail</h2>
+<p>The <b>account segment detail</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>segment_id</td>
+            <td>integer</td>
+            <td>The account segment identifier.</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>string</td>
+            <td>The type for this account segment.</td>
+        </tr>
+        <tr>
+            <td>values</td>
+            <td>an array of <a href="#AccountSegmentValue">account segment value</a> entities </td>
+            <td>The set of account segment values associated with the distribution.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="AccountSegmentValue"></a>
+<p>&nbsp;</p>
+<h2>Account segment value</h2>
+<p>The <b>account segment value</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The description for this segment value.</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>string</td>
+            <td>The value of this segment value.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="AccountStructure"></a>
+<p>&nbsp;</p>
+<h2>Account structure detail</h2>
+<p>The <b>account structure detail</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>segment_id</td>
+                <td>integer</td>
+                <td>The identifier for this segment.</td>
+            </tr>
+        <tr>
+            <td>separator</td>
+            <td>string</td>
+            <td>The separator for this segment.</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>string</td>
+            <td>The type of this segment.</td>
+        </tr>
+        <tr>
+            <td>length</td>
+            <td>integer</td>
+            <td>The length of this segment.</td>
+        </tr>
+            <tr>
+                <td>sequence</td>
+                <td>integer</td>
+                <td>The sequence of this segment.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Class"></a>
+<p>&nbsp;</p>
+<h2>Class</h2>
+<p>The <b>class</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>class_id</td>
+                <td>string</td>
+                <td>The class identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The description for this account class.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>string</td>
+                <td>The value for this account class.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Distribution"></a>
+<p>&nbsp;</p>
+<h2>Distribution</h2>
+<p>The <b>distribution</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>distribution_id</td>
+                <td>integer</td>
+                <td>The distribution identifier.</td>
+            </tr>
+        <tr>
+            <td>ui_project_id</td>
+            <td>string</td>
+            <td>The user-visible identifier of the project.</td>
+        </tr>
+            <tr>
+                <td>account_class</td>
+                <td>string</td>
+                <td>The class of this distribution.</td>
+            </tr>
+            <tr>
+                <td>transaction_code_values</td>
+                <td>an array of <a href="#TransactionCodeValue">transaction code value</a> entities </td>
+                <td>The set of transaction code values associated with the distribution.</td>
+            </tr>
+            <tr>
+                <td>amount</td>
+                <td>decimal</td>
+                <td>The distribution amount.</td>
+            </tr>
+            <tr>
+                <td>percent</td>
+                <td>decimal</td>
+                <td>The distribtuion journal entry amount percentage.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="FiscalPeriod"></a>
+<p>&nbsp;</p>
+<h2>Fiscal period</h2>
+<p>The <b>fiscal period</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>fiscal_period_id</td>
+                <td>integer</td>
+                <td>The distribution identifier.</td>
+            </tr>
+            <tr>
+                <td>start_date</td>
+                <td>dateTime</td>
+                <td>The start date of this fiscal period.</td>
+            </tr>
+        <tr>
+            <td>end_date</td>
+            <td>dateTime</td>
+            <td>The end date of this fiscal period.</td>
+        </tr>
+        <tr>
+            <td>sequence</td>
+            <td>integer</td>
+            <td>The sequence of this fiscal period.</td>
+        </tr>
+            <tr>
+                <td>closed</td>
+                <td>boolean</td>
+                <td>Whether or not this fiscal period is closed.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="FiscalYear"></a>
+<p>&nbsp;</p>
+<h2>Fiscal year</h2>
+<p>The <b>fiscal year</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>fiscal_year_id</td>
+            <td>integer</td>
+            <td>The distribution identifier.</td>
+        </tr>
+        <tr>
+            <td>year</td>
+            <td>integer</td>
+            <td>The fiscal year.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The description of this fiscal year.</td>
+        </tr>
+        <tr>
+            <td>start_date</td>
+            <td>dateTime</td>
+            <td>The start date of this fiscal year.</td>
+        </tr>
+        <tr>
+            <td>end_date</td>
+            <td>dateTime</td>
+            <td>The end date of this fiscal year.</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>string</td>
+            <td>The status of this fiscal year.</td>
+        </tr>
+        <tr>
+            <td>fiscal_periods</td>
+            <td>an array of <a href="#FiscalPeriod">fiscal period </a> entities </td>
+            <td>The set of fiscal periods associated with the distribution.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Fund"></a>
+<p>&nbsp;</p>
+<h2>Fund</h2>
+<p>The <b>fund</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>fund_id</td>
+                <td>string</td>
+                <td>The fund identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The description for this fund.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>string</td>
+                <td>The value for this fund.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="JournalCode"></a>
+<p>&nbsp;</p>
+<h2>Journal code</h2>
+<p>The <b>journal code</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>journal_code_id</td>
+                <td>integer</td>
+                <td>The journal identifier.</td>
+            </tr>
+            <tr>
+                <td>code</td>
+                <td>string</td>
+                <td>The abbreviated code of the journal.</td>
+            </tr>
+            <tr>
+                <td>journal</td>
+                <td>string</td>
+                <td>The full journal name of the journal.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="JournalEntryBatch"></a>
+<p>&nbsp;</p>
+<h2>Journal entry batch</h2>
+<p>The <b>journal entry batch</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>batch_id</td>
+                <td>integer</td>
+                <td>The journal entry batch identifier.</td>
+            </tr>
+            <tr>
+                <td>ui_batch_id</td>
+                <td>string</td>
+                <td>The user-visible identifier of the journal entry batch.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The description of the journal entry batch.</td>
+            </tr>
+            <tr>
+                <td>batch_status</td>
+                <td>string</td>
+                <td>The status of the journal entry batch.</td>
+            </tr>
+            <tr>
+                <td>create_interfund_sets</td>
+                <td>boolean</td>
+                <td>Indicates whether or not the journal entry batch will automatically generate interfund sets to balance journal entries.</td>
+            </tr>
+            <tr>
+                <td>create_bank_account_adjustments</td>
+                <td>boolean</td>
+                <td>Indicates whether or not the journal entry batch will automatically generate bank account adjustments to balance journal entries.</td>
+            </tr>
+            <tr>
+                <td>journal_entries</td>
+                <td>an array of <a href="#JournalEntry">journal entry</a> entities</td>
+                <td>The set of journal entries associated with the journal entry batch.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="JournalEntry"></a>
+<p>&nbsp;</p>
+<h2>Journal entry</h2>
+<p>The <b>journal entry</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>journal_entry_id</td>
+                <td>integer</td>
+                <td>The journal entry identifier.</td>
+            </tr>
+            <tr>
+                <td>type_code</td>
+                <td>string</td>
+                <td>The journal entry transaction type (debit or credit).</td>
+            </tr>
+            <tr>
+                <td>line_number</td>
+                <td>integer</td>
+                <td>The journal entry line number.</td>
+            </tr>
+            <tr>
+                <td>account_number</td>
+                <td>string</td>
+                <td>The journal entry account number.</td>
+            </tr>
+            <tr>
+                <td>post_date</td>
+                <td>dateTime</td>
+                <td>The journal entry post date, in ISO 8601 format: 2016-03-14.</td>
+            </tr>
+            <tr>
+                <td>encumbrance</td>
+                <td>string</td>
+                <td>The journal entry encumbrance type.</td>
+            </tr>
+            <tr>
+                <td>journal</td>
+                <td>string</td>
+                <td>The full name of the journal entry.</td>
+            </tr>
+            <tr>
+                <td>reference</td>
+                <td>string</td>
+                <td>The journal entry reference.</td>
+            </tr>
+            <tr>
+                <td>amount</td>
+                <td>decimal</td>
+                <td>The journal entry amount.</td>
+            </tr>
+            <tr>
+                <td>notes</td>
+                <td>string</td>
+                <td>The journal entry notes.</td>
+            </tr>
+            <tr>
+                <td>distributions</td>
+                <td>array of <a href="#Distribution">distribution</a> entities.</td>
+                <td>The set of distributions associated with the journal entry.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Project"></a>
+<p>&nbsp;</p>
+<h2>Project</h2>
+<p>The <b>project</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>project_id</td>
+            <td>integer</td>
+            <td>The project database identifier.</td>
+        </tr>
+        <tr>
+            <td>ui_project_id</td>
+            <td>string</td>
+            <td>The user-visible project identifier.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The project description.</td>
+        </tr>
+        <tr>
+            <td>start_date</td>
+            <td>dateTime</td>
+            <td>The project start date, in ISO 8601 format: 2016-03-14.</td>
+        </tr>
+        <tr>
+            <td>end_date</td>
+            <td>dateTime</td>
+            <td>The project end date, in ISO 8601 format: 2016-03-14.</td>
+        </tr>
+        <tr>
+            <td>location</td>
+            <td>string</td>
+            <td>The project location.</td>
+        </tr>
+        <tr>
+            <td>division</td>
+            <td>string</td>
+            <td>The project division.</td>
+        </tr>
+        <tr>
+            <td>department</td>
+            <td>string</td>
+            <td>The project department.</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>string</td>
+            <td>The project status.</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<a id="ProjectType"></a>
+<p>&nbsp;</p>
+<h2>Project type</h2>
+<p>The <b>project type</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td>string</td>
+            <td>The type identifier.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The description for this type.</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>string</td>
+            <td>The value for this type.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="ProjectStatus"></a>
+<p>&nbsp;</p>
+<h2>Project status</h2>
+<p>The <b>project status</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td>string</td>
+            <td>The status identifier.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The description for this status.</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>string</td>
+            <td>The value for this status.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="ProjectDivision"></a>
+<p>&nbsp;</p>
+<h2>Project division</h2>
+<p>The <b>project division</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The division identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The description for this division.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>string</td>
+                <td>The value for this division.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="ProjectLocation"></a>
+<p>&nbsp;</p>
+<h2>Project type</h2>
+<p>The <b>project location</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th><strong>Property</strong></th>
+            <th><strong>Type</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td>string</td>
+            <td>The location identifier.</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>The description for this location.</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>string</td>
+            <td>The value for this location.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="ProjectDepartment"></a>
+<p>&nbsp;</p>
+<h2>Project type</h2>
+<p>The <b>project department</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The department identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The description for this department.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>string</td>
+                <td>The value for this department.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="TransactionCode"></a>
+<p>&nbsp;</p>
+<h2>Transaction code</h2>
+<p>The <b>transaction code</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>transaction_code_id</td>
+                <td>integer</td>
+                <td>The transaction code identifier.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The transaction code name.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The transaction code description.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="TransactionCodeValue"></a>
+<p>&nbsp;</p>
+<h2>Transaction code value</h2>
+<p>The <b>transaction code value</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The transaction code name.</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>string</td>
+                <td>The transaction code value.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<a id="TransactionDistribution"></a>
+<p>&nbsp;</p>
+<h2>Transaction distribution</h2>
+<p>The <b>transaction distribution</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>transaction_id</td>
+                <td>integer</td>
+                <td>The transaction identifier.</td>
+            </tr>
+            <tr>
+                <td>transaction_amount</td>
+                <td>decimal</td>
+                <td>The transaction amount.</td>
+            </tr>
+            <tr>
+                <td>distribution_amount</td>
+                <td>decimal</td>
+                <td>The total distribution amount.</td>
+            </tr>
+            <tr>
+                <td>distribution_id</td>
+                <td>integer</td>
+                <td>The distribution identifier.</td>
+            </tr>
+            <tr>
+                <td>account_number</td>
+                <td>string</td>
+                <td>The account number associated with the transaction distribution.</td>
+            </tr>
+            <tr>
+                <td>account_class</td>
+                <td>string</td>
+                <td>The account class associated with the transaction distribution.</td>
+            </tr>
+            <tr>
+                <td>ui_project_id</td>
+                <td>string</td>
+                <td>The user-visible project identifier associated with the transaction distribution.</td>
+            </tr>
+            <tr>
+                <td>post_date</td>
+                <td>dateTime</td>
+                <td>The transaction distribution post date, in ISO 8601 format: 2016-03-14.</td>
+            </tr>
+            <tr>
+                <td>is_credit</td>
+                <td>boolean</td>
+                <td>Indicates whether the transaction distribution is a credit or debit.</td>
+            </tr>
+            <tr>
+                <td>reference</td>
+                <td>string</td>
+                <td>The reference of the transaction distribution.</td>
+            </tr>
+            <tr>
+                <td>journal</td>
+                <td>string</td>
+                <td>The journal name associated with the transaction distribution.</td>
+            </tr>
+            <tr>
+                <td>encumbrance</td>
+                <td>string</td>
+                <td>The encumbrance of the transaction distribution.</td>
+            </tr>
+            <tr>
+                <td>transaction_codes_values</td>
+                <td>an array of <a href="#TransactionCodeValue">transaction code value</a> entities</td>
+                <td>The collection of transaction code values associated with the transaction distribution.</td>
+            </tr> 
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+

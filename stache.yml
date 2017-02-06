@@ -96,6 +96,21 @@ guide_tutorial: <%= stache.config.base %>docs/tutorials/
 guide_tutorial_application: <%= stache.config.base %>docs/tutorials/application
 
 # =============================================
+# Docs > Entity Reference
+# =============================================
+
+entity_reference: <%= stache.config.base %>api/entity-reference/
+accounts_payable_entity_reference: <%= stache.config.entity_reference %>accounts-payable
+constituent_entity_reference: <%= stache.config.entity_reference %>constituent
+fundraising_entity_reference: <%= stache.config.entity_reference %>fundraising
+general_ledger_entity_reference: <%= stache.config.entity_reference %>general-ledger
+gift_entity_reference: <%= stache.config.entity_reference %>gift
+list_entity_reference: <%= stache.config.entity_reference %>list
+opportunity_entity_reference: <%= stache.config.entity_reference %>opportunity
+treasury_entity_reference: <%= stache.config.entity_reference %>treasury
+volunteer_entity_reference: <%= stache.config.entity_reference %>volunteer
+
+# =============================================
 # Docs > Support
 # =============================================
 support: <%= stache.config.base %>support/
@@ -484,9 +499,9 @@ portal_endpoints_invoice_custom_field_list: <%= stache.config.portal_endpoints_A
 # Vendor Custom Field List
 portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a4a/
 
-# Sample portal contract url  https://developer.sky.blackbaud.com/constituent-entity-reference#Action
-portal_contracts_menu: <%= stache.config.portal %>entity-reference
-portal_contracts: <%= stache.config.portal %>constituent-entity-reference
+# Sample portal contract url  https://apidocs.sky.blackbaud.com/api/constituent-entity-reference#Action
+portal_contracts_menu: <%= stache.config.base %>api/entity-reference/
+portal_contracts: <%= stache.config.base %>api/entity-reference/constituent
 portal_profile: <%= stache.config.portal %>developer/
 portal_auth_dropdown: "Blackbaud OAuth 2.0 Service"
 
