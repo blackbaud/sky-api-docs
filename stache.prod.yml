@@ -11,6 +11,6 @@ developer_app_management_url: https://developerapp.sky.blackbaud.com/application
 # =============================================
 # ADMIN TOOLBAR
 # =============================================
-github_branch: prod
+github_branch: master
 bbauth:
   isEnabled: false
