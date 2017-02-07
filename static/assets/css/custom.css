@@ -27,10 +27,15 @@ tr.clickable-row:hover {
 
 .content,
 .content p,
-.content li,
 .content td,
 .content th {
     font-size: 13px;
+}
+
+.content li {
+    font-size: 13px;
+    margin: 0 0 9px 0;
+    line-height: 1.6em;
 }
 
 .content p,
@@ -183,6 +188,8 @@ p.text-muted {
 .welcome .btn {
     border: 0;
 }
+
+
 
 @media (max-width: 767px) {
 
