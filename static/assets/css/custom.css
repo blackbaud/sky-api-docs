@@ -32,12 +32,6 @@ tr.clickable-row:hover {
     font-size: 13px;
 }
 
-.content li {
-    font-size: 13px;
-    margin: 0 0 9px 0;
-    line-height: 1.6em;
-}
-
 .content p,
 .content pre,
 .content .table,
@@ -45,6 +39,12 @@ tr.clickable-row:hover {
 .content .col-sm-9 ul,
 .content .col-sm-9 ol {
     margin: 0 0 20px;
+}
+
+.content li {
+    font-size: 13px;
+    margin: 0 0 9px 0;
+    line-height: 1.6em;
 }
 
 img, .img-responsive,
