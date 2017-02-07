@@ -8,6 +8,7 @@ showInNav: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
 
 # Implicit Flow
 

@@ -11,6 +11,8 @@ showBreadcrumbs: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # Implicit Flow - {{ name }}
 
 <a class="btn btn-primary" href="{{ stache.config.github_repo_implicit_flow_angular }}" target="blank"><i class="fa fa-github fa-lg"></i> GitHub</a>

@@ -8,6 +8,8 @@ showInNav: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # {{ name }}
 
 You may encounter one of the following common issues when initiating authorization and calling the {{ stache.config.product_name_short }}.

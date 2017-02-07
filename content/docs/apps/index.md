@@ -7,6 +7,8 @@ published: true
 showInNav: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # {{ name }}
 
 In order to call the {{ stache.config.product_name_short }}, you'll need to register your application. This registration provides a unique set of credentials that your application will use when asking a user for permission to access their organization's Blackbaud data during the <a href="{{ stache.config.guide_web_api_authorization }}" target="_blank">authorization process</a>.
@@ -49,3 +51,4 @@ To activate your application in a customer's tenant, have the **tenant administr
 3. Select **Add application**, and paste your Application ID, and select **Save**.
 
 Your application will then appear in the list of activated applications for the tenant.
+

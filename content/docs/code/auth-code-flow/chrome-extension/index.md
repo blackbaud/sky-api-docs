@@ -10,6 +10,7 @@ showBreadcrumbs: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
 
 # Authorization Code Flow - Chrome Extension
 
@@ -18,4 +19,5 @@ back_to_top: true
 Learn how to create a Chrome browser extension that interacts with Google's InboxSDK and SKY API constituent data via the OAuth 2.0 Authorization Code Flow.
 
 <a href="{{ stache.config.github_repo_web_api_authorization_chrome_extension }}" target="_blank">View the source on GitHub <i class="fa fa-external-link"></i></a>
+
 
