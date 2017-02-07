@@ -13,6 +13,85 @@ back_to_top: true
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-02-07
+
+### Changed
+
+We updated some properties on the [education]({{ stache.config.portal_contracts }}#Education) entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.
+- The `major` and `minor` properties have been updated to return an array of strings. They have been renamed `majors` and `minors`.
+- The `subject_of_study` property is no longer being returned in the `major` property. Instead, it is using a dedicated property for UK-formatted databases. 
+
+### New
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_add }}">
+        <td>Constituent education (Create)</td>
+        <td>POST</td>
+        <td>/educations</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_edit }}">
+        <td>Constituent education (Edit)</td>
+        <td>PATCH</td>
+        <td>/educations/{education_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_delete }}">
+        <td>Constituent education (Delete)</td>
+        <td>DELETE</td>
+        <td>/educations/{education_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_schools_get }}">
+        <td>Education schools (Get)</td>
+        <td>GET</td>
+        <td>/educations/schools</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_types_get }}">
+        <td>Education types (Get)</td>
+        <td>GET</td>
+        <td>/educations/types</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_statuses_get }}">
+        <td>Education statuses (Get)</td>
+        <td>GET</td>
+        <td>/educations/statuses</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_subjects_get }}">
+        <td>Education subjects (Get)</td>
+        <td>GET</td>
+        <td>/educations/subjects</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_degrees_get }}">
+        <td>Education degrees (Get)</td>
+        <td>GET</td>
+        <td>/educations/degrees</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_departments_get }}">
+        <td>Education departments (Get)</td>
+        <td>GET</td>
+        <td>/educations/departments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_degreeclasses_get }}">
+        <td>Education degree classes (Get)</td>
+        <td>GET</td>
+        <td>/educations/degreeclasses</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_faculties_get }}">
+        <td>Education faculties (Get)</td>
+        <td>GET</td>
+        <td>/educations/faculties</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ##2017-01-31
  
 #### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
