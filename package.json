@@ -5,8 +5,8 @@
   "engines": {
     "node": "0.10.32"
   },
-  "name": "renxt-api-docs",
-  "version": "0.0.21",
+  "name": "sky-api-docs",
+  "version": "0.0.22",
   "description": "Blackbaud Documentation",
   "private": true,
   "dependencies": {

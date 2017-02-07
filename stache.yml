@@ -21,7 +21,7 @@ fenxt: Financial Edge NXT
 # =============================================
 showAdminToolbar: false
 github_org: blackbaud
-github_repo: sky-api-documentation
+github_repo: sky-api-docs
 github_branch: develop
 omnibar:
   enableHelp: false
@@ -39,7 +39,6 @@ partial_footer_navigation: includes/partial-footer-profile.hbs
 partial_footer_logo: includes/partial-footer-logo.hbs
 copyright: includes/partial-copyright.hbs
 partial_header_edit: includes/partial-header-edit.hbs
-partial_disqus: includes/partial-disqus.hbs
 
 # =============================================
 # Custom Styles and JavaScript
@@ -62,11 +61,6 @@ github_repo_barkbaud_nodejs: <%= stache.config.github %>barkbaud/
 github_repo_implicit_flow_chrome_extension: <%= stache.config.github %>sky-api-tutorial-implicit-flow-chrome-extension/
 github_repo_implicit_flow_angular: <%= stache.config.github %>sky-api-tutorial-implicit-flow-angular/
 github_repo_implicit_flow_angular2: <%= stache.config.github %>sky-api-tutorial-implicit-flow-angular2/
-
-# =============================================
-# Disqus config
-# =============================================
-comments_key: sky-api
 
 
 # =============================================

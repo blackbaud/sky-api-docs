@@ -12,6 +12,8 @@ showBreadcrumbs: true
 back_to_top: true
 ---
 
+{{ include stache.config.partial_header_edit }}
+
 # Authorization Code Flow - NodeJS
 
 <a class="btn btn-primary" href="{{ stache.config.github_repo_web_api_authorization }}" target="blank"><i class="fa fa-github fa-lg"></i> GitHub</a>
