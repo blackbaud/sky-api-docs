@@ -17,9 +17,11 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Changed
 
-We updated some properties on the [education]({{ stache.config.portal_contracts }}#Education) entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.
-- The `major` and `minor` properties have been updated to return an array of strings. They have been renamed `majors` and `minors`.
-- The `subject_of_study` property is no longer being returned in the `major` property. Instead, it is using a dedicated property for UK-formatted databases. 
+- We updated some properties on the [education]({{ stache.config.portal_contracts }}#Education) entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.
+  - The `major` and `minor` properties have been updated to return an array of strings. They have been renamed `majors` and `minors`.
+  - The `subject_of_study` property is no longer being returned in the `major` property. Instead, it is using a dedicated property for UK-formatted databases.
+- We updated Address (Post) to no longer require `country`. When `country` is not provided, the organizations default country configuration will be used.
+- We updated the Address entity `country` field to respect a country ID, Name, or Abbreviation, ordered by preferential selection.
 
 ### New
 
@@ -33,6 +35,11 @@ We updated some properties on the [education]({{ stache.config.portal_contracts 
       </tr>
     </thead>
     <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+        <td>Countries (Get)</td>
+        <td>GET</td>
+        <td>/countries</td>
+      </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_add }}">
         <td>Constituent education (Create)</td>
         <td>POST</td>
@@ -93,12 +100,12 @@ We updated some properties on the [education]({{ stache.config.portal_contracts 
 </div>
 
 ##2017-01-31
- 
+
 #### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
 We are updating some properties on the [education]({{ stache.config.portal_contracts }}#Education) entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.
 - The `major` and `minor` properties will both be updated to return an array of strings. They will also be renamed `majors` and `minors`.
-- The `subject_of_study` property will no longer be returned in the `major` property. Instead, it will use a dedicated property for UK-formatted databases. 
+- The `subject_of_study` property will no longer be returned in the `major` property. Instead, it will use a dedicated property for UK-formatted databases.
 
 ##2017-01-11
 
@@ -180,8 +187,8 @@ Added the following endpoint:
 
 #### Changed
 
-The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to filter constituents based on their associated constituent codes. The optional `constituent_code` query parameter returns constituents if any of the specified constituent codes match any of their active constituent codes. For example, `constituent_code=Board Member&amp;constituent_code=Volunteer` returns constituents with either "Board Member" or "Volunteer" constituent codes. 
- 
+The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to filter constituents based on their associated constituent codes. The optional `constituent_code` query parameter returns constituents if any of the specified constituent codes match any of their active constituent codes. For example, `constituent_code=Board Member&amp;constituent_code=Volunteer` returns constituents with either "Board Member" or "Volunteer" constituent codes.
+
 ###2016-11-14
 
 #### New
@@ -574,7 +581,7 @@ All `POST` endpoints will now return a JSON object containing the id, in the for
 
 #### Changed
 
- - We renamed the `proposal_id` property to `opportunity_id` on actions to be consistent with product verbiage. 
+ - We renamed the `proposal_id` property to `opportunity_id` on actions to be consistent with product verbiage.
 
  - The [Constituent (List) endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) no longer includes inactive constituents by default. To include inactive constituents, use the optional `includeInactive` parameter in the request.
 
@@ -653,7 +660,7 @@ Added the following endpoints:
 #### Announcement: Breaking Changes Planned for [Constituent API]({{stache.config.portal_endpoints_constituent}})
 
  - We will rename the `constituent_id` property to `parent_id` to support additional attachment areas such as action attachments.
- - We will rename the `proposal_id` property to `opportunity_id` on actions to be consistent with product verbiage. 
+ - We will rename the `proposal_id` property to `opportunity_id` on actions to be consistent with product verbiage.
 
 ### 2016-08-18
 

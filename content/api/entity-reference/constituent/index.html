@@ -24,6 +24,7 @@ showBreadcrumbs: true
         <li><p><a href="#CommunicationPreference">Communication preference</a></p></li>
         <li><p><a href="#Constituent">Constituent</a></p></li>
         <li><p><a href="#ConstituentCode">Constituent code</a></p></li>
+        <li><p><a href="#Country">Country</a></p></li>
         <li><p><a href="#Currency">Currency</a></p></li>
         <li><p><a href="#CurrencyConfiguration">Currency configuration</a></p></li>
         <li><p><a href="#CustomField">Custom field</a></p></li>
@@ -359,7 +360,7 @@ showBreadcrumbs: true
             <tr>
                 <td>parent_id</td>
                 <td>string</td>
-                <td>The parent  object's identifier.</td>
+                <td>The parent object's identifier.</td>
             </tr>
             <tr>
                 <td>tags</td>
@@ -542,7 +543,7 @@ showBreadcrumbs: true
             <tr>
                 <td>lookup_id</td>
                 <td>string</td>
-                <td>The constituent's lookup identifier.</td>
+                <td>The user defined identifier for the constituent.</td>
             </tr>
             <tr>
                 <td>inactive</td>
@@ -727,6 +728,40 @@ showBreadcrumbs: true
                 <td>inactive</td>
                 <td>boolean</td>
                 <td>Indicates whether the constituent code is inactive.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="Country"></a>
+<p>&nbsp;</p>
+<h2>Country</h2>
+<p>The <b>country</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The country identifier.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The country name.</td>
+            </tr>
+            <tr>
+                <td>abbreviation</td>
+                <td>string</td>
+                <td>The user defined abbreviation for the country.</td>
             </tr>
         </tbody>
     </table>
@@ -1986,7 +2021,7 @@ showBreadcrumbs: true
             <tr>
                 <td>lookup_id</td>
                 <td>string</td>
-                <td>The constituent's lookup identifier.</td>
+                <td>The user defined identifier for the constituent.</td>
             </tr>
             <tr>
                 <td>name</td>
