@@ -203,7 +203,7 @@ portal_endpoints_constituent_address_update: <%= stache.config.portal_endpoints_
 portal_endpoints_constituent_address_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f05
 portal_endpoints_constituent_addresstypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5744a7efd7dcde29b07a4d8e
 
-portal_endpoints_constituent_countries_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TODO
+portal_endpoints_constituent_countries_get_list: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fcf
 
 # Constituent Attachments
 portal_endpoints_constituent_attachment_create: <%= stache.config.portal_endpoints_constituent %>operations/57c73331a9db950f507ab01e/
@@ -226,17 +226,17 @@ portal_endpoints_constituent_membership_get_list: <%= stache.config.portal_endpo
 
 # Constituent Education
 portal_endpoints_constituent_education_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f12/
-portal_endpoints_constituent_education_add: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_edit: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_delete: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_schools_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_types_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_statuses_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_subjects_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_degrees_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_departments_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_degreeclasses_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
-portal_endpoints_constituent_education_faculties_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+portal_endpoints_constituent_education_add: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd0/
+portal_endpoints_constituent_education_edit: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd2/
+portal_endpoints_constituent_education_delete: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd1/
+portal_endpoints_constituent_education_schools_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd3/
+portal_endpoints_constituent_education_types_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd4/
+portal_endpoints_constituent_education_statuses_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd5/
+portal_endpoints_constituent_education_subjects_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd6/
+portal_endpoints_constituent_education_degrees_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd7/
+portal_endpoints_constituent_education_departments_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd8/
+portal_endpoints_constituent_education_degreeclasses_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd9/
+portal_endpoints_constituent_education_faculties_get: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fda/
 
 # Constituent Email Address
 portal_endpoints_constituent_email_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f13/
