@@ -13,7 +13,7 @@ back_to_top: true
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-##2017-02-07
+##2017-02-10
 
 ### Changed
 
@@ -21,6 +21,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 - The `subject_of_study` property on the [education]({{ stache.config.portal_contracts }}#Education) entity is no longer being returned in the `major` property. Instead, it is using a dedicated property for UK-formatted databases.
 - We updated the Address (Create) endpoint to no longer require the `country` property. When `country` is not provided, an organization's default country configuration is used.
 - We updated the `country` property on the [address]({{ stache.config.portal_contracts }}#Address) entity to accept a country ID, name, or abbreviation. The property uses, preferential selection to match against ID first, then name, and then abbreviation.
+- We added a new optional `most_recent_only` parameter to our [ratings get list endpoint]({{stache.config.portal_endpoints_constituent_ratings_get_list}}) for retrieving the most recent ratings of each category.
 
 ### New
 
