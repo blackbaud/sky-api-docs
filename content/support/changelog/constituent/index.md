@@ -18,9 +18,9 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 ### Changed
 
 - The `major` and `minor` properties on the [education]({{ stache.config.portal_contracts }}#Education) entity have been updated to return an array of strings. They have been renamed `majors` and `minors`.
-- The `subject_of_study` property on the [education]({{ stache.config.portal_contracts }}#Education) entity is no longer being returned in the `major` property. Instead, it is using a dedicated property for UK-formatted databases.
+- The `subject_of_study` property on the [education]({{ stache.config.portal_contracts }}#Education) entity is no longer returned in the `major` property. Instead, it uses a dedicated property for UK-formatted databases.
 - The [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint no longer requires the `country` property. When `country` is not provided, the endpoint uses the organization's default country configuration.
-- The `country` property on the [address]({{ stache.config.portal_contracts }}#Address) entity now accepts a country ID, name, or abbreviation. The property uses, preferential selection to match against ID first, then name, and then abbreviation.
+- The `country` property on the [address]({{ stache.config.portal_contracts }}#Address) entity now accepts a country ID, name, or abbreviation. The property uses preferential selection to match against ID first, then name, and then abbreviation.
 
 ### New
 
