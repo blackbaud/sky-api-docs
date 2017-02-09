@@ -19,8 +19,8 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 - The `major` and `minor` properties on the [education]({{ stache.config.portal_contracts }}#Education) entity have been updated to return an array of strings. They have been renamed `majors` and `minors`.
 - The `subject_of_study` property on the [education]({{ stache.config.portal_contracts }}#Education) entity is no longer being returned in the `major` property. Instead, it is using a dedicated property for UK-formatted databases.
-- We updated the Address (Create) endpoint to no longer require the `country` property. When `country` is not provided, an organization's default country configuration is used.
-- We updated the `country` property on the [address]({{ stache.config.portal_contracts }}#Address) entity to accept a country ID, name, or abbreviation. The property uses, preferential selection to match against ID first, then name, and then abbreviation.
+- The [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint no longer requires the `country` property. When `country` is not provided, the endpoint uses the organization's default country configuration.
+- The `country` property on the [address]({{ stache.config.portal_contracts }}#Address) entity now accepts a country ID, name, or abbreviation. The property uses, preferential selection to match against ID first, then name, and then abbreviation.
 
 ### New
 
@@ -40,17 +40,17 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
         <td>/countries</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_add }}">
-        <td>Constituent education (Create)</td>
+        <td>Education (Create)</td>
         <td>POST</td>
         <td>/educations</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_edit }}">
-        <td>Constituent education (Edit)</td>
+        <td>Education (Edit)</td>
         <td>PATCH</td>
         <td>/educations/{education_id}</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_delete }}">
-        <td>Constituent education (Delete)</td>
+        <td>Education (Delete)</td>
         <td>DELETE</td>
         <td>/educations/{education_id}</td>
       </tr>
