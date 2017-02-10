@@ -29,15 +29,20 @@
 
 window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.slide', {
-  duration: 1000,
+sr.reveal('.slide-animate', {
+  duration: 1200,
   reveal: false,
+  reset: false,
+  scale: 1,
+  opacity: 0,
   viewFactor: 0.2
 });
+
 
 sr.reveal('.tutorial-button', {
   duration: 1000,
   reveal: false,
   viewFactor: 0.4,
+  reset: false,
   opacity: 0
 }, 300);

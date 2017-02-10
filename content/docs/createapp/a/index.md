@@ -24,21 +24,21 @@ back_to_top: true
 {{ include 'includes/tutorials/createapp/registerapp.md' }}
 </li>
  
- <li class="slide">
+ <li class="slide slide-animate">
  <div class="row" >
 <h1>Review your application credentials</h1>
 <br />
 {{ include 'includes/tutorials/createapp/credentials.md' }}
  </li>
  
- <li class="slide">
+ <li class="slide slide-animate">
 <div class="row">
 <h1>Activate your application in a tenant</h1>
 <br />
 {{ include 'includes/tutorials/createapp/activateapp.md' }}
 </li>
 
-<li class="slide">
+<li class="slide slide-animate">
  <div class="row" >
  <h1>Request authorization</h1>
 <br />
@@ -47,7 +47,7 @@ back_to_top: true
 
 
 
-<li class="slide">
+<li class="slide slide-animate">
  <h1>... and you're done!</h1>
 <br />
 {{ include 'includes/tutorials/createapp/done.md' }}
