@@ -30,7 +30,7 @@
 window.sr = ScrollReveal({ reset: true });
 
 sr.reveal('.slide-animate', {
-  duration: 1200,
+  duration: 500,
   reveal: false,
   reset: false,
   scale: 1,
