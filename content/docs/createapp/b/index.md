@@ -6,6 +6,7 @@ order: 600
 published: true     
 showInNav: false
 back_to_top: true
+title: Create an Application Tutorial
 ---
 <h1> {{ name }} with {{ stache.config.product_name_short }}</h1>
 

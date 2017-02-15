@@ -7,6 +7,7 @@ published: true
 showInNav: true
 icon: fa fa-user
 back_to_top: true
+title: Constituent Changelog
 ---
 
 # {{ name }}

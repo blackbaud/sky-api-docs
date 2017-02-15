@@ -6,6 +6,7 @@ order: 150
 published: true
 showInNav: true
 back_to_top: true
+title: Implicit Flow
 ---
 
 {{ include stache.config.partial_header_edit }}

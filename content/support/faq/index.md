@@ -7,6 +7,7 @@ icon: fa fa-comment-o fa-4x
 published: true
 showInNav: true
 back_to_top: true
+title: FAQs
 ---
 
 # Frequently Asked Questions

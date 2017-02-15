@@ -5,6 +5,7 @@ order: 10
 published: true
 showInNav: false
 showBreadcrumbs: true
+title: APIs
 ---
 
 <h1>{{ name }}</h1>

@@ -1,11 +1,12 @@
 ---
 layout: "layout-sidebar"
-name: Common authorization issues
+name: Common Authorization Issues
 description: Common errors encountered when interacting with the OAuth endpoints.
 order: 200
 published: true
 showInNav: true
 back_to_top: true
+title: Common Authorization Issues
 ---
 
 {{ include stache.config.partial_header_edit }}

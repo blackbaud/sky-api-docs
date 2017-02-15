@@ -7,6 +7,7 @@ published: true
 showInNav: true
 icon: fa fa-cloud
 back_to_top: true
+title: Shared Changelog
 ---
 
 # {{ name }}

@@ -6,6 +6,7 @@ order: 50
 showInNav: true
 published: true
 showInHeader: true
+title: Developer Community
 ---
 
 <script>

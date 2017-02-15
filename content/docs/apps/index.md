@@ -5,6 +5,7 @@ description: Registering your application and regenerating the client secret
 order: 200
 published: true
 showInNav: true
+title: Managing your Apps
 ---
 
 {{ include stache.config.partial_header_edit }}

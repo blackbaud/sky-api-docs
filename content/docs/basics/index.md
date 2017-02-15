@@ -8,6 +8,7 @@ showInNav: true
 showInHeader: true
 showInFooter: true
 back_to_top: true
+title: Basics
 ---
 
 {{ include stache.config.partial_header_edit }}
