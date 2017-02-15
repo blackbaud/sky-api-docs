@@ -7,6 +7,7 @@ published: true
 showInNav: true
 icon: fa fa-university
 back_to_top: true
+title: Accounts Payable Changelog
 ---
 
 # {{ name }}

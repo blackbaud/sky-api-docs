@@ -5,6 +5,7 @@ description: A collection of fully-formed applications that can assist in quick-
 order: 3
 icon: fa fa-fw fa-cube
 showBreadcrumbs: true
+title: App Showcase
 appShowcase:
   - title: Barkbaud (NodeJS)
     icon: fa-cube

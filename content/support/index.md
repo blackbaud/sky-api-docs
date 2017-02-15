@@ -7,6 +7,7 @@ published: true
 showInNav: true
 showInHeader: true
 showInFooter: false
+title: Support
 ---
 
 <META http-equiv="refresh" content="0;URL={{ stache.config.support_changelog }}">

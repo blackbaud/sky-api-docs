@@ -8,6 +8,7 @@ showInNav: true
 showInHeader: true
 showInFooter: true
 icon: fa fa-lightbulb-o
+title: Ideas
 ---
 
 # Ideas

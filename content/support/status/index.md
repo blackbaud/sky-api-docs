@@ -6,6 +6,7 @@ order: 400
 showInNav: true
 published: true
 showInHeader: true
+title: Status
 ---
 
 <script>

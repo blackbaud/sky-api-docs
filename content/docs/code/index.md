@@ -8,6 +8,7 @@ showInNav: true
 showInHeader: true
 showInFooter: false
 showBreadcrumbs: true
+title: Code Samples
 ---
 
 # {{ name }}

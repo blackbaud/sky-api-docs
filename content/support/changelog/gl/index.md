@@ -7,6 +7,7 @@ published: true
 showInNav: true
 icon: fa fa-book
 back_to_top: true
+title: General Ledger Changelog
 ---
 
 # {{ name }}
