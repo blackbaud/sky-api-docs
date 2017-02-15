@@ -8,6 +8,7 @@ showInNav: true
 showInHeader: true
 showInFooter: true
 priority: high
+title: Authorization
 ---
 
 {{ include stache.config.partial_header_edit }}

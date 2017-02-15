@@ -6,6 +6,7 @@ order: 100
 published: true
 showInNav: true
 back_to_top: true
+title: Authorization Code Flow
 ---
 
 {{ include stache.config.partial_header_edit }}

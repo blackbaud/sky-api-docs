@@ -5,6 +5,7 @@ order: 100
 layout: layout-sidebar
 published: true
 back_to_top: true
+title: Getting Started
 ---
 
 {{ include stache.config.partial_header_edit }}

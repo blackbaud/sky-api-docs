@@ -7,6 +7,7 @@ published: true
 showInNav: true
 icon: fa fa-file-text-o
 back_to_top: true
+title: Issues
 ---
 
 # Issues

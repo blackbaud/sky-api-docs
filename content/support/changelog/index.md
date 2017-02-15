@@ -7,6 +7,7 @@ published: true
 showInNav: true
 icon: fa fa-file-text-o
 back_to_top: true
+title: Changelogs
 APIs:
   -
     description: "Monitor this page to keep up with common changes shared across all our APIs."
