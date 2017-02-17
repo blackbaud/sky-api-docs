@@ -13,6 +13,12 @@ title: Issues
 # Issues
 If you find an issue, please [contact us]({{ stache.config.support_need_help_url }}).
 
+## 2017-02-17
+We are aware of an issue on the Control Panel, Applications page in SKY API enabled Blackbaud products. The Applications page does not load. Previous applications you authorized do not appear. While they have not been deleted, during this time you may get an error message that your application doesn’t have access to any SKY API enabled Blackbaud products. API calls, however, are not impacted. 
+
+We are working to resolve this issue as soon as possible, and will provide an update when functionality has been restored. 
+
+
 ## 2016-11-14
 ### Resolved
 For the issue reported on 2016-10-20, the behavior of the attributes has been addressed so that they no longer fail to populate on returned address entities.
