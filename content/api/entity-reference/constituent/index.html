@@ -854,53 +854,7 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The type of data that the custom field represents.
-                    <p>&nbsp;</p>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th><strong>Type</strong></th>
-                                    <th><strong>Description</strong></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>boolean</td>
-                                    <td>Defines the custom field as a boolean value.</td>
-                                </tr>
-                                <tr>
-                                    <td>codetableentry</td>
-                                    <td>Defines the custom field as a string value that represents a code table entry description.</td>
-                                </tr>
-                                <tr>
-                                    <td>constituentid</td>
-                                    <td>Defines the custom field as a constituent identifier value.</td>
-                                </tr>
-                                <tr>
-                                    <td>currency</td>
-                                    <td>Defines the custom field as a decimal value.</td>
-                                </tr>
-                                <tr>
-                                    <td>date</td>
-                                    <td>Defines the custom field as a date value in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
-                                </tr>
-                                <tr>
-                                    <td>fuzzydate</td>
-                                    <td>Defines the custom field as a <a href="#FuzzyDate">fuzzy date</a> value.</td>
-                                </tr>
-                                <tr>
-                                    <td>number</td>
-                                    <td>Defines the custom field as an integer value.</td>
-                                </tr>
-                                <tr>
-                                    <td>text</td>
-                                    <td>Defines the custom field as a string value.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
+                <td>The type of data that the custom field represents. Available values are listed below.</td>
             </tr>
             <tr>
                 <td>date</td>
@@ -926,6 +880,54 @@ showBreadcrumbs: true
                 <td>date_modified</td>
                 <td>dateTime</td>
                 <td>The date when the custom field was last modified. The date includes an offset from UTC in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>&nbsp;</p>
+<p>Available values for the type of a <b>custom field</b>:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>boolean</td>
+                <td>Defines the custom field as a boolean value.</td>
+            </tr>
+            <tr>
+                <td>codetableentry</td>
+                <td>Defines the custom field as a string value that represents a code table entry description.</td>
+            </tr>
+            <tr>
+                <td>constituentid</td>
+                <td>Defines the custom field as a constituent identifier value.</td>
+            </tr>
+            <tr>
+                <td>currency</td>
+                <td>Defines the custom field as a decimal value.</td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td>Defines the custom field as a date value in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>fuzzydate</td>
+                <td>Defines the custom field as a <a href="#FuzzyDate">fuzzy date</a> value.</td>
+            </tr>
+            <tr>
+                <td>number</td>
+                <td>Defines the custom field as an integer value.</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>Defines the custom field as a string value.</td>
             </tr>
         </tbody>
     </table>
@@ -1787,50 +1789,52 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The type of data that the rating represents.
-                    <p>&nbsp;</p>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th><strong>Type</strong></th>
-                                    <th><strong>Description</strong></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>boolean</td>
-                                    <td>Defines the rating value as a boolean JSON data type.</td>
-                                </tr>
-                                <tr>
-                                    <td>codetable</td>
-                                    <td>Defines the rating value as a string JSON data type that refers to a code table entry.</td>
-                                </tr>
-                                <tr>
-                                    <td>currency</td>
-                                    <td>Defines the rating value as a number JSON data type.</td>
-                                </tr>
-                                <tr>
-                                    <td>dateTime</td>
-                                    <td>Defines the rating value as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
-                                </tr>
-                                <tr>
-                                    <td>number</td>
-                                    <td>Defines the rating value as a number JSON data type.</td>
-                                </tr>
-                                <tr>
-                                    <td>text</td>
-                                    <td>Defines the rating value as a string JSON data type.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
+                <td>The type of data that the rating represents. Available values are listed below.</td>
             </tr>
             <tr>
                 <td>value</td>
                 <td>object</td>
                 <td>The value of the rating. The <code>type</code> property determines the format.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>&nbsp;</p>
+<p>Available values for the type of a <b>rating</b>:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>boolean</td>
+                <td>Defines the rating value as a boolean JSON data type.</td>
+            </tr>
+            <tr>
+                <td>codetable</td>
+                <td>Defines the rating value as a string JSON data type that refers to a code table entry.</td>
+            </tr>
+            <tr>
+                <td>currency</td>
+                <td>Defines the rating value as a number JSON data type.</td>
+            </tr>
+            <tr>
+                <td>dateTime</td>
+                <td>Defines the rating value as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>number</td>
+                <td>Defines the rating value as a number JSON data type.</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>Defines the rating value as a string JSON data type.</td>
             </tr>
         </tbody>
     </table>
