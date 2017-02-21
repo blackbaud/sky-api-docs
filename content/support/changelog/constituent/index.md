@@ -14,11 +14,11 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-##2017-02-21
+## 2017-02-21
 
-## Changed
+### Changed
 
- - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now includes an optional `custom_field_category` parameter to retrieve only constituents with custom fields of the specified custom field category.
+The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now includes an optional `custom_field_category` parameter to retrieve only constituents with custom fields of the specified custom field category.
 
 ##2017-02-09
 
