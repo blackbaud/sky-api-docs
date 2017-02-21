@@ -15,7 +15,12 @@ title: Common Authorization Issues
 
 You may encounter one of the following common issues when initiating authorization and calling the {{ stache.config.product_name_short }}.
 
+
+
+
 ## Request authorization
+
+<p class="alert alert-warning"><strong>Important!</strong> Pop up blockers may interfere with obtaining access tokens in the {{ stache.config.dev_console_name }}. Pop ups need to be enabled for you to launch and use the OAuth 2.0 authorization code flow consent form.</p>
 
 ### Invalid client_id 
 
@@ -63,15 +68,23 @@ When requesting an access token from the `\token` endpoint, you must pass an app
 
 ### invalid_client error
 
-> "invalid_client" error - The value specified for the `client_id` parameter 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX' was not valid."
+> "invalid_client" error - "The value specified for the `client_id` parameter 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX' was not valid."
 
 After you register an application, its credentials are created and displayed in the **Application Credentials** column of the <a href="{{ stache.config.developer_app_management_url }}" target= "_blank">My Applications</a> page. **{{ stache.config.guide_apps_client_id_name }}** is the unique identifier for your application.  Use this value for the `client_id` parameter value.
+
+ ### invalid_client error
+ 
+ > "invalid_client" error - "The required credentials were not supplied."
+ 
+This error indicates that we were unable to physically retrieve the application’s basic auth credentials (client ID + secret) from either the authorization header (preferred) or the request body. To resolve, verify that you correctly base64 encoded the clientID + secret. 
 
 ### invalid_grant error
 
 > "invalid_grant" error
 
  This error is caused by passing an invalid, expired, or used authorization code to the `/token` endpoint. You can't reuse authorization codes. In the case of a used authorization code, restart the authorization process and obtain a fresh auth code from the `/authorization` endpoint.  Authorization codes expire in 5 minutes.  Be sure to quickly exchange it for an access token.
+ 
+
 
 ## Call the {{ stache.config.product_name_short }}
 
