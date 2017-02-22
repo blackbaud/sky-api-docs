@@ -1,0 +1,26 @@
+---
+layout: layout-sidebar
+name: Fundraising (Beta)
+description: Information on additions and changes for the Fundraising API (Beta).
+order: 100
+published: true
+showInNav: true
+icon: fa fa-user
+back_to_top: true
+title: Fundraising (Beta) Changelog
+---
+
+# {{ name }}
+
+Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
+
+##2017-02-22
+
+### New
+
+The fundraising api has been released for a public beta. This api is meant to handle information in the fundraising heirarchy.
+Fundraising involves the Appeal, Campaign, and Fund entities:
+ - Appeals track the sources your organization uses to generate gifts and the expenses associated with these sources. You can set up appeals such as direct mailings, phonathons, dinners and auctions and track the number of constituents you solicit for each appeal.
+ - Campaigns are your overall objectives for raising money. For example, a school that's planning to build a new library could have a New Library Campaign.
+ - Funds designate the specific financial purpose of a gift. They identify the financial accounts in which gifts and pledges should be recorded and are key to managing your gifts.
+The initial release contains GET by id and custom field endpoints for Appeals, Campaigns, and Funds.
