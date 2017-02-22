@@ -20,6 +20,11 @@ APIs:
     location: constituent
     title: Constituent
   -
+    description: "Monitor this page to keep up with the latest changes to the Fundraising API."
+    icon: fa-line-chart
+    location: fundraising
+    title: Fundraising (Beta)
+  -
     description: "Monitor this page to keep up with the latest changes to the General Ledger API."
     icon: fa-book
     location: gl
