@@ -18,8 +18,8 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Changed
 
- - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now includes an optional `custom_field_category` parameter to retrieve only constituents with custom fields of the specified custom field category.
- - The [Fundraiser list]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint now returns the appropriate value for the constituent_id field
+ - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now includes an optional `custom_field_category` parameter to retrieve constituents only if their active custom fields match specified custom field categories.
+ - The [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint now returns the appropriate value for the `constituent_id` field.
 
 ##2017-02-09
 
