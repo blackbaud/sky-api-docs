@@ -442,3 +442,4 @@ If the refresh token request is not successful, the response status code and bod
 
 For more information on implementing the authorization code flow, check out our [tutorials]({{ stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home }}).
 
+{{ include stache.config.partial_disqus }}

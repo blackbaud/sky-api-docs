@@ -314,3 +314,4 @@ That's it!
 - The README also contains instructions for deploying to Azure App Services rather than your local development environment.
 - You can [create an issue]({{ stache.config.github_repo_web_api_authorization_c_sharp }}issues) to report a bug or request a feature for this code sample.  For all other feature requests, see [ideas]({{ stache.config.support_ideas }}).
 
+{{ include stache.config.partial_disqus }}
