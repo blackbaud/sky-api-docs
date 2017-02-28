@@ -16,8 +16,6 @@ title: Common Authorization Issues
 You may encounter one of the following common issues when initiating authorization and calling the {{ stache.config.product_name_short }}.
 
 
-
-
 ## Request authorization
 
 <p class="alert alert-warning"><strong>Important!</strong> Pop up blockers may interfere with obtaining access tokens in the {{ stache.config.dev_console_name }}. Please enable pop ups when using the {{ stache.config.dev_console_name }} to obtain access tokens.</p>
