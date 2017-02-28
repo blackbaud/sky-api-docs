@@ -70,9 +70,10 @@ After you register an application, its credentials are created and displayed in 
 ### invalid_grant error
 
 > "invalid_grant" error
-This error is caused by an invalid value in your request to the /token endpoint. For example, this error will be seen when providing an invalid, expired, or previously-used authorization code, In this case, you must restart the authorization process and obtain a fresh authorization code from the /authorization endpoint. Note that authorization codes expire in 5 minutes, and are not reusable. Be sure to exchange it for an access token quickly.
 
-This error can also been seen when the redirect_uri provided to the /token endpoint does not match the one used when making the initial authorization request, To resolve this, use the same redirect_uri in both operations.
+This error is caused by an invalid value in your request to the `/token` endpoint. For example, this error will be seen when providing an invalid, expired, or previously-used authorization code, In this case, you must restart the authorization process and obtain a fresh authorization code from the `/authorization` endpoint. Note that authorization codes expire in 5 minutes, and are not reusable. Be sure to exchange it for an access token quickly.
+
+This error can also been seen when the `redirect_uri` provided to the `/token` endpoint does not match the one used when making the initial authorization request, To resolve this, use the same `redirect_uri` in both operations.
  
 ## Call the {{ stache.config.product_name_short }}
 
