@@ -122,8 +122,8 @@ bb-api-subscription-key: 77f137116...480d633
 
 #### Expired Token
 
-The access token expires in {{ stache.config.access_token_expiration_minutes }} minutes.  With the [Authorization Code Flow]({{ stache.config.guide_web_api_authorization_auth_code_flow }}), each time you refresh your tokens, you'll get a new access and refresh token.  
+The access token expires in {{ stache.config.access_token_expiration_minutes }}.  With the [Authorization Code Flow]({{ stache.config.guide_web_api_authorization_auth_code_flow }}), each time you refresh your tokens, you'll get a new access and refresh token.  
 
-Refresh tokens will also expire, but after a much longer period of time (currently, {{ stache.config.refresh_token_expiration_days }} days). Using a sliding window, each time you exchange your refresh token for a new access token, we will issue a new refresh token as well. As long as your application connects to the SKY API at least once within the window, you will be able to continue accessing the Blackbaud customer's data indefinitely (or until they deactivate your application).
+Refresh tokens will also expire, but after a much longer period of time (currently, {{ stache.config.refresh_token_expiration_days }}). Using a sliding window, each time you exchange your refresh token for a new access token, we will issue a new refresh token as well. As long as your application connects to the {{ stache.config.product_name_short }} at least once within the window, you will be able to continue to access the Blackbaud customer's data indefinitely (or until they deactivate your application).
 
 If your access token _and_ refresh token have expired, the user will have to re-authenticate and consent.
