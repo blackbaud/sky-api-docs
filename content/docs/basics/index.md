@@ -77,3 +77,7 @@ The following information provides an overview of some key concepts within the {
 
 {{ include 'includes/basics/skyapiconsole.md' }}
 
+## Breaking changes
+
+{{ include 'includes/basics/breakingchanges.md' }}
+
