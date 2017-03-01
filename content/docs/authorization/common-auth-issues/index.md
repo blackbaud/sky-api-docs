@@ -87,10 +87,10 @@ For more information, see step 4 of [Authorization Code Flow documentation](/doc
 
 > "invalid_grant" error
 
- This error is caused by passing an invalid, expired, or used authorization code to the `/token` endpoint. You can't reuse authorization codes. In the case of a used authorization code, restart the authorization process and obtain a fresh auth code from the `/authorization` endpoint.  Authorization codes expire in 5 minutes.  Be sure to quickly exchange it for an access token.
+This error is caused by an invalid value in your request to the `/token` endpoint. For example, this error will be seen when providing an invalid, expired, or previously used authorization code. In this case, you must restart the authorization process and obtain a fresh authorization code from the `/authorization` endpoint. Note that authorization codes expire in 5 minutes and are not reusable. Be sure to exchange them for access tokens quickly.
+
+This error can also been seen when the `redirect_uri` provided to the `/token` endpoint does not match the one used when making the initial authorization request. To resolve this, use the same `redirect_uri` in both operations.
  
-
-
 ## Call the {{ stache.config.product_name_short }}
 
 ### invalid subscription key
@@ -122,7 +122,8 @@ bb-api-subscription-key: 77f137116...480d633
 
 #### Expired Token
 
-The access token expires in {{ stache.config.access_token_expiration_minutes }} minutes.  With the [Authorization Code Flow]({{ stache.config.guide_web_api_authorization_auth_code_flow }}), each time you refresh your tokens, you'll get a new access and refresh token.  As of now, refresh tokens do _not_ expire.  However, we are planning on revisiting this in the future.  You can expect some type of sliding window for refresh token expiration. So, as long as your application connects at least once within that window, you won't have to re-authenticate with the client.
+The access token expires in {{ stache.config.access_token_expiration_minutes }}.  With the [Authorization Code Flow]({{ stache.config.guide_web_api_authorization_auth_code_flow }}), each time you refresh your tokens, you'll get a new access and refresh token.  
+
+Refresh tokens will also expire, but after a much longer period of time (currently, {{ stache.config.refresh_token_expiration_days }}). Using a sliding window, each time you exchange your refresh token for a new access token, we will issue a new refresh token as well. As long as your application connects to the {{ stache.config.product_name_short }} at least once within the window, you will be able to continue to access the Blackbaud customer's data indefinitely (or until they deactivate your application).
 
 If your access token _and_ refresh token have expired, the user will have to re-authenticate and consent.
-
