@@ -39,6 +39,8 @@ partial_footer_navigation: includes/partial-footer-profile.hbs
 partial_footer_logo: includes/partial-footer-logo.hbs
 copyright: includes/partial-copyright.hbs
 partial_header_edit: includes/partial-header-edit.hbs
+partial_header_comments: includes/partial-header-comments.hbs
+partial_disqus: includes/partial-disqus.hbs
 
 # =============================================
 # Custom Styles and JavaScript
@@ -49,6 +51,12 @@ files:
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
+
+# =============================================
+# Disqus config
+# =============================================
+comments_key: sky-api
+useComments: true
 
 # =============================================
 # GitHub config
