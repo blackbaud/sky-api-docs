@@ -56,7 +56,6 @@ files:
 # Disqus config
 # =============================================
 comments_key: sky-api
-useComments: true
 
 # =============================================
 # GitHub config
