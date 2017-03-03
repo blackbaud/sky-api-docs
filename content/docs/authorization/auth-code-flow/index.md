@@ -9,7 +9,7 @@ back_to_top: true
 title: Authorization Code Flow
 ---
 
-{{ include stache.config.partial_header_edit }}
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # Authorization Code Flow
 

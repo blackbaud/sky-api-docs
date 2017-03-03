@@ -11,7 +11,7 @@ priority: high
 title: Authorization
 ---
 
-{{ include stache.config.partial_header_edit }}
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # Authorization
 

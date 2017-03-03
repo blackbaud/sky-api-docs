@@ -10,6 +10,8 @@ back_to_top: true
 title: FAQs
 ---
 
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
+
 # Frequently Asked Questions
 
 Learn the answers to commonly asked questions, recommended patterns, and best practices for the {{ stache.config.api_type_name }}.
@@ -152,3 +154,5 @@ See <a href="{{ stache.config.guide_web_api_authorization }}">Authorization</a>.
 ### What scopes do you support and how do I pass them in my authorization request?
 
 OAuth 2.0 Scopes are not yet supported within the {{ stache.config.api_type_name }}. In the future, applications may be able to express intent via scopes but for now API access is always within the context of an authenticated user, which means that API access is limited to the user's security permissions.
+
+{{ include stache.config.partial_disqus }}
