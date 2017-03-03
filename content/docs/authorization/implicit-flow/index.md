@@ -9,7 +9,7 @@ back_to_top: true
 title: Implicit Flow
 ---
 
-{{ include stache.config.partial_header_edit }}
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # Implicit Flow
 
@@ -190,3 +190,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1...CTtP0CQ
 bb-api-subscription-key: 77f137116...480d633
 </code></pre>
 
+{{ include stache.config.partial_disqus }}
