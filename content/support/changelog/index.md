@@ -20,6 +20,11 @@ APIs:
     location: constituent
     title: Constituent
   -
+    description: "Monitor this page to keep up with the latest changes to the Gift API."
+    icon: fa-gift
+    location: gift
+    title: Gift (Beta)
+  -
     description: "Monitor this page to keep up with the latest changes to the General Ledger API."
     icon: fa-book
     location: gl

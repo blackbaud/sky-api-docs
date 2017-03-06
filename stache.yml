@@ -137,7 +137,7 @@ partner_program: https://www.blackbaud.com/partners/become-a-partner
 sub_domain: blackbaud.com
 accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
-fundraising_api_suffix: /fundraising
+gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
 # Portal URLs
@@ -393,6 +393,26 @@ portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fun
 portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
 portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
 portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# =============================================
+#       Gift API ENDPOINTS
+# =============================================
+
+# Gift API
+portal_endpoints_gift: <%= stache.config.portal_endpoints %>TODO/
+
+# Gifts
+portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+
+# Gift Custom Fields
+portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+
+# Gift Custom Fields
+portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_delete: <%= stache.config.portal_endpoints_gift %>operations/TODO/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
