@@ -5,7 +5,7 @@ description: Information on additions and changes for the Gift API (Beta).
 order: 100
 published: true
 showInNav: true
-icon: fa fa-user
+icon: fa fa-gift
 back_to_top: true
 title: Gift (Beta) Changelog
 ---
@@ -18,5 +18,5 @@ Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_
 
 ### New
 
-The Gift API has been released for a public beta. This API handles information related to gifts, including the gift, receipt, and acknowledgement entities.
-The initial release contains endpoints for retrieving a list of all gifts, gifts by their ID, as well as managing custom fields. For more information, check out the [entity]({{ stache.config.gift_entity_reference }}) and [endpoint]({{ stache.config.portal_endpoints_gift }}) references.
+The Gift API has been released for a public beta. This API handles information related to gifts, including related entities such as gift splits, gift fundraisers, and soft credits.
+The initial release contains endpoints for retrieving a list of all gifts, gifts by their ID, gift custom fields, as well as managing attachments. For more information, check out the [entity]({{ stache.config.gift_entity_reference }}) and [endpoint]({{ stache.config.portal_endpoints_gift }}) references.
