@@ -9,6 +9,7 @@ showInNav: true
 tutorial: true
 showBreadcrumbs: true
 back_to_top: true
+useComments: false
 ---
 
 {{ include stache.config.partial_header_edit }}

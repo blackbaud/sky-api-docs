@@ -189,6 +189,12 @@ p.text-muted {
     border: 0;
 }
 
+/* Partial Header Edit Styles */
+
+.partial-edit-header {
+    margin-top: 18px;
+    margin-right: 10px;
+}
 
 
 @media (max-width: 767px) {
@@ -251,6 +257,11 @@ p.text-muted {
   .welcome + .container.section-padding {
       padding-left: 15px;
       padding-right: 15px;
+  }
+
+  .partial-edit-header {
+      margin-bottom: 18px;
+      float: none !important;
   }
 }
 
@@ -323,10 +334,4 @@ li.slide {
 h1.tutorial {
     font-size: 40px;
     padding-bottom: 20px;
-}
-
-/* Partial Header Edit Styles */
-
-.partial-edit-header {
-    margin-top: 18px;
 }

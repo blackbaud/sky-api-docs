@@ -13,9 +13,18 @@ title: Shared Changelog
 # {{ name }}
 
 Monitor this page to keep up with common changes shared across all our APIs.
-## 2016-12-02
+
+## 2017-3-03
 
 ### New
+The SKY API developer site now offers commenting capability through Disqus. We encourage community involvement to improve our documentation. We will monitor comments just like we monitor feedback in our GitHub repository, and we will incorporate feedback to make our docs better. See something that is unclear? Want more detail? Leave a comment and let us know!
+ 
+On the SKY API developer site, comments now appear at the bottom of most documentation pages, and buttons are available at the top of pages to take users to the comments.
+
+## December 2016
+
+### 2016-12-02
+
 We added a new <b>Status</b> link to the Support menu. This link takes you to our {{ stache.config.product_name_short }} status page. The status page provides the current state of API availability, as well as specific details on downtime incidents. We also provide the option for you to subscribe to automatic incident notifications by email, SMS, or feed.
 
 ## October 2016

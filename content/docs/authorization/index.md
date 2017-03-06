@@ -11,7 +11,7 @@ priority: high
 title: Authorization
 ---
 
-{{ include stache.config.partial_header_edit }}
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # Authorization
 
@@ -72,3 +72,4 @@ If your access token was obtained using the <a href="{{ stache.config.guide_web_
 
 OAuth 2.0 Scopes are not yet supported within {{ stache.config.api_type_name }} - in the future, applications may be able to express intent via scopes but for now API access is always within the context of an authenticated user, which means that API access respects the user's security permissions defined within the product.
 
+{{ include stache.config.partial_disqus }}
