@@ -854,7 +854,7 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The type of data that the custom field represents. Available values are listed below.</td>
+                <td>The type of data that the custom field represents. Available values <a href="#CustomFieldTypes">are listed below</a>.</td>
             </tr>
             <tr>
                 <td>date</td>
@@ -885,6 +885,7 @@ showBreadcrumbs: true
     </table>
 </div>
 
+<a id="CustomFieldTypes"></a>
 <p>&nbsp;</p>
 <p>Available values for the <b>type</b> of a <b>custom field</b>:</p>
 
@@ -1789,7 +1790,7 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The type of data that the rating represents. Available values are listed below.</td>
+                <td>The type of data that the rating represents. Available values <a href="#RatingTypes">are listed below</a>.</td>
             </tr>
             <tr>
                 <td>value</td>
@@ -1800,6 +1801,7 @@ showBreadcrumbs: true
     </table>
 </div>
 
+<a id="RatingTypes"></a>
 <p>&nbsp;</p>
 <p>Available values for the <b>type</b> of a <b>rating</b>:</p>
 
@@ -1873,52 +1875,54 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The type of ratings in the rating category.
-                    <p>&nbsp;</p>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th><strong>Type</strong></th>
-                                    <th><strong>Description</strong></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>boolean</td>
-                                    <td>Defines the rating value as a boolean JSON data type.</td>
-                                </tr>
-                                <tr>
-                                    <td>codetable</td>
-                                    <td>Defines the rating value as a string JSON data type that refers to a code table entry.</td>
-                                </tr>
-                                <tr>
-                                    <td>currency</td>
-                                    <td>Defines the rating value as a number JSON data type.</td>
-                                </tr>
-                                <tr>
-                                    <td>dateTime</td>
-                                    <td>Defines the rating value as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
-                                </tr>
-                                <tr>
-                                    <td>number</td>
-                                    <td>Defines the rating value as a number JSON data type.</td>
-                                </tr>
-                                <tr>
-                                    <td>text</td>
-                                    <td>Defines the rating value as a string JSON data type.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
+                <td>The type of ratings in the rating category. Available values <a href="#RatingCategoryTypes">are listed below</a>.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-* <code>source_name</code> is not required for all rating categories, but when rating categories have sources, endpoint calls require both the source name and category name for proper identification.<br>
+&#42; <code>source_name</code> is not required for all rating categories, but when rating categories have sources, endpoint calls require both the source name and category name for proper identification.<br>
 
+<a id="RatingCategoryTypes"></a>
+<p>&nbsp;</p>
+<p>Available values for the <b>type</b> of a <b>rating category</b>:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td>boolean</td>
+                <td>Defines the rating value as a boolean JSON data type.</td>
+            </tr>
+            <tr>
+                <td>codetable</td>
+                <td>Defines the rating value as a string JSON data type that refers to a code table entry.</td>
+            </tr>
+            <tr>
+                <td>currency</td>
+                <td>Defines the rating value as a number JSON data type.</td>
+            </tr>
+            <tr>
+                <td>dateTime</td>
+                <td>Defines the rating value as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>number</td>
+                <td>Defines the rating value as a number JSON data type.</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>Defines the rating value as a string JSON data type.</td>
+            </tr>
+        </body>
+    </table>
+</div>
 
 <a id="RatingSource"></a>
 <p>&nbsp;</p>
