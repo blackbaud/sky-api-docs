@@ -10,6 +10,7 @@ showInNav: true
 showBreadcrumbs: true
 tutorial: true
 back_to_top: true
+redirectUrl: http://localhost:5000/auth/callback
 ---
 
 {{ include stache.config.partial_header_edit }}

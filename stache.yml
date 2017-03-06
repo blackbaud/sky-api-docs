@@ -55,6 +55,7 @@ files:
 # =============================================
 github: https://github.com/blackbaud/
 github_repo_web_api_authorization: <%= stache.config.github %>sky-api-tutorial-auth-code-nodejs/
+github_repo_web_api_authorization_php: <%= stache.config.github %>sky-api-tutorial-auth-code-php/
 github_repo_web_api_authorization_c_sharp: <%= stache.config.github %>sky-api-tutorial-auth-code-c-sharp/
 github_repo_web_api_authorization_chrome_extension: <%= stache.config.github %>sky-api-tutorial-bff-pattern/
 github_repo_barkbaud_nodejs: <%= stache.config.github %>barkbaud/
