@@ -243,7 +243,7 @@ header('Location: /');
 exit();
 
     ...
-// build out the request body with the code from the redirect URI.
+// build out the request body with the code from the redirect URI, and call the fetchTokens() method, passing the newly made $body array.
 public static function exchangeCodeForAccessToken($code = 0) {
 $body = array(
     'code' => $code,
@@ -273,36 +273,75 @@ return $response;
 
 ## Retrieve Constituent Data
 <ul>
-<li>Open the Home page (**Views/Shared/_Layout.cshtml**).</li>
-<li><p>AngularJS again makes the request to `auth/authenticated`, which now returns `true`. Since the user is authorized, AngularJS then makes a request the application’s constituent API endpoint `/api/constituents/280` to retrieve a constituent record:</p>
+<li>Open the **index.html** file.</li>
+<li><p>AngularJS again makes the request to `auth/authenticated`, which now returns `true`. Since the user is authorized, AngularJS then makes a request the application’s constituent API endpoint `/api/constituents.php?id=280` to retrieve a constituent record:</p>
 <pre><code class="language-javascript">angular.module('AuthCodeFlowTutorial', [])
-	.controller('ConstituentCtrl', function ($scope, $http) {
+	.controller('ConstituentCtrl', function ($scope, $http, $watch) {
 
-		// Check user access token.
-		$http.get('/auth/authenticated').then(function (res) {
-			$scope.isAuthenticated = res.data.authenticated;
-			if ($scope.isAuthenticated === false) {
-				$scope.isReady = true;
-				return;
-			}
+       // Check user access token.
+        $http.get('/auth/authenticated.php').then(res => {
+          $scope.isAuthenticated = res.data.authenticated;
+          if ($scope.isAuthenticated === false) {
+            $scope.isReady = true;
+            return;
+          }
 
-			// Access token is valid. Fetch constituent record.
-			$http.get('/api/constituents/280').then(function (res) {
-				$scope.constituent = res.data;
-				$scope.isReady = true;
-			});
-		});
-	...</code></pre>
+          // Access token is valid. Fetch constituent record.
+          $http.get('/api/constituents.php?id=280').then(res => {
+            $scope.constituent = res.data.constituent;
+            $scope.isReady = true;
+          });
+        });
+	    ...</code></pre>
 </li>
-<li><p>The data is returned as JSON to the Home page where the model's data is projected through the view of the HTML template:</p>
-<pre><code class="language-markup" ng-non-bindable>&lt;div ng-if="isAuthenticated">
-  &lt;h3>Constituent: {{ constituent.name }}&lt;/h3>
+ <li>Open **api/constituents.php** and **includes/blackbaud/api/constituents.php**</li>
+  <li>
+    <p>The get request in **index.html** file directs the request to **api/constituents.php** where the access token is refreshed and the call is passed along to **/includes/blackbaud/api/constituents.php** with the id from the route param `?id=280` that we passed into the request.</p> 
+    <pre><code class="language-php">&lt;?php
+    ...
+   $response = blackbaud\Auth::refreshAccessToken();
+    $token = json_decode($response, true);
+    if (!isset($token['access_token'])) {
+      echo json_encode($token);
+      return;
+    }
+    $data = blackbaud\Constituents::getById($_GET['id']);
+    ...</code></pre>
+    
+    <p>
+        The `getById()` method interacts directly with the SKY API endpoints making a `get` request to the `https://api.sky.blackbaud.com/constituent/v1/constituents/280` endpoint and passing in the required `headers`.
+    </p>
+    <pre><code class="language-php">&lt;?php
+    ...
+        self::$headers = array(
+        'bb-api-subscription-key: ' . AUTH_SUBSCRIPTION_KEY,
+        'Authorization: Bearer ' . Session::getAccessToken(),
+        'Content-type: application/x-www-form-urlencoded'
+        );
+        self::$baseUri = SKY_API_BASE_URI . 'constituent/v1/';
+    }
+
+    public static function getById($id = 0) {
+        $url = self::$baseUri . 'constituents/' . $id;
+        $response = Http::get($url, self::$headers);
+        return json_decode($response, true);
+    }
+    ...</code></pre>
+
+    <p>The `bb-api-subscription-key` value represents your Blackbaud developer account's approved subscription to an API product. You can use your account's **Primary key** or **Secondary key**. The `Authorization` value represents your authorization to use the API. The `Authorization` header starts with `Bearer` followed by a space and then the value for the access token.</p>
+  	<p>A call to the  [Constituent (Get) endpoint]({{ stache.config.portal_endpoints_constituent_get }}) retrieves constituent data and sends it back to the browser.</p>
+    <pre><code class="language-javascript">    
+function get(request, endpoint, callback) {
+    return proxy(request, 'GET', endpoint, '', callback);
+}</code></pre>
+    <p>The data is returned as JSON to the browser where the model's data is projected through the view of the Angular template.</p>
+    <pre><code class="language-markup" ng-non-bindable>&lt;div ng-if="isAuthenticated">
+  &lt;h3>Constituent: \{{ constituent.name }}&lt;/h3>
   &lt;p>
-    See &lt;a href="{{ stache.config.constituent_entity_reference }}">Constituent&lt;/a>
-    within the SKY API entity reference for a full listing of properties.
+    See &lt;a href="https://developer.sky.blackbaud.com/contract-reference#Constituent" target="_blank">Constituent&lt;/a>
+    within the SKY API contact reference for a full listing of properties.
   &lt;/p>
-  &lt;p ng-if="::constituent.error" ng-bind="::constituent.error" class="alert alert-danger">&lt;/p>
-  &lt;div ng-if="::constituent.id" class="table-responsive">
+  &lt;div class="table-responsive">
     &lt;table class="table table-striped table-hover">
       &lt;thead>
         &lt;tr>
@@ -334,18 +373,56 @@ return $response;
       &lt;/tbody>
     &lt;/table>
   &lt;/div>
-...</code></pre>
-![GET Constituent](/assets/img/auth_tutorial_GETConstituent_c_sharp.png "GET Constituent")
-</li>
+  &lt;a href="/auth/logout" class="btn btn-primary">Log out&lt;/a>
+&lt;/div></code></pre>
+    <p>![GET Constituent][auth-tutorial-getconstituent]</p>
+  </li>
 <li>Once the constituent information is retrieved and added to the front page, **Log Out** and **Refresh Access Token** buttons are displayed.</li>
-<li>Open **/Controllers/AuthenticationController.cs**</li>
-<li>If the user clicks **Log Out**, they are redirected to `/auth/logout` which destroys the access/refresh token stored in the browser’s session.</li>
-<li>If the user clicks **Refresh Access Token**, AngularJS makes a request to `/auth/refresh-token`, which asks SKY API to return a refreshed access token, which is then stored in the browser’s session.</li>
+<li>Open **/auth/logout.php** and **includes/blackbaud/session.php**</li>
+<li>If the user clicks **Log Out**, they are redirected to **/auth/logout.php** which calls the `blackbaud\Session::logout()` in **includes/blackaud/session.php**. The `logout()` method destroys the token stored in the PHP server's `$_SESSION`.</li>
+    <pre><code class="language-php">&lt;?php
+    ...
+    public static function logout() {
+      unset($_SESSION[self::$tokenName]);
+    }
+    ...</code></pre>
+
+<li>If the user clicks **Refresh Access Token**, AngularJS makes a request to **/auth/refresh-token.php**, the call is passed to the `refreshAccessToken()` method in **includes/blackbaud/auth.php** which builds out the request body with the required fields.  The `grant_type` is set to `refresh_token`, and the `refresh_token` field is populated with the **refresh_token** we have stored in the `$_SESSION`. This body is then passed to the `fetchTokens()` method where the `post` to the SKY API endpoint is made.</li>
+
+  <pre><code class="language-php">&lt;?php
+  ...
+  public static function refreshAccessToken() {
+    $body = array(
+      'grant_type' => 'refresh_token',
+      'refresh_token' => Session::getRefreshToken()
+    );
+    return self::fetchTokens($body);
+  }
+  ...
+    private static function fetchTokens($body = array()) {
+    $headers = array(
+      'Content-type: application/x-www-form-urlencoded',
+      'Authorization: Basic ' . base64_encode(AUTH_CLIENT_ID . ':' . AUTH_CLIENT_SECRET)
+    );
+
+    $url = AUTH_BASE_URI . 'token';
+
+    $response = Http::post($url, $body, $headers);
+    $token = json_decode($response, true);
+    Session::setToken($token);
+    return $response;
+  }
+  ...
+  </code></pre>
+
+  <p>
+    The `JSON` response from SKY API is then parsed, the new set of tokens are stored in our `$_SESSION`, and the data is sent back to Angular to be displayed on the page for your reference.
+  </p>
 </ul>
 
 That's it!
 
 - Be sure to take a look at our other [code samples]({{ stache.config.guide_code }}).
-- Check out the [README]({{ stache.config.github_repo_web_api_authorization_c_sharp }}/blob/master/README.md) where you can view a live demo of the application hosted on Microsoft Azure.
-- The README also contains instructions for deploying to Azure App Services rather than your local development environment.
-- You can [create an issue]({{ stache.config.github_repo_web_api_authorization_c_sharp }}issues) to report a bug or request a feature for this code sample.  For all other feature requests, see [ideas]({{ stache.config.support_ideas }}).
+- You can [create an issue]({{ stache.config.github_repo_web_api_authorization_php }}issues) to report a bug or request a feature for this code sample.  For all other feature requests, see [ideas]({{ stache.config.support_ideas }}).
+
+[auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent.png

@@ -300,7 +300,7 @@ public ActionResult Callback()
     &lt;/table>
   &lt;/div>
 ...</code></pre>
-![GET Constituent](/assets/img/auth_tutorial_GETConstituent_c_sharp.png "GET Constituent")
+![GET Constituent](/assets/img/auth_tutorial_GETConstituent.png "GET Constituent")
 </li>
 <li>Once the constituent information is retrieved and added to the front page, **Log Out** and **Refresh Access Token** buttons are displayed.</li>
 <li>Open **/Controllers/AuthenticationController.cs**</li>
