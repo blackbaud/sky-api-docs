@@ -14,7 +14,7 @@ showBreadcrumbs: true
 <p>Updated: March 8, 2017</p>
 
 
-    <p>This topic describes the entity and type representations for common items used that the Gift API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
+    <p>This topic describes the entity and type representations for common items that the Gift API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
     <ul>
         <li><a href="#Gift">Gift</a></li>
         <li><a href="#GiftAttachment">Gift attachment</a></li>
@@ -53,12 +53,12 @@ showBreadcrumbs: true
             <tr>
                 <td>date_added</td>
                 <td>dateTime</td>
-                <td>The date the gift was added. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The date when the gift was added. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
             <tr>
                 <td>date_modified</td>
                 <td>dateTime</td>
-                <td>The date the gift was last modified. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The date when the gift was last modified. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
             <tr>
                 <td>amount</td>
@@ -93,7 +93,7 @@ showBreadcrumbs: true
             <tr>
                 <td>lookup_id</td>
                 <td>string</td>
-                <td>The gift lookup identifier.</td>
+                <td>The user-defined identifier for the gift.</td>
             </tr>
             <tr>
                 <td>soft_credits</td>
@@ -103,17 +103,17 @@ showBreadcrumbs: true
             <tr>
                 <td>fundraisers</td>
                 <td>array of <a href="#GiftFundraiser">fundraiser</a></td>
-                <td>The set of fundraisers who should receive credit for this gift.</td>
+                <td>The set of fundraisers who receive credit for the gift.</td>
             </tr>
             <tr>
                 <td>post_status</td>
                 <td>string</td>
-                <td>The general ledger post status of the gift. Available values are <i>posted, notposted, and donotpost.</i></td>
+                <td>The general ledger post status of the gift. Available values are <i>posted</i>, <i>notposted</i>, and <i>donotpost.</i></td>
             </tr>
             <tr>
                 <td>gift_status</td>
                 <td>string</td>
-                <td>The status of the gift. Available values are <i>active, held, terminated, completed, and cancelled.</i></td>
+                <td>The status of the gift. Available values are <i>active</i>, <i>held</i>, <i>terminated</i>, <i>completed</i>, and <i>cancelled.</i></td>
             </tr>
             <tr>
                 <td>reference</td>
@@ -163,7 +163,7 @@ showBreadcrumbs: true
             </tr>
             <tr>
                 <td>matchinggiftwriteoff</td>
-                <td>A matching gift write off.</td>
+                <td>A matching gift write-off.</td>
             </tr>
             <tr>
                 <td>plannedgift</td>
@@ -179,7 +179,7 @@ showBreadcrumbs: true
             </tr>
             <tr>
                 <td>pledgewriteoff</td>
-                <td>A pledge write off.</td>
+                <td>A pledge write-off.</td>
             </tr>
             <tr>
                 <td>recurringgift</td>
@@ -231,44 +231,44 @@ showBreadcrumbs: true
                 <td>The parent object's identifier.</td>
             </tr>
             <tr>
-                <td>type</td>
-                <td>string</td>
-                <td>The gift attachment type. Available values are <i>link</i> and <i>physical</i>. Physical gift attachments are stored and managed in the system. Link gift attachments are stored and managed externally. At this time, only link gift attachments can be created through the API.</td>
-            </tr>
-            <tr>
-                <td>url</td>
-                <td>string</td>
-                <td>The URL for the gift attachment. The URL for a physical gift attachment contains a time-bound signature that limits access to 60 minutes.</td>
-            </tr>
-            <tr>
                 <td>tags</td>
                 <td>array of string</td>
-                <td>The set of tags associated with the gift attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
+                <td>The set of tags associated with the attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
             </tr>
             <tr>
                 <td>name</td>
                 <td>string</td>
-                <td>The name of the gift attachment.</td>
+                <td>The name of the attachment.</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>string</td>
+                <td>The attachment type. Available values are <i>link</i> and <i>physical</i>. Physical attachments are stored and managed in the system. Link attachments are stored and managed externally. At this time, only link attachments can be created through the API.</td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td>string</td>
+                <td>The URL for the attachment. The URL for a physical gift attachment contains a time-bound signature that limits access to 60 minutes.</td>
             </tr>
             <tr>
                 <td>content_type</td>
                 <td>string</td>
-                <td>The content type. Only applies to physical gift attachments.</td>
+                <td>The content type. Only applies to physical attachments.</td>
             </tr>
             <tr>
                 <td>file_name</td>
                 <td>string</td>
-                <td>The file name. Only applies to physical gift attachments.</td>
+                <td>The file name. Only applies to physical attachments.</td>
             </tr>
             <tr>
                 <td>file_size</td>
                 <td>long</td>
-                <td>The file size in bytes. Only applies to physical gift attachments.</td>
+                <td>The file size in bytes. Only applies to physical attachments.</td>
             </tr>
             <tr>
                 <td>thumbnail_url</td>
                 <td>string</td>
-                <td>The URL for a thumbnail. Only applies to physical gift attachments that are images. Contains a time-bound signature that limits access to 60 minutes.</td>
+                <td>The URL for a thumbnail. Only applies to physical attachments that are images. Contains a time-bound signature that limits access to 60 minutes.</td>
             </tr>
         </tbody>
     </table>
