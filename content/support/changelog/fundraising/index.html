@@ -5,7 +5,7 @@ description: Information on additions and changes for the Fundraising API (Beta)
 order: 100
 published: true
 showInNav: true
-icon: fa fa-user
+icon: fa fa-line-chart
 back_to_top: true
 title: Fundraising (Beta) Changelog
 ---
@@ -13,3 +13,14 @@ title: Fundraising (Beta) Changelog
 # {{ name }}
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
+
+##2017-03-08
+
+### New
+
+The Fundraising API has been released for a public beta. This API handles information related to the fundraising hierarchy, including the Campaign, Fund, and Appeal entities:
+ - Campaigns are your objectives and initiatives for raising money, and typically the top tier of the Fundraising hierarchy. For example, you could create campaigns to encompass fundraising efforts related to annual operating expenses, a new building, or an endowment.
+ - Funds represent the donor's intent for how you should use or earmark a gift, such as toward a specific cause or financial purpose. They are often linked to financial suites and indicate where the gift should be allocated.
+ -  Appeals are the sources and solicitations used to bring in gifts, and are typically the most granular piece of the fundraising hierarchy. Examples of appeals include such as direct mailings, online donation pages, phonathons, auctions, or events.
+
+The initial release contains endpoints for retrieving these entities by ID, as well as managing custom fields. For more information, check out the [entity]({{ stache.config.fundraising_entity_reference }}) and [endpoint]({{ stache.config.portal_endpoints_fundraising }}) references.

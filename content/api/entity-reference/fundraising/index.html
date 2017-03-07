@@ -3,8 +3,8 @@ layout: layout-container
 name: Fundraising Entity Reference (Beta)
 title: Fundraising Entity Reference (Beta)
 order: 30
-published: false
-showInNav: false
+published: true
+showInNav: true
 back_to_top: true
 showBreadcrumbs: true
 ---
@@ -12,19 +12,23 @@ showBreadcrumbs: true
 <h1>{{ name }}</h1>
 
 
-<p>Updated: November 30, 2016</p>
+<p>Updated: March 8, 2017</p>
 
-
-    <p>This topic describes the entity and type representations for common items that the Fundraising API (Beta) uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
-    <ul>
-		<li><p><a href="#Collection">Collection</a></p></li>
+<div class="introduction">
+    This topic describes the entity and type representations for common items that the Fundraising API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="https://apidocs.sky.blackbaud.com/docs/getting-started">Getting Started</a> guide.</p>
+    <ul class="unordered">
+  		<li><p><a href="#Appeal">Appeal</a></p></li>
+  		<li><p><a href="#Campaign">Campaign</a></p></li>
+  		<li><p><a href="#Fund">Fund</a></p></li>
     </ul>
+</div>
 
 
-<a id="Collection"></a>
+<a id="Appeal"></a>
 <p>&nbsp;</p>
-<h2>Collection</h2>
-<p>The <b>collection</b> entity has the following properties:</p>
+<h2>Appeal</h2>
+<p>Appeals track the sources your organization uses to generate gifts and the expenses associated with these sources. You can set up appeals such as direct mailings, phonathons, dinners and auctions and track the number of constituents you solicit for each appeal.</p>
+<p>The <b>appeal</b> entity has the following properties:</p>
 
 <div class="table-responsive">
     <table class="table table-striped table-hover">
@@ -37,19 +41,151 @@ showBreadcrumbs: true
         </thead>
         <tbody>
             <tr>
-                <td>count</td>
-                <td>integer</td>
-                <td>The total number of items in the collection.</td>
+                <td>id</td>
+                <td>string</td>
+                <td>The appeal identifier.</td>
             </tr>
             <tr>
-                <td>next_link</td>
-                <td>URI</td>
-                <td>For paginated responses, this represents the URI for the next page of results.</td>
+                <td>description</td>
+                <td>string</td>
+                <td>The name of the appeal.</td>
             </tr>
             <tr>
-                <td>value</td>
-                <td>list</td>
-                <td>Contains a collection of items included in this response (which may be a subset of the total items in the collection).</td>
+                <td>lookup_id</td>
+                <td>string</td>
+                <td>The user defined identifier for the appeal.</td>
+            </tr>
+            <tr>
+                <td>start_date</td>
+                <td>dateTime</td>
+                <td>The start date of the appeal. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>end_date</td>
+                <td>dateTime</td>
+                <td>The end date of the appeal. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-12-25T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>inactive</td>
+                <td>boolean</td>
+                <td>Indicates whether the appeal is active.</td>
+            </tr>
+            <tr>
+                <td>goal</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The monetary goal associated with the appeal.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<a id="Campaign"></a>
+<p>&nbsp;</p>
+<h2>Campaign</h2>
+<p>Campaigns are your overall objectives for raising money. For example, a school that's planning to build a new library could have a New Library Campaign.</p>
+<p>The <b>campaign</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The campaign identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The name of the campaign.</td>
+            </tr>
+            <tr>
+                <td>lookup_id</td>
+                <td>string</td>
+                <td>The user defined identifier for the campaign.</td>
+            </tr>
+            <tr>
+                <td>start_date</td>
+                <td>dateTime</td>
+                <td>The start date of the campaign. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>end_date</td>
+                <td>dateTime</td>
+                <td>The end date of the campaign. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-12-25T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>inactive</td>
+                <td>boolean</td>
+                <td>Indicates whether the campaign is active.</td>
+            </tr>
+            <tr>
+                <td>goal</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The monetary goal associated with the campaign.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<a id="Fund"></a>
+<p>&nbsp;</p>
+<h2>Fund</h2>
+<p>Funds designate the specific financial purpose of a gift. They identify the financial accounts in which gifts and pledges should be recorded and are key to managing your gifts.</p>
+<p>The <b>fund</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>string</td>
+                <td>The fund identifier.</td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>The name of the fund.</td>
+            </tr>
+            <tr>
+                <td>lookup_id</td>
+                <td>string</td>
+                <td>The user defined identifier for the fund.</td>
+            </tr>
+            <tr>
+                <td>start_date</td>
+                <td>dateTime</td>
+                <td>The start date of the fund. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>end_date</td>
+                <td>dateTime</td>
+                <td>The end date of the fund. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-12-25T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>inactive</td>
+                <td>boolean</td>
+                <td>Indicates whether the fund is active.</td>
+            </tr>
+            <tr>
+                <td>goal</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The monetary goal associated with the fund.</td>
             </tr>
         </tbody>
     </table>

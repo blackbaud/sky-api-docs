@@ -144,6 +144,7 @@ partner_program: https://www.blackbaud.com/partners/become-a-partner
 sub_domain: blackbaud.com
 accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
+fundraising_api_suffix: /fundraising
 gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
