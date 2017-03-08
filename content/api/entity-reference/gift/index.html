@@ -1,60 +1,28 @@
 ---
 layout: layout-container
-name: Gift Entity Reference
-title: Gift Entity Reference
+name: Gift Entity Reference (Beta)
+title: Gift Entity Reference (Beta)
 order: 50
-published: false
-showInNav: false
+published: true
+showInNav: true
 back_to_top: true
 showBreadcrumbs: true
 ---
 
-<h1>{{ name}}</h1>
+<h1>{{ name }}</h1>
 
-<p>Updated: January 26, 2017</p>
+<p>Updated: March 8, 2017</p>
 
 
-    <p>This topic describes the entity and type representations for common items used that the Gift API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
+    <p>This topic describes the entity and type representations for common items that the Gift API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
     <ul>
-        <li><a href="#Acknowledgement">Acknowledgement</a></li>
         <li><a href="#Gift">Gift</a></li>
         <li><a href="#GiftAttachment">Gift attachment</a></li>
         <li><a href="#GiftFundraiser">Gift fundraiser</a></li>
         <li><a href="#GiftSplit">Gift split</a></li>
-        <li><a href="#Receipt">Receipt</a></li>
         <li><a href="#SoftCredit">Soft credit</a></li>
     </ul>
 
-
-
-<a id="Acknowledgement"></a>
-<p>&nbsp;</p>
-<h2>Acknowledgement</h2>
-<p>The <b>acknowledgement</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>status</td>
-                <td>string</td>
-                <td>The status of the acknowledgement. Available values are <i>acknowledged, notacknowledged, and donotacknowledge.</i></td>
-            </tr>
-            <tr>
-                <td>date</td>
-                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
-                <td>The date associated with the acknowledgement.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 
 <a id="Gift"></a>
@@ -85,12 +53,12 @@ showBreadcrumbs: true
             <tr>
                 <td>date_added</td>
                 <td>dateTime</td>
-                <td>The date the gift was added. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The date when the gift was added. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
             <tr>
                 <td>date_modified</td>
                 <td>dateTime</td>
-                <td>The date the gift was last modified. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The date when the gift was last modified. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
             <tr>
                 <td>amount</td>
@@ -118,11 +86,6 @@ showBreadcrumbs: true
                 <td>The set of gift splits associated with the gift.</td>
             </tr>
             <tr>
-                <td>linked_gifts</td>
-                <td>array of string</td>
-                <td>The identifiers of other gifts that are linked to this gift.</td>
-            </tr>
-            <tr>
                 <td>subtype</td>
                 <td>string</td>
                 <td>The subtype of the gift. Available values are the entries in the <b>Gift Subtypes</b> table.</td>
@@ -130,22 +93,7 @@ showBreadcrumbs: true
             <tr>
                 <td>lookup_id</td>
                 <td>string</td>
-                <td>The gift lookup identifier.</td>
-            </tr>
-            <tr>
-                <td>balance</td>
-                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The balance remaining on the gift.</td>
-            </tr>
-            <tr>
-                <td>acknowledgement</td>
-                <td><a href="#Acknowledgement">acknowledgement</a></td>
-                <td>The acknowledgement associated with the gift.</td>
-            </tr>
-            <tr>
-                <td>receipt</td>
-                <td><a href="#Receipt">receipt</a></td>
-                <td>The receipt of the gift.</td>
+                <td>The user-defined identifier for the gift.</td>
             </tr>
             <tr>
                 <td>soft_credits</td>
@@ -155,42 +103,22 @@ showBreadcrumbs: true
             <tr>
                 <td>fundraisers</td>
                 <td>array of <a href="#GiftFundraiser">fundraiser</a></td>
-                <td>The set of fundraisers who should receive credit for this gift.</td>
+                <td>The set of fundraisers who receive credit for the gift.</td>
             </tr>
             <tr>
                 <td>post_status</td>
                 <td>string</td>
-                <td>The general ledger post status of the gift. Available values are <i>posted, notposted, and donotpost.</i></td>
-            </tr>
-            <tr>
-                <td>post_date</td>
-                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
-                <td>The date that the gift was posted to general ledger.</td>
+                <td>The general ledger post status of the gift. Available values are <i>posted</i>, <i>notposted</i>, and <i>donotpost.</i></td>
             </tr>
             <tr>
                 <td>gift_status</td>
                 <td>string</td>
-                <td>The status of the gift. Available values are <i>active, held, terminated, completed, and cancelled.</i></td>
-            </tr>
-            <tr>
-                <td>gift_aid_qualification_status</td>
-                <td>string</td>
-                <td>The gift aid qualification status of the gift. Available values are <i>qualified, notqualified, and partlyqualified. For UK only.</i></td>
-            </tr>
-            <tr>
-                <td>gift_aid_amount</td>
-                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The amount of tax reclaimed from gift aid for this gift. For UK only.</td>
+                <td>The status of the gift. Available values are <i>active</i>, <i>held</i>, <i>terminated</i>, <i>completed</i>, and <i>cancelled.</i></td>
             </tr>
             <tr>
                 <td>reference</td>
                 <td>string</td>
                 <td>Notes to track special details about a gift such as the motivation behind it or a detailed description of a gift-in-kind.</td>
-            </tr>
-            <tr>
-                <td>payment_method</td>
-                <td>string</td>
-                <td>The payment method of the gift. Available values <a href="#GiftPaymentMethods">are listed below</a>.</td>
             </tr>
         </tbody>
     </table>
@@ -235,7 +163,7 @@ showBreadcrumbs: true
             </tr>
             <tr>
                 <td>matchinggiftwriteoff</td>
-                <td>A matching gift write off.</td>
+                <td>A matching gift write-off.</td>
             </tr>
             <tr>
                 <td>plannedgift</td>
@@ -251,7 +179,7 @@ showBreadcrumbs: true
             </tr>
             <tr>
                 <td>pledgewriteoff</td>
-                <td>A pledge write off.</td>
+                <td>A pledge write-off.</td>
             </tr>
             <tr>
                 <td>recurringgift</td>
@@ -272,55 +200,6 @@ showBreadcrumbs: true
             <tr>
                 <td>other</td>
                 <td>Another type of gift.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="GiftPaymentMethods"></a>
-<p>&nbsp;</p>
-<p>Available values for the <b>payment method</b> of a <b>gift</b>:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>cash</td>
-                <td>Cash.</td>
-            </tr>
-            <tr>
-                <td>personalcheck</td>
-                <td>A personal check.</td>
-            </tr>
-            <tr>
-                <td>businesscheck</td>
-                <td>A business check.</td>
-            </tr>
-            <tr>
-                <td>creditcard</td>
-                <td>A credit card.</td>
-            </tr>
-            <tr>
-                <td>standingorder</td>
-                <td>A standing order.</td>
-            </tr>
-            <tr>
-                <td>directdebit</td>
-                <td>Direct debit.</td>
-            </tr>
-            <tr>
-                <td>voucher</td>
-                <td>A voucher.</td>
-            </tr>
-            <tr>
-                <td>other</td>
-                <td>Another method of payment.</td>
             </tr>
         </tbody>
     </table>
@@ -352,44 +231,44 @@ showBreadcrumbs: true
                 <td>The parent object's identifier.</td>
             </tr>
             <tr>
-                <td>type</td>
-                <td>string</td>
-                <td>The gift attachment type. Available values are <i>link</i> and <i>physical</i>. Physical gift attachments are stored and managed in the system. Link gift attachments are stored and managed externally. At this time, only link gift attachments can be created through the API.</td>
-            </tr>
-            <tr>
-                <td>url</td>
-                <td>string</td>
-                <td>The URL for the gift attachment. The URL for a physical gift attachment contains a time-bound signature that limits access to 60 minutes.</td>
-            </tr>
-            <tr>
                 <td>tags</td>
                 <td>array of string</td>
-                <td>The set of tags associated with the gift attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
+                <td>The set of tags associated with the attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
             </tr>
             <tr>
                 <td>name</td>
                 <td>string</td>
-                <td>The name of the gift attachment.</td>
+                <td>The name of the attachment.</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>string</td>
+                <td>The attachment type. Available values are <i>link</i> and <i>physical</i>. Physical attachments are stored and managed in the system. Link attachments are stored and managed externally. At this time, only link attachments can be created through the API.</td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td>string</td>
+                <td>The URL for the attachment. The URL for a physical gift attachment contains a time-bound signature that limits access to 60 minutes.</td>
             </tr>
             <tr>
                 <td>content_type</td>
                 <td>string</td>
-                <td>The content type. Only applies to physical gift attachments.</td>
+                <td>The content type. Only applies to physical attachments.</td>
             </tr>
             <tr>
                 <td>file_name</td>
                 <td>string</td>
-                <td>The file name. Only applies to physical gift attachments.</td>
+                <td>The file name. Only applies to physical attachments.</td>
             </tr>
             <tr>
                 <td>file_size</td>
                 <td>long</td>
-                <td>The file size in bytes. Only applies to physical gift attachments.</td>
+                <td>The file size in bytes. Only applies to physical attachments.</td>
             </tr>
             <tr>
                 <td>thumbnail_url</td>
                 <td>string</td>
-                <td>The URL for a thumbnail. Only applies to physical gift attachments that are images. Contains a time-bound signature that limits access to 60 minutes.</td>
+                <td>The URL for a thumbnail. Only applies to physical attachments that are images. Contains a time-bound signature that limits access to 60 minutes.</td>
             </tr>
         </tbody>
     </table>
@@ -461,46 +340,6 @@ showBreadcrumbs: true
                 <td>appeal_id</td>
                 <td>string</td>
                 <td>The identifier of the appeal associated with the gift split.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-<a id="Receipt"></a>
-<p>&nbsp;</p>
-<h2>Receipt</h2>
-<p>The <b>receipt</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>status</td>
-                <td>string</td>
-                <td>The status of the receipt. Available values are <i>receipted, notreceipted, and donotreceipt</i>.</td>
-            </tr>
-            <tr>
-                <td>date</td>
-                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
-                <td>The date on the receipt.</td>
-            </tr>
-            <tr>
-                <td>number</td>
-                <td>string</td>
-                <td>The number of the receipt.</td>
-            </tr>
-            <tr>
-                <td>amount</td>
-                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The amount of the receipt.</td>
             </tr>
         </tbody>
     </table>
