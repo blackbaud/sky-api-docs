@@ -15,20 +15,30 @@ APIs:
     location: shared
     title: Shared
   -
+    description: "Monitor this page to keep up with the latest changes to the Accounts Payable API."
+    icon: fa-university
+    location: ap
+    title: Accounts Payable
+  -
     description: "Monitor this page to keep up with the latest changes to the Constituent API."
     icon: fa-user
     location: constituent
     title: Constituent
+  -
+    description: "Monitor this page to keep up with the latest changes to the Fundraising API."
+    icon: fa-line-chart
+    location: fundraising
+    title: Fundraising (Beta)
   -
     description: "Monitor this page to keep up with the latest changes to the General Ledger API."
     icon: fa-book
     location: gl
     title: General Ledger
   -
-    description: "Monitor this page to keep up with the latest changes to the Accounts Payable API."
-    icon: fa-university
-    location: ap
-    title: Accounts Payable
+    description: "Monitor this page to keep up with the latest changes to the Gift API."
+    icon: fa-gift
+    location: gift
+    title: Gift (Beta)
 ---
 
 # {{ name }}

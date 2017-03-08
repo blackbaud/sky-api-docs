@@ -11,145 +11,15 @@ showBreadcrumbs: true
 
 <h1>{{ name}}</h1>
 
-<p>Updated: November 30, 2016</p>
+<p>Updated: March 7, 2017</p>
 
 
     <p>This topic describes the entity and type representations for common items that the Opportunity API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
     <ul>
-        <li><a href="#Campaign">Campaign</a><li>
-        <li><a href="#Collection">Collection</a></li>
-        <li><a href="#Currency">Currency</a></li>
-        <li><a href="#Fund">Fund</a></p></li>
         <li><a href="#Fundraiser">Fundraiser</a></li>
         <li><a href="#Opportunity">Opportunity</a></li>
     </ul>
 
-
-<a id="Campaign"></a>
-<p>&nbsp;</p>
-<h2>Campaign</h2>
-<p>The <b>campaign</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>id</td>
-                <td>string</td>
-                <td>The campaign identifier.</td>
-            </tr>
-            <tr>
-                <td>description</td>
-                <td>string</td>
-                <td>The campaign description.</td>
-            </tr>
-            <tr>
-                <td>lookup_id</td>
-                <td>string</td>
-                <td>The campaign's lookup identifier.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="Collection"></a>
-<p>&nbsp;</p>
-<h2>Collection</h2>
-<p>The <b>collection</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>count</td>
-                <td>integer</td>
-                <td>The total number of items in the collection.</td>
-            </tr>
-            <tr>
-                <td>next_link</td>
-                <td>URI</td>
-                <td>For paginated responses, this represents the URI for the next page of results.</td>
-            </tr>
-            <tr>
-                <td>value</td>
-                <td>list</td>
-                <td>Contains a collection of items included in this response (which may be a subset of the total items in the collection).</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="Currency"></a>
-<p>&nbsp;</p>
-<h2>Currency</h2>
-<p>The <b>currency</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>value</td>
-                <td>decimal</td>
-                <td>The monetary value.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="Fund"></a>
-<p>&nbsp;</p>
-<h2>Fund</h2>
-<p>The <b>fund</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>id</td>
-                <td>string</td>
-                <td>The fund identifier.</td>
-            </tr>
-            <tr>
-                <td>description</td>
-                <td>string</td>
-                <td>The fund description.</td>
-            </tr>
-            <tr>
-                <td>lookup_id</td>
-                <td>string</td>
-                <td>The fund's lookup identifier.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 <a id="Fundraiser"></a>
 <p>&nbsp;</p>
@@ -167,19 +37,14 @@ showBreadcrumbs: true
         </thead>
         <tbody>
             <tr>
-                <td>id</td>
-                <td>string</td>
-                <td>The opportunity fundraiser identifier.</td>
-            </tr>
-            <tr>
                 <td>constituent_id</td>
                 <td>string</td>
-                <td>The fundraiser identifier</td>
+                <td>The fundraiser identifier.</td>
             </tr>
             <tr>
                 <td>credit_amount</td>
-                <td><a href="#Currency">currency</a></td>
-                <td>The amount the fundraiser is credited for the opportunity.</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The amount credited to the fundraiser for the opportunity.</td>
             </tr>
         </tbody>
     </table>
@@ -237,13 +102,18 @@ showBreadcrumbs: true
             </tr>
             <tr>
                 <td>ask_amount</td>
-                <td><a href="#Currency">currency</a></td>
-                <td>The ask amount.</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The monetary amount requested.</td>
             </tr>
             <tr>
                 <td>expected_date</td>
                 <td>dateTime</td>
                 <td>The expected date.</td>
+            </tr>
+            <tr>
+                <td>expected_amount</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The monetary amount expected.</td>
             </tr>
             <tr>
                 <td>funded_date</td>
@@ -252,23 +122,28 @@ showBreadcrumbs: true
             </tr>
             <tr>
                 <td>funded_amunt</td>
-                <td><a href="#Currency">currency</a></td>
-                <td>The funded amount.</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The monetary amount funded.</td>
             </tr>
             <tr>
-                <td>campaign</td>
-                <td><a href="#Campaaign">campaign</a></td>
-                <td>The campaign related to the opportunity.</td>
+                <td>campaign_id</td>
+                <td>string</td>
+                <td>The identifier of the campaign associated with the opportunity.</td>
             </tr>
             <tr>
-                <td>fund</td>
-                <td><a href="#Fund">fund</a></td>
-                <td>The fund related to the opportunity.</td>
+                <td>fund_id</td>
+                <td>string</td>
+                <td>The identifier of the fund associated with the opportunity.</td>
             </tr>
             <tr>
                 <td>fundraisers</td>
-                <td>array of <a href="#Fundraiser">action fundraiser</a> entities.</td>
+                <td>array of <a href="#Fundraiser">fundraiser</a></td>
                 <td>The fundraisers assigned to the opportunity.</td>
+            </tr>
+            <tr>
+                <td>inactive</td>
+                <td>boolean</td>
+                <td>Indicates whether the opportunity is inactive.</td>
             </tr>
         </tbody>
     </table>

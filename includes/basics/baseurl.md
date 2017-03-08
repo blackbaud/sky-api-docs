@@ -25,9 +25,19 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
         <td>Used to manage constituent information, including related entities such as addresses, phones, emails, and notes.</td>
       </tr>
       <tr>
+        <td class="nowrap">Fundraising (Beta)</td>
+        <td><code class="language-http">{{ stache.config.fundraising_api_suffix }}</code></td>
+        <td>Used to manage information within the fundraising hierarchy and related entities such as campaigns, funds, and appeals.</td>
+      </tr>
+      <tr>
         <td class="nowrap">General Ledger</td>
         <td><code class="language-http">{{ stache.config.gl_api_suffix }}</code></td>
         <td>Used to manage the general ledger, including accounts, projects, and journal entries.</td>
+      </tr>
+      <tr>
+        <td class="nowrap">Gift (Beta)</td>
+        <td><code class="language-http">{{ stache.config.gift_api_suffix }}</code></td>
+        <td>Used to manage gift information, including related entities such as acknowledgements, fundraisers, and receipts.</td>
       </tr>
     </tbody>
   </table>

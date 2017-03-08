@@ -144,6 +144,8 @@ partner_program: https://www.blackbaud.com/partners/become-a-partner
 sub_domain: blackbaud.com
 accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
+fundraising_api_suffix: /fundraising
+gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
 # Portal URLs
@@ -359,6 +361,66 @@ portal_endpoints_constituent_fundraiser_types_get_list: <%= stache.config.portal
 
 # Prospect Status
 portal_endpoints_prospect_status_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f28/
+
+# =============================================
+#       Fundraising API ENDPOINTS
+# =============================================
+
+# Fundraising API
+portal_endpoints_fundraising: <%= stache.config.portal_endpoints %>TODO/
+
+# Appeals
+portal_endpoints_appeal_get: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# Appeal Custom Fields
+portal_endpoints_appeal_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# Campaigns
+portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# Campaigns Custom Fields
+portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# Funds
+portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# Funds Custom Fields
+portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
+# =============================================
+#       Gift API ENDPOINTS
+# =============================================
+
+# Gift API
+portal_endpoints_gift: <%= stache.config.portal_endpoints %>TODO/
+
+# Gifts
+portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+
+# Gift Custom Fields
+portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+
+# Gift Custom Fields
+portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_delete: <%= stache.config.portal_endpoints_gift %>operations/TODO/
 
 # =============================================
 # 			General Ledger API ENDPOINTS

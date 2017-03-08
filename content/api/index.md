@@ -12,7 +12,7 @@ title: APIs
 
 <div class="showcase">
         <div class="row">
-            
+
             <div class="col-sm-4">
                 <i class="fa fa-fw fa-3x fa-code showcase-icon"></i>
                 <div class="showcase-desc">
@@ -32,7 +32,7 @@ title: APIs
                     <p>Describes the entity and type representations for common items that the {{ stache.config.product_name_short }} uses.</p>
                 </div>
             </div>
-                
+
             <div class="col-sm-4">
                 <i class="fa fa-fw fa-3x fa-user-plus showcase-icon"></i>
                 <div class="showcase-desc">
