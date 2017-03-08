@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Constituent Changelog</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.9.2/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/apps/">Managing your apps</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>  
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+      <li>
+        <a href="https://skyapi.statuspage.io">Status</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-sm-3 content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class=""><a href="/support/community/">Community</a></li><li class="current active"><a href="/support/changelog/">Changelog</a><ul class="nav"><li class=""><a href="/support/changelog/shared/">Shared</a></li><li class="current active"><a href="/support/changelog/constituent/">Constituent</a><div class="headings"><ul class="nav"><li class="heading"><a href="#2017-02-23" class="smooth-scroll">2017-02-23</a></li><li class="heading"><a href="#2017-02-09" class="smooth-scroll">2017-02-09</a></li><li class="heading"><a href="#2017-01-31" class="smooth-scroll">2017-01-31</a></li><li class="heading"><a href="#2017-01-11" class="smooth-scroll">2017-01-11</a></li><li class="heading"><a href="#2017-01-10" class="smooth-scroll">2017-01-10</a></li><li class="heading"><a href="#2017-01-06" class="smooth-scroll">2017-01-06</a></li><li class="heading"><a href="#december-2016" class="smooth-scroll">December 2016</a></li><li class="heading"><a href="#november-2016" class="smooth-scroll">November 2016</a></li><li class="heading"><a href="#october-2016" class="smooth-scroll">October 2016</a></li><li class="heading"><a href="#september-2016" class="smooth-scroll">September 2016</a></li><li class="heading"><a href="#august-2016" class="smooth-scroll">August 2016</a></li><li class="heading"><a href="#july-2016" class="smooth-scroll">July 2016</a></li><li class="heading"><a href="#june-2016" class="smooth-scroll">June 2016</a></li><li class="heading"><a href="#may-2016" class="smooth-scroll">May 2016</a></li><li class="heading"><a href="#april-2016" class="smooth-scroll">April 2016</a></li><li class="heading"><a href="#march-2016" class="smooth-scroll">March 2016</a></li><li class="heading"><a href="#older" class="smooth-scroll">Older</a></li></ul></div></li><li class=""><a href="/support/changelog/fundraising/">Fundraising (Beta)</a></li><li class=""><a href="/support/changelog/gift/">Gift (Beta)</a></li><li class=""><a href="/support/changelog/gl/">General Ledger</a></li><li class=""><a href="/support/changelog/ap/">Accounts Payable</a></li></ul></li><li class=""><a href="/support/issues/">Issues</a></li><li class=""><a href="/support/ideas/">Ideas</a></li><li class=""><a href="/support/faq/">FAQ</a></li><li class=""><a href="/support/status/">Status</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-sm-9 content-primary">
+    
+      
+<!-- STACHE MARKED -->
+<h1 id="constituent">Constituent</h1>
+<p>Monitor this page to keep up with the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a> latest changes and SKY API service releases.</p>
+<h2 id="2017-02-23">2017-02-23</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent list</a> endpoint now includes an optional <code>custom_field_category</code> parameter to retrieve constituents only if their active custom fields match specified custom field categories.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f17/">Fundraiser list (Single constituent)</a> endpoint now returns the appropriate value for the <code>constituent_id</code> field.</li>
+</ul>
+<h2 id="2017-02-09">2017-02-09</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>The <code>major</code> and <code>minor</code> properties on the <a href="/api/entity-reference/constituent#Education">education</a> entity have been updated to return an array of strings. They have been renamed <code>majors</code> and <code>minors</code>.</li>
+<li>The <code>subject_of_study</code> property on the <a href="/api/entity-reference/constituent#Education">education</a> entity is no longer returned in the <code>major</code> property. Instead, it uses a dedicated property for UK-formatted databases.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5759e449a9db950830404ae0">Address (Create)</a> endpoint no longer requires the <code>country</code> property. When <code>country</code> is not provided, the endpoint uses the organization&apos;s default country configuration.</li>
+<li>The <code>country</code> property on the <a href="/api/entity-reference/constituent#Address">address</a> entity now accepts a country ID, name, or abbreviation. The property uses preferential selection to match against ID first, then name, and then abbreviation.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f29/">Ratings list (Single constituent)</a> endpoint now includes an optional <code>most_recent_only</code> parameter to retrieve only the most recent rating for each category.</li>
+</ul>
+<h3 id="new">New</h3>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fcf">
+        <td>Countries (Get)</td>
+        <td>GET</td>
+        <td>/countries</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd0/">
+        <td>Education (Create)</td>
+        <td>POST</td>
+        <td>/educations</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd2/">
+        <td>Education (Edit)</td>
+        <td>PATCH</td>
+        <td>/educations/{education_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd1/">
+        <td>Education (Delete)</td>
+        <td>DELETE</td>
+        <td>/educations/{education_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd3/">
+        <td>Education schools (Get)</td>
+        <td>GET</td>
+        <td>/educations/schools</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd4/">
+        <td>Education types (Get)</td>
+        <td>GET</td>
+        <td>/educations/types</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd5/">
+        <td>Education statuses (Get)</td>
+        <td>GET</td>
+        <td>/educations/statuses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd6/">
+        <td>Education subjects (Get)</td>
+        <td>GET</td>
+        <td>/educations/subjects</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd7/">
+        <td>Education degrees (Get)</td>
+        <td>GET</td>
+        <td>/educations/degrees</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd8/">
+        <td>Education departments (Get)</td>
+        <td>GET</td>
+        <td>/educations/departments</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fd9/">
+        <td>Education degree classes (Get)</td>
+        <td>GET</td>
+        <td>/educations/degreeclasses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/589b855ba9db950c207e7fda/">
+        <td>Education faculties (Get)</td>
+        <td>GET</td>
+        <td>/educations/faculties</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="2017-01-31">2017-01-31</h2>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>We are updating some properties on the <a href="/api/entity-reference/constituent#Education">education</a> entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.</p>
+<ul>
+<li>The <code>major</code> and <code>minor</code> properties will both be updated to return an array of strings. They will also be renamed <code>majors</code> and <code>minors</code>.</li>
+<li>The <code>subject_of_study</code> property will no longer be returned in the <code>major</code> property. Instead, it will use a dedicated property for UK-formatted databases.</li>
+</ul>
+<h2 id="2017-01-11">2017-01-11</h2>
+<h3 id="changed">Changed</h3>
+<p>On the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5759e449a9db950830404ae0">Address (Create)</a> endpoint, we updated the <code>do_not_mail</code> and <code>preferred</code> properties to set the default value to false when the properties are not supplied in the request body.</p>
+<h2 id="2017-01-10">2017-01-10</h2>
+<h3 id="changed">Changed</h3>
+<p>We added the <code>campus</code>, <code>known_name</code>, and <code>social_organization</code> properties to the <a href="/api/entity-reference/constituent#Education">education</a> entity.</p>
+<h2 id="2017-01-06">2017-01-06</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0e/">Constituent custom field list (Single constituent)</a> endpoint to populate the <code>date_added</code> and <code>date_modified</code> properties.</p>
+</li>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0b/">Constituent code list (Single constituent)</a> endpoint to populate the <code>inactive</code>, <code>date_added</code>, and <code>date_modified</code> properties.</p>
+</li>
+</ul>
+<!--
+##2016-12-20
+### Announcement: Breaking Changes Planned for [Constituent API](https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/)
+
+- We will update the [Prospect status (Get)](https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f28/) endpoint to return a 404 response when a current prospect status is requested for a non-existent constituent. Currently, the endpoint returns a 403 response.
+
+- We will update the [Prospect status (Get)](https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f28/) endpoint to return an empty `status` property when a current prospect status is requested for a constituent with no status history. Currently, the endpoint returns a 404 response.
+
+- We will update the [First gift (Get)](https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f16/), [Greatest gift (Get)](https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f18/), and [Latest gift (Get)](https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f19/) endpoints to return empty objects when gifts are requested for constituents with no giving history. Currently, the endpoints return the string "null."
+-->
+<h2 id="december-2016">December 2016</h2>
+<h3 id="2016-12-12">2016-12-12</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/584f0e96a9db950f30fd9b44/">
+        <td>Rating category values (Get)</td>
+        <td>GET</td>
+        <td>/ratings/categories/values</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>We changed the format of the <code>name</code> property on the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f09">Constituent (Get)</a> endpoint to &quot;FirstName LastName&quot; for consistency with the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent list</a> endpoint.</p>
+</li>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f14/">Email address (Edit)</a> and <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f22">Online presence (Edit)</a> endpoints to respect the <code>type</code> property.</p>
+</li>
+<li><p>We changed the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d02d5ca9db950f507ab048/">Rating (Create)</a> endpoint to require the &quot;source&quot; property for categories that have a source.</p>
+</li>
+</ul>
+<h2 id="november-2016">November 2016</h2>
+<h3 id="2016-11-23">2016-11-23</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/578d324da9db950becc619fe">Constituent (Create)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0a">Constituent (Edit)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f09">Constituent (Get)</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent list</a> endpoints to ensure that the <code>lookup_id</code>, <code>inactive</code>, and <code>gives_anonymously</code> properties are respected and populated.</p>
+</li>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0a">Constituent (Edit)</a> endpoint to appropriately respect Constituent Biographical Edit permissions.</p>
+</li>
+</ul>
+<h3 id="2016-11-16">2016-11-16</h3>
+<h4 id="changed">Changed</h4>
+<p>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent list endpoint</a> now includes an option to filter constituents based on their associated constituent codes. The optional <code>constituent_code</code> query parameter returns constituents if any of the specified constituent codes match any of their active constituent codes. For example, <code>constituent_code=Board Member&amp;amp;constituent_code=Volunteer</code> returns constituents with either &quot;Board Member&quot; or &quot;Volunteer&quot; constituent codes.</p>
+<h3 id="2016-11-14">2016-11-14</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/582a40e2d7dcde0bdc6e6e49/">
+        <td>Constituent code list (All Constituents)</td>
+        <td>GET</td>
+        <td>/constituents/constituentcodes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/582a40e2d7dcde0bdc6e6e4a/">
+        <td>Constituent custom field list (All constituents)</td>
+        <td>GET</td>
+        <td>/constituents/customfields</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>We renamed all existing list endpoints to implement a new naming convention that better indicates whether the endpoints return data for a single constituent or for all constituents. Endpoints that return data for a single constituent are now postfixed with <code>(Single constituent)</code>. Endpoints that return data for all constituents are now postfixed with <code>(All constituents)</code>.</p>
+</li>
+<li><p>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de93">Address list (All constituents) endpoint</a> no longer includes inactive addresses by default. To include inactive addresses, use the optional <code>include_inactive</code> parameter in the request.</p>
+</li>
+<li><p>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de93">Address list (All constituents) endpoint</a> now populates the <code>formatted_address</code> property.</p>
+</li>
+<li><p>We updated the following endpoints to appropriately respect constituent record-level security:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de93">
+          <td>Address (List)</td>
+          <td>GET</td>
+          <td>/addresses</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de94/">
+          <td>Email address (List)</td>
+          <td>GET</td>
+          <td>/emailaddresses</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de95/">
+          <td>Online presence (List)</td>
+          <td>GET</td>
+          <td>/onlinepresences</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de96/">
+          <td>Phone (List)</td>
+          <td>GET</td>
+          <td>/phones</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</li>
+</ul>
+<h2 id="october-2016">October 2016</h2>
+<h3 id="2016-10-20">2016-10-20</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de93">
+        <td>Address (List)*</td>
+        <td>GET</td>
+        <td>/addresses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de94/">
+        <td>Email address (List)*</td>
+        <td>GET</td>
+        <td>/emailaddresses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de95/">
+        <td>Online presence (List)*</td>
+        <td>GET</td>
+        <td>/onlinepresences</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5808fd85a9db9503b8d3de96/">
+        <td>Phone (List)*</td>
+        <td>GET</td>
+        <td>/phones</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>    <strong>*</strong> The new endpoints assume the names of existing endpoints, which were renamed in the endpoint reference. The previous Address (List) is now <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f03">Constituent address (List)</a>; the previous Email address (List) is now <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f13/">Constituent email address (List)</a>; the previous Online presence (List) is now <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f21/">Constituent online presence (List)</a>; and the previous Phone (List) is now <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f24/">Constituent phone (List)</a>.  </p>
+<h4 id="changed">Changed</h4>
+<p>We added the <code>date_added</code> and <code>date_modified</code> properties to the <a href="/api/entity-reference/constituent#Address">address</a>, <a href="/api/entity-reference/constituent#EmailAddress">email address</a>, <a href="/api/entity-reference/constituent#OnlinePresence">online presence</a>, and <a href="/api/entity-reference/constituent#Phone">phone</a> entities.</p>
+<h3 id="2016-10-17">2016-10-17</h3>
+<h4 id="changed">Changed</h4>
+<p>The <code>fundraisers</code> property on the <a href="/api/entity-reference/constituent#Action">action</a> entity now contains an array of strings populated with the <code>constituent_id</code> of fundraisers instead of an array of action fundraiser entities.</p>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/58051933d7dcde060427c2f4/">
+        <td>Action custom field (List)</td>
+        <td>GET</td>
+        <td>/actions/{action_id}/customfields</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/58051933d7dcde060427c2f7/">
+        <td>Action custom field (Create)</td>
+        <td>POST</td>
+        <td>/actions/customfields</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/58051933d7dcde060427c2f8/">
+        <td>Action custom field (Edit)</td>
+        <td>PATCH</td>
+        <td>/actions/customfields/{custom_field_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/58051933d7dcde060427c2f9/">
+        <td>Action custom field (Delete)</td>
+        <td>DELETE</td>
+        <td>/actions/customfields/{custom_field_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/58051933d7dcde060427c2f5/">
+        <td>Action custom field categories (Get)</td>
+        <td>GET</td>
+        <td>/actions/customfields/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/58051933d7dcde060427c2f6/">
+        <td>Action custom field category values (Get)</td>
+        <td>GET</td>
+        <td>/actions/customfields/categories/values</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2016-10-03">2016-10-03</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f28/">
+        <td>Prospect status (Get)</td>
+        <td>GET</td>
+        <td>/constituents/{constituent_id}/prospectstatus</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f17/">
+        <td>Fundraiser (List)</td>
+        <td>GET</td>
+        <td>/constituents/{constituent_id}/fundraisers</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="september-2016">September 2016</h2>
+<h3 id="2016-09-28">2016-09-28</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List) endpoint</a> now includes the option to select specific properties on its return object by using the optional <code>fields</code>query parameter. This can reduce the response payload size and improve the response time.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List) endpoint</a> no longer returns deceased constituents by default. Instead, they are included by setting the new <code>include_deceased</code> option to true.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f06/">Communication preference (List)</a> endpoint can now be paginated using the new <code>limit</code> and <code>offset</code> query parameters. If not specified, the default <code>limit</code> is 10000.</li>
+<li>We changed the following query string parameters to snake case:<ul>
+<li><code>includeInactive</code> is now <code>include_inactive</code> on <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f13/">Email address (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f21/">Online presence (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f24/">Phone (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f29/">Rating (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d97f1fd7dcde099c1c7e2b/">Rating categories (Get)</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d97f1fd7dcde099c1c7e2c/">Rating sources (Get)</a>.</li>
+<li><code>categoryName</code> is now <code>category_name</code> on <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0f/">Constituent custom field category values (Get)</a>.</li>
+<li><code>searchText</code> is now <code>search_text</code> on <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2d">Constituent (Search)</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2016-09-27">2016-09-27</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>We will change the <code>fundraisers</code> property on the <a href="/api/entity-reference/constituent#Action">action</a> entity so that it contains a list of strings populated with the <code>constituent_id</code> of fundraisers instead of an array of action fundraiser entities.</p>
+<h3 id="2016-09-23">2016-09-23</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>We will change the query string parameter <code>includeInactive</code> to <code>include_inactive</code> on the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List) endpoint</a>.</p>
+<h3 id="2016-09-14">2016-09-14</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List) endpoint</a> will no longer return deceased constituents by default. Instead, they will be included by setting a new <code>include_deceased</code> option to true.</li>
+<li>We will change the following query string parameters to snake case:<ul>
+<li><code>includeInactive</code> will be <code>include_inactive</code> on <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f13/">Email address (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f21/">Online presence (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f24/">Phone (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f29/">Rating (List)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d97f1fd7dcde099c1c7e2b/">Rating categories (Get)</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d97f1fd7dcde099c1c7e2c/">Rating sources (Get)</a>.</li>
+<li><code>categoryName</code> will be <code>category_name</code> on <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0f/">Constituent custom field category values (Get)</a>.</li>
+<li><code>searchText</code> will be <code>search_text</code> on <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2d">Constituent (Search)</a>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d97f1fd7dcde099c1c7e2c/">
+        <td>Rating sources (Get)</td>
+        <td>GET</td>
+        <td>/ratings/sources</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d97f1fd7dcde099c1c7e2b/">
+        <td>Rating categories (Get)</td>
+        <td>GET</td>
+        <td>/ratings/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7efe/">
+        <td>Action attachment (Edit)</td>
+        <td>PATCH</td>
+        <td>/actions/attachments/{attachmentId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7eff/">
+        <td>Action attachment (Delete)</td>
+        <td>DELETE</td>
+        <td>/actions/attachments/{attachmentId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f01/">
+        <td>Constituent attachment (Edit)</td>
+        <td>PATCH</td>
+        <td>/constituents/attachments/{attachmentId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f02/">
+        <td>Constituent attachment (Delete)</td>
+        <td>DELETE</td>
+        <td>/constituents/attachments/{attachmentId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>New tags included in the request will be automatically added to the <strong>Document Tags</strong> table when adding or updating attachments.</p>
+<h3 id="2016-09-07">2016-09-07</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f07">
+        <td>Communication preference (Edit)</td>
+        <td>PATCH</td>
+        <td>/communicationpreferences/{communicationPreferenceId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57d02d5ca9db950f507ab048/">
+        <td>Rating (Create)</td>
+        <td>POST</td>
+        <td>/ratings</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2a/">
+        <td>Rating (Edit)</td>
+        <td>PATCH</td>
+        <td>/ratings/{ratingId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2b/">
+        <td>Rating (Delete)</td>
+        <td>DELETE</td>
+        <td>/ratings/{ratingId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We added the <code>lookup_id</code> property to the <a href="/api/entity-reference/constituent#SearchResult">search results</a> entity.</p>
+<h3 id="2016-09-02">2016-09-02</h3>
+<h4 id="changed">Changed</h4>
+<p>All <code>POST</code> endpoints now return a JSON object containing the id, in the form <code>{ &quot;id&quot;: &quot;123&quot; }</code>, instead of the previous string response.</p>
+<h2 id="august-2016">August 2016</h2>
+<h3 id="2016-08-31">2016-08-31</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7efd/">
+                <td>Action attachment (List)</td>
+                <td>GET</td>
+                <td>/actions/{actionId}/attachments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57c73331a9db950f507ab01d/">
+                <td>Action attachment (Create)</td>
+                <td>POST</td>
+                <td>/actions/attachments</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li>We changed the URL for the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57c73331a9db950f507ab01e/">Constituent Attachment (Create) endpoint</a> to <code>/constituents/attachments</code>. The <code>constituentId</code> is now expected in the request body as <code>parent_id</code>.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/578d324da9db950becc619fe">Constituent (Create) endpoint</a> now supports adding a constituent with the following child entity properties: <a href="/api/entity-reference/constituent#Address">address</a>, <a href="/api/entity-reference/constituent#Phone">phone number</a>, <a href="/api/entity-reference/constituent#EmailAddress">email address</a>, and <a href="/api/entity-reference/constituent#OnlinePresence">online presence</a>.</li>
+<li>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0a">Constituent (Edit) endpoint</a> to include  <code>marital_status</code>, <code>deceased_date</code>, <code>former_name</code>, <code>title_2</code>, and <code>suffix_2</code> as available <code>PATCH</code> request body properties.</li>
+</ul>
+<h3 id="2016-08-29">2016-08-29</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>All <code>POST</code> endpoints will now return a JSON object containing the id, in the form <code>{ &quot;id&quot;: &quot;123&quot; }</code>, instead of the current string response.</p>
+<h3 id="2016-08-26">2016-08-26</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>We renamed the <code>proposal_id</code> property to <code>opportunity_id</code> on actions to be consistent with product verbiage.</p>
+</li>
+<li><p>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List) endpoint</a> no longer includes inactive constituents by default. To include inactive constituents, use the optional <code>includeInactive</code> parameter in the request.</p>
+</li>
+</ul>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>We will change the URL for the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57c73331a9db950f507ab01e/">Constituent Attachment (Create) endpoint</a> to <code>/constituents/attachments</code>.</p>
+<h3 id="2016-08-22">2016-08-22</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57bb5b29a9db951840d1d207/">
+                <td>Currency configuration (Get)</td>
+                <td>GET</td>
+                <td>/currencyconfiguration</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>The data type assigned to the <code>value</code> property on the <a href="/api/entity-reference/constituent#Rating">rating</a> entity was changed from a string to an object. Previously, all values were returned as strings that needed to be parsed (by the requestor) into the intended types. Currently, the rating <code>value</code> will be returned with its data type intact based on the <code>type</code> with the following mapping:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th><strong>Type</strong></th>
+                  <th><strong>Description</strong></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>boolean</td>
+                  <td>Defines the rating <code>value</code> as a boolean JSON data type.</td>
+              </tr>
+              <tr>
+                  <td>codetable</td>
+                  <td>Defines the rating <code>value</code> as a string JSON data type that refers to a code table entry.</td>
+              </tr>
+              <tr>
+                  <td>currency</td>
+                  <td>Defines the rating <code>value</code> as a number JSON data type.</td>
+              </tr>
+              <tr>
+                  <td>datetime</td>
+                  <td>Defines the rating <code>value</code> as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</td>
+              </tr>
+              <tr>
+                  <td>number</td>
+                  <td>Defines the rating <code>value</code> as a number JSON data type.</td>
+              </tr>
+              <tr>
+                  <td>text</td>
+                  <td>Defines the rating <code>value</code> as a string JSON data type.</td>
+              </tr>
+          </tbody>
+      </table>
+</div>
+</li>
+<li><p>We corrected an issue with the <code>postal_code</code> filter within the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List)</a> endpoint where incorrect values were returned if the postal codes filter listed multiple postal codes that were separated by commas or if postal codes contained leading space characters.</p>
+</li>
+</ul>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li>We will rename the <code>constituent_id</code> property to <code>parent_id</code> to support additional attachment areas such as action attachments.</li>
+<li>We will rename the <code>proposal_id</code> property to <code>opportunity_id</code> on actions to be consistent with product verbiage.</li>
+</ul>
+<h3 id="2016-08-18">2016-08-18</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>The <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List) endpoint</a> will no longer include inactive constituents by default. To include inactive constituents, use the optional <code>includeInactive</code> parameter in the request.</p>
+<h3 id="2016-08-16">2016-08-16</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>The data type assigned to the <code>value</code> property on the <a href="/api/entity-reference/constituent#Rating">rating</a> entity will be changed from a string to an object. As it stands today, all values are returned as a string, which must then be parsed (by the requestor) into the intended type. After release, the Rating <code>value</code> will be returned with its data type intact.</p>
+<h3 id="2016-08-11">2016-08-11</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57ac8b82d7dcde1010c0647c/">
+        <td>Communication preference (Create)</td>
+        <td>POST</td>
+        <td>/communicationpreferences</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f08/">
+        <td>Communication preference (Delete)</td>
+        <td>DELETE</td>
+        <td>/communicationpreferences/{communicationPreferenceId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57ac8b82d7dcde1010c0647b/">
+        <td>Communication preferences (Get)</td>
+        <td>GET</td>
+        <td>/communicationpreferences</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li>We added <code>start</code> and <code>end</code> to the <a href="/api/entity-reference/constituent#CommunicationPreference">communication preference</a> entity to represent optional start and end dates.</li>
+<li>We added the ability to retrieve inactive <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f29/">rating</a> records by including a new, optional <code>includeInactive</code> parameter in the request.</li>
+</ul>
+<h3 id="2016-08-03">2016-08-03</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f06/">
+        <td>Communication preference (List)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/communicationpreferences</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li>We removed <code>boolean_value</code>, <code>code_table_value</code>, <code>constituent_id_value</code>, <code>date_value</code>, <code>fuzzy_date_value</code>, <code>currency_value</code>, <code>numeric_value</code>, <code>text_value</code> and replaced them with a single <code>value</code> property for use with any <code>type</code> on the <a href="/api/entity-reference/constituent#CustomField">custom field</a> entity.</li>
+<li>We added the <code>gpa</code>, <code>class_of_degree</code>, <code>faculty</code>, <code>department</code>, and <code>registration_number</code> properties to the <a href="/api/entity-reference/constituent#Education">education</a> entity.</li>
+<li>We added the ability to paginate <a href="/api/entity-reference/constituent#SearchResult">search results</a> by including a new, optional <code>limit</code> and <code>offset</code> parameters in the request.</li>
+<li>We added the ability to retrieve inactive <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f03">address</a> records by including a new, optional <code>includeInactive</code> parameter in the request.</li>
+</ul>
+<h2 id="july-2016">July 2016</h2>
+<h3 id="2016-07-29">2016-07-29</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li>We will remove <code>boolean_value</code>, <code>code_table_value</code>, <code>constituent_id_value</code>, <code>date_value</code>, <code>fuzzy_date_value</code>, <code>currency_value</code>, <code>numeric_value</code>, <code>text_value</code> and replace them with a single <code>value</code> property for use with any <code>type</code> on the <a href="/api/entity-reference/constituent#CustomField">custom field</a> entity.</li>
+<li>This change is planned to take effect on Monday, August 1st.</li>
+</ul>
+<h3 id="2016-07-27">2016-07-27</h3>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0a">
+        <td>Constituent (Edit)</td>
+        <td>PATCH</td>
+        <td>/constituents/{constituentId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2016-07-22">2016-07-22</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f29/">
+        <td>Rating (List)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/ratings/</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5792743ba9db950cc00caa91/">
+        <td>Constituent custom field (Create)</td>
+        <td>POST</td>
+        <td>/constituents/customfields/</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f10/">
+        <td>Constituent custom field (Edit)</td>
+        <td>PATCH</td>
+        <td>/constituents/customfields/{customFieldId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f11/">
+        <td>Constituent custom field (Delete)</td>
+        <td>DELETE</td>
+        <td>/constituents/customfields/{customFieldId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0f/">
+        <td>Constituent custom field category values (Get)</td>
+        <td>GET</td>
+        <td>/constituents/customfields/categories/values</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We added the <code>date_added</code>, <code>date_modified</code>, <code>title_2</code>, <code>suffix_2</code>, <code>marital_status</code>, <code>deceased_date</code> properties to the <a href="/api/entity-reference/constituent#Constituent">constituent</a> entity.</p>
+<h3 id="2016-07-18">2016-07-18</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/578d324da9db950becc619fe">
+        <td>Constituent (Create)</td>
+        <td>POST</td>
+        <td>/constituents</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We removed the <code>business</code> property from the <a href="/api/entity-reference/constituent#Constituent">constituent</a> entity.</p>
+<h3 id="2016-07-07">2016-07-07</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li>We renamed <code>kind</code> to <code>type</code> and <code>types</code> to <code>tags</code> on the <a href="/api/entity-reference/constituent#Attachment">attachment</a> entity.</li>
+<li>We renamed  <code>nickname</code> to <code>preferred_name</code> on the <a href="/api/entity-reference/constituent#Constituent">constituent</a> entity.</li>
+</ul>
+<h3 id="2016-07-01">2016-07-01</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f16/">
+        <td>First gift (Get)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/givingsummary/first</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f19/">
+        <td>Latest gift (Get)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/givingsummary/latest</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f18/">
+        <td>Greatest gift (Get)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/givingsummary/greatest</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/577e6f83a9db950becc6199e/">
+        <td>Constituent custom field categories (Get)</td>
+        <td>GET</td>
+        <td>/constituents/customfields/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5776b79aa9db9508f8609bf2/">
+        <td>Titles (Get)</td>
+        <td>GET</td>
+        <td>/titles</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5776b79aa9db9508f8609bf1/">
+        <td>Suffixes (Get)</td>
+        <td>GET</td>
+        <td>/suffixes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5776b79aa9db9508f8609bf0/">
+        <td>Marital statuses (Get)</td>
+        <td>GET</td>
+        <td>/maritalstatuses</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="june-2016">June 2016</h2>
+<h3 id="2016-06-30">2016-06-30</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li>We will rename <code>kind</code> to <code>type</code> and <code>types</code> to <code>tags</code> on the <a href="/api/entity-reference/constituent#Attachment">attachment</a> entity.</li>
+<li>We will rename <code>nickname</code> to <code>preferred_name</code> on the <a href="/api/entity-reference/constituent#Constituent">constituent</a> entity.</li>
+<li>This change is planned to take effect on Wednesday, July 6.</li>
+</ul>
+<h3 id="2016-06-27">2016-06-27</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f04">
+        <td>Address (Edit)</td>
+        <td>PATCH</td>
+        <td>/addresses/{addressId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</li>
+<li><p>Added the ability to retrieve inactive <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f13/">email address</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f21/">online presence</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f24/">phone</a> records by including a new, optional <code>includeInactive</code> parameter in the request.</p>
+</li>
+</ul>
+<h3 id="2016-06-20">2016-06-20</h3>
+<h4 id="changed">Changed</h4>
+<p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List)</a> endpoint to include a new, optional <code>postal_code</code> parameter which provides the ability to filter constituents by postal code based on their preferred address. The parameter value supports multiple postal codes separated by commas. Postal codes will match on a constituent if the preferred address postal code <em>begins</em> with one of the specified filter postal codes. For example, given the query <code>postal_code=99577,10001</code>, the response could contain constituents whose preferred address has a postal code of 99577-0727 or 10001.</p>
+<h3 id="2016-06-15">2016-06-15</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f05">
+        <td>Address (Delete)</td>
+        <td>DELETE</td>
+        <td>/addresses/{addressId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We added a versioning indicator to the Constituent API&apos;s base URL. Specifically, all new API requests must begin with <code>https://api.sky.blackbaud.com/constituent/v1</code>.</p>
+<h3 id="2016-06-10">2016-06-10</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li>We will be adding a versioning indicator to the Constituent API&apos;s base URL. Specifically, all new API requests should begin with <code>https://api.sky.blackbaud.com/constituent/v1</code>.</li>
+<li>This change is planned to take effect on Wednesday, June 15.</li>
+</ul>
+<h3 id="2016-06-09">2016-06-09</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5759e449a9db950830404ae0">
+        <td>Address (Create)</td>
+        <td>POST</td>
+        <td>/addresses</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2016-06-06">2016-06-06</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1a/">
+        <td>Lifetime giving (Get)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/givingsummary/lifetimegiving</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1b/">
+        <td>Membership (List)</td>
+        <td>GET</td>
+        <td>/constituents/{constituentId}/memberships</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2016-06-01">2016-06-01</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574f4bc7d7dcde0740edb969/">
+        <td>Action types (Get)</td>
+        <td>GET</td>
+        <td>/actiontypes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574f4bc7d7dcde0740edb96a/">
+        <td>Action status types (Get)</td>
+        <td>GET</td>
+        <td>/actionstatustypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="may-2016">May 2016</h2>
+<h3 id="2016-05-27">2016-05-27</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574854c1d7dcde0740edb942/">
+        <td>Note types (Get)</td>
+        <td>GET</td>
+        <td>/notetypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</li>
+<li><p>Added a <a href="/support/changelog/gl">General Ledger changelog</a> to help you keep up with General Ledger API changes.</p>
+</li>
+</ul>
+<h3 id="2016-05-24">2016-05-24</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5744a7efd7dcde29b07a4d8e">
+        <td>Address types (Get)</td>
+        <td>GET</td>
+        <td>/addresstypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We renamed <code>send_mail</code> to <code>do_not_mail</code> on the <a href="/api/entity-reference/constituent#Address">address</a> entity. Additionally, the boolean logic has been switched.</p>
+<h3 id="2016-05-20">2016-05-20</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li>We will rename <code>send_mail</code> to <code>do_not_mail</code> on the <a href="/api/entity-reference/constituent#Address">address</a> entity. Additionally, the boolean logic will be switched.</li>
+<li>We will remove the <code>business</code> property from the <a href="/api/entity-reference/constituent#Constituent">constituent</a> entity.</li>
+</ul>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/573f727fd7dcde29b07a4d83/">
+        <td>Phone (Create)</td>
+        <td>POST</td>
+        <td>/phones</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f25/">
+        <td>Phone (Edit)</td>
+        <td>PATCH</td>
+        <td>/phones/{phoneId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f26/">
+        <td>Phone (Delete)</td>
+        <td>DELETE</td>
+        <td>/phones/{phoneId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/573f727fd7dcde29b07a4d85/">
+        <td>Phone types (Get)</td>
+        <td>GET</td>
+        <td>/phonetypes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/573f727fd7dcde29b07a4d80/">
+        <td>Email address types (Get)</td>
+        <td>GET</td>
+        <td>/emailaddresstypes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/573f727fd7dcde29b07a4d81/">
+        <td>Online presence types (Get)</td>
+        <td>GET</td>
+        <td>/onlinepresencetypes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/573f727fd7dcde29b07a4d7f/">
+        <td>Constituent code types (Get)</td>
+        <td>GET</td>
+        <td>/constituentcodetypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We implemented the following breaking changes:</p>
+<ul>
+<li>We removed the following <a href="/api/entity-reference/constituent#Address">address</a> properties:<ul>
+<li><code>primary_business</code></li>
+<li><code>start</code></li>
+<li><code>end</code></li>
+<li><code>seasonal</code></li>
+<li><code>seasonal_start</code></li>
+<li><code>seasonal_end</code></li>
+<li><code>in_season</code></li>
+<li><code>valid</code></li>
+</ul>
+</li>
+<li>We renamed the <code>address</code> to <code>formatted_address</code>.</li>
+</ul>
+<h3 id="2016-05-16">2016-05-16</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement:  Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<ul>
+<li><p>We will remove the following <a href="/api/entity-reference/constituent#Address">address</a> properties:</p>
+<ul>
+<li><code>primary_business</code></li>
+<li><code>start</code></li>
+<li><code>end</code></li>
+<li><code>seasonal</code></li>
+<li><code>seasonal_start</code></li>
+<li><code>seasonal_end</code></li>
+<li><code>in_season</code></li>
+<li><code>valid</code></li>
+</ul>
+</li>
+<li><p>We will remove the <code>business</code> property from the <a href="/api/entity-reference/constituent#Constituent">constituent</a> entity.</p>
+</li>
+</ul>
+<h3 id="2016-05-13">2016-05-13</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List)</a> endpoint to include a new, optional <code>date_added</code> parameter which provides the ability to poll for recently added constituents since a specified date/time. The parameter value should consist of a URL encoded UTC datetime.  When specified, the list is sorted by date added in ascending order.</p>
+</li>
+<li><p>We updated the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">Constituent (List)</a> endpoint to include a new, optional <code>last_modified</code> parameter which provides the ability to poll for recently changed constituents since a specified date/time. The parameter value should consist of a URL encoded UTC datetime.  When specified, the list is sorted by last modified in ascending order.</p>
+<p>The response includes a <code>sort_token</code> within the <code>next_link</code> property. <code>sort_token</code> represents a token filter for providing the next set of constituents, ordered by the last modified date.</p>
+<p class="alert alert-info"><strong>Note:</strong> The data returned by the Constituent (List) endpoint may have a latency of up to 15 minutes.</p>
+
+</li>
+</ul>
+<h3 id="2016-05-06">2016-05-06</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the following granular <a href="/api/entity-reference/constituent#Address">address</a> properties:</p>
+<ul>
+<li><code>address_lines</code></li>
+<li><code>city</code></li>
+<li><code>suburb</code></li>
+<li><code>state</code></li>
+<li><code>postal_code</code></li>
+<li><code>county</code></li>
+<li><code>country</code></li>
+</ul>
+<p>Addresses are returned by the following endpoints:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f09">
+          <td>Constituent (Get)</td>
+          <td>GET</td>
+          <td>/constituents/{constituentId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">
+          <td>Constituent (List)</td>
+          <td>GET</td>
+          <td>/constituents</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f03">
+          <td>Address (List)</td>
+          <td>GET</td>
+          <td>/constituents/{constituentId}/addresses</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li><p>Added international address field support for the following countries.</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th><strong>Field</strong></th>
+          <th style="text-align:center"><strong>United States</strong></th>
+          <th style="text-align:center"><strong>Canada</strong></th>
+          <th style="text-align:center"><strong>United Kingdom</strong></th>
+          <th style="text-align:center"><strong>Australia</strong></th>
+          <th style="text-align:center"><strong>New Zealand</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><code>address_lines</code></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td><code>city</code></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i>*</td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td><code>suburb</code></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td><code>state</code></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i>!</td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"></td>
+          </tr>
+          <tr>
+            <td><code>postal_code</code></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td><code>county</code></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+          </tr>
+          <tr>
+            <td><code>country</code></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td style="text-align:center"><i class="fa fa-check" aria-hidden="true"></i></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+<p>  * <strong>Australia</strong> - City or suburb data is returned with the <code>city</code> field for <code>GET</code> operations. Future endpoints will allow you to <code>POST</code> and <code>PATCH</code> address data.  In these cases, you can use <em>either</em> the <code>suburb</code> or <code>city</code> properties, but not both at the same time. Providing both property values in future <code>POST</code> and <code>PATCH</code> operations will result in an error.<br>
+  ! <strong>Canada</strong> - Use the <code>state</code> property to track a Canadian Province</p>
+</li>
+</ul>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>For consistency, <code>constituent_id</code> is included in the following entities:</p>
+<ul>
+<li><a href="/api/entity-reference/constituent#Address">Address</a></li>
+<li><a href="/api/entity-reference/constituent#Attachment">Attachment</a></li>
+<li><a href="/api/entity-reference/constituent#ConstituentCode">Constituent code</a></li>
+<li><a href="/api/entity-reference/constituent#EmailAddress">Email address</a></li>
+<li><a href="/api/entity-reference/constituent#OnlinePresence">Online presence</a></li>
+<li><a href="/api/entity-reference/constituent#Phone">Phone</a></li>
+<li><a href="/api/entity-reference/constituent#CustomField">Custom field</a></li>
+<li><a href="/api/entity-reference/constituent#NameFormat">Name format</a></li>
+<li><a href="/api/entity-reference/constituent#ProfilePicture">Profile picture</a></li>
+<li><a href="/api/entity-reference/constituent#Action">Action</a></li>
+<li><a href="/api/entity-reference/constituent#Note">Note</a></li>
+</ul>
+</li>
+<li><p>When editing, existing endpoints that previously used the <code>PUT</code> HTTP verb have been replaced with <code>PATCH</code>.  <code>PATCH</code> can be used to update partial resources. For instance, when you only need to update one field of the resource.  Impacted constituent related endpoints include:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>New Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7efb/">
+          <td>Action (Edit)</td>
+          <td>PATCH</td>
+          <td>/actions/{actionId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0c/">
+          <td>Constituent code (Edit)</td>
+          <td>PATCH</td>
+          <td>/constituentcodes/{constituentCodeId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f14/">
+          <td>Email address (Edit)</td>
+          <td>PATCH</td>
+          <td>/emailaddresses/{emailAddressId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1f/">
+          <td>Note (Edit)</td>
+          <td>PATCH</td>
+          <td>/notes/{noteId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f22">
+          <td>Online presence (Edit)</td>
+          <td>PATCH</td>
+          <td>/onlinepresences/{onlinePresenceId}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li><p>We made changes to the <a href="/api/entity-reference/constituent#CustomField">custom field</a> entity:</p>
+<ul>
+<li><p>To better denote the fields that can represent the &quot;value&quot; of the custom field, we appended a <code>_value</code> suffix to the field name for the following fields:</p>
+<ul>
+<li><code>constituent_id_value</code></li>
+<li><code>date_value</code></li>
+<li><code>text_value</code></li>
+<li><code>number_value</code></li>
+<li><code>currency_value</code></li>
+<li><code>boolean_value</code></li>
+<li><code>code_table_value</code></li>
+<li><code>fuzzy_date_value</code></li>
+</ul>
+</li>
+<li><p>Renamed the <code>constituent_id</code> property to <code>parent_id</code> to avoid confusion with the <code>constituent_id_value</code> field and to facilitate the re-use of this type across other entities. The <code>parent_id</code> represents the parent object&apos;s identifier. For example, in the case of constituent custom fields, the <code>parent_id</code> represents the constituent identifier.</p>
+</li>
+<li>Added <code>date</code> and <code>comment</code> properties.</li>
+</ul>
+</li>
+</ul>
+<h2 id="april-2016">April 2016</h2>
+<h3 id="2016-04-26">2016-04-26</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-">Announcement:  Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a></h4>
+<p>In the coming days two breaking changes will be placed into effect:</p>
+<ul>
+<li>We will replace existing <code>PUT</code> endpoints to use <code>PATCH</code>, instead. Unlike <code>PUT</code>, <code>PATCH</code> can be used to update partial resources. For instance, when you only need to update one field of the resource.  In this way the payload size is optimized.</li>
+</ul>
+<h3 id="2016-04-25">2016-04-25</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the ability to create, edit, and delete <a href="/api/entity-reference/constituent#EmailAddress">email addresses</a>:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/571e7ec0d7dcde163ca5394c/">
+        <td>Email address (Create)</td>
+        <td>POST</td>
+        <td>/emailaddresses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f14/">
+        <td>Email address (Edit)</td>
+        <td>PUT</td>
+        <td>/emailaddresses/{emailAddressId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f15/">
+        <td>Email address (Delete)</td>
+        <td>DELETE</td>
+        <td>/emailaddresses/{emailAddressId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</li>
+<li><p>Added the ability to create and edit <a href="/api/entity-reference/constituent#ConstituentCode">constituent codes</a>:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/571e7ec0d7dcde163ca5394a/">
+          <td>Constituent code (Create)</td>
+          <td>POST</td>
+          <td>/constituentcodes</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0c/">
+          <td>Constituent code (Edit)</td>
+          <td>PUT</td>
+          <td>/constituentcodes/{constituentCodeId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0d/">
+          <td>Constituent code (Delete)</td>
+          <td>DELETE</td>
+          <td>/constituentcodes/{constituentCodeId}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</li>
+</ul>
+<h3 id="2016-04-15">2016-04-15</h3>
+<h4 id="new">New</h4>
+<p>Added the ability to create, edit, and delete <a href="/api/entity-reference/constituent#OnlinePresence">online presence</a> entities:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57113151d7dcde074428f28d">
+        <td>Online presence (Create)</td>
+        <td>POST</td>
+        <td>/onlinepresences</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f22">
+        <td>Online presence (Edit)</td>
+        <td>PUT</td>
+        <td>/onlinepresences/{onlinePresenceId}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f22">
+        <td>Online presence (Delete)</td>
+        <td>DELETE</td>
+        <td>/onlinepresences/{onlinePresenceId}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2016-04-08">2016-04-08</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the ability to return a paginated list of <a href="/api/entity-reference/constituent#Constituent">constituents</a>.  For this release, the list will be ordered by name (last name for individuals, organization name for organizations).</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/5707c92ca9db9509d054ad37">
+          <td>Constituent (List)</td>
+          <td>GET</td>
+          <td>/constituents</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<p>  The endpoint supports the following the optional request parameters. <a href="/docs/basics/#pagination">Pagination</a> is facilitated through the results via the <code>top</code> and <code>skip</code> parameters:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>top</code></td>
+          <td>Optional. Integer. Represents the number of records to return.  If not specified, the default is 100.  The maximum allowed value is 500. </td>
+        </tr>
+        <tr>
+          <td><code>skip</code></td>
+          <td>Optional. Integer. Represents the number of records to skip.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</li>
+</ul>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>Breaking change implemented for the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a> endpoints that return a <a href="/api/entity-reference/constituent#Collection">collection</a> of objects.  This change allows us to be consistent in the representation of data collections and supports <a href="/docs/basics/#pagination">pagination</a> for certain endpoints.</p>
+<p>  See the <a href="#2016-03-31" class="smooth-scroll">2016-03-31</a> changelog entry for a listing of affected endpoints.</p>
+</li>
+<li><p><a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2d">Constituent (Search)</a> now supports the ability to search on an email address (same functionality as found in the RE NXT search feature).  This expanded search will match against constituent email addresses when the <code>searchText</code> parameter is a valid email address.  Note that we currently support exact match only.</p>
+</li>
+</ul>
+<h2 id="march-2016">March 2016</h2>
+<h3 id="2016-03-31">2016-03-31</h3>
+<h4 id="announcement-breaking-changes-planned-for-constituent-api-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-endpoints">Announcement:  Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent API</a> endpoints</h4>
+<p>In the coming weeks, we will be standardizing the shape of our responses that return a collection of objects.  This standardization will allow us to be consistent across each endpoint as well as to facilitate some future enhancements around pagination within those endpoints.  The new representation of a collection will be a JSON object with two properties, a <code>count</code> which represents the total number of records meeting the criteria and a <code>value</code> property which represents the array of items for the current paged response.</p>
+<p class="alert alert-warning">This change is scheduled for release by April 8, 2016.</p>
+
+<h4 id="how-a-collection-response-is-formed-today-phones-used-as-an-example-">How a collection response is formed today (Phones used as an example):</h4>
+<pre class="language-javascript"><code>{
+    &quot;phones&quot;: [
+        {
+            &quot;id&quot;: &quot;95&quot;,
+            &quot;type&quot;: &quot;Home&quot;,
+            &quot;number&quot;: &quot;303-997-3301&quot;,
+            &quot;do_not_call&quot;: false,
+            &quot;primary&quot;: true,
+            &quot;inactive&quot;: false
+        },
+        {
+            &quot;id&quot;: &quot;330&quot;,
+            &quot;type&quot;: &quot;Home&quot;,
+            &quot;number&quot;: &quot;(312) 997-3301&quot;,
+            &quot;do_not_call&quot;: false,
+            &quot;primary&quot;: false,
+            &quot;inactive&quot;: false
+        }
+    ]
+}</code></pre>
+
+<h4 id="how-the-response-will-be-formed-after-release-">How the response will be formed after release:</h4>
+<pre class="language-javascript"><code>{
+    &quot;count&quot;: 10, // total number of elements in the collection
+    &quot;value&quot;: [   // collection of items included in this response
+        {
+            &quot;id&quot;: &quot;95&quot;,
+            &quot;type&quot;: &quot;Home&quot;,
+            &quot;number&quot;: &quot;303-997-3301&quot;,
+            &quot;do_not_call&quot;: false,
+            &quot;primary&quot;: true,
+            &quot;inactive&quot;: false
+        },
+        {
+            &quot;id&quot;: &quot;330&quot;,
+            &quot;type&quot;: &quot;Home&quot;,
+            &quot;number&quot;: &quot;(312) 997-3301&quot;,
+            &quot;do_not_call&quot;: false,
+            &quot;primary&quot;: false,
+            &quot;inactive&quot;: false
+        }
+    ]
+}</code></pre>
+
+<p><em>* Please note that the response format may change before official release.</em></p>
+<h4 id="endpoints-affected-">Endpoints affected:</h4>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7ef9/">
+        <td>Action (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/actions</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f03">
+        <td>Address (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/addresses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f00/">
+        <td>Constituent attachment (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0b/">
+        <td>Constituent code (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/constituentcodes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2d">
+        <td>Constituent (Search)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/search/?searchText={searchText}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f0e/">
+        <td>Constituent custom field (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/customfields</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f12/">
+        <td>Education (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/educations</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f13/">
+        <td>Email address (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/emailaddresses</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1c/">
+        <td>Name format (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/nameformats</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1d/">
+        <td>Note (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/notes</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f21/">
+        <td>Online presence (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/onlinepresences</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f24/">
+        <td>Phone (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/phones</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2c/">
+        <td>Relationship (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/{constituentId}/relationships</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2016-03-30">2016-03-30</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the ability to return a list of <a href="/api/entity-reference/constituent#Relationship">relationships</a> for a specified constituent.</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f2c/">
+          <td>Relationship (List)</td>
+          <td>GET</td>
+          <td>/constituents/{constituentId}/relationships</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li><p>Added the ability to return a constituent&apos;s <a href="/api/entity-reference/constituent#ProfilePicture">profile picture</a>.</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f27/">
+          <td>Profile picture (Get)</td>
+          <td>GET</td>
+          <td>/constituents/{constituentId}/profilepicture</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</li>
+</ul>
+<h4 id="changed">Changed</h4>
+<p>GET operations that return an <a href="/api/entity-reference/constituent#Attachment">attachment</a> endpoint, such as  <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f00/">Constituent attachment (List)</a>, return the following new properties:</p>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>thumbnail_url</code></td>
+            <td>Read only.  String.  Represents an image thumbnail URI for a picture to display. Endpoints that add or edit attachments ignore this property.
+            </td>
+          </tr>
+          <tr>
+            <td><code>file_size</code></td>
+            <td>Read only.  Long integer.  The file size of the attachment in bytes. Only applies to  <i>physical</i> attachments. Helps to determine how to display large images. Endpoints that add or edit attachments ignore this property.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+<h3 id="2016-03-10">2016-03-10</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added the ability to return a list of <a href="/api/entity-reference/constituent#Education">education</a> items for a specified constituent.</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f12/">
+          <td>Education (List)</td>
+          <td>GET</td>
+          <td>/constituents/{constituentId}/educations</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li><p>Added the ability to edit and delete <a href="/api/entity-reference/constituent#Action">actions</a> and <a href="/api/entity-reference/constituent#Note">notes</a> for a constituent:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7efb/">
+          <td>Action (Edit)</td>
+          <td>PUT</td>
+          <td>/actions/{actionId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7efc/">
+          <td>Action (Delete)</td>
+          <td>DELETE</td>
+          <td>/actions/{actionId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1f/">
+          <td>Note (Edit)</td>
+          <td>PUT</td>
+          <td>/notes/{noteId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f20/">
+          <td>Note (Delete)</td>
+          <td>DELETE</td>
+          <td>/notes/{noteId}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</li>
+</ul>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>OAuth and Constituent API URLs changed.  See <a href="/docs/basics/#base-urls">Base URLs</a>.</p>
+<ul>
+<li><p>The route for the <code>authorization</code> endpoint is no longer prefixed with <code>renxt</code>.</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Old Route</th>
+          <th>New Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="/docs/authorization/">
+          <td>authorization (Get)</td>
+          <td>GET</td>
+          <td>/renxt/authorization</td>
+          <td>/authorization</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li><p>The base URL for the Constituent API has changed:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Old</th>
+          <th>New</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>https://api.nxt.blackbaud-dev.com/constituents/</td>
+          <td>https://api.sky.blackbaud.com/constituent</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+</ul>
+</li>
+<li><p>After <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57c73331a9db950f507ab01e/">creating an attachment for a constituent</a>, the returned representation of an <a href="/api/entity-reference/constituent#Attachment">attachment</a> now includes the attachment identifier (id).</p>
+</li>
+<li><p>Values for the <a href="/api/entity-reference/constituent#Constituent">Constituent</a> gender property now return the values using the correct casing (lowercase).</p>
+</li>
+<li><p>GET and POST routes for <a href="/api/entity-reference/constituent#Action">actions</a> and <a href="/api/entity-reference/constituent#Note">notes</a> endpoints have changed:</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Old Route</th>
+          <th>New Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7efa/">
+          <td>Action (Get)</td>
+          <td>GET</td>
+          <td>/{constituentId}/actions/{actionId}</td>
+          <td>/actions/{actionId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/56b76471069a050520297715/">
+          <td>Action (Create)</td>
+          <td>POST</td>
+          <td>/{constituentId}/actions</td>
+          <td>/actions</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f1e/">
+          <td>Note (Get)</td>
+          <td>GET</td>
+          <td>/{constituentId}/notes/{noteId}</td>
+          <td>/notes/{noteId}</td>
+        </tr>
+        <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/56b76471069a050520297722/">
+          <td>Note (Create)</td>
+          <td>POST</td>
+          <td>/{constituentId}/notes</td>
+          <td>/notes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</li>
+</ul>
+<h3 id="deleted">Deleted</h3>
+<p>We removed the following endpoints:</p>
+<ul>
+<li>GET Attachment</li>
+<li>GET Constituent code</li>
+<li>GET Custom field</li>
+<li>GET Email address</li>
+<li>GET Online presence</li>
+<li>GET Phone</li>
+<li>GET Primary business</li>
+<li>GET Spouse</li>
+</ul>
+<h2 id="older">Older</h2>
+<h3 id="2015-10-20">2015-10-20</h3>
+<h4 id="new">New</h4>
+<ul>
+<li><p>Added 3 new endpoints covering constituent <a href="/api/entity-reference/constituent#Attachment">attachments</a></p>
+<ul>
+<li><a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f00/">Get a list of constituent attachments</a></li>
+<li>Get a specific attachment for a constituent</li>
+<li><a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57c73331a9db950f507ab01e/">Add an attachment for a constituent</a></li>
+</ul>
+<p class="alert alert-info">Note that currently, all attachment records are viewable through the SKY API, but only <strong>link</strong> attachments can be added.</p>
+
+</li>
+</ul>
+<h4 id="changed">Changed</h4>
+<ul>
+<li>Removed <strong>Author</strong> from the constituent note entity. The author is now inferred from the context of the user calling the SKY API.</li>
+</ul>
+
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      </div></div>
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.9.2/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://bbauth-signin-cdev.blackbaudhosting.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function t(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}t.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(t),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+

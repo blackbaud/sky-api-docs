@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Authorization Code Flow - NodeJS</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.9.2/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/apps/">Managing your apps</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>  
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+      <li>
+        <a href="https://skyapi.statuspage.io">Status</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+        
+    <div id="wrap-breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+                    
+                        <li><a href="/">Home</a></li>
+                    
+                
+                    
+                        <li><a href="/docs/">Documentation</a></li>
+                    
+                
+                    
+                        <li><a href="/docs/code/">Code Samples</a></li>
+                    
+                
+                    
+                        <li><a href="/docs/code/auth-code-flow/">Authorization Code Flow</a></li>
+                    
+                
+                    
+                        <li class="active">NodeJS</li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+<!-- STACHE MARKED -->
+<div class="pull-right partial-edit-header">
+    <a href="#disqus_thread" target="_self" class="edit-link btn btn-primary">
+        Comments
+    </a>
+</div><div class="pull-right partial-edit-header">
+    <a href="https://github.com/blackbaud/sky-api-docs/blob/develop/content/docs/code/auth-code-flow/nodejs/index.md" target="_blank" class="edit-link btn btn-primary" rel="noopener noreferrer">
+        <i class="fa fa-pencil"></i> Edit in GitHub
+    </a>
+</div>
+
+<h1 id="authorization-code-flow-nodejs">Authorization Code Flow - NodeJS</h1>
+<p><a class="btn btn-primary" href="https://github.com/blackbaud/sky-api-tutorial-auth-code-nodejs/" target="blank"><i class="fa fa-github fa-lg"></i> GitHub</a></p>
+<h2 id="overview">Overview</h2>
+<p>We use OAuth 2.0 to secure access to a user&apos;s SKY API data. In this tutorial we obtain user authorization using the <a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a>. From the user&apos;s perspective, the user authenticates as a Blackbaud user with the normal credentials for Blackbaud NXT and then authorizes (or denies) your application. To accomplish this, your application obtains an authorization code from the Blackbaud Authorization Service. The authorization code is then exchanged for an access token that signs requests to the SKY API on behalf of the user. The exchange involves your registered application&apos;s <strong>Application secret</strong>. For security reasons, the exchange is done through direct server-to-server communication. For this reason, we use <a href="https://nodejs.org" target="blank">Node.js</a>, a server-side platform.</p>
+<p>In this tutorial, we will accomplish the following tasks:</p>
+<ul>
+<li>Ensure that you signed up for a developer account and obtained your subscription to an API product.</li>
+<li>Register an application with SKY API.</li>
+<li>Obtain authorization to access user data for a specific tenant.</li>
+<li>Retrieve data from a SKY API endpoint.</li>
+</ul>
+<p>For this tutorial, we strip down the user interface to highlight the Authorization Code Flow. Our <a href="/docs/code/app-showcase/">Barkbaud code sample</a> provides a rich user interface using <a href="http://skyux.developer.blackbaud.com/" target="blank">SKY UX</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>A server such as your local machine that is capable of running <a href="https://nodejs.org" target="blank">Node.js</a>.</li>
+<li>Familiarity with Node.js, using NPM to install project dependencies, and environment variables including setting them in either an OSX/Linux or Windows environment.</li>
+<li>Familiarity using a command line interface (CLI) such as Terminal or Windows Command Prompt.</li>
+<li>Sign up for a <a href="https://github.com">GitHub</a> account, if you don&apos;t already have one. The source code for this tutorial is stored in GitHub repository.</li>
+<li>Install <a href="https://git-scm.com/">Git</a> and have the ability to clone or fork a repo.</li>
+<li>A reliable Internet connection to clone the repo and install the project&apos;s dependencies.</li>
+</ol>
+<h2 id="step-1-mdash-get-your-keys">Step 1 &#x2014; Get Your Keys</h2>
+<p>If you have not already done so, complete the <a href="/docs/getting-started/">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a <strong>Primary key</strong> and <strong>Secondary key</strong>. You can use either key as the subscription key value for the <code>bb-api-subscription-key</code> request header in calls to the API.</p>
+<h3 id="developer-sandbox-tenant">Developer Sandbox Tenant</h3>
+<p>After your subscription is approved, your developer account can access the Developer Sandbox tenant that represents a sample database. Keep in mind that you share this sandbox with other developers. You can access the Developer Sandbox tenant through the interactive SKY API Console within the <a href="https://developer.sky.blackbaud.com/docs/services/" target="_blank" rel="noopener noreferrer">API Reference</a>.</p>
+<h2 id="step-2-mdash-register-your-app">Step 2 &#x2014; Register Your App</h2>
+<p>To register your application:</p>
+
+<ol>
+<li><p>Go to <a href="" target="_blank" rel="noopener noreferrer">My Applications</a> to manage your applications.</p>
+</li>
+<li><p>Click <strong>Register app</strong>.
+<img src="/assets/img/my_applications.png" alt="My Applications" title="My Applications"></p>
+</li>
+<li><p>Enter the following information:
+<div class="table-responsive">
+ <table class="table table-striped table-hover">
+   <thead>
+     <tr>
+       <th>Field</th>
+       <th>Description</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Application name</td>
+       <td>(Required) Enter a name for your application. This is the name that users will see when asked to grant access to your application during the <a href="/docs/authorization/" target="_blank" rel="noopener noreferrer">authorization process</a>.  It will also be seen by administrators within the Applications area of the product when they view the list of applications that have been granted access to their data.</td>
+     </tr>
+     <tr>
+       <td>Application details</td>
+       <td>(Required) Provide a description for your application.  This will be seen by administrators when activating your application within the product.</td>
+     </tr>
+     <tr>
+       <td>Organization name</td>
+       <td>(Required) Specify the company name that users and administrators will see associated with your application.</td>
+     </tr>
+     <tr>
+       <td>Application logo</td>
+       <td>(Optional) Provide a 512 by 512 pixel PNG or JPEG image that users and administrators will see associated with your application.</td>
+     </tr>
+     <tr>
+       <td class="nowrap">Application website URL</td>
+       <td>(Required) Enter a URL where users can find out more information about your application.</td>
+     </tr>
+     <tr>
+       <td>Redirect URIs</td>
+       <td>(Required) Specify one or more URIs that should be used when redirecting the user&apos;s browser back to your application after providing consent during the <a href="/docs/authorization/" target="_blank" rel="noopener noreferrer">authorization process</a>.  The URIs must be absolute and use https (note that we do support <code>http://localhost:port</code> or <code>http://127.0.0.1:port</code> for local development). To register multiple URIs, click <strong>Add another redirect URI</strong>.
+             <br><br>For this tutorial, use <code>http://localhost:5000/auth/callback</code>.</td>
+     </tr>
+   </tbody>
+ </table>
+</div></p>
+<p class="alert alert-warning"><strong>Important!&#xA0;&#xA0;</strong> When your application requests authorization to access a Blackbaud customer&apos;s data, it will include a <code>redirect_uri</code> parameter as part of the query string.  This value must match <i>exactly</i> against one of the values you listed when registering your application, including any trailing slashes.  If the value supplied does not match any of the registered redirect URIs, then authorization will fail.  For more information on commonly encountered authorization problems, see <a href="/docs/authorization/common-auth-issues" target="_blank" rel="noopener noreferrer">common authorization issues</a>.</p>
+<p><img src="/assets/img/add_app_top.png" alt="Basic Info" title="Basic Info"></p>
+</li>
+<li><p>Click <strong>Save</strong> to complete the registration of your application.</p>
+</li>
+<li><p>After you register an application, take note of the credentials (<strong>ID</strong> and <strong>Secret</strong>) that are displayed in the <strong>Application Credentials</strong> column.  These credentials are unique to your application, and are used to verify your application&apos;s identity during the <a href="/docs/authorization/" target="_blank" rel="noopener noreferrer">authorization process</a>.</p>
+<ul>
+<li><strong>Application ID</strong> is the unique identifier for your application.  This value is not sensitive and can be shared publicly.  It cannot be modified after the application is registered, so if you need change it for any reason you must delete the application and re-add it.</li>
+<li><p><strong>Application secret</strong> is the key your application will provide when requesting an access token to call the SKY API as part of the <a href="/docs/authorization/" target="_blank" rel="noopener noreferrer">authorization process</a>. This value is sensitive and should <strong>NOT</strong> be shared with anyone else! To display the secret, click <strong>Show</strong> in the <strong>Application Credentials</strong> column.</p>
+  <p class="alert alert-warning"><strong><em>Very Important!&#xA0;&#xA0;</em></strong> The application secret should be kept private and safe! <a href="/docs/apps/#regenerate-your-secret">Regenerate your secret</a> if it is compromised. Blackbaud reserves the right to remove or deactivate your application in order to protect our customer&apos;s data.</p>
+
+<p><img src="/assets/img/my_applications2.png" alt="Your registered applications list" title="Your registered applications list"></p>
+
+
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-3-mdash-install-node-js">Step 3 &#x2014; Install Node.js</h2>
+<p>After you have your subscription key, Application ID, and Application secret, it&apos;s time to establish your development environment. Since we are using the <a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a>, we need to use a server-side software platform. For this tutorial, we will use Node.js.</p>
+<ul>
+<li>Download and install <a href="https://nodejs.org" target="blank">Node.js</a>. Use the default settings for your development environment.</li>
+<li><p>Create a file named <strong>testserver.js</strong> and add the following code:</p>
+<pre><code class="language-javascript">  // Create a very simple HTTP web server on your local machine.
+  // Set up a HTTP Web server and client, require(&apos;http&apos;).
+  var http = require(&apos;http&apos;);
+
+  // createServer returns a new instance of the http server.
+  // A function is used as a request listener.
+  // req is an instance of the incoming request.
+  // res is an instance of the server response.
+  // When you browse to http://localhost:1337/, a &apos;request&apos; event occurs and
+  //   &quot;Hello World&quot; is written from the HTTP Web server back to your browser.
+  http.createServer(function (req, res) {
+    res.writeHead(200, { &apos;Content-Type&apos;: &apos;text/plain&apos; });
+    res.end(&apos;Hello World&apos;);
+  }).listen(1337, &quot;localhost&quot;);
+
+  console.log(&apos;Server running at http://localhost:1337/&apos;);</code></pre>
+</li>
+<li><p>Save the file in a folder named <strong>testnodejs</strong>.</p>
+</li>
+<li><p>From a command prompt, change the directory to <strong>testnodejs</strong> and run the <strong>testserver.js</strong> file:</p>
+  <pre><code class="language-bash">$ cd testnodejs
+$ node testserver.js</code></pre>
+
+<p>  The Web server listens for requests on your localhost, port 1337.</p>
+</li>
+</ul>
+<p><img src="/assets/img/auth_starthelloworld.jpg" alt="Starting Hello World from command prompt"></p>
+<ul>
+<li>In a Web browser, navigate to <a href="http://localhost:1337/" target="blank">localhost:1337</a>. The Web server displays a page with with &quot;Hello World.&quot;</li>
+</ul>
+<p><img src="/assets/img/auth_helloworld.jpg" alt="Hello World"></p>
+<ul>
+<li>To stop the Web server, type <code>CTRL-C</code> in the command line.</li>
+</ul>
+<h2 id="step-4-mdash-grab-the-source-code">Step 4 &#x2014; Grab the Source Code</h2>
+<p>The <a href="https://github.com/blackbaud/sky-api-tutorial-auth-code-nodejs/" target="_blank" rel="noopener noreferrer">sky-api-auth-tutorial</a> repo on GitHub provides a starter project to work through the Authorization Code Flow.</p>
+<ul>
+<li><p>Use a command prompt to clone the <code>sky-api-auth-tutorial</code>. The following command creates a <em>working directory</em> named <code>sky-api-auth-tutorial</code> that contains the code for the tutorial:</p>
+  <pre><code class="language-git">$  git clone https://github.com/blackbaud/sky-api-auth-tutorial.git</code></pre>
+
+</li>
+</ul>
+<h2 id="step-5-mdash-prepare-your-environment">Step 5 &#x2014; Prepare Your Environment</h2>
+<ul>
+    <li>Open the <strong>sky-api-auth-tutorial</strong> working directory and copy the configuration file <strong>sky.env-sample</strong> as <strong>sky.env</strong>. The <strong>sky.env</strong> file contains the application&apos;s environment variables for NodeJS environments.</li>
+    <li>
+      <p>Update <strong>sky.env</strong> with the following values:</p>
+      <div class="table-responsive">
+        <table class="table table-striped table-condensed">
+          <tr>
+            <td><strong><code>AUTH_CLIENT_ID</code></strong></td>
+            <td>
+              Your registered application&apos;s <strong>Application ID</strong> (from Step 2).<br>
+              (See, <a href="https://apidocs.sky.blackbaud.com/docs/apps/">Managing your apps</a>.)
+            </td>
+          </tr>
+          <tr>
+            <td><strong><code>AUTH_CLIENT_SECRET</code></strong></td>
+            <td>
+              Your registered application&apos;s <strong>Application Secret</strong> (from Step 2).<br>
+              (See, <a href="https://apidocs.sky.blackbaud.com/docs/apps/">Managing your apps</a>.)
+            </td>
+          </tr>
+          <tr>
+            <td><strong><code>AUTH_REDIRECT_URI</code></strong></td>
+            <td>
+            One of your registered application&apos;s <strong>Redirect URIs</strong> (from Step 2).<br>
+            For this tutorial, enter <code>http://localhost:5000/auth/callback</code>. <br>
+            (See <a href="" target="_blank" rel="noopener noreferrer">My Applications</a>.)
+            </td>
+          </tr>
+          <tr>
+            <td><strong><code>AUTH_SUBSCRIPTION_KEY</code></strong></td>
+            <td>
+            Your Blackbaud Developer <strong>Subscription Key</strong>.<br>
+            Use either the <strong>Primary key</strong> or <strong>Secondary key</strong>, visible on your <a href="https://developer.sky.blackbaud.com/developer">Blackbaud Developer Profile</a>.
+            </td>
+          </tr>
+          <tr>
+            <td><strong><code>PORT</code></strong></td>
+            <td>
+            The Web server port that will run the application.<br>
+            For this tutorial, enter <code>5000</code>.
+            </td>
+          </tr>
+        </table>
+      </div>
+    </li>
+    <li>Save the environment file.</li>
+    <li>Review the <strong>.gitignore</strong> file. The purpose of the file is to specify the untracked files to ignore. Note that any <strong>.env</strong> files are ignored. This prevents the environment files from being synced to GitHub and protects your registered application&apos;s keys and other sensitive data from being exposed.</li>
+</ul>
+
+<h2 id="step-6-mdash-install-dependencies">Step 6 &#x2014; Install Dependencies</h2>
+<ul>
+<li><p>From the working directory, run <code>npm install</code> to install the project dependencies.</p>
+<p><a href="https://www.npmjs.com/" target="blank">NPM</a> is the package manager that comes bundled with Node.js (since you already installed Node.js, you also have NPM). The command <code>npm install</code> downloads any dependencies listed in the <strong>package.json</strong> file and adds them to the app&apos;s <strong>node_modules</strong> directory (this command also creates this directory if it doesn&apos;t already exist). Each dependency is represented as a child directory of <strong>node_modules</strong>.</p>
+  <pre><code class="language-git">$ cd sky-api-auth-tutorial
+$ npm install</code></pre>
+</li>
+<li><p>After you run <code>npm install</code>, verify that the <strong>sky-api-auth-tutorial</strong> working directory contains the <strong>node_modules</strong> subfolder.</p>
+  <p class="alert alert-info"><code>npm install</code> depends on a reliable Internet connection to install dependencies. If you have issues running the command, you can hard delete the <strong>node_modules</strong> folder and run <code>npm install</code> again.</p>
+
+</li>
+</ul>
+<h2 id="step-7-mdash-run-the-application">Step 7 &#x2014; Run the Application</h2>
+<ul>
+<li>Using Command Prompt/Terminal, ensure you are in the working directory.</li>
+<li><p>Type <code>npm start</code> to start the application server at <a href="http://localhost:5000" target="_blank" rel="noopener noreferrer">http://localhost:5000</a>.</p>
+  <pre><code class="language-git">$ npm start</code></pre>
+
+</li>
+</ul>
+<h2 id="application-starting-point">Application starting point</h2>
+<ul>
+<li>Open the <strong>index.js</strong> file. This is the starting point of our application. This code runs on the server side and is <em>not</em> visible to the application user. The code performs the following:<ul>
+<li>It registers our application dependencies such as <a href="http://expressjs.com/" target="blank">Express</a>.</li>
+<li>It handles authorization and user requests to the home page and data endpoints.</li>
+<li>It creates a web server on your local machine at <code>https://localhost:5000</code>.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>To request the home page open your browser to <a href="http://localhost:5000/" target="https://localhost:5000/">http://localhost:5000/</a>. It displays the authorization options.
+<img src="/assets/img/auth_tutorial_login.png" alt="Login"></p>
+<p class="alert alert-info">Your browser may display a warning that the connection is not private. For this tutorial, ignore this message. To proceed, click <strong>Show advanced</strong>, and then click <strong>Proceed to localhost (unsafe)</strong>.</p>
+</li>
+<li><p>Open the <strong>ui</strong> folder and the <strong>index.html</strong> file. This opens the home page for our application, where we can initialize our app and load assets to build our page.</p>
+</li>
+<li>The <code>body</code> tag includes an attribute named <code>ng-app</code>. The front-end of our application uses <a href="https://angularjs.org/">AngularJS</a> to interact with our Node.js server routes.</li>
+<li><p>Below the <code>body</code> tag, the <code>ng-view</code> tag is used as a hook for our <a href="https://docs.angularjs.org/api/ngRoute">Angular Router</a> to load our desired template view.</p>
+<pre><code class="language-markup">&lt;!-- INITIALIZE THE APP --&gt;
+&lt;body ng-app=&quot;AuthCodeFlowTutorial&quot;&gt;
+
+  &lt;!-- LOAD OUR VIEWS --&gt;
+  &lt;ng-view&gt;&lt;/ng-view&gt;
+  ...
+</code></pre>
+
+</li>
+</ul>
+<h2 id="set-up-the-router">Set up the router</h2>
+<ul>
+<li>Open the <strong>app</strong> folder and the <strong>main.js</strong> file.   Our application&apos;s logic lives here.</li>
+<li><p>First, we declare our angular module and inject the <code>ngRoute</code> dependency.</p>
+<pre><code class="language-javascript">angular.module(&apos;AuthCodeFlowTutorial&apos;, [&apos;ngRoute&apos;])</code></pre></li>
+<li><p>Next, we initialize our <a href="https://docs.angularjs.org/api/ngRoute">Angular Router</a> to manage our views and controllers.</p>
+<p>  <pre><code class="language-javascript">angular.module(&apos;AuthCodeFlowTutorial&apos;, [&apos;ngRoute&apos;])
+        .config(function ($routeProvider) {
+            $routeProvider
+                .when(&apos;/home&apos;, {
+                    templateUrl: &apos;./app/main-template.html&apos;,
+                    controller: &apos;MainController&apos;
+                })
+                .when(&apos;/auth-success&apos;, {
+                    template: &apos;<h1 id="login-successful">Login Successful</h1>&apos;,
+                    controller: &apos;AuthController&apos;
+                })
+                .otherwise({
+                    redirectTo: &apos;/home&apos;
+                })
+                </code></pre></p>
+                <p class="alert alert-info">In this example, we use two views and two controllers.  As your app grows, you can add more views and controllers.</p>
+
+</li>
+</ul>
+<h2 id="display-the-authorize-buttons">Display the authorize buttons</h2>
+<ul>
+<li>Open the <strong>app</strong> folder and the <strong>main-template.html</strong> file.  This is our application&apos;s core view.</li>
+<li>The <strong>main.js</strong> file holds the logic to initiate our <a href="https://docs.angularjs.org/guide/controller">AngularJS Controllers</a> and our <a href="https://docs.angularjs.org/api/ngRoute">Angular Router</a>.</li>
+<li><p>Just after the page <code>title</code>, the <strong>authorize</strong> buttons reference the server&apos;s authorization endpoint. When a user clicks one of these buttons, the authorization process begins. When a session is authenticated, the <strong>authorize</strong> buttons are hidden.</p>
+<ul>
+<li><p>The <strong>Authorize using redirect</strong> button initiates the authorization process by redirecting the browser to the authorization endpoint to initiate the authentication process.</p>
+<pre><code class="language-markup">&lt;div ng-if=&quot;!isAuthenticated&quot; class=&quot;col-sm-12 well&quot;&gt;
+...
+&lt;div class=&quot;col-sm-5 well login-options&quot;&gt;
+  &lt;span class=&quot;login-options-label&quot;&gt;Login using redirect&lt;/span&gt;
+  &lt;a href=&quot;/auth/login&quot; class=&quot;btn btn-primary btn-block btn-lg&quot;&gt;Log in&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</li>
+<li><p>The <strong>Authorize using popup</strong> button opens a popup window that is directed to the server&apos;s authorization endpoint to initiate the authentication process.</p>
+<pre><code class="language-markup">&lt;div ng-if=&quot;!isAuthenticated&quot; class=&quot;col-sm-12 well&quot;&gt;
+...
+&lt;div class=&quot;col-sm-5 col-sm-offset-2 well login-options&quot;&gt;
+  &lt;span class=&quot;login-options-label&quot;&gt;Login using popup&lt;/span&gt;
+  &lt;button ng-click=&quot;popupLogin()&quot; class=&quot;btn btn-primary btn-block btn-lg&quot; target=&quot;login-iframe&quot;&gt;Log in&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Using the popup option, our Angular code performs the following actions:</p>
+<ol>
+<li><p>It calls the <code>popupLogin()</code> method.  This method opens a window at the specified URL, and we pass in a <code>?redirect=</code> parameter and set it to the hash <code>/%23/auth-success</code>, which translates to:<code>/#/auth-success</code>.</p>
+<pre><code class="language-javascript">.controller(&apos;MainController&apos;, function ($scope, $http, $window) {
+...
+$scope.popupLogin = function () {
+   var popup
+
+   popup = window.open(&apos;auth/login?redirect=/%23/auth-success&apos;, &apos;login&apos;, &apos;height=450,width=600,&apos;);
+   if (window.focus) {
+       popup.focus();
+   }
+}
+</code></pre></li>
+<li><p>When the browser redirects to the <code>/#/auth-success</code>, the AuthController closes the current window and redirects the browser to the route <code>&apos;/&apos;</code> so our router will redirect the page to <code>#/home</code>.</p>
+<pre><code class="language-javascript">.controller(&apos;AuthController&apos;, function ($window) {
+   ...
+   $window.opener.location = &apos;/&apos;;
+   $window.close();
+})
+</code></pre>
+
+
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>The JavaScript in <strong>main.js</strong> in the <strong>MainController</strong> uses Ajax calls to the <code>/auth/authenticated</code> endpoint to determine whether the users are logged in. If the users access token has expired or is invalid, the page displays the <strong>Authorize</strong> buttons.    Users must log in to obtain a valid access token.</p>
+  <pre><code class="language-javascript">angular.module(&apos;AuthCodeFlowTutorial&apos;, [&apos;ngRoute&apos;])
+  ...
+  .controller(&apos;MainController&apos;, function ($scope, $http) {
+      ...
+      /**
+      *  Check user access token.
+      */
+      $http.get(&apos;/auth/authenticated&apos;).then(function (res) {
+          $scope.isAuthenticated = res.data.authenticated;
+
+          /**
+          *  Access token is valid. Fetch constituent record.
+          */
+          if ($scope.isAuthenticated === false) {
+              $scope.isReady = true;
+              return;
+          }
+      });
+  });</code></pre>
+
+</li>
+</ul>
+<h2 id="obtain-an-access-token">Obtain an Access Token</h2>
+<ol>
+<li><p>Click one of the <strong>Authorize</strong> buttons and enter your Blackbaud account credentials. After authentication, your browser redirects to the Blackbaud Authorization Service authorization form.</p>
+<p><img src="/assets/img/auth_tutorial_authorize.png" alt="Authorize"></p>
+</li>
+<li><p>Open <strong>index.js</strong> and <strong>/server/routes/auth.js</strong>.</p>
+<p>  The <strong>Authroize</strong> button prompt a request to the web server&apos;s <code>/auth/login</code> endpoint. The route in the app&apos;s main <strong>index.js</strong> file directs requests to the <code>getLogin()</code> function within <strong>/server/routes/auth.js</strong>.</p>
+  <pre><code class="language-javascript">// Register our OAUTH2 routes
+app.get(&apos;/auth/authenticated&apos;, routes.auth.getAuthenticated);
+app.get(&apos;/auth/login&apos;, routes.auth.getLogin);
+app.get(&apos;/auth/callback&apos;, routes.auth.getCallback);
+app.get(&apos;/auth/logout&apos;, routes.auth.getLogout);</code></pre>
+
+<p>  The <strong>auth.js</strong> file relies on the <a href="https://github.com/lelylan/simple-oauth2">simple-oauth2</a> client library. To creating an object you must provide your registered application&apos;s <strong>Application ID</strong> and <strong>Application secret</strong> values, which reside in the project&apos;s <strong>sky.env</strong> file as the <code>AUTH_CLIENT_ID</code> and <code>AUTH_CLIENT_SECRET</code> environment variables.  You need the URL to the Blackbaud Authorization Service along with the token endpoint.</p>
+  <pre><code class="language-javascript">oauth2 = require(&apos;simple-oauth2&apos;)({
+  clientID: process.env.AUTH_CLIENT_ID,
+  clientSecret: process.env.AUTH_CLIENT_SECRET,
+  site: &apos;https://oauth2.apim.blackbaud.com/&apos;,
+  tokenPath: &apos;/token&apos;
+});</code></pre>
+
+<p>  To obtain an authorization code, the <code>getLogin()</code> function uses simple-oauth2&apos;s <code>authorizeURL()</code> function to display the Blackbaud Authorization Service&apos;s authorization form. After users approve or deny the request, the responses are redirected using the value of the <code>AUTH_REDIRECT_URI</code> environment variable: <code>https://localhost:5000/auth/callback</code>.</p>
+  <pre><code class="language-javascript">function getLogin(request, response) {
+  request.session.redirect = request.query.redirect;
+  request.session.state = crypto.randomBytes(48).toString(&apos;hex&apos;);
+  response.redirect(oauth2.authCode.authorizeURL({
+      redirect_uri: process.env.AUTH_REDIRECT_URI,
+      state: request.session.state
+  }));
+}</code></pre>
+
+  <p class="alert alert-warning">The access token exchange should occur server side. Do not expose the <strong>Application secret</strong> to users in client-side code. Do not expose your <strong>Application secret</strong> in a source code repository such as GitHub.</p>
+
+<p>The path <code>/auth/callback</code> is routed to the <code>getCallback()</code> function that exchanges authorization codes for access tokens.</p>
+  <pre><code class="language-javascript">function getCallback(request, response) {
+  ...
+
+  options = {
+      code: request.query.code,
+      redirect_uri: process.env.AUTH_REDIRECT_URI
+  };
+  oauth2.authCode.getToken(options, function (errorToken, ticket) {
+      if (errorToken) {
+          error = errorToken.message;
+      } else {
+          redirect = request.session.redirect || &apos;/&apos;;
+
+          request.session.redirect = &apos;&apos;;
+          request.session.state = &apos;&apos;;
+
+          saveTicket(request, ticket);
+          response.redirect(redirect);
+      }
+  });
+
+  ...
+}</code></pre>
+
+<p>  The access token value is <em>not</em> passed back to the client. Instead, the <code>saveTicket()</code> function saves it to the session state.</p>
+  <pre><code class="language-javascript">function saveTicket(request, ticket) {
+  request.session.ticket = ticket;
+  request.session.expires = (new Date().getTime() + (1000 * ticket.expires_in));
+}</code></pre>
+
+</li>
+</ol>
+<h2 id="retrieve-constituent-data">Retrieve constituent data</h2>
+<p>The response redirects users to the home page and AppController. The AppController verifies that users are logged in through calls to the web server&apos;s <code>/auth/authenticated</code> endpoint. After verification, calls are made to the web server&apos;s <code>api/constituents/280</code>.</p>
+<pre><code class="language-javascript">angular.module(&apos;AuthCodeFlowTutorial&apos;, [])
+.controller(&apos;AppController&apos;, function ($scope, $http, $window) {
+
+    //  Checks the user access token.
+
+    $http.get(&apos;/auth/authenticated&apos;).then(function (res) {
+        $scope.isAuthenticated = res.data.authenticated;
+        if ($scope.isAuthenticated === false) {
+            $scope.isReady = true;
+            return;
+        }
+
+        //  Access token is valid. Fetch constituent record.
+
+        $http.get(&apos;/api/constituents/280&apos;).then(function (res) {
+            $scope.constituent = res.data;
+            $scope.isReady = true;
+        });
+    });</code></pre>
+
+<ul>
+  <li>Open <strong>/server/libs/sky.js</strong> and <strong>/server/routes/api.js</strong>.</li>
+  <li>
+    <p>The route in the app&apos;s main <strong>index.js</strong> file directs the request to the <code>getConstituent()</code> function in <strong>/server/libs/sky.js</strong>. The call is passed along to <strong>/server/routes/api.js</strong>, which interacts directly with SKY API endpoints.  Eventually the call makes its way to the <code>proxy()</code> function. Here, we can see the use of the <code>bb-api-subscription-key</code> and <code>Authorization</code> request headers:</p>
+    <pre><code class="language-javascript">function proxy(request, method, endpoint, body, callback) {
+    var options = {
+        json: true,
+        method: method,
+        body: body,
+        url: &apos;https://api.sky.blackbaud.com/constituent/v1/&apos;&apos; + endpoint,
+        headers: {
+            &apos;bb-api-subscription-key&apos;: process.env.AUTH_SUBSCRIPTION_KEY,
+            &apos;Authorization&apos;: &apos;Bearer &apos; + request.session.ticket.access_token
+        }
+    };
+
+    promise(options)
+        .then(callback)
+        .catch(function (err) {
+            console.log(&apos;Proxy Error: &apos;, err);
+        });
+}</code></pre>
+    <p>The <code>bb-api-subscription-key</code> value represents your Blackbaud developer account&apos;s approved subscription to an API product. You can use your account&apos;s <strong>Primary key</strong> or <strong>Secondary key</strong>. The <code>Authorization</code> value represents your authorization to use the API. The <code>Authorization</code> header starts with <code>Bearer</code> followed by a space and then the value for the access token.</p>
+      <p>A call to the  <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/57f2a40cd7dcde099c1c7f09">Constituent (Get) endpoint</a> retrieves constituent data and sends it back to the browser.</p>
+    <pre><code class="language-javascript"><br>function get(request, endpoint, callback) {
+    return proxy(request, &apos;GET&apos;, endpoint, &apos;&apos;, callback);
+}</code></pre>
+    <p>The code is marries the constituent data to an <a href="https://angularjs.org/">AngularJS</a> template in our <strong>ui/app/main-template.html</strong> view and renders it in a <a href="http://getbootstrap.com/css/#tables" target="blank">Bootstrap table</a>.</p>
+    <pre><code class="language-markup" ng-non-bindable="">&lt;div ng-if=&quot;isAuthenticated&quot;&gt;
+  &lt;h3&gt;Constituent: {{ constituent.name }}&lt;/h3&gt;
+  &lt;p&gt;
+    See &lt;a href=&quot;https://developer.sky.blackbaud.com/contract-reference#Constituent&quot; target=&quot;_blank&quot;&gt;Constituent&lt;/a&gt;
+    within the SKY API contact reference for a full listing of properties.
+  &lt;/p&gt;
+  &lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-striped table-hover&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;id&lt;/td&gt;
+          &lt;td&gt;{{ constituent.id }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;type&lt;/td&gt;
+          &lt;td&gt;{{ constituent.type }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;lookup_id&lt;/td&gt;
+          &lt;td&gt;{{ constituent.lookup_id }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;first&lt;/td&gt;
+          &lt;td&gt;{{ constituent.first }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;last&lt;/td&gt;
+          &lt;td&gt;{{ constituent.last }}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;a href=&quot;/auth/logout&quot; class=&quot;btn btn-primary&quot;&gt;Log out&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    <p><img src="/assets/img/auth_tutorial_GETConstituent.png" alt="GET Constituent"></p>
+  </li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+<p>You should now have a fully functioning application using implicit-flow.  Users of your app should be able to log in with their Blackbaud credentials, authorize the app, and get constituent data after they are authenticated.</p>
+
+<p> Be sure to take a look at our other <a href="/docs/code/">code samples</a>.
+ You can <a href="https://github.com/blackbaud/sky-api-tutorial-auth-code-nodejs/issues">create an issue</a> to report a bug or request a feature for this code sample.
+ For all other feature requests, see <a href="/support/ideas/">ideas</a>.</p>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//sky-api.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.9.2/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://bbauth-signin-cdev.blackbaudhosting.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function t(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}t.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(t),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+

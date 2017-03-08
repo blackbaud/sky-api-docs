@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Shared Changelog</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.9.2/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/apps/">Managing your apps</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>  
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+      <li>
+        <a href="https://skyapi.statuspage.io">Status</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-sm-3 content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class=""><a href="/support/community/">Community</a></li><li class="current active"><a href="/support/changelog/">Changelog</a><ul class="nav"><li class="current active"><a href="/support/changelog/shared/">Shared</a><div class="headings"><ul class="nav"><li class="heading"><a href="#2017-3-03" class="smooth-scroll">2017-3-03</a></li><li class="heading"><a href="#december-2016" class="smooth-scroll">December 2016</a></li><li class="heading"><a href="#october-2016" class="smooth-scroll">October 2016</a></li><li class="heading"><a href="#september-2016" class="smooth-scroll">September 2016</a></li><li class="heading"><a href="#july-2016" class="smooth-scroll">July 2016</a></li><li class="heading"><a href="#june-2016" class="smooth-scroll">June 2016</a></li><li class="heading"><a href="#may-2016" class="smooth-scroll">May 2016</a></li><li class="heading"><a href="#april-2016" class="smooth-scroll">April 2016</a></li><li class="heading"><a href="#march-2016" class="smooth-scroll">March 2016</a></li><li class="heading"><a href="#older" class="smooth-scroll">Older</a></li></ul></div></li><li class=""><a href="/support/changelog/constituent/">Constituent</a></li><li class=""><a href="/support/changelog/fundraising/">Fundraising (Beta)</a></li><li class=""><a href="/support/changelog/gift/">Gift (Beta)</a></li><li class=""><a href="/support/changelog/gl/">General Ledger</a></li><li class=""><a href="/support/changelog/ap/">Accounts Payable</a></li></ul></li><li class=""><a href="/support/issues/">Issues</a></li><li class=""><a href="/support/ideas/">Ideas</a></li><li class=""><a href="/support/faq/">FAQ</a></li><li class=""><a href="/support/status/">Status</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-sm-9 content-primary">
+    
+      
+<!-- STACHE MARKED -->
+<h1 id="shared">Shared</h1>
+<p>Monitor this page to keep up with common changes shared across all our APIs.</p>
+<h2 id="2017-3-03">2017-3-03</h2>
+<h3 id="new">New</h3>
+<p>The SKY API developer site now offers commenting capability through Disqus. We encourage community involvement to improve our documentation. We will monitor comments just like we monitor feedback in our GitHub repository, and we will incorporate feedback to make our docs better. See something that is unclear? Want more detail? Leave a comment and let us know!</p>
+<p>On the SKY API developer site, comments now appear at the bottom of most documentation pages, and buttons are available at the top of pages to take users to the comments.</p>
+<h2 id="december-2016">December 2016</h2>
+<h3 id="2016-12-02">2016-12-02</h3>
+<p>We added a new <b>Status</b> link to the Support menu. This link takes you to our SKY API status page. The status page provides the current state of API availability, as well as specific details on downtime incidents. We also provide the option for you to subscribe to automatic incident notifications by email, SMS, or feed.</p>
+<h2 id="october-2016">October 2016</h2>
+<h3 id="2016-10-17">2016-10-17</h3>
+<p>Logos can now be associated with your applications. The logo is the icon that users will see on the consent form when they give an application authorization to use their product&apos;s account to access the API. Logos can be added to new and existing applications through the  <a href="">My Applications</a> page. Application logo images must be:</p>
+<ul>
+<li>512 by 512 pixels</li>
+<li>Smaller than 2MB</li>
+<li>PNG or JPEG format </li>
+</ul>
+<h2 id="september-2016">September 2016</h2>
+<h3 id="2016-09-22">2016-09-22</h3>
+<p>SKY API&apos;s support for <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> now includes <code>accept</code> and <code>content-type</code> in the list of accepted request headers. You can now specify these headers in API requests from within a browser.</p>
+<h2 id="july-2016">July 2016</h2>
+<h3 id="2016-07-08">2016-07-08</h3>
+<p>To support approved API subscribers with access to their own dedicated tenants, we&apos;ve added instructions for <a href="/docs/basics/#activating-the-sky-api-console" target="_blank" rel="noopener noreferrer">activating the SKY API Console</a>
+to our Basics guide.</p>
+<h2 id="june-2016">June 2016</h2>
+<h3 id="2016-06-27">2016-06-27</h3>
+<ul>
+<li><p>When requesting an access token, you may now supply your application ID and secret as part of the request body as <code>client_id</code> and <code>client_secret</code> parameters, respectively. This is an alternative to using the <code>Authorization</code> header.  See <a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a>.</p>
+</li>
+<li><p>Created a <a href="https://github.com/blackbaud/sky-api-tutorial-auth-code-c-sharp/">C# Auth Code Flow code sample</a> and <a href="/docs/code/auth-code-flow/c-sharp/">tutorial</a>.</p>
+</li>
+</ul>
+<h3 id="2016-06-09">2016-06-09</h3>
+<h3 id="new">New</h3>
+<ul>
+<li><p>We&apos;ve added the OAuth2 <a href="/docs/authorization/implicit-flow/">Implicit Flow</a> for use in web browser and mobile apps where application secret confidentiality is not guaranteed.</p>
+</li>
+<li><p>A new feature allows you to export API definitions in Swagger and WADL formats from within the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">SKY API Console</a>. Use these files to generate client-side code by using tools such as <a href="http://swagger.io/swagger-codegen/">Swagger Codegen</a>. You can import these files into API client tools such as <a href="https://www.getpostman.com/">Postman</a> and start calling the API in very little time.</p>
+<p>  <img src="/assets/img/api_definition_export.png" alt="Export API Definitions" title="Export API Definitions"></p>
+</li>
+</ul>
+<h2 id="may-2016">May 2016</h2>
+<h3 id="2016-05-27">2016-05-27</h3>
+<h3 id="changed">Changed</h3>
+<p>When <a href="/docs/apps/">registering your application</a>, we&apos;ve relaxed the <code>https</code> requirement for whitelisted redirect URIs.  To facilitate and shorten the development process, we now accept <code>http://localhost:*</code> (or, <code>http://127.0.0.1:*</code>) whitelisted web addresses to redirect to after users grant or deny permission for your app. You will no longer need to install a self-signed SSL certificate on your local machine when building your applications.</p>
+<h3 id="2016-05-13">2016-05-13</h3>
+<h3 id="new">New</h3>
+<p>A <code>next_link</code> property has been added to our <a href="/docs/basics/#pagination">paginated</a> collection responses and represents the URI for the next page of results.  This property takes into account any relevant pagination parameters, such as <code>limit</code>, <code>offset</code>, or <code>last_modified</code>, and <code>date_added</code> provided on the request.</p>
+<h3 id="2016-05-06">2016-05-06</h3>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><p><code>limit</code> and <code>offset</code> have replaced <code>top</code> and <code>skip</code> parameters for <a href="/docs/basics/#pagination">Pagination</a>.  Pagination behavior will remain unchanged.</p>
+</li>
+<li><p>When editing, existing endpoints that previously used the <code>PUT</code> HTTP verb have been replaced with <code>PATCH</code>.  <code>PATCH</code> can be used to update partial resources. For instance, when you only need to update one field of the resource.</p>
+</li>
+</ul>
+<h2 id="april-2016">April 2016</h2>
+<h3 id="2016-04-26">2016-04-26</h3>
+<p><a href="/docs/basics/#pagination">Pagination</a> will be facilitated through the results via the use of <code>limit</code> and <code>offset</code> instead of <code>top</code> and <code>skip</code> parameters.  Pagination behavior will remain unchanged.</p>
+<h2 id="march-2016">March 2016</h2>
+<h3 id="2016-03-15">2016-03-15</h3>
+<p>Updates to <a href="/docs/code/">code samples</a> including <strong>Authorization Code Flow Tutorial</strong> and <strong>Barkbaud</strong>:</p>
+<ul>
+<li><p><a href="/docs/code/auth-code-flow/nodejs/">Authorization Code Flow Tutorial</a></p>
+<ul>
+<li>Environment variables automatically load when the application starts. <a href="/docs/code/auth-code-flow/nodejs/">Tutorial</a> instructions have been simplified accordingly.</li>
+<li>Using AngularJS for display of <strong>Log in</strong> button, <strong>Log out</strong> button and constituent data.</li>
+<li>OAuth and Constituent API routes have been updated to reflect recent <a href="#2016-03-10" class="smooth-scroll">changes</a> to our <a href="/docs/basics/#base-urls">base URLs</a>.</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/blackbaud/barkbaud">Barkbaud</a></p>
+<ul>
+<li>Environment variables automatically load when the application starts.  <a href="https://github.com/blackbaud/barkbaud/blob/master/README.md">README</a> instructions have been simplified accordingly.</li>
+<li>Biographies, owner and medical history for each animal are now stored in a MongoDB database at <a href="https://www.mlab.com/">mLab</a> instead of Parse. The <a href="http://blog.parse.com/announcements/moving-on/">Parse database service will be retired</a> on January 28, 2017.</li>
+<li>OAuth and Constituent API routes have been updated to reflect recent <a href="#2016-03-10" class="smooth-scroll">changes</a> to our <a href="/docs/basics/#base-urls">base URLs</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2016-03-11">2016-03-11</h3>
+<p>Usage limits are now in effect.  Exceeding the <a href="/docs/basics/#rate-limits">rate limit</a> results in a <code>429 - Too Many Requests</code> response status code.  Exceeding the <a href="/docs/basics/#quotas">quota</a> results in a <code>403 - Quota Exceeded</code> response status code.</p>
+<h3 id="2016-03-10">2016-03-10</h3>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><p>OAuth and Constituent API URLs changed.  See <a href="/docs/basics/#base-urls">Base URLs</a>.</p>
+</li>
+<li><p>The route for the <code>authorization</code> endpoint is no longer prefixed with <code>renxt</code>.</p>
+  <div class="table-responsive">
+      <table class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th>Operation</th>
+                  <th>Method</th>
+                  <th>Old Route</th>
+                  <th>New Route</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="clickable-row" data-url="/docs/authorization/">
+                  <td>authorization (Get)</td>
+                  <td>GET</td>
+                  <td>/renxt/authorization</td>
+                  <td>/authorization</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+</li>
+</ul>
+<h2 id="older">Older</h2>
+<h3 id="2015-12-8">2015-12-8</h3>
+<h3 id="new">New</h3>
+<ul>
+<li><p>The <a href="">My Applications</a> page now includes the ability to edit applications. Once registered, your application will automatically have access to the Developer Sandbox tenant.</p>
+</li>
+<li><p>The <a href="/docs/code/auth-code-flow/nodejs/">Auth Code Flow Tutorial</a> demonstrates how to create a small server-side application that negotiates authorization and access constituent data.</p>
+</li>
+<li><p><a href="/docs/code/">Code Samples</a> include Barkbaud which was introduced at bbcon 2015.  Also included is the source code for the <a href="/docs/code/auth-code-flow/nodejs/">Auth Code Flow Tutorial</a>.</p>
+</li>
+</ul>
+<h3 id="general-enhancements">General Enhancements</h3>
+<ul>
+<li>Enhanced <a href="/support/faq/">FAQ</a>, including new questions and references to new <a href="/docs/code/auth-code-flow/nodejs/">Auth Code Flow Tutorial</a> and <a href="/docs/apps/">application management</a>.</li>
+</ul>
+<h3 id="2015-11-20">2015-11-20</h3>
+<h3 id="new">New</h3>
+<p>The <a href="">My Applications</a> page and associated <a href="/docs/apps/">documentation</a> provide self-service application registration for the purpose of accessing data via SKY API.</p>
+<h3 id="2015-10-20">2015-10-20</h3>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><p>Improved handling of enumerations within the API. Enumeration values are now emitted using string representations instead of numeric representations.   For example, <a href="/api/entity-reference/constituent#Constituent">Constituent</a>.Type now returns <strong>individual</strong> or <strong>organization</strong>.</p>
+</li>
+<li><p>Improved handling of default values within the SKY API.  Previously, default values were not included in the JSON response. Values are now included in the payload.</p>
+</li>
+<li><p>Enhanced sample response representations in the developer portal to account for enumeration and default value handling.</p>
+</li>
+<li><p>Added a Support menu to the developer portal, with links to the Changelog, <a href="/support/issues/">Issues</a>, <a href="/support/ideas/">Ideas</a>, and <a href="/support/faq/">FAQ</a>.</p>
+</li>
+</ul>
+
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.9.2/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://bbauth-signin-cdev.blackbaudhosting.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function t(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}t.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(t),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+

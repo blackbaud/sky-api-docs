@@ -1,0 +1,356 @@
+@import "../../../node_modules/blackbaud-stache/src/sass/app";
+@import "../../../node_modules/blackbaud-stache/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts";
+@import "../../../node_modules/blackbaud-stache/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
+@import "../../../node_modules/blackbaud-stache/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid";
+@import "../../../node_modules/blackbaud-stache/bower_components/blackbaud-skyux/scss/_navigation";
+
+/*
+* ==========================================================================
+* AZURE UNIQUE - Styles unique, solely for APIM (ATM)
+* ==========================================================================
+*/
+body {
+  padding-top: 50px;
+  background-color: $footer-bg;
+}
+
+.ap-account-applications {
+  display: none;
+}
+.ap-analytics-usage-locals {
+  .col-md-12.clearfix.form-group {
+    margin-bottom: 0;
+  }
+  .ap-local-settings-scope-picker-container {
+    label {
+      margin-top: 10px;
+    }
+    div.col-md-6 {
+      > select.col-md-6 {
+        width: 100%;
+      }
+    }
+  }
+
+  .ap-local-chart-map-section {
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+  }
+
+  .ap-map-container {
+    .breadcrumb {
+      margin-bottom: 0;
+    }
+    .ap-map-breadcrumps-delimiter.divider {
+      display: none;
+    }
+  }
+}
+
+.snippet.snippet-resizable {
+  height: auto;
+}
+
+#account-menu {
+  display: none;
+}
+
+#ap-container {
+  display: block;
+  height: auto !important;
+  max-width: none;
+  background-color: #fff;
+
+  main > search-control {
+    display: none;
+  }
+
+  .layout-row {
+    display: block;
+    background-color: transparent;
+    height: auto;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    > .layout {
+      display: block;
+      margin: 0 auto;
+      height: auto;
+
+      .layout-column {
+        display: block;
+        height: auto;
+        min-height: 0;
+      }
+    }
+  }
+
+  /* Column Breakpoints */
+  .layout-row-content {
+    @extend .container;
+
+    & + .layout-row {
+      width: 100%;
+      padding: 0;
+    }
+
+    > .layout {
+      @media (min-width: $screen-sm-min) {
+        @include make-row;
+      }
+
+      > .zone-aside-first {
+        @media (min-width: $screen-sm-min) {
+          padding-top: 20px;
+          @include make-sm-column(5);
+        }
+        @media (min-width: $screen-md-min) {
+          @include make-md-column(4);
+        }
+        @media (min-width: $screen-lg-min) {
+          @include make-lg-column(3);
+        }
+
+        & + .zone-content {
+          padding-bottom: 30px;
+          @media (min-width: $screen-sm-min) {
+              @include make-sm-column(7);
+          }
+          @media (min-width: $screen-md-min) {
+            @include make-md-column(8);
+          }
+          @media (min-width: $screen-lg-min) {
+            @include make-lg-column(9);
+          }
+        }
+      }
+    }
+  }
+
+  .message {
+    @extend .alert;
+  }
+
+  .message-Information {
+    @extend .alert-success;
+  }
+
+  .navbar-collapse {
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
+  }
+
+  .welcome {
+    background-image: url('https://apidocs.sky.blackbaud.com/assets/img/sky-api-welcome-banner.jpg');
+
+    &.welcome-alert {
+      background: #fdebd8;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      min-height: 0;
+      h1 {
+        color: #000;
+      }
+    }
+  }
+
+  .section-additional-resources {
+    margin-bottom: -40px;
+  }
+
+  .tab-content {
+    margin-top: 0;
+  }
+
+  .zone-header {
+    padding: 0;
+    display: none;
+  }
+
+  .zone-aside-first {
+    background: #fff;
+    z-index: 1;
+
+    .badge-default,
+    .badge-success,
+    .badge-warning,
+    .badge-danger,
+    .badge-info {
+      color: #fff !important;
+      min-width: 55px;
+    }
+
+    .badge-default {
+      background-color: #999 !important;
+    }
+
+    .badge-success {
+      background-color: #5cb85c !important;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e !important;
+    }
+
+    .badge-danger {
+      background-color: #d9534f !important;
+    }
+
+    .badge-info {
+      background-color: #5bc0de !important;
+    }
+
+    .nav-pills {
+      > li {
+        height: 1.5em;
+        margin: 8px 0;
+        border-left: transparent solid 5px;
+
+        > a {
+          color: #8c8f90;
+          border-radius: 0;
+          display: block;
+          font-weight: 600;
+          font-size: 13px;
+          margin: 0;
+          padding: 0 5px 5px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          &:hover,
+          &:focus {
+            overflow: visible;
+            position: absolute;
+            background: #fff;
+            padding: 5px 10px 5px 5px;
+            margin-top: -5px;
+            color: #8c8f90;
+            background-color: rgba(255,255,255,0.75);
+            text-shadow: 0 0px 2px #fff;
+          }
+        }
+
+        &.active {
+          border-left-color: $bb-color-blue;
+          > a {
+            color: #8c8f90;
+            font-weight: 700;
+            background-color: transparent;
+
+            &:hover,
+            &:focus {
+              color: #8c8f90;
+            }
+          }
+        }
+      }
+    }
+
+    .zone-pills li {
+      margin: 0;
+    }
+  }
+
+  .zone-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
+
+    > main {
+      > .row > div > h2 {
+        font-size: 32px;
+        font-family: "Oswald",sans-serif;
+      }
+      > .panel > .panel-body > .col-md-3 {
+
+      }
+    }
+
+    .section-padding {
+      &.container {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
+
+      .showcase {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .zone-footer {
+    background-color: $footer-bg;
+    padding: 0;
+    margin-top: 40px !important;
+    color: $text-color;
+
+    .list-unstyled {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .showcase {
+    .showcase-desc {
+      h2 {
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+    }
+    .showcase-icon {
+      padding-top: 16px;
+    }
+  }
+}
+
+#btnOpenConsole[disabled] {
+  background-color: #b3b3b3;
+  border-color: #808486;
+  color: #808486;
+}
+
+#navigation {
+  > .navbar {
+    text-transform: none;
+
+    .navbar-nav.pull-right {
+      display: none;
+    }
+
+    @extend .bb-navbar;
+
+    .active {
+      @extend .bb-navbar-active;
+    }
+  }
+}
+
+.welcome-message {
+  padding-top: 40px;
+}
