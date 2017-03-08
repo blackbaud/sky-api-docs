@@ -145,6 +145,7 @@ sub_domain: blackbaud.com
 accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
 fundraising_api_suffix: /fundraising
+opportunity_api_suffix: /opportunity
 gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
@@ -421,6 +422,33 @@ portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gi
 portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44c/
 portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44e/
 portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44d/
+
+# =============================================
+#       Opportunity API ENDPOINTS
+# =============================================
+
+# Opportunity API
+portal_endpoints_opportunity: <%= stache.config.portal_endpoints %>TODO/
+
+# Opportunities
+portal_endpoints_opportunity_get: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_create: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_edit: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_status_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_purpose_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+
+# Custom Fields
+portal_endpoints_opportunity_custom_field_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_custom_field_create: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_custom_field_edit: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_custom_field_delete: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+
+# Attachments
+portal_endpoints_opportunity_attachment_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_attachment_create: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_attachment_edit: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
+portal_endpoints_opportunity_attachment_delete: <%= stache.config.portal_endpoints_opportunity %>operations/TODO/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
