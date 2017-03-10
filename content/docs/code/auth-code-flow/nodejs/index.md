@@ -13,7 +13,7 @@ back_to_top: true
 redirectUrl: http://localhost:5000/auth/callback
 ---
 
-{{ include stache.config.partial_header_edit }}
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # Authorization Code Flow - NodeJS
 
@@ -471,3 +471,4 @@ function get(request, endpoint, callback) {
 [auth-tutorial-authorize]: /assets/img/auth_tutorial_authorize.png
 [auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent_nodejs.png
 
+{{ include stache.config.partial_disqus }}

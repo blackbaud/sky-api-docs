@@ -40,6 +40,8 @@ partial_footer_navigation: includes/partial-footer-profile.hbs
 partial_footer_logo: includes/partial-footer-logo.hbs
 copyright: includes/partial-copyright.hbs
 partial_header_edit: includes/partial-header-edit.hbs
+partial_header_comments: includes/partial-header-comments.hbs
+partial_disqus: includes/partial-disqus.hbs
 
 # =============================================
 # Custom Styles and JavaScript
@@ -50,6 +52,11 @@ files:
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
+
+# =============================================
+# Disqus config
+# =============================================
+comments_key: sky-api
 
 # =============================================
 # GitHub config
@@ -139,6 +146,8 @@ partner_program: https://www.blackbaud.com/partners/become-a-partner
 sub_domain: blackbaud.com
 accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
+fundraising_api_suffix: /fundraising
+gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
 # Portal URLs
@@ -354,6 +363,66 @@ portal_endpoints_constituent_fundraiser_types_get_list: <%= stache.config.portal
 
 # Prospect Status
 portal_endpoints_prospect_status_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f28/
+
+# =============================================
+#       Fundraising API ENDPOINTS
+# =============================================
+
+# Fundraising API
+portal_endpoints_fundraising: <%= stache.config.portal_endpoints %>58bdd6c8d7dcde06046081d7/
+
+# Appeals
+portal_endpoints_appeal_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc453/
+
+# Appeal Custom Fields
+portal_endpoints_appeal_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc454/
+portal_endpoints_appeal_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc455/
+portal_endpoints_appeal_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc457/
+portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc456/
+portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc458/
+portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc459/
+
+# Campaigns
+portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
+
+# Campaigns Custom Fields
+portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45b/
+portal_endpoints_campaign_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45c/
+portal_endpoints_campaign_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45e/
+portal_endpoints_campaign_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45d/
+portal_endpoints_campaign_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45f/
+portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc460/
+
+# Funds
+portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc461/
+
+# Funds Custom Fields
+portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc462/
+portal_endpoints_fund_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc463/
+portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc465/
+portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc464/
+portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc466/
+portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc467/
+
+# =============================================
+#       Gift API ENDPOINTS
+# =============================================
+
+# Gift API
+portal_endpoints_gift: <%= stache.config.portal_endpoints %>58bdd5edd7dcde06046081d6/
+
+# Gifts
+portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc449/
+portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44a/
+
+# Gift Custom Fields
+portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44f/
+
+# Gift Attachments
+portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44b/
+portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44c/
+portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44e/
+portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44d/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
