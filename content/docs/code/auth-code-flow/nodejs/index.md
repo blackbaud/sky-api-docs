@@ -3,13 +3,14 @@ layout: layout-container
 name: NodeJS
 title: Authorization Code Flow - NodeJS
 description: Learn how to create a NodeJS server-side app that utilizes the OAuth 2.0 Authorization Code Flow and retrieves constituent data from our <%= stache.config.product_name_short %>.
-order: 2
+order: 3
 icon: fa fa-fw fa-desktop
 published: true
 showInNav: true
 tutorial: true
 showBreadcrumbs: true
 back_to_top: true
+redirectUrl: http://localhost:5000/auth/callback
 ---
 
 {{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
@@ -408,7 +409,7 @@ The response redirects users to the home page and AppController. The AppControll
 function get(request, endpoint, callback) {
     return proxy(request, 'GET', endpoint, '', callback);
 }</code></pre>
-    <p>The code is marries the constituent data to an <a href="https://angularjs.org/">AngularJS</a> template in our **ui/app/main-template.html** view and renders it in a <a href="http://getbootstrap.com/css/#tables" target="blank">Bootstrap table</a>.</p>
+    <p>The data is returned as JSON to the browser where the model's data is projected through the view of the Angular template.</p>
     <pre><code class="language-markup" ng-non-bindable>&lt;div ng-if="isAuthenticated">
   &lt;h3>Constituent: \{{ constituent.name }}&lt;/h3>
   &lt;p>
@@ -468,6 +469,6 @@ function get(request, endpoint, callback) {
 
 [auth-tutorial-login]: /assets/img/auth_tutorial_login.png
 [auth-tutorial-authorize]: /assets/img/auth_tutorial_authorize.png
-[auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent.png
+[auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent_nodejs.png
 
 {{ include stache.config.partial_disqus }}

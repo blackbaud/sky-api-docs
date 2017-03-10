@@ -38,7 +38,7 @@
         <tr>
           <td>Redirect URIs</td>
           <td>(Required) Specify one or more URIs that should be used when redirecting the user's browser back to your application after providing consent during the <a href="{{ stache.config.guide_web_api_authorization }}" target="_blank">authorization process</a>.  The URIs must be absolute and use https (note that we do support `http://localhost:port` or `http://127.0.0.1:port` for local development). To register multiple URIs, click **Add another redirect URI**.
-    			{{# if tutorial }}<br><br>For this tutorial, use `http://localhost:5000/auth/callback`.{{/ if }}</td>
+    			{{# if tutorial }}<br><br>For this tutorial, use `{{ redirectUrl }}`.{{/ if }}</td>
         </tr>
       </tbody>
     </table>
