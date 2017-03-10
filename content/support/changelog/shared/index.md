@@ -14,6 +14,11 @@ title: Shared Changelog
 
 Monitor this page to keep up with common changes shared across all our APIs.
 
+## 2017-3-10
+
+### New
+In response to a request from the [Blackbaud Community]({{ stache.config.support_community }}), we are pleased to announce a new [PHP code sample](github_repo_web_api_authorization_php) and accompanying [PHP tutorial]({{stache.config.guide_web_api_authorization_auth_code_flow_tutorial_php}}).  These two new resources demonstrate the [Blackbaud Auth Code Flow]({{stache.config.guide_web_api_authorization_auth_code_flow}}) using PHP.
+
 ## 2017-3-03
 
 ### New

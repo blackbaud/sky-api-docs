@@ -10,6 +10,7 @@ showInNav: true
 showBreadcrumbs: true
 tutorial: true
 back_to_top: true
+redirectUrl: http://localhost:5000/auth/callback
 ---
 
 {{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
@@ -299,7 +300,7 @@ public ActionResult Callback()
     &lt;/table>
   &lt;/div>
 ...</code></pre>
-![GET Constituent](/assets/img/auth_tutorial_GETConstituent_c_sharp.png "GET Constituent")
+![GET Constituent](/assets/img/auth_tutorial_GETConstituent.png "GET Constituent")
 </li>
 <li>Once the constituent information is retrieved and added to the front page, **Log Out** and **Refresh Access Token** buttons are displayed.</li>
 <li>Open **/Controllers/AuthenticationController.cs**</li>
