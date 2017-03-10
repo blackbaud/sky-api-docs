@@ -92,6 +92,7 @@ guide_web_api_activate_application: <%= stache.config.guide %>apps/#activate-you
 guide_web_api_authorization_auth_code_flow_tutorial_home:  <%= stache.config.guide %>code/auth-code-flow/
 guide_web_api_authorization_auth_code_flow_tutorial: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>nodejs/
 guide_web_api_authorization_auth_code_flow_tutorial_c_sharp: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>c-sharp/
+guide_web_api_authorization_auth_code_flow_tutorial_php: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>php/
 guide_apps_client_id_name: Application ID
 guide_apps_client_secret_name: Application secret
 guide_apps_client_regenerate_menuitem_name: Regenerate secret
