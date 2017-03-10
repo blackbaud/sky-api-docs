@@ -3,7 +3,7 @@ layout: layout-container
 name: Chrome Extension
 title: Authorization Code Flow - Chrome Extension
 description: Learn how to create a Chrome browser extension that interacts with Google's InboxSDK and SKY API constituent data via the OAuth 2.0 Authorization Code Flow.
-order: 3
+order: 2
 icon: fa fa-fw fa-chrome
 showInNav: true
 showBreadcrumbs: true

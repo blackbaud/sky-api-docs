@@ -15,6 +15,7 @@ api_product_name: SKY API Standard Edition
 sandbox_name: Developer Sandbox
 renxt: "Raiser's Edge NXT"
 fenxt: Financial Edge NXT
+back_to_top: true
 
 # =============================================
 # ADMIN TOOLBAR

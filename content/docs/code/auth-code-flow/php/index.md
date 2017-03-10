@@ -2,14 +2,12 @@
 layout: layout-container
 name: PHP
 title: Authorization Code Flow - PHP
-icon: fa fa-fw fa-desktop
+icon: fa fa-file-code-o
 description: Learn how to create a PHP server-side app that utilizes the OAuth 2.0 Authorization Code Flow and retrieves constituent data from our <%= stache.config.product_name_short %>.
-order: 1
-published: true
+order: 4
 showInNav: true
 showBreadcrumbs: true
 tutorial: true
-back_to_top: true
 redirectUrl: http://localhost:8888/auth/callback.php
 ---
 
