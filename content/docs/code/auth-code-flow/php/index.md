@@ -11,7 +11,7 @@ tutorial: true
 redirectUrl: http://localhost:8888/auth/callback.php
 ---
 
-{{ include stache.config.partial_header_edit }}
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # Authorization Code Flow - PHP
 
@@ -54,13 +54,13 @@ After your subscription is approved, your developer account can access the {{ st
 
 The <a href="{{ stache.config.github_repo_web_api_authorization_php }}" target="_blank">sky-api-tutorial-auth-code-php</a> repo on GitHub provides a starter project to work through the Authorization Code Flow.
 
-- Use a command prompt to clone the `sky-api-tutorial-auth-code-php` repo which creates a working directory by the same name that contains the code for the tutorial:
+Use a command prompt to clone the `sky-api-tutorial-auth-code-php` repo which creates a working directory by the same name that contains the code for the tutorial:
 
 	<pre><code class="language-git">$ git clone https://github.com/blackbaud/sky-api-tutorial-auth-code-php.git</code></pre>
 
 ## Step 4 &mdash; Prepare Your Environment
 
-<ul>
+<ol>
 	<li>Open the **sky-api-tutorial-auth-code-php** working directory and copy the configuration file **config.php.sample** as **config.php**. The **config.php** file contains the application's environment variables for the PHP environment.</li>
 	<li>
 	  <p>Update **config.php** with the following values:</p>
@@ -99,9 +99,9 @@ The <a href="{{ stache.config.github_repo_web_api_authorization_php }}" target="
 	</li>
 	<li>Save the config file.</li>
 	<li>Review the **.gitignore** file. The purpose of the file is to specify the untracked files to ignore. Note that **config.php** file is ignored. This prevents the config file from being synced to GitHub and protects your registered application's keys and other sensitive data from being exposed.</li>
-</ul>
+</ol>
 
-## Step 5 &mdash; Install and Configure MAMP.
+## Step 5 &mdash; Install and Configure MAMP
 
 After you have your subscription key, {{ stache.config.guide_apps_client_id_name }}, {{ stache.config.guide_apps_client_secret_name }}, and the <a href="{{ stache.config.github_repo_web_api_authorization_php }}" target="_blank">sky-api-auth-tutorial-php</a> source code, It's time to establish your development environment. Since we are using the [Authorization Code Flow]({{ stache.config.guide_web_api_authorization_auth_code_flow }}), we need to use a server-side software platform. For this tutorial, we will use PHP with [MAMP](https://www.mamp.info/en/) to serve the project locally.
 
@@ -127,12 +127,12 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
     </table>
   </div>
   <div>![MAMP Document Root](/assets/img/auth_tutorial_mamp.png "Document Root settings in MAMP")</div>
-0. Click `Ok`, and `Start Servers`.
+0. Select `Ok` and `Start Servers`.
 0. In a Web browser, navigate to <a href="http://localhost:8888" target="blank">localhost:8888</a>. The Web server displays our app.
 
 ## Application Starting Point
 
-<ul>
+<ol>
 <li>Open the **index.html** file. MAMP serves this file as our applications root where we initialize our app and load assets to build our page.</li>
 
 <li>The `body` tag includes an attribute named `ng-app`. The front-end of our application uses <a href="https://angularjs.org/">AngularJS</a> to interact with our PHP server. 
@@ -158,7 +158,7 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
           return;
         }
         ...</code></pre>
-    <p>The call to the endpoint routes to the corresponding php page (**/auth/authenticated.php**) and returns a Boolean representing the current user's authentication status.  First it requires and loads the **/includes/blackbaud/blackbuad.php** file.</p>
+    <p>The call to the endpoint routes to the corresponding php page (**/auth/authenticated.php**) and returns a Boolean representing the current user's authentication status.  First, it requires and loads the **/includes/blackbaud/blackbuad.php** file.</p>
 <pre><code class="language-php">&lt;?php
     require_once '../includes/blackbaud/blackbaud.php';
 
@@ -168,7 +168,7 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
         ...</code></pre>
 </li>
 <li>
-    <p>Open the **/includes/blackbaud/blackbaud.php** file. The PHP code pulls in the rest of our required controllers, config environment variables, and http library for making api requests.   We can see `**require_once 'session.php';**` pulls in the **includes/blackbaud/session.php** file.</p>
+    <p>Open the **/includes/blackbaud/blackbaud.php** file. The PHP code pulls in the rest of our required controllers, config environment variables, and http library for making API requests.  We can see `**require_once 'session.php';**` pulls in the **includes/blackbaud/session.php** file.</p>
 <pre>
     <code class="language-php">&lt;?php
     // Error reporting, for development only.
@@ -184,7 +184,7 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
         ...</code></pre>
 </li>
 <li>
-    <p>Open the **/includes/blackbaud/session.php** file.  It begins by defining our **namespace blackbaud;**, allowing the methods and variables defined beneath it to be accessed by any other classes also under that namespace.  Our original call to `/auth/authenticated/`  made use of the `isAuthenticated()` method in this Session object.  This method checks for the existance of a PHP `$_SESSION` object and looks for an `access_token`. If the application has not yet been authorized by the end user, then `IsAuthenticated()` will return `false`.</p>
+    <p>Open the **/includes/blackbaud/session.php** file.  It begins by defining our **namespace blackbaud**, allowing the methods and variables defined beneath it to be accessed by any other classes also under that namespace.  Our original call to `/auth/authenticated/`  made use of the `isAuthenticated()` method in this Session object.  This method checks for the existance of a PHP `$_SESSION` object and looks for an `access_token`. If the application has not yet been authorized by the end user, then `IsAuthenticated()` will return `false`.</p>
     
 <pre><code class="language-php">&lt;?php
     public static function isAuthenticated() {
@@ -192,28 +192,28 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
     }
         ...</code></pre>
 </li>
-</ul>
+</ol>
 
-## Displaying the Log in button
-<ul>
+## Display the Log in button
+<ol>
 <li><p>If the user is not authenticated, a **Log in** button is displayed.</p>
-<p class="alert alert-info"><strong><em>Note:</em></strong> The browser may display a warning that the connection is not private. For this tutorial, you can ignore this message. To proceed, click <strong>Show advanced</strong> and then click <strong>Proceed to localhost (unsafe)</strong>.</p>
+<p class="alert alert-info"><strong><em>Note:</em></strong> The browser may display a warning that the connection is not private. For this tutorial, you can ignore this message. To proceed, select <strong>Show advanced</strong> and then select <strong>Proceed to localhost (unsafe)</strong>.</p>
 ![Login](/assets/img/auth_tutorial_login_php.png "Log in")</li>
 <li><p>Open the **Views/Shared/_Layout.cshtml** file. Notice that the `body` tag includes an attribute named `ng-app`. The front-end of our application uses AngularJS to interact with our Web server routes. The `div.container` element includes an attribute named `ng-controller` which references an AngularJS controller to handle the model data.</p>
 <pre><code class="language-markup">&lt;body ng-app="AuthCodeFlowTutorial">
   &lt;div class="container" ng-controller="ConstituentCtrl" ng-cloak>
     ...</code></pre></li>
-<li><p>When the Home page first loads the app will not have received authorization from the user to access their SKY API data. As a result the `isAuthenticated` scope variable will be `false` and the Home page's Angular HTML template displays the **Log in** button:</p>
+<li><p>When the Home page first loads the app will not have received authorization from the user to access their SKY API data. As a result the `isAuthenticated` scope variable will be `false` and the Home page's Angular HTML template displays the **Log in** button.</p>
 <pre><code class="language-markup">&lt;div ng-if="!isAuthenticated">
 	&lt;a href="/auth/login" class="btn btn-primary">Log in&lt;/a>
 &lt;/div>
 ...</code></pre></li>
-</ul>
+</ol>
 
 ## Obtain an Access Token
-<ul>
+<ol>
 <li>Open **/includes/blackbaud/auth.php**.</li>
-<li><p>When the user clicks the Log in button, a call is made to `auth/login.php` which redirects the request to `/includes/blackbaud/auth.php` file and runs the `redirect()` method which redirects the browser to SKY API’s authorization endpoint to start the authentication and authorization process. The user must authenticate with their Blackbaud credentials (if they are not already signed in) and authorize your application to access their SKY API data.</p>
+<li><p>When the user selects the **Log in** button, a call is made to `auth/login.php`, which redirects the request to `/includes/blackbaud/auth.php` file. Here, the `redirect()` method is called, which redirects the browser to SKY API’s authorization endpoint to start the authentication and authorization process. The user must authenticate with their Blackbaud credentials (if they are not already signed in) and authorize your application to access their SKY API data.</p>
 <pre><code class="language-php">&lt;?php
 class Auth {
   public static function redirect() {
@@ -231,7 +231,7 @@ class Auth {
       ));
   }
     ...</code></pre></li>
-<li><p>Once authorized, SKY API redirects the user back to the `/auth/callback.php` URI with an authorization code. Once an authorization code has been obtained, it is exchanged the code for an access token.  The app is then redirected back to the Home page.</p>
+<li><p>Once authorized, SKY API redirects the user back to the `/auth/callback.php` URI with an authorization code. Once an authorization code has been obtained, it exchanges the code for an access token.  The app is then redirected back to the Home page.</p>
 <pre><code class="language-php">&lt;?php
 require_once '../includes/blackbaud/blackbaud.php';
 
@@ -267,12 +267,12 @@ Session::setToken($token);
 return $response;
 }
 </code></pre></li>
-</ul>
+</ol>
 
 ## Retrieve Constituent Data
-<ul>
+<ol>
 <li>Open the **index.html** file.</li>
-<li><p>AngularJS again makes the request to `auth/authenticated`, which now returns `true`. Since the user is authorized, AngularJS then makes a request the application’s constituent API endpoint `/api/constituents.php?id=280` to retrieve a constituent record:</p>
+<li><p>AngularJS again makes the request to `auth/authenticated`, which now returns `true`. Since the user is authorized, AngularJS then makes a request the application’s constituent API endpoint `/api/constituents.php?id=280` to retrieve a constituent record.</p>
 <pre><code class="language-javascript">angular.module('AuthCodeFlowTutorial', [])
 	.controller('ConstituentCtrl', function ($scope, $http, $watch) {
 
@@ -292,9 +292,9 @@ return $response;
         });
 	    ...</code></pre>
 </li>
- <li>Open **api/constituents.php** and **includes/blackbaud/api/constituents.php**</li>
+ <li>Open **api/constituents.php** and **includes/blackbaud/api/constituents.php**.</li>
   <li>
-    <p>The get request in **index.html** file directs the request to **api/constituents.php** where the access token is refreshed and the call is passed along to **/includes/blackbaud/api/constituents.php** with the id from the route param `?id=280` that we passed into the request.</p> 
+    <p>The get request in **index.html** file directs the request to **api/constituents.php**, where the access token is refreshed and the call is passed along to **/includes/blackbaud/api/constituents.php** with the id from the route param `?id=280` that we passed into the request.</p> 
     <pre><code class="language-php">&lt;?php
     ...
    $response = blackbaud\Auth::refreshAccessToken();
@@ -376,8 +376,8 @@ function get(request, endpoint, callback) {
     <p>![GET Constituent][auth-tutorial-getconstituent]</p>
   </li>
 <li>Once the constituent information is retrieved and added to the front page, **Log Out** and **Refresh Access Token** buttons are displayed.</li>
-<li>Open **/auth/logout.php** and **includes/blackbaud/session.php**</li>
-<li>If the user clicks **Log Out**, they are redirected to **/auth/logout.php** which calls the `blackbaud\Session::logout()` in **includes/blackaud/session.php**. The `logout()` method destroys the token stored in the PHP server's `$_SESSION`.</li>
+<li>Open **/auth/logout.php** and **includes/blackbaud/session.php**.</li>
+<li>If the user selects **Log Out**, they are redirected to **/auth/logout.php**, which calls the `blackbaud\Session::logout()` in **includes/blackaud/session.php**. The `logout()` method destroys the token stored in the PHP server's `$_SESSION`.</li>
     <pre><code class="language-php">&lt;?php
     ...
     public static function logout() {
@@ -385,7 +385,7 @@ function get(request, endpoint, callback) {
     }
     ...</code></pre>
 
-<li>If the user clicks **Refresh Access Token**, AngularJS makes a request to **/auth/refresh-token.php**, the call is passed to the `refreshAccessToken()` method in **includes/blackbaud/auth.php** which builds out the request body with the required fields.  The `grant_type` is set to `refresh_token`, and the `refresh_token` field is populated with the **refresh_token** we have stored in the `$_SESSION`. This body is then passed to the `fetchTokens()` method where the `post` to the SKY API endpoint is made.</li>
+<li>If the user selects **Refresh Access Token**, AngularJS makes a request to **/auth/refresh-token.php**. The call is passed to the `refreshAccessToken()` method in **includes/blackbaud/auth.php**, which builds out the request body with the required fields.  The `grant_type` is set to `refresh_token` and the `refresh_token` field is populated with the **refresh_token** we have stored in the `$_SESSION`. This body is then passed to the `fetchTokens()` method where the `post` to the SKY API endpoint is made.</li>
 
   <pre><code class="language-php">&lt;?php
   ...
@@ -416,7 +416,7 @@ function get(request, endpoint, callback) {
   <p>
     The `JSON` response from SKY API is then parsed, the new set of tokens are stored in our `$_SESSION`, and the data is sent back to Angular to be displayed on the page for your reference.
   </p>
-</ul>
+</ol>
 
 That's it!
 
@@ -424,3 +424,6 @@ That's it!
 - You can [create an issue]({{ stache.config.github_repo_web_api_authorization_php }}issues) to report a bug or request a feature for this code sample.  For all other feature requests, see [ideas]({{ stache.config.support_ideas }}).
 
 [auth-tutorial-getconstituent]: /assets/img/auth_tutorial_GETConstituent.png
+
+
+{{ include stache.config.partial_disqus }}
