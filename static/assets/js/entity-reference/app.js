@@ -63,11 +63,15 @@
                 var property = entity.details.properties[propertyName];
 
                 if (property.type == "array") {
-                    var ref = property.items.$ref.replace("#/definitions/", "").toLowerCase();
-                    property.displayType = "array of " + ref;
-                } else if (property.$ref != undefined) {
-                    var ref = property.$ref.replace("#/definitions/", "").toLowerCase();
+                    var ref = property.items.$ref.replace("#/definitions/", "");
                     property.displayType = ref;
+                    property.ref = ref;
+                    property.isArrayRef = true;
+                } else if (property.$ref != undefined) {
+                    var ref = property.$ref.replace("#/definitions/", "");
+                    property.displayType = ref;
+                    property.ref = ref;
+                    property.isSingleRef = true;
                 } else {
                     property.displayType = property.type;
                 }

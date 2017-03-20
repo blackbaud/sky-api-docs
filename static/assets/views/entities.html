@@ -35,7 +35,17 @@
             <tbody>
                 <tr ng-repeat="(property_name, property) in entity.details.properties">
                     <td>{{property_name}}</td>
-                    <td>{{property.displayType}}</td>
+                    <td>
+                        <a ng-show="property.isSingleRef" ng-href="#{{property.ref}}">
+                            {{property.displayType}}
+                        </a>
+                        <span ng-show="property.isArrayRef">
+                            array of <a ng-href="#{{property.ref}}">{{property.displayType}}</a>
+                        </span>
+                        <span ng-show="!property.isSingleRef && !property.isArrayRef">
+                            {{property.displayType}}
+                        </span>
+                    </td>
                     <td>{{property.description}}</td>
                 </tr>
             </tbody>
