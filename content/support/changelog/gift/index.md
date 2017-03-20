@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_
 
 ### Changed
 
-- We added the `post_date` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
+We added the `post_date` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
 
 ##2017-03-08
 
