@@ -52,6 +52,7 @@ files:
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
+    - /assets/js/entity-reference/app.js
 
 # =============================================
 # Disqus config
@@ -111,6 +112,7 @@ general_ledger_entity_reference: <%= stache.config.entity_reference %>general-le
 gift_entity_reference: <%= stache.config.entity_reference %>gift
 list_entity_reference: <%= stache.config.entity_reference %>list
 opportunity_entity_reference: <%= stache.config.entity_reference %>opportunity
+peer_to_peer_entity_reference: <%= stache.config.entity_reference %>peer-to-peer
 treasury_entity_reference: <%= stache.config.entity_reference %>treasury
 volunteer_entity_reference: <%= stache.config.entity_reference %>volunteer
 
