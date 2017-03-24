@@ -40,7 +40,7 @@ showBreadcrumbs: true
             <tr>
                 <td>constituent_id</td>
                 <td>string</td>
-                <td>The fundraiser identifier.</td>
+                <td>The constituent identifier of the fundraiser.</td>
             </tr>
             <tr>
                 <td>credit_amount</td>
@@ -74,67 +74,67 @@ showBreadcrumbs: true
             <tr>
                 <td>constituent_id</td>
                 <td>string</td>
-                <td>The constituent identifier.</td>
+                <td>The constituent identifier of the prospect associated with the opportunity.</td>
             </tr>
             <tr>
                 <td>name</td>
                 <td>string</td>
-                <td>The opportunity name.</td>
+                <td>The name that identifies the opportunity throughout the program, such as in lists or on constituent records.</td>
             </tr>
             <tr>
                 <td>purpose</td>
                 <td>string</td>
-                <td>The purpose of the opportunity.</td>
+                <td>The intended use for any money raised as a result of the opportunity.</td>
             </tr>
             <tr>
                 <td>status</td>
                 <td>string</td>
-                <td>The status of the opportunity.</td>
+                <td>The status that indicates where the opportunity is in the solicitation process.</td>
             </tr>
             <tr>
                 <td>deadline</td>
                 <td>dateTime</td>
-                <td>The opportunity deadline.</td>
+                <td>The goal date for the opportunity to result in a gift.</td>
             </tr>
             <tr>
                 <td>ask_date</td>
                 <td>dateTime</td>
-                <td>The ask date.</td>
+                <td>The date when the solicitation was made.</td>
             </tr>
             <tr>
                 <td>ask_amount</td>
                 <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The monetary amount requested.</td>
+                <td>The monetary amount solicited from the prospect for the opportunity.</td>
             </tr>
             <tr>
                 <td>expected_date</td>
                 <td>dateTime</td>
-                <td>The expected date.</td>
+                <td>The date when the prospect is expected to give in response to the opportunity.</td>
             </tr>
             <tr>
                 <td>expected_amount</td>
                 <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The monetary amount expected.</td>
+                <td>The monetary amount that is realistically expected to result from the opportunity.</td>
             </tr>
             <tr>
                 <td>funded_date</td>
                 <td>dateTime</td>
-                <td>The opportunity description.</td>
+                <td>The date when the prospect gave in response to the opportunity.</td>
             </tr>
             <tr>
                 <td>funded_amunt</td>
                 <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The monetary amount funded.</td>
+                <td>The monetary amount that the prospect gave in response to the opportunity.</td>
             </tr>
             <tr>
                 <td>campaign_id</td>
                 <td>string</td>
-                <td>The identifier of the campaign associated with the opportunity.</td>
+                <td>The identifier of the campaign associated with the opportunity. The campaign sets the overall objectives for raising money.</td>
             </tr>
             <tr>
                 <td>fund_id</td>
                 <td>string</td>
-                <td>The identifier of the fund associated with the opportunity.</td>
+                <td>The identifier of the fund associated with the opportunity. The fund designates the specific financial purpose of a gift and identifies the financial account for that gift.</td>
             </tr>
             <tr>
                 <td>fundraisers</td>
@@ -178,17 +178,17 @@ showBreadcrumbs: true
             <tr>
                 <td>tags</td>
                 <td>array of string</td>
-                <td>The set of tags associated with the attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
+                <td>The tags associated with the attachment. Tags supplement the attachment’s name and description and identify it based on how an organization categorizes attachments. Available values are the entries in the <b>Document Tags</b> table.</td>
             </tr>
             <tr>
                 <td>name</td>
                 <td>string</td>
-                <td>The name of the attachment.</td>
+                <td>The name to identify the attachment.</td>
             </tr>
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The attachment type. Available values are <i>link</i> and <i>physical</i>. Physical attachments are stored and managed in the system. Link attachments are stored and managed externally. At this time, only link attachments can be created through the API.</td>
+                <td>The attachment type. Available values are <i>physical</i> and <i>link</i>. Physical attachments are uploads of files such as images, PDFs, or Word documents that are saved locally or on the network. They are stored and managed in the system. Link attachments are links to files such as images, blog posts, or YouTube videos that are online or in a cloud storage account. They are stored and managed externally. At this time, only link attachments can be created through the API.</td>
             </tr>
             <tr>
                 <td>url</td>
