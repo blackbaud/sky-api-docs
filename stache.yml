@@ -428,6 +428,13 @@ portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %
 portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44d/
 
 # =============================================
+#       Peer-to-Peer API ENDPOINTS
+# =============================================
+
+# Peer-to-Peer API
+portal_endpoints_peer_to_peer: <%= stache.config.portal_endpoints %>58d54d5fa9db9513843b261b/
+
+# =============================================
 # 			General Ledger API ENDPOINTS
 # =============================================
 
