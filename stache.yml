@@ -152,6 +152,7 @@ constituent_api_suffix: /constituent
 fundraising_api_suffix: /fundraising
 gift_api_suffix: /gift
 gl_api_suffix: /generalledger
+peer_to_peer_api_suffix: /peertopeer
 
 # Portal URLs
 portal_product_route_prefix: sky

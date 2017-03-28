@@ -39,8 +39,12 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
         <td><code class="language-http">{{ stache.config.gift_api_suffix }}</code></td>
         <td>Used to manage gift information, including related entities such as acknowledgements, fundraisers, and receipts.</td>
       </tr>
+      <tr>
+        <td class="nowrap">Peer-to-Peer (Beta)</td>
+        <td><code class="language-http">{{ stache.config.peer_to_peer_api_suffix }}</code></td>
+        <td>Used to create supporter pages, and query campaigns, donors, donations, and teams.</td>
+      </tr>
     </tbody>
   </table>
 </div>
 
-Within each API, you'll find domain-specific endpoints that allow you to access data and perform operations like searching for records, updating information, etc.  The {{ stache.config.api_type_name }} is based on <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> principles, where resources are accessed via standard requests to an API endpoint.
