@@ -39,6 +39,11 @@ APIs:
     icon: fa-gift
     location: gift
     title: Gift (Beta)
+  -
+    description: "Monitor this page to keep up with the latest changes to the Peer-to-Peer API."
+    icon: fa-share-alt
+    location: peer-to-peer
+    title: Peer-to-Peer (Beta)
 ---
 
 # {{ name }}
