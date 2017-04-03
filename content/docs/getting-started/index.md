@@ -4,7 +4,6 @@ description: Obtain the necessary knowledge to make API calls using our interact
 order: 100
 layout: layout-sidebar
 published: true
-back_to_top: true
 title: Getting Started
 ---
 

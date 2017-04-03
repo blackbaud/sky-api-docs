@@ -7,8 +7,12 @@ icon: fa fa-github fa-4x
 showInNav: true
 showInHeader: true
 showInFooter: false
-showBreadcrumbs: true
+showBreadcrumbs: false
 title: Code Samples
 ---
 
+
+
 # {{ name }}
+
+

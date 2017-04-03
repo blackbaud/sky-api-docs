@@ -17,32 +17,32 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
       <tr>
         <td>Accounts Payable</td>
         <td><code class="language-http">{{ stache.config.accounts_payable_suffix }}</code></td>
-        <td>Used to manage accounts payable, including vendors and invoices.</td>
+        <td>Manages accounts payable, including vendors and invoices.</td>
       </tr>
       <tr>
         <td>Constituent</td>
         <td><code class="language-http">{{ stache.config.constituent_api_suffix }}</code></td>
-        <td>Used to manage constituent information, including related entities such as addresses, phones, emails, and notes.</td>
+        <td>Manages constituent information, including related entities such as addresses, phones, emails, and notes.</td>
       </tr>
       <tr>
         <td class="nowrap">Fundraising (Beta)</td>
         <td><code class="language-http">{{ stache.config.fundraising_api_suffix }}</code></td>
-        <td>Used to manage information within the fundraising hierarchy and related entities such as campaigns, funds, and appeals.</td>
+        <td>Manages information within the fundraising hierarchy and related entities, such as campaigns, funds, and appeals.</td>
       </tr>
       <tr>
         <td class="nowrap">General Ledger</td>
         <td><code class="language-http">{{ stache.config.gl_api_suffix }}</code></td>
-        <td>Used to manage the general ledger, including accounts, projects, and journal entries.</td>
+        <td>Manages the general ledger, including accounts, projects, and journal entries.</td>
       </tr>
       <tr>
         <td class="nowrap">Gift (Beta)</td>
         <td><code class="language-http">{{ stache.config.gift_api_suffix }}</code></td>
-        <td>Used to manage gift information, including related entities such as acknowledgements, fundraisers, and receipts.</td>
+        <td>Manages gift information, including related entities such as acknowledgements, fundraisers, and receipts.</td>
       </tr>
       <tr>
         <td class="nowrap">Peer-to-Peer (Beta)</td>
         <td><code class="language-http">{{ stache.config.peer_to_peer_api_suffix }}</code></td>
-        <td>Used to create supporter pages, and query campaigns, donors, donations, and teams.</td>
+        <td>Creates supporter pages and query campaigns, donors, donations, and teams.</td>
       </tr>
     </tbody>
   </table>
