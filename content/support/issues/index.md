@@ -13,6 +13,12 @@ title: Issues
 # Issues
 If you find an issue, please [contact us]({{ stache.config.support_need_help_url }}).
 
+##2017-04-05
+We are aware of an issue with the new [Appeal list]({{stache.config.portal_endpoints_appeals_get_list}}), [Campaign list]({{stache.config.portal_endpoints_campaigns_get_list}}), and [Fund list]({{stache.config.portal_endpoints_funds_get_list}}) possibly returning unexpected results with the `last_modified` parameter due to time zone inconsistencies. We are working to resolve this issue, and will provide an update when it has been resolved.
+
+To mitigate this problem, we recommend providing a buffer around your desired `last_modified` parameter if inconsistencies arise, as well as saving and reusing the returned `next_link` and `sort_token` when performing data sync functions to ensure no record updates are missed.
+
+
 ## 2017-02-17
 ### Resolved
 For the issue reported earlier today about the Applications page, the functionality has been restored. 

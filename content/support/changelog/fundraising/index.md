@@ -30,17 +30,17 @@ Added the following endpoints:
       </tr>
     </thead>
     <tbody>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_appeals_get_list }}">
         <td>Appeal list</td>
         <td>GET</td>
         <td>/appeals</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_campaigns_get_list }}">
         <td>Campaign list</td>
         <td>GET</td>
         <td>/campaigns</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_funds_get_list }}">
         <td>Fund list</td>
         <td>GET</td>
         <td>/funds</td>
