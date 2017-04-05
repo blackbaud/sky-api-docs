@@ -13,6 +13,11 @@ title: Constituent Changelog
 # {{ name }}
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
+## 2017-04-05
+
+### Changed
+
+ - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now populates the `marital_status` property by default.
 
 ## 2017-02-23
 
