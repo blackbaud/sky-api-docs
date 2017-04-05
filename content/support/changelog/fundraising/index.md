@@ -14,6 +14,41 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-04-05
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+        <td>Appeal list</td>
+        <td>GET</td>
+        <td>/appeals</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+        <td>Campaign list</td>
+        <td>GET</td>
+        <td>/campaigns</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_countries_get_list }}">
+        <td>Fund list</td>
+        <td>GET</td>
+        <td>/funds</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ##2017-03-08
 
 ### New
