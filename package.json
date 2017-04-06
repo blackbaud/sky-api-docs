@@ -6,12 +6,12 @@
     "node": "0.10.32"
   },
   "name": "sky-api-docs",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "Blackbaud Documentation",
   "private": true,
   "dependencies": {
     "grunt": "^0.4.5",
-    "blackbaud-stache": "latest"
+    "blackbaud-stache": "0.7.36"
   },
   "devDependencies": {
     "amdefine": "^1.0.0",
