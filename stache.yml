@@ -374,7 +374,7 @@ portal_endpoints_fundraising: <%= stache.config.portal_endpoints %>58bdd6c8d7dcd
 
 # Appeals
 portal_endpoints_appeal_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc453/
-portal_endpoints_appeals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/**NEWID**/
+portal_endpoints_appeals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e2/
 
 # Appeal Custom Fields
 portal_endpoints_appeal_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc454/
@@ -386,7 +386,7 @@ portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.confi
 
 # Campaigns
 portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
-portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/**NEWID**/
+portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e3/
 
 # Campaigns Custom Fields
 portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45b/
@@ -398,7 +398,7 @@ portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.con
 
 # Funds
 portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc461/
-portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/**NEWID**/
+portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e4/
 
 # Funds Custom Fields
 portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc462/
