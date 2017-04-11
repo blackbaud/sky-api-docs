@@ -15,6 +15,7 @@ api_product_name: SKY API Standard Edition
 sandbox_name: Developer Sandbox
 renxt: "Raiser's Edge NXT"
 fenxt: Financial Edge NXT
+back_to_top: true
 
 # =============================================
 # ADMIN TOOLBAR
@@ -51,6 +52,7 @@ files:
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
+    - /assets/js/entity-reference/app.js
 
 # =============================================
 # Disqus config
@@ -62,6 +64,7 @@ comments_key: sky-api
 # =============================================
 github: https://github.com/blackbaud/
 github_repo_web_api_authorization: <%= stache.config.github %>sky-api-tutorial-auth-code-nodejs/
+github_repo_web_api_authorization_php: <%= stache.config.github %>sky-api-tutorial-auth-code-php/
 github_repo_web_api_authorization_c_sharp: <%= stache.config.github %>sky-api-tutorial-auth-code-c-sharp/
 github_repo_web_api_authorization_chrome_extension: <%= stache.config.github %>sky-api-tutorial-bff-pattern/
 github_repo_barkbaud_nodejs: <%= stache.config.github %>barkbaud/
@@ -90,6 +93,7 @@ guide_web_api_activate_application: <%= stache.config.guide %>apps/#activate-you
 guide_web_api_authorization_auth_code_flow_tutorial_home:  <%= stache.config.guide %>code/auth-code-flow/
 guide_web_api_authorization_auth_code_flow_tutorial: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>nodejs/
 guide_web_api_authorization_auth_code_flow_tutorial_c_sharp: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>c-sharp/
+guide_web_api_authorization_auth_code_flow_tutorial_php: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>php/
 guide_apps_client_id_name: Application ID
 guide_apps_client_secret_name: Application secret
 guide_apps_client_regenerate_menuitem_name: Regenerate secret
@@ -108,6 +112,7 @@ general_ledger_entity_reference: <%= stache.config.entity_reference %>general-le
 gift_entity_reference: <%= stache.config.entity_reference %>gift
 list_entity_reference: <%= stache.config.entity_reference %>list
 opportunity_entity_reference: <%= stache.config.entity_reference %>opportunity
+peer_to_peer_entity_reference: <%= stache.config.entity_reference %>peer-to-peer
 treasury_entity_reference: <%= stache.config.entity_reference %>treasury
 volunteer_entity_reference: <%= stache.config.entity_reference %>volunteer
 
@@ -372,6 +377,7 @@ portal_endpoints_fundraising: <%= stache.config.portal_endpoints %>58bdd6c8d7dcd
 
 # Appeals
 portal_endpoints_appeal_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc453/
+portal_endpoints_appeals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e2/
 
 # Appeal Custom Fields
 portal_endpoints_appeal_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc454/
@@ -383,6 +389,7 @@ portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.confi
 
 # Campaigns
 portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
+portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e3/
 
 # Campaigns Custom Fields
 portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45b/
@@ -394,6 +401,7 @@ portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.con
 
 # Funds
 portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc461/
+portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e4/
 
 # Funds Custom Fields
 portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc462/
