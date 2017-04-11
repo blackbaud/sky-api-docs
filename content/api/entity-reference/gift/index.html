@@ -108,7 +108,7 @@ showBreadcrumbs: true
             <tr>
                 <td>post_status</td>
                 <td>string</td>
-                <td>The general ledger post status of the gift. Available values are <i>posted</i>, <i>notposted</i>, and <i>donotpost.</i></td>
+                <td>The general ledger post status of the gift. Available values are <i>posted</i>, <i>notposted</i>, and <i>donotpost.</i> When <code>post_status</code> is set to <i>donotpost</i>, then <code>post_date</code> should be null. When it is set to <i>notposted</i>, then <code>post_date</code> is editable. When it is set to <i>posted</i>, then <code>post_date</code> must be set and is no longer editable.</td>
             </tr>
             <tr>
                 <td>post_date</td>
