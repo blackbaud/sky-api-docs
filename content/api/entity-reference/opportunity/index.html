@@ -16,93 +16,16 @@ showBreadcrumbs: true
 
     <p>This topic describes the entity and type representations for common items that the Opportunity API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
     <ul>
-        <li><a href="#Fundraiser">Fundraiser</a></li>
+        <li><a href="#OpportunityFundraiser">Opportunity fundraiser</a></li>
         <li><a href="#Opportunity">Opportunity</a></li>
+        <li><a href="#OpportunityAttachment">Opportunity attachment</a></li>
     </ul>
 
 
-<a id="CustomFieldCategory"></a>
+<a id="OpportunityFundraiser"></a>
 <p>&nbsp;</p>
-<h2>Custom Field Category</h2>
-<p>The <b>custom field category</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>name</td>
-                <td>string</td>
-                <td>The name of the category.</td>
-            </tr>
-            <tr>
-                <td>type</td>
-                <td>string</td>
-                <td>The type of data that custom fields in this category represent. Available values <a href="#CustomFieldTypes">are listed below</a>.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="CustomFieldTypes"></a>
-<p>&nbsp;</p>
-<p>Available values for the <b>type</b> of a <b>custom field category</b>:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>boolean</td>
-                <td>Defines the custom field as a boolean value.</td>
-            </tr>
-            <tr>
-                <td>codetableentry</td>
-                <td>Defines the custom field as a string value that represents a code table entry description.</td>
-            </tr>
-            <tr>
-                <td>constituentid</td>
-                <td>Defines the custom field as a constituent identifier value.</td>
-            </tr>
-            <tr>
-                <td>currency</td>
-                <td>Defines the custom field as a decimal value.</td>
-            </tr>
-            <tr>
-                <td>date</td>
-                <td>Defines the custom field as a date value in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
-            </tr>
-            <tr>
-                <td>fuzzydate</td>
-                <td>Defines the custom field as a <a href="#FuzzyDate">fuzzy date</a> value.</td>
-            </tr>
-            <tr>
-                <td>number</td>
-                <td>Defines the custom field as an integer value.</td>
-            </tr>
-            <tr>
-                <td>text</td>
-                <td>Defines the custom field as a string value.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="Fundraiser"></a>
-<p>&nbsp;</p>
-<h2>Fundraiser</h2>
-<p>The <b>fundraiser</b> entity has the following properties:</p>
+<h2>Opportunity fundraiser</h2>
+<p>The <b>opportunity fundraiser</b> entity has the following properties:</p>
 
 <div class="table-responsive">
     <table class="table table-striped table-hover">
@@ -117,7 +40,7 @@ showBreadcrumbs: true
             <tr>
                 <td>constituent_id</td>
                 <td>string</td>
-                <td>The fundraiser identifier.</td>
+                <td>The constituent identifier of the fundraiser.</td>
             </tr>
             <tr>
                 <td>credit_amount</td>
@@ -151,71 +74,71 @@ showBreadcrumbs: true
             <tr>
                 <td>constituent_id</td>
                 <td>string</td>
-                <td>The constituent identifier.</td>
+                <td>The constituent identifier of the prospect associated with the opportunity.</td>
             </tr>
             <tr>
                 <td>name</td>
                 <td>string</td>
-                <td>The opportunity name.</td>
+                <td>The name that identifies the opportunity throughout the program, such as in lists or on constituent records.</td>
             </tr>
             <tr>
                 <td>purpose</td>
                 <td>string</td>
-                <td>The purpose of the opportunity.</td>
+                <td>The intended use for any money raised as a result of the opportunity.</td>
             </tr>
             <tr>
                 <td>status</td>
                 <td>string</td>
-                <td>The status of the opportunity.</td>
+                <td>The status that indicates where the opportunity is in the solicitation process.</td>
             </tr>
             <tr>
                 <td>deadline</td>
                 <td>dateTime</td>
-                <td>The opportunity deadline.</td>
+                <td>The goal date for the opportunity to result in a gift. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>2015-09-18T16:25:00Z</i>.</td>
             </tr>
             <tr>
                 <td>ask_date</td>
                 <td>dateTime</td>
-                <td>The ask date.</td>
+                <td>The date when the solicitation was made. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>2015-09-18T16:25:00Z</i>.</td>
             </tr>
             <tr>
                 <td>ask_amount</td>
                 <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The monetary amount requested.</td>
+                <td>The monetary amount solicited from the prospect for the opportunity.</td>
             </tr>
             <tr>
                 <td>expected_date</td>
                 <td>dateTime</td>
-                <td>The expected date.</td>
+                <td>The date when the prospect is expected to give in response to the opportunity. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>2015-09-18T16:25:00Z</i>.</td>
             </tr>
             <tr>
                 <td>expected_amount</td>
                 <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The monetary amount expected.</td>
+                <td>The monetary amount that is realistically expected to result from the opportunity.</td>
             </tr>
             <tr>
                 <td>funded_date</td>
                 <td>dateTime</td>
-                <td>The opportunity description.</td>
+                <td>The date when the prospect gave in response to the opportunity. Uses <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><i>2015-09-18T16:25:00Z</i>.</td>
             </tr>
             <tr>
-                <td>funded_amunt</td>
+                <td>funded_amount</td>
                 <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The monetary amount funded.</td>
+                <td>The monetary amount that the prospect gave in response to the opportunity.</td>
             </tr>
             <tr>
                 <td>campaign_id</td>
                 <td>string</td>
-                <td>The identifier of the campaign associated with the opportunity.</td>
+                <td>The identifier of the campaign associated with the opportunity. The campaign sets the overall objectives for raising money.</td>
             </tr>
             <tr>
                 <td>fund_id</td>
                 <td>string</td>
-                <td>The identifier of the fund associated with the opportunity.</td>
+                <td>The identifier of the fund associated with the opportunity. The fund designates the specific financial purpose of a gift and identifies the financial account for that gift.</td>
             </tr>
             <tr>
                 <td>fundraisers</td>
-                <td>array of <a href="#Fundraiser">fundraiser</a></td>
+                <td>array of <a href="#OpportunityFundraiser">opportunity fundraiser</a></td>
                 <td>The fundraisers assigned to the opportunity.</td>
             </tr>
             <tr>
@@ -255,7 +178,7 @@ showBreadcrumbs: true
             <tr>
                 <td>tags</td>
                 <td>array of string</td>
-                <td>The set of tags associated with the attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
+                <td>The tags associated with the attachment. Tags supplement the attachment’s name and description and identify it based on how an organization categorizes attachments. Available values are the entries in the <b>Document Tags</b> table.</td>
             </tr>
             <tr>
                 <td>name</td>
@@ -265,7 +188,7 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The attachment type. Available values are <i>link</i> and <i>physical</i>. Physical attachments are stored and managed in the system. Link attachments are stored and managed externally. At this time, only link attachments can be created through the API.</td>
+                <td>The attachment type. Available values are <i>physical</i> and <i>link</i>. Physical attachments are uploaded files such as images, PDFs, or Word documents that are saved locally or on the network. They are stored and managed in the system. Link attachments are links to files such as images, blog posts, or YouTube videos that are online or in a cloud storage account. They are stored and managed externally. At this time, only link attachments can be created through the API.</td>
             </tr>
             <tr>
                 <td>url</td>
