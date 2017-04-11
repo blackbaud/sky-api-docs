@@ -16,40 +16,11 @@ showBreadcrumbs: true
 
     <p>This topic describes the entity and type representations for common items that the Opportunity API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
     <ul>
-        <li><a href="#OpportunityFundraiser">Opportunity fundraiser</a></li>
         <li><a href="#Opportunity">Opportunity</a></li>
         <li><a href="#OpportunityAttachment">Opportunity attachment</a></li>
+        <li><a href="#OpportunityFundraiser">Opportunity fundraiser</a></li>
     </ul>
 
-
-<a id="OpportunityFundraiser"></a>
-<p>&nbsp;</p>
-<h2>Opportunity fundraiser</h2>
-<p>The <b>opportunity fundraiser</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th><strong>Property</strong></th>
-                <th><strong>Type</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>constituent_id</td>
-                <td>string</td>
-                <td>The constituent identifier of the fundraiser.</td>
-            </tr>
-            <tr>
-                <td>credit_amount</td>
-                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>The amount credited to the fundraiser for the opportunity.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 <a id="Opportunity"></a>
 <p>&nbsp;</p>
@@ -214,6 +185,35 @@ showBreadcrumbs: true
                 <td>thumbnail_url</td>
                 <td>string</td>
                 <td>The URL for a thumbnail. Only applies to physical attachments that are images. Contains a time-bound signature that limits access to 60 minutes.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a id="OpportunityFundraiser"></a>
+<p>&nbsp;</p>
+<h2>Opportunity fundraiser</h2>
+<p>The <b>opportunity fundraiser</b> entity has the following properties:</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><strong>Property</strong></th>
+                <th><strong>Type</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>constituent_id</td>
+                <td>string</td>
+                <td>The constituent identifier of the fundraiser.</td>
+            </tr>
+            <tr>
+                <td>credit_amount</td>
+                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
+                <td>The amount credited to the fundraiser for the opportunity.</td>
             </tr>
         </tbody>
     </table>
