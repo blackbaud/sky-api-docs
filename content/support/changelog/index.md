@@ -39,6 +39,11 @@ APIs:
     icon: fa-gift
     location: gift
     title: Gift (Beta)
+  -
+    description: "Monitor this page to keep up with the latest changes to the Opportunity API."
+    icon: fa-users
+    location: opportunity
+    title: Opportunity (Beta)
 ---
 
 # {{ name }}
