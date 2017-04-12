@@ -108,7 +108,7 @@ showBreadcrumbs: true
             <tr>
                 <td>post_status</td>
                 <td>string</td>
-                <td>The general ledger post status of the gift. Available values are <i>posted</i>, <i>notposted</i>, and <i>donotpost.</i></td>
+                <td>The general ledger post status of the gift. Available values are <i>posted</i>, <i>notposted</i>, and <i>donotpost.</i> When <code>post_status</code> is set to <i>donotpost</i>, then <code>post_date</code> should be null. When it is set to <i>notposted</i>, then <code>post_date</code> is editable. When it is set to <i>posted</i>, then <code>post_date</code> must be set and is no longer editable.</td>
             </tr>
             <tr>
                 <td>post_date</td>
@@ -238,7 +238,7 @@ showBreadcrumbs: true
             <tr>
                 <td>tags</td>
                 <td>array of string</td>
-                <td>The set of tags associated with the attachment. Available values are the entries in the <b>Document Tags</b> table.</td>
+                <td>The tags associated with the attachment. Tags supplement the attachment’s name and description and identify it based on how an organization categorizes attachments. Available values are the entries in the <b>Document Tags</b> table.</td>
             </tr>
             <tr>
                 <td>name</td>
@@ -248,7 +248,7 @@ showBreadcrumbs: true
             <tr>
                 <td>type</td>
                 <td>string</td>
-                <td>The attachment type. Available values are <i>link</i> and <i>physical</i>. Physical attachments are stored and managed in the system. Link attachments are stored and managed externally. At this time, only link attachments can be created through the API.</td>
+                <td>The attachment type. Available values are <i>physical</i> and <i>link</i>. Physical attachments are uploaded files such as images, PDFs, or Word documents that are saved locally or on the network. They are stored and managed in the system. Link attachments are links to files such as images, blog posts, or YouTube videos that are online or in a cloud storage account. They are stored and managed externally. At this time, only link attachments can be created through the API.</td>
             </tr>
             <tr>
                 <td>url</td>
