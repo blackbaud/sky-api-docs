@@ -10,7 +10,6 @@
         });
     }]);
 
-
     app.controller('EntityReferenceCtrl', ['$http', '$sce', '$timeout', '$anchorScroll', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
@@ -75,7 +74,7 @@
                             return entity.name == name;
                         });
                     }
-                    return !entity.details['x-hidden'];
+                    return !!entity.details.properties && !entity.details['x-hidden'];
                 })
                 .map(function(entity) 
                 { 
