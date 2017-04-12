@@ -3,7 +3,15 @@
 
     var app = angular.module('entityReferenceApp', []);
 
-    app.controller('EntityReferenceCtrl', ['$http', '$sce', EntityReferenceCtrl]);
+    app.config(['$locationProvider', function($locationProvider){
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
+    }]);
+
+
+    app.controller('EntityReferenceCtrl', ['$http', '$sce', '$timeout', '$anchorScroll', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -22,7 +30,7 @@
         'date-time': 'dateTime'
     };
 
-    function EntityReferenceCtrl($http, $sce) {
+    function EntityReferenceCtrl($http, $sce, $timeout, $anchorScroll) {
         this.apiTitle = '';
         this.showErrorMessage = false;
 
@@ -34,6 +42,10 @@
             var whiteList = this.whiteList ? this.whiteList.split(',') : [];
             var blackList = this.blackList ? this.blackList.split(',') : [];
             this.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
+
+            $timeout(function() {
+                $anchorScroll();
+            });
         }
 
         function handleError(response) {
