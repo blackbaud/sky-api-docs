@@ -14,7 +14,7 @@ title: Issues
 If you find an issue, please [contact us]({{ stache.config.support_need_help_url }}).
 
 ## 2017-04-12
-We are aware of an issue that is affecting a subset of Raiser's Edge NXT customers, that is causing excessive latency for the **List** endpoints within the Constituent, Fundraising, Gift, and (new) Opportunity APIs.  We are actively working to resolve the issue, and will post an update as soon as it is available.
+We are aware of an issue that is affecting a subset of Raiser's Edge NXT customers, that is causing excessive latency for the **List** endpoints within the Constituent and Gift APIs.  We are actively working to resolve the issue, and will post an update as soon as it is available.
 
 ## 2017-04-06
 We are aware of an issue with the new [Appeal list]({{stache.config.portal_endpoints_appeals_get_list}}), [Campaign list]({{stache.config.portal_endpoints_campaigns_get_list}}), and [Fund list]({{stache.config.portal_endpoints_funds_get_list}}) endpoints possibly returning unexpected results with the `last_modified` parameter due to time zone inconsistencies. We are working to resolve this issue, and will provide an update when it is resolved.
