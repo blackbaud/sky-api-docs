@@ -48,7 +48,8 @@ partial_disqus: includes/partial-disqus.hbs
 # =============================================
 files:
   css:
-  - /assets/css/custom.css
+    - /assets/css/custom.css
+    - /assets/css/entity-reference.css
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
