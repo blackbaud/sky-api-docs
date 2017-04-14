@@ -4,7 +4,7 @@ name: Create an App
 description: Learn how to successfully create an application with SKY API.
 order: 600
 published: true     
-showInNav: true
+showInNav: false
 back_to_top: true
 title: Create an Application Tutorial
 ---
@@ -28,7 +28,9 @@ title: Create an Application Tutorial
       </li>
   
       <li class="slide slide-animate">
+
         <h2 class="tutorial">Activate your application in a tenant</h2>
+
         {{ include 'includes/tutorials/createapp/activateapp.md' }}
       </li>
 

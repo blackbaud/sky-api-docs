@@ -25,12 +25,7 @@ tr.clickable-row:hover {
     padding-bottom: 40px;
 }
 
-.content,
-.content p,
-.content td,
-.content th {
-    font-size: 13px;
-}
+
 
 .content p,
 .content pre,
@@ -328,8 +323,6 @@ li.slide {
 .slide li {
     font-size: 13px;
 }
-
-
 
 h1.tutorial {
     font-size: 40px;
