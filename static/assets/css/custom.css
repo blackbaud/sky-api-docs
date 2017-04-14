@@ -335,3 +335,9 @@ h1.tutorial {
     font-size: 40px;
     padding-bottom: 20px;
 }
+
+h2.tutorial {
+    font-size: 32px;
+    font-family: "Oswald",sans-serif;
+    border: 0;
+}

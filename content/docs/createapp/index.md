@@ -9,6 +9,7 @@ back_to_top: true
 title: Create an Application Tutorial
 ---
 
+
 <section class="section-padding bg-tutorial">
   <div class="text-center">
     <h1 class="tutorial"> {{ name }} with {{ stache.config.product_name_short }}</h1>
@@ -17,27 +18,27 @@ title: Create an Application Tutorial
 
     <ul class="slide-container">
       <li class="slide">
-        <h1>Register your application</h1>
+        <h2 class="tutorial">Register your application</h2>
         {{ include 'includes/tutorials/createapp/registerapp.md' }}
       </li>
   
       <li class="slide slide-animate">
-        <h1>Review your application credentials</h1>
+        <h2 class="tutorial">Review your application credentials</h2>
         {{ include 'includes/tutorials/createapp/credentials.md' }}
       </li>
   
       <li class="slide slide-animate">
-        <h1>Activate your application in a tenant</h1>
+        <h2 class="tutorial">Activate your application in a tenant</h2>
         {{ include 'includes/tutorials/createapp/activateapp.md' }}
       </li>
 
       <li class="slide slide-animate">
-        <h1>Request authorization</h1>
+        <h2 class="tutorial">Request authorization</h2>
         {{ include 'includes/tutorials/createapp/requestauth.md' }}
       </li>
 
       <li class="slide slide-animate">
-        <h1>... and you're done!</h1>
+        <h2 class="tutorial">... and you're done!</h2>
         {{ include 'includes/tutorials/createapp/done.md' }}
       </li>
     </ul>
