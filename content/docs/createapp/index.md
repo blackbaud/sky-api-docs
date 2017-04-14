@@ -17,27 +17,27 @@ title: Create an Application Tutorial
 
     <ul class="slide-container">
       <li class="slide">
-        <h1>Register your application</h1>
+        <h2>Register your application</h2>
         {{ include 'includes/tutorials/createapp/registerapp.md' }}
       </li>
   
       <li class="slide slide-animate">
-        <h1>Review your application credentials</h1>
+        <h2>Review your application credentials</h2>
         {{ include 'includes/tutorials/createapp/credentials.md' }}
       </li>
   
       <li class="slide slide-animate">
-        <h1>Activate your application in a tenant</h1>
+        <h2>Activate your application in a tenant</h2>
         {{ include 'includes/tutorials/createapp/activateapp.md' }}
       </li>
 
       <li class="slide slide-animate">
-        <h1>Request authorization</h1>
+        <h2>Request authorization</h2>
         {{ include 'includes/tutorials/createapp/requestauth.md' }}
       </li>
 
       <li class="slide slide-animate">
-        <h1>... and you're done!</h1>
+        <h2>... and you're done!</h2>
         {{ include 'includes/tutorials/createapp/done.md' }}
       </li>
     </ul>
