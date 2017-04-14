@@ -22,15 +22,10 @@ tr.clickable-row:hover {
 }
 
 .content {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-.content,
-.content p,
-.content td,
-.content th {
-    font-size: 13px;
-}
+
 
 .content p,
 .content pre,
@@ -295,7 +290,7 @@ ul.slide-container {
 li.slide {
   position: relative;
   border: 1px solid #dddddd;
-  margin: 0 0 70px 0px;
+  margin: 0 40px 70px 0px;
   padding: 10px 50px 60px 50px;
   text-align: center;
   font-size: 18px;
@@ -329,9 +324,17 @@ li.slide {
     font-size: 13px;
 }
 
-
-
 h1.tutorial {
     font-size: 40px;
     padding-bottom: 20px;
+}
+
+h2.tutorial {
+    font-size: 32px;
+    font-family: "Oswald",sans-serif;
+    border: 0;
+}
+
+.tutorial {
+    padding: 0 50px 0 50px;
 }
