@@ -302,7 +302,7 @@ For more information on providing these headers, see <a href="{{ stache.config.g
 
 ### Sample Request
 
-<pre><code class="language-http">GET {{ stache.config.resource_url }}/constituents/280 HTTP/1.1
+<pre><code class="language-http">GET {{ stache.config.resource_url }}/v1/constituents/280 HTTP/1.1
 Host: {{ stache.config.resource_hostname }}
 Authorization: Bearer eyJ0eXAiOiJKV1...CTtP0CQ
 bb-api-subscription-key: 77f137116...480d633
