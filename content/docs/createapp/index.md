@@ -4,7 +4,7 @@ name: Create an App
 description: Learn how to successfully create an application with SKY API.
 order: 600
 published: true     
-showInNav: true
+showInNav: false
 back_to_top: true
 title: Create an Application Tutorial
 sidebarLayoutSecondaryColumn: col-sm-2
