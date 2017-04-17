@@ -4,7 +4,7 @@ name: API
 order: 10
 published: true
 showInNav: false
-showBreadcrumbs: true
+showBreadcrumbs: false
 title: APIs
 ---
 

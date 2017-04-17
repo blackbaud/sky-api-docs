@@ -10,6 +10,7 @@ title: Create an Application Tutorial
 sidebarLayoutSecondaryColumn: col-sm-2
 sidebarLayoutPrimaryColumn: col-sm-8
 bootstrap_container: bg-tutorial
+markdown: false
 ---
 
 
@@ -21,34 +22,35 @@ bootstrap_container: bg-tutorial
 
     <ul class="slide-container">
       <li class="slide">
-        <h2 class="tutorial">Register your application</h2>
+        <h2 class="tutorial">Step 1 &#8211; Register your application</h2>
         {{ include 'includes/tutorials/createapp/registerapp.md' }}
       </li>
   
       <li class="slide slide-animate">
-        <h2 class="tutorial">Review your application credentials</h2>
+        <h2 class="tutorial">Step 2 &#8211; Review your application credentials</h2>
         {{ include 'includes/tutorials/createapp/credentials.md' }}
       </li>
   
       <li class="slide slide-animate">
 
-        <h2 class="tutorial">Activate your application in a tenant</h2>
+        <h2 class="tutorial">Step 3 &#8211; Activate your application in a tenant</h2>
 
         {{ include 'includes/tutorials/createapp/activateapp.md' }}
       </li>
 
       <li class="slide slide-animate">
-        <h2 class="tutorial">Request authorization</h2>
+        <h2 class="tutorial">Step 4 &#8211; Request authorization</h2>
         {{ include 'includes/tutorials/createapp/requestauth.md' }}
       </li>
 
       <li class="slide slide-animate">
-        <h2 class="tutorial">... and you're done!</h2>
+        <h2 class="tutorial">Step 5 &#8211; Next Steps</h2>
         {{ include 'includes/tutorials/createapp/done.md' }}
       </li>
     </ul>
 
-    <h1>Now that you've built and tested your application, here are a few things you should know.</h1>
+    <h3 class="tutorial">Now that you've built and tested your application, here are a few things you should know.</h3>
+    <br />
     <div class="row">
       <div class="col-sm-4 tutorial-button">
         <a href="{{ stache.config.skyux }}" target="_blank" class="btn-fa-link">

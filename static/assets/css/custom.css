@@ -316,7 +316,7 @@ li.slide {
 }
 
 .bg-tutorial {
-    background-color: #EFEFEF;
+    background-color: #f3f3f4;
     background-size: cover;
 }
 
@@ -329,10 +329,11 @@ h1.tutorial {
     padding-bottom: 20px;
 }
 
-h2.tutorial {
+h2.tutorial, h3.tutorial {
     font-size: 32px;
     font-family: "Oswald",sans-serif;
     border: 0;
+    font-weight: 100;
 }
 
 .tutorial {
