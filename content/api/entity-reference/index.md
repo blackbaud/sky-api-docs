@@ -43,7 +43,7 @@ entity:
 {{# if firstOrMod0 }}
  <div class="row">
  {{/ if }}
-        <div class="col-md-4">
+        <div class="col-sm-4">
             <i class="fa fa-fw fa-3x fa-{{ icon }} showcase-icon"></i>
             <div class="showcase-desc">
                 <h2>
@@ -52,5 +52,5 @@ entity:
                 <p>{{ description }}</p>
             </div>
         </div>
-        {{# if lastOrMod1 }}</div>{{/ if }}{{/ eachWithMod }}
+        {{# if lastOrMod1 }}</div><br />{{/ if }}{{/ eachWithMod }}
         </div></div></div></div>
