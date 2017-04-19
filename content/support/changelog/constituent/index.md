@@ -13,6 +13,14 @@ title: Constituent Changelog
 # {{ name }}
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
+
+###2017-04-19
+
+#### Changed
+
+The `date_added` parameter on the [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) will now return a `sort_token` on the next link to enable pagination for stable data syncing.
+The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to sort constituents based on their fields. For example, `date_modified,-last` returns constituents sorted by their date_modified in ascending order and constituents with the same date_modified will be sorted by their last name in descending order. If `date_modified` or `date_added` is the only sort field provided, a `sort_token` will be returned on the next link. 
+
 ## 2017-04-06
 
 ### Changed
