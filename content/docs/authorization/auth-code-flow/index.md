@@ -267,6 +267,26 @@ If the access token request is successful, the response body will contain a JSON
         <td>string</td>
         <td>The name of the specific Blackbaud customer (tenant) whose data can be accessed using the access token.  When the user grants permission to your application, they do so in the context of their organization.  The tokens we issue can only be used to access that customer's data.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
       </tr>
+      <tr>
+        <td>legal_entity_id</td>
+        <td>string</td>
+        <td>The legal entity identifier.  A legal entity represents a Blackbaud client (organization or individual) who can try out or purchase the products, services, and solutions Blackbaud provides.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
+      </tr>
+      <tr>
+        <td>legal_entity_name</td>
+        <td>string</td>
+        <td>The name of the legal entity.</td>
+      </tr>
+      <tr>
+        <td>environment_id</td>
+        <td>string</td>
+        <td>The environment identifier.  An environment is a logical group of products and service instances that a legal entity is entitled to.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
+      </tr>
+      <tr>
+        <td>environment_name</td>
+        <td>string</td>
+        <td>The name of the environment.</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -287,7 +307,11 @@ Date: Thu, 10 Sep 2015 15:46:56 GMT
   "expires_in": 1199,
   "refresh_token":"eb78ffd...7cb7b",
   "tenant_id": "E27DD7B6-6B71-4689-8B2C-60A74F243966",
-  "tenant_name":"Raiser's Edge NXT - Blackbaud (Developer Sandbox)"
+  "tenant_name":"Raiser's Edge NXT - Blackbaud (Developer Sandbox)",
+  "legal_entity_id":"p-AaBbCcDdEeFfGg987654321",
+  "legal_entity_name":"Blackbaud Developer Sandbox"
+  "environment_id":"p-abcdef1234567890ABCDEFG",
+  "environment_name":"Blackbaud Developer Sandbox Environment"
 }</code></pre>
 
 If the token request is not successful, the response status code and body will provide details.  For more information on commonly encountered authorization problems, see <a href="{{ stache.config.guide_web_api_common_auth_issues }}" target="_blank">common authorization issues</a>.
@@ -414,6 +438,26 @@ If the refresh token request is successful, the response body will contain a JSO
         <td>string</td>
         <td>The ID of the specific Blackbaud customer (tenant) whose data can be accessed using the access token.  When the user grants permission to your application, they do so in the context of their organization.  The tokens we issue can only be used to access that customer's data.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
       </tr>
+      <tr>
+        <td>legal_entity_id</td>
+        <td>string</td>
+        <td>The legal entity identifier.  A legal entity represents a Blackbaud client (organization or individual) who can try out or purchase the products, services, and solutions Blackbaud provides.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
+      </tr>
+      <tr>
+        <td>legal_entity_name</td>
+        <td>string</td>
+        <td>The name of the legal entity.</td>
+      </tr>
+      <tr>
+        <td>environment_id</td>
+        <td>string</td>
+        <td>The environment identifier.  An environment is a logical group of products and service instances that a legal entity is entitled to.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
+      </tr>
+      <tr>
+        <td>environment_name</td>
+        <td>string</td>
+        <td>The name of the environment.</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -433,7 +477,11 @@ Date: Thu, 10 Sep 2015 15:46:56 GMT
   "token_type": "bearer",
   "expires_in": 1199,
   "refresh_token":"ab478xsd...7ab6c",
-  "tenant_id": "E27DD7B6-6B71-4689-8B2C-60A74F243966"
+  "tenant_id": "E27DD7B6-6B71-4689-8B2C-60A74F243966",
+  "legal_entity_id":"p-AaBbCcDdEeFfGg987654321",
+  "legal_entity_name":"Blackbaud Developer Sandbox"
+  "environment_id":"p-abcdef1234567890ABCDEFG",
+  "environment_name":"Blackbaud Developer Sandbox Environment"
 }</code></pre>
 
 If the refresh token request is not successful, the response status code and body will provide details.  For more information on commonly encountered authorization problems, see <a href="{{ stache.config.guide_web_api_common_auth_issues }}" target="_blank">common authorization issues</a>.
