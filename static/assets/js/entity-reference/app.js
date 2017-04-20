@@ -1,7 +1,7 @@
 (function(){
     "use strict";
 
-    var app = angular.module('entityReferenceApp', []);
+    var app = angular.module('entityReferenceApp', ["sky", "ui.bootstrap"]);
 
     app.config(['$locationProvider', function($locationProvider){
         $locationProvider.html5Mode({
@@ -10,7 +10,7 @@
         });
     }]);
 
-    app.controller('EntityReferenceCtrl', ['$http', '$sce', '$timeout', '$anchorScroll', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$http', '$sce', '$timeout', '$anchorScroll', 'bbWait', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -25,15 +25,15 @@
         }
     });
 
-    var formatDisplayNames = {
-        'date-time': 'dateTime'
-    };
-
-    function EntityReferenceCtrl($http, $sce, $timeout, $anchorScroll) {
+    function EntityReferenceCtrl($http, $sce, $timeout, $anchorScroll, bbWait) {
         this.apiTitle = '';
         this.showErrorMessage = false;
 
-        $http.get(this.swaggerUrl).then(handleSuccess.bind(this), handleError.bind(this));
+        bbWait.beginPageWait({});
+
+        $http.get(this.swaggerUrl)
+             .then(handleSuccess.bind(this), handleError.bind(this))
+             .finally(function() { bbWait.endPageWait(); });
 
         function handleSuccess(response) {
             var swagger = response.data;
@@ -42,7 +42,7 @@
             var blackList = this.blackList ? this.blackList.split(',') : [];
             this.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
 
-            $timeout(function() {
+            return $timeout(function() {
                 $anchorScroll();
             });
         }
@@ -107,6 +107,12 @@
         }
 
         function getTypeDisplayName(property) {
+            
+            // Conversion table for swagger format to display text.
+            var formatDisplayNames = {
+                'date-time': 'dateTime'
+            };
+
             if (property.format) {
                 return formatDisplayNames[property.format] || property.type;
             } else {
