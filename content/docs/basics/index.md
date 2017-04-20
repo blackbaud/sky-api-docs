@@ -2,7 +2,7 @@
 layout: "layout-sidebar"
 name: Basics
 description: Docs to learn our APIs.
-order: 300
+order: 400
 published: true
 showInNav: true
 showInHeader: true
@@ -45,6 +45,10 @@ The following information provides an overview of some key concepts within the {
 ## Content types
 
 {{ include 'includes/basics/contenttypes.md' }}
+
+## Regenerate your app secret
+
+{{ include 'includes/basics/appsecret.md' }}
 
 ## Response status codes
 

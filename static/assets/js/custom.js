@@ -46,3 +46,4 @@ sr.reveal('.tutorial-button', {
   reset: false,
   opacity: 0
 }, 300);
+

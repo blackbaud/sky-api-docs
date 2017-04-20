@@ -48,7 +48,7 @@ partial_disqus: includes/partial-disqus.hbs
 # =============================================
 files:
   css:
-  - /assets/css/custom.css
+    - /assets/css/custom.css
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
@@ -85,6 +85,7 @@ guide_basics_apiconsole: <%= stache.config.base %>docs/basics/#activating-the-sk
 guide_code: <%= stache.config.base %>docs/code/
 guide_code_barkbaud: <%= stache.config.guide_code %>app-showcase/
 guide_registering_your_app: <%= stache.config.guide %>apps/
+guide_create_app: <%= stache.config.guide %>createapp/
 guide_web_api_authorization: <%= stache.config.guide %>authorization/
 guide_web_api_authorization_auth_code_flow: <%= stache.config.guide %>authorization/auth-code-flow/
 guide_web_api_authorization_implicit_flow: <%= stache.config.guide %>authorization/implicit-flow/
@@ -630,4 +631,4 @@ bbauth:
   rootUrl: https://sky-api-test.docs.blackbaud.com
 
 # Sky UX
-latest_sky_release: '1.9.2'
+latest_sky_release: '1.13.11'

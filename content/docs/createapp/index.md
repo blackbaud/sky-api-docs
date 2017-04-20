@@ -2,17 +2,18 @@
 layout: layout-tutorial
 name: Create an App
 description: Learn how to successfully create an application with SKY API.
-order: 600
+order: 200
 published: true     
-showInNav: false
+showInNav: true
 back_to_top: true
 title: Create an Application Tutorial
-sidebarLayoutSecondaryColumn: col-sm-2
-sidebarLayoutPrimaryColumn: col-sm-8
+sidebarLayoutSecondaryColumn: col-md-2 sidebar-tutorial
+sidebarLayoutPrimaryColumn: col-md-8
 bootstrap_container: bg-tutorial
 markdown: false
 ---
 
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 <section class="section-padding bg-tutorial">
   <div class="text-center">
@@ -85,3 +86,5 @@ markdown: false
     </div>  
   </div>
 </section>
+
+{{ include stache.config.partial_disqus }}

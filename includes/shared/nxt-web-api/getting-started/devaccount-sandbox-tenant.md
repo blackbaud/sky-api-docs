@@ -1,4 +1,4 @@
-<div class="modal fade" id="consolesecurity" role="dialog" aria-labelledby="consolesecurity">
+<div class="modal fade" role="dialog" id="consolesecurity" tab-index="-1" aria-labelledby="MyModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
     <div class="modal-header">{{ stache.config.dev_console_name }} Security</div>
@@ -8,3 +8,5 @@
 
 <p>Before the {{ stache.config.dev_console_name }} sends the request to the endpoint, it must obtain authorization from a valid user (you) to access the data within the {{ stache.config.sandbox_name }} tenant.</p>
 </div></div></div></div>
+
+
