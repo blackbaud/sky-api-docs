@@ -3,14 +3,7 @@
 
     var app = angular.module('entityReferenceApp', ["sky", "ui.bootstrap"]);
 
-    app.config(['$locationProvider', function($locationProvider){
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
-    }]);
-
-    app.controller('EntityReferenceCtrl', ['$http', '$sce', '$timeout', '$anchorScroll', 'bbWait', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -25,7 +18,7 @@
         }
     });
 
-    function EntityReferenceCtrl($http, $sce, $timeout, $anchorScroll, bbWait) {
+    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait) {
         this.apiTitle = '';
         this.showErrorMessage = false;
 
@@ -42,9 +35,12 @@
             var blackList = this.blackList ? this.blackList.split(',') : [];
             this.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
 
+            // Need to delay allowing digest cycle to run and additionally
+            // give a little extra time to prevent rescrolling back to top due to 
+            // angular loading sequence.
             return $timeout(function() {
-                $anchorScroll();
-            });
+                scrollToHash();
+            }, 250);
         }
 
         function handleError(response) {
@@ -118,6 +114,31 @@
             } else {
                 return property.type;
             }
+        }
+
+        function scrollToHash() {
+            // Cannot use $location with anchors or links will be broken without html5Mode.
+            // Cannot $autoScroll due to it requiring $location without html5Mode.
+            // Cannot enable html5Mode or external links will be broken.
+
+            // Unfortunately, this means we need to manually scroll window to element.
+            // See https://github.com/angular/angular.js/issues/114
+
+            var document = $window.document;
+            var hash = getHash($window.location);
+            var elem = document.getElementsByName(hash)[0];
+
+            if (elem) {
+                elem.scrollIntoView();
+            } else {
+                $window.scrollTo(0, 0);
+            }
+        }
+
+        function getHash(location) {
+            var hash = location.hash || '';
+            var index = hash.indexOf('#');
+            return index === -1 ? hash : hash.substr(index+1);
         }
     }
 })();
