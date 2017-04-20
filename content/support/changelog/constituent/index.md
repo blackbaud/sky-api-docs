@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-04-19
+## 2017-04-20
 
 ### Changed
 
@@ -163,7 +163,7 @@ We added the `campus`, `known_name`, and `social_organization` properties to the
 - We will update the [First gift (Get)]({{stache.config.portal_endpoints_constituent_firstgift_get}}), [Greatest gift (Get)]({{stache.config.portal_endpoints_constituent_greatestgift_get}}), and [Latest gift (Get)]({{stache.config.portal_endpoints_constituent_latestgift_get}}) endpoints to return empty objects when gifts are requested for constituents with no giving history. Currently, the endpoints return the string "null."
 -->
 
-##December 2016
+## 2016
 
 ###2016-12-12
 
@@ -198,7 +198,6 @@ Added the following endpoint:
 
 - We changed the [Rating (Create)]({{ stache.config.portal_endpoints_constituent_ratings_create }}) endpoint to require the "source" property for categories that have a source.
 
-##November 2016
 
 ###2016-11-23
 
@@ -288,8 +287,6 @@ Added the following endpoints:
       </table>
     </div>
 
-
-##October 2016
 
 ###2016-10-20
 
@@ -421,7 +418,6 @@ Added the following endpoints:
   </table>
 </div>
 
-##September 2016
 
 ###2016-09-28
 
@@ -559,7 +555,6 @@ We added the `lookup_id` property to the [search results]({{ stache.config.porta
 
 All `POST` endpoints now return a JSON object containing the id, in the form `{ "id": "123" }`, instead of the previous string response.
 
-## August 2016
 
 ### 2016-08-31
 
@@ -771,7 +766,6 @@ Added the following endpoints:
 - We added the ability to paginate [search results]({{ stache.config.portal_contracts }}#SearchResult) by including a new, optional `limit` and `offset` parameters in the request.
 - We added the ability to retrieve inactive [address]({{ stache.config.portal_endpoints_constituent_address_get_list }}) records by including a new, optional `includeInactive` parameter in the request.
 
-## July 2016
 
 ### 2016-07-29
 
@@ -943,7 +937,6 @@ Added the following endpoints:
   </table>
 </div>
 
-## June 2016
 
 ### 2016-06-30
 
@@ -1106,7 +1099,6 @@ Added the following endpoints:
   </table>
 </div>
 
-## May 2016
 
 ### 2016-05-27
 
@@ -1458,7 +1450,6 @@ We implemented the following breaking changes:
     - Renamed the `constituent_id` property to `parent_id` to avoid confusion with the `constituent_id_value` field and to facilitate the re-use of this type across other entities. The `parent_id` represents the parent object's identifier. For example, in the case of constituent custom fields, the `parent_id` represents the constituent identifier.
     - Added `date` and `comment` properties.
 
-## April 2016
 
 ### 2016-04-26
 
@@ -1624,8 +1615,6 @@ Added the ability to create, edit, and delete [online presence]({{ stache.config
 
 - [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) now supports the ability to search on an email address (same functionality as found in the RE NXT search feature).  This expanded search will match against constituent email addresses when the `searchText` parameter is a valid email address.  Note that we currently support exact match only.
 
-
-## March 2016
 
 ### 2016-03-31
 
@@ -1998,7 +1987,7 @@ We removed the following endpoints:
     - GET Primary business
     - GET Spouse
 
-## Older
+## 2015
 
 ### 2015-10-20
 
