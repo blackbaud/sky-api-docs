@@ -14,9 +14,9 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-04-20
+## 2017-04-21
 
-### Changed
+## Changed
 
 GET operations that return a [relationship]({{ stache.config.portal_contracts }}#Relationship) endpoint, such as  [Constituent relationship (List)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}), return the following new properties:
 
@@ -94,22 +94,31 @@ GET operations that return a [relationship]({{ stache.config.portal_contracts }}
   </table>
 </div>
 
+## 2017-04-20
+
+### Changed
+
+ - The `date_added` parameter on the [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now returns a `sort_token` on the <code>next_link</code> URL to enable pagination for stable data syncing.
+ - The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes a <code>sort</code> parameter to sort constituents based on specified fields. For example, `sort=date_modified,-last` returns constituents in ascending order based on the <code>date_modified</code> field and then orders constituents with the same last-modified date in descending order based on their last names. If the <code>sort</code> parameter provides only the `date_modified` field or only the `date_added` field, then it returns a `sort_token` on the <code>next_link</code> URL. 
+
 ## 2017-04-06
 
 ### Changed
 
  - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now populates the `marital_status` property by default.
 
-## 2017-02-23
+## February 2017
 
-### Changed
+### 2017-02-23
+
+#### Changed
 
  - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now includes an optional `custom_field_category` parameter to retrieve constituents only if their active custom fields match specified custom field categories.
  - The [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint now returns the appropriate value for the `constituent_id` field.
 
-##2017-02-09
+###2017-02-09
 
-### Changed
+#### Changed
 
 - The `major` and `minor` properties on the [education]({{ stache.config.portal_contracts }}#Education) entity have been updated to return an array of strings. They have been renamed `majors` and `minors`.
 - The `subject_of_study` property on the [education]({{ stache.config.portal_contracts }}#Education) entity is no longer returned in the `major` property. Instead, it uses a dedicated property for UK-formatted databases.
@@ -117,7 +126,7 @@ GET operations that return a [relationship]({{ stache.config.portal_contracts }}
 - The `country` property on the [address]({{ stache.config.portal_contracts }}#Address) entity now accepts a country ID, name, or abbreviation. The property uses preferential selection to match against ID first, then name, and then abbreviation.
 - The [Ratings list (Single constituent)]({{stache.config.portal_endpoints_constituent_ratings_get_list}}) endpoint now includes an optional `most_recent_only` parameter to retrieve only the most recent rating for each category.
 
-### New
+#### New
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -193,29 +202,31 @@ GET operations that return a [relationship]({{ stache.config.portal_contracts }}
   </table>
 </div>
 
-##2017-01-31
+## January 2017
 
-#### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+### 2017-01-31
+
+##### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
 We are updating some properties on the [education]({{ stache.config.portal_contracts }}#Education) entity to improve overall feature parity and to support upcoming POST and PATCH education endpoints in the Constituent API.
 - The `major` and `minor` properties will both be updated to return an array of strings. They will also be renamed `majors` and `minors`.
 - The `subject_of_study` property will no longer be returned in the `major` property. Instead, it will use a dedicated property for UK-formatted databases.
 
-##2017-01-11
+### 2017-01-11
 
-### Changed
+#### Changed
 
 On the [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint, we updated the `do_not_mail` and `preferred` properties to set the default value to false when the properties are not supplied in the request body.
 
-##2017-01-10
+### 2017-01-10
 
-### Changed
+#### Changed
 
 We added the `campus`, `known_name`, and `social_organization` properties to the [education]({{ stache.config.portal_contracts }}#Education) entity.
 
-##2017-01-06
+### 2017-01-06
 
-### Changed
+#### Changed
 
 - We updated the [Constituent custom field list (Single constituent)]({{stache.config.portal_endpoints_constituent_customfield_get_list}}) endpoint to populate the `date_added` and `date_modified` properties.
 
@@ -232,7 +243,7 @@ We added the `campus`, `known_name`, and `social_organization` properties to the
 - We will update the [First gift (Get)]({{stache.config.portal_endpoints_constituent_firstgift_get}}), [Greatest gift (Get)]({{stache.config.portal_endpoints_constituent_greatestgift_get}}), and [Latest gift (Get)]({{stache.config.portal_endpoints_constituent_latestgift_get}}) endpoints to return empty objects when gifts are requested for constituents with no giving history. Currently, the endpoints return the string "null."
 -->
 
-##December 2016
+## 2016
 
 ###2016-12-12
 
@@ -267,7 +278,6 @@ Added the following endpoint:
 
 - We changed the [Rating (Create)]({{ stache.config.portal_endpoints_constituent_ratings_create }}) endpoint to require the "source" property for categories that have a source.
 
-##November 2016
 
 ###2016-11-23
 
@@ -357,8 +367,6 @@ Added the following endpoints:
       </table>
     </div>
 
-
-##October 2016
 
 ###2016-10-20
 
@@ -490,7 +498,6 @@ Added the following endpoints:
   </table>
 </div>
 
-##September 2016
 
 ###2016-09-28
 
@@ -628,7 +635,6 @@ We added the `lookup_id` property to the [search results]({{ stache.config.porta
 
 All `POST` endpoints now return a JSON object containing the id, in the form `{ "id": "123" }`, instead of the previous string response.
 
-## August 2016
 
 ### 2016-08-31
 
@@ -840,7 +846,6 @@ Added the following endpoints:
 - We added the ability to paginate [search results]({{ stache.config.portal_contracts }}#SearchResult) by including a new, optional `limit` and `offset` parameters in the request.
 - We added the ability to retrieve inactive [address]({{ stache.config.portal_endpoints_constituent_address_get_list }}) records by including a new, optional `includeInactive` parameter in the request.
 
-## July 2016
 
 ### 2016-07-29
 
@@ -1012,7 +1017,6 @@ Added the following endpoints:
   </table>
 </div>
 
-## June 2016
 
 ### 2016-06-30
 
@@ -1175,7 +1179,6 @@ Added the following endpoints:
   </table>
 </div>
 
-## May 2016
 
 ### 2016-05-27
 
@@ -1527,7 +1530,6 @@ We implemented the following breaking changes:
     - Renamed the `constituent_id` property to `parent_id` to avoid confusion with the `constituent_id_value` field and to facilitate the re-use of this type across other entities. The `parent_id` represents the parent object's identifier. For example, in the case of constituent custom fields, the `parent_id` represents the constituent identifier.
     - Added `date` and `comment` properties.
 
-## April 2016
 
 ### 2016-04-26
 
@@ -1693,8 +1695,6 @@ Added the ability to create, edit, and delete [online presence]({{ stache.config
 
 - [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) now supports the ability to search on an email address (same functionality as found in the RE NXT search feature).  This expanded search will match against constituent email addresses when the `searchText` parameter is a valid email address.  Note that we currently support exact match only.
 
-
-## March 2016
 
 ### 2016-03-31
 
@@ -2067,7 +2067,7 @@ We removed the following endpoints:
     - GET Primary business
     - GET Spouse
 
-## Older
+## 2015
 
 ### 2015-10-20
 
