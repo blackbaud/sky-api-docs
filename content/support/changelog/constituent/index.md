@@ -25,40 +25,40 @@ GET operations that return a [relationship]({{ stache.config.portal_contracts }}
         <thead>
           <tr>
             <th>Property</th>
-	    <th>Type</th>
+            <th>Type</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>`reciprocal_type`</td>
-	    <td>string</td>
-            <td>The relationship type of the reciprocal relationship. Available types are in the `Relationships` table.</td>
+              <td>reciprocal_type</td>
+              <td>string</td>
+              <td>The relationship type of the reciprocal relationship. Available values are the entries in the <b>Relationships</b> table.</td>
           </tr>
           <tr>
-            <td>`is_spouse`</td>
-	    <td>boolean</td>
-            <td>The whether the target individual constituent is the constituent's spouse.</td>
+              <td>is_spouse</td>
+              <td>boolean</td>
+              <td>Whether the target individual constituent is the constituent's spouse.</td>
           </tr>
           <tr>
-            <td>`is_organization_contact`</td>
-	    <td>boolean</td>
-            <td>The whether the target organization constituent is the constituent's organization contact. Only applies to relationships between an organization and an Individual.</td>
+              <td>is_organization_contact</td>
+              <td>boolean</td>
+              <td>Whether the target organization constituent is the constituent's organization contact. Only applies to relationships between an organization and an Individual.</td>
           </tr>
           <tr>
-            <td>`is_primary_business`</td>
-	    <td>boolean</td>
-            <td>The whether the target organization constituent is the constituent's primary business. Only applies to relationships between an organization and an Individual.</td>
+              <td>is_primary_business</td>
+              <td>boolean</td>
+              <td>Whether the target organization constituent is the constituent's primary business. Only applies to relationships between an organization and an Individual.</td>
+          </tr>
+            <tr>
+              <td>organization_contact_type</td>
+              <td>string</td>
+              <td>The organization contact type of the relationship. Available values are the entries in the <b>Contact Types</b> table. Only applies to relationships between an organization and an Individual.</td>
           </tr>
           <tr>
-            <td>`organization_contact_type`</td>
-	    <td>string</td>
-            <td>The organization contact type of the relationship. Available types are in the `Contact Types` table. Only applies to relationships between an organization and an Individual.</td>
-          </tr>
-          <tr>
-            <td>`position`</td>
-	    <td>string</td>
-            <td>Indicates the constituent's position in the target organization. Only applies to relationships between an organization and an Individual.</td>
+              <td>position</td>
+              <td>string</td>
+              <td>Indicates the constituent's position in the target organization. Only applies to relationships between an organization and an Individual.</td>
           </tr>
         </tbody>
       </table>
