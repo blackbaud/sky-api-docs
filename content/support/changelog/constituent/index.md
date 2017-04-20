@@ -13,6 +13,87 @@ title: Constituent Changelog
 # {{ name }}
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
+
+## 2017-04-20
+
+### Changed
+
+GET operations that return a [relationship]({{ stache.config.portal_contracts }}#Relationship) endpoint, such as  [Constituent relationship (List)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}), return the following new properties:
+
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Property</th>
+	    <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>`reciprocal_type`</td>
+	    <td>string</td>
+            <td>The relationship type of the reciprocal relationship. Available types are in the `Relationships` table.</td>
+          </tr>
+          <tr>
+            <td>`is_spouse`</td>
+	    <td>boolean</td>
+            <td>The whether the target individual constituent is the constituent's spouse.</td>
+          </tr>
+          <tr>
+            <td>`is_organization_contact`</td>
+	    <td>boolean</td>
+            <td>The whether the target organization constituent is the constituent's organization contact. Only applies to relationships between an organization and an Individual.</td>
+          </tr>
+          <tr>
+            <td>`is_primary_business`</td>
+	    <td>boolean</td>
+            <td>The whether the target organization constituent is the constituent's primary business. Only applies to relationships between an organization and an Individual.</td>
+          </tr>
+          <tr>
+            <td>`organization_contact_type`</td>
+	    <td>string</td>
+            <td>The organization contact type of the relationship. Available types are in the `Contact Types` table. Only applies to relationships between an organization and an Individual.</td>
+          </tr>
+          <tr>
+            <td>`position`</td>
+	    <td>string</td>
+            <td>Indicates the constituent's position in the target organization. Only applies to relationships between an organization and an Individual.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+### New
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_create }}">
+        <td>Relationship</td>
+        <td>POST</td>
+        <td>/constituent/constituents/relationships</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_type_get_list }}">
+        <td>Relationship type (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/relationshiptypes</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_organization_contact_type_get_list }}">
+        <td>Organization contact type (List)</td>
+        <td>GET</td>
+        <td>/constituent/constituents/organizationcontacttypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2017-04-06
 
 ### Changed

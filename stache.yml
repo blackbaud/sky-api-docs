@@ -301,6 +301,9 @@ portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_
 
 # Constituent Relationship
 portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
+portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+portal_endpoints_constituent_organization_contact_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
 
 # Constituent Gifts Lifetime Giving
 portal_endpoints_constituent_lifetimegiving_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1a/
