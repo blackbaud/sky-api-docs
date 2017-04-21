@@ -22,7 +22,8 @@ For the issue reported earlier today, the latency issue has been resolved.
 ## 2017-04-06
 We are aware of an issue with the new [Appeal list]({{stache.config.portal_endpoints_appeals_get_list}}), [Campaign list]({{stache.config.portal_endpoints_campaigns_get_list}}), and [Fund list]({{stache.config.portal_endpoints_funds_get_list}}) endpoints possibly returning unexpected results with the `last_modified` parameter due to time zone inconsistencies. We are working to resolve this issue, and will provide an update when it is resolved.
 
-To mitigate this problem, we recommend providing a buffer around your desired `last_modified` parameter if inconsistencies arise and also saving and reusing the returned `next_link` and `sort_token` when performing data sync functions to ensure that no record updates are missed.
+### Resolved
+For the issue reported on 2017-04-06, the time zone inconsistencies have been resolved.
 
 
 ## 2017-02-17
