@@ -26,35 +26,35 @@ markdown: false
 
 </li>
 
-<li class="slide">
+<li class="slide slide-animate">
 <h2 class="tutorial">Step 1 &#8211; Request authorization</h2>
 
 {{ include 'includes/implicitflow/step1.md' }}
 
 </li>
 
-<li class="slide">
+<li class="slide slide-animate">
 <h2 class="tutorial">Step 2 &#8211; User authorizes your app</h2>
 
 {{ include 'includes/implicitflow/step2.md' }}
 
 </li>
 
-<li class="slide">
+<li class="slide slide-animate">
 <h2 class="tutorial">Step 3 &#8211; Access token provided</h2>
 
 {{ include 'includes/implicitflow/step3.md' }}
 
 </li>
 
-<li class="slide">
+<li class="slide slide-animate">
 <h2 class="tutorial">Step 4 &#8211; Call the {{ stache.config.product_name_short }}</h2>
 
 {{ include 'includes/implicitflow/step4.md' }}
 
 </li>
 
-<li class="slide">
+<li class="slide slide-animate">
 <h2 class="tutorial">Step 5 &#8211; Next Steps</h2>
 
 {{# markdown }}
