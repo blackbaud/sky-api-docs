@@ -48,6 +48,8 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 #### New
 
+Added the following endpoints:
+
 <div class="table-responsive">
   <table class="table table-striped table-hover">
     <thead>

@@ -14,6 +14,46 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-04-24
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_custom_fields_create }}">
+        <td>Gift custom field (Create)</td>
+        <td>POST</td>
+        <td>/gifts/customfields</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_custom_fields_edit }}">
+        <td>Gift custom field (Edit)</td>
+        <td>PATCH</td>
+        <td>/gifts/customfields/{custom_field_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_custom_fields_categories_get_list }}">
+        <td>Gift custom field categories (Get)</td>
+        <td>GET</td>
+        <td>/gifts/customfields/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_custom_fields_category_values_get_list }}">
+        <td>Gift custom field category values (Get)</td>
+        <td>GET</td>
+        <td>/gifts/customfields/values</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2017-03-20
 
 ### Changed

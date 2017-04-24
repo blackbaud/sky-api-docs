@@ -424,6 +424,10 @@ portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operat
 
 # Gift Custom Fields
 portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44f/
+portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
+portal_endpoints_gift_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
 
 # Gift Attachments
 portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44b/
