@@ -127,6 +127,26 @@ If the user granted your app permission, the URL fragment will contain the follo
         <td>string</td>
         <td>The name of the specific Blackbaud customer (tenant) whose data can be accessed using the access token.  When the user grants permission to your application, they do so in the context of their organization.  The tokens we issue can only be used to access that customer's data.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
       </tr>
+      <tr>
+        <td>legal_entity_id</td>
+        <td>string</td>
+        <td>The legal entity identifier.  A legal entity represents a Blackbaud client (organization or individual) who can try out or purchase the products, services, and solutions Blackbaud provides.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
+      </tr>
+      <tr>
+        <td>legal_entity_name</td>
+        <td>string</td>
+        <td>The name of the legal entity.</td>
+      </tr>
+      <tr>
+        <td>environment_id</td>
+        <td>string</td>
+        <td>The environment identifier.  An environment is a logical group of products and service instances that a legal entity is entitled to.  We provide this value to you for informational purposes only - it is not used when calling the {{ stache.config.api_type_name }}. You may store this value in your application along with the user's access token.</td>
+      </tr>
+      <tr>
+        <td>environment_name</td>
+        <td>string</td>
+        <td>The name of the environment.</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -141,7 +161,11 @@ access_token=1d57284f025...4975d
 &expires_in=3600
 &state=fdf80155
 &tenant_id=E27DD7B6-6B71-4689-8B2C-60A74F243966
-&tenant_name=Raiser%27s%20Edge%20NXT%20-%20Blackbaud%20%28Developer%20Sandbox%29</code></pre>
+&tenant_name=Raiser%27s%20Edge%20NXT%20-%20Blackbaud%20%28Developer%20Sandbox%29
+&legal_entity_id=p-AaBbCcDdEeFfGg987654321",
+&legal_entity_name=Blackbaud%20Developer%20Sandbox
+&environment_id":"p-abcdef1234567890ABCDEFG",
+&environment_name=Blackbaud%20Developer%20Sandbox%20Environment</code></pre>
 
 If the user denied your permission request, the query string will contain the following parameters:
 
