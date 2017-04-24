@@ -300,13 +300,12 @@ ul.slide-container {
   list-style: none;
 }
 
-li.slide {
+li.slide, li.introslide {
   position: relative;
   border: 1px solid #dddddd;
   margin: 20px 40px 70px 0px;
   padding: 5px 50px 60px 50px;
   text-align: center;
-  font-size: 18px;
   background-color: #ffffff;
 }
 
@@ -321,6 +320,22 @@ li.slide {
     color: #fff;
     counter-increment: myCounter;
     content: counter(myCounter);
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    text-align: center;
+    z-index: 100;
+}
+
+.slide-container > li.introslide:after {
+    height: 58px;
+    width: 58px;
+    line-height: 58px;
+    background-color: #1c84c6;
+    border-radius: 200px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
     position: absolute;
     left: -15px;
     top: -15px;
