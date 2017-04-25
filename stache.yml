@@ -152,6 +152,7 @@ accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
 fundraising_api_suffix: /fundraising
 opportunity_api_suffix: /opportunity
+treasury_api_suffix: /treasury
 gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
@@ -572,6 +573,13 @@ portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>op
 
 # Ledger Summary List
 portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a46/
+
+# =============================================
+# 			Treasury API ENDPOINTS
+# =============================================
+
+# Treasury API
+portal_endpoints_treasury: <%= stache.config.portal_endpoints %>58e3b2880528ab71c796492e/
 
 # =============================================
 # 			Accounts Payable API ENDPOINTS
