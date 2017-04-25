@@ -128,6 +128,8 @@ GET operations such as [Relationship list (Single constituent)]({{ stache.config
 
 #### New
 
+Added the following endpoints:
+
 <div class="table-responsive">
   <table class="table table-striped table-hover">
     <thead>
