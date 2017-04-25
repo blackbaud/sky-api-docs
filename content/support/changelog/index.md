@@ -44,6 +44,11 @@ APIs:
     icon: fa-users
     location: opportunity
     title: Opportunity (Beta)
+  -
+    description: "Monitor this page to keep up with the latest changes to the Treasury API."
+    icon: fa-money
+    location: treasury
+    title: Treasury (Beta)
 ---
 
 # {{ name }}

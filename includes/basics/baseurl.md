@@ -44,6 +44,11 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
         <td><code class="language-http">{{ stache.config.opportunity_api_suffix }}</code></td>
         <td>Used to manage opportunity information, including related entities such as opportunity fundraisers and opportunity attachments.</td>
       </tr>
+      <tr>
+        <td class="nowrap">Treasury (Beta)</td>
+        <td><code class="language-http">{{ stache.config.treasury_api_suffix }}</code></td>
+        <td>Used to manage Treasury information, including related entities such as adjustments, checks, and deposits.</td>
+      </tr>
     </tbody>
   </table>
 </div>
