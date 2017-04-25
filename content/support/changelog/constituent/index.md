@@ -16,9 +16,9 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ## 2017-04-21
 
-## Changed
+### Changed
 
-GET operations that return a [relationship]({{ stache.config.portal_contracts }}#Relationship) endpoint, such as  [Constituent relationship (List)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}), return the following new properties:
+GET operations such as [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) that return [relationship]({{ stache.config.portal_contracts }}#Relationship) entities now return the following new properties:
 
     <div class="table-responsive">
       <table class="table table-striped table-hover">
@@ -33,32 +33,32 @@ GET operations that return a [relationship]({{ stache.config.portal_contracts }}
           <tr>
               <td>reciprocal_type</td>
               <td>string</td>
-              <td>The relationship type of the reciprocal relationship. Available values are the entries in the <b>Relationships</b> table.</td>
+              <td>The reciprocal relationship type. Describes the constituent's relationship to the related constituent. For example, in a relationship between a male constituent and a female sibling, the reciprocal relationship type would be brother. Available values are the entries in the <b>Relationships</b> table.</td>
           </tr>
           <tr>
               <td>is_spouse</td>
               <td>boolean</td>
-              <td>Whether the target individual constituent is the constituent's spouse.</td>
+              <td>Indicates whether the related constituent is the constituent's spouse. Only applies to relationships between individuals.</td>
           </tr>
           <tr>
               <td>is_organization_contact</td>
               <td>boolean</td>
-              <td>Whether the target organization constituent is the constituent's organization contact. Only applies to relationships between an organization and an Individual.</td>
+              <td>Indicates whether the related individual represents the organization as a contact. Only applies to relationships between organizations and individuals.</td>
           </tr>
           <tr>
               <td>is_primary_business</td>
               <td>boolean</td>
-              <td>Whether the target organization constituent is the constituent's primary business. Only applies to relationships between an organization and an Individual.</td>
+              <td>Indicates whether the related organization is the individual's primary business. Only applies to relationships between organizations and individuals.</td>
           </tr>
             <tr>
               <td>organization_contact_type</td>
               <td>string</td>
-              <td>The organization contact type of the relationship. Available values are the entries in the <b>Contact Types</b> table. Only applies to relationships between an organization and an Individual.</td>
+              <td>The contact type that provides context for interactions with the related individual who represents the organization as a contact. Available values are the entries in the <b>Contact Types</b> table. Only applies to relationships between organizations and individuals.</td>
           </tr>
           <tr>
               <td>position</td>
               <td>string</td>
-              <td>Indicates the constituent's position in the target organization. Only applies to relationships between an organization and an Individual.</td>
+              <td>The individual's position in the organization. Only applies to relationships between organizations and individuals.</td>
           </tr>
         </tbody>
       </table>
@@ -81,12 +81,12 @@ GET operations that return a [relationship]({{ stache.config.portal_contracts }}
         <td>/constituent/constituents/relationships</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_type_get_list }}">
-        <td>Relationship type (List)</td>
+        <td>Relationship types</td>
         <td>GET</td>
         <td>/constituent/constituents/relationshiptypes</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_organization_contact_type_get_list }}">
-        <td>Organization contact type (List)</td>
+        <td>Organization contact types</td>
         <td>GET</td>
         <td>/constituent/constituents/organizationcontacttypes</td>
       </tr>
