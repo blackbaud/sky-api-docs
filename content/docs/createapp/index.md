@@ -27,24 +27,24 @@ markdown: false
         {{ include 'includes/createapp/registerapp.md' }}
       </li>
   
-      <li class="slide slide-animate">
+      <li class="slide">
         <h2 class="tutorial">Step 2 &#8211; Review your application credentials</h2>
         {{ include 'includes/createapp/credentials.md' }}
       </li>
   
-      <li class="slide slide-animate">
+      <li class="slide">
 
         <h2 class="tutorial">Step 3 &#8211; Activate your application in a tenant</h2>
 
         {{ include 'includes/createapp/activateapp.md' }}
       </li>
 
-      <li class="slide slide-animate">
+      <li class="slide">
         <h2 class="tutorial">Step 4 &#8211; Request authorization</h2>
         {{ include 'includes/createapp/requestauth.md' }}
       </li>
 
-      <li class="slide slide-animate">
+      <li class="slide">
         <h2 class="tutorial">Step 5 &#8211; Next Steps</h2>
         {{ include 'includes/createapp/done.md' }}
       </li>

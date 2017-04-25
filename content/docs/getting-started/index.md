@@ -25,23 +25,23 @@ markdown: false
 <h2 class="tutorial">Step 1 &#8211; Set up your developer account</h2>
 {{ include 'includes/getting-started/step1.md' }}</li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 2 &#8211; Get your subscription key</h2>
 {{ include 'includes/getting-started/step2.md' }}</li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 3 &#8211; Activate the {{ stache.config.product_name_short }}  Console </h2>
 {{ include 'includes/shared/nxt-web-api/getting-started/step3.md' }}</li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 4 &#8211; Explore the Endpoint Reference</h2>
 {{ include 'includes/getting-started/step4.md' }}</li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 5 &#8211; Try it!</h2>
 {{ include 'includes/getting-started/step5.md' }}</li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 6 &#8211; Next steps</h2>
 {{ include 'includes/getting-started/step6.md' }}</li>
 

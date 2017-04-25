@@ -26,21 +26,21 @@ markdown: false
 
 </li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 1 &#8211; Request authorization</h2>
 
 {{ include 'includes/authcodeflow/step1.md' }}
 
 </li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 2 &#8211; User authorizes your app</h2>
 
 {{ include 'includes/authcodeflow/step2.md' }}
 
 </li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 3 &#8211; User is redirected back</h2>
 
 {{ include 'includes/authcodeflow/step3.md' }}
@@ -48,7 +48,7 @@ markdown: false
 </li>
 
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 4 &#8211; Request tokens</h2>
 
 {{ include 'includes/authcodeflow/step4.md' }}
@@ -56,28 +56,28 @@ markdown: false
 </li>
 
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 5 &#8211; Tokens returned</h2>
 
 {{ include 'includes/authcodeflow/step5.md' }}
 
 </li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 6 &#8211; Call the {{ stache.config.api_type_name }}</h2>
 
 {{ include 'includes/authcodeflow/step6.md' }}
 
 </li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 7 &#8211; Refresh access token</h2>
 
 {{ include 'includes/authcodeflow/step7.md' }}
 
 </li>
 
-<li class="slide slide-animate">
+<li class="slide">
 <h2 class="tutorial">Step 8 &#8211; Next Steps</h2>
 
 {{# markdown }}
