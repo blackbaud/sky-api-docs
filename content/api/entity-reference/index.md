@@ -31,6 +31,10 @@ entity:
       description: Describes the entity and type representations for common items that the Opportunity API uses.
       icon: users
       url: /api/entity-reference/opportunity
+    - name: Treasury (Beta)
+      description: Describes the entity and type representations for common items that the Treasury API uses.
+      icon: money
+      url: /api/entity-reference/treasury
 ---
 
 <h1>{{ name }}</h1>

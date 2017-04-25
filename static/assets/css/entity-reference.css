@@ -1,0 +1,9 @@
+.footnotes {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.footnote {
+    text-indent: -20px;
+    margin-bottom: 10px !important;
+}
