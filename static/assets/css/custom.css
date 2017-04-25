@@ -52,6 +52,10 @@ img, .img-responsive,
     overflow: hidden;
 }
 
+.img-badge {
+    border: none;
+}
+
 .content .table {
     border: 1px solid #ddd;
 }
