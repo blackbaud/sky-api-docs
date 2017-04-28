@@ -6,7 +6,7 @@
     "node": "0.10.32"
   },
   "name": "sky-api-docs",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "description": "Blackbaud Documentation",
   "private": true,
   "dependencies": {
