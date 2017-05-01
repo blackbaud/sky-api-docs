@@ -22,7 +22,7 @@
         this.apiTitle = '';
         this.showErrorMessage = false;
 
-        this.$onInit = function () {
+        this.$onInit = function() {
             bbWait.beginPageWait({});
 
             $http.get(this.swaggerUrl)
