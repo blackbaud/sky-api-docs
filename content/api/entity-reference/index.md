@@ -29,7 +29,7 @@ entity:
       url: /api/entity-reference/gift
     - name: Opportunity (Beta)
       description: Describes the entity and type representations for common items that the Opportunity API uses.
-      icon: users
+      icon: handshake-o
       url: /api/entity-reference/opportunity
     - name: Treasury (Beta)
       description: Describes the entity and type representations for common items that the Treasury API uses.
