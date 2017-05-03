@@ -78,7 +78,7 @@ markdown: false
 </li>
 
 <li class="slide">
-<h2 class="tutorial">Step 8 &#8211; Next Steps</h2>
+<h2 class="tutorial">Step 8 &#8211; Next steps</h2>
 
 {{# markdown }}
 For more information on implementing the authorization code flow, check out our **[code samples]({{ stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home }})**.

@@ -45,7 +45,7 @@ markdown: false
       </li>
 
       <li class="slide">
-        <h2 class="tutorial">Step 5 &#8211; Next Steps</h2>
+        <h2 class="tutorial">Step 5 &#8211; Next steps</h2>
         {{ include 'includes/createapp/done.md' }}
       </li>
     </ul>
