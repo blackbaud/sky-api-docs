@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-05-04
+
+### Changed
+
+ - The [communication preference patch endpoint]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) now supports patching the `start` and `end` fields on a communication preference.
+
 ## 2017-04-25
 
 ### Changed
