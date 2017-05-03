@@ -156,6 +156,7 @@ accounts_payable_suffix: /accountspayable
 constituent_api_suffix: /constituent
 fundraising_api_suffix: /fundraising
 opportunity_api_suffix: /opportunity
+treasury_api_suffix: /treasury
 gift_api_suffix: /gift
 gl_api_suffix: /generalledger
 
@@ -306,6 +307,9 @@ portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_
 
 # Constituent Relationship
 portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
+portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61e/
+portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61f/
+portal_endpoints_constituent_organization_contact_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c620/
 
 # Constituent Gifts Lifetime Giving
 portal_endpoints_constituent_lifetimegiving_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1a/
@@ -429,6 +433,10 @@ portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operat
 
 # Gift Custom Fields
 portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44f/
+portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcd
+portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dce
+portal_endpoints_gift_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcb
+portal_endpoints_gift_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcc
 
 # Gift Attachments
 portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44b/
@@ -576,6 +584,13 @@ portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>op
 
 # Ledger Summary List
 portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a46/
+
+# =============================================
+# 			Treasury API ENDPOINTS
+# =============================================
+
+# Treasury API
+portal_endpoints_treasury: <%= stache.config.portal_endpoints %>58e3b2880528ab71c796492e/
 
 # =============================================
 # 			Accounts Payable API ENDPOINTS
