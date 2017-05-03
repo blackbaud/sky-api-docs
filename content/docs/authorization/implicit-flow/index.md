@@ -58,7 +58,7 @@ markdown: false
 <h2 class="tutorial">Step 5 &#8211; Next Steps</h2>
 
 {{# markdown }}
-For more information on implementing the implicit flow, check out our **[tutorials]({{ stache.config.guide_web_api_authorization_implicit_flow_tutorial_home }})**.
+For more information on implementing the implicit flow, check out our **[code samples]({{ stache.config.guide_web_api_authorization_implicit_flow_tutorial_home }})**.
 {{/ markdown }}
 </li>
 
