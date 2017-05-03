@@ -50,10 +50,12 @@ files:
   css:
     - /assets/css/custom.css
     - /assets/css/entity-reference.css
+
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
     - /assets/js/entity-reference/app.1.1.js
+    
 
 # =============================================
 # Disqus config
@@ -86,11 +88,13 @@ guide_basics_apiconsole: <%= stache.config.base %>docs/basics/#activating-the-sk
 guide_code: <%= stache.config.base %>docs/code/
 guide_code_barkbaud: <%= stache.config.guide_code %>app-showcase/
 guide_registering_your_app: <%= stache.config.guide %>apps/
+guide_create_app: <%= stache.config.guide %>createapp/
 guide_web_api_authorization: <%= stache.config.guide %>authorization/
 guide_web_api_authorization_auth_code_flow: <%= stache.config.guide %>authorization/auth-code-flow/
 guide_web_api_authorization_implicit_flow: <%= stache.config.guide %>authorization/implicit-flow/
 guide_web_api_common_auth_issues: <%= stache.config.guide %>authorization/common-auth-issues
 guide_web_api_activate_application: <%= stache.config.guide %>apps/#activate-your-application
+guide_web_api_authorization_implicit_flow_tutorial_home: <%= stache.config.guide %>code/implicit-flow/
 guide_web_api_authorization_auth_code_flow_tutorial_home:  <%= stache.config.guide %>code/auth-code-flow/
 guide_web_api_authorization_auth_code_flow_tutorial: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>nodejs/
 guide_web_api_authorization_auth_code_flow_tutorial_c_sharp: <%= stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home %>c-sharp/

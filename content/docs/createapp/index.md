@@ -2,17 +2,18 @@
 layout: layout-tutorial
 name: Create an App
 description: Learn how to successfully create an application with SKY API.
-order: 600
+order: 200
 published: true     
-showInNav: false
+showInNav: true
 back_to_top: true
 title: Create an Application Tutorial
-sidebarLayoutSecondaryColumn: col-sm-2
-sidebarLayoutPrimaryColumn: col-sm-8
+sidebarLayoutSecondaryColumn: col-md-2 sidebar-tutorial
+sidebarLayoutPrimaryColumn: col-md-8
 bootstrap_container: bg-tutorial
 markdown: false
 ---
 
+{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 <section class="section-padding bg-tutorial">
   <div class="text-center">
@@ -23,29 +24,29 @@ markdown: false
     <ul class="slide-container">
       <li class="slide">
         <h2 class="tutorial">Step 1 &#8211; Register your application</h2>
-        {{ include 'includes/tutorials/createapp/registerapp.md' }}
+        {{ include 'includes/createapp/registerapp.md' }}
       </li>
   
-      <li class="slide slide-animate">
+      <li class="slide">
         <h2 class="tutorial">Step 2 &#8211; Review your application credentials</h2>
-        {{ include 'includes/tutorials/createapp/credentials.md' }}
+        {{ include 'includes/createapp/credentials.md' }}
       </li>
   
-      <li class="slide slide-animate">
+      <li class="slide">
 
         <h2 class="tutorial">Step 3 &#8211; Activate your application in a tenant</h2>
 
-        {{ include 'includes/tutorials/createapp/activateapp.md' }}
+        {{ include 'includes/createapp/activateapp.md' }}
       </li>
 
-      <li class="slide slide-animate">
+      <li class="slide">
         <h2 class="tutorial">Step 4 &#8211; Request authorization</h2>
-        {{ include 'includes/tutorials/createapp/requestauth.md' }}
+        {{ include 'includes/createapp/requestauth.md' }}
       </li>
 
-      <li class="slide slide-animate">
-        <h2 class="tutorial">Step 5 &#8211; Next Steps</h2>
-        {{ include 'includes/tutorials/createapp/done.md' }}
+      <li class="slide">
+        <h2 class="tutorial">Step 5 &#8211; Next steps</h2>
+        {{ include 'includes/createapp/done.md' }}
       </li>
     </ul>
 
@@ -85,3 +86,5 @@ markdown: false
     </div>  
   </div>
 </section>
+
+{{ include stache.config.partial_disqus }}
