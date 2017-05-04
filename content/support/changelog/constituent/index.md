@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Changed
 
- - The [communication preference patch endpoint]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) now supports patching the `start` and `end` fields on a communication preference.
+ - The [Communication preference (Edit) endpoint]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) now supports patching the `start` and `end` fields on a communication preference.
 
 ## 2017-04-25
 
