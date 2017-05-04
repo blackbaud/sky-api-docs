@@ -18,7 +18,9 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Changed
 
- - The [communication preference patch endpoint]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) now supports patching the `start` and `end` fields on a communication preference.
+ - The [Communication preference (Edit)]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) now supports patching the `start` and `end` fields on a communication preference.
+ 
+  - The [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action (Single Constituent)]({{ tache.config.portal_endpoints_constituent_action_get_list }}) now returns `date_added` and `date_modified` on the (action)[{{ stache.config.portal_contracts }}#Action] entity.
 
 ## 2017-04-25
 
