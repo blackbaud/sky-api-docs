@@ -2,7 +2,7 @@
 layout: "layout-sidebar"
 name: Authorization
 description: Description
-order: 200
+order: 300
 published: true
 showInNav: true
 showInHeader: true

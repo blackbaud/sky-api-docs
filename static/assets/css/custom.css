@@ -33,7 +33,7 @@ tr.clickable-row:hover {
 .content .alert,
 .content .col-sm-9 ul,
 .content .col-sm-9 ol {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 
 .content li {
@@ -45,11 +45,15 @@ tr.clickable-row:hover {
 img, .img-responsive,
 .content img, .zone-content img {
     border: 1px solid #cccccc;
-    margin: 20px auto;
+    margin: 5px auto;
     display: inline-block;
     border-radius: 5px;
     padding: 0px;
     overflow: hidden;
+}
+
+.img-badge {
+    border: none;
 }
 
 .content .table {
@@ -184,6 +188,19 @@ p.text-muted {
     border: 0;
 }
 
+.sidebar .nav-sidebar.nav li a {
+    color: #646768;
+}
+
+.sidebar .nav-sidebar.nav li a:hover  {
+    color: #1c84c6;
+    font-weight: 600;
+}
+
+.sidebar .nav-sidebar.nav li.active>a {
+    font-weight: 600;
+}
+
 /* Partial Header Edit Styles */
 
 .partial-edit-header {
@@ -191,13 +208,13 @@ p.text-muted {
     margin-right: 10px;
 }
 
-
 @media (max-width: 767px) {
 
   /**
    * Omnibar Overrides
    */
-  .bb-omnibar > .bb-omnibar-mobile .bb-omnibar-mobile-menuflyout {
+  
+    .bb-omnibar > .bb-omnibar-mobile .bb-omnibar-mobile-menuflyout {
     max-height: 100%;
     overflow: auto;
   }
@@ -287,13 +304,12 @@ ul.slide-container {
   list-style: none;
 }
 
-li.slide {
+li.slide, li.introslide {
   position: relative;
   border: 1px solid #dddddd;
-  margin: 0 40px 70px 0px;
-  padding: 10px 50px 60px 50px;
+  margin: 20px 40px 70px 0px;
+  padding: 5px 50px 60px 50px;
   text-align: center;
-  font-size: 18px;
   background-color: #ffffff;
 }
 
@@ -315,6 +331,22 @@ li.slide {
     z-index: 100;
 }
 
+.slide-container > li.introslide:after {
+    height: 58px;
+    width: 58px;
+    line-height: 58px;
+    background-color: #1c84c6;
+    border-radius: 200px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    text-align: center;
+    z-index: 100;
+}
+
 .bg-tutorial {
     background-color: #f3f3f4;
     background-size: cover;
@@ -325,17 +357,24 @@ li.slide {
 }
 
 h1.tutorial {
-    font-size: 40px;
+    font-size: 38px;
     padding-bottom: 20px;
 }
 
 h2.tutorial, h3.tutorial {
-    font-size: 32px;
+    font-size: 28px;
     font-family: "Oswald",sans-serif;
     border: 0;
     font-weight: 100;
+    margin-top: 10px;
 }
 
 .tutorial {
     padding: 0 50px 0 50px;
 }
+
+.sidebar-tutorial {
+    margin-top: 60px;
+    padding-left: 60px;
+}
+

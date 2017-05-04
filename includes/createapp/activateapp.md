@@ -6,10 +6,10 @@
     <div class="col-md-6" style="text-align: left;">
         <ol>
             <li><p>Copy the Application ID that your Blackbaud developer provided to you.</p></li>
-            <li><p>Visit the **Control Panel, Applications** area of your Blackbaud product.</p></li>
-            <li><p>Select **Add application** and then paste in the Application ID. </p></li>
+            <li><p>Visit the <strong>Control Panel, Applications</strong> area of your Blackbaud product.</p></li>
+            <li><p>Select <strong>Add application</strong> and then paste in the Application ID. </p></li>
             <li>
-                <p>Select **Save**.</p>
+                <p>Select <strong>Save</strong>.</p>
                 <p>The application will then appear in the list of activated applications for the tenant.</p>
             </li>
         </ol>

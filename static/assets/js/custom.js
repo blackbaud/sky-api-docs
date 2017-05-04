@@ -35,7 +35,7 @@ sr.reveal('.slide-animate', {
   reset: false,
   scale: 1,
   opacity: 0,
-  viewFactor: 0.2
+  viewFactor: 0.1
 });
 
 
@@ -46,3 +46,4 @@ sr.reveal('.tutorial-button', {
   reset: false,
   opacity: 0
 }, 300);
+
