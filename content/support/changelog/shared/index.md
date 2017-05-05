@@ -14,14 +14,23 @@ title: Shared Changelog
 
 Monitor this page to keep up with common changes shared across all our APIs.
 
-## 2017-3-10
+## 2017-05-04
 
 ### New
+
+We added a new step-by-step guide to help you learn the steps required to **[Create an App with {{ stache.config.product_name_short }}]({{ stache.config.guide_create_app }})**. We recommend you complete this guide after you follow the **[Getting Started]({{ stache.config.guide_getting_started}})** documentation.
+
+
+## March 2017
+
+### 2017-3-10
+
+#### New
 In response to a request from the [Blackbaud Community]({{ stache.config.support_community }}), we are pleased to announce a new [PHP code sample]({{ stache.config.github_repo_web_api_authorization_php }}) and accompanying [PHP tutorial]({{stache.config.guide_web_api_authorization_auth_code_flow_tutorial_php}}).  These two new resources demonstrate the [Blackbaud Auth Code Flow]({{stache.config.guide_web_api_authorization_auth_code_flow}}) using PHP.
 
-## 2017-3-03
+### 2017-3-03
 
-### New
+#### New
 The SKY API developer site now offers commenting capability through Disqus. We encourage community involvement to improve our documentation. We will monitor comments just like we monitor feedback in our GitHub repository, and we will incorporate feedback to make our docs better. See something that is unclear? Want more detail? Leave a comment and let us know!
  
 On the SKY API developer site, comments now appear at the bottom of most documentation pages, and buttons are available at the top of pages to take users to the comments.

@@ -50,7 +50,9 @@ After your subscription is approved, your developer account can access the {{ st
 
 ## Step 2 &mdash; Register Your App
 
-{{ include 'includes/shared/nxt-web-api/registering-your-app/index.md' }}
+{{ include 'includes/createapp/registerapp.md' }}
+
+{{ include 'includes/createapp/credentials.md' }}
 
 ## Step 3 &mdash; Grab the Source Code
 
