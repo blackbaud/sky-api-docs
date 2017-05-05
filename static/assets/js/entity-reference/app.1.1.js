@@ -22,11 +22,15 @@
         this.apiTitle = '';
         this.showErrorMessage = false;
 
-        bbWait.beginPageWait({});
+        this.$onInit = onInit;
 
-        $http.get(this.swaggerUrl)
-             .then(handleSuccess.bind(this), handleError.bind(this))
-             .finally(function() { bbWait.endPageWait(); });
+        function onInit() {
+            bbWait.beginPageWait({});
+
+            $http.get(this.swaggerUrl)
+                .then(handleSuccess.bind(this), handleError.bind(this))
+                .finally(function() { bbWait.endPageWait(); });
+        }
 
         function handleSuccess(response) {
             var swagger = response.data;
