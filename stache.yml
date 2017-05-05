@@ -650,4 +650,4 @@ bbauth:
   rootUrl: https://sky-api-test.docs.blackbaud.com
 
 # Sky UX
-latest_sky_release: '1.14.0'
+latest_sky_release: '1.9.2'
