@@ -192,6 +192,12 @@ portal_endpoints: <%= stache.config.portal %>docs/services/
 portal_ratelimit: <%= stache.config.portal %>usage-increase
 
 # =============================================
+# NXT Application references
+# =============================================
+
+developer_app_management_url: https://developerapp.nxt.blackbaud-dev.com/applications
+
+# =============================================
 # CONSTITUENT API ENDPOINTS
 # =============================================
 
@@ -650,4 +656,4 @@ bbauth:
   rootUrl: https://sky-api-test.docs.blackbaud.com
 
 # Sky UX
-latest_sky_release: '1.14.0'
+latest_sky_release: '1.9.2'
