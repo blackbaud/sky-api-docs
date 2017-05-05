@@ -14,9 +14,64 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-01-18
+## 2017-05-05
 
 ### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_budget_grant_list }}">
+				<td>Budget grant (List)</td>
+				<td>GET</td>
+				<td>/budgets/{scenario_id}/grants</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_budget_project_list }}">
+				<td>Budget project (List)</td>
+				<td>GET</td>
+				<td>/budgets/{scenario_id}/projects</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+### Changed
+
+We increased the maximum record limit from 500 to 5000 on the following Get endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_search }}">
+				<td>Transaction distribution</td>
+				<td>GET</td>
+				<td>/transactiondistributions</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+## January 2017
+
+### 2017-01-18
+
+#### New
 
 Added the following endpoints:
 

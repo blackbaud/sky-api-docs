@@ -588,6 +588,12 @@ portal_endpoints_budget_list: <%= stache.config.portal_endpoints_GL %>operations
 # Budget Account List
 portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a43/
 
+# Budget Grant List
+portal_endpoints_budget_grant_list: <%= stache.config.portal_endpoints_GL %>operations/590c806ed7dcde0c548cbd3e/
+
+# Budget Project List
+portal_endpoints_budget_project_list: <%= stache.config.portal_endpoints_GL %>operations/590c806ed7dcde0c548cbd3d/
+
 # Ledger Summary List
 portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a46/
 
@@ -625,6 +631,12 @@ portal_endpoints_invoice_get: <%= stache.config.portal_endpoints_AP %>operations
 
 # Invoice Post
 portal_endpoints_invoice_post: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d9/
+
+# Invoice 1099 Amount
+portal_endpoints_invoice_1099_amount: <%= stache.config.portal_endpoints_AP %>operations/590c805ca9db950f94838e5f/
+
+# Invoice 1099 Box Numbers
+portal_endpoints_invoice_1099_box_numbers: <%= stache.config.portal_endpoints_AP %>operations/590c805ca9db950f94838e60/
 
 # Vendor Get
 portal_endpoints_vendor_get: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24d/
