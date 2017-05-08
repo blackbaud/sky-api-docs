@@ -14,9 +14,41 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2016-12-06
+## 2017-05-05
 
 ### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_invoice_1099_amount }}">
+				<td>Invoice 1099 amount</td>
+				<td>GET</td>
+				<td>/invoices/{invoice_id}/1099amount</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_invoice_1099_box_numbers }}">
+				<td>Invoice 1099 box numbers</td>
+				<td>GET</td>
+				<td>/invoices/{invoice_id}/1099boxnumber</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+## December 2016
+
+### 2016-12-06
+
+#### New
 
 - Added the following endpoints:
 
@@ -80,7 +112,7 @@ Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.po
 	</table>
 </div>
 
-### Changed
+#### Changed
 
 For consistency across APIs, all responses to GET endpoints that return collections now return an object with "count" and "value" properties. The following endpoints are affected:
 
