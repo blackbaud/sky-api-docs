@@ -750,7 +750,7 @@ Added the following endpoints:
                 </tr>
                 <tr>
                     <td>datetime</td>
-                    <td>Defines the rating `value` as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</td>
+                    <td>Defines the rating `value` as a string JSON data type in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</td>
                 </tr>
                 <tr>
                     <td>number</td>
