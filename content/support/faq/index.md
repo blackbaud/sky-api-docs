@@ -89,7 +89,7 @@ See [Authorization]({{ stache.config.guide_web_api_authorization }}).
 
 ### Do you support cross-origin resource sharing to allow you to interact securely with our API from within the browser?
 
-Yes, we've enabled <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> support in the  {{ stache.config.api_type_name }}.  We allow <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>PATCH</code>, and <code>DELETE</code> methods, and we allow <code>bb-api-subscription-key</code>, <code>authorization</code>, <code>accept</code>, and <code>content-type</code> request headers.
+Yes, we've enabled <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> support in the  {{ stache.config.api_type_name }}.  We allow all origins (*), support the <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>PATCH</code>, and <code>DELETE</code> methods, and allow <code>bb-api-subscription-key</code>, <code>authorization</code>, <code>accept</code>, and <code>content-type</code> request headers.
 
 ## Tokens
 
