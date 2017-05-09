@@ -12,7 +12,7 @@ showBreadcrumbs: true
 <h1>{{ name }}</h1>
 
 
-<p>Updated: March 8, 2017</p>
+<p>Updated: May 9, 2017</p>
 
 <div class="introduction">
     This topic describes the entity and type representations for common items that the Fundraising API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
@@ -58,12 +58,12 @@ showBreadcrumbs: true
             <tr>
                 <td>start_date</td>
                 <td>dateTime</td>
-                <td>The start date of the appeal. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The start date of the appeal. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-11-21T10:29:43</i>.</td>
             </tr>
             <tr>
                 <td>end_date</td>
                 <td>dateTime</td>
-                <td>The end date of the appeal. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-12-25T10:29:43-04:00</i>.</td>
+                <td>The end date of the appeal. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-12-25T10:29:43</i>.</td>
             </tr>
             <tr>
                 <td>inactive</td>
@@ -74,6 +74,16 @@ showBreadcrumbs: true
                 <td>goal</td>
                 <td><a href="{{ stache.config.constituent_entity_reference }}#Currency">currency</a></td>
                 <td>The monetary goal associated with the appeal.</td>
+            </tr>
+            <tr>
+                <td>date_added</td>
+                <td>dateTime</td>
+                <td>The date when the appeal was created. Includes an offset from UTC in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>date_modified</td>
+                <td>dateTime</td>
+                <td>The date when the appeal was last modified. Includes an offset from UTC in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
         </tbody>
     </table>
@@ -114,12 +124,12 @@ showBreadcrumbs: true
             <tr>
                 <td>start_date</td>
                 <td>dateTime</td>
-                <td>The start date of the campaign. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The start date of the campaign. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-11-21T10:29:43</i>.</td>
             </tr>
             <tr>
                 <td>end_date</td>
                 <td>dateTime</td>
-                <td>The end date of the campaign. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-12-25T10:29:43-04:00</i>.</td>
+                <td>The end date of the campaign. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-12-25T10:29:43</i>.</td>
             </tr>
             <tr>
                 <td>inactive</td>
@@ -130,6 +140,16 @@ showBreadcrumbs: true
                 <td>goal</td>
                 <td><a href="{{ stache.config.constituent_entity_reference }}#Currency">currency</a></td>
                 <td>The monetary goal associated with the campaign.</td>
+            </tr>
+            <tr>
+                <td>date_added</td>
+                <td>dateTime</td>
+                <td>The date when the campaign was created. Includes an offset from UTC in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>date_modified</td>
+                <td>dateTime</td>
+                <td>The date when the campaign was last modified. Includes an offset from UTC in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
         </tbody>
     </table>
@@ -170,12 +190,12 @@ showBreadcrumbs: true
             <tr>
                 <td>start_date</td>
                 <td>dateTime</td>
-                <td>The start date of the fund. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-11-21T10:29:43-04:00</i>.</td>
+                <td>The start date of the fund. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-11-21T10:29:43</i>.</td>
             </tr>
             <tr>
                 <td>end_date</td>
                 <td>dateTime</td>
-                <td>The end date of the fund. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-12-25T10:29:43-04:00</i>.</td>
+                <td>The end date of the fund. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format:</a> <i>1969-12-25T10:29:43</i>.</td>
             </tr>
             <tr>
                 <td>inactive</td>
@@ -186,6 +206,16 @@ showBreadcrumbs: true
                 <td>goal</td>
                 <td><a href="{{ stache.config.constituent_entity_reference }}#Currency">currency</a></td>
                 <td>The monetary goal associated with the fund.</td>
+            </tr>
+            <tr>
+                <td>date_added</td>
+                <td>dateTime</td>
+                <td>The date when the fund was created. Includes an offset from UTC in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
+            </tr>
+            <tr>
+                <td>date_modified</td>
+                <td>dateTime</td>
+                <td>The date when the fund was last modified. Includes an offset from UTC in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43-04:00</i>.</td>
             </tr>
         </tbody>
     </table>

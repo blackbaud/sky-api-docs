@@ -61,7 +61,7 @@ Content-Type: application/json; charset=utf-8
   ]
 }</code></pre>
 
-<p class="alert alert-info">Fuzzy dates are <em>not</em> traditional <a href="#date-formats" class="smooth-scroll">dates</a> and do <em>not</em> conform to the <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> standard.</p>
+<p class="alert alert-info">Fuzzy dates are <em>not</em> traditional <a href="#date-formats" class="smooth-scroll">dates</a> and do <em>not</em> conform to the <a href="https://tools.ietf.org/html/rfc3339" target="_blank">ISO 8601</a> standard.</p>
 
 
 For additional information about fuzzy dates, see the <a href="{{ stache.config.constituent_entity_reference }}#FuzzyDate" target="_blank">entity reference</a>.
