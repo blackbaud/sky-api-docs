@@ -14,6 +14,14 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-05-09
+
+### Changed
+
+ - The [Communication preference (Edit)]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) endpoint now supports patching the `start` and `end` fields on a communication preference.
+
+ - The [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action List (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [action]({{ stache.config.portal_contracts }}#Action) entity.
+
 ## 2017-04-25
 
 ### Changed
@@ -743,7 +751,7 @@ Added the following endpoints:
                 </tr>
                 <tr>
                     <td>datetime</td>
-                    <td>Defines the rating `value` as a string JSON data type in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</td>
+                    <td>Defines the rating `value` as a string JSON data type in <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</td>
                 </tr>
                 <tr>
                     <td>number</td>
