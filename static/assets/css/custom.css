@@ -194,6 +194,7 @@ p.text-muted {
 
 .sidebar .nav-sidebar.nav li a:hover  {
     color: #1c84c6;
+    font-weight: 600;
 }
 
 .sidebar .nav-sidebar.nav li.active>a {
