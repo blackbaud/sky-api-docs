@@ -11,8 +11,6 @@
 <p class="alert alert-info"><strong><em>Note:</em></strong> The  <strong>Request URL</strong> and <strong>HTTP request</strong> change based on the    values for the parameter and request header field values.</p>
 
 <img src="/assets/img/getting_started_step4_subscription_key.png"> <br/></li>
-<p><a href="#" data-toggle="modal" data-target="#consolesecurity"><strong>How does the {{ stache.config.dev_console_name }} security work?</strong></a>
-</p>
 
 <br />
 
