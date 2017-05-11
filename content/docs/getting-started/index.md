@@ -47,5 +47,3 @@ markdown: false
 
 </ul>
 {{ include stache.config.partial_disqus }}
-
-{{ include 'includes/getting-started/devaccount-sandbox-tenant.md' }}
