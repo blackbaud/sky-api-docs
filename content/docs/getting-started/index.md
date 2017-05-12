@@ -22,11 +22,11 @@ markdown: false
 
   <ul class="slide-container">
 <li class="slide">
-<h2 class="tutorial">Step 1 &#8211; Set up your developer account</h2>
+<h2 class="tutorial">Step 1 &#8211; Set up a developer account</h2>
 {{ include 'includes/getting-started/step1.md' }}</li>
 
 <li class="slide">
-<h2 class="tutorial">Step 2 &#8211; Get your subscription key</h2>
+<h2 class="tutorial">Step 2 &#8211; Get a subscription key</h2>
 {{ include 'includes/getting-started/step2.md' }}</li>
 
 <li class="slide">
@@ -34,7 +34,7 @@ markdown: false
 {{ include 'includes/shared/nxt-web-api/getting-started/step3.md' }}</li>
 
 <li class="slide">
-<h2 class="tutorial">Step 4 &#8211; Explore the Endpoint Reference</h2>
+<h2 class="tutorial">Step 4 &#8211; View the Endpoint Reference</h2>
 {{ include 'includes/getting-started/step4.md' }}</li>
 
 <li class="slide">
