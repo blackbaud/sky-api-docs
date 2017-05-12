@@ -1,3 +1,7 @@
+<p><a href="#" data-toggle="modal" data-target="#consolesecurity"><strong>How does the {{ stache.config.dev_console_name }} security work?</strong></a>
+</p>
+
+
 <div class="modal fade" role="dialog" id="consolesecurity" tab-index="-1" aria-labelledby="MyModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -9,4 +13,4 @@
 <p>Before the {{ stache.config.dev_console_name }} sends the request to the endpoint, it must obtain authorization from a valid user (you) to access the data within the {{ stache.config.sandbox_name }} tenant.</p>
 </div></div></div></div>
 
-
+ 
