@@ -9,31 +9,31 @@ title: Entity Reference
 entity: 
     - name: Accounts Payable
       description: Describes the entity and type representations for common items that the Accounts Payable API uses.
-      icon: university
+      icon: fa-university
       url: /api/entity-reference/accounts-payable
     - name: Constituent
       description: Describes the entity and type representations for common items that the Constituent API uses.
-      icon: user
+      icon: fa-user
       url: /api/entity-reference/constituent
     - name: Fundraising (Beta)
       description: Describes the entity and type representations for common items that the Fundraising API uses.
-      icon: line-chart
+      icon: fa-line-chart
       url: /api/entity-reference/fundraising
     - name: General Ledger
       description: Describes the entity and type representations for common items that the General Ledger API uses.
-      icon: book
+      icon: fa-book
       url: /api/entity-reference/general-ledger
     - name: Gift (Beta)
       description: Describes the entity and type representations for common items that the Gift API uses.
-      icon: gift
+      icon: fa-gift
       url: /api/entity-reference/gift
     - name: Opportunity (Beta)
       description: Describes the entity and type representations for common items that the Opportunity API uses.
-      icon: handshake-o
+      icon: fa-handshake-o
       url: /api/entity-reference/opportunity
     - name: Treasury (Beta)
       description: Describes the entity and type representations for common items that the Treasury API uses.
-      icon: money
+      icon: fa-money
       url: /api/entity-reference/treasury
 ---
 
@@ -48,7 +48,7 @@ entity:
  <div class="row">
  {{/ if }}
         <div class="col-sm-4">
-            <i class="fa fa-fw fa-3x fa-{{ icon }} showcase-icon"></i>
+            <i class="fa fa-fw fa-3x {{ icon }} showcase-icon"></i>
             <div class="showcase-desc">
                 <h2>
                     <a href="{{ url }}">{{ name }}</a>

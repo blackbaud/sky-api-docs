@@ -60,7 +60,7 @@ APIs:
     <div class="row">
     {{/ if }}
       <div class="col-sm-6 col-md-4">
-        <i class="fa fa-fw {{icon}} showcase-icon"></i>
+        <i class="fa fa-fw fa-3x {{icon}} showcase-icon"></i>
         <div class="showcase-desc">
           <h2>
             <a href="{{location}}">{{title}}</a>
