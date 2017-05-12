@@ -212,6 +212,7 @@ portal_endpoints_constituent_search: <%= stache.config.portal_endpoints_constitu
 # Constituent Actions
 portal_endpoints_constituent_action_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efa/
 portal_endpoints_constituent_action_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7ef9/
+portal_endpoints_action_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7ef9/
 portal_endpoints_constituent_action_add: <%= stache.config.portal_endpoints_constituent %>operations/56b76471069a050520297715/
 portal_endpoints_constituent_action_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efb/
 portal_endpoints_constituent_action_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7efc/

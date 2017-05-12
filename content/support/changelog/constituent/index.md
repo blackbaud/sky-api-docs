@@ -14,6 +14,28 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-05-12
+
+### New
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_get_list }}">
+        <td>Action list (All constituents)</td>
+        <td>GET</td>
+        <td>/actions</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2017-05-09
 
 ### Changed
