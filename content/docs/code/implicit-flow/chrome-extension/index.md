@@ -3,7 +3,7 @@ name: Chrome Extension
 layout: layout-container
 title: Implicit Flow - Chrome Extension
 description: Learn how to create a Chrome browser extension that interacts with Google's InboxSDK and SKY API constituent data via the OAuth 2.0 Implicit Flow.
-icon: fa fa-fw fa-chrome
+icon: fa fa-fw fa-3x fa-chrome
 showBreadcrumbs: true
 ---
 

@@ -23,18 +23,18 @@ markdown: false
 
     <ul class="slide-container">
       <li class="slide">
-        <h2 class="tutorial">Step 1 &#8211; Register your application</h2>
+        <h2 class="tutorial">Step 1 &#8211; Register your app</h2>
         {{ include 'includes/createapp/registerapp.md' }}
       </li>
   
       <li class="slide">
-        <h2 class="tutorial">Step 2 &#8211; Review your application credentials</h2>
+        <h2 class="tutorial">Step 2 &#8211; Review the app credentials</h2>
         {{ include 'includes/createapp/credentials.md' }}
       </li>
   
       <li class="slide">
 
-        <h2 class="tutorial">Step 3 &#8211; Activate your application in a tenant</h2>
+        <h2 class="tutorial">Step 3 &#8211; Activate your app</h2>
 
         {{ include 'includes/createapp/activateapp.md' }}
       </li>

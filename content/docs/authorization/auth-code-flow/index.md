@@ -34,7 +34,7 @@ markdown: false
 </li>
 
 <li class="slide">
-<h2 class="tutorial">Step 2 &#8211; User authorizes your app</h2>
+<h2 class="tutorial">Step 2 &#8211; User authorization</h2>
 
 {{ include 'includes/authcodeflow/step2.md' }}
 
