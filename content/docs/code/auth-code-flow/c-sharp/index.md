@@ -2,7 +2,7 @@
 layout: layout-container
 name: C# .NET Core
 title: Authorization Code Flow - C# .NET Core
-icon: fa fa-fw fa-windows
+icon: fa fa-fw fa-3x fa-windows
 description: Learn how to create a .NET Core MVC C# server-side app that utilizes the OAuth 2.0 Authorization Code Flow and retrieves constituent data from our <%= stache.config.product_name_short %>.
 order: 1
 published: true

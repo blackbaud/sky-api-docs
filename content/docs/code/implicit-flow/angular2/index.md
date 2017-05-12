@@ -4,7 +4,7 @@ name: Angular 2
 title: Implicit Flow - Angular 2
 description: Learn how to create an Angular 2 app that utilizes the OAuth 2.0 Implicit Flow and retrieves constituent data from our <%= stache.config.product_name_short %>.
 order: 2
-icon: fa fa-fw fa-desktop
+icon: fa fa-fw fa-3x fa-desktop
 showInNav: true
 tutorial: true
 showBreadcrumbs: true

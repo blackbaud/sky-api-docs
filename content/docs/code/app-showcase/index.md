@@ -3,7 +3,7 @@ name: App Showcase
 layout: layout-container
 description: A collection of fully-formed applications that can assist in quick-starting your own SKY API applications
 order: 3
-icon: fa fa-fw fa-cube
+icon: fa fa-fw fa-3x fa-cube
 showBreadcrumbs: true
 title: App Showcase
 appShowcase:
@@ -23,7 +23,7 @@ appShowcase:
     <div class="row showcase-row">
     {{/ if }}
       <div class="col-sm-6 col-md-4">
-        <i class="fa fa-fw {{ icon }} showcase-icon"></i>
+        <i class="fa fa-fw fa-3x {{ icon }} showcase-icon"></i>
         <div class="showcase-desc">
           <h2>{{ title }}</h2>
           <p>{{ description }}</p>
