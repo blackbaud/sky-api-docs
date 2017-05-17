@@ -6,8 +6,8 @@ layout: layout-tutorial
 published: true
 back_to_top: true
 title: Getting Started
-sidebarLayoutSecondaryColumn: col-md-2 col-sm-12 sidebar-tutorial
-sidebarLayoutPrimaryColumn: col-md-8 col-sm-12
+sidebarLayoutSecondaryColumn: col-lg-2 col-md-3 col-sm-12 sidebar-tutorial
+sidebarLayoutPrimaryColumn: col-lg-8 col-md-8 col-sm-12
 bootstrap_container: bg-tutorial
 markdown: false
 ---
