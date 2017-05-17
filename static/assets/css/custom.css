@@ -201,6 +201,14 @@ p.text-muted {
     font-weight: 600;
 }
 
+.dropdown {
+    padding-bottom: 2px;
+}
+
+.dropdown-menu {
+    margin: 0;
+}
+
 /* Partial Header Edit Styles */
 
 .partial-edit-header {
