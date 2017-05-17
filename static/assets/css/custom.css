@@ -194,7 +194,6 @@ p.text-muted {
 
 .sidebar .nav-sidebar.nav li a:hover  {
     color: #1c84c6;
-    font-weight: 600;
 }
 
 .sidebar .nav-sidebar.nav li.active>a {
@@ -381,10 +380,27 @@ h2.tutorial, h3.tutorial {
     padding: 0 50px 0 50px;
 }
 
+@media (min-width: 1200px) {
+
 .sidebar-tutorial {
     margin-top: 60px;
     padding-left: 60px;
+    margin-right: -15px;
     width: 18%;
+}
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.sidebar-tutorial {
+    margin-top: 60px;
+    padding-left: 60px;
     margin-right: -15px;
 }
+    
+}
+
+
 
