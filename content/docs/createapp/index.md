@@ -7,8 +7,8 @@ published: true
 showInNav: true
 back_to_top: true
 title: Create an Application Tutorial
-sidebarLayoutSecondaryColumn: col-md-2 sidebar-tutorial
-sidebarLayoutPrimaryColumn: col-md-8
+sidebarLayoutSecondaryColumn: col-md-2 col-sm-12 sidebar-tutorial
+sidebarLayoutPrimaryColumn: col-md-8 col-sm-12
 bootstrap_container: bg-tutorial
 markdown: false
 ---
