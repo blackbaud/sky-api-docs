@@ -18,6 +18,8 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### New
 
+Added the following endpoint:
+
 <div class="table-responsive">
   <table class="table table-striped table-hover">
     <thead>
@@ -52,6 +54,38 @@ We added the `comment` property to the [relationship]({{ stache.config.portal_co
  - The [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action List (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [action]({{ stache.config.portal_contracts }}#Action) entity.
 
 ## 2017-04-25
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_create }}">
+        <td>Relationship</td>
+        <td>POST</td>
+        <td>/constituent/constituents/relationships</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_type_get_list }}">
+        <td>Relationship types</td>
+        <td>GET</td>
+        <td>/constituent/constituents/relationshiptypes</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_organization_contact_type_get_list }}">
+        <td>Organization contact types</td>
+        <td>GET</td>
+        <td>/constituent/constituents/organizationcontacttypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Changed
 
@@ -96,36 +130,6 @@ GET operations such as [Relationship list (Single constituent)]({{ stache.config
           <td>position</td>
           <td>string</td>
           <td>The individual's position in the organization. Only applies to relationships between organizations and individuals.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-### New
-
-<div class="table-responsive">
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Operation</th>
-        <th>Method</th>
-        <th>Route</th>
-      </tr>
-    </thead>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_create }}">
-        <td>Relationship</td>
-        <td>POST</td>
-        <td>/constituent/constituents/relationships</td>
-      </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_type_get_list }}">
-        <td>Relationship types</td>
-        <td>GET</td>
-        <td>/constituent/constituents/relationshiptypes</td>
-      </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_organization_contact_type_get_list }}">
-        <td>Organization contact types</td>
-        <td>GET</td>
-        <td>/constituent/constituents/organizationcontacttypes</td>
       </tr>
     </tbody>
   </table>
