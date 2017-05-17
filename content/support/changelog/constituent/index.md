@@ -44,7 +44,6 @@ Added the following endpoint:
 
 We added the `comment` property to the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
 
-
 ## 2017-05-09
 
 ### Changed
