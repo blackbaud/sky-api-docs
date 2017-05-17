@@ -4,7 +4,7 @@ name: NodeJS
 title: Authorization Code Flow - NodeJS
 description: Learn how to create a NodeJS server-side app that utilizes the OAuth 2.0 Authorization Code Flow and retrieves constituent data from our <%= stache.config.product_name_short %>.
 order: 3
-icon: fa fa-fw fa-desktop
+icon: fa fa-fw fa-3x fa-desktop
 published: true
 showInNav: true
 tutorial: true

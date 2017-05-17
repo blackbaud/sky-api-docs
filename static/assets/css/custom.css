@@ -194,10 +194,19 @@ p.text-muted {
 
 .sidebar .nav-sidebar.nav li a:hover  {
     color: #1c84c6;
+    font-weight: 600;
 }
 
 .sidebar .nav-sidebar.nav li.active>a {
     font-weight: 600;
+}
+
+.dropdown {
+    padding-bottom: 2px;
+}
+
+.dropdown-menu {
+    margin: 0;
 }
 
 /* Partial Header Edit Styles */
@@ -375,5 +384,7 @@ h2.tutorial, h3.tutorial {
 .sidebar-tutorial {
     margin-top: 60px;
     padding-left: 60px;
+    width: 18%;
+    margin-right: -15px;
 }
 
