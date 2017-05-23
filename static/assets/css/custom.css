@@ -168,11 +168,14 @@ p.text-muted {
 }
 
 .welcome {
-    background: rgb(0, 180, 241) url('/assets/img/sky-api-welcome-banner.jpg') no-repeat fixed center 20%;
+    background: url(https://apidocs.sky.blackbaud.com/assets/img/sky-api-welcome-banner.jpg) center -231px no-repeat fixed #00b4f1;
     background-size: cover;
     max-height: 475px;
     height: auto;
     padding: 95px 0;
+    display: table;
+    position: relative;
+    width: 100%;
 }
 
 .welcome h1 {
@@ -186,6 +189,10 @@ p.text-muted {
 
 .welcome .btn {
     border: 0;
+}
+
+.welcome-message {
+    padding-top: 40px;
 }
 
 .sidebar .nav-sidebar.nav li a {
@@ -297,6 +304,7 @@ p.text-muted {
 	padding-left: 0;
     padding-right: 0;
 }
+
 
 .nowrap {
     white-space: nowrap;
