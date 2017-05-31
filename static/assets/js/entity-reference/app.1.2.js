@@ -25,10 +25,13 @@
         this.$onInit = onInit;
 
         function onInit() {
+            // Represents the number of hours until the cache expires
+            var swaggerCacheHourLimit = 12;
+            var swaggerResponseCache = localStorageService.get('swaggerResponseCache');
             bbWait.beginPageWait({});
 
-            var swaggerResponseCache = localStorageService.get('swaggerResponseCache');
-            if (!swaggerResponseCache || Math.abs(new Date(swaggerResponseCache.lastUpdatedDate).getTime() - new Date().getTime()) / 36e5 >= 12) {
+            // Get a new swagger response if one is not cached or the cache has expired
+            if (!swaggerResponseCache || Math.abs(new Date(swaggerResponseCache.lastUpdatedDate).getTime() - new Date().getTime()) / 36e5 >= swaggerCacheHourLimit) {
               $http.get(this.swaggerUrl)
                   .then(handleSuccess.bind(this), handleError.bind(this))
                   .finally(function() { bbWait.endPageWait(); });
