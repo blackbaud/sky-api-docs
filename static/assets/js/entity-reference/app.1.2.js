@@ -25,33 +25,33 @@
         this.$onInit = onInit;
 
         function onInit() {
-            // Represents the number of hours until the cache expires
-            var swaggerCacheHourLimit = 12;
             var swaggerResponseCache = localStorageService.get('swaggerResponseCache');
             bbWait.beginPageWait({});
 
             // Get a new swagger response if one is not cached or the cache has expired
-            if (!swaggerResponseCache || Math.abs(new Date(swaggerResponseCache.lastUpdatedDate).getTime() - new Date().getTime()) / 36e5 >= swaggerCacheHourLimit) {
+            if (!swaggerResponseCache || Date.now() >= swaggerResponseCache.expirationDate) {
               $http.get(this.swaggerUrl)
                   .then(handleSuccess.bind(this), handleError.bind(this))
                   .finally(function() { bbWait.endPageWait(); });
             }
             else {
-              handleSwaggerResponse.bind(this)(swaggerResponseCache.response);
+              handleSwaggerResponseData.bind(this)(swaggerResponseCache.swaggerResponseData);
               bbWait.endPageWait();
             }
         }
 
         function handleSuccess(response) {
+            // Represents the number of hours until the cache expires
+            var swaggerCacheHourLimit = 12;
+
             localStorageService.set('swaggerResponseCache', {
-              'response': response,
-              'lastUpdatedDate': new Date()
+              'swaggerResponseData': response.data,
+              'expirationDate': Date.now() + (swaggerCacheHourLimit * 36e5)
             });
-            handleSwaggerResponse.bind(this)(response);
+            handleSwaggerResponseData.bind(this)(response.data);
         }
 
-        function handleSwaggerResponse(response) {
-            var swagger = response.data;
+        function handleSwaggerResponseData(swagger) {
             this.swagger = swagger;
             var whiteList = this.whiteList ? this.whiteList.split(',') : [];
             var blackList = this.blackList ? this.blackList.split(',') : [];
