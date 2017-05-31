@@ -1,9 +1,9 @@
-(function(){
+( function() {
     "use strict";
 
-    var app = angular.module('entityReferenceApp', ["sky", "ui.bootstrap"]);
+    var app = angular.module('entityReferenceApp', ['sky', 'ui.bootstrap', 'LocalStorageModule']);
 
-    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -18,7 +18,7 @@
         }
     });
 
-    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait) {
+    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService) {
         this.apiTitle = '';
         this.showErrorMessage = false;
 
@@ -27,12 +27,27 @@
         function onInit() {
             bbWait.beginPageWait({});
 
-            $http.get(this.swaggerUrl)
-                .then(handleSuccess.bind(this), handleError.bind(this))
-                .finally(function() { bbWait.endPageWait(); });
+            var swaggerResponseCache = localStorageService.get('swaggerResponseCache');
+            if (!swaggerResponseCache || Math.abs(new Date(swaggerResponseCache.lastUpdatedDate).getTime() - new Date().getTime()) / 36e5 >= 12) {
+              $http.get(this.swaggerUrl)
+                  .then(handleSuccess.bind(this), handleError.bind(this))
+                  .finally(function() { bbWait.endPageWait(); });
+            }
+            else {
+              handleSwaggerResponse.bind(this)(swaggerResponseCache.response);
+              bbWait.endPageWait();
+            }
         }
 
         function handleSuccess(response) {
+            localStorageService.set('swaggerResponseCache', {
+              'response': response,
+              'lastUpdatedDate': new Date()
+            });
+            handleSwaggerResponse.bind(this)(response);
+        }
+
+        function handleSwaggerResponse(response) {
             var swagger = response.data;
             this.swagger = swagger;
             var whiteList = this.whiteList ? this.whiteList.split(',') : [];
@@ -40,11 +55,11 @@
             this.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
 
             // Need to delay allowing digest cycle to run and additionally
-            // give a little extra time to prevent rescrolling back to top due to 
+            // give a little extra time to prevent rescrolling back to top due to
             // angular loading sequence.
             return $timeout(function() {
                 scrollToHash();
-            }, 250);
+            }, 450);
         }
 
         function handleError(response) {
@@ -56,8 +71,8 @@
                 .sort()
                 .map(function(name) {
                     var definition = swagger.definitions[name];
-                    return { 
-                        name: name, 
+                    return {
+                        name: name,
                         displayName: definition['x-display-name'] || name,
                         details: definition,
                         additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info'])
@@ -76,9 +91,9 @@
                     }
                     return !!entity.details.properties && !entity.details['x-hidden'];
                 })
-                .map(function(entity) 
-                { 
-                    return setDisplayTypesOnEntity(entity, swagger.definitions); 
+                .map(function(entity)
+                {
+                    return setDisplayTypesOnEntity(entity, swagger.definitions);
                 });
         }
 
@@ -93,7 +108,7 @@
                 } else {
                     property.ref = property.$ref && property.$ref.replace("#/definitions/", "");
                     property.displayType = getRefDisplayName(property.ref, definitions) || getTypeDisplayName(property);
-                } 
+                }
 
                 property.descriptionHtml = $sce.trustAsHtml(property.description);
             });
@@ -107,7 +122,7 @@
         }
 
         function getTypeDisplayName(property) {
-            
+
             // Conversion table for swagger format to display text.
             var formatDisplayNames = {
                 'date-time': 'dateTime'

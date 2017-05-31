@@ -64,6 +64,9 @@ module.exports = function (grunt) {
                     'static/assets/js/bb-omnibar-search.min.js': [
                         'node_modules/blackbaud-stache/src/vendor/bb-omnibar-search/js/bb-omnibar-search.js',
                         'node_modules/blackbaud-stache/src/vendor/bb-omnibar-search/js/bb-omnibar-search.templates.js'
+                    ],
+                    'static/assets/js/angular-local-storage.min.js': [
+                        'node_modules/angular-local-storage/src/angular-local-storage.js'
                     ]
                 }
             }
