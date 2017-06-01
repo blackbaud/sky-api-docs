@@ -61,8 +61,8 @@
             // give a little extra time to prevent rescrolling back to top due to
             // angular loading sequence.
             return $timeout(function() {
-                scrollToHash();
-            }, 450);
+              scrollToHash();
+            });
         }
 
         function handleError(response) {
