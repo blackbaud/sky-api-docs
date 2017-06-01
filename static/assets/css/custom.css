@@ -60,6 +60,18 @@ img, .img-responsive,
     border: 1px solid #ddd;
 }
 
+.content .table .entityref_property {
+  width: 15%;
+}
+
+.content .table .entityref_type {
+  width: 13%;
+}
+
+.content .table .entityref_description {
+  width: 72%;
+}
+
 .content h2 {
     margin-top: 40px;
     padding-bottom: 20px;
