@@ -1,9 +1,9 @@
-(function(){
+( function() {
     "use strict";
 
-    var app = angular.module('entityReferenceApp', ["sky", "ui.bootstrap"]);
+    var app = angular.module('entityReferenceApp', ['sky', 'ui.bootstrap', 'LocalStorageModule']);
 
-    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -18,37 +18,56 @@
         }
     });
 
-    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait) {
+    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService) {
+        var self = this;
         this.apiTitle = '';
         this.showErrorMessage = false;
 
         this.$onInit = onInit;
 
         function onInit() {
+            var swaggerResponseCache = localStorageService.get('swaggerResponseCache');
             bbWait.beginPageWait({});
 
-            $http.get(this.swaggerUrl)
-                .then(handleSuccess.bind(this), handleError.bind(this))
-                .finally(function() { bbWait.endPageWait(); });
+            // Get a new swagger response if one is not cached or the cache has expired
+            if (!swaggerResponseCache || Date.now() >= swaggerResponseCache.expirationDate) {
+              $http.get(self.swaggerUrl)
+                  .then(handleSuccess, handleError)
+                  .finally(function() { bbWait.endPageWait(); });
+            }
+            else {
+              handleSwaggerResponseData(swaggerResponseCache.swaggerResponseData);
+              bbWait.endPageWait();
+            }
         }
 
         function handleSuccess(response) {
-            var swagger = response.data;
-            this.swagger = swagger;
-            var whiteList = this.whiteList ? this.whiteList.split(',') : [];
-            var blackList = this.blackList ? this.blackList.split(',') : [];
-            this.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
+            // Represents the number of hours until the cache expires
+            var swaggerCacheHourLimit = 12;
+
+            localStorageService.set('swaggerResponseCache', {
+              'swaggerResponseData': response.data,
+              'expirationDate': Date.now() + (swaggerCacheHourLimit * 36e5)
+            });
+            handleSwaggerResponseData(response.data);
+        }
+
+        function handleSwaggerResponseData(swagger) {
+            self.swagger = swagger;
+            var whiteList = self.whiteList ? self.whiteList.split(',') : [];
+            var blackList = self.blackList ? self.blackList.split(',') : [];
+            self.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
 
             // Need to delay allowing digest cycle to run and additionally
-            // give a little extra time to prevent rescrolling back to top due to 
+            // give a little extra time to prevent rescrolling back to top due to
             // angular loading sequence.
             return $timeout(function() {
-                scrollToHash();
-            }, 250);
+              scrollToHash();
+            });
         }
 
         function handleError(response) {
-            this.showErrorMessage = true;
+            self.showErrorMessage = true;
         }
 
         function getEntitiesFromSwagger(swagger, whiteList, blackList) {
@@ -56,8 +75,8 @@
                 .sort()
                 .map(function(name) {
                     var definition = swagger.definitions[name];
-                    return { 
-                        name: name, 
+                    return {
+                        name: name,
                         displayName: definition['x-display-name'] || name,
                         details: definition,
                         additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info'])
@@ -76,9 +95,9 @@
                     }
                     return !!entity.details.properties && !entity.details['x-hidden'];
                 })
-                .map(function(entity) 
-                { 
-                    return setDisplayTypesOnEntity(entity, swagger.definitions); 
+                .map(function(entity)
+                {
+                    return setDisplayTypesOnEntity(entity, swagger.definitions);
                 });
         }
 
@@ -93,7 +112,7 @@
                 } else {
                     property.ref = property.$ref && property.$ref.replace("#/definitions/", "");
                     property.displayType = getRefDisplayName(property.ref, definitions) || getTypeDisplayName(property);
-                } 
+                }
 
                 property.descriptionHtml = $sce.trustAsHtml(property.description);
             });
@@ -107,7 +126,7 @@
         }
 
         function getTypeDisplayName(property) {
-            
+
             // Conversion table for swagger format to display text.
             var formatDisplayNames = {
                 'date-time': 'dateTime'
