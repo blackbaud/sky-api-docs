@@ -19,6 +19,7 @@
     });
 
     function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService) {
+        var self = this;
         this.apiTitle = '';
         this.showErrorMessage = false;
 
@@ -30,12 +31,12 @@
 
             // Get a new swagger response if one is not cached or the cache has expired
             if (!swaggerResponseCache || Date.now() >= swaggerResponseCache.expirationDate) {
-              $http.get(this.swaggerUrl)
-                  .then(handleSuccess.bind(this), handleError.bind(this))
+              $http.get(self.swaggerUrl)
+                  .then(handleSuccess, handleError)
                   .finally(function() { bbWait.endPageWait(); });
             }
             else {
-              handleSwaggerResponseData.bind(this)(swaggerResponseCache.swaggerResponseData);
+              handleSwaggerResponseData(swaggerResponseCache.swaggerResponseData);
               bbWait.endPageWait();
             }
         }
@@ -48,14 +49,14 @@
               'swaggerResponseData': response.data,
               'expirationDate': Date.now() + (swaggerCacheHourLimit * 36e5)
             });
-            handleSwaggerResponseData.bind(this)(response.data);
+            handleSwaggerResponseData(response.data);
         }
 
         function handleSwaggerResponseData(swagger) {
-            this.swagger = swagger;
-            var whiteList = this.whiteList ? this.whiteList.split(',') : [];
-            var blackList = this.blackList ? this.blackList.split(',') : [];
-            this.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
+            self.swagger = swagger;
+            var whiteList = self.whiteList ? self.whiteList.split(',') : [];
+            var blackList = self.blackList ? self.blackList.split(',') : [];
+            self.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
 
             // Need to delay allowing digest cycle to run and additionally
             // give a little extra time to prevent rescrolling back to top due to
@@ -66,7 +67,7 @@
         }
 
         function handleError(response) {
-            this.showErrorMessage = true;
+            self.showErrorMessage = true;
         }
 
         function getEntitiesFromSwagger(swagger, whiteList, blackList) {
