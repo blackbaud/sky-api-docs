@@ -20,13 +20,12 @@
 
     function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService) {
         var self = this;
-        this.apiTitle = '';
         this.showErrorMessage = false;
 
         this.$onInit = onInit;
 
         function onInit() {
-            var swaggerResponseCache = localStorageService.get('swaggerResponseCache');
+            var swaggerResponseCache = localStorageService.get('swaggerResponseCache-' + this.apiTitle);
             bbWait.beginPageWait({});
 
             // Get a new swagger response if one is not cached or the cache has expired
@@ -45,7 +44,7 @@
             // Represents the number of hours until the cache expires
             var swaggerCacheHourLimit = 12;
 
-            localStorageService.set('swaggerResponseCache', {
+            localStorageService.set('swaggerResponseCache-' + self.apiTitle, {
               'swaggerResponseData': response.data,
               'expirationDate': Date.now() + (swaggerCacheHourLimit * 36e5)
             });
