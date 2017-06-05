@@ -55,8 +55,9 @@ files:
   js:
     - /assets/js/scrollreveal.js
     - /assets/js/custom.js
-    - /assets/js/entity-reference/app.1.1.js
-    
+    - /assets/js/angular-local-storage.min.js
+    - /assets/js/entity-reference/app.1.2.js
+
 
 # =============================================
 # Disqus config

@@ -6,12 +6,13 @@
     "node": "0.10.32"
   },
   "name": "sky-api-docs",
-  "version": "0.0.46",
+  "version": "0.0.47",
   "description": "Blackbaud Documentation",
   "private": true,
   "dependencies": {
     "grunt": "^0.4.5",
-    "blackbaud-stache": "latest"
+    "blackbaud-stache": "latest",
+    "angular-local-storage": "^0.6.0"
   },
   "devDependencies": {
     "amdefine": "^1.0.0",
