@@ -3,7 +3,7 @@
     "name": "Blackbaud"
   },
   "engines": {
-    "node": "0.10.32"
+    "node": "1.0.0"
   },
   "name": "sky-api-docs",
   "version": "0.0.47",
