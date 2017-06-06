@@ -20,7 +20,7 @@ Monitor this page to keep up with common changes shared across all our APIs.
 
 We moved the [Status page link]({{ stache.config.support_status }}) from the Support menu to the top navigation. This makes it even quicker for you to see the current state of API availability. 
 
-If you haven't signed up yet, we encourage you to subscribe to automatic incident notificaitons. You can subscribe by email, SMS or RSS feed.
+If you haven't signed up yet, we encourage you to subscribe to automatic incident notifications. You can subscribe by email, SMS or RSS feed.
 
 ## 2017-05-04
 
