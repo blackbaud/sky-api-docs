@@ -3,5 +3,4 @@ env:
   STACHE_DEPLOY_PROD_BRANCH: deploy-prod
   STACHE_MASTER_BRANCH: master
   STACHE_DEVELOP_BRANCH: develop
-  STACHE_GITHUB_ORG: blackbaud
 build: deploy/
