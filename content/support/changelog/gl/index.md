@@ -14,9 +14,21 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-05-05
+## 2017-06-15
 
-### New
+### Changed
+
+We made several changes to the [Get Account (Search)]({{ stache.config.portal_endpoints_account_search }}), [Get Project (Search)]({{ stache.config.portal_endpoints_project_search }}), [Get Journal entry batch (List)]({{ stache.config.portal_endpoints_journal_entry_batch_list }}), and [Get Transaction distribution (List)]({{ stache.config.portal_endpoints_transaction_distribution_search }}) endpoints.
+
+- The following properties are now returned: `date_added`, `date_modified`, `added_by`, and `modified_by`.
+
+- The `last_modified` filter is now included. This filter causes the response to only include results where `date_modified` is greater than or equal to the `last_modified` filter value.
+
+## May 2017
+
+### 2017-05-05
+
+#### New
 
 Added the following endpoints:
 
@@ -44,7 +56,7 @@ Added the following endpoints:
 	</table>
 </div>
 
-### Changed
+#### Changed
 
 We increased the maximum record limit from 500 to 5000 on the following Get endpoint:
 
