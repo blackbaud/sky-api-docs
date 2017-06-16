@@ -139,7 +139,7 @@ GET operations such as [Relationship list (Single constituent)]({{ stache.config
 ### Changed
 
  - The `date_added` parameter on the [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now returns a `sort_token` on the <code>next_link</code> URL to enable pagination for stable data syncing.
- - The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes a <code>sort</code> parameter to sort constituents based on specified fields. For example, `sort=date_modified,-last` returns constituents in ascending order based on the <code>date_modified</code> field and then orders constituents with the same last-modified date in descending order based on their last names. If the <code>sort</code> parameter provides only the `date_modified` field or only the `date_added` field, then it returns a `sort_token` on the <code>next_link</code> URL. 
+ - The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes a <code>sort</code> parameter to sort constituents based on specified fields. For example, `sort=date_modified,-last` returns constituents in ascending order based on the <code>date_modified</code> field and then orders constituents with the same last-modified date in descending order based on their last names. If the <code>sort</code> parameter provides only the `date_modified` field or only the `date_added` field, then it returns a `sort_token` on the <code>next_link</code> URL.
 
 ## 2017-04-06
 
@@ -1378,7 +1378,7 @@ We implemented the following breaking changes:
 
   The response includes a `sort_token` within the `next_link` property. `sort_token` represents a token filter for providing the next set of constituents, ordered by the last modified date.
 
-  <p class="alert alert-info"><strong>Note:</strong> The data returned by the Constituent (List) endpoint may have a latency of up to 15 minutes.</p>
+  <p class="alert alert-info"><strong>Note:</strong> The Constituent (List) endpoint returns data with an average latency of about 30 minutes.</p>
 
 ### 2016-05-06
 
