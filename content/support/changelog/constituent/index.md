@@ -1378,7 +1378,7 @@ We implemented the following breaking changes:
 
   The response includes a `sort_token` within the `next_link` property. `sort_token` represents a token filter for providing the next set of constituents, ordered by the last modified date.
 
-  <p class="alert alert-info"><strong>Note:</strong> The data returned by the Constituent (List) endpoint may have a latency of up to 15 minutes.</p>
+  <p class="alert alert-info"><strong>Note:</strong> The Constituent (List) endpoint returns data with an average latency of 30 minutes.</p>
 
 ### 2016-05-06
 
