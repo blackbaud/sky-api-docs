@@ -6,7 +6,7 @@
     "node": "0.10.32"
   },
   "name": "sky-api-docs",
-  "version": "0.0.47",
+  "version": "1.0.0",
   "description": "Blackbaud Documentation",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "amdefine": "^1.0.0",
-    "blackbaud-stache-cli": "^0.3.16",
+    "blackbaud-stache-cli": "^0.3.19",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-cssmin": "^0.14.0",
