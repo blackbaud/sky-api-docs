@@ -14,9 +14,17 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-04-25
+## 2017-06-23
 
-### New
+### Changed
+
+We added the `gift_aid_amount` and `gift_aid_qualification_status` properties to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity for UK tenants.
+
+## April 2017
+
+### 2017-04-25
+
+#### New
 
 Added the following endpoints:
 
@@ -54,15 +62,17 @@ Added the following endpoints:
   </table>
 </div>
 
-## 2017-03-20
+## March 2017
 
-### Changed
+### 2017-03-20
+
+#### Changed
 
 We added the `post_date` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
 
-##2017-03-08
+### 2017-03-08
 
-### New
+#### New
 
 The Gift API has been released for a public beta. This API handles information related to gifts, including related entities such as gift splits, gift fundraisers, and soft credits.
 
