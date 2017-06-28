@@ -55,27 +55,27 @@ showBreadcrumbs: true
                 <td>offset</td>
                 <td>integer</td>
                 <td>The number of records to skip, for use with pagination.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>limit</td>
                 <td>integer</td>
                 <td>The number of records to return. If not specified, the default is 100. The maximum allowed value is 1000.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_name</td>
                 <td>string</td>
                 <td>The name of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>status</td>
                 <td>string</td>
                 <td>The status of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>ui_vendor_id</td>
                 <td>string</td>
                 <td>The UI defined ID for the vendor.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -99,47 +99,47 @@ showBreadcrumbs: true
                 <td>vendor_id</td>
                 <td>integer</td>
                 <td>Vendor identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_name</td>
                 <td>string</td>
                 <td>The name of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>balance_due</td>
                 <td>number</td>
                 <td>The balance due on this vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>ui_defined_id</td>
                 <td>string</td>
                 <td>The UI defined Id of this vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>customer_number</td>
                 <td>string</td>
                 <td>The customer number.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_status</td>
                 <td>string</td>
                 <td>The status of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>issue_1099s</td>
                 <td>boolean</td>
                 <td>Whether to issue 1099s to this vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>primary_address</td>
                 <td><a href="#VendorAddress">vendor address</a></td>
                 <td>The primary address of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_method</td>
                 <td>string</td>
                 <td>The default payment of this vendor.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -162,97 +162,97 @@ showBreadcrumbs: true
                 <td>address_id</td>
                 <td>integer</td>
                 <td>The address identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>description</td>
                 <td>string</td>
                 <td>The description for this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>country</td>
                 <td>string</td>
                 <td>The country for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>city</td>
                 <td>string</td>
                 <td>The city for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>county</td>
                 <td>string</td>
                 <td>The county for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>state</td>
                 <td>string</td>
                 <td>The state or province (or suburb in NZ) for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>postal</td>
                 <td>string</td>
                 <td>Refers to the Postal Code or ZIP of the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>address_line</td>
                 <td>string</td>
                 <td>The street for this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>is_primary</td>
                 <td>boolean</td>
                 <td>If this address is the primary address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>is_invoices</td>
                 <td>boolean</td>
                 <td>If invoices are sent to this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>is_pos</td>
                 <td>boolean</td>
                 <td>If POs are sent to this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>is_1099</td>
                 <td>boolean</td>
                 <td>If 1099s are sent to this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>title</td>
                 <td>string</td>
                 <td>The title for the primary contact.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>first_name</td>
                 <td>string</td>
                 <td>The first name of the primary contact.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>middle_name</td>
                 <td>string</td>
                 <td>The middle initial or name of the primary contact.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>last_name</td>
                 <td>string</td>
                 <td>The last name of the primary contact.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>suffix</td>
                 <td>string</td>
                 <td>The suffix of the primary contact.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>position</td>
                 <td>string</td>
                 <td>The position of the primary contact.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>address_contact_methods</td>
                 <td>array of <a href="#AddressContactMethod">address contact methods</a></td>
                 <td>The list of contact methods for this address.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -276,17 +276,17 @@ showBreadcrumbs: true
                 <td>contact_method_id</td>
                 <td>integer</td>
                 <td>The address contact method identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>contact_type</td>
                 <td>string</td>
                 <td>The type of contact (email, phone, etc).</td>
-            <tr>
+            </tr>
             <tr>
                 <td>contact_info</td>
                 <td>string</td>
                 <td>The contact information (email address, phone number, etc) for this method.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -310,32 +310,32 @@ showBreadcrumbs: true
                 <td>has_credit_limit</td>
                 <td>boolean</td>
                 <td>Whether or not this vendor has as credit limit.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>credit_limit</td>
                 <td>number</td>
                 <td>The credit limit, if any.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_terms</td>
                 <td>string</td>
                 <td>The terms of the payment (NET D).</td>
-            <tr>
+            </tr>
             <tr>
                 <td>account_name</td>
                 <td>string</td>
                 <td>The account from which to pay invoices.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_method</td>
                 <td>string</td>
                 <td>The payment method for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_option</td>
                 <td>string</td>
                 <td>The payment option for this invoice.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -359,47 +359,47 @@ showBreadcrumbs: true
                 <td>vendor_id</td>
                 <td>integer</td>
                 <td>Vendor identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_name</td>
                 <td>string</td>
                 <td>The name of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>balance_due</td>
                 <td>number</td>
                 <td>The balance due on this vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>ui_defined_id</td>
                 <td>string</td>
                 <td>The UI defined ID for this vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>customer_number</td>
                 <td>string</td>
                 <td>The customer number.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_status</td>
                 <td>string</td>
                 <td>The status of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>issue_1099s</td>
                 <td>boolean</td>
                 <td>Whether to issue 1099s to this vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>addresses</td>
                 <td>array of <a href="#VendorAddress">vendor addresses</a></td>
                 <td>The address(es) of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_payment_default</td>
                 <td><a href="#VendorPaymentDefault">vendor payment default</a></td>
                 <td>The default payment of this vendor.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -422,47 +422,47 @@ showBreadcrumbs: true
                 <td>note_action_id</td>
                 <td>integer</td>
                 <td>The note/action identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>note_type</td>
                 <td>string</td>
                 <td>The type - note or action.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>date</td>
                 <td>string</td>
                 <td>The date for this note/action.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>content</td>
                 <td>string</td>
                 <td>The content of this note/action.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>description</td>
                 <td>string</td>
                 <td>The description for this note/action.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>type</td>
                 <td>string</td>
                 <td>The type of the note/action.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>is_complete</td>
                 <td>boolean</td>
                 <td>Whether this note/action is complete.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>assign_to</td>
                 <td>string</td>
                 <td>To whom this note/action is assigned.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>completed_date</td>
                 <td>string</td>
                 <td>The date on which this note/action was completed.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -485,32 +485,32 @@ showBreadcrumbs: true
                 <td>offset</td>
                 <td>integer</td>
                 <td>The number of records to skip.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>limit</td>
                 <td>integer</td>
                 <td>The number of records to return. If not specified, the default is 100. The maxiumum allowed value is 1000.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>to_date</td>
                 <td>date-time</td>
                 <td>Filter for invoices before a certain date.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>from_date</td>
                 <td>date-time</td>
                 <td>Filter for invoices after a certain date.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_status</td>
                 <td>string</td>
                 <td>Filter by the status of the invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_name</td>
                 <td>string</td>
                 <td>Filter by vendor name.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -534,87 +534,87 @@ showBreadcrumbs: true
                 <td>invoice_id</td>
                 <td>integer</td>
                 <td>The invoice identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_number</td>
                 <td>string</td>
                 <td>The number for the invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_date</td>
                 <td>date-time</td>
                 <td>The date for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_id</td>
                 <td>integer</td>
                 <td>The vendor identifier associated with this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_name</td>
                 <td>string</td>
                 <td>The name of the vendor associated with this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_status</td>
                 <td>string</td>
                 <td>The status of the vendor.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>amount</td>
                 <td>number</td>
                 <td>The amount for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>description</td>
                 <td>string</td>
                 <td>The description of this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>status</td>
                 <td>string</td>
                 <td>The status of this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_post_status</td>
                 <td>string</td>
                 <td>The post status of this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>balance</td>
                 <td>number</td>
                 <td>The balance on this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>is_past_due</td>
                 <td>boolean</td>
                 <td>Whether this invoice is past due.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>amount_due</td>
                 <td>number</td>
                 <td>The amount due on this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>remit_to</td>
                 <td>string</td>
                 <td>The account number to which to remit for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_method</td>
                 <td>string</td>
                 <td>The method to which to pay this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>create_separate_payment</td>
                 <td>boolean</td>
                 <td>Whether to create a separate payment for invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>age</td>
                 <td>string</td>
                 <td>The age of this invoice.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -638,82 +638,82 @@ showBreadcrumbs: true
                 <td>invoice_id</td>
                 <td>integer</td>
                 <td>The invoice identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_id</td>
                 <td>integer</td>
                 <td>The vendor identifier associated with this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>vendor_name</td>
                 <td>string</td>
                 <td>The name of the vendor associated with this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_number</td>
                 <td>string</td>
                 <td>The number for the invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_date</td>
                 <td>date-time</td>
                 <td>The date for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>due_date</td>
                 <td>date-time</td>
                 <td>The due date for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>amount</td>
                 <td>number</td>
                 <td>The amount for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>balance</td>
                 <td>number</td>
                 <td>The balance on this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>total_paid</td>
                 <td>number</td>
                 <td>The total amount paid on this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>description</td>
                 <td>string</td>
                 <td>The description of this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>approval_status</td>
                 <td>string</td>
                 <td>The approval status of this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>invoice_payment_details</td>
                 <td><a href="#InvoicePaymentDetails">invoice payment details</a></td>
                 <td>The payment details for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>post_status</td>
                 <td>string</td>
                 <td>The post status of this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>post_date</td>
                 <td>date-time</td>
                 <td>The post date for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>distribute_discounts</td>
                 <td>boolean</td>
                 <td>Whether to distribute discounts on this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>distributions</td>
                 <td>array of <a href="#Distribution">distributions</a></td>
                 <td>The distributions on this invoice.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -736,32 +736,32 @@ showBreadcrumbs: true
                 <td>remit_to</td>
                 <td><a href="#RemitToAddress">remit to address</a></td>
                 <td>The address to which to remit for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_method</td>
                 <td>string</td>
                 <td>The method with which the invoice will be paid.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>paid_from</td>
                 <td>string</td>
                 <td>The bank from which payments are made.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>hold_payment</td>
                 <td>boolean</td>
                 <td>Whether to hold payment on this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>create_separate_payment</td>
                 <td>boolean</td>
                 <td>Whether to create a separate payment for this invoice.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payments</td>
                 <td>array of <a href="#InvoicePaymentSummary"> invoice payment summaries</a></td>
                 <td>The payments on this invoice.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -785,47 +785,47 @@ showBreadcrumbs: true
                 <td>address_id</td>
                 <td>integer</td>
                 <td>The address identifier.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>description</td>
                 <td>string</td>
                 <td>The description for this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>country</td>
                 <td>string</td>
                 <td>The country for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>city</td>
                 <td>string</td>
                 <td>The city for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>county</td>
                 <td>string</td>
                 <td>The county for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>state</td>
                 <td>string</td>
                 <td>The state or province (or suburb in NZ) for the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>postal</td>
                 <td>string</td>
                 <td>Refers to the Postal Code or ZIP of the address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>address_line</td>
                 <td>string</td>
                 <td>The street for this address.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>contact_name</td>
                 <td>string</td>
                 <td>The full name of the contact for this address.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -848,32 +848,32 @@ showBreadcrumbs: true
                 <td>payment_date</td>
                 <td>date-time</td>
                 <td>The date of this payment.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>transaction_number</td>
                 <td>string</td>
                 <td>The transaction number for this payment.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>payment_status</td>
                 <td>string</td>
                 <td>The status for this payment.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>amount</td>
                 <td>number</td>
                 <td>The amount of this payment.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>br_transaction_id</td>
                 <td>integer</td>
                 <td>The bank register transaction identifier for this payment.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>checks_7_id</td>
                 <td>integer</td>
                 <td>The Checks identifier for this payment (FE 7).</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -892,37 +892,36 @@ showBreadcrumbs: true
             </tr>
         </thead>
         <tbody>
-
             <tr>
                 <td>distribution_id</td>
                 <td>integer</td>
                 <td>The identifier for this distribution.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>distribution_split</td>
                 <td>array of <a href="#DistributionSplit">distribution splits</a></td>
                 <td>The splits on this distribution.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>amount</td>
                 <td>number</td>
                 <td>The distribution amount.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>description</td>
                 <td>string</td>
                 <td>The description for this distribution.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>account_number</td>
                 <td>string</td>
                 <td>The account number for this distribution.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>type_code</td>
                 <td>string</td>
                 <td>The journal entry transaction type (debit or credit).</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -941,32 +940,31 @@ showBreadcrumbs: true
             </tr>
         </thead>
         <tbody>
-
             <tr>
                 <td>distribution_split_id</td>
                 <td>integer</td>
                 <td>The identifier for this distribution split.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>ui_project_id</td>
                 <td>string</td>
                 <td>The project id for this split.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>transaction_code_values</td>
                 <td>array of <a href="#TransactionCodeValue">transaction code values</a></td>
                 <td>The transaction codes and values for this split.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>amount</td>
                 <td>number</td>
                 <td>The amount for this distribution split.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>percent</td>
                 <td>number</td>
                 <td>The amount percentage for this distribution split.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -989,12 +987,12 @@ showBreadcrumbs: true
                 <td>name</td>
                 <td>string</td>
                 <td>The name for this transaction code.</td>
-            <tr>
+            </tr>
             <tr>
                 <td>value</td>
                 <td>string</td>
                 <td>The value for this transaction code.</td>
-            <tr>
+            </tr>
         </tbody>
     </table>
 </div>
