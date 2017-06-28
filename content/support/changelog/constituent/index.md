@@ -20,6 +20,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 We updated the concept of inactive addresses to be consistent across address endpoints and better aligned with the web interface. Now, addresses are only marked inactive if their `end_date` is in the past.
 
+
 ## 2017-05-17
 
 ### New
