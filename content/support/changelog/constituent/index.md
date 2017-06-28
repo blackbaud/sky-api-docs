@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-06-27
+
+### Changed
+
+ - We updated the concept of inactive addresses to be consistent across address endpoints and better aligned with the web interface. Now, addresses are only marked inactive if their `end_date` is in the past.
+
 ## 2017-05-17
 
 ### New
@@ -139,7 +145,7 @@ GET operations such as [Relationship list (Single constituent)]({{ stache.config
 ### Changed
 
  - The `date_added` parameter on the [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now returns a `sort_token` on the <code>next_link</code> URL to enable pagination for stable data syncing.
- - The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes a <code>sort</code> parameter to sort constituents based on specified fields. For example, `sort=date_modified,-last` returns constituents in ascending order based on the <code>date_modified</code> field and then orders constituents with the same last-modified date in descending order based on their last names. If the <code>sort</code> parameter provides only the `date_modified` field or only the `date_added` field, then it returns a `sort_token` on the <code>next_link</code> URL. 
+ - The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes a <code>sort</code> parameter to sort constituents based on specified fields. For example, `sort=date_modified,-last` returns constituents in ascending order based on the <code>date_modified</code> field and then orders constituents with the same last-modified date in descending order based on their last names. If the <code>sort</code> parameter provides only the `date_modified` field or only the `date_added` field, then it returns a `sort_token` on the <code>next_link</code> URL.
 
 ## 2017-04-06
 
