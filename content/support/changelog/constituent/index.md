@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-06-28
+
+### Changed
+
+We added the `start`, `end`, `seasonal_start`, and `seasonal_end` properties to the [address]({{ stache.config.portal_contracts }}#Address) entity.
+
 ## 2017-06-27
 
 ### Changed
