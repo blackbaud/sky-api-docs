@@ -14,12 +14,11 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-06-27
+## 2017-07-06
 
 ### Changed
 
-We updated the concept of inactive addresses to be consistent across address endpoints and better aligned with the web interface. Now, addresses are only marked inactive if their `end_date` is in the past.
-
+We updated the concept of inactive addresses for consistency across address endpoints and to better align with the web interface. Addresses are now marked inactive only when the `end_date` is in the past.
 
 ## 2017-05-17
 
