@@ -356,6 +356,16 @@ showBreadcrumbs: true
                 <td>string</td>
                 <td>The identifier of the appeal associated with the gift split.</td>
             </tr>
+            <tr>
+                <td>gift_aid_amount</td>
+                <td><a href="{{ stache.config.constituent_entity_reference }}#Currency">currency</a></td>
+                <td>The amount of tax reclaimed from Gift Aid for this gift split. For UK only.</td>
+            </tr>
+            <tr>
+                <td>gift_aid_qualification_status</td>
+                <td>string</td>
+                <td>The Gift Aid qualification status of the gift split. Available values are: qualified, notqualified, and partlyqualified. For UK only.</td>
+            </tr>
         </tbody>
     </table>
 </div>
