@@ -626,6 +626,9 @@ portal_endpoints_address_list: <%= stache.config.portal_endpoints_AP %>operation
 # Contact method List
 portal_endpoints_contact_method_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c250/
 
+# Media Type List
+portal_endpoints_media_type_list: <%= stache.config.portal_endpoints_AP %>operations/5956574da9db95137833bc8b/
+
 # Note List
 portal_endpoints_note_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c252/
 
@@ -634,6 +637,9 @@ portal_endpoints_invoice_get: <%= stache.config.portal_endpoints_AP %>operations
 
 # Invoice Post
 portal_endpoints_invoice_post: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d9/
+
+# Invoice Attachment Post
+portal_endpoints_invoice_attachment_post: <%= stache.config.portal_endpoints_AP %>operations/5956574da9db95137833bc8a/
 
 # Invoice 1099 Amount
 portal_endpoints_invoice_1099_amount: <%= stache.config.portal_endpoints_AP %>operations/590c805ca9db950f94838e5f/
