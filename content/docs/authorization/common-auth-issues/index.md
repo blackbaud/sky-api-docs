@@ -93,7 +93,7 @@ For example, when you perform a [request for an access token](/docs/authorizatio
 
 A `redirect_uri` that does not match the one used when making the [initial authorization](/docs/authorization/auth-code-flow/#step-1--request-authorization) request can also cause this error. To resolve this, use the same `redirect_uri` in both operations.
 
-You may also see this when you [refresh an access token](/docs/authorization/auth-code-flow/#step-7--refresh-access-token), if you provide an expired, revoked, or otherwise invalid refresh token.
+You may also see this when you [refresh an access token](/docs/authorization/auth-code-flow/#step-7--refresh-access-token) if you provide an expired, revoked, or otherwise invalid refresh token.
  
 ## Call the {{ stache.config.product_name_short }}
 
