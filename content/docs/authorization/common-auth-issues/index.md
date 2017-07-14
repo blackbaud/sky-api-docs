@@ -87,9 +87,13 @@ For more information, see step 4 of [Authorization Code Flow documentation](/doc
 
 > "invalid_grant" error
 
-This error is caused by an invalid value in your request to the `/token` endpoint. For example, this error will be seen when providing an invalid, expired, or previously used authorization code. In this case, you must restart the authorization process and obtain a fresh authorization code from the `/authorization` endpoint. Note that authorization codes expire in 5 minutes and are not reusable. Be sure to exchange them for access tokens quickly.
+This error is caused by an invalid value in your request to the `/token` endpoint as part of the [Authorization Code Flow](/docs/authorization/auth-code-flow/).
 
-This error can also been seen when the `redirect_uri` provided to the `/token` endpoint does not match the one used when making the initial authorization request. To resolve this, use the same `redirect_uri` in both operations.
+For example, when you perform a [request for an access token](/docs/authorization/auth-code-flow/#step-4--request-tokens), you will see this error when providing an invalid, expired, or previously used authorization code. In this case, you must restart the authorization process and obtain a new authorization code from the `/authorization` endpoint. The authorization codes expire in a period of time (currently, {{ stache.config.auth_token_expiration_minutes }}) and are not reusable. Your application should exchange them for access tokens promptly.
+
+A `redirect_uri` that does not match the one used when making the [initial authorization](/docs/authorization/auth-code-flow/#step-1--request-authorization) request can also cause this error. To resolve this, use the same `redirect_uri` in both operations.
+
+You may also see this when you [refresh an access token](/docs/authorization/auth-code-flow/#step-7--refresh-access-token), if you provide an expired, revoked, or otherwise invalid refresh token.
  
 ## Call the {{ stache.config.product_name_short }}
 
