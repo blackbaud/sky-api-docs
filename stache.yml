@@ -6,6 +6,7 @@ product_name_short: SKY API
 api_type_name: SKY API
 title: Blackbaud <%= stache.config.product_name_short %> Developer Portal
 authorization_service_name: Blackbaud Authorization Service
+auth_token_expiration_minutes: 5 minutes
 access_token_expiration_minutes: 60 minutes
 refresh_token_expiration_days: 60 days
 portal_name: Blackbaud Developer Portal
