@@ -14,9 +14,41 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-05-05
+## 2017-06-30
 
 ### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_invoice_attachment_post }}">
+				<td>Invoice attachment</td>
+				<td>POST</td>
+				<td>/invoices/attachments</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_media_type_list }}">
+				<td>Media type (List)</td>
+				<td>GET</td>
+				<td>/mediatypes</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+## May 2017
+
+### 2017-05-05
+
+#### New
 
 Added the following endpoints:
 
