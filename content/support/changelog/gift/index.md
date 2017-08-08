@@ -14,7 +14,7 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-08-04
+## 2017-08-08
 
 #### New
 
@@ -42,6 +42,12 @@ Added the following endpoint:
 ### Changed
 
 We added the `payments` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
+
+## 2017-08-04
+
+### Changed
+
+We updated the `next_link` property on the [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) to be more consistent with other lists.
 
 ## 2017-06-23
 
