@@ -14,6 +14,35 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-08
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_subtypes_get_list }}">
+        <td>Gift subtypes (Get)</td>
+        <td>GET</td>
+        <td>/giftsubtypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+We added the `payments` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
+
 ## 2017-08-04
 
 ### Changed
