@@ -14,6 +14,30 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-08
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_edit }}">
+        <td>Relationship (Edit)</td>
+        <td>PATCH</td>
+        <td>/relationships/{relationship_id}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2017-06-28
 
 ### Changed
