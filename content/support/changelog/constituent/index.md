@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-11
+
+### Changed
+
+The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now appropriately returns the `inactive` property on [address]({{ stache.config.portal_contracts }}#Address), [phone]({{ stache.config.portal_contracts }}#Phone), [email address]({{ stache.config.portal_contracts }}#EmailAddress), and [online presence]({{ stache.config.portal_contracts }}#OnlinePresence) entities.
+
 ## 2017-08-08
 
 ### New
