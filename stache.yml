@@ -51,7 +51,6 @@ files:
   css:
     - /assets/css/custom.css
     - /assets/css/entity-reference.css
-    - /assets/font-awesome/css/font-awesome.css
 
   js:
     - /assets/js/scrollreveal.js
@@ -680,4 +679,4 @@ bbauth:
   rootUrl: https://sky-api-test.docs.blackbaud.com
 
 # Sky UX
-latest_sky_release: '1.9.2'
+latest_sky_release: '1.16.0-4'
