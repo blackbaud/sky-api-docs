@@ -14,9 +14,84 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-06-15
+## 2017-08-14
+
+### New
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_journal_entry_batch_attachment }}">
+				<td>Journal entry batch attachment</td>
+				<td>POST</td>
+				<td>/journalentrybatches/attachments</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gl_media_type_list }}">
+				<td>Media type (List)</td>
+				<td>GET</td>
+				<td>/mediaTypes</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 ### Changed
+
+- For the following endpoint, we added the division, department, location, and type filters. Additional data is also returned:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_project_get }}">
+				<td>Project</td>
+				<td>GET</td>
+				<td>/projects</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+- For the following endpoint, we added the encumbrance and post date filters. Additional data is also returned:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_search }}">
+				<td>Transaction distribution (List)</td>
+				<td>GET</td>
+				<td>/transactiondistributions</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+## June 2017
+
+### 2017-06-15
+
+#### Changed
 
 We made several changes to the [Get Account (Search)]({{ stache.config.portal_endpoints_account_search }}), [Get Project (Search)]({{ stache.config.portal_endpoints_project_search }}), [Get Journal entry batch (List)]({{ stache.config.portal_endpoints_journal_entry_batch_list }}), and [Get Transaction distribution (List)]({{ stache.config.portal_endpoints_transaction_distribution_search }}) endpoints.
 
