@@ -49,8 +49,7 @@ In addition, the request must include the following headers:
         <td>Authorization</td>
         <td>
           <p><em>Required.</em> Your application's basic authentication credentials.  The value of this header must be a base 64-encoded string that contains the application ID and secret that were provided when you [registered your application]({{ stache.config.guide_registering_your_app }}). The value must have the format: <code>Basic &lt;base64 encoded {{ stache.config.guide_apps_client_id_name }}:{{ stache.config.guide_apps_client_secret_name }}&gt;</code>.</p>
-          <p class="alert alert-info"><strong><em>Note:</em></strong> As an alternative to using the <code>Authorization</code> header, you may supply your application ID and secret as part of the request body as <code>client_id</code> and <code>client_secret</code> parameters, respectively.</p>
-          <hr>
+          <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> As an alternative to using the <code>Authorization</code> header, you may supply your application ID and secret as part of the request body as <code>client_id</code> and <code>client_secret</code> parameters, respectively.</bb-alert></p>
           <p><em>Since this request uses your **{{ stache.config.guide_apps_client_secret_name }}**, it should be made from the server to avoid exposing the value to the public.</em></p>
         </td>
       </tr>

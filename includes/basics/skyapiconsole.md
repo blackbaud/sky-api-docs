@@ -16,5 +16,5 @@
 
 <p style="text-align: left;">Once added, The {{ stache.config.dev_console_name }} will appear in the list of activated applications for the tenant.</p>
 
-<p class="alert alert-warning"><strong>Important!&nbsp;&nbsp;</strong>The same process can be followed to activate additional applications for your tenant. Simply substitute the application ID for the one provided in the <a href="{{ stache.config.developer_app_management_url }}" target= "_blank"><strong>My Applications</strong></a> area of your Developer Account to add your own application, or use the application ID provided to you by a Partner or third party developer that you know and trust. </p>
+<p><bb-alert bb-alert-type="warning"><strong>Important!&nbsp;&nbsp;</strong>The same process can be followed to activate additional applications for your tenant. Simply substitute the application ID for the one provided in the <a href="{{ stache.config.developer_app_management_url }}" target= "_blank"><strong>My Applications</strong></a> area of your Developer Account to add your own application, or use the application ID provided to you by a Partner or third party developer that you know and trust. </bb-alert></p>
 </div></div>

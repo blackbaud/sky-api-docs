@@ -27,18 +27,17 @@ appShowcase:
         <div class="showcase-desc">
           <h2>{{ title }}</h2>
           <p>{{ description }}</p>
-          <p>
-            {{# if repo }}
+            {{# if repo }}<p>
               <a class="btn btn-primary" href="{{ repo }}" target="_blank">
                 <i class="fa fa-github"></i> View on GitHub
-              </a>
+              </a></p>
             {{/ if }}
             {{# if demo }}
+            <p>
               <a class="btn btn-default" href="{{ demo }}" target="_blank">
                 <i class="fa fa-globe"></i> View live demo
-              </a>
+              </a></p>
             {{/ if }}
-          </p>
         </div>
       </div>
     {{# if lastOrMod1 }}

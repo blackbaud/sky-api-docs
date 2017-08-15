@@ -16,12 +16,12 @@ title: Support
 If you have questions about the API and other tools and resources that we make available to developers, here are the best methods for getting in touch with us.
 
 
-<p class="alert alert-warning">Please note: This page tells you how to get support for <em>{{ stache.config.api_type_name }} only.</em>  If you have a quest about {{ stache.config.product_name_short }} or about your account status, please visit the main Blackbaud NXT help page where you will find information to assist you.</p>
+<p><bb-alert bb-alert-type="warning">Please note: This page tells you how to get support for <em>{{ stache.config.api_type_name }} only.</em>  If you have a quest about {{ stache.config.product_name_short }} or about your account status, please visit the main Blackbaud NXT help page where you will find information to assist you.</bb-alert></p>
 
 
 ## General Questions
 
-Many of the pages at this website have a comment thread at the bottom of the page.  If you post your question or suggestion there we will try our best to answer as soon as we can. This is a particularly good plave to post:
+Many of the pages at this website have a comment thread at the bottom of the page.  If you post your question or suggestion there we will try our best to answer as soon as we can. This is a particularly good place to post:
 
 - Questions on documentation, tutorials and resources
 - Questions around our terms of use
