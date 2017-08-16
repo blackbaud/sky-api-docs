@@ -10,6 +10,6 @@
             </div>
         </div>
         <p><img src="/assets/img/app_credentials_sample.png" class="img-responsive"></p>
-        <p class="alert alert-warning"><strong><em>Very Important!&nbsp;&nbsp;</em></strong> Keep the application secret private and safe! If the secret is compromised, <a href="{{ stache.config.guide_registering_your_app }}#regenerate-your-secret" target="_blank">regenerate it.</a> Blackbaud reserves the right to remove or deactivate your application to protect customer data.</p>
+        <p><bb-alert bb-alert-type="warning"><strong><em>Very Important!&nbsp;&nbsp;</em></strong> Keep the application secret private and safe! If the secret is compromised, <a href="{{ stache.config.guide_registering_your_app }}#regenerate-your-secret" target="_blank">regenerate it.</a> Blackbaud reserves the right to remove or deactivate your application to protect customer data.</bb-alert></p>
     </div>
 </div>

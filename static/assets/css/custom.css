@@ -37,7 +37,7 @@ tr.clickable-row:hover {
 }
 
 .content li {
-    font-size: 13px;
+    font-size: 14px;
     margin: 0 0 9px 0;
     line-height: 1.6em;
 }
@@ -108,7 +108,7 @@ img, .img-responsive,
  }
 
 i.fa.text-primary,
-i.fa.text-success {
+i.fa.text-success-blue {
     color: rgb(0, 180, 241);
 }
 
@@ -380,7 +380,7 @@ li.slide, li.introslide {
 }
 
 .slide li {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 h1.tutorial {

@@ -70,7 +70,7 @@ If the user granted your app permission, the URL fragment will contain the follo
   </table>
 </div>
 
-<div class="alert alert-info" role="alert"><strong><em>Reminder:</em></strong> The Implicit Grant Flow provides a short-lived access token that expires in {{ stache.config.access_token_expiration_minutes }} minutes. A refresh token is not provided, so when the token expires your application should re-authorize the user again.</div>
+<p><bb-alert bb-alert-type="info"><strong><em>Reminder:</em></strong> The Implicit Grant Flow provides a short-lived access token that expires in {{ stache.config.access_token_expiration_minutes }} minutes. A refresh token is not provided, so when the token expires your application should re-authorize the user again.</bb-alert></p>
 
 Successful redirect response example (with extra line breaks for display purposes only):
 

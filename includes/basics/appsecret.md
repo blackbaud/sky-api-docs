@@ -15,4 +15,4 @@ If you think your **{{ stache.config.guide_apps_client_secret_name }}** has been
 [my_apps_regenerate]: /assets/img/my_applications_regenerate.jpg
 [my_apps_regeneratedsecret]: /assets/img/my_applications_regeneratedsecret.jpg
 
-<p class="alert alert-warning"><strong>Important!&nbsp;&nbsp;</strong> Don't forget to update your application to use the regenerated value when requesting access during the <a href="{{ stache.config.guide_web_api_authorization }}" target="_blank">authorization process</a>.</p>
+<p><bb-alert bb-alert-type="warning"><strong>Important!&nbsp;&nbsp;</strong> Don't forget to update your application to use the regenerated value when requesting access during the <a href="{{ stache.config.guide_web_api_authorization }}" target="_blank">authorization process</a>.</bb-alert></p>

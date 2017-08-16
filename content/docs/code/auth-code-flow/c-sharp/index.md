@@ -201,9 +201,10 @@ public ActionResult Authenticated()
 </ul>
 
 ## Displaying the Log in button
+
 <ul>
 <li><p>If the user is not authenticated, a **Log in** button is displayed.</p>
-<p class="alert alert-info"><strong><em>Note:</em></strong> The browser may display a warning that the connection is not private. For this tutorial, you can ignore this message. To proceed, click <strong>Show advanced</strong> and then click <strong>Proceed to localhost (unsafe)</strong>.</p>
+<p><bb-alert bb-alert-type="warning"><strong><em>Note:</em></strong> The browser may display a warning that the connection is not private. For this tutorial, you can ignore this message. To proceed, click <strong>Show advanced</strong> and then click <strong>Proceed to localhost (unsafe)</strong>.</bb-alert></p>
 ![Login](/assets/img/auth_tutorial_login_c_sharp.png "Log in")</li>
 <li><p>Open the **Views/Shared/_Layout.cshtml** file. Notice that the `body` tag includes an attribute named `ng-app`. The front-end of our application uses AngularJS to interact with our Web server routes. The `div.container` element includes an attribute named `ng-controller` which references an AngularJS controller to handle the model data.</p>
 <pre><code class="language-markup">&lt;body ng-app="AuthCodeFlowTutorial">
