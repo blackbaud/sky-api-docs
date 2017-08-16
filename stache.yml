@@ -581,6 +581,12 @@ portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints
 # Journal Entry Custom Field List
 portal_endpoints_journal_entry_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a44/
 
+# Journal Entry Batch Attachment
+portal_endpoints_journal_entry_batch_attachment: <%= stache.config.portal_endpoints_GL %>operations/5991f90aa9db950d4c6fc35b/
+
+# Media Type List
+portal_endpoints_gl_media_type_list: <%= stache.config.portal_endpoints_GL %>operations/5991f90ba9db950d4c6fc35c/
+
 # Project Custom Field List
 portal_endpoints_project_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a45/
 
