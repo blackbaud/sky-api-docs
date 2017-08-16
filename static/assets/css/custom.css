@@ -108,6 +108,7 @@ img, .img-responsive,
  }
 
 i.fa.text-primary,
+i.fa.text-success,
 i.fa.text-success-blue {
     color: rgb(0, 180, 241);
 }
