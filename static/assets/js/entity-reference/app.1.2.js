@@ -154,11 +154,7 @@
             var document = $window.document;
             var hash = getHash($window.location);
 
-            console.log(hash);
-
             var elem = document.getElementsByName(hash)[0];
-
-            console.log(elem);
 
             if (elem) {
                 elem.scrollIntoView();
