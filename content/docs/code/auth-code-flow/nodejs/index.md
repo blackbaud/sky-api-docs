@@ -163,7 +163,7 @@ $ npm install</code></pre>
 
 - After you run `npm install`, verify that the **sky-api-auth-tutorial** working directory contains the **node_modules** subfolder.
 
-	<p class="alert alert-info"><code>npm install</code> depends on a reliable Internet connection to install dependencies. If you have issues running the command, you can hard delete the **node_modules** folder and run `npm install` again.</p>
+<p><bb-alert bb-alert-type="info"><code>npm install</code> depends on a reliable Internet connection to install dependencies. If you have issues running the command, you can hard delete the **node_modules** folder and run `npm install` again.</bb-alert></p>
 
 ## Step 7 &mdash; Run the Application
 
@@ -182,7 +182,7 @@ $ npm install</code></pre>
 
 - To request the home page open your browser to <a href="http://localhost:5000/" target="https://localhost:5000/">http://localhost:5000/</a>. It displays the authorization options.
   ![Login][auth-tutorial-login]
-  <p class="alert alert-info">Your browser may display a warning that the connection is not private. For this tutorial, ignore this message. To proceed, click <strong>Show advanced</strong>, and then click <strong>Proceed to localhost (unsafe)</strong>.</p>
+<p><bb-alert bb-alert-type="info">Your browser may display a warning that the connection is not private. For this tutorial, ignore this message. To proceed, click <strong>Show advanced</strong>, and then click <strong>Proceed to localhost (unsafe)</strong>.</bb-alert></p>
 
 - Open the **ui** folder and the **index.html** file. This opens the home page for our application, where we can initialize our app and load assets to build our page.
 - The `body` tag includes an attribute named `ng-app`. The front-end of our application uses <a href="https://angularjs.org/">AngularJS</a> to interact with our Node.js server routes.
@@ -218,7 +218,7 @@ $ npm install</code></pre>
                       redirectTo: '/home'
                   })
                   </code></pre>
-                  <p class="alert alert-info">In this example, we use two views and two controllers.  As your app grows, you can add more views and controllers.</p>
+                  <p><bb-alert bb-alert-type="info">In this example, we use two views and two controllers.  As your app grows, you can add more views and controllers.</bb-alert></p>
 
 ## Display the authorize buttons
 - Open the **app** folder and the **main-template.html** file.  This is our application's core view.
@@ -324,7 +324,7 @@ app.get('/auth/logout', routes.auth.getLogout);</code></pre>
     }));
 }</code></pre>
 
-	<p class="alert alert-warning">The access token exchange should occur server side. Do not expose the **{{ stache.config.guide_apps_client_secret_name }}** to users in client-side code. Do not expose your **{{ stache.config.guide_apps_client_secret_name }}** in a source code repository such as GitHub.</p>
+	<p><bb-alert bb-alert-type="warning">The access token exchange should occur server side. Do not expose the **{{ stache.config.guide_apps_client_secret_name }}** to users in client-side code. Do not expose your **{{ stache.config.guide_apps_client_secret_name }}** in a source code repository such as GitHub.</bb-alert></p>
 
   The path `/auth/callback` is routed to the `getCallback()` function that exchanges authorization codes for access tokens.
 

@@ -51,7 +51,7 @@ When navigating, you'll need to include a few parameters in the query string. Th
   </table>
 </div>
 
-<p class="alert alert-warning"><b>Note: </b>to facilitate local development, we allow the use of _http_ and _localhost_ or the localhost IP (_127.0.0.1_).  In production however, we require the use of _https_ for proper security when redirecting.</p>
+<p><bb-alert bb-alert-type="warning"><b>Note: </b>to facilitate local development, we allow the use of _http_ and _localhost_ or the localhost IP (_127.0.0.1_).  In production however, we require the use of _https_ for proper security when redirecting.</bb-alert></p>
 
 {{# markdown }}
 

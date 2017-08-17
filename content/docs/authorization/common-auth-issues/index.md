@@ -17,7 +17,7 @@ You may encounter one of the following common issues when initiating authorizati
 
 ## Request authorization
 
-<p class="alert alert-warning"><strong>Important!</strong> Pop up blockers may interfere with obtaining access tokens in the {{ stache.config.dev_console_name }}. Please enable pop ups when using the {{ stache.config.dev_console_name }} to obtain access tokens.</p>
+<p><bb-alert bb-alert-type="warning"><strong>Important!</strong> Pop up blockers may interfere with obtaining access tokens in the {{ stache.config.dev_console_name }}. Please enable pop ups when using the {{ stache.config.dev_console_name }} to obtain access tokens.</bb-alert></p>
 
 ### Invalid client_id 
 
@@ -75,7 +75,7 @@ After you register an application, its credentials are created and displayed in 
  
 This error indicates that we were unable to retrieve the application’s credentials (client ID + secret) from either the authorization header or the request body. To resolve, ensure that you are correctly providing the application credentials as base64-encoded values within the Authorization header (preferred), or as form-url-encoded values in the request body. 
 
-<p class="alert alert-info"><strong><em>Note:</em></strong> If using the Authorization header, you need to include a space after <code>Basic</code>. The value must have the format: <code>Basic &lt;base64 encoded Application ID:Application secret&gt;</code>. </p>
+<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> If using the Authorization header, you need to include a space after <code>Basic</code>. The value must have the format: <code>Basic &lt;base64 encoded Application ID:Application secret&gt;</code>.</bb-alert></p>
 
 For more information, see step 4 of [Authorization Code Flow documentation](/docs/authorization/auth-code-flow/#step-4-mdash-request-tokens).
 

@@ -49,7 +49,7 @@ In addition, the request must include the following headers:
         <td>Authorization</td>
         <td>
           <p><em>Required.</em> Your application's basic authentication credentials.  The value of this header must be a base 64-encoded string that contains the application ID and secret that were provided when you [registered your application]({{ stache.config.guide_registering_your_app }}). The value must have the format: <code>Basic &lt;base64 encoded {{ stache.config.guide_apps_client_id_name }}:{{ stache.config.guide_apps_client_secret_name }}&gt;</code>.</p>
-          <p class="alert alert-info"><strong><em>Note:</em></strong> As an alternative to using the <code>Authorization</code> header, you may supply your application ID and secret as part of the request body as <code>client_id</code> and <code>client_secret</code> parameters, respectively.</p>
+          <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> As an alternative to using the <code>Authorization</code> header, you may supply your application ID and secret as part of the request body as <code>client_id</code> and <code>client_secret</code> parameters, respectively.</bb-alert></p>
           <hr>
           <p><em>Since this request uses your **{{ stache.config.guide_apps_client_secret_name }}**, it should be made from the server to avoid exposing the value to the public.</em></p>
         </td>
@@ -70,7 +70,7 @@ Content-Type: application/x-www-form-urlencoded
 
 grant_type=authorization_code&redirect_uri=https%3A%2F%2Fwww.example.com%2Foauth2%2Fcallback&code=bd2d702f47bc453580098c8076d471b4</code></pre>
 
-<p class="alert alert-warning"><strong><em>Note:</em></strong> The authorization code expires in 5 minutes.  Be sure to quickly exchange it for an access token.</p>
+<p><bb-alert bb-alert-type="warning"><strong><em>Note:</em></strong> The authorization code expires in 5 minutes.  Be sure to quickly exchange it for an access token.</bb-alert></p>
 
 {{/ markdown}}
 

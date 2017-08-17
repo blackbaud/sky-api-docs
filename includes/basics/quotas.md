@@ -12,4 +12,4 @@ Content-Type: application/json
   "message": "Out of call volume quota. Quota will be replenished in 00:06:46."
 }</code></pre>
 
-<p class="alert alert-info">The quota enforced for the {{ stache.config.api_product_name }} is 25,000 calls per day. If you need to increase your quota, please fill out our <a href="{{ stache.config.portal_ratelimit }}">**request form**</a>.</p>
+<p><bb-alert bb-alert-type="info">The quota enforced for the {{ stache.config.api_product_name }} is 25,000 calls per day. If you need to increase your quota, please fill out our <a href="{{ stache.config.portal_ratelimit }}">**request form**</a>.</bb-alert></p>
