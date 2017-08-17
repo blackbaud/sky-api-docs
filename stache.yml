@@ -406,11 +406,17 @@ portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints
 portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc458/
 portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc459/
 
+# Appeal Attachments
+portal_endpoints_appeal_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
 # Campaigns
 portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
 portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e3/
 
-# Campaigns Custom Fields
+# Campaign Custom Fields
 portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45b/
 portal_endpoints_campaign_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45c/
 portal_endpoints_campaign_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45e/
@@ -418,17 +424,29 @@ portal_endpoints_campaign_custom_fields_delete: <%= stache.config.portal_endpoin
 portal_endpoints_campaign_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45f/
 portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc460/
 
+# Campaign Attachments
+portal_endpoints_campaign_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_campaign_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
 # Funds
 portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc461/
 portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e4/
 
-# Funds Custom Fields
+# Fund Custom Fields
 portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc462/
 portal_endpoints_fund_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc463/
 portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc465/
 portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc464/
 portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc466/
 portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc467/
+
+# Fund Attachments
+portal_endpoints_fund_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
 
 # =============================================
 #       Gift API ENDPOINTS
