@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-21
+
+### Changed
+
+We added the `start_time`, `end_time`, `priority`, `direction`, and `outcome` properties to the [action]({{ stache.config.portal_contracts }}#Action) entity.
+
 ## 2017-08-08
 
 ### New
