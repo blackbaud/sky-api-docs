@@ -125,7 +125,7 @@ When you obtain a subscription to the {{ stache.config.api_type_name }}, we'll p
 
 We don't require you to rotate your subscription keys, and you can adopt whatever key rotation schedule and strategy that best fits your needs.  If you do need to regenerate your subscription keys, you can do so from your <a href="{{ stache.config.portal_profile }}">profile</a>.
 
-<p class="alert alert-warning"><strong><em>Important!&nbsp;</em></strong> Subscription keys are associated with your developer account, and should **NOT** be shared with the public since it would allow someone else to impersonate you when calling the {{ stache.config.api_type_name }}!</p>
+<p><bb-alert bb-alert-type="warning"><strong><em>Important!&nbsp;</em></strong> Subscription keys are associated with your developer account, and should **NOT** be shared with the public since it would allow someone else to impersonate you when calling the {{ stache.config.api_type_name }}!</bb-alert></p>
 
 ## My app
 

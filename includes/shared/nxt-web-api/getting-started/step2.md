@@ -10,7 +10,7 @@
 <p>Blackbaud approves the subscription requests. We will send you an email notification when your request is approved. After it is approved, you can view the subscription details within your developer <strong><a href="{{ stache.config.portal_profile }}" target="_blank">profile</a></strong>.</p></div>
 <div class="col-md-6" style="text-align: left;">
 
-<p class="alert alert-warning"><strong>Important!</strong> In order to be approved for a subscription key, you must be an authorized user in at least one instance of Raiser's Edge NXT or Financial Edge NXT. This requirement ensures that you have a tenant to make API calls against.</p>
+<p><bb-alert bb-alert-type="warning"><strong>Important!</strong> In order to be approved for a subscription key, you must be an authorized user in at least one instance of Raiser's Edge NXT or Financial Edge NXT. This requirement ensures that you have a tenant to make API calls against.</bb-alert></p>
 
 
 </div></div>

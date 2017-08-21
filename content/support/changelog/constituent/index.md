@@ -1414,7 +1414,7 @@ We implemented the following breaking changes:
 
   The response includes a `sort_token` within the `next_link` property. `sort_token` represents a token filter for providing the next set of constituents, ordered by the last modified date.
 
-  <p class="alert alert-info"><strong>Note:</strong> The Constituent (List) endpoint returns data with an average latency of 30 minutes.</p>
+<p><bb-alert bb-alert-type="info"><strong>Note:</strong> The Constituent (List) endpoint returns data with an average latency of 30 minutes.</bb-alert></p>
 
 ### 2016-05-06
 
@@ -1779,7 +1779,7 @@ Added the ability to create, edit, and delete [online presence]({{ stache.config
 #### Announcement:  Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }}) endpoints
 In the coming weeks, we will be standardizing the shape of our responses that return a collection of objects.  This standardization will allow us to be consistent across each endpoint as well as to facilitate some future enhancements around pagination within those endpoints.  The new representation of a collection will be a JSON object with two properties, a `count` which represents the total number of records meeting the criteria and a `value` property which represents the array of items for the current paged response.
 
-<p class="alert alert-warning">This change is scheduled for release by April 8, 2016.</p>
+<p><bb-alert bb-alert-type="warning">This change is scheduled for release by April 8, 2016.</bb-alert></p>
 
 #### How a collection response is formed today (Phones used as an example):
 
@@ -2156,7 +2156,7 @@ We removed the following endpoints:
   - Get a specific attachment for a constituent
   - [Add an attachment for a constituent]({{ stache.config.portal_endpoints_constituent_attachment_create }})
 
-  <p class="alert alert-info">Note that currently, all attachment records are viewable through the {{ stache.config.api_type_name }}, but only **link** attachments can be added.</p>
+<p><bb-alert bb-alert-type="info">Note that currently, all attachment records are viewable through the {{ stache.config.api_type_name }}, but only **link** attachments can be added.</bb-alert></p>
 
 #### Changed
 
