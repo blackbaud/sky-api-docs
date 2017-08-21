@@ -51,6 +51,7 @@ files:
   css:
     - /assets/css/custom.css
     - /assets/css/entity-reference.css
+    - /assets/font-awesome/css/font-awesome.css
 
   js:
     - /assets/js/scrollreveal.js
@@ -317,7 +318,7 @@ portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_
 # Constituent Relationship
 portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
 portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61e/
-portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/598a0dd7d7dcde047cb504d0/
+portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/tbd/
 portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61f/
 portal_endpoints_constituent_organization_contact_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c620/
 
@@ -440,10 +441,10 @@ portal_endpoints_gift: <%= stache.config.portal_endpoints %>58bdd5edd7dcde060460
 # Gifts
 portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc449/
 portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44a/
-portal_endpoints_gift_subtypes_get_list: <%= stache.config.portal_endpoints_gift %>operations/598a0dd6d7dcde047cb504ce/
 
 # Gift Custom Fields
 portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44f/
+portal_endpoints_all_gift_custom_field_get_list: <%= stache.config.portal_endpoints_gift %>operations/TODO/
 portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcd
 portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dce
 portal_endpoints_gift_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcb
@@ -581,12 +582,6 @@ portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints
 # Journal Entry Custom Field List
 portal_endpoints_journal_entry_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a44/
 
-# Journal Entry Batch Attachment
-portal_endpoints_journal_entry_batch_attachment: <%= stache.config.portal_endpoints_GL %>operations/5991f90aa9db950d4c6fc35b/
-
-# Media Type List
-portal_endpoints_gl_media_type_list: <%= stache.config.portal_endpoints_GL %>operations/5991f90ba9db950d4c6fc35c/
-
 # Project Custom Field List
 portal_endpoints_project_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a45/
 
@@ -685,4 +680,4 @@ bbauth:
   rootUrl: https://sky-api-test.docs.blackbaud.com
 
 # Sky UX
-latest_sky_release: '1.16.0-4'
+latest_sky_release: '1.9.2'
