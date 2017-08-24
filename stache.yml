@@ -225,6 +225,9 @@ portal_endpoints_action_types_get: <%= stache.config.portal_endpoints_constituen
 # Action Statuses
 portal_endpoints_action_statuses_get: <%= stache.config.portal_endpoints_constituent %>operations/574f4bc7d7dcde0740edb96a/
 
+# Action Locations
+portal_endpoints_action_locations_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+
 # Constituent Address
 portal_endpoints_constituent_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f03
 portal_endpoints_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5808fd85a9db9503b8d3de93
