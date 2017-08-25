@@ -21,11 +21,11 @@
     function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $rootScope) {
         var self = this;
         this.showErrorMessage = false;
-        this.swaggerCacheName = 'swaggerResponseCache-' + this.apiTitle;
 
         this.$onInit = onInit;
 
         function onInit() {
+            this.swaggerCacheName = 'swaggerResponseCache-' + this.apiTitle;
             var swaggerResponseCache = localStorageService.get(self.swaggerCacheName);
             bbWait.beginPageWait({});
 
