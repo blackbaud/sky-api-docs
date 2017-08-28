@@ -14,6 +14,86 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-08-28
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_appeal_attachments_get_list }}">
+        <td>Appeal attachment list (Single appeal)</td>
+        <td>GET</td>
+        <td>/appeals/{appeal_id}/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_appeal_attachments_create }}">
+        <td>Appeal attachment (Create)</td>
+        <td>POST</td>
+        <td>/appeals/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_appeal_attachments_edit }}">
+        <td>Appeal attachment (Edit)</td>
+        <td>PATCH</td>
+        <td>/appeals/attachments/{attachment_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_appeal_attachments_delete }}">
+        <td>Appeal attachment (Delete)</td>
+        <td>DELETE</td>
+        <td>/appeals/attachments/{attachment_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_campaign_attachments_get_list }}">
+        <td>Campaign attachment list (Single campaign)</td>
+        <td>GET</td>
+        <td>/campaigns/{campaign_id}/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_campaign_attachments_create }}">
+        <td>Campaign attachment (Create)</td>
+        <td>POST</td>
+        <td>/campaigns/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_campaign_attachments_edit }}">
+        <td>Campaign attachment (Edit)</td>
+        <td>PATCH</td>
+        <td>/campaigns/attachments/{attachment_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_campaign_attachments_delete }}">
+        <td>Campaign attachment (Delete)</td>
+        <td>DELETE</td>
+        <td>/campaigns/attachments/{attachment_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fund_attachments_get_list }}">
+        <td>Fund attachment list (Single fund)</td>
+        <td>GET</td>
+        <td>/funds/{fund_id}/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fund_attachments_create }}">
+        <td>Fund attachment (Create)</td>
+        <td>POST</td>
+        <td>/funds/attachments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fund_attachments_edit }}">
+        <td>Fund attachment (Edit)</td>
+        <td>PATCH</td>
+        <td>/funds/attachments/{attachment_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fund_attachments_delete }}">
+        <td>Fund attachment (Delete)</td>
+        <td>DELETE</td>
+        <td>/funds/attachments/{attachment_id}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ##2017-05-09
 
 ### Changed
