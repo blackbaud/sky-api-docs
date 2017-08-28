@@ -14,6 +14,36 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-28
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_locations_get }}">
+        <td>Action locations</td>
+        <td>GET</td>
+        <td>/actionlocations</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+ - On the [Action (Create)]({{stache.config.portal_endpoints_constituent_action_add}}) endpoint, we updated the `gender` property to set the default value to *unknown* when the property is not supplied in the request body.
+ - We added the `start_time`, `end_time`, `location`, `priority`, `direction`, and `outcome` properties to the [action]({{ stache.config.portal_contracts }}#Action) entity.
+ - The `completed_date` property on the [action]({{ stache.config.portal_contracts }}#Action) entity is now writable on the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints.
+
 ## 2017-08-08
 
 ### New
@@ -294,7 +324,7 @@ We are updating some properties on the [education]({{ stache.config.portal_contr
 
 #### Changed
 
-On the [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint, we updated the `do_not_mail` and `preferred` properties to set the default value to false when the properties are not supplied in the request body.
+On the [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint, we updated the `do_not_mail` and `preferred` properties to set the default value to *false* when the properties are not supplied in the request body.
 
 ### 2017-01-10
 
