@@ -40,7 +40,7 @@ Added the following endpoint:
 
 ### Changed
 
- - On the [Action (Create)]({{stache.config.portal_endpoints_constituent_action_add}}) endpoint, we updated the `gender` property to set the default value to *unknown* when the property is not supplied in the request body.
+ - On the [Constituent (Create)]({{stache.config.portal_endpoints_constituent_create}}) endpoint, we updated the `gender` property to set the default value to *unknown* when the property is not supplied in the request body.
  - We added the `start_time`, `end_time`, `location`, `priority`, `direction`, and `outcome` properties to the [action]({{ stache.config.portal_contracts }}#Action) entity.
  - The `completed_date` property on the [action]({{ stache.config.portal_contracts }}#Action) entity is now writable on the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints.
 
