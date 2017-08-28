@@ -14,7 +14,7 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-##2017-08-21
+##2017-08-28
 
 ### New
 
@@ -31,7 +31,7 @@ Added the following endpoints:
     </thead>
     <tbody>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_appeal_attachments_get_list }}">
-        <td>Appeal attachment (List)</td>
+        <td>Appeal attachment list (Single appeal)</td>
         <td>GET</td>
         <td>/appeals/{appeal_id}/attachments</td>
       </tr>
@@ -51,7 +51,7 @@ Added the following endpoints:
         <td>/appeals/attachments/{attachment_id}</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_campaign_attachments_get_list }}">
-        <td>Campaign attachment (List)</td>
+        <td>Campaign attachment list (Single campaign)</td>
         <td>GET</td>
         <td>/campaigns/{campaign_id}/attachments</td>
       </tr>
@@ -71,7 +71,7 @@ Added the following endpoints:
         <td>/campaigns/attachments/{attachment_id}</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fund_attachments_get_list }}">
-        <td>Fund attachment (List)</td>
+        <td>Fund attachment list (Single fund)</td>
         <td>GET</td>
         <td>/funds/{fund_id}/attachments</td>
       </tr>
