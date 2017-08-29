@@ -51,7 +51,6 @@ files:
   css:
     - /assets/css/custom.css
     - /assets/css/entity-reference.css
-    - /assets/font-awesome/css/font-awesome.css
 
   js:
     - /assets/js/scrollreveal.js
@@ -226,6 +225,9 @@ portal_endpoints_action_types_get: <%= stache.config.portal_endpoints_constituen
 # Action Statuses
 portal_endpoints_action_statuses_get: <%= stache.config.portal_endpoints_constituent %>operations/574f4bc7d7dcde0740edb96a/
 
+# Action Locations
+portal_endpoints_action_locations_get: <%= stache.config.portal_endpoints_constituent %>operations/59a0a959a9db950e686f09ce/
+
 # Constituent Address
 portal_endpoints_constituent_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f03
 portal_endpoints_address_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5808fd85a9db9503b8d3de93
@@ -318,7 +320,7 @@ portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_
 # Constituent Relationship
 portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
 portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61e/
-portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/tbd/
+portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/598a0dd7d7dcde047cb504d0/
 portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61f/
 portal_endpoints_constituent_organization_contact_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c620/
 
@@ -407,11 +409,17 @@ portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints
 portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc458/
 portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc459/
 
+# Appeal Attachments
+portal_endpoints_appeal_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e00f/
+portal_endpoints_appeal_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e010/
+portal_endpoints_appeal_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e012/
+portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e011/
+
 # Campaigns
 portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
 portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e3/
 
-# Campaigns Custom Fields
+# Campaign Custom Fields
 portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45b/
 portal_endpoints_campaign_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45c/
 portal_endpoints_campaign_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45e/
@@ -419,17 +427,29 @@ portal_endpoints_campaign_custom_fields_delete: <%= stache.config.portal_endpoin
 portal_endpoints_campaign_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45f/
 portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc460/
 
+# Campaign Attachments
+portal_endpoints_campaign_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e013/
+portal_endpoints_campaign_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e014/
+portal_endpoints_campaign_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e016/
+portal_endpoints_campaign_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e015/
+
 # Funds
 portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc461/
 portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e4/
 
-# Funds Custom Fields
+# Fund Custom Fields
 portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc462/
 portal_endpoints_fund_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc463/
 portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc465/
 portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc464/
 portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc466/
 portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc467/
+
+# Fund Attachments
+portal_endpoints_fund_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e017/
+portal_endpoints_fund_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e018/
+portal_endpoints_fund_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e01a/
+portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e019/
 
 # =============================================
 #       Gift API ENDPOINTS
@@ -441,6 +461,7 @@ portal_endpoints_gift: <%= stache.config.portal_endpoints %>58bdd5edd7dcde060460
 # Gifts
 portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc449/
 portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44a/
+portal_endpoints_gift_subtypes_get_list: <%= stache.config.portal_endpoints_gift %>operations/598a0dd6d7dcde047cb504ce/
 
 # Gift Custom Fields
 portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44f/
@@ -582,6 +603,12 @@ portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints
 # Journal Entry Custom Field List
 portal_endpoints_journal_entry_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a44/
 
+# Journal Entry Batch Attachment
+portal_endpoints_journal_entry_batch_attachment: <%= stache.config.portal_endpoints_GL %>operations/5991f90aa9db950d4c6fc35b/
+
+# Media Type List
+portal_endpoints_gl_media_type_list: <%= stache.config.portal_endpoints_GL %>operations/5991f90ba9db950d4c6fc35c/
+
 # Project Custom Field List
 portal_endpoints_project_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a45/
 
@@ -680,4 +707,4 @@ bbauth:
   rootUrl: https://sky-api-test.docs.blackbaud.com
 
 # Sky UX
-latest_sky_release: '1.9.2'
+latest_sky_release: '1.16.0-4'
