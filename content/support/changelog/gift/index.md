@@ -14,6 +14,12 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-30
+
+#### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
+
+We are updating the `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity to no longer return an offset.
+
 ## 2017-08-08
 
 #### New
