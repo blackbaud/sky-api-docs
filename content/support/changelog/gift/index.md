@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_
 
 #### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
 
-We are updating the `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity to no longer return an offset.
+We are updating the `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity to no longer return an offset. It will instead use <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
 
 ## 2017-08-08
 
