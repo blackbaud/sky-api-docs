@@ -14,6 +14,60 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-28
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_locations_get }}">
+        <td>Action locations</td>
+        <td>GET</td>
+        <td>/actionlocations</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+ - On the [Constituent (Create)]({{stache.config.portal_endpoints_constituent_create}}) endpoint, we updated the `gender` property to set the default value to *unknown* when the property is not supplied in the request body.
+ - We added the `start_time`, `end_time`, `location`, `priority`, `direction`, and `outcome` properties to the [action]({{ stache.config.portal_contracts }}#Action) entity.
+ - The `completed_date` property on the [action]({{ stache.config.portal_contracts }}#Action) entity is now writable on the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints.
+
+## 2017-08-08
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_edit }}">
+        <td>Relationship (Edit)</td>
+        <td>PATCH</td>
+        <td>/relationships/{relationship_id}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2017-06-28
 
 ### Changed
@@ -270,7 +324,7 @@ We are updating some properties on the [education]({{ stache.config.portal_contr
 
 #### Changed
 
-On the [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint, we updated the `do_not_mail` and `preferred` properties to set the default value to false when the properties are not supplied in the request body.
+On the [Address (Create)]({{stache.config.portal_endpoints_constituent_address_create}}) endpoint, we updated the `do_not_mail` and `preferred` properties to set the default value to *false* when the properties are not supplied in the request body.
 
 ### 2017-01-10
 
@@ -1390,7 +1444,7 @@ We implemented the following breaking changes:
 
   The response includes a `sort_token` within the `next_link` property. `sort_token` represents a token filter for providing the next set of constituents, ordered by the last modified date.
 
-  <p class="alert alert-info"><strong>Note:</strong> The Constituent (List) endpoint returns data with an average latency of 30 minutes.</p>
+<p><bb-alert bb-alert-type="info"><strong>Note:</strong> The Constituent (List) endpoint returns data with an average latency of 30 minutes.</bb-alert></p>
 
 ### 2016-05-06
 
@@ -1755,7 +1809,7 @@ Added the ability to create, edit, and delete [online presence]({{ stache.config
 #### Announcement:  Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }}) endpoints
 In the coming weeks, we will be standardizing the shape of our responses that return a collection of objects.  This standardization will allow us to be consistent across each endpoint as well as to facilitate some future enhancements around pagination within those endpoints.  The new representation of a collection will be a JSON object with two properties, a `count` which represents the total number of records meeting the criteria and a `value` property which represents the array of items for the current paged response.
 
-<p class="alert alert-warning">This change is scheduled for release by April 8, 2016.</p>
+<p><bb-alert bb-alert-type="warning">This change is scheduled for release by April 8, 2016.</bb-alert></p>
 
 #### How a collection response is formed today (Phones used as an example):
 
@@ -2132,7 +2186,7 @@ We removed the following endpoints:
   - Get a specific attachment for a constituent
   - [Add an attachment for a constituent]({{ stache.config.portal_endpoints_constituent_attachment_create }})
 
-  <p class="alert alert-info">Note that currently, all attachment records are viewable through the {{ stache.config.api_type_name }}, but only **link** attachments can be added.</p>
+<p><bb-alert bb-alert-type="info">Note that currently, all attachment records are viewable through the {{ stache.config.api_type_name }}, but only **link** attachments can be added.</bb-alert></p>
 
 #### Changed
 

@@ -14,6 +14,47 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-08-30
+
+### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
+
+We will update the `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity to no longer return an offset. Instead, it will use <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
+
+## 2017-08-08
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_subtypes_get_list }}">
+        <td>Gift subtypes (Get)</td>
+        <td>GET</td>
+        <td>/giftsubtypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+We added the `payments` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
+
+## 2017-08-04
+
+### Changed
+
+We updated the `next_link` property on the [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) to be more consistent with other lists.
+
 ## 2017-06-23
 
 ### Changed

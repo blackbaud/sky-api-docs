@@ -3,7 +3,7 @@
 
     var app = angular.module('entityReferenceApp', ['sky', 'ui.bootstrap', 'LocalStorageModule']);
 
-    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', '$rootScope', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -18,14 +18,14 @@
         }
     });
 
-    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService) {
+    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $rootScope) {
         var self = this;
         this.showErrorMessage = false;
-        this.swaggerCacheName = 'swaggerResponseCache-' + this.apiTitle;
 
         this.$onInit = onInit;
 
         function onInit() {
+            this.swaggerCacheName = 'swaggerResponseCache-' + this.apiTitle;
             var swaggerResponseCache = localStorageService.get(self.swaggerCacheName);
             bbWait.beginPageWait({});
 
@@ -65,6 +65,10 @@
               scrollToHash();
             });
         }
+
+        $rootScope.$on('$locationChangeSuccess', function (event, newUrl, oldUrl) {
+            scrollToHash();
+        });
 
         function handleError(response) {
             self.showErrorMessage = true;
@@ -149,6 +153,7 @@
 
             var document = $window.document;
             var hash = getHash($window.location);
+
             var elem = document.getElementsByName(hash)[0];
 
             if (elem) {
@@ -160,8 +165,8 @@
 
         function getHash(location) {
             var hash = location.hash || '';
-            var index = hash.indexOf('#');
-            return index === -1 ? hash : hash.substr(index+1);
+            var index = hash.indexOf('#!#'); // This was indexOf('#') before the angular 1.6 upgrade.
+            return index === -1 ? hash : hash.substr(index+3); // This was +1 before 1.6. If we do something to remove the #! prefix, change this back
         }
     }
 })();

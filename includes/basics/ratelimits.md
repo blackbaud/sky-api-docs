@@ -12,4 +12,4 @@ Content-Type: application/json
   "message": "Rate limit is exceeded. Try again in 1 second."
 }</code></pre>
 
-<p class="alert alert-info">The current rate limit for the {{ stache.config.api_product_name }} is 5 calls per second.</p>
+<p><bb-alert bb-alert-type="info">The current rate limit for the {{ stache.config.api_product_name }} is 5 calls per second.</bb-alert></p>
