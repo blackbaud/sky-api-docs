@@ -14,6 +14,12 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-09-06
+
+### Changed
+
+The `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity will no longer return an offset. Instead, it will use <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
+
 ## 2017-08-30
 
 ### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
