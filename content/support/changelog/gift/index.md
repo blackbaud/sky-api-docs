@@ -41,7 +41,7 @@ Added the following endpoint:
 
 ### Changed
 
-The `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity will no longer return an offset. Instead, it will use <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
+The `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity no longer returns an offset. Instead, it now uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
 
 ## 2017-08-30
 
