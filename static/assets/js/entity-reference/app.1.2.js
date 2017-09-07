@@ -3,7 +3,7 @@
 
     var app = angular.module('entityReferenceApp', ['sky', 'ui.bootstrap', 'LocalStorageModule']);
 
-    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', '$location', '$rootScope', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', '$rootScope', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -19,7 +19,7 @@
         }
     });
 
-    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $location, $rootScope) {
+    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $rootScope) {
         var self = this;
         this.showErrorMessage = false;
 
