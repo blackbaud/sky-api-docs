@@ -14,6 +14,35 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-09-07
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_all_gift_custom_field_get_list }}">
+        <td>Gift custom field list (All gifts)</td>
+        <td>GET</td>
+        <td>/gifts/customfields</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+The `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity no longer returns an offset. Instead, it now uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
+
 ## 2017-08-30
 
 ### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
