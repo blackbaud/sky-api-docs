@@ -3,7 +3,7 @@
 
     var app = angular.module('entityReferenceApp', ['sky', 'ui.bootstrap', 'LocalStorageModule']);
 
-    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', '$rootScope', EntityReferenceCtrl]);
+    app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', '$location', '$rootScope', EntityReferenceCtrl]);
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -13,25 +13,27 @@
             lastUpdatedDate: '@',
             getStartedUrl: '@',
             swaggerUrl: '@',
+            swaggerUrlDev: '@',
             whiteList: '@',
             blackList: '@'
         }
     });
 
-    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $rootScope) {
+    function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $location, $rootScope) {
         var self = this;
         this.showErrorMessage = false;
 
         this.$onInit = onInit;
 
         function onInit() {
-            this.swaggerCacheName = 'swaggerResponseCache-' + this.apiTitle;
+            var isDev = window.location.search.includes('ENV=DEV') && self.swaggerUrlDev;
+            this.swaggerCacheName = 'swaggerResponseCache-' + (isDev ? 'DEV-' : '') + this.apiTitle;
             var swaggerResponseCache = localStorageService.get(self.swaggerCacheName);
             bbWait.beginPageWait({});
 
             // Get a new swagger response if one is not cached or the cache has expired
             if (!swaggerResponseCache || Date.now() >= swaggerResponseCache.expirationDate) {
-              $http.get(self.swaggerUrl)
+              $http.get(isDev ? self.swaggerUrlDev : self.swaggerUrl)
                   .then(handleSuccess, handleError)
                   .finally(function() { bbWait.endPageWait(); });
             }
