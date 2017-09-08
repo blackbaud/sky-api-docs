@@ -13,6 +13,7 @@
             lastUpdatedDate: '@',
             getStartedUrl: '@',
             swaggerUrl: '@',
+            swaggerUrlDev: '@',
             whiteList: '@',
             blackList: '@'
         }
@@ -25,13 +26,14 @@
         this.$onInit = onInit;
 
         function onInit() {
-            this.swaggerCacheName = 'swaggerResponseCache-' + this.apiTitle;
+            var isDev = window.location.search.includes('ENV=DEV') && self.swaggerUrlDev;
+            this.swaggerCacheName = 'swaggerResponseCache-' + (isDev ? 'DEV-' : '') + this.apiTitle;
             var swaggerResponseCache = localStorageService.get(self.swaggerCacheName);
             bbWait.beginPageWait({});
 
             // Get a new swagger response if one is not cached or the cache has expired
             if (!swaggerResponseCache || Date.now() >= swaggerResponseCache.expirationDate) {
-              $http.get(self.swaggerUrl)
+              $http.get(isDev ? self.swaggerUrlDev : self.swaggerUrl)
                   .then(handleSuccess, handleError)
                   .finally(function() { bbWait.endPageWait(); });
             }
