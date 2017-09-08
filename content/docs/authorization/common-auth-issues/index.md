@@ -96,7 +96,7 @@ A `redirect_uri` that does not match the one used when making the [initial autho
 You may also see this when you [refresh an access token](/docs/authorization/auth-code-flow/#step-7--refresh-access-token) if you provide an expired, revoked, or otherwise invalid refresh token.
 
  
-## Call the {{ stache.config.product_name_short }}
+## Calling the {{ stache.config.product_name_short }}
 
 ### invalid subscription key
 
