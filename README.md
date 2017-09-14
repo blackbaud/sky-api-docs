@@ -5,4 +5,3 @@ SKY API provides customers and partners access to open, industry-standard REST A
 ## Contributing
 
 SKY API documentation welcomes contributions. For information, see our [contributing guidelines](https://github.com/blackbaud/sky-api-docs/blob/master/CONTRIBUTING.md).
-

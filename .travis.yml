@@ -1,11 +1,23 @@
 language: node_js
 
+git:
+  depth: 10
+
+sudo: required
+
 before_script:
+  - chmod +x ./travis-build.sh
   - npm i -g grunt-cli blackbaud-stache-cli
+  - git remote set-url origin https://${GH_TOKEN}@github.com/blackbaud/sky-api-docs.git
 
 script:
   - bash ./travis-build.sh
   - stache commitBuild --config=$TRAVIS_BUILD_DIR/stache.deploy.yml
+
+branches:
+  only:
+    - master
+    - develop
 
 cache:
   directories:
