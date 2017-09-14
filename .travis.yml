@@ -1,25 +1,22 @@
 language: node_js
-
 git:
   depth: 10
-
 sudo: required
-
 before_script:
-  - chmod +x ./travis-build.sh
-  - npm i -g grunt-cli blackbaud-stache-cli
-
+- chmod +x ./travis-build.sh
+- npm i -g grunt-cli blackbaud-stache-cli
 script:
-  - bash ./travis-build.sh
-  - stache commitBuild --config=$TRAVIS_BUILD_DIR/stache.deploy.yml
-
+- bash ./travis-build.sh
+- stache commitBuild --config=$TRAVIS_BUILD_DIR/stache.deploy.yml
 branches:
   only:
-    - master
-    - develop
-    - deploy-prod
-    - deploy-test
-
+  - master
+  - develop
+  - deploy-prod
+  - deploy-test
 cache:
   directories:
-    - node_modules
+  - node_modules
+env:
+  matrix:
+    secure: PISB4AShdByATU7iAxKdPKr5hI0lpMARw9HOslR3+QotNa0P6AUbWAp584Ntj2hed7M5wpOynf5PtnGTGtPnyFcuhX+oTcYfKsD966hVwVQGUtLo6u7wjE26MTcGRT/ci+qX1FVmEbd81g2lqiP50TKoidNuwundiY2gWAJ+PNKcpAWTuo2brzq0yLvQImvjgyiqVwwUfCgIwSWn+l/xKHghYxjohX2TuAe9mHH15VSTI3rNcgsTxX9BviC0QlbohSUuQnqwVaa0brAT2pgmEwcmREmtXpJYEm6J8pCMUfoJtzIJMxwEt0kFn0ZLuewnnWRwGngOnOFYwG97Pkt8NzqD98pRwHAwROVOIKboUzr5hUGaovFI5Nf+7SbGBzNstMhNT+e/YDybMkFmlEEpyUCsrQ/tddy4ZwLg/hQSCp135GyyyItFx3Ku8igAOLl4GAkmAYHSmnqp/C67AG3lu9kr2jlXKKZfLPGIARgiOizK6R6DGM6hftkmsw8zNH3D7f9Kkv32IKdTg+Bwll7h4BVHCCRd78884gUN3ICCOxBt/kHjM+zoytDwDZ+y+yX47YREL8Qkp9g64j0tyzwmwwm1P/fifE0SGTAJxYiG+loWtWApy/Trl8MNXpZDCy8hSq+EEF/ad0IbaVUHfN8mDgKBoIy6zFGcYKOxhCXvxRo=
