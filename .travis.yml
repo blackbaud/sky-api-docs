@@ -18,8 +18,6 @@ branches:
   only:
     - master
     - develop
-    - deploy-prod
-    - deploy-test
 
 cache:
   directories:
