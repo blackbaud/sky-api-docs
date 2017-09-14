@@ -1,11 +1,24 @@
 language: node_js
 
+git:
+  depth: 10
+
+sudo: required
+
 before_script:
+  - chmod +x ./travis-build.sh
   - npm i -g grunt-cli blackbaud-stache-cli
 
 script:
   - bash ./travis-build.sh
   - stache commitBuild --config=$TRAVIS_BUILD_DIR/stache.deploy.yml
+
+branches:
+  only:
+    - master
+    - develop
+    - deploy-prod
+    - deploy-test
 
 cache:
   directories:
