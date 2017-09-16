@@ -44,7 +44,7 @@ In order to call the {{ stache.config.api_type_name }}, you must first [register
 
 Before your application can access a given Blackbaud customer's data, it must first be approved by an administrator within the customer's organization.  The administrator provides this approval by activating your application within the <b>Applications</b> area of the product.  This allows Blackbaud customers to control which applications have access to their data, and at any time an administrator can de-activate your application and prevent future access via the API.
 
-Once your application has been activated, you can then obtain consent from an authenticated Blackbaud user.  Upon consent, an OAuth 2.0 access token will be issued to your application in the form of a JSON web token, or <a href="https://jwt.io">JWT</a>.  The token should be included on every API request as part of the standard <code>Authorization</code> header.  It is tied to the authenticated user's account and organization, which means that _your application can only access data to which the authenticated user can access_ within the system.
+After your application has been activated, you can then obtain consent from an authenticated Blackbaud user.  Upon consent, an OAuth 2.0 access token will be issued to your application in the form of a JSON web token, or <a href="https://jwt.io">JWT</a>.  The token should be included on every API request as part of the standard <code>Authorization</code> header.  It is tied to the authenticated user's account and organization, which means that _your application can only access data to which the authenticated user can access_ within the system.
 
 ## Supported OAuth 2.0 flows
 
