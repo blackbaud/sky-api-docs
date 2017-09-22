@@ -22,7 +22,7 @@ We added the `acknowledgements`, `receipts`, and `balance` properties to the [gi
 
 ##2017-09-07
 
-#### New
+### New
 
 Added the following endpoint:
 
