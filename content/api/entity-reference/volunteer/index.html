@@ -3,161 +3,18 @@ layout: layout-container
 name: Volunteer Entity Reference
 title: Volunteer Entity Reference
 order: 90
-published: false
-showInNav: false
+published: true
+showInNav: true
 back_to_top: true
 showBreadcrumbs: true
 ---
 
-<h1>{{ name}}</h1>
-
-
-<p>Updated: May 09, 2017</p>
-
-<div class="introduction">
-    <p>This topic describes the entity and type representations for common items that the Volunteer API uses. To learn about how to set up your developer account and work with the SKY API, see the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide.</p>
-    <ul class="unordered">
-        <li><a href="#Assignment">Assignment</a></li>
-        <li><a href="#Availability">Availability</a></li>
-        <li><a href="#Summary">Summary</a></li>
-    </ul>
-</div>
-
-<a id="Assignment"></a>
-<h2>Assignment</h2>
-<p>The <b>assignment</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th class="entityref_property"><strong>Property</strong></th>
-                <th class="entityref_type"><strong>Type</strong></th>
-                <th class="entityref_description"><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>constituent_id</td>
-                <td>string</td>
-                <td>The constituent identifier for the volunteer.</td>
-            </tr>
-            <tr>
-                <td>job_name</td>
-                <td>string</td>
-                <td>The name of the assigned job.</td>
-            </tr>
-            <tr>
-                <td>location</td>
-                <td>string</td>
-                <td>The location of the assignment.</td>
-            </tr>
-            <tr>
-                <td>department</td>
-                <td>string</td>
-                <td>The department of the assignment.</td>
-            </tr>
-            <tr>
-                <td>start</td>
-                <td>dateTime</td>
-                <td>The start date of the assignment. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43</i>.</td>
-            </tr>
-            <tr>
-                <td>end</td>
-                <td>dateTime</td>
-                <td>The end date of the assignment. Uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><i>1969-11-21T10:29:43</i>.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="Availability"></a>
-<h2>Availability</h2>
-<p>The <b>availability</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th class="entityref_property"><strong>Property</strong></th>
-                <th class="entityref_type"><strong>Type</strong></th>
-                <th class="entityref_description"><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>days</td>
-                <td>string</td>
-                <td>The days when the volunteer is available. Available values are <i>sundays, mondays, tuesdays, wednesdays, thursdays, fridays, saturdays, alldays, weekdays, weekends,</i> and <i>notspecified</i>.</td>
-            </tr>
-            <tr>
-                <td>from</td>
-                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
-                <td>The date when the volunteer becomes available.</td>
-            </tr>
-            <tr>
-                <td>to</td>
-                <td><a href="/constituent-entity-reference#FuzzyDate">fuzzy date</a></td>
-                <td>The date when the volunteer ceases to be available.</td>
-            </tr>
-            <tr>
-                <td>start_time</td>
-                <td>timespan</td>
-                <td>The time when the volunteer becomes available.</td>
-            </tr>
-            <tr>
-                <td>end_time</td>
-                <td>timespan</td>
-                <td>The time when the volunteer ceases to be available.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<a id="Summary"></a>
-<h2>Summary</h2>
-<p>The <b>summary</b> entity has the following properties:</p>
-
-<div class="table-responsive">
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th class="entityref_property"><strong>Property</strong></th>
-                <th class="entityref_type"><strong>Type</strong></th>
-                <th class="entityref_description"><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>first_year_volunteered</td>
-                <td>integer</td>
-                <td>This computed field retrieves the volunteer's first year volunteered.</td>
-            </tr>
-            <tr>
-                <td>total_hours</td>
-                <td>decimal</td>
-                <td>This computed field retrieves the volunteer's total hours volunteered.</td>
-            </tr>
-            <tr>
-                <td>total_value</td>
-                <td><a href="/constituent-entity-reference#Currency">currency</a></td>
-                <td>This computed field calculates the estimated monetary value of the work that the volunteer has completed.</td>
-            </tr>
-            <tr>
-                <td>total_years_volunteered</td>
-                <td>integer</td>
-                <td>This computed field calculates the volunteer's total years volunteered.</td>
-            </tr>
-            <tr>
-                <td>first_assignment</td>
-                <td><a href="#Assignment">assignment</a></td>
-                <td>This computed field retrieves the volunteer's first assignment.</td>
-            </tr>
-            <tr>
-                <td>last_assignment</td>
-                <td><a href="#Assignment">assignment</a></td>
-                <td>This computed field retrieves the volunteer's most recent assignment.</td>
-            </tr>
-        </tbody>
-    </table>
+<div ng-app="entityReferenceApp">
+  <bb-entity-reference
+    api-title="Volunteer"
+    last-updated-date="September 25, 2017"
+    get-started-url="{{ stache.config.guide_getting_started }}"
+    swagger-url="https://developer.sky.blackbaud.com/docs/services/volunteer/export?DocumentFormat=Swagger&ApiName=Volunteer%20(Beta)"
+    swagger-url-dev="https://developer.nxt.blackbaud-dev.com/docs/services/5874fa1c9e4eda0b8cbd4dd6/export?DocumentFormat=Swagger&ApiName=Volunteer%20(Beta)">
+  </bb-entity-reference>
 </div>
