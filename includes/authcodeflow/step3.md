@@ -3,7 +3,7 @@
 
 {{# markdown }}
 
-After the user grants (or denies) your authorization request, we'll redirect the browser to the `redirect_uri` that you specified in the request (in the above example, we'll redirect the browser back to your application at _https://www.example.com/oauth2/callback_).
+After the user grants (or denies) your authorization request, we'll redirect the browser to the `redirect_uri` that you specified in the request (in the above example, we'll redirect the browser back to your application at <em>https://www.example.com/oauth2/callback</em>).
 
 If the user granted your app permission, the query string will contain the following parameters:
 
