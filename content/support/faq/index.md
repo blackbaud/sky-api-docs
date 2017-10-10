@@ -141,9 +141,9 @@ If you believe your application's secret has been exposed, you should [regenerat
 
 ### What control does a Blackbaud customer have over my application?
 
-Customers always have control over whether or not your application can access their data.  An administrator within the customer's organization must first activate your app  before any user will be able to use it, and at any time the administrator can deactivate or completely remove your application (deactivating is intended to reflect a short-term state where eventual re-activation is expected).  If that happens, your application will not be able to obtain or refresh any access tokens to use when calling the API.
+Customers always have control over whether or not an application can access their data.  An administrator within the customer's organization must first enable your app before any user will be able to use it, and at any time the administrator can remove your application.  If that happens, the application will not be able to obtain or refresh any access tokens to use when calling the API.
 
-If your application is deactivated or removed, users will see the following message in the authorization process:
+If your application is removed, users will see the following message in the authorization process:
 
 > “This application has not been approved by your administrator…”
 
