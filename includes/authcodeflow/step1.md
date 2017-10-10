@@ -24,7 +24,7 @@ When navigating, you'll need to include a few parameters in the query string. Th
       <tr>
         <td>client_id</td>
         <td>
-          <em>Required</em>. The **{{ stache.config.guide_apps_client_id_name }}** value that we provide when you [register your application]({{ stache.config.guide_registering_your_app }}). This value uniquely identifies your application. See <a href="https://tools.ietf.org/html/rfc6749#section-2.2" target="_blank">RFC-6749 section 2.2</a>.
+          <em>Required</em>. The <strong>{{ stache.config.guide_apps_client_id_name }}</strong> value that we provide when you <a href="{{ stache.config.guide_registering_your_app }}">register your application</a>. This value uniquely identifies your application. See <a href="https://tools.ietf.org/html/rfc6749#section-2.2" target="_blank">RFC-6749 section 2.2</a>.
         </td>
       </tr>
       <tr>
@@ -34,7 +34,7 @@ When navigating, you'll need to include a few parameters in the query string. Th
       <tr>
         <td>redirect_uri</td>
         <td>
-          <em>Required</em>. The URI to redirect to after the user grants or denies permission to your app. This value must exactly match one of the Redirect URI values you specify when you [register your application]({{ stache.config.guide_registering_your_app }}), including any capitalization, trailing slashes, etc. See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2" target="_blank">RFC-6749 section 3.1.2</a>.
+          <em>Required</em>. The URI to redirect to after the user grants or denies permission to your app. This value must exactly match one of the Redirect URI values you specify when you <a href="{{ stache.config.guide_registering_your_app }}">register your application</a>, including any capitalization, trailing slashes, etc. See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2" target="_blank">RFC-6749 section 3.1.2</a>.
         </td>
       </tr>
       <tr>
@@ -51,7 +51,7 @@ When navigating, you'll need to include a few parameters in the query string. Th
   </table>
 </div>
 
-<p><bb-alert bb-alert-type="warning"><b>Note: </b>to facilitate local development, we allow the use of _http_ and _localhost_ or the localhost IP (_127.0.0.1_).  In production however, we require the use of _https_ for proper security when redirecting.</bb-alert></p>
+<p><bb-alert bb-alert-type="warning"><b>Note: </b>to facilitate local development, we allow the use of <em>http</em> and <em>localhost</em> or the localhost IP (<em>127.0.0.1</em>).  In production however, we require the use of <em>https</em> for proper security when redirecting.</bb-alert></p>
 
 {{# markdown }}
 

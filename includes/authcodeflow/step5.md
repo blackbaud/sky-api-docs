@@ -18,12 +18,12 @@ If the access token request is successful, the response body will contain a JSON
       <tr>
         <td>access_token</td>
         <td>string</td>
-        <td>An access token to be used when making calls to the {{ stache.config.api_type_name }}.  The access token should be provided in the standard `Authorization` header in the form of `Bearer token` (note the separating space).</td>
+        <td>An access token to be used when making calls to the {{ stache.config.api_type_name }}.  The access token should be provided in the standard <code>Authorization</code> header in the form of <code>Bearer token</code> (note the separating space).</td>
       </tr>
       <tr>
         <td>token_type</td>
         <td>string</td>
-        <td>Indicates the type of token issued, and will always contain the value `bearer`.
+        <td>Indicates the type of token issued, and will always contain the value <code>bearer</code>.
       </tr>
       <tr>
         <td>expires_in</td>
