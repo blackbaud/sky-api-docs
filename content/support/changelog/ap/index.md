@@ -14,11 +14,38 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-09-28
+## 2017-10-12
 
-### Changed
+### New
 
-- For the following endpoint, we added the payment_default field which includes credit limit, payment terms, and bank account information:
+Added the following endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_payment_term_list }}">
+				<td>Payment term (list)</td>
+				<td>GET</td>
+				<td>/paymentterms</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+## September 2017
+
+### 2017-09-28
+
+#### Changed
+
+For the following endpoint, we added the payment_default field which includes credit limit, payment terms, and bank account information:
 
 <div class="table-responsive">
 	<table class="table table-striped table-hover">
