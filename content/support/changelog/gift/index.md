@@ -16,6 +16,35 @@ Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_
 
 ##2017-10-04
 
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_create }}">
+        <td>Gift (Create)</td>
+        <td>POST</td>
+        <td>/gifts</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their associated constituent identifiers. The optional `constituent_id` query parameter returns gifts if any of the specified constituent identifiers match any of their constituents. For example, `constituent_id=1242&amp;constituent_id=385` returns gifts with either "1242" or "385" constituent identifiers.
+
+##2017-10-04
+
 ### Changed
 
 We added the `acknowledgements`, `receipts`, and `balance` properties to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
