@@ -41,7 +41,7 @@ Added the following endpoint:
 
 ### Changed
 
-The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their associated constituent identifiers. The optional `constituent_id` query parameter returns gifts if any of the specified constituent identifiers match any of their constituents. For example, `constituent_id=1242&amp;constituent_id=385` returns gifts with either "1242" or "385" constituent identifiers.
+The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their associated constituent identifiers. The optional `constituent_id` query parameter returns all gifts associated with any of the specified constituent identifiers. For example, `constituent_id=1242&amp;constituent_id=385` returns all gifts for the constituents with the "1242" or "385" constituent identifiers.
 
 ##2017-10-04
 
