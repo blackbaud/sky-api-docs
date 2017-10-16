@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
-We are updating the [Name formats list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_get_list}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will now also include other non primary name formats. Additionally, the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide an overall more robust entity.
+We will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_get_list}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return other non-primary name formats. In addition, we will update the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide a more robust entity.
 
 ## 2017-08-28
 
