@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-10-20
+
+### Changed
+
+The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to filter constituents based on their constituent identifiers. The optional `constituent_id` query parameter returns all constituents with any of the specified constituent identifiers. For example, `constituent_id=1242&amp;constituent_id=385` returns all constituents with the "1242" or "385" constituent identifiers.
+
 ## 2017-08-28
 
 ### New
