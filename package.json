@@ -10,9 +10,10 @@
   "description": "Blackbaud Documentation",
   "private": true,
   "dependencies": {
-    "grunt": "^0.4.5",
+    "angular-local-storage": "^0.6.0",
     "blackbaud-stache": "latest",
-    "angular-local-storage": "^0.6.0"
+    "grunt": "^0.4.5",
+    "request": "2.81.0"
   },
   "devDependencies": {
     "amdefine": "^1.0.0",
