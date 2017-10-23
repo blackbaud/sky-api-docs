@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Changed
 
-The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to filter constituents based on their constituent identifiers. The optional `constituent_id` query parameter returns all constituents with any of the specified constituent identifiers. For example, `constituent_id=1242&amp;constituent_id=385` returns all constituents with the "1242" or "385" constituent identifiers.
+The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to filter constituents based on their record IDs. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only constituents with the specified IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only two constituents records: "1242" and "385."
 
 ## 2017-08-28
 
