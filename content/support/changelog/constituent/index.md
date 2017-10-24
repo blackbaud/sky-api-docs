@@ -14,11 +14,13 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-10-16
+## 2017-10-24
 
 ### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
-We will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_get_list}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return other non-primary name formats. In addition, we will update the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide a more robust entity. 
+We will change the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide a more robust entity. 
+
+Additionally, we will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_get_list}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return the other non-primary name formats, as part of the updated entity model mentioned above. 
 
 ## 2017-08-28
 
