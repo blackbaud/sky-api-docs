@@ -144,7 +144,7 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
         ... </code></pre>
 
 <li>
-    <p>Open your browser to <a href="http://localhost:8888" target="http://localhost:8888">http://localhost:8888</a> to request the Home page. When the front page loads, the AngularJS on the Home page (**/Views/Shared/_Layout.cshtml**) makes a request to the `/auth/authenticated.php` endpoint:</p>
+    <p>Open your browser to <a href="http://localhost:8888" target="http://localhost:8888">http://localhost:8888</a> to request the Home page. When the front page loads, the AngularJS on the Home page (**index.html**) makes a request to the `/auth/authenticated.php` endpoint:</p>
 <pre><code class="language-javascript">(function (angular) {
   'use strict';
 
@@ -200,7 +200,7 @@ After you have your subscription key, {{ stache.config.guide_apps_client_id_name
 <li><p>If the user is not authenticated, a **Log in** button is displayed.</p>
 <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> The browser may display a warning that the connection is not private. For this tutorial, you can ignore this message. To proceed, select <strong>Show advanced</strong> and then select <strong>Proceed to localhost (unsafe)</strong>.</bb-alert></p>
 ![Login](/assets/img/auth_tutorial_login_php.png "Log in")</li>
-<li><p>Open the **Views/Shared/_Layout.cshtml** file. Notice that the `body` tag includes an attribute named `ng-app`. The front-end of our application uses AngularJS to interact with our Web server routes. The `div.container` element includes an attribute named `ng-controller` which references an AngularJS controller to handle the model data.</p>
+<li><p>Open the **index.html** file. Notice that the `body` tag includes an attribute named `ng-app`. The front-end of our application uses AngularJS to interact with our Web server routes. The `div.container` element includes an attribute named `ng-controller` which references an AngularJS controller to handle the model data.</p>
 <pre><code class="language-markup">&lt;body ng-app="AuthCodeFlowTutorial">
   &lt;div class="container" ng-controller="ConstituentCtrl" ng-cloak>
     ...</code></pre></li>

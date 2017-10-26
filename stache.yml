@@ -678,6 +678,9 @@ portal_endpoints_invoice_1099_amount: <%= stache.config.portal_endpoints_AP %>op
 # Invoice 1099 Box Numbers
 portal_endpoints_invoice_1099_box_numbers: <%= stache.config.portal_endpoints_AP %>operations/590c805ca9db950f94838e60/
 
+# Payment term List
+portal_endpoints_payment_term_list: <%= stache.config.portal_endpoints_AP %>operations/59de6625a9db951228cdd374/
+
 # Vendor Get
 portal_endpoints_vendor_get: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24d/
 
