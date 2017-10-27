@@ -461,6 +461,7 @@ portal_endpoints_gift: <%= stache.config.portal_endpoints %>58bdd5edd7dcde060460
 # Gifts
 portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc449/
 portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44a/
+portal_endpoints_gift_create: <%= stache.config.portal_endpoints_gift %>operations/59f23b2bd7dcde16a4285c15/
 portal_endpoints_gift_subtypes_get_list: <%= stache.config.portal_endpoints_gift %>operations/598a0dd6d7dcde047cb504ce/
 
 # Gift Custom Fields
