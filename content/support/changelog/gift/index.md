@@ -14,7 +14,7 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-##2017-10-26
+##2017-10-27
 
 ### New
 
@@ -41,7 +41,7 @@ Added the following endpoint:
 
 ### Changed
 
-The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their associated constituent identifiers. The optional `constituent_id` query parameter returns all gifts associated with any of the specified constituent identifiers. For example, `constituent_id=1242&amp;constituent_id=385` returns all gifts for the constituents with the "1242" or "385" constituent identifiers.
+The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their associated constituents. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only gifts associated with the specified constituent record IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only include gifts associated with two constituent records: "1242" and "385."
 
 ##2017-10-04
 
