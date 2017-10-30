@@ -14,6 +14,12 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-11-01
+
+### Changed
+
+We added the `batch_number` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.  This property is read-only.
+
 ##2017-10-27
 
 ### New
