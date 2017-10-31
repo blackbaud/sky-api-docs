@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Gift (Beta)
 description: Information on additions and changes for the Gift API (Beta).
-order: 100
+order: 175
 published: true
 showInNav: true
 icon: fa fa-gift
@@ -14,9 +14,17 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-##2017-10-27
+##2017-11-01
 
-### New
+### Changed
+
+We added the `batch_number` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.  This property is read-only.
+
+## October 2017
+
+### 2017-10-27
+
+#### New
 
 Added the following endpoint:
 
@@ -39,19 +47,21 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
+#### Changed
 
 The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their associated constituents. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts associated with the specified constituent record IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only include gifts associated with two constituent records: "1242" and "385."
 
-##2017-10-04
+### 2017-10-04
 
-### Changed
+#### Changed
 
 We added the `acknowledgements`, `receipts`, and `balance` properties to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
 
-##2017-09-07
+## September 2017
 
-### New
+### 2017-09-07
+
+#### New
 
 Added the following endpoint:
 
@@ -74,19 +84,21 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
+#### Changed
 
 The `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity no longer returns an offset. Instead, it now uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
 
-## 2017-08-30
+## August 2017
 
-### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
+### 2017-08-30
+
+#### Announcement: Breaking Changes Planned for [Gift API]({{ stache.config.portal_endpoints_gift }})
 
 We will update the `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity to no longer return an offset. Instead, it will use <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
 
-## 2017-08-08
+### 2017-08-08
 
-### New
+#### New
 
 Added the following endpoint:
 
@@ -109,19 +121,21 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
+#### Changed
 
 We added the `payments` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
 
-## 2017-08-04
+### 2017-08-04
 
-### Changed
+#### Changed
 
 We updated the `next_link` property on the [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) to be more consistent with other lists.
 
-## 2017-06-23
+## June 2017
 
-### Changed
+### 2017-06-23
+
+#### Changed
 
 We added the `gift_aid_amount` and `gift_aid_qualification_status` properties to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity for UK tenants.
 

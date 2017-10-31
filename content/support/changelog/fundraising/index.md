@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Fundraising (Beta)
 description: Information on additions and changes for the Fundraising API (Beta).
-order: 100
+order: 125
 published: true
 showInNav: true
 icon: fa fa-line-chart
@@ -14,9 +14,11 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-##2017-08-28
+## August 2017
 
-### New
+### 2017-08-28
+
+#### New
 
 Added the following endpoints:
 
@@ -94,21 +96,25 @@ Added the following endpoints:
   </table>
 </div>
 
-##2017-05-09
+## May 2017
 
-### Changed
+### 2017-05-09
+
+#### Changed
 
 The [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints now exclude inactive records by default. To include inactive records, set the `include_inactive` parameter to `true`.
 
-##2017-04-28
+## April 2017
 
-### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }})
+### 2017-04-28
+
+#### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }})
 
 We will update the default value of the `include_inactive` filter to `false` on the [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints to exclude inactive records by default. Currently, the filter defaults to `true` and includes inactive records when no value is supplied. 
 
-##2017-04-06
+### 2017-04-06
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -141,9 +147,11 @@ Added the following endpoints:
   </table>
 </div>
 
-##2017-03-08
+## March 2017
 
-### New
+### 2017-03-08
+
+#### New
 
 The Fundraising API has been released for a public beta. This API handles information related to the fundraising hierarchy, including the campaign, fund, and appeal entities:
  - Campaigns set the overall objectives and initiatives for raising money, and they are typically the top tier of the fundraising hierarchy. For example, organizations can create campaigns to encompass fundraising efforts related to annual operating expenses, new buildings, or endowments.

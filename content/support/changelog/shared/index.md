@@ -14,17 +14,19 @@ title: Shared Changelog
 
 Monitor this page to keep up with common changes shared across all our APIs.
 
-## 2017-05-31
+## May 2017
 
-### Changed
+###2017-05-31
+
+#### Changed
 
 We moved the [Status page link]({{ stache.config.support_status }}) from the Support menu to the top navigation. This makes it even quicker for you to see the current state of API availability. 
 
 If you haven't signed up yet, we encourage you to subscribe to automatic incident notifications. You can subscribe by email, SMS or RSS feed.
 
-## 2017-05-04
+### 2017-05-04
 
-### New
+#### New
 
 We added a new step-by-step guide to help you learn the steps required to **[Create an App with {{ stache.config.product_name_short }}]({{ stache.config.guide_create_app }})**. We recommend you complete this guide after you follow the **[Getting Started]({{ stache.config.guide_getting_started}})** documentation.
 
@@ -43,13 +45,11 @@ The SKY API developer site now offers commenting capability through Disqus. We e
  
 On the SKY API developer site, comments now appear at the bottom of most documentation pages, and buttons are available at the top of pages to take users to the comments.
 
-## December 2016
+## 2016
 
 ### 2016-12-02
 
 We added a new <b>Status</b> link to the Support menu. This link takes you to our {{ stache.config.product_name_short }} status page. The status page provides the current state of API availability, as well as specific details on downtime incidents. We also provide the option for you to subscribe to automatic incident notifications by email, SMS, or feed.
-
-## October 2016
 
 ### 2016-10-17
 
@@ -58,21 +58,13 @@ Logos can now be associated with your applications. The logo is the icon that us
 - Smaller than 2MB
 - PNG or JPEG format 
 
-
-
-## September 2016
-
 ### 2016-09-22
 SKY API's support for <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> now includes <code>accept</code> and <code>content-type</code> in the list of accepted request headers. You can now specify these headers in API requests from within a browser.
-
-## July 2016
 
 ### 2016-07-08
 
 To support approved API subscribers with access to their own dedicated tenants, we've added instructions for <a href="{{ stache.config.guide_basics }}#activating-the-sky-api-console" target="_blank" rel="noopener noreferrer">activating the {{ stache.config.dev_console_name }}</a>
 to our Basics guide.
-
-## June 2016
 
 ### 2016-06-27
 
@@ -90,8 +82,6 @@ to our Basics guide.
 
 	![Export API Definitions](/assets/img/api_definition_export.png "Export API Definitions")
 
-
-## May 2016
 
 ### 2016-05-27
 
@@ -113,14 +103,10 @@ A `next_link` property has been added to our [paginated]({{ stache.config.guide_
 
 - When editing, existing endpoints that previously used the `PUT` HTTP verb have been replaced with `PATCH`.  `PATCH` can be used to update partial resources. For instance, when you only need to update one field of the resource.
 
-## April 2016
-
 
 ### 2016-04-26
 
 [Pagination]({{ stache.config.guide_basics }}#pagination) will be facilitated through the results via the use of `limit` and `offset` instead of `top` and `skip` parameters.  Pagination behavior will remain unchanged.
-
-## March 2016
 
 ### 2016-03-15
 
@@ -168,7 +154,7 @@ Usage limits are now in effect.  Exceeding the [rate limit]({{ stache.config.gui
 		</table>
 	</div>
 
-## Older
+## 2015
 
 ### 2015-12-8
 
