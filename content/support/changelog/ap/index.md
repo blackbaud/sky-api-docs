@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Accounts Payable
 description: Information on additions and changes for the Accounts Payable API.
-order: 300
+order: 75
 published: true
 showInNav: true
 icon: fa fa-university
@@ -14,9 +14,11 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-10-12
+## October 2017
 
-### New
+### 2017-10-12
+
+#### New
 
 Added the following endpoint:
 
@@ -130,7 +132,7 @@ Added the following endpoints:
 	</table>
 </div>
 
-## December 2016
+## 2016
 
 ### 2016-12-06
 
@@ -231,7 +233,6 @@ For consistency across APIs, all responses to GET endpoints that return collecti
 	</table>
 </div>
 
-## November 2016
 
 ### 2016-11-14
 
@@ -270,7 +271,6 @@ All responses to GET endpoints that return collections will return an object wit
 	</table>
 </div>
 
-## October 2016
 
 ### 2016-10-12
 
@@ -338,7 +338,6 @@ For consistency across APIs, we will implement the following changes:
 	</table>
 </div>
 
-## August 2016
 
 ### 2016-08-12
 

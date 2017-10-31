@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: General Ledger
 description: Information on additions and changes for the General Ledger API.
-order: 200
+order: 150
 published: true
 showInNav: true
 icon: fa fa-book
@@ -14,9 +14,11 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-08-14
+## August 2017
 
-### New
+### 2017-08-14
+
+#### New
 Added the following endpoints:
 
 <div class="table-responsive">
@@ -43,7 +45,7 @@ Added the following endpoints:
 	</table>
 </div>
 
-### Changed
+#### Changed
 
 - For the following endpoint, we added the division, department, location, and type filters. Additional data is also returned:
 
@@ -201,7 +203,7 @@ Added the following endpoints:
 	</table>
 </div>
 
-## December 2016
+## 2016
 
 ### 2016-12-06
 
@@ -347,7 +349,6 @@ For consistency across APIs, all responses to GET endpoints that return collecti
 	</table>
 </div>
 
-## November 2016
 
 ### 2016-11-14
 
@@ -447,7 +448,6 @@ Added the following endpoints:
 	</table>
 </div>
 
-## October 2016
 
 ### 2016-10-06
 
@@ -528,7 +528,6 @@ Added the following endpoints:
 
 You can now specify Class on journal entries (this affects all endpoints associated with journal entry batches).
 
-## August 2016
 
 ### 2016-08-12
 
@@ -570,7 +569,6 @@ We changed the default and maximum record limits on the following search and lis
 	</table>
 </div>
 
-## July 2016
 
 ### 2016-07-05
 
@@ -578,7 +576,6 @@ We changed the default and maximum record limits on the following search and lis
 
 We implemented a previously announced, breaking change. We removed the Journal entry batch (Edit) `PUT` endpoint. At a later date, we plan to replace `PUT` with `PATCH`, instead.
 
-## June 2016
 
 ### 2016-06-30
 
@@ -624,7 +621,6 @@ We've added a versioning indicator to the General Ledger API's base URL. Specifi
 - We will be adding a versioning indicator to the General Ledger API's base URL. Specifically, all new API requests should begin with `https://{{ stache.config.resource_hostname }}{{ stache.config.gl_api_suffix }}/v1`.
 - This change is planned to take effect on Wednesday, June 15.
 
-## May 2016
 
 ### 2016-05-27
 
