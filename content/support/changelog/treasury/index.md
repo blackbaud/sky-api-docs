@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Treasury (Beta)
 description: Information on additions and changes for the Treasury API (Beta).
-order: 300
+order: 225
 published: true
 showInNav: true
 icon: fa fa-money
@@ -14,9 +14,11 @@ title: Treasury (Beta) Changelog
 
 Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-04-25
+## April 2017
 
-### New
+### 2017-04-25
+
+#### New
 
 The Treasury API has been released for a public beta. This API handles information related to bank accounts, including related entities such as adjustments, checks, and deposits.
 
