@@ -14,6 +14,34 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+### 2017-11-3
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_all_note_get_list }}">
+        <td>Note list (All constituents)</td>
+        <td>GET</td>
+        <td>/notes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+ - The [Note (Get)]({{ stache.config.portal_endpoints_constituent_note_get }}) and [Note List (Single constituent)]({{ stache.config.portal_endpoints_constituent_note_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [note]({{ stache.config.portal_contracts }}#Note) entity.
+
 ## October 2017
 
 ### 2017-10-24
