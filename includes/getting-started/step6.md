@@ -2,7 +2,7 @@
     <div class="col-md-12" style="text-align: left;">
 
 {{# markdown }}
-<i class="fa fa-angle-double-right" aria-hidden="true"></i> Learn how to **[create an appliction]({{ stache.config.guide_create_app }})** with {{ stache.config.product_name_short }}.
+<i class="fa fa-angle-double-right" aria-hidden="true"></i> Learn how to **[create an application]({{ stache.config.guide_create_app }})** with {{ stache.config.product_name_short }}.
 
 <i class="fa fa-angle-double-right" aria-hidden="true"></i> Learn how **[Authorization]({{ stache.config.guide_web_api_authorization }})** works, including the **[Authorization Code Flow]({{ stache.config.guide_web_api_authorization_auth_code_flow }})** and associated **[tutorials]({{ stache.config.guide_web_api_authorization_auth_code_flow_tutorial_home }})**.
 
