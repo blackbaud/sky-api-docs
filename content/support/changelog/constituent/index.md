@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-### 2017-11-3
+### 2017-11-8
 
 #### New
 
@@ -41,6 +41,8 @@ Added the following endpoint:
 ### Changed
 
  - The [Note (Get)]({{ stache.config.portal_endpoints_constituent_note_get }}) and [Note List (Single constituent)]({{ stache.config.portal_endpoints_constituent_note_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [note]({{ stache.config.portal_contracts }}#Note) entity.
+ - The [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint now returns the `inactive` and `deceased` properties on the [search result]({{ stache.config.portal_contracts }}#SearchResult) entity. Additionally, the `name` field will now include the constituents `suffix` and `suffix_2` if they exist.
+ - Added include_inactive optional query parameter. (include_inactive = true by default). 
 
 ## October 2017
 
