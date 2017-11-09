@@ -14,12 +14,11 @@
 
 <ul id="entities">
     <li ng-repeat="entity in ctrl.entities" style="margin: 0px">
-        <a ng-href="#{{entity.name}}">{{entity.displayName}}</a>
+        <a ng-href="#{{entity.displayId}}">{{entity.displayName}}</a>
     </li>
 </ul>
 
-<div ng-repeat="entity in ctrl.entities">
-    <a ng-attr-name="{{entity.name}}"></a>
+<div name="{{entity.displayId}}" ng-repeat="entity in ctrl.entities">
     <p>&nbsp;</p>
     <h2>{{entity.displayName}}</h2>
     <p>The <strong>{{entity.displayName}}</strong> entity has the following properties:</p>
