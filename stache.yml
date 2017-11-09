@@ -287,6 +287,7 @@ portal_endpoints_constituent_name_format_get_list: <%= stache.config.portal_endp
 # Constituent Notes
 portal_endpoints_constituent_note_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1e/
 portal_endpoints_constituent_note_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1d/
+portal_endpoints_constituent_note_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/5a0493f6d7dcde054c7b4555/
 portal_endpoints_constituent_note_add: <%= stache.config.portal_endpoints_constituent %>operations/56b76471069a050520297722/
 portal_endpoints_constituent_note_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1f/
 portal_endpoints_constituent_note_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f20/

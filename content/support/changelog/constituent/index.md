@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-### 2017-11-8
+### 2017-11-9
 
 #### New
 
@@ -29,7 +29,7 @@ Added the following endpoint:
         <th>Route</th>
       </tr>
     </thead>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_all_note_get_list }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_note_get_all_list }}">
         <td>Note list (All constituents)</td>
         <td>GET</td>
         <td>/notes</td>
