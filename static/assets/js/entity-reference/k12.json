@@ -1,0 +1,587 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "K12 (Beta)",
+    "version": "1.0",
+    "description": "This API is used to provide access to K12 information such as users, academics, admissions, athletics, content, lists, and general school info."
+  },
+  "host": "api.nxt.blackbaud-dev.com",
+  "basePath": "/k12",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "bb-api-subscription-key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    },
+    "oauth2Blackbaud OAuth 2.0 ServiceAuthorizationCode": {
+      "type": "oauth2",
+      "scopes": {},
+      "flow": "accessCode",
+      "authorizationUrl": "https://oauth2.sky.blackbaud.com/authorization",
+      "tokenUrl": "https://oauth2.sky.blackbaud.com/token"
+    },
+    "oauth2Blackbaud OAuth 2.0 ServiceImplicit": {
+      "type": "oauth2",
+      "scopes": {},
+      "flow": "implicit",
+      "authorizationUrl": "https://oauth2.sky.blackbaud.com/authorization"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceAuthorizationCode": []
+    },
+    {
+      "apiKeyQuery": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceAuthorizationCode": []
+    },
+    {
+      "apiKeyHeader": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceImplicit": []
+    },
+    {
+      "apiKeyQuery": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceImplicit": []
+    }
+  ],
+  "paths": {
+    "/v1/school/roles": {
+      "get": {
+        "description": "Gets a list of roles.",
+        "operationId": "Roles",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Collection[RoleModel]"
+            },
+            "examples": {
+              "application/json": {
+                "count": 3,
+                "value": [
+                  {
+                    "id": 122,
+                    "name": "Teacher",
+                    "hidden": false,
+                    "base_role_id": 15
+                  },
+                  {
+                    "id": 3456,
+                    "name": "Parent",
+                    "hidden": false,
+                    "base_role_id": 16
+                  },
+                  {
+                    "id": 3345,
+                    "name": "Student",
+                    "hidden": false,
+                    "base_role_id": 14
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/school/years": {
+      "get": {
+        "description": "Gets a list of school years.",
+        "operationId": "School Years",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Collection[YearModel]"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "current_year": true,
+                    "published": true,
+                    "begin_date": "2017-06-01T00:00:00",
+                    "end_date": "2018-05-31T00:00:00",
+                    "school_year_label": "2017 - 2018"
+                  },
+                  {
+                    "id": 1,
+                    "current_year": false,
+                    "published": true,
+                    "begin_date": "2018-06-01T00:00:00",
+                    "end_date": "2019-05-31T00:00:00",
+                    "school_year_label": "2018 - 2019"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/user/{id}/addresses": {
+      "get": {
+        "description": "Get a List of addresses",
+        "operationId": "Address",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Collection[AddressModel]"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "line_one": "555 Blackbaud Drive",
+                    "line_two": "Building B",
+                    "line_three": "CO: Developer",
+                    "city": "Bedford",
+                    "state": "NH",
+                    "postal_code": "03110",
+                    "country": "United States",
+                    "region": "New England",
+                    "province": "",
+                    "mailing_address": true,
+                    "primary": false,
+                    "user_id": 12345,
+                    "type_id": 1005,
+                    "address_type_links": [
+                      {
+                        "address_id": 1,
+                        "user_id": 12345,
+                        "type_id": 1005,
+                        "type": "Office",
+                        "primary": false
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "line_one": "555 Home Drive",
+                    "line_two": "",
+                    "line_three": "",
+                    "city": "Bedford",
+                    "state": "NH",
+                    "postal_code": "03110",
+                    "country": "United States",
+                    "region": "New England",
+                    "province": "",
+                    "mailing_address": true,
+                    "primary": true,
+                    "user_id": 12345,
+                    "type_id": 1767,
+                    "address_type_links": [
+                      {
+                        "address_id": 2,
+                        "user_id": 12345,
+                        "type_id": 1767,
+                        "type": "Home",
+                        "primary": true
+                      },
+                      {
+                        "address_id": 2,
+                        "user_id": 67890,
+                        "type_id": 1767,
+                        "type": "Home",
+                        "primary": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/user/{id}/addresses/{addressId}": {
+      "patch": {
+        "description": "Updates an address",
+        "operationId": "Update Address",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "addressId",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "patchChanges[AddressModel]",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/PatchChanges[AddressModel]"
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1User{id}Addresses{addressId}Patch200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Collection[RoleModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets or sets the count of items in value.",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RoleModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results.",
+          "type": "string"
+        }
+      }
+    },
+    "RoleModel": {
+      "description": "Role Model",
+      "required": [
+        "id",
+        "name",
+        "hidden",
+        "base_role_id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "Gets or sets the identifier.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Gets or sets the name of the role.",
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Gets or sets the hidden attribute.",
+          "type": "boolean"
+        },
+        "base_role_id": {
+          "format": "int32",
+          "description": "Gets or sets the base role id.",
+          "type": "integer"
+        }
+      },
+      "x-display-name": "Role"
+    },
+    "Collection[YearModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets or sets the count of items in value.",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/YearModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results.",
+          "type": "string"
+        }
+      }
+    },
+    "YearModel": {
+      "description": "School Year Model",
+      "required": [
+        "id",
+        "current_year",
+        "published",
+        "begin_date",
+        "end_date",
+        "school_year_label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "Gets or sets the identifier.",
+          "type": "integer"
+        },
+        "current_year": {
+          "description": "Gets or sets the current year.",
+          "type": "boolean"
+        },
+        "published": {
+          "description": "Gets or sets the published flag.",
+          "type": "boolean"
+        },
+        "begin_date": {
+          "format": "date-time",
+          "description": "Gets or sets the Begin Date.",
+          "type": "string"
+        },
+        "end_date": {
+          "format": "date-time",
+          "description": "Gets or sets the End Date.",
+          "type": "string"
+        },
+        "school_year_label": {
+          "description": "Gets or sets the School Year Label.",
+          "type": "string"
+        }
+      },
+      "x-display-name": "School Year"
+    },
+    "Collection[AddressModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets or sets the count of items in value.",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results.",
+          "type": "string"
+        }
+      }
+    },
+    "AddressModel": {
+      "description": "Address Model",
+      "required": [
+        "id",
+        "line_one",
+        "line_two",
+        "line_three",
+        "city",
+        "state",
+        "postal_code",
+        "country",
+        "region",
+        "province",
+        "mailing_address",
+        "primary",
+        "user_id",
+        "type_id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "Gets or sets the identifier.",
+          "type": "integer"
+        },
+        "line_one": {
+          "description": "Gets or sets the first line of the address",
+          "type": "string"
+        },
+        "line_two": {
+          "description": "Gets or sets the second line of the address",
+          "type": "string"
+        },
+        "line_three": {
+          "description": "Gets or sets the third line of the address",
+          "type": "string"
+        },
+        "city": {
+          "description": "Gets or sets the city for the address",
+          "type": "string"
+        },
+        "state": {
+          "description": "Gets or sets the state for the address",
+          "type": "string"
+        },
+        "postal_code": {
+          "description": "Gets or sets the postal code for the address",
+          "type": "string"
+        },
+        "country": {
+          "description": "Gets or sets the country for the address",
+          "type": "string"
+        },
+        "region": {
+          "description": "Gets or sets the region for the address",
+          "type": "string"
+        },
+        "province": {
+          "description": "Gets or sets the province for the address",
+          "type": "string"
+        },
+        "mailing_address": {
+          "description": "Gets or sets the mailing address flag for the address",
+          "type": "boolean"
+        },
+        "primary": {
+          "description": "Gets or sets the primary flag for the address",
+          "type": "boolean"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "Gets or sets the user id for the address",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "Gets or sets the address type id",
+          "type": "integer"
+        },
+        "address_type_links": {
+          "description": "Gets or sets the list of AddressTypeLinks for an address",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressTypeLinkModel"
+          }
+        }
+      },
+      "x-display-name": "Address"
+    },
+    "AddressTypeLinkModel": {
+      "description": "Address Type Link Model",
+      "required": [
+        "address_id",
+        "user_id",
+        "type_id",
+        "type",
+        "primary"
+      ],
+      "type": "object",
+      "properties": {
+        "address_id": {
+          "format": "int32",
+          "description": "Gets or sets the address identifier.",
+          "type": "integer"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "Gets or sets the user id for the address",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "Gets or sets the address type id",
+          "type": "integer"
+        },
+        "type": {
+          "description": "Gets or sets the address type name for the address",
+          "type": "string"
+        },
+        "primary": {
+          "description": "Gets or sets the primary flag for the address",
+          "type": "boolean"
+        }
+      }
+    },
+    "PatchChanges[AddressModel]": {
+      "description": "class",
+      "type": "object",
+      "properties": {}
+    },
+    "V1User{id}Addresses{addressId}Patch200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    }
+  }
+}
