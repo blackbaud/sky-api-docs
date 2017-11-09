@@ -82,8 +82,9 @@
                 .map(function(name) {
                     var definition = swagger.definitions[name];
                     return {
-                        name: definition['x-display-name'] || name,
+                        name: name,
                         displayName: definition['x-display-name'] || name,
+                        displayId: definition['x-display-id'] || name,
                         details: definition,
                         additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info'])
                     };
