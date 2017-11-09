@@ -14,6 +14,37 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+### 2017-11-9
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_note_get_all_list }}">
+        <td>Note list (All constituents)</td>
+        <td>GET</td>
+        <td>/notes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+ - The [Note (Get)]({{ stache.config.portal_endpoints_constituent_note_get }}) and [Note list (Single constituent)]({{ stache.config.portal_endpoints_constituent_note_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [note]({{ stache.config.portal_contracts }}#Note) entity.
+ - The [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint now returns the `inactive` and `deceased` properties on the [search result]({{ stache.config.portal_contracts }}#SearchResult) entity.
+ - The [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint also now returns suffix information in the `name` field when constituent records include `suffix` or `suffix_2`.
+ - The optional `include_inactive` query parameter is now available on [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint to indicate whether to include inactive constituents. By default, this parameter is set to `true`.
+
 ## October 2017
 
 ### 2017-10-24
@@ -138,7 +169,7 @@ We added the `comment` property to the [relationship]({{ stache.config.portal_co
 
  - The [Communication preference (Edit)]({{ stache.config.portal_endpoints_constituent_communication_preferences_edit }}) endpoint now supports patching the `start` and `end` fields on a communication preference.
 
- - The [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action List (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [action]({{ stache.config.portal_contracts }}#Action) entity.
+ - The [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [action]({{ stache.config.portal_contracts }}#Action) entity.
 
 
 ## April 2017
