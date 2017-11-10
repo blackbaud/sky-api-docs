@@ -115,10 +115,12 @@
 
                 if (property.isArray) {
                     property.ref = (property.items.$ref && property.items.$ref.replace("#/definitions/", ""));
-                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeDisplayName(property.items);
+                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property.items);
+                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property.items);
                 } else {
                     property.ref = property.$ref && property.$ref.replace("#/definitions/", "");
-                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeDisplayName(property);
+                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
+                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property.items);
                 }
 
                 property.descriptionHtml = $sce.trustAsHtml(property.description);
@@ -132,7 +134,13 @@
             }
         }
 
-        function getTypeDisplayName(property) {
+        function getRefDisplayId(ref, definitions) {
+            if (ref) {
+                return (definitions[ref]['x-display-id'] || ref).toLowerCase();
+            }
+        }
+
+        function getTypeFormattedName(property) {
 
             // Conversion table for swagger format to display text.
             var formatDisplayNames = {
