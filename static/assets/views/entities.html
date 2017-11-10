@@ -37,7 +37,7 @@
                     <td>
                         <span ng-show="property.isArray">array of</span>
                         <span ng-show="!property.ref">{{property.displayType}}</span>
-                        <a ng-show="!!property.ref" ng-href="#{{property.ref}}">{{property.displayType}}</a>
+                        <a ng-show="!!property.ref" ng-href="#{{property.displayId}}">{{property.displayType}}</a>
                     </td>
                     <td>
                         <span ng-bind-html="property.descriptionHtml"></span>
