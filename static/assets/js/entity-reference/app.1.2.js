@@ -115,12 +115,12 @@
 
                 if (property.isArray) {
                     property.ref = (property.items.$ref && property.items.$ref.replace("#/definitions/", ""));
-                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property.items);
-                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property.items);
+                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
+                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property);
                 } else {
                     property.ref = property.$ref && property.$ref.replace("#/definitions/", "");
                     property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
-                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property.items);
+                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property);
                 }
 
                 property.descriptionHtml = $sce.trustAsHtml(property.description);
@@ -136,7 +136,7 @@
 
         function getRefDisplayId(ref, definitions) {
             if (ref) {
-                return (definitions[ref]['x-display-id'] || ref).toLowerCase();
+                return (definitions[ref]['x-display-id'] || ref);
             }
         }
 
