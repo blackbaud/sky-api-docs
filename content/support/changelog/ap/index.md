@@ -14,6 +14,30 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-11-17
+
+### Changed
+
+Added additional fields to the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_payment_term_list }}">
+        <td>Payment term (list)</td>
+        <td>GET</td>
+        <td>/paymentterms</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## October 2017
 
 ### 2017-10-12
