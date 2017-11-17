@@ -14,11 +14,9 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## August 2017
+## 2017-08-14
 
-### 2017-08-14
-
-#### New
+### New
 Added the following endpoints:
 
 <div class="table-responsive">
