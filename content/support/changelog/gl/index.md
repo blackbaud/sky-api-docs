@@ -14,9 +14,46 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-08-14
+
+## 2017-11-20
 
 ### New
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_period_summary_list }}">
+				<td>Period summary (List)</td>
+				<td>GET</td>
+				<td>/periodsummary/summaries</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_period_summary_process }}">
+				<td>Period summary process</td>
+				<td>GET</td>
+				<td>/periodsummary/processinginfo</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_period_summary_process_start }}">
+				<td>Period summary process (Start)</td>
+				<td>POST</td>
+				<td>/periodsummary/summarize</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+## August 2017
+
+### 2017-08-14
+
+#### New
 Added the following endpoints:
 
 <div class="table-responsive">
