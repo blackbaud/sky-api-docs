@@ -632,6 +632,15 @@ portal_endpoints_budget_project_list: <%= stache.config.portal_endpoints_GL %>op
 # Ledger Summary List
 portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a46/
 
+# Period Summary List
+portal_endpoints_period_summary_list: <%= stache.config.portal_endpoints_GL %>operations/5a0f05caa9db95085cdda5f7/
+
+# Period Summary Process
+portal_endpoints_period_summary_process: <%= stache.config.portal_endpoints_GL %>operations/5a0f05caa9db95085cdda5f6/
+
+# Period Summary Process Start
+portal_endpoints_period_summary_process_start: <%= stache.config.portal_endpoints_GL %>operations/5a0f05caa9db95085cdda5f5/
+
 # =============================================
 # 			Treasury API ENDPOINTS
 # =============================================
