@@ -43,7 +43,7 @@ Added the following endpoints:
             <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_period_summary_process_start }}">
 				<td>Period summary process (Start)</td>
 				<td>POST</td>
-				<td>/periodsummary</td>
+				<td>/periodsummary/summarize</td>
 			</tr>
 		</tbody>
 	</table>
