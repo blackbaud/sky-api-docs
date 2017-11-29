@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### New
 
-Added the following endpoint:
+Added the following endpoints:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -33,6 +33,11 @@ Added the following endpoint:
         <td>Relationship list (All constituents)</td>
         <td>GET</td>
         <td>/relationships</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_alias_type_get }}">
+        <td>Alias types</td>
+        <td>GET</td>
+        <td>/aliastypes</td>
       </tr>
     </tbody>
   </table>
