@@ -14,6 +14,33 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-12-1
+
+### New
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_alias_list }}">
+        <td>Alias list (Single constituent)</td>
+        <td>GET</td>
+        <td>/constituent/{constituent_id}/aliases</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_alias_create }}">
+        <td>Alias (Create)</td>
+        <td>POST</td>
+        <td>/aliases</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2017-11-9
 
 ### New
