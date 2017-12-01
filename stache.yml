@@ -239,7 +239,7 @@ portal_endpoints_constituent_addresstypes_get_list: <%= stache.config.portal_end
 portal_endpoints_constituent_countries_get_list: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fcf
 
 # Constituent Aliases
-portal_endpoints_constituent_alias_type_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+portal_endpoints_constituent_alias_type_get: <%= stache.config.portal_endpoints_constituent %>operations/5a217434d7dcde0864d8a943/
 
 # Constituent Attachments
 portal_endpoints_constituent_attachment_create: <%= stache.config.portal_endpoints_constituent %>operations/57c73331a9db950f507ab01e/
@@ -323,7 +323,7 @@ portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_
 
 # Constituent Relationship
 portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
-portal_endpoints_constituent_note_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
+portal_endpoints_constituent_relationship_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/5a217434d7dcde0864d8a944/
 portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61e/
 portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/598a0dd7d7dcde047cb504d0/
 portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61f/
