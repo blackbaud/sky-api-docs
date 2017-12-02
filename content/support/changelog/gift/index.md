@@ -14,6 +14,14 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+##2017-11-29
+
+#### Changed
+
+- The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their post statuses. The optional `post_status` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts with the specified post statuses. For example, `post_status=DoNotPost&post_status=Posted` filters the results to only include gifts that are marked either DoNotPost or Posted.
+
+- The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their gift types. The optional `gift_type` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts with the specified gift types. For example, `gift_type=MatchingGiftPledge&gift_type=RecurringGift` filters the results to only include gifts with the MatchingGiftPledge or RecurringGift types.
+
 ##2017-11-01
 
 ### Changed
