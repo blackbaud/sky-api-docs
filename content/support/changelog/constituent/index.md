@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-1
+## 2017-12-01
 
 ### New
 
@@ -49,7 +49,7 @@ Added the following endpoints:
 
 ## November 2017
 
-### 2017-11-9
+### 2017-11-09
 
 #### New
 
