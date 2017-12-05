@@ -241,6 +241,7 @@ portal_endpoints_constituent_countries_get_list: <%= stache.config.portal_endpoi
 # Aliases
 portal_endpoints_constituent_alias_list: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
 portal_endpoints_alias_create: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+portal_endpoints_constituent_alias_type_get: <%= stache.config.portal_endpoints_constituent %>operations/5a217434d7dcde0864d8a943/
 
 # Constituent Attachments
 portal_endpoints_constituent_attachment_create: <%= stache.config.portal_endpoints_constituent %>operations/57c73331a9db950f507ab01e/
@@ -287,6 +288,8 @@ portal_endpoints_constituent_emailaddresstypes_get_list: <%= stache.config.porta
 
 # Constituent Name Format
 portal_endpoints_constituent_name_format_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1c/
+portal_endpoints_name_format_configuration_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
+portal_endpoints_name_format_type_get: <%= stache.config.portal_endpoints_constituent %>operations/TODO/
 
 # Constituent Notes
 portal_endpoints_constituent_note_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1e/
@@ -324,6 +327,7 @@ portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_
 
 # Constituent Relationship
 portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
+portal_endpoints_constituent_relationship_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/5a217434d7dcde0864d8a944/
 portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61e/
 portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/598a0dd7d7dcde047cb504d0/
 portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61f/

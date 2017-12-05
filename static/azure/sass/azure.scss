@@ -14,9 +14,6 @@ body {
   background-color: $footer-bg;
 }
 
-.ap-account-applications {
-  display: none;
-}
 .ap-analytics-usage-locals {
   .col-md-12.clearfix.form-group {
     margin-bottom: 0;
@@ -47,6 +44,10 @@ body {
   }
 }
 
+.badge {
+  padding-top: 5px;
+}
+
 .snippet.snippet-resizable {
   height: auto;
 }
@@ -60,10 +61,6 @@ body {
   height: auto !important;
   max-width: none;
   background-color: #fff;
-
-  main > search-control {
-    display: none;
-  }
 
   .layout-row {
     display: block;

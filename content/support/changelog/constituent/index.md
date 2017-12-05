@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-1
+## 2017-12-06
 
 ### New
 
@@ -37,13 +37,58 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
         <td>POST</td>
         <td>/aliases</td>
       </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_name_format_configuration_get }}">
+        <td>Name format configurations</td>
+        <td>GET</td>
+        <td>/nameformatconfigurations</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_name_format_type_get }}">
+        <td>Name format types</td>
+        <td>GET</td>
+        <td>/nameformattypes</td>
+      </tr>
     </tbody>
   </table>
 </div>
 
-## 2017-11-9
+## 2017-12-01
 
 ### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}">
+        <td>Relationship list (All constituents)</td>
+        <td>GET</td>
+        <td>/relationships</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_alias_type_get }}">
+        <td>Alias types</td>
+        <td>GET</td>
+        <td>/aliastypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+ - The [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) endpoint now returns the `date_added` and `date_modified` properties on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
+
+## November 2017
+
+### 2017-11-09
+
+#### New
 
 Added the following endpoint:
 
@@ -65,7 +110,7 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
+#### Changed
 
  - The [Note (Get)]({{ stache.config.portal_endpoints_constituent_note_get }}) and [Note list (Single constituent)]({{ stache.config.portal_endpoints_constituent_note_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [note]({{ stache.config.portal_contracts }}#Note) entity.
  - The [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint now returns the `inactive` and `deceased` properties on the [search result]({{ stache.config.portal_contracts }}#SearchResult) entity.
