@@ -78,7 +78,21 @@
 
         function getEntitiesFromSwagger(swagger, whiteList, blackList) {
             return Object.keys(swagger.definitions)
-                .sort()
+                .sort(function(a, b) {
+                    var keyA = getRefDisplayName(a, swagger.definitions);
+                    var keyB = getRefDisplayName(b, swagger.definitions);
+
+                    if (keyA < keyB) {
+                        return -1;
+                    }
+
+                    if (keyA > keyB) {
+                        return 1;
+                    }
+
+                    // keys are equal (shouldn't happen in our swagger)
+                    return 0;
+                })
                 .map(function(name) {
                     var definition = swagger.definitions[name];
                     return {

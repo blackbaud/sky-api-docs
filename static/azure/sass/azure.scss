@@ -14,9 +14,6 @@ body {
   background-color: $footer-bg;
 }
 
-.ap-account-applications {
-  display: none;
-}
 .ap-analytics-usage-locals {
   .col-md-12.clearfix.form-group {
     margin-bottom: 0;
@@ -64,10 +61,6 @@ body {
   height: auto !important;
   max-width: none;
   background-color: #fff;
-
-  main > search-control {
-    display: none;
-  }
 
   .layout-row {
     display: block;
