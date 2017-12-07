@@ -38,7 +38,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
         <td>/aliases</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_name_format_configuration_get }}">
-        <td>Name format configurations</td>
+        <td>Name format configuration list</td>
         <td>GET</td>
         <td>/nameformatconfigurations</td>
       </tr>
