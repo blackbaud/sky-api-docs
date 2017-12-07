@@ -30,7 +30,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_alias_list }}">
         <td>Alias list (Single constituent)</td>
         <td>GET</td>
-        <td>/constituent/{constituent_id}/aliases</td>
+        <td>/constituents/{constituent_id}/aliases</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_alias_create }}">
         <td>Alias (Create)</td>
