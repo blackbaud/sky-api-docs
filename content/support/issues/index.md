@@ -13,6 +13,11 @@ title: Issues
 # Issues
 If you find an issue, please [contact us]({{ stache.config.support_need_help_url }}).
 
+## 2017-12-12
+We are aware of an issue with the new [Period summary]({{stache.config.portal_endpoints_period_summary_process_start}})
+and [Period summary list]({{stache.config.portal_endpoints_period_summary_list}}) endpoints returning incorrect balances
+for some accounts. We recommend not relying on these values currently, and will provide an update as soon as it is available.
+
 ## 2017-04-26
 ### Resolved
 For the issue reported on 2017-04-06, the time zone inconsistencies have been resolved. But note that daylight savings time is not universally applied/respected.
