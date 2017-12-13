@@ -14,6 +14,31 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2017-12-14
+
+### New
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_all_list }}">
+        <td>Education list (All constituents)</td>
+        <td>GET</td>
+        <td>/educations</td>
+      </tr>
+  </table>
+</div>
+
+### Changed
+
+ - Both the [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
+
 ## 2017-12-07
 
 ### New
