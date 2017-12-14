@@ -38,7 +38,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 ### Changed
 
  - Both the [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
- - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes an optional `category` and `value` parameters to retrieve custom fields only if they match specified custom field categories and values.
+ - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes optional `category` and `value` parameters to retrieve custom fields only if they match specified custom field categories and values.
 
 ## 2017-12-07
 
