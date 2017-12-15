@@ -460,6 +460,12 @@ portal_endpoints_fund_attachments_create: <%= stache.config.portal_endpoints_fun
 portal_endpoints_fund_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e01a/
 portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e019/
 
+# Packages
+portal_endpoints_package_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a341d17d7dcde09d06dbaff/
+
+# Goal Categories
+portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a341d17d7dcde09d06dbafe/
+
 # =============================================
 #       Gift API ENDPOINTS
 # =============================================
