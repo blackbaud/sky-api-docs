@@ -463,6 +463,9 @@ portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fun
 # Packages
 portal_endpoints_package_get: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
 
+# Goal Categories
+portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/TODO/
+
 # =============================================
 #       Gift API ENDPOINTS
 # =============================================

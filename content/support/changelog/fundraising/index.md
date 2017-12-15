@@ -14,11 +14,11 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-12
+## 2017-12-15
 
-#### Changed
+#### New
 
- - Added the following endpoint:
+ - Added the following endpoints:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -34,6 +34,11 @@ Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.
         <td>Package</td>
         <td>GET</td>
         <td>/packages/{package_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_goal_categories_get }}">
+        <td>Goal categories</td>
+        <td>GET</td>
+        <td>/fundraising/goalcategories</td>
       </tr>
     </tbody>
   </table>
