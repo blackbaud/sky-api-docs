@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.
 
 #### New
 
- - Added the following endpoints:
+Added the following endpoints:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -30,15 +30,15 @@ Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.
       </tr>
     </thead>
     <tbody>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_package_get }}">
-        <td>Package</td>
-        <td>GET</td>
-        <td>/packages/{package_id}</td>
-      </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_goal_categories_get }}">
         <td>Goal categories</td>
         <td>GET</td>
         <td>/fundraising/goalcategories</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_package_get }}">
+        <td>Package</td>
+        <td>GET</td>
+        <td>/packages/{package_id}</td>
       </tr>
     </tbody>
   </table>
