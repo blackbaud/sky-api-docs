@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-18
+## 2017-12-20
 
 ### New
 
@@ -37,8 +37,8 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### Changed
 
- - Both the [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
- - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes optional `category` and `value` parameters to retrieve custom fields only if they match specified custom field categories and values.
+ - The [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
+ - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes options to filter custom fields based on their categories and values. The optional `category` and `value` parameters filter the results to only custom fields with the specified categories and values.
  - The [Currency configuration]({{stache.config.portal_endpoints_currency_configuration_get}}) endpoint now returns the `iso_alpha_2_code` property on the [currency configuration]({{ stache.config.portal_contracts }}#CurrencyConfiguration) entity.
 
 ## 2017-12-07
