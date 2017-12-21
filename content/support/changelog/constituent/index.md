@@ -27,7 +27,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
         <th>Route</th>
       </tr>
     </thead>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_all_list }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_education_get_all_list }}">
         <td>Education list (All constituents)</td>
         <td>GET</td>
         <td>/educations</td>

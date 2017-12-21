@@ -264,7 +264,7 @@ portal_endpoints_constituent_membership_get_list: <%= stache.config.portal_endpo
 
 # Constituent Education
 portal_endpoints_constituent_education_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f12/
-portal_endpoints_constituent_education_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
+portal_endpoints_constituent_education_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/5a3a8124d7dcde02e89bbefe/
 portal_endpoints_constituent_education_add: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd0/
 portal_endpoints_constituent_education_edit: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd2/
 portal_endpoints_constituent_education_delete: <%= stache.config.portal_endpoints_constituent %>operations/589b855ba9db950c207e7fd1/
