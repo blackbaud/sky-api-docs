@@ -14,9 +14,60 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-20
+## 2018-01-03
 
 ### New
+
+Added the following name format endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_add }}">
+        <td>Name format (Create)</td>
+        <td>POST</td>
+        <td>/nameformats</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_update }}">
+        <td>Name format (Edit)</td>
+        <td>PATCH</td>
+        <td>/nameformats/{name_format_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_delete }}">
+        <td>Name format (Delete)</td>
+        <td>DELETE</td>
+        <td>/nameformats/{name_format_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_formats_add }}">
+        <td>Primary name format (Create)</td>
+        <td>POST</td>
+        <td>/primarynameformats</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_formats_update }}">
+        <td>Primary name format (Edit)</td>
+        <td>PATCH</td>
+        <td>/primarynameformats/{primary_name_format_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_formats_delete }}">
+        <td>Primary name format (Delete)</td>
+        <td>DELETE</td>
+        <td>/primarynameformats/{primary_name_format_id}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## 2017
+
+### 2017-12-20
+
+#### New
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -35,15 +86,15 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
   </table>
 </div>
 
-### Changed
+#### Changed
 
  - The [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
  - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes options to filter custom fields based on their categories and values. The optional `category` and `value` parameters filter the results to only custom fields with the specified categories and values.
  - The [Currency configuration]({{stache.config.portal_endpoints_currency_configuration_get}}) endpoint now returns the `iso_alpha_2_code` property on the [currency configuration]({{ stache.config.portal_contracts }}#CurrencyConfiguration) entity.
 
-## 2017-12-07
+### 2017-12-07
 
-### New
+#### New
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -78,9 +129,9 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
   </table>
 </div>
 
-## 2017-12-01
+### 2017-12-01
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -107,11 +158,9 @@ Added the following endpoints:
   </table>
 </div>
 
-### Changed
+#### Changed
 
  - The [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) endpoint now returns the `date_added` and `date_modified` properties on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
-
-## November 2017
 
 ### 2017-11-09
 
@@ -144,8 +193,6 @@ Added the following endpoint:
  - The [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint also now returns suffix information in the `name` field when constituent records include `suffix` or `suffix_2`.
  - The optional `include_inactive` query parameter is now available on [Constituent (Search)]({{ stache.config.portal_endpoints_constituent_search }}) endpoint to indicate whether to include inactive constituents. By default, this parameter is set to `true`.
 
-## October 2017
-
 ### 2017-10-24
 
 #### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
@@ -159,8 +206,6 @@ Additionally, we will update the [Name format list (Single constituent)]({{stach
 #### Changed
 
 The [Constituent list endpoint]({{stache.config.portal_endpoints_constituent_get_list}}) now includes an option to filter constituents based on their record IDs. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only constituents with the specified IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only two constituents records: "1242" and "385."
-
-## August 2017
 
 ### 2017-08-28
 
@@ -216,8 +261,6 @@ Added the following endpoint:
   </table>
 </div>
 
-## June 2017
-
 ### 2017-06-28
 
 #### Changed
@@ -229,8 +272,6 @@ We added the `start`, `end`, `seasonal_start`, and `seasonal_end` properties to 
 #### Changed
 
 We updated the concept of inactive addresses to be consistent across address endpoints and better aligned with the web interface. Now, addresses are only marked inactive if their `end_date` is in the past.
-
-## May 2017
 
 ### 2017-05-17
 
@@ -270,8 +311,6 @@ We added the `comment` property to the [relationship]({{ stache.config.portal_co
 
  - The [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints now return the `date_added` and `date_modified` properties on the [action]({{ stache.config.portal_contracts }}#Action) entity.
 
-
-## April 2017
 
 ### 2017-04-25
 
@@ -368,8 +407,6 @@ GET operations such as [Relationship list (Single constituent)]({{ stache.config
 
  - The [Constituent list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoint now populates the `marital_status` property by default.
 
-## February 2017
-
 ### 2017-02-23
 
 #### Changed
@@ -464,8 +501,6 @@ Added the following endpoints:
     </tbody>
   </table>
 </div>
-
-## January 2017
 
 ### 2017-01-31
 
