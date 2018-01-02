@@ -5,7 +5,7 @@
     "version": "1.0",
     "description": "This API is used to provide access to K12 information such as users, academics, admissions, athletics, content, lists, and general school info."
   },
-  "host": "api.nxt.blackbaud-dev.com",
+  "host": "api.sky.blackbaud.com",
   "basePath": "/k12",
   "schemes": [
     "https"
@@ -154,13 +154,13 @@
         ]
       }
     },
-    "/v1/user/{id}/addresses": {
+    "/v1/users/{user_id}/addresses": {
       "get": {
         "description": "Get a List of addresses",
         "operationId": "Address",
         "parameters": [
           {
-            "name": "id",
+            "name": "user_id",
             "in": "path",
             "description": "Format - int32.",
             "required": true,
@@ -192,13 +192,12 @@
                     "primary": false,
                     "user_id": 12345,
                     "type_id": 1005,
-                    "address_type_links": [
+                    "links": [
                       {
-                        "address_id": 1,
                         "user_id": 12345,
                         "type_id": 1005,
                         "type": "Office",
-                        "primary": false
+                        "shared": false
                       }
                     ]
                   },
@@ -217,20 +216,20 @@
                     "primary": true,
                     "user_id": 12345,
                     "type_id": 1767,
-                    "address_type_links": [
+                    "links": [
                       {
-                        "address_id": 2,
                         "user_id": 12345,
                         "type_id": 1767,
                         "type": "Home",
-                        "primary": true
+                        "shared": false
                       },
                       {
-                        "address_id": 2,
                         "user_id": 67890,
                         "type_id": 1767,
                         "type": "Home",
-                        "primary": true
+                        "shared": true,
+                        "shared_user": "Amy Pond",
+                        "shared_relationship": "Companion"
                       }
                     ]
                   }
@@ -253,20 +252,20 @@
         ]
       }
     },
-    "/v1/user/{id}/addresses/{addressId}": {
+    "/v1/users/{user_id}/addresses/{address_id}": {
       "patch": {
         "description": "Updates an address",
         "operationId": "Update Address",
         "parameters": [
           {
-            "name": "id",
+            "name": "user_id",
             "in": "path",
             "description": "Format - int32.",
             "required": true,
             "type": "integer"
           },
           {
-            "name": "addressId",
+            "name": "address_id",
             "in": "path",
             "description": "Format - int32.",
             "required": true,
@@ -287,7 +286,230 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/V1User{id}Addresses{addressId}Patch200ApplicationJsonResponse"
+              "$ref": "#/definitions/V1Users{user_id}Addresses{address_id}Patch200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/academics/sections": {
+      "get": {
+        "description": "Gets a list of sections.",
+        "operationId": "Sections",
+        "parameters": [
+          {
+            "name": "level_num",
+            "in": "query",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "school_year",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "duration_id",
+            "in": "query",
+            "description": "Format - int32.",
+            "type": "integer"
+          },
+          {
+            "name": "department_id",
+            "in": "query",
+            "description": "Format - int32.",
+            "type": "integer"
+          },
+          {
+            "name": "grade_id",
+            "in": "query",
+            "description": "Format - int32.",
+            "type": "integer"
+          },
+          {
+            "name": "offering_id",
+            "in": "query",
+            "description": "Format - int32.",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Collection[SectionModel]"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 8410742,
+                    "parent_section_id": 4053350,
+                    "offering_id": 232364,
+                    "lead_section_id": 8410742,
+                    "name": "Cooking 101 - 1",
+                    "section_identifier": "1",
+                    "course_code": "",
+                    "room_id": 123456,
+                    "block_id": 0,
+                    "school_year_label": "2017-2018",
+                    "duration": {
+                      "id": 60558,
+                      "name": "2nd Semester"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/school/levels": {
+      "get": {
+        "description": "Gets a list of school years.",
+        "operationId": "School Levels",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Collection[LevelModel]"
+            },
+            "examples": {
+              "application/json": {
+                "count": 3,
+                "value": [
+                  {
+                    "id": 454,
+                    "name": "Level One",
+                    "abbreviation": "T"
+                  },
+                  {
+                    "id": 455,
+                    "name": "Level Two",
+                    "abbreviation": "P"
+                  },
+                  {
+                    "id": 456,
+                    "name": "Level Three",
+                    "abbreviation": "S"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/academics/sections/{section_id}/assignments": {
+      "get": {
+        "description": "Gets a list of assignments for a section.",
+        "operationId": "Assignments",
+        "parameters": [
+          {
+            "name": "section_id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "types",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "persona_id",
+            "in": "query",
+            "description": "Format - int32.",
+            "type": "integer"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Collection[SectionModel]"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 8410742,
+                    "type_id": 1234,
+                    "name": "Cooking 101 - 1",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ostendit pedes et pectus. Si quicquam extra virtutem habeatur in bonis. Honesta oratio, Socratica, Platonis etiam. Duo Reges: constructio interrete. Quis istud possit, inquit, negare? Sin eam, quam Hieronymus, ne fecisset idem, ut voluptatem illam Aristippi in prima commendatione poneret.",
+                    "index_id": 1,
+                    "date": "2017-11-17T00:00:00",
+                    "due_date": "2017-11-19T00:00:00",
+                    "publshed": true,
+                    "publish_on_assigned": false,
+                    "type": "Homework",
+                    "submissions": 1,
+                    "enrolled": 4,
+                    "rank": 1,
+                    "major": false,
+                    "grade_book": false,
+                    "graded_count": 0,
+                    "status": 2,
+                    "discussion": false
+                  }
+                ]
+              }
             }
           },
           "400": {
@@ -307,6 +529,249 @@
     }
   },
   "definitions": {
+    "Collection[AssignmentModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets or sets the count of items in value.",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AssignmentModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results.",
+          "type": "string"
+        }
+      }
+    },
+    "AssignmentModel": {
+      "description": "Assignment Model",
+      "required": [
+        "id",
+        "type_id",
+        "name",
+        "description",
+        "index_id",
+        "date",
+        "due_date",
+        "publshed",
+        "publish_on_assigned",
+        "type",
+        "submissions",
+        "enrolled",
+        "rank",
+        "major",
+        "grade_book",
+        "graded_count",
+        "status",
+        "discussion"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "Gets or sets the identifier.",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "Gets or sets the type id.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Gets or sets the name of the assignment.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Gets or sets the description of the assignment.",
+          "type": "string"
+        },
+        "index_id": {
+          "format": "int32",
+          "description": "Gets or sets the index id of the assignment.",
+          "type": "integer"
+        },
+        "date": {
+          "format": "date-time",
+          "description": "Gets or sets the date of the assignment.",
+          "type": "string"
+        },
+        "due_date": {
+          "format": "date-time",
+          "description": "Gets or sets the due date of the assignment.",
+          "type": "string"
+        },
+        "publshed": {
+          "description": "Gets or sets the publish flag of the assignment.",
+          "type": "boolean"
+        },
+        "publish_on_assigned": {
+          "description": "Gets or sets the publish_on_assigned flag of the assignment.",
+          "type": "boolean"
+        },
+        "type": {
+          "description": "Gets or sets the type of the assignment.",
+          "type": "string"
+        },
+        "submissions": {
+          "format": "int32",
+          "description": "Gets or sets the number of submissions.",
+          "type": "integer"
+        },
+        "enrolled": {
+          "format": "int32",
+          "description": "Gets or sets the number of students enrolled in the course.",
+          "type": "integer"
+        },
+        "rank": {
+          "format": "int32",
+          "description": "Gets or sets the rank of the assignment.",
+          "type": "integer"
+        },
+        "major": {
+          "description": "Gets or sets the mojor flag of the assignment.",
+          "type": "boolean"
+        },
+        "grade_book": {
+          "description": "Gets or sets the grade book flag of the assignment.",
+          "type": "boolean"
+        },
+        "graded_count": {
+          "format": "int32",
+          "description": "Gets or sets the count of the assignments graded.",
+          "type": "integer"
+        },
+        "status": {
+          "format": "int32",
+          "description": "Gets or sets the assignment status.",
+          "type": "integer"
+        },
+        "discussion": {
+          "description": "Gets or sets the discussion flag of the assignment.",
+          "type": "boolean"
+        }
+      },
+      "x-display-name": "Assignment"
+    },
+    "Collection[SectionModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets or sets the count of items in value.",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SectionModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results.",
+          "type": "string"
+        }
+      }
+    },
+    "SectionModel": {
+      "description": "Section Model",
+      "required": [
+        "id",
+        "parent_section_id",
+        "offering_id",
+        "lead_section_id",
+        "name",
+        "section_identifier",
+        "course_code",
+        "room_id",
+        "block_id",
+        "school_year_label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "Gets or sets the identifier.",
+          "type": "integer"
+        },
+        "parent_section_id": {
+          "format": "int32",
+          "description": "Gets or sets the parent section id.",
+          "type": "integer"
+        },
+        "offering_id": {
+          "format": "int32",
+          "description": "Gets or sets the offering ID.",
+          "type": "integer"
+        },
+        "lead_section_id": {
+          "format": "int32",
+          "description": "Gets or sets the lead section id.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name used to identify a section. .",
+          "type": "string"
+        },
+        "section_identifier": {
+          "description": "The custom identifier used to identify a section. .",
+          "type": "string"
+        },
+        "course_code": {
+          "description": "The course code of a section. .",
+          "type": "string"
+        },
+        "room_id": {
+          "format": "int32",
+          "description": "The room id for a section.",
+          "type": "integer"
+        },
+        "block_id": {
+          "format": "int32",
+          "description": "The block id for a section.",
+          "type": "integer"
+        },
+        "school_year_label": {
+          "description": "The label used to identify the range of dates in a school year.",
+          "type": "string"
+        },
+        "duration": {
+          "$ref": "#/definitions/DurationModel",
+          "description": "Gets or sets the Duration for a section"
+        }
+      },
+      "x-display-name": "Section"
+    },
+    "DurationModel": {
+      "description": "Duration Model",
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "Gets or sets the identifier.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "Gets or sets the name of the duration.",
+          "type": "string"
+        }
+      }
+    },
     "Collection[RoleModel]": {
       "description": "Represents a collection of items",
       "type": "object",
@@ -342,20 +807,20 @@
       "properties": {
         "id": {
           "format": "int32",
-          "description": "Gets or sets the identifier.",
+          "description": "The ID of a role.",
           "type": "integer"
         },
         "name": {
-          "description": "Gets or sets the name of the role.",
+          "description": "The label used to identify a role. .",
           "type": "string"
         },
         "hidden": {
-          "description": "Gets or sets the hidden attribute.",
+          "description": "Returns True if the role is hidden.",
           "type": "boolean"
         },
         "base_role_id": {
           "format": "int32",
-          "description": "Gets or sets the base role id.",
+          "description": "The ID used to associate roles with the original role; all roles are based upon preexisting base role IDs.",
           "type": "integer"
         }
       },
@@ -398,11 +863,11 @@
       "properties": {
         "id": {
           "format": "int32",
-          "description": "Gets or sets the identifier.",
+          "description": "The ID of a school year.",
           "type": "integer"
         },
         "current_year": {
-          "description": "Gets or sets the current year.",
+          "description": "Returns True if Current Year is enabled for the respective school year.",
           "type": "boolean"
         },
         "published": {
@@ -411,20 +876,68 @@
         },
         "begin_date": {
           "format": "date-time",
-          "description": "Gets or sets the Begin Date.",
+          "description": "The begin date in a school year date range. Uses ISO-8601 (24H) format: 2003-04-21T10:29:43.",
           "type": "string"
         },
         "end_date": {
           "format": "date-time",
-          "description": "Gets or sets the End Date.",
+          "description": "The end date in a school year date range. Uses ISO-8601 (24H) format: 2003-04-21T10:29:43.",
           "type": "string"
         },
         "school_year_label": {
-          "description": "Gets or sets the School Year Label.",
+          "description": "The label used to identify the range of dates in a school year.",
           "type": "string"
         }
       },
       "x-display-name": "School Year"
+    },
+    "Collection[LevelModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets or sets the count of items in value.",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LevelModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results.",
+          "type": "string"
+        }
+      }
+    },
+    "LevelModel": {
+      "description": "Level Model",
+      "required": [
+        "id",
+        "name",
+        "abbreviation"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of a school level.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The label used to identify a school level.",
+          "type": "string"
+        },
+        "abbreviation": {
+          "description": "The abbrevation associated with a school level.",
+          "type": "string"
+        }
+      },
+      "x-display-name": "Level"
     },
     "Collection[AddressModel]": {
       "description": "Represents a collection of items",
@@ -528,7 +1041,7 @@
           "description": "Gets or sets the address type id",
           "type": "integer"
         },
-        "address_type_links": {
+        "links": {
           "description": "Gets or sets the list of AddressTypeLinks for an address",
           "type": "array",
           "items": {
@@ -541,19 +1054,15 @@
     "AddressTypeLinkModel": {
       "description": "Address Type Link Model",
       "required": [
-        "address_id",
         "user_id",
         "type_id",
         "type",
-        "primary"
+        "shared",
+        "shared_user",
+        "shared_relationship"
       ],
       "type": "object",
       "properties": {
-        "address_id": {
-          "format": "int32",
-          "description": "Gets or sets the address identifier.",
-          "type": "integer"
-        },
         "user_id": {
           "format": "int32",
           "description": "Gets or sets the user id for the address",
@@ -568,18 +1077,27 @@
           "description": "Gets or sets the address type name for the address",
           "type": "string"
         },
-        "primary": {
-          "description": "Gets or sets the primary flag for the address",
+        "shared": {
+          "description": "Gets the shared address flag",
           "type": "boolean"
+        },
+        "shared_user": {
+          "description": "Gets the name of the shared user",
+          "type": "string"
+        },
+        "shared_relationship": {
+          "description": "Gets the relationship of the shared user",
+          "type": "string"
         }
-      }
+      },
+      "x-display-name": "AddressTypeLink"
     },
     "PatchChanges[AddressModel]": {
       "description": "class",
       "type": "object",
       "properties": {}
     },
-    "V1User{id}Addresses{addressId}Patch200ApplicationJsonResponse": {
+    "V1Users{user_id}Addresses{address_id}Patch200ApplicationJsonResponse": {
       "format": "int32",
       "type": "integer"
     }
