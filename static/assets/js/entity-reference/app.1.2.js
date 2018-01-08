@@ -15,14 +15,19 @@
             swaggerUrl: '@',
             swaggerUrlDev: '@',
             whiteList: '@',
-            blackList: '@'
+            blackList: '@',
+            showDescriptions: '@'
         }
     });
 
     function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $rootScope) {
         var self = this;
         this.showErrorMessage = false;
-
+        debugger;
+        if (this.showDescriptions == null)
+        {
+            this.showDescriptions = false;
+        }
         this.$onInit = onInit;
 
         function onInit() {
@@ -100,6 +105,7 @@
                         displayName: definition['x-display-name'] || name,
                         displayId: definition['x-display-id'] || name,
                         details: definition,
+                        description: self.showDescriptions ? definition.description : null,
                         additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info'])
                     };
                 })
