@@ -23,9 +23,10 @@
     function EntityReferenceCtrl($window, $http, $sce, $timeout, bbWait, localStorageService, $rootScope) {
         var self = this;
         this.showErrorMessage = false;
-        debugger;
+
         if (this.showDescriptions == null)
         {
+            // default showDescriptions to false, since not all APIs have user friendly descriptions
             this.showDescriptions = false;
         }
         this.$onInit = onInit;
