@@ -15,7 +15,8 @@
             swaggerUrl: '@',
             swaggerUrlDev: '@',
             whiteList: '@',
-            blackList: '@'
+            blackList: '@',
+            showDescriptions: '@'
         }
     });
 
@@ -23,6 +24,11 @@
         var self = this;
         this.showErrorMessage = false;
 
+        if (this.showDescriptions == null)
+        {
+            // default showDescriptions to false, since not all APIs have user friendly descriptions
+            this.showDescriptions = false;
+        }
         this.$onInit = onInit;
 
         function onInit() {
@@ -100,6 +106,7 @@
                         displayName: definition['x-display-name'] || name,
                         displayId: definition['x-display-id'] || name,
                         details: definition,
+                        description: self.showDescriptions ? definition.description : null,
                         additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info'])
                     };
                 })
