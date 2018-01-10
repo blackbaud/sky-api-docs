@@ -68,6 +68,10 @@ Added the following name format endpoints:
   </table>
 </div>
 
+### Changed
+
+ The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
+
 ## 2017
 
 ### 2017-12-20
