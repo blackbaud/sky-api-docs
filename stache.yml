@@ -288,10 +288,10 @@ portal_endpoints_constituent_email_address_delete: <%= stache.config.portal_endp
 portal_endpoints_constituent_emailaddresstypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/573f727fd7dcde29b07a4d80/
 
 # Constituent Name Format
-portal_endpoints_constituent_name_format_summary_get: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
+portal_endpoints_constituent_name_format_summary_get: <%= stache.config.portal_endpoints_constituent %>operations/5a569236a9db9510f8883a09/
 portal_endpoints_name_format_configuration_get: <%= stache.config.portal_endpoints_constituent %>operations/5a298079a9db9510f4bde4fc/
 portal_endpoints_name_format_type_get: <%= stache.config.portal_endpoints_constituent %>operations/5a298079a9db9510f4bde4fd/
-portal_endpoints_name_formate_add: <%= stache.config.portal_endpoints_constituent %>operations/5a569237a9db9510f8883a0b/
+portal_endpoints_name_format_add: <%= stache.config.portal_endpoints_constituent %>operations/5a569237a9db9510f8883a0b/
 portal_endpoints_name_format_update: <%= stache.config.portal_endpoints_constituent %>operations/5a569237a9db9510f8883a0f/
 portal_endpoints_name_format_delete: <%= stache.config.portal_endpoints_constituent %>operations/5a569237a9db9510f8883a0e/
 portal_endpoints_primary_name_format_add: <%= stache.config.portal_endpoints_constituent %>operations/5a569237a9db9510f8883a0a/

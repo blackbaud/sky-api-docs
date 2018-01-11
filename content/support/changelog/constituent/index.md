@@ -34,32 +34,32 @@ Added the following endpoints:
         <td>GET</td>
         <td>/constituents/{constituent_id}/nameformats/summary</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_add }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_name_format_add }}">
         <td>Name format (Create)</td>
         <td>POST</td>
         <td>/nameformats</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_update }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_name_format_update }}">
         <td>Name format (Edit)</td>
         <td>PATCH</td>
         <td>/nameformats/{name_format_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_delete }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_name_format_delete }}">
         <td>Name format (Delete)</td>
         <td>DELETE</td>
         <td>/nameformats/{name_format_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_format_add }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_primary_name_format_add }}">
         <td>Primary name format (Create)</td>
         <td>POST</td>
         <td>/primarynameformats</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_format_update }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_primary_name_format_update }}">
         <td>Primary name format (Edit)</td>
         <td>PATCH</td>
         <td>/primarynameformats/{primary_name_format_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_format_delete }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_primary_name_format_delete }}">
         <td>Primary name format (Delete)</td>
         <td>DELETE</td>
         <td>/primarynameformats/{primary_name_format_id}</td>
@@ -71,6 +71,14 @@ Added the following endpoints:
 ### Changed
 
  The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
+ 
+- [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }})
+- [Name format (create)]({{ stache.config.portal_endpoints_name_format_add }})
+- [Name format (edit)]({{ stache.config.portal_endpoints_name_format_update }})
+- [Name format (delete)]({{ stache.config.portal_endpoints_name_format_delete }})
+- [Name format (create)]({{ stache.config.portal_endpoints_primary_name_format_add }})
+- [Name format (edit)]({{ stache.config.portal_endpoints_primary_name_format_update }})
+- [Name format (delete)]({{ stache.config.portal_endpoints__primary_name_format_delete }})
 
 ## 2017
 
