@@ -72,14 +72,6 @@ Added the following endpoints:
 
  The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
  
-- [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }})
-- [Name format (create)]({{ stache.config.portal_endpoints_name_format_add }})
-- [Name format (edit)]({{ stache.config.portal_endpoints_name_format_update }})
-- [Name format (delete)]({{ stache.config.portal_endpoints_name_format_delete }})
-- [Name format (create)]({{ stache.config.portal_endpoints_primary_name_format_add }})
-- [Name format (edit)]({{ stache.config.portal_endpoints_primary_name_format_update }})
-- [Name format (delete)]({{ stache.config.portal_endpoints__primary_name_format_delete }})
-
 ## 2017
 
 ### 2017-12-20
