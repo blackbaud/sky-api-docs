@@ -14,11 +14,11 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-03
+## 2018-01-11
 
 ### New
 
-Added the following name format endpoints:
+Added the following endpoints:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -29,32 +29,32 @@ Added the following name format endpoints:
         <th>Route</th>
       </tr>
     </thead>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_add }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_add }}">
         <td>Name format (Create)</td>
         <td>POST</td>
         <td>/nameformats</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_update }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_update }}">
         <td>Name format (Edit)</td>
         <td>PATCH</td>
         <td>/nameformats/{name_format_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_delete }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_delete }}">
         <td>Name format (Delete)</td>
         <td>DELETE</td>
         <td>/nameformats/{name_format_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_formats_add }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_format_add }}">
         <td>Primary name format (Create)</td>
         <td>POST</td>
         <td>/primarynameformats</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_formats_update }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_format_update }}">
         <td>Primary name format (Edit)</td>
         <td>PATCH</td>
         <td>/primarynameformats/{primary_name_format_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_formats_delete }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_primary_name_format_delete }}">
         <td>Primary name format (Delete)</td>
         <td>DELETE</td>
         <td>/primarynameformats/{primary_name_format_id}</td>
