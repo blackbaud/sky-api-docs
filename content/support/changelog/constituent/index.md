@@ -29,7 +29,12 @@ Added the following endpoints:
         <th>Route</th>
       </tr>
     </thead>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_add }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_format_summary_get }}">
+        <td>Name format summary</td>
+        <td>GET</td>
+        <td>/constituents/{constituent_id}/nameformats/summary</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_name_formats_add }}">
         <td>Name format (Create)</td>
         <td>POST</td>
         <td>/nameformats</td>
@@ -62,6 +67,10 @@ Added the following endpoints:
     </tbody>
   </table>
 </div>
+
+### Changed
+
+ The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
 
 ## 2017
 
@@ -199,7 +208,7 @@ Added the following endpoint:
 
 We will change the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide a more robust entity. 
 
-Additionally, we will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_get_list}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return the other non-primary name formats as part of the updated entity model mentioned above. 
+Additionally, we will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_summary_get}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return the other non-primary name formats as part of the updated entity model mentioned above. 
 
 ### 2017-10-20
 
