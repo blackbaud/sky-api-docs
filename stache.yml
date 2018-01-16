@@ -248,6 +248,7 @@ portal_endpoints_constituent_attachment_create: <%= stache.config.portal_endpoin
 portal_endpoints_constituent_attachment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f00/
 portal_endpoints_constituent_attachment_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f02/
 portal_endpoints_constituent_attachment_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f01/
+portal_endpoints_constituent_attachment_tags_get: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
 
 # Constituent Code
 portal_endpoints_constituent_code_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0b/
@@ -425,6 +426,9 @@ portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints
 portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc458/
 portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc459/
 
+# Attachment tags
+portal_endpoints_fundraising_attachment_tags_get: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+
 # Appeal Attachments
 portal_endpoints_appeal_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e00f/
 portal_endpoints_appeal_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e010/
@@ -499,6 +503,7 @@ portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gi
 portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44c/
 portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44e/
 portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44d/
+portal_endpoints_gift_attachment_tags_get: <%= stache.config.portal_endpoints_gift %>operations/TBD/
 
 # =============================================
 #       Opportunity API ENDPOINTS
@@ -528,6 +533,7 @@ portal_endpoints_opportunity_attachment_get_list: <%= stache.config.portal_endpo
 portal_endpoints_opportunity_attachment_create: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8ae/
 portal_endpoints_opportunity_attachment_edit: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8b0/
 portal_endpoints_opportunity_attachment_delete: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8af/
+portal_endpoints_opportunity_attachment_tags_get: <%= stache.config.portal_endpoints_opportunity %>operations/TBD/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
