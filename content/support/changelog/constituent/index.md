@@ -14,6 +14,34 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-01-19
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_attachment_tags_get }}">
+        <td>Attachment tags</td>
+        <td>GET</td>
+        <td>/attachmenttags</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+ We added the `date` property to the [attachment]({{ stache.config.portal_contracts }}#Attachment) entity.
+
 ## 2018-01-11
 
 ### New
