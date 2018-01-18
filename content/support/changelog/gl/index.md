@@ -14,13 +14,11 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-<!--
-## 2018-01-11
+## 2018-01-17
 
 ### Changed
 
 For the  [Journal entry batch (Post)]({{ stache.config.portal_endpoints_journal_entry_batch_post }}) endpoint, `transaction_code_value` can now include `“”` empty string for `value`.
--->
 
 ## November 2017
 
