@@ -13,7 +13,8 @@ title: Treasury (Beta) Changelog
 # {{ name }}
 
 Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
-<--
+
+<!--
 ## 2018-01-11
 
 ### Changed
