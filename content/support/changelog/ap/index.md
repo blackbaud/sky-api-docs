@@ -14,14 +14,11 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-<!--
-## 2018-01-11
+## 2018-01-17
 
 ### Changed
 
 For the  [Invoice (List)]({{ stache.config.portal_endpoints_invoice_list }}) endpoint, we added the `delete`, `paid`, and `partially paid` statuses.
-
--->
 
 ## November 2017
 
