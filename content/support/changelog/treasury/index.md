@@ -14,6 +14,7 @@ title: Treasury (Beta) Changelog
 
 Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+<!--
 ## 2018-01-11
 
 ### Changed
@@ -23,6 +24,7 @@ For the  [Checks (List)]({{ stache.config.portal_endpoints_checks_list }}) endpo
 - The new `payee` field is now returned in the listed objects.
 - The list is now sorted by check number (ascending).
 - We added the `starting_check_number` and `ending_check_number` variables to the check filter. When only `starting_check_number` is provided, a list of checks (starting with that number and higher) is returned. When only `ending_check_number` is provided, a list of checks (less than or equal to that number) is returned. When both variables are provided, a range of checks is returned.
+-->
 
 ## April 2017
 
