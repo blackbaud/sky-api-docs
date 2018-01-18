@@ -241,6 +241,8 @@ portal_endpoints_constituent_countries_get_list: <%= stache.config.portal_endpoi
 # Aliases
 portal_endpoints_constituent_alias_list: <%= stache.config.portal_endpoints_constituent %>operations/5a298079a9db9510f4bde4fa/
 portal_endpoints_alias_create: <%= stache.config.portal_endpoints_constituent %>operations/5a298079a9db9510f4bde4fb/
+portal_endpoints_alias_edit: <%= stache.config.portal_endpoints_constituent %>operations/5a5fc576a9db9510f8883ad3/
+portal_endpoints_alias_delete: <%= stache.config.portal_endpoints_constituent %>operations/5a5fc576a9db9510f8883ad2/
 portal_endpoints_constituent_alias_type_get: <%= stache.config.portal_endpoints_constituent %>operations/5a217434d7dcde0864d8a943/
 
 # Constituent Attachments
