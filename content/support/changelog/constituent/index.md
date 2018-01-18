@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ### New
 
-Added the following endpoints:
+Added the following endpoint:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -39,7 +39,7 @@ Added the following endpoints:
 </div>
 
 ### Changed
-We resolved an issue on [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}). The 255 character limit is now correctly applied to `summary` instead of `description` on the [action]({{ stache.config.portal_contracts }}#Action) entity. 
+We resolved an issue with the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints. The 255-character limit is now correctly applied to `summary` instead of `description` on the [action]({{ stache.config.portal_contracts }}#Action) entity. 
 
 ## 2018-01-17
 
