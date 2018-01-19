@@ -250,7 +250,7 @@ portal_endpoints_constituent_attachment_create: <%= stache.config.portal_endpoin
 portal_endpoints_constituent_attachment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f00/
 portal_endpoints_constituent_attachment_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f02/
 portal_endpoints_constituent_attachment_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f01/
-portal_endpoints_constituent_attachment_tags_get: <%= stache.config.portal_endpoints_constituent %>operations/todo/
+portal_endpoints_constituent_attachment_tags_get: <%= stache.config.portal_endpoints_constituent %>operations/5a624cc7d7dcde1160d5d38d/
 
 # Constituent Code
 portal_endpoints_constituent_code_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0b/
