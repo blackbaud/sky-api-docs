@@ -32,7 +32,7 @@
         this.$onInit = onInit;
 
         function onInit() {
-            var isDev = window.location.search.toString().toLowerCase().indexOf('ENV=DEV') >= 0 && self.swaggerUrlDev;
+            var isDev = window.location.search.toString().toLowerCase().indexOf('env=dev') >= 0 && self.swaggerUrlDev;
             this.swaggerCacheName = 'swaggerResponseCache-' + (isDev ? 'DEV-' : '') + this.apiTitle;
             var swaggerResponseCache = localStorageService.get(self.swaggerCacheName);
             bbWait.beginPageWait({});
