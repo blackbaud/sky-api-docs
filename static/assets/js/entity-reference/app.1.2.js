@@ -32,14 +32,17 @@
         this.$onInit = onInit;
 
         function onInit() {
-            var isDev = window.location.search.toString().toLowerCase().indexOf('env=dev') >= 0 && self.swaggerUrlDev;
-            this.swaggerCacheName = 'swaggerResponseCache-' + (isDev ? 'DEV-' : '') + this.apiTitle;
+            self.isDev = window.location.search.toString().toLowerCase().indexOf('env=dev') >= 0 && self.swaggerUrlDev;
+            if (self.isDev) {
+              self.apiTitle = 'DEV-' + self.apiTitle;
+            }
+            this.swaggerCacheName = 'swaggerResponseCache-' + self.apiTitle;
             var swaggerResponseCache = localStorageService.get(self.swaggerCacheName);
             bbWait.beginPageWait({});
 
             // Get a new swagger response if one is not cached or the cache has expired
             if (!swaggerResponseCache || Date.now() >= swaggerResponseCache.expirationDate) {
-              $http.get(isDev ? self.swaggerUrlDev : self.swaggerUrl)
+              $http.get(self.isDev ? self.swaggerUrlDev : self.swaggerUrl)
                   .then(handleSuccess, handleError)
                   .finally(function() { bbWait.endPageWait(); });
             }
