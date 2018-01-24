@@ -14,9 +14,15 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-19
+### 2018-01-25
 
-### New
+#### Changed
+
+- We added the `date` property to the [attachment]({{ stache.config.constituent_entity_reference }}#Attachment) entity.
+
+### 2018-01-19
+
+#### New
 
 Added the following endpoint:
 
@@ -38,12 +44,12 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
-We resolved an issue with the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints. The 255-character limit is now correctly applied to `summary` instead of `description` on the [action]({{ stache.config.portal_contracts }}#Action) entity. 
+#### Changed
+We resolved an issue with the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints. The 255-character limit is now correctly applied to `summary` instead of `description` on the [action]({{ stache.config.portal_contracts }}#Action) entity.
 
-## 2018-01-17
+### 2018-01-17
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -70,9 +76,9 @@ Added the following endpoints:
   </table>
 </div>
 
-## 2018-01-11
+### 2018-01-11
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -124,10 +130,10 @@ Added the following endpoints:
   </table>
 </div>
 
-### Changed
+#### Changed
 
  The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
- 
+
 ## 2017
 
 ### 2017-12-20
@@ -262,9 +268,9 @@ Added the following endpoint:
 
 #### Announcement: Breaking Changes Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
-We will change the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide a more robust entity. 
+We will change the [name format]({{ stache.config.portal_contracts }}#NameFormat) entity to support custom name formats and provide a more robust entity.
 
-Additionally, we will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_summary_get}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return the other non-primary name formats as part of the updated entity model mentioned above. 
+Additionally, we will update the [Name format list (Single constituent)]({{stache.config.portal_endpoints_constituent_name_format_summary_get}}) endpoint to support the next generation of name formats. Currently, the endpoint returns only the primary addressee and primary salutation for a constituent. With our change, it will also return the other non-primary name formats as part of the updated entity model mentioned above.
 
 ### 2017-10-20
 
