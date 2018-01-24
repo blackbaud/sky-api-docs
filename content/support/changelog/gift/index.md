@@ -14,13 +14,44 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-11
+## 2018-01-25
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_attachment_tags_get }}">
+        <td>Attachment tags</td>
+        <td>GET</td>
+        <td>/attachmenttags</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Changed
+
+We added the `date` property to the [attachment]({{ stache.config.gift_entity_reference }}#Attachment) entity.
+
+## 2017
+
+### 2017-12-11
 
 #### Changed
 
 We added the `package_id` property to the [gift split]({{ stache.config.gift_entity_reference }}#GiftSplit) entity.
 
-##2017-12-01
+### 2017-12-01
 
 #### Changed
 
@@ -28,15 +59,11 @@ We added the `package_id` property to the [gift split]({{ stache.config.gift_ent
 
 - The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now includes an option to filter gifts based on their gift types. The optional `gift_type` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts with the specified gift types. For example, `gift_type=MatchingGiftPledge&gift_type=RecurringGift` filters the results to only include gifts with the MatchingGiftPledge or RecurringGift types.
 
-## November 2017
-
 ### 2017-11-01
 
 #### Changed
 
 We added the `batch_number` property to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.  This property is read-only.
-
-## October 2017
 
 ### 2017-10-27
 
@@ -73,8 +100,6 @@ The [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) now i
 
 We added the `acknowledgements`, `receipts`, and `balance` properties to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity.
 
-## September 2017
-
 ### 2017-09-07
 
 #### New
@@ -103,8 +128,6 @@ Added the following endpoint:
 #### Changed
 
 The `date` property on the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity no longer returns an offset. Instead, it now uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.
-
-## August 2017
 
 ### 2017-08-30
 
@@ -147,15 +170,11 @@ We added the `payments` property to the [gift]({{ stache.config.gift_entity_refe
 
 We updated the `next_link` property on the [Gift list endpoint]({{stache.config.portal_endpoints_gift_get_list}}) to be more consistent with other lists.
 
-## June 2017
-
 ### 2017-06-23
 
 #### Changed
 
 We added the `gift_aid_amount` and `gift_aid_qualification_status` properties to the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity for UK tenants.
-
-## April 2017
 
 ### 2017-04-25
 
@@ -196,8 +215,6 @@ Added the following endpoints:
     </tbody>
   </table>
 </div>
-
-## March 2017
 
 ### 2017-03-20
 
