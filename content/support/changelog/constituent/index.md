@@ -19,6 +19,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 #### Changed
 
 - We added the `date` property to the [attachment]({{ stache.config.constituent_entity_reference }}#Attachment) entity.
+- To remove confusion with the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity in the [Gift API]({{ stache.config.portal_endpoints_gift }}), we have renamed the Constituent gift entity to [Giving Summary]({{ stache.config.constituent_entity_reference }}#GivingSummary).
 
 ### 2018-01-19
 
