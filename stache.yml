@@ -531,7 +531,7 @@ portal_endpoints_opportunity_attachment_get_list: <%= stache.config.portal_endpo
 portal_endpoints_opportunity_attachment_create: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8ae/
 portal_endpoints_opportunity_attachment_edit: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8b0/
 portal_endpoints_opportunity_attachment_delete: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8af/
-portal_endpoints_opportunity_attachment_tags_get: <%= stache.config.portal_endpoints_opportunity %>operations/TBD/
+portal_endpoints_opportunity_attachment_tags_get: <%= stache.config.portal_endpoints_opportunity %>operations/5a68e77fa9db951348db40ee/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
