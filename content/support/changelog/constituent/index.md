@@ -14,16 +14,16 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-### 2018-01-25
+## 2018-01-25
 
-#### Changed
+### Changed
 
 - We added the `date` property to the [attachment]({{ stache.config.constituent_entity_reference }}#Attachment) entity.
 - To remove confusion with the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity in the [Gift API]({{ stache.config.portal_endpoints_gift }}), we have renamed the Constituent gift entity to [Giving Summary]({{ stache.config.constituent_entity_reference }}#GivingSummary).
 
-### 2018-01-19
+## 2018-01-19
 
-#### New
+### New
 
 Added the following endpoint:
 
@@ -45,12 +45,12 @@ Added the following endpoint:
   </table>
 </div>
 
-#### Changed
+### Changed
 We resolved an issue with the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints. The 255-character limit is now correctly applied to `summary` instead of `description` on the [action]({{ stache.config.portal_contracts }}#Action) entity.
 
-### 2018-01-17
+## 2018-01-17
 
-#### New
+### New
 
 Added the following endpoints:
 
@@ -77,9 +77,9 @@ Added the following endpoints:
   </table>
 </div>
 
-### 2018-01-11
+## 2018-01-11
 
-#### New
+### New
 
 Added the following endpoints:
 
@@ -131,7 +131,7 @@ Added the following endpoints:
   </table>
 </div>
 
-#### Changed
+### Changed
 
  The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
 
