@@ -14,9 +14,9 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-25
+### 2018-01-26
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -38,9 +38,10 @@ Added the following endpoints:
   </table>
 </div>
 
-### Changed
+#### Changed
 
-We added the `date` property to the [attachment]({{ stache.config.fundraising_entity_reference }}#Attachment) entity.
+- We added the `date` property to the [attachment]({{ stache.config.fundraising_entity_reference }}#Attachment) entity.
+- We added the `category` property to the [campaign]({{stache.config.fundraising_entity_reference}}#Campaign), [fund]({{stache.config.fundraising_entity_reference}}#Fund), and [appeal]({{stache.config.fundraising_entity_reference}}#Appeal) entities.
 
 ## 2017
 
@@ -164,7 +165,7 @@ The [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campa
 
 #### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }})
 
-We will update the default value of the `include_inactive` filter to `false` on the [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints to exclude inactive records by default. Currently, the filter defaults to `true` and includes inactive records when no value is supplied. 
+We will update the default value of the `include_inactive` filter to `false` on the [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints to exclude inactive records by default. Currently, the filter defaults to `true` and includes inactive records when no value is supplied.
 
 ### 2017-04-06
 
