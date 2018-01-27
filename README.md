@@ -1,6 +1,6 @@
 # SKY API documentation
 
-SKY API provides customers and partners access to open, industry-standard REST APIs that they can use to extend the functionality of Blackbaud solutions. You can view the live documentation on the [SKY API website](https://developer.sky.blackbaud.com/).
+Blackbaud's SKY API provides customers, partners, and developers access to open, industry-standard REST APIs that they can use to integrate with and extend the functionality of Blackbaud solutions. You can view the live documentation on the [SKY API developer portal](https://developer.sky.blackbaud.com/).
 
 ## Contributing
 
