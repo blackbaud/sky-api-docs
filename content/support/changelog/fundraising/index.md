@@ -14,11 +14,11 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-### 2018-01-26
+## 2018-01-26
 
-#### New
+### New
 
-Added the following endpoints:
+Added the following endpoint:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -38,7 +38,7 @@ Added the following endpoints:
   </table>
 </div>
 
-#### Changed
+### Changed
 
 - We added the `date` property to the [attachment]({{ stache.config.fundraising_entity_reference }}#Attachment) entity.
 - We added the `category` property to the [campaign]({{stache.config.fundraising_entity_reference}}#Campaign), [fund]({{stache.config.fundraising_entity_reference}}#Fund), and [appeal]({{stache.config.fundraising_entity_reference}}#Appeal) entities.
