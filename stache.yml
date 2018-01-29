@@ -505,6 +505,7 @@ portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gi
 portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44c/
 portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44e/
 portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44d/
+portal_endpoints_gift_attachment_tags_get: <%= stache.config.portal_endpoints_gift %>operations/5a6f1feca9db951348db41e3/
 
 # =============================================
 #       Opportunity API ENDPOINTS
