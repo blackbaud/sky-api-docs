@@ -14,7 +14,7 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-25
+## 2018-01-29
 
 #### New
 
