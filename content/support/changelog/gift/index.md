@@ -16,7 +16,7 @@ Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_
 
 ## 2018-01-29
 
-#### New
+###New
 
 Added the following endpoint:
 
@@ -39,7 +39,7 @@ Added the following endpoint:
   </table>
 </div>
 
-#### Changed
+### Changed
 
 We added the `date` property to the [attachment]({{ stache.config.gift_entity_reference }}#Attachment) entity.
 
