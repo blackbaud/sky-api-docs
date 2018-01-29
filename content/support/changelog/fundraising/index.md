@@ -14,7 +14,38 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2017-12-15
+## 2018-01-29
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_attachment_tags_get }}">
+        <td>Attachment tags</td>
+        <td>GET</td>
+        <td>/attachmenttags</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+- We added the `date` property to the [attachment]({{ stache.config.fundraising_entity_reference }}#Attachment) entity.
+- We added the `category` property to the [campaign]({{stache.config.fundraising_entity_reference}}#Campaign), [fund]({{stache.config.fundraising_entity_reference}}#Fund), and [appeal]({{stache.config.fundraising_entity_reference}}#Appeal) entities.
+
+## 2017
+
+### 2017-12-15
 
 #### New
 
@@ -43,8 +74,6 @@ Added the following endpoints:
     </tbody>
   </table>
 </div>
-
-## August 2017
 
 ### 2017-08-28
 
@@ -126,21 +155,17 @@ Added the following endpoints:
   </table>
 </div>
 
-## May 2017
-
 ### 2017-05-09
 
 #### Changed
 
 The [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints now exclude inactive records by default. To include inactive records, set the `include_inactive` parameter to `true`.
 
-## April 2017
-
 ### 2017-04-28
 
 #### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }})
 
-We will update the default value of the `include_inactive` filter to `false` on the [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints to exclude inactive records by default. Currently, the filter defaults to `true` and includes inactive records when no value is supplied. 
+We will update the default value of the `include_inactive` filter to `false` on the [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints to exclude inactive records by default. Currently, the filter defaults to `true` and includes inactive records when no value is supplied.
 
 ### 2017-04-06
 
@@ -176,8 +201,6 @@ Added the following endpoints:
     </tbody>
   </table>
 </div>
-
-## March 2017
 
 ### 2017-03-08
 
