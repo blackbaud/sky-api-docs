@@ -435,7 +435,7 @@ portal_endpoints_appeal_attachments_edit: <%= stache.config.portal_endpoints_fun
 portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e011/
 
 # Attachment Tags
-portal_endpoints_fundraising_attachment_tags_get: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+portal_endpoints_fundraising_attachment_tags_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a6f2005d7dcde0d446fe1c0/
 
 # Campaigns
 portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
