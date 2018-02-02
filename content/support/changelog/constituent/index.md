@@ -19,7 +19,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 ### Changed
 
 - The [Address list (All constituents)]({{stache.config.portal_endpoints_address_get_list}}), [Email address list (All constituents)]({{stache.config.portal_endpoints_email_address_get_list}}), [Online presence list (All constituents)]({{stache.config.portal_endpoints_online_presence_get_list}}), and [Phone list (All constituents)]({{stache.config.portal_endpoints_phone_get_list}}) endpoints now include an option to filter based on their associated constituents. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include the items associated with the specified constituent record IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only include results associated with two constituent records: "1242" and "385."
-- We updated the custom field filter on the [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint to support filtering on `fuzzy date` values.
+- We updated the `category` and `value` custom field filter on the [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint to support filtering on `fuzzy date` values. See endpoint documentation for usage.
 
 ## 2018-01-25
 
