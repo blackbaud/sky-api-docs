@@ -14,16 +14,25 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-25
+## 2018-02-02
 
 ### Changed
+
+- The [Address list (All constituents)]({{stache.config.portal_endpoints_address_get_list}}), [Email address list (All constituents)]({{stache.config.portal_endpoints_email_address_get_list}}), [Online presence list (All constituents)]({{stache.config.portal_endpoints_online_presence_get_list}}), and [Phone list (All constituents)]({{stache.config.portal_endpoints_phone_get_list}}) endpoints now include an option to filter based on their associated constituents. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include the items associated with the specified constituent record IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only include results associated with two constituent records: "1242" and "385."
+- We updated the `value` filter on the [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint to support filtering on `fuzzy date` values. The endpoint documentation describes how to filter on fuzzy dates.
+
+## January
+
+### 2018-01-25
+
+#### Changed
 
 - We added the `date` property to the [attachment]({{ stache.config.constituent_entity_reference }}#Attachment) entity.
 - To remove confusion with the [gift]({{ stache.config.gift_entity_reference }}#Gift) entity in the [Gift API]({{ stache.config.portal_endpoints_gift }}), we have renamed the Constituent gift entity to [Giving Summary]({{ stache.config.constituent_entity_reference }}#GivingSummary).
 
-## 2018-01-19
+### 2018-01-19
 
-### New
+#### New
 
 Added the following endpoint:
 
@@ -45,12 +54,12 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
+#### Changed
 We resolved an issue with the [Action (Create)]({{ stache.config.portal_endpoints_constituent_action_add }}) and [Action (Edit)]({{ stache.config.portal_endpoints_constituent_action_update }}) endpoints. The 255-character limit is now correctly applied to `summary` instead of `description` on the [action]({{ stache.config.portal_contracts }}#Action) entity.
 
-## 2018-01-17
+### 2018-01-17
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -77,9 +86,9 @@ Added the following endpoints:
   </table>
 </div>
 
-## 2018-01-11
+### 2018-01-11
 
-### New
+#### New
 
 Added the following endpoints:
 
@@ -131,7 +140,7 @@ Added the following endpoints:
   </table>
 </div>
 
-### Changed
+#### Changed
 
  The **Name format list (Single constituent)** endpoint has been replaced by the [Name format summary]({{ stache.config.portal_endpoints_constituent_name_format_summary_get }}) endpoint.
 
