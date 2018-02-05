@@ -18,7 +18,7 @@ Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.
 
 ### Changed
 
-- We added the `type` property to the [fund]({{ stache.config.fundraising_entity_reference }}#Fund) entity.
+We added the `type` property to the [fund]({{ stache.config.fundraising_entity_reference }}#Fund) entity.
 
 ## 2018-01-29
 
