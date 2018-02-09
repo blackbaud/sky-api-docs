@@ -14,6 +14,45 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-02-12
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_get_list }}">
+        <td>Fundraiser goal list (Single constituent)</td>
+        <td>GET</td>
+        <td>/fundraisers/{constituent_id}goals</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_create }}">
+        <td>Fundraiser goal (Create)</td>
+        <td>POST</td>
+        <td>/fundraisers/goals</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_edit }}">
+        <td>Fundraiser goal (Edit)</td>
+        <td>PATCH</td>
+        <td>/fundraisers/goals/{goal_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_delete }}">
+        <td>Fundraiser goal (Delete)</td>
+        <td>DELETE</td>
+        <td>/fundraisers/goals/{goal_id}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2018-02-09
 
 ### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{stache.config.portal_endpoints_fundraising}})
