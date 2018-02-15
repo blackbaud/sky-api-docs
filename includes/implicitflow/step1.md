@@ -39,6 +39,12 @@ When navigating, you'll need to include a few parameters in the query string. Th
 
         See <a href="https://tools.ietf.org/html/rfc6749#section-10.12" target="_blank">RFC-6749 section 10.12</a></td>
       </tr>
+      <tr>
+        <td>environment_id</td>
+        <td>
+        <em>Optional</em>.  The <code>environment_id</code> parameter can be used to filter the list of eligible environments shown during the user authorization step.  This filter is useful when the user is already operating in the context of an environment, such as within a SKY API user interface add-in.  We'll have more information on environments and add-ins in the near future.
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>

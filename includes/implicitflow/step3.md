@@ -66,6 +66,11 @@ If the user granted your app permission, the URL fragment will contain the follo
         <td>string</td>
         <td>The name of the environment.</td>
       </tr>
+      <tr>
+        <td>user_id</td>
+        <td>string</td>
+        <td>The unique identifer of the authenticated Blackbaud user in whose context the access token is issued.  This value can be used to correlate Blackbaud users with users in external systems.</td>
+      </tr>
     </tbody>
   </table>
 </div>

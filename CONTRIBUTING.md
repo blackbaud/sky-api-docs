@@ -1,10 +1,10 @@
 # How to contribute
 
-Third-party contributions are essential to keep the SKY API documentation useful and current. We welcome contributions in the form of issues and pull requests.
+Proper documentation is essential for a good developer experience - we welcome external contributions in the form of issues and pull requests!
 
 ## Submit an issue
 
-See something missing? Want to suggest a new feature? [Submit an issue!](https://github.com/blackbaud/sky-api-docs/issues) 
+See something missing or incorrect in the documentation? [Submit an issue!](https://github.com/blackbaud/sky-api-docs/issues) 
 
 ## Submit a pull request
 
