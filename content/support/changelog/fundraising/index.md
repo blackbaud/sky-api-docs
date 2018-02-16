@@ -14,7 +14,7 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-02-12
+## 2018-02-16
 
 ### New
 
@@ -48,6 +48,21 @@ Added the following endpoints:
         <td>Fundraiser goal (Delete)</td>
         <td>DELETE</td>
         <td>/fundraisers/goals/{goal_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_appeal_categories_get }}">
+        <td>Appeal categories</td>
+        <td>GET</td>
+        <td>/appeals/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_campaign_categories_get }}">
+        <td>Campaign categories</td>
+        <td>GET</td>
+        <td>/campaigns/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_fund_categories_get }}">
+        <td>Fund categories</td>
+        <td>GET</td>
+        <td>/funds/categories</td>
       </tr>
     </tbody>
   </table>

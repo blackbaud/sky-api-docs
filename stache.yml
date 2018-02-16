@@ -482,6 +482,9 @@ portal_endpoints_fundraising_goals_create: <%= stache.config.portal_endpoints_fu
 portal_endpoints_fundraising_goals_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
 portal_endpoints_fundraising_goals_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
 portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a341d17d7dcde09d06dbafe/
+portal_endpoints_fundraising_appeal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+portal_endpoints_fundraising_campaign_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+portal_endpoints_fundraising_fund_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
 
 # =============================================
 #       Gift API ENDPOINTS
