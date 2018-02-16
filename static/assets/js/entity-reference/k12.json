@@ -197,6 +197,7 @@
                         "user_id": 12345,
                         "type_id": 1005,
                         "type": "Office",
+                        "primary": false,
                         "shared": false
                       }
                     ]
@@ -221,12 +222,14 @@
                         "user_id": 12345,
                         "type_id": 1767,
                         "type": "Home",
+                        "primary": false,
                         "shared": false
                       },
                       {
                         "user_id": 67890,
                         "type_id": 1767,
                         "type": "Home",
+                        "primary": false,
                         "shared": true,
                         "shared_user": "Amy Pond",
                         "shared_relationship": "Companion"
@@ -235,6 +238,50 @@
                   }
                 ]
               }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "description": "Creates an address.",
+        "operationId": "Address (Add)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user to create the address for",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "addressModel",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/AddressModel"
+            },
+            "description": "The data used to create the address."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}AddressesPost200ApplicationJsonResponse"
             }
           },
           "400": {
@@ -307,7 +354,7 @@
     },
     "/v1/academics/sections": {
       "get": {
-        "description": "Returns a list of sections.",
+        "description": "Returns a list of sections. <b>Requires Academic Group Manager in the K12 system</b>.",
         "operationId": "Sections",
         "parameters": [
           {
@@ -442,7 +489,7 @@
     },
     "/v1/academics/sections/{section_id}/assignments": {
       "get": {
-        "description": "Returns a list of assignments for a section.",
+        "description": "Returns a list of assignments for a section. <b>Requires Academic Group Manager in the K12 system</b>.",
         "operationId": "Assignments",
         "parameters": [
           {
@@ -504,11 +551,9 @@
                     "published": true,
                     "publish_on_assigned": false,
                     "type": "Homework",
-                    "submissions": 1,
                     "enrolled": 4,
                     "rank": 1,
                     "major": false,
-                    "grade_book": false,
                     "graded_count": 0,
                     "status": 2,
                     "discussion": false
@@ -557,9 +602,9 @@
                 "value": [
                   {
                     "id": 1,
-                    "type_id": 1,
                     "number": "555-555-5555",
                     "index_id": 1,
+                    "type_id": 1,
                     "links": [
                       {
                         "type_id": 1,
@@ -571,9 +616,9 @@
                   },
                   {
                     "id": 2,
-                    "type_id": 2,
                     "number": "555-555-5556",
                     "index_id": 3,
+                    "type_id": 2,
                     "links": [
                       {
                         "type_id": 2,
@@ -585,6 +630,50 @@
                   }
                 ]
               }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "description": "Creates a phone number.",
+        "operationId": "Phone (Add)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user to create the phone number for",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "phoneModel",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/PhoneModel"
+            },
+            "description": "The data used to create the phone number."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}PhonesPost200ApplicationJsonResponse"
             }
           },
           "400": {
@@ -819,6 +908,43 @@
         "produces": [
           "application/json"
         ]
+      },
+      "post": {
+        "description": "Creates a user.",
+        "operationId": "Users (Add)",
+        "parameters": [
+          {
+            "name": "userModel",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/UserModel"
+            },
+            "description": "The data used to create the user."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1UsersPost200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/v1/users/{user_id}/relationships": {
@@ -880,6 +1006,321 @@
           "application/json"
         ]
       }
+    },
+    "/v1/users/phonetypes": {
+      "get": {
+        "description": "Returns a list of phone types",
+        "operationId": "Phone Types",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of phone type entities.",
+            "schema": {
+              "$ref": "#/definitions/PhoneTypeModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "type": "Home"
+                  },
+                  {
+                    "id": 2,
+                    "type": "Wireless"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/addresstypes": {
+      "get": {
+        "description": "Returns a list of address types",
+        "operationId": "Address Types",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of address type entities.",
+            "schema": {
+              "$ref": "#/definitions/AddressTypeModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "type": "Home"
+                  },
+                  {
+                    "id": 2,
+                    "type": "Summer"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/sync": {
+      "get": {
+        "description": "Returns a paginated list of users.",
+        "operationId": "Sync",
+        "parameters": [
+          {
+            "name": "base_role_ids",
+            "in": "query",
+            "description": "Comma delimited list of base role IDs to get users for",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "marker",
+            "in": "query",
+            "description": "Format - int32. The last user ID returned. Results will start with the next user in the result set",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of user entities.",
+            "schema": {
+              "$ref": "#/definitions/UserExtendedModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 1,
+                    "prefix": "Mr.",
+                    "first_name": "Ashley",
+                    "nick_name": "Awesome",
+                    "middle_name": "Michelle",
+                    "last_name": "Smith",
+                    "maiden_name": "Jones",
+                    "suffix": "",
+                    "email": "example@example.com",
+                    "email_active": true,
+                    "display": "Smith, Ashley (Awesome)",
+                    "deceased": false,
+                    "lost": false,
+                    "religion": "Buddisim",
+                    "ethnicity": "Caucasian",
+                    "profile_url": "http://example.com",
+                    "audit_date": "2018-01-12T00:00:00",
+                    "enroll_date": "2018-01-12T00:00:00",
+                    "depart_date": "2018-01-12T00:00:00",
+                    "last_sync_date": "2018-01-12T00:00:00",
+                    "host_id": "123456",
+                    "greeting": "",
+                    "retire_date": "2018-01-12T00:00:00",
+                    "affiliation": "",
+                    "citizenship": "United States",
+                    "personal_website": "",
+                    "deceased_date": "2018-01-12T00:00:00",
+                    "living_arrangement": "",
+                    "screen_name": "screenname",
+                    "chat_service": "aol",
+                    "gender": "Female",
+                    "personal_bio": "",
+                    "misc_bio": "",
+                    "custom_field_one": "",
+                    "custom_field_two": "",
+                    "custom_field_three": "",
+                    "custom_field_four": "",
+                    "custom_field_five": "",
+                    "custom_field_six": "",
+                    "custom_field_seven": "",
+                    "custom_field_eight": "",
+                    "custom_field_nine": "",
+                    "custom_field_ten": ""
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/changed": {
+      "get": {
+        "description": "Returns a paginated list of users where their data has been modified.",
+        "operationId": "Changed",
+        "parameters": [
+          {
+            "name": "base_role_ids",
+            "in": "query",
+            "description": "Comma delimited list of base role IDs to get users for.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Format - date-time (as date-time in RFC3339). The date to begin looking for changes.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of user entities.",
+            "schema": {
+              "$ref": "#/definitions/UserExtendedModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 1,
+                    "prefix": "Mr.",
+                    "first_name": "Ashley",
+                    "nick_name": "Awesome",
+                    "middle_name": "Michelle",
+                    "last_name": "Smith",
+                    "maiden_name": "Jones",
+                    "suffix": "",
+                    "email": "example@example.com",
+                    "email_active": true,
+                    "display": "Smith, Ashley (Awesome)",
+                    "deceased": false,
+                    "lost": false,
+                    "religion": "Buddisim",
+                    "ethnicity": "Caucasian",
+                    "profile_url": "http://example.com",
+                    "audit_date": "2018-01-12T00:00:00",
+                    "enroll_date": "2018-01-12T00:00:00",
+                    "depart_date": "2018-01-12T00:00:00",
+                    "last_sync_date": "2018-01-12T00:00:00",
+                    "host_id": "123456",
+                    "greeting": "",
+                    "retire_date": "2018-01-12T00:00:00",
+                    "affiliation": "",
+                    "citizenship": "United States",
+                    "personal_website": "",
+                    "deceased_date": "2018-01-12T00:00:00",
+                    "living_arrangement": "",
+                    "screen_name": "screenname",
+                    "chat_service": "aol",
+                    "gender": "Female",
+                    "personal_bio": "",
+                    "misc_bio": "",
+                    "custom_field_one": "",
+                    "custom_field_two": "",
+                    "custom_field_three": "",
+                    "custom_field_four": "",
+                    "custom_field_five": "",
+                    "custom_field_six": "",
+                    "custom_field_seven": "",
+                    "custom_field_eight": "",
+                    "custom_field_nine": "",
+                    "custom_field_ten": ""
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}": {
+      "patch": {
+        "description": "Edits a user.",
+        "operationId": "User (Edit)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The immutable system record ID of the user to update.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "patchChanges[UserModel]",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/PatchChanges[UserModel]"
+            },
+            "description": "The User changes. See the User object for reference."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}Patch200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
     }
   },
   "definitions": {
@@ -919,11 +1360,9 @@
         "published",
         "publish_on_assigned",
         "type",
-        "submissions",
         "enrolled",
         "rank",
         "major",
-        "grade_book",
         "graded_count",
         "status",
         "discussion"
@@ -975,11 +1414,6 @@
           "description": "The assignment type (ex. Homework, Essay)",
           "type": "string"
         },
-        "submissions": {
-          "format": "int32",
-          "description": "The number of times the assignment has been submitted by students",
-          "type": "integer"
-        },
         "enrolled": {
           "format": "int32",
           "description": "The number of students enrolled in a class.",
@@ -992,10 +1426,6 @@
         },
         "major": {
           "description": "Whether the assignment is a major assignment or not; a major assignment is a user-defined value",
-          "type": "boolean"
-        },
-        "grade_book": {
-          "description": "Returns True if gradebook is being used",
           "type": "boolean"
         },
         "graded_count": {
@@ -1287,6 +1717,90 @@
       },
       "x-display-name": "Level"
     },
+    "Collection[PhoneTypeModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhoneTypeModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "PhoneTypeModel": {
+      "description": "Phone Type Model",
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the phone type",
+          "type": "integer"
+        },
+        "type": {
+          "description": "The name of the phone type",
+          "type": "string"
+        }
+      }
+    },
+    "Collection[AddressTypeModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressTypeModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "AddressTypeModel": {
+      "description": "Address Type Model",
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the address type",
+          "type": "integer"
+        },
+        "type": {
+          "description": "The name of the address type",
+          "type": "string"
+        }
+      }
+    },
     "Collection[PhoneModel]": {
       "description": "Represents a collection of items",
       "type": "object",
@@ -1314,20 +1828,16 @@
       "description": "Phone Model",
       "required": [
         "id",
-        "type_id",
         "number",
-        "index_id"
+        "index_id",
+        "user_id",
+        "type_id"
       ],
       "type": "object",
       "properties": {
         "id": {
           "format": "int32",
           "description": "The ID of the phone number",
-          "type": "integer"
-        },
-        "type_id": {
-          "format": "int32",
-          "description": "The TypeID of a phone number; the TypeID corresponds with the type of phone number (ex Cell, Work, Home)",
           "type": "integer"
         },
         "number": {
@@ -1337,6 +1847,16 @@
         "index_id": {
           "format": "int32",
           "description": "The Index ID of the phone number",
+          "type": "integer"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "The ID of the user the phone number belongs to",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "The TypeID of a phone number; the TypeID corresponds with the type of phone number (ex Cell, Work, Home)",
           "type": "integer"
         },
         "links": {
@@ -1376,7 +1896,7 @@
           "type": "string"
         },
         "shared": {
-          "description": "Returns True if changes to a phone number are made to all users with a shared relationship",
+          "description": "Returns true if changes to a phone number are made to all users with a shared relationship (Read Only)",
           "type": "boolean"
         },
         "shared_user": {
@@ -1389,29 +1909,6 @@
         }
       },
       "x-display-name": "Phone Type"
-    },
-    "Collection[AddressModel]": {
-      "description": "Represents a collection of items",
-      "type": "object",
-      "properties": {
-        "count": {
-          "format": "int32",
-          "description": "Gets the count of items in value",
-          "type": "integer",
-          "readOnly": true
-        },
-        "value": {
-          "description": "Gets or sets the collection",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AddressModel"
-          }
-        },
-        "next_link": {
-          "description": "For paginated responses, the URI for the next page of results",
-          "type": "string"
-        }
-      }
     },
     "AddressModel": {
       "description": "Address Model",
@@ -1479,7 +1976,7 @@
           "type": "boolean"
         },
         "primary": {
-          "description": "Returns True if the address is primary",
+          "description": "Returns true if the address is primary",
           "type": "boolean"
         },
         "user_id": {
@@ -1489,7 +1986,7 @@
         },
         "type_id": {
           "format": "int32",
-          "description": "The Type ID associated with an address that is based upon a user's primary relationship to the address",
+          "description": "The type ID associated with an address that is based upon a user's primary relationship to the address",
           "type": "integer"
         },
         "links": {
@@ -1500,6 +1997,7 @@
           }
         }
       },
+      "example": "{\r\n  \"id\": 1,\r\n  \"line_one\": \"555 Blackbaud Drive\",\r\n  \"line_two\": \"Building B\",\r\n  \"line_three\": \"CO: Developer\",\r\n  \"city\": \"Bedford\",\r\n  \"state\": \"NH\",\r\n  \"postal_code\": \"03110\",\r\n  \"country\": \"United States\",\r\n  \"region\": \"New England\",\r\n  \"province\": \"\",\r\n  \"mailing_address\": true,\r\n  \"primary\": false,\r\n  \"user_id\": 12345,\r\n  \"type_id\": 1005,\r\n  \"links\": [\r\n    {\r\n      \"user_id\": 12345,\r\n      \"type_id\": 1005,\r\n      \"type\": \"Office\",\r\n      \"primary\": false,\r\n      \"shared\": false\r\n    }\r\n  ]\r\n}",
       "x-display-name": "Address"
     },
     "AddressTypeLinkModel": {
@@ -1508,6 +2006,7 @@
         "user_id",
         "type_id",
         "type",
+        "primary",
         "shared",
         "shared_user",
         "shared_relationship"
@@ -1528,8 +2027,12 @@
           "description": "The name of the address type",
           "type": "string"
         },
+        "primary": {
+          "description": "Returns true if the address is primary",
+          "type": "boolean"
+        },
         "shared": {
-          "description": "Returns True if changes to an address are made to all users with a shared relationship",
+          "description": "Returns true if changes to an address are made to all users with a shared relationship (Read Only)",
           "type": "boolean"
         },
         "shared_user": {
@@ -1542,6 +2045,29 @@
         }
       },
       "x-display-name": "Address Type"
+    },
+    "Collection[AddressModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
     },
     "Collection[EducationModel]": {
       "description": "Represents a collection of items",
@@ -1867,6 +2393,313 @@
       },
       "x-display-name": "Relationship"
     },
+    "Collection[UserExtendedModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserExtendedModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "UserExtendedModel": {
+      "description": "User Extended Model",
+      "required": [
+        "id",
+        "prefix",
+        "first_name",
+        "nick_name",
+        "middle_name",
+        "last_name",
+        "maiden_name",
+        "suffix",
+        "email",
+        "email_active",
+        "display",
+        "deceased",
+        "lost",
+        "religion",
+        "ethnicity",
+        "profile_url",
+        "audit_date",
+        "enroll_date",
+        "depart_date",
+        "last_sync_date",
+        "username",
+        "host_id",
+        "greeting",
+        "retire_date",
+        "affiliation",
+        "citizenship",
+        "personal_website",
+        "deceased_date",
+        "living_arrangement",
+        "screen_name",
+        "chat_service",
+        "gender",
+        "personal_bio",
+        "misc_bio",
+        "custom_field_one",
+        "custom_field_two",
+        "custom_field_three",
+        "custom_field_four",
+        "custom_field_five",
+        "custom_field_six",
+        "custom_field_seven",
+        "custom_field_eight",
+        "custom_field_nine",
+        "custom_field_ten",
+        "occupations",
+        "addresses",
+        "relationships",
+        "education",
+        "phones",
+        "roles"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID associated with a user",
+          "type": "integer"
+        },
+        "prefix": {
+          "description": "The prefix of a user",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "The first name of a user",
+          "type": "string"
+        },
+        "nick_name": {
+          "description": "The nickname of a user",
+          "type": "string"
+        },
+        "middle_name": {
+          "description": "The middle name of a user",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "The last name of a user",
+          "type": "string"
+        },
+        "maiden_name": {
+          "description": "The maiden name of a user",
+          "type": "string"
+        },
+        "suffix": {
+          "description": "The suffix of a user",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of a user",
+          "type": "string"
+        },
+        "email_active": {
+          "description": "Returns true if the users e-mail is ok to send to",
+          "type": "boolean"
+        },
+        "display": {
+          "description": "Display name field generated from first name, last name, nickname, and grad year (read only)",
+          "type": "string"
+        },
+        "deceased": {
+          "description": "Returns true if deceased is selected under sensitive information in a personal profile ex: {last_name} {suffix*}, {first_name} {(maidenname*}) {grad_year*} *If not populated fields will not appear (read only)",
+          "type": "boolean"
+        },
+        "lost": {
+          "description": "Returns true if lost is selected under sensitive information in a personal profile (read only)",
+          "type": "boolean"
+        },
+        "religion": {
+          "description": "The religion field from a user profile",
+          "type": "string"
+        },
+        "ethnicity": {
+          "description": "The ethnicity field from a user profile",
+          "type": "string"
+        },
+        "profile_url": {
+          "description": "The profile url for a user profile",
+          "type": "string"
+        },
+        "audit_date": {
+          "format": "date-time",
+          "description": "The audit date from a user profile",
+          "type": "string"
+        },
+        "enroll_date": {
+          "format": "date-time",
+          "description": "The enroll date from a user profile",
+          "type": "string"
+        },
+        "depart_date": {
+          "format": "date-time",
+          "description": "The depart date from a user profile",
+          "type": "string"
+        },
+        "last_sync_date": {
+          "format": "date-time",
+          "description": "The last sync date of a user profile",
+          "type": "string"
+        },
+        "username": {
+          "description": "The username used to access the system",
+          "type": "string"
+        },
+        "host_id": {
+          "description": "The hostId in the user profile",
+          "type": "string"
+        },
+        "greeting": {
+          "description": "The greeting in the user profile",
+          "type": "string"
+        },
+        "retire_date": {
+          "format": "date-time",
+          "description": "The retire date in the user profile",
+          "type": "string"
+        },
+        "affiliation": {
+          "description": "The affiliation in the user profile",
+          "type": "string"
+        },
+        "citizenship": {
+          "description": "The citizenship field in the user profile",
+          "type": "string"
+        },
+        "personal_website": {
+          "description": "The personal website in the user profile",
+          "type": "string"
+        },
+        "deceased_date": {
+          "format": "date-time",
+          "description": "The deceased date in the user profile",
+          "type": "string"
+        },
+        "living_arrangement": {
+          "description": "The living arrangement in the user profile",
+          "type": "string"
+        },
+        "screen_name": {
+          "description": "The screen name in the user profile",
+          "type": "string"
+        },
+        "chat_service": {
+          "description": "The chat service in the user profile",
+          "type": "string"
+        },
+        "gender": {
+          "description": "The gender of the user",
+          "type": "string"
+        },
+        "personal_bio": {
+          "description": "The personal bio from the user profile",
+          "type": "string"
+        },
+        "misc_bio": {
+          "description": "The misc bio from the user profile",
+          "type": "string"
+        },
+        "custom_field_one": {
+          "description": "A custom feild on the user profile (one of ten)",
+          "type": "string"
+        },
+        "custom_field_two": {
+          "description": "A custom feild on the user profile (two of ten)",
+          "type": "string"
+        },
+        "custom_field_three": {
+          "description": "A custom feild on the user profile (three of ten)",
+          "type": "string"
+        },
+        "custom_field_four": {
+          "description": "A custom feild on the user profile (four of ten)",
+          "type": "string"
+        },
+        "custom_field_five": {
+          "description": "A custom feild on the user profile (five of ten)",
+          "type": "string"
+        },
+        "custom_field_six": {
+          "description": "A custom feild on the user profile (six of ten)",
+          "type": "string"
+        },
+        "custom_field_seven": {
+          "description": "A custom feild on the user profile (seven of ten)",
+          "type": "string"
+        },
+        "custom_field_eight": {
+          "description": "A custom feild on the user profile (eight of ten)",
+          "type": "string"
+        },
+        "custom_field_nine": {
+          "description": "A custom feild on the user profile (nine of ten)",
+          "type": "string"
+        },
+        "custom_field_ten": {
+          "description": "A custom feild on the user profile (ten of ten)",
+          "type": "string"
+        },
+        "occupations": {
+          "description": "List of the users occupations",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OccupationModel"
+          }
+        },
+        "addresses": {
+          "description": "List of the user addresses",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressModel"
+          }
+        },
+        "relationships": {
+          "description": "List of the user relationships",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelationshipModel"
+          }
+        },
+        "education": {
+          "description": "List of the user educational institutions",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EducationModel"
+          }
+        },
+        "phones": {
+          "description": "List of the user phone numbers",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhoneModel"
+          }
+        },
+        "roles": {
+          "description": "List of the user roles",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RoleModel"
+          }
+        }
+      },
+      "x-display-name": "User Extended"
+    },
     "Collection[UserModel]": {
       "description": "Represents a collection of items",
       "type": "object",
@@ -1915,31 +2748,31 @@
           "type": "integer"
         },
         "prefix": {
-          "description": "The Prefix of a user",
+          "description": "The prefix of a user",
           "type": "string"
         },
         "first_name": {
-          "description": "The First Name of a user",
+          "description": "The first name of a user",
           "type": "string"
         },
         "nick_name": {
-          "description": "The Nickname of a user",
+          "description": "The nickname of a user",
           "type": "string"
         },
         "middle_name": {
-          "description": "The Middlename of a user",
+          "description": "The middle name of a user",
           "type": "string"
         },
         "last_name": {
-          "description": "The Last Name of a user",
+          "description": "The last name of a user",
           "type": "string"
         },
         "maiden_name": {
-          "description": "The Maiden Name of a user",
+          "description": "The maiden name of a user",
           "type": "string"
         },
         "suffix": {
-          "description": "The Suffix of a user",
+          "description": "The suffix of a user",
           "type": "string"
         },
         "email": {
@@ -1951,25 +2784,47 @@
           "type": "boolean"
         },
         "display": {
-          "description": "Display name field generated from first name, last name, nick name, and grad year",
+          "description": "Display name field generated from first name, last name, nickname, and grad year (read only)",
           "type": "string"
         },
         "deceased": {
-          "description": "Returns True if Deceased is selected under Sensative Information in a Personal Profile",
+          "description": "Returns true if deceased is selected under sensitive information in a personal profile ex: {last_name} {suffix*}, {first_name} {(maidenname*}) {grad_year*} *If not populated fields will not appear (read only)",
           "type": "boolean"
         },
         "lost": {
-          "description": "Returns True if Lost is selected under Sensative Information in a Personal Profile",
+          "description": "Returns true if lost is selected under sensitive information in a personal profile (read only)",
           "type": "boolean"
         }
       },
       "x-display-name": "User"
     },
+    "PatchChanges[UserModel]": {
+      "description": "class",
+      "type": "object",
+      "properties": {},
+      "example": "{\r\n  \"id\": 1,\r\n  \"prefix\": \"Mrs.\",\r\n  \"first_name\": \"Ashley\",\r\n  \"nick_name\": \"Awesome\",\r\n  \"middle_name\": \"Michelle\",\r\n  \"last_name\": \"Smith\",\r\n  \"maiden_name\": \"Jones\",\r\n  \"suffix\": \"\",\r\n  \"email\": \"example@example.com\",\r\n  \"email_active\": true,\r\n  \"display\": \"Smith, Ashley (Awesome)\",\r\n  \"deceased\": false,\r\n  \"lost\": false\r\n}"
+    },
     "PatchChanges[AddressModel]": {
       "description": "class",
       "type": "object",
       "properties": {},
-      "example": "{\r\n  \"id\": 1,\r\n  \"line_one\": \"555 Blackbaud Drive\",\r\n  \"line_two\": \"Building B\",\r\n  \"line_three\": \"CO: Developer\",\r\n  \"city\": \"Bedford\",\r\n  \"state\": \"NH\",\r\n  \"postal_code\": \"03110\",\r\n  \"country\": \"United States\",\r\n  \"region\": \"New England\",\r\n  \"province\": \"\",\r\n  \"mailing_address\": true,\r\n  \"primary\": false,\r\n  \"user_id\": 12345,\r\n  \"type_id\": 1005,\r\n  \"links\": [\r\n    {\r\n      \"user_id\": 12345,\r\n      \"type_id\": 1005,\r\n      \"type\": \"Office\",\r\n      \"shared\": false\r\n    }\r\n  ]\r\n}"
+      "example": "{\r\n  \"id\": 1,\r\n  \"line_one\": \"555 Blackbaud Drive\",\r\n  \"line_two\": \"Building B\",\r\n  \"line_three\": \"CO: Developer\",\r\n  \"city\": \"Bedford\",\r\n  \"state\": \"NH\",\r\n  \"postal_code\": \"03110\",\r\n  \"country\": \"United States\",\r\n  \"region\": \"New England\",\r\n  \"province\": \"\",\r\n  \"mailing_address\": true,\r\n  \"primary\": false,\r\n  \"user_id\": 12345,\r\n  \"type_id\": 1005,\r\n  \"links\": [\r\n    {\r\n      \"user_id\": 12345,\r\n      \"type_id\": 1005,\r\n      \"type\": \"Office\",\r\n      \"primary\": false,\r\n      \"shared\": false\r\n    }\r\n  ]\r\n}"
+    },
+    "V1Users{user_id}PhonesPost200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1Users{user_id}AddressesPost200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1UsersPost200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1Users{user_id}Patch200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
     },
     "V1Users{user_id}Addresses{address_id}Patch200ApplicationJsonResponse": {
       "format": "int32",
