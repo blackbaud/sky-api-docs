@@ -1,6 +1,6 @@
 The {{ stache.config.api_type_name }} uses the following set of standard HTTP response status codes, as defined in <a href="https://www.ietf.org/rfc/rfc2616.txt" target="_blank">RFC 2616</a> and <a href="https://www.ietf.org/rfc/rfc6585.txt" target="_blank">RFC 6585</a>.  Response codes in the 4xx range indicate a problem with your request, while response codes in the 5xx range indicate a problem on our end.
 
-You can view the <a href="{{ stache.config.guide_web_api_authorization }}/common-auth-issues" target="_blank">common authentication issues</a> page for additional guidance, and if you are experiencing a problem, feel free to review your support options in our [Support]({{ stache.config.support }}) area.  You can also check the check the <a href="{{ stache.config.support_issues }}" target="_blank">Issues</a> page to see if we are experiencing any problems on our end.
+You can view the <a href="{{ stache.config.guide_web_api_authorization }}/common-auth-issues" target="_blank">common authentication issues</a> page for additional guidance, and if you are experiencing a problem, feel free to review your support options in our [Support]({{ stache.config.support }}) area.  You can also check the <a href="{{ stache.config.support_issues }}" target="_blank">Issues</a> page to see if we are experiencing any problems on our end.
 
 For response codes in the 4xx or 5xx range (which indicate failures), the response body may contain more details on why the request failed.
 
