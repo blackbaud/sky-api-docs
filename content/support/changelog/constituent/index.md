@@ -14,11 +14,11 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-02-20
+## 2018-02-21
 
-### Changed
+### New
 
-The optional `strict_search` query parameter is now available on the [Constituent (Search)]({{stache.config.portal_endpoints_constituent_search}}) endpoint to indicate whether to include constituents that sound like the search criteria. By default, this parameter is set to `false`.
+The optional `strict_search` query parameter is now available on the [Constituent (Search)]({{stache.config.portal_endpoints_constituent_search}}) endpoint. It indicates whether to exclude constituents that sound like the search criteria but are spelled differently. By default, this parameter is set to `false`.
 
 ## 2018-02-02
 
