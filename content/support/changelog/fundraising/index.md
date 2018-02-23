@@ -14,7 +14,7 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-02-16
+## 2018-02-27
 
 ### New
 
@@ -67,6 +67,10 @@ Added the following endpoints:
     </tbody>
   </table>
 </div>
+
+### Changed
+
+We have changed the URL for [Goal categories (Get) endpoint]({{stache.config.portal_endpoints_goal_categories_get}}) to `/fundraisers/goals/categories` as previously announced.
 
 ## 2018-02-09
 
