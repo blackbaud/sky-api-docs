@@ -32,7 +32,7 @@ Added the following endpoints:
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_get_list }}">
         <td>Fundraiser goal list (Single constituent)</td>
         <td>GET</td>
-        <td>/fundraisers/{constituent_id}goals</td>
+        <td>/fundraisers/{fundraiser_id}goals</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_create }}">
         <td>Fundraiser goal (Create)</td>
@@ -70,7 +70,7 @@ Added the following endpoints:
 
 ### Changed
 
-We have changed the URL for [Goal categories (Get) endpoint]({{stache.config.portal_endpoints_goal_categories_get}}) to `/fundraisers/goals/categories` as previously announced.
+We changed the URL for the [Goal categories (Get) endpoint]({{stache.config.portal_endpoints_goal_categories_get}}) to `/fundraisers/goals/categories` as previously announced.
 
 ## 2018-02-09
 
