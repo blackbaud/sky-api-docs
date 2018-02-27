@@ -20,4 +20,4 @@ Note that `offset` numbering is zero-based, and that omitting the `offset` param
 
 ### next_link
 
-Some paginated endpoints may include a hypermedia link that can be used to fetch the next page of results.  This value can be found in the `next_link` property of the <a href="{{ stache.config.portal }}constituent-entity-reference#Collection" target="_blank">collection</a> response.
+Some paginated endpoints may include a hypermedia link that can be used to fetch the next page of results.  This value can be found in the `next_link` property of the <a href="https://apidocs.sky.blackbaud.com/api/entity-reference/constituent/#!#Collection">collection</a> response.
