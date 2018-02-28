@@ -14,6 +14,64 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-02-27
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_get_list }}">
+        <td>Fundraiser goal list (Single constituent)</td>
+        <td>GET</td>
+        <td>/fundraisers/{fundraiser_id}goals</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_create }}">
+        <td>Fundraiser goal (Create)</td>
+        <td>POST</td>
+        <td>/fundraisers/goals</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_edit }}">
+        <td>Fundraiser goal (Edit)</td>
+        <td>PATCH</td>
+        <td>/fundraisers/goals/{goal_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_goals_delete }}">
+        <td>Fundraiser goal (Delete)</td>
+        <td>DELETE</td>
+        <td>/fundraisers/goals/{goal_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_appeal_categories_get }}">
+        <td>Appeal categories</td>
+        <td>GET</td>
+        <td>/appeals/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_campaign_categories_get }}">
+        <td>Campaign categories</td>
+        <td>GET</td>
+        <td>/campaigns/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_fund_categories_get }}">
+        <td>Fund categories</td>
+        <td>GET</td>
+        <td>/funds/categories</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Changed
+
+We changed the URL for the [Goal categories (Get) endpoint]({{stache.config.portal_endpoints_goal_categories_get}}) to `/fundraisers/goals/categories` as previously announced.
+
 ## 2018-02-09
 
 ### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{stache.config.portal_endpoints_fundraising}})

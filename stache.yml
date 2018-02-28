@@ -477,7 +477,14 @@ portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fun
 portal_endpoints_package_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a341d17d7dcde09d06dbaff/
 
 # Goal Categories
-portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a341d17d7dcde09d06dbafe/
+portal_endpoints_fundraising_goals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a481/
+portal_endpoints_fundraising_goals_create: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47f/
+portal_endpoints_fundraising_goals_edit: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a483/
+portal_endpoints_fundraising_goals_delete: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a482/
+portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a480/
+portal_endpoints_fundraising_appeal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47c/
+portal_endpoints_fundraising_campaign_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47d/
+portal_endpoints_fundraising_fund_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47e/
 
 # =============================================
 #       Gift API ENDPOINTS
