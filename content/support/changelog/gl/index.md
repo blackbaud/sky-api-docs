@@ -14,9 +14,53 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-17
+## 2018-03-02
+
+### New
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_client_names_list }}">
+				<td>Client names (List)</td>
+				<td>GET</td>
+				<td>/configuration/client_names</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_grant_status_list }}">
+				<td>Grant status (List)</td>
+				<td>GET</td>
+				<td>/grants/statuses</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_grant_type_list }}">
+				<td>Grant type (List)</td>
+				<td>GET</td>
+				<td>/grants/types</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_grant_custom_field_list }}">
+				<td>Grant custom field (List)</td>
+				<td>GET</td>
+				<td>/grants/customfields</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 ### Changed
+For the  [Period summary process (Start)]({{ stache.config.portal_endpoints_period_summary_process_start }}) endpoint, a `fiscal_period_id` was previously required. Now, when no object is sent or when a `fiscal_period_id` with value 0 is sent, all open and unoptimized fiscal periods are summarized.
+
+## January 2018
+
+### 2018-01-17
+
+#### Changed
 
 For the  [Journal entry batch (Post)]({{ stache.config.portal_endpoints_journal_entry_batch_post }}) endpoint, `transaction_code_value` can now include `“”` empty string for `value`.
 
