@@ -368,6 +368,7 @@ portal_endpoints_constituent_ratings_category_values_get: <%= stache.config.port
 
 # Custom Field Catagories - Constituent
 portal_endpoints_customfieldcatagories_constituent_get_list: <%= stache.config.portal_endpoints_constituent %>operations/577e6f83a9db950becc6199e/
+portal_endpoints_customfieldcategories_constituent_details_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
 
 # Types - Titles
 portal_endpoints_constituent_titles_get_list:  <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf2/
@@ -401,6 +402,7 @@ portal_endpoints_action_custom_fields_delete: <%= stache.config.portal_endpoints
 portal_endpoints_action_custom_fields_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f4/
 portal_endpoints_action_custom_fields_get_categories: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f5/
 portal_endpoints_action_custom_fields_get_category_values: <%= stache.config.portal_endpoints_constituent %>operations/58051933d7dcde060427c2f6/
+portal_endpoints_action_custom_fields_get_category_details: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
 
 # Fundraiser
 portal_endpoints_fundraiser_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f17/

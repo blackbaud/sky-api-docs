@@ -14,15 +14,44 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-02-21
+## 2018-03-16
 
 ### New
 
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_custom_fields_get_category_details }}">
+        <td>Action custom field category details</td>
+        <td>GET</td>
+        <td>/actions/customfields/categories/details</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_customfieldcategories_constituent_details_get_list }}">
+        <td>Constituent custom field category details</td>
+        <td>GET</td>
+        <td>/constituents/customfields/categories/details</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## February
+
+### 2018-02-21
+
+#### New
+
 The optional `strict_search` query parameter is now available on the [Constituent (Search)]({{stache.config.portal_endpoints_constituent_search}}) endpoint. It indicates whether to exclude constituents that sound like the search criteria but are spelled differently. By default, this parameter is set to `false`.
 
-## 2018-02-02
+### 2018-02-02
 
-### Changed
+#### Changed
 
 - The [Address list (All constituents)]({{stache.config.portal_endpoints_address_get_list}}), [Email address list (All constituents)]({{stache.config.portal_endpoints_email_address_get_list}}), [Online presence list (All constituents)]({{stache.config.portal_endpoints_online_presence_get_list}}), and [Phone list (All constituents)]({{stache.config.portal_endpoints_phone_get_list}}) endpoints now include an option to filter based on their associated constituents. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include the items associated with the specified constituent record IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only include results associated with two constituent records: "1242" and "385."
 - We updated the `value` filter on the [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint to support filtering on `fuzzy date` values. The endpoint documentation describes how to filter on fuzzy dates.
