@@ -1,12 +1,12 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "K12 (Beta)",
+    "title": "School",
     "version": "1.0",
-    "description": "This API is used to provide access to K12 information such as users, academics, admissions, athletics, content, lists, and general school info."
+    "description": "This API is used to provide access to school information such as users, academics, admissions, athletics, content, lists, and general school info."
   },
-  "host": "api.sky.blackbaud.com",
-  "basePath": "/k12",
+  "host": "api.nxt.blackbaud-dev.com",
+  "basePath": "/school",
   "schemes": [
     "https"
   ],
@@ -57,7 +57,8 @@
     "/v1/school/roles": {
       "get": {
         "description": "Returns a list of roles.",
-        "operationId": "Roles",
+        "operationId": "59f0b18e9e4eda0d6c07bd23",
+        "summary": "Roles",
         "responses": {
           "200": {
             "description": "Returned when the operation succeeds. The response body contains a collection of role entities.",
@@ -108,7 +109,8 @@
     "/v1/school/years": {
       "get": {
         "description": "Returns a list of school years.",
-        "operationId": "School Years",
+        "operationId": "5a00b82f9e4eda0dfc0bcb0a",
+        "summary": "School Years",
         "responses": {
           "200": {
             "description": "Returned when the operation succeeds. The response body contains a collection of school year entities.",
@@ -157,7 +159,8 @@
     "/v1/users/{user_id}/addresses": {
       "get": {
         "description": "Returns a list of addresses for a user.",
-        "operationId": "Address (Get)",
+        "operationId": "5a05ba949e4eda16a4e92991",
+        "summary": "Address (Get)",
         "parameters": [
           {
             "name": "user_id",
@@ -256,7 +259,8 @@
       },
       "post": {
         "description": "Creates an address.",
-        "operationId": "Address (Add)",
+        "operationId": "5a7b135b9e4eda15fc3f9330",
+        "summary": "Address (Add)",
         "parameters": [
           {
             "name": "user_id",
@@ -302,7 +306,8 @@
     "/v1/users/{user_id}/addresses/{address_id}": {
       "patch": {
         "description": "Edits a user's address.",
-        "operationId": "Address (Edit)",
+        "operationId": "5a05ba949e4eda16a4e92992",
+        "summary": "Address (Edit)",
         "parameters": [
           {
             "name": "user_id",
@@ -355,7 +360,8 @@
     "/v1/academics/sections": {
       "get": {
         "description": "Returns a list of sections. <b>Requires Academic Group Manager in the K12 system</b>.",
-        "operationId": "Sections",
+        "operationId": "5a0c56039e4eda16a4e929a3",
+        "summary": "Sections",
         "parameters": [
           {
             "name": "level_num",
@@ -442,7 +448,8 @@
     "/v1/school/levels": {
       "get": {
         "description": "Returns a list of school levels.",
-        "operationId": "School Levels",
+        "operationId": "5a0c56039e4eda16a4e929a4",
+        "summary": "School Levels",
         "responses": {
           "200": {
             "description": "Returned when the operation succeeds. The response body contains a collection of school levels entities.",
@@ -490,7 +497,8 @@
     "/v1/academics/sections/{section_id}/assignments": {
       "get": {
         "description": "Returns a list of assignments for a section. <b>Requires Academic Group Manager in the K12 system</b>.",
-        "operationId": "Assignments",
+        "operationId": "5a0f52b49e4eda1384d170bc",
+        "summary": "Assignments",
         "parameters": [
           {
             "name": "section_id",
@@ -580,7 +588,8 @@
     "/v1/users/{user_id}/phones": {
       "get": {
         "description": "Returns a list of a users phone numbers",
-        "operationId": "Phone list",
+        "operationId": "5a2fec189e4eda1644716cb4",
+        "summary": "Phone list",
         "parameters": [
           {
             "name": "user_id",
@@ -648,7 +657,8 @@
       },
       "post": {
         "description": "Creates a phone number.",
-        "operationId": "Phone (Add)",
+        "operationId": "5a7b135b9e4eda15fc3f932f",
+        "summary": "Phone (Add)",
         "parameters": [
           {
             "name": "user_id",
@@ -694,7 +704,8 @@
     "/v1/users/{user_id}/education": {
       "get": {
         "description": "Returns a list of a users education",
-        "operationId": "Education",
+        "operationId": "5a2fec189e4eda1644716cb5",
+        "summary": "Education",
         "parameters": [
           {
             "name": "user_id",
@@ -754,7 +765,8 @@
     "/v1/users/{user_id}/occupations": {
       "get": {
         "description": "Returns a list of a users occupations",
-        "operationId": "Occupations",
+        "operationId": "5a2fec189e4eda1644716cb6",
+        "summary": "Occupations",
         "parameters": [
           {
             "name": "user_id",
@@ -814,7 +826,8 @@
     "/v1/users": {
       "get": {
         "description": "Returns a paginated list of users, limited to 100 users per page.",
-        "operationId": "Users",
+        "operationId": "5a2fec189e4eda1644716cb7",
+        "summary": "Users",
         "parameters": [
           {
             "name": "roles",
@@ -911,7 +924,8 @@
       },
       "post": {
         "description": "Creates a user.",
-        "operationId": "Users (Add)",
+        "operationId": "5a7b135b9e4eda15fc3f9333",
+        "summary": "Users (Add)",
         "parameters": [
           {
             "name": "userModel",
@@ -950,7 +964,8 @@
     "/v1/users/{user_id}/relationships": {
       "get": {
         "description": "Returns a list of a users relationships",
-        "operationId": "Relationships",
+        "operationId": "5a3bc08c9e4eda038025e5ca",
+        "summary": "Relationships",
         "parameters": [
           {
             "name": "user_id",
@@ -1010,7 +1025,8 @@
     "/v1/users/phonetypes": {
       "get": {
         "description": "Returns a list of phone types",
-        "operationId": "Phone Types",
+        "operationId": "5a7b135b9e4eda15fc3f932d",
+        "summary": "Phone Types",
         "responses": {
           "200": {
             "description": "Returned when the operation succeeds. The response body contains a collection of phone type entities.",
@@ -1051,7 +1067,8 @@
     "/v1/users/addresstypes": {
       "get": {
         "description": "Returns a list of address types",
-        "operationId": "Address Types",
+        "operationId": "5a7b135b9e4eda15fc3f932e",
+        "summary": "Address Types",
         "responses": {
           "200": {
             "description": "Returned when the operation succeeds. The response body contains a collection of address type entities.",
@@ -1092,7 +1109,8 @@
     "/v1/users/sync": {
       "get": {
         "description": "Returns a paginated list of users.",
-        "operationId": "Sync",
+        "operationId": "5a7b135b9e4eda15fc3f9331",
+        "summary": "Sync",
         "parameters": [
           {
             "name": "base_role_ids",
@@ -1185,7 +1203,8 @@
     "/v1/users/changed": {
       "get": {
         "description": "Returns a paginated list of users where their data has been modified.",
-        "operationId": "Changed",
+        "operationId": "5a7b135b9e4eda15fc3f9332",
+        "summary": "Changed",
         "parameters": [
           {
             "name": "base_role_ids",
@@ -1279,7 +1298,8 @@
     "/v1/users/{user_id}": {
       "patch": {
         "description": "Edits a user.",
-        "operationId": "User (Edit)",
+        "operationId": "5a7b135b9e4eda15fc3f9334",
+        "summary": "User (Edit)",
         "parameters": [
           {
             "name": "user_id",
