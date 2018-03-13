@@ -14,9 +14,13 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-03-16
+## 2018-03-13
 
 ### New
+
+- We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with a new [Fundraiser assignment list (Single constituent)]({{stache.config.portal_endpoints_fundraiserassignment_get_list}}) endpoint. The route for the new endpoint is `/constituents/{constituent_id}/fundraiserassignments`.
+
+- Added the following endpoints:
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">
@@ -40,6 +44,10 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
     </tbody>
   </table>
 </div>
+
+### Future security enhancement
+
+Raiser's Edge NXT recently introduced a new security setting for Solicit Codes. The API will soon reflect this setting for consistency, and that will affect the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
 
 ## February
 
