@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-03-21
+
+### Announcement: Future Display Name Enhancement Planned for Constituent API
+
+Raiser's Edge NXT recently introduced a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, Search, and list endpoints, as well as the Relationship GET and list endpoints.
+
 ## 2018-02-21
 
 ### New
