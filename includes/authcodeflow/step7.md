@@ -3,7 +3,7 @@
 
 {{# markdown }}
 
-For security purposes, access tokens will expire after {{ stache.config.access_token_expiration_minutes }} minutes. When this happens, calls to the {{ stache.config.api_type_name }} will respond with a status code of `401 Not Authorized` along with the message "The required Authorization header was missing or invalid, **or the token has expired**".  To continue making calls to the API, you will need to exchange the value you received in the `refresh_token` field for a new access token.
+For security purposes, access tokens will expire after {{ stache.config.access_token_expiration_minutes }}. When this happens, calls to the {{ stache.config.api_type_name }} will respond with a status code of `401 Not Authorized` along with the message "The required Authorization header was missing or invalid, **or the token has expired**".  To continue making calls to the API, you will need to exchange the value you received in the `refresh_token` field for a new access token.
 
 This exchange happens on the server, and does not involve any user interactivity.  In this way, your application can have indefinite connectivity to {{ statche.config.api_type_name }} after the initial one-time user-interactive consent.
 
