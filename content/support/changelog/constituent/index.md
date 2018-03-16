@@ -14,11 +14,13 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-03-13
+## 2018-03-16
 
 ### New
 
 - We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with a new [Fundraiser assignment list (Single constituent)]({{stache.config.portal_endpoints_fundraiserassignment_get_list}}) endpoint. The route for the new endpoint is `/constituents/{constituent_id}/fundraiserassignments`.
+
+- We deprecated the [Constituent custom field categories]({{stache.config.portal_endpoints_customfieldcatagories_constituent_get_list}}) and [Action custom field categories endpoints]({{stache.config.portal_endpoints_action_custom_fields_get_categories}}). We will continue to support the endpoints for v1 of the Constituent API, but we recommend transitioning to the [Constituent custom field category details]({{ stache.config.portal_endpoints_customfieldcategories_constituent_details_get_list }}) and [Action custom field category details]({{ stache.config.portal_endpoints_action_custom_fields_get_category_details }}) endpoints for a more robust and consistent custom field category response.
 
 - Added the following endpoints:
 
@@ -31,6 +33,11 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
         <th>Route</th>
       </tr>
     </thead>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraiserassignment_get_list }}">
+        <td>Fundraiser assignment list (Single constituent)</td>
+        <td>GET</td>
+        <td>/constituents/{constituent_id}/fundraiserassignments</td>
+      </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_custom_fields_get_category_details }}">
         <td>Action custom field category details</td>
         <td>GET</td>
