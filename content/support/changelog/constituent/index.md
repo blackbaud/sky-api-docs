@@ -14,15 +14,27 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-02-21
+## 2018-03-13
 
 ### New
 
+We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with a new [Fundraiser assignment list (Single constituent)]({{stache.config.portal_endpoints_fundraiserassignment_get_list}}) endpoint. The route for the new endpoint is `/constituents/{constituent_id}/fundraiserassignments`.
+
+### Future security enhancement
+
+Raiser's Edge NXT recently introduced a new security setting for Solicit Codes. The API will soon reflect this setting for consistency, and that will affect the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
+
+## February
+
+### 2018-02-21
+
+#### New
+
 The optional `strict_search` query parameter is now available on the [Constituent (Search)]({{stache.config.portal_endpoints_constituent_search}}) endpoint. It indicates whether to exclude constituents that sound like the search criteria but are spelled differently. By default, this parameter is set to `false`.
 
-## 2018-02-02
+### 2018-02-02
 
-### Changed
+#### Changed
 
 - The [Address list (All constituents)]({{stache.config.portal_endpoints_address_get_list}}), [Email address list (All constituents)]({{stache.config.portal_endpoints_email_address_get_list}}), [Online presence list (All constituents)]({{stache.config.portal_endpoints_online_presence_get_list}}), and [Phone list (All constituents)]({{stache.config.portal_endpoints_phone_get_list}}) endpoints now include an option to filter based on their associated constituents. The optional `constituent_id` query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include the items associated with the specified constituent record IDs. For example, `&constituent_id=1242&constituent_id=385` filters the results to only include results associated with two constituent records: "1242" and "385."
 - We updated the `value` filter on the [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint to support filtering on `fuzzy date` values. The endpoint documentation describes how to filter on fuzzy dates.

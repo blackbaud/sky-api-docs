@@ -404,6 +404,7 @@ portal_endpoints_action_custom_fields_get_category_values: <%= stache.config.por
 
 # Fundraiser
 portal_endpoints_fundraiser_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f17/
+portal_endpoints_fundraiserassignment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/*TODO*/
 portal_endpoints_constituent_fundraiser_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/*TODO*/
 
 # Prospect Status
