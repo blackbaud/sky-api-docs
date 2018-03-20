@@ -1,6 +1,4 @@
 @import "../../../node_modules/blackbaud-stache/src/sass/app";
-@import "../../../node_modules/blackbaud-stache/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts";
-@import "../../../node_modules/blackbaud-stache/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
 @import "../../../node_modules/blackbaud-stache/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid";
 @import "../../../node_modules/blackbaud-stache/bower_components/blackbaud-skyux/scss/_navigation";
 
@@ -126,14 +124,6 @@ body {
         }
       }
     }
-  }
-
-  .message {
-    @extend .alert;
-  }
-
-  .message-Information {
-    @extend .alert-success;
   }
 
   .navbar-collapse {
