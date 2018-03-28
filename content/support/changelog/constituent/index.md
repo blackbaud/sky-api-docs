@@ -14,7 +14,7 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-03-16
+## 2018-03-28
 
 ### New
 
@@ -30,18 +30,13 @@ Added the following endpoints:
         </tr>
       </thead>
       <tbody>
-        <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraiserassignment_get_list }}">
-          <td>Fundraiser assignment list (Single constituent)&#42;</td>
-          <td>GET</td>
-          <td>/constituents/{constituent_id}/fundraiserassignments</td>
-        </tr>
         <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_custom_fields_get_category_details }}">
-          <td>Action custom field category details&#42;&#42;</td>
+          <td>Action custom field category details&#42;</td>
           <td>GET</td>
           <td>/actions/customfields/categories/details</td>
         </tr>
         <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_customfieldcategories_constituent_details_get_list }}">
-          <td>Constituent custom field category details&#42;&#42;</td>
+          <td>Constituent custom field category details&#42;</td>
           <td>GET</td>
           <td>/constituents/customfields/categories/details</td>
         </tr>
@@ -49,9 +44,7 @@ Added the following endpoints:
     </table>
   </div>
   
-  <strong>&#42;</strong> We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with the Fundraiser assignment list (Single constituent) endpoint.
-
-  <strong>&#42;&#42;</strong> We deprecated the [Action custom field categories endpoints]({{stache.config.portal_endpoints_action_custom_fields_get_categories}}) and [Constituent custom field categories]({{stache.config.portal_endpoints_customfieldcatagories_constituent_get_list}}) endpoints and replaced them with the Action custom field category details and Constituent custom field category details endpoints.
+  <strong>&#42;</strong> We deprecated the [Action custom field categories endpoints]({{stache.config.portal_endpoints_action_custom_fields_get_categories}}) and [Constituent custom field categories]({{stache.config.portal_endpoints_customfieldcatagories_constituent_get_list}}) endpoints and replaced them with the Action custom field category details and Constituent custom field category details endpoints.
   
   We will continue to support deprecated endpoints for v1 of the Constituent API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
 
