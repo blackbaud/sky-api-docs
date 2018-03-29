@@ -14,9 +14,45 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-03-29
+
+### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_action_custom_fields_get_category_details }}">
+          <td>Action custom field category details&#42;</td>
+          <td>GET</td>
+          <td>/actions/customfields/categories/details</td>
+        </tr>
+        <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_customfieldcategories_constituent_details_get_list }}">
+          <td>Constituent custom field category details&#42;</td>
+          <td>GET</td>
+          <td>/constituents/customfields/categories/details</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <strong>&#42;</strong> We deprecated the [Action custom field categories endpoints]({{stache.config.portal_endpoints_action_custom_fields_get_categories}}) and [Constituent custom field categories]({{stache.config.portal_endpoints_customfieldcatagories_constituent_get_list}}) endpoints and replaced them with the Action custom field category details and Constituent custom field category details endpoints. We will continue to support deprecated endpoints for v1 of the Constituent API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
+
+### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+
+Raiser's Edge NXT recently introduced a new security setting for Solicit Codes. The API will soon reflect this setting for consistency, and that will affect the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
+
 ## 2018-03-20
 
-### Announcement: Future Enhancement Planned for Constituent API
+### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
 Raiser's Edge NXT recently introduced a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
 
