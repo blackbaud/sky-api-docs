@@ -16,15 +16,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ## 2018-03-29
 
-### Announcement: Future Enhancement Planned for Constituent API
-
-Raiser's Edge NXT recently introduced a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
-
-## February
-
-### 2018-02-21
-
-#### New
+### New
 
 Added the following endpoints:
 
@@ -54,9 +46,15 @@ Added the following endpoints:
   
   <strong>&#42;</strong> We deprecated the [Action custom field categories endpoints]({{stache.config.portal_endpoints_action_custom_fields_get_categories}}) and [Constituent custom field categories]({{stache.config.portal_endpoints_customfieldcatagories_constituent_get_list}}) endpoints and replaced them with the Action custom field category details and Constituent custom field category details endpoints. We will continue to support deprecated endpoints for v1 of the Constituent API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
 
-### Announcement: Future Security Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
 Raiser's Edge NXT recently introduced a new security setting for Solicit Codes. The API will soon reflect this setting for consistency, and that will affect the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
+
+## 2018-03-20
+
+### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+
+Raiser's Edge NXT recently introduced a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
 
 ## February
 
