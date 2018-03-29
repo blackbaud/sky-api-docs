@@ -16,7 +16,15 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ## 2018-03-29
 
-### New
+### Announcement: Future Enhancement Planned for Constituent API
+
+Raiser's Edge NXT recently introduced a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
+
+## February
+
+### 2018-02-21
+
+#### New
 
 Added the following endpoints:
 
