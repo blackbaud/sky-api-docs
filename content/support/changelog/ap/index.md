@@ -14,9 +14,19 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-17
+## 2018-03-30
 
 ### Changed
+
+For the  [Invoice (List)]({{ stache.config.portal_endpoints_invoice_list }}) endpoint, we made the following changes:
+- The `payment_method` of the invoice is now returned in the listed objects, which includes `EFT`,  `Credit card`,  `Bank draft`, or `Check`.
+- The `payment_method` field can also be filtered during search.
+
+## January 2018
+
+### 2018-01-17
+
+#### Changed
 
 For the  [Invoice (List)]({{ stache.config.portal_endpoints_invoice_list }}) endpoint, we added the `delete`, `paid`, and `partially paid` statuses.
 
