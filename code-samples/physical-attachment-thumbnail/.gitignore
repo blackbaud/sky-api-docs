@@ -1,0 +1,4 @@
+dot-net-core/.vs
+dot-net-core/CreateThumbnail/bin
+dot-net-core/CreateThumbnail/obj
+node-js/node_modules
