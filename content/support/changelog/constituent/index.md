@@ -14,6 +14,31 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+### 2018-04-02
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_document_create }}">
+        <td>Document (Create)</td>
+        <td>POST</td>
+        <td>/documents</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2018-03-29
 
 ### New
@@ -43,7 +68,7 @@ Added the following endpoints:
       </tbody>
     </table>
   </div>
-  
+
   <strong>&#42;</strong> We deprecated the [Action custom field categories endpoints]({{stache.config.portal_endpoints_action_custom_fields_get_categories}}) and [Constituent custom field categories]({{stache.config.portal_endpoints_customfieldcatagories_constituent_get_list}}) endpoints and replaced them with the Action custom field category details and Constituent custom field category details endpoints. We will continue to support deprecated endpoints for v1 of the Constituent API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
 
 ### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
