@@ -25,12 +25,15 @@ jimp.read('https://github.com/recurser/exif-orientation-examples/blob/master/Lan
                 }
                 console.log('test');
                 var req = http.request(options, function (response) {
-                	if (response.statusCode < 200 || response.statusCode >= 300) {
-                    	console.log('Bad response received: ', response.statusCode, response.statusMessage);
-                	} else {
-                    	console.log('Success! ', response.statusCode, response.statusMessage);
-                	}
+                    if (response.statusCode < 200 || response.statusCode >= 300) {
+                        console.log('Bad response received: ', response.statusCode, response.statusMessage);
+                    } else {
+                        console.log('Success! ', response.statusCode, response.statusMessage);
+                    }
                 });
+
+                req.on('error', (e) => { console.log('Error sending message: ', error); });
+
                 req.end();
             })
 }).catch(function (err) {
