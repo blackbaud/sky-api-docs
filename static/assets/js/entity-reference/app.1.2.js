@@ -135,13 +135,13 @@
                 property.isArray = (property.type === "array");
 
                 if (property.isArray) {
-                    property.ref = (property.items.$ref && property.items.$ref.replace("#/definitions/", ""));
-                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
-                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property);
+                    property.items.ref = (property.items.$ref && property.items.$ref.replace("#/definitions/", ""));
+                    property.items.displayType = buildDisplayName(property.items, definitions);
+                    property.items.displayId = buildDisplayId(property.items, definitions);
                 } else {
                     property.ref = property.$ref && property.$ref.replace("#/definitions/", "");
-                    property.displayType = getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
-                    property.displayId = getRefDisplayId(property.ref, definitions) || getTypeFormattedName(property);
+                    property.displayType = buildDisplayName(property, definitions);
+                    property.displayId = buildDisplayId(property, definitions);
                 }
 
                 property.descriptionHtml = $sce.trustAsHtml(property.description);
@@ -155,10 +155,17 @@
             }
         }
 
-        function getRefDisplayId(ref, definitions) {
-            if (ref) {
-                return (definitions[ref]['x-display-id'] || ref);
+        function buildDisplayName(property, definitions) {
+            
+            return getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
+        }
+
+        function buildDisplayId(property, definitions) {
+            if (property.ref) {
+                return (definitions[property.ref]['x-display-id'] || property.ref);
             }
+
+            return getTypeFormattedName(property);
         }
 
         function getTypeFormattedName(property) {
