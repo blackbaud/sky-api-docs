@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-04-03
+
+### Changed
+
+We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
+
 ## 2018-03-29
 
 ### New
