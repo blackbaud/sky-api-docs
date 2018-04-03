@@ -13,7 +13,7 @@ jimp.read('https://github.com/recurser/exif-orientation-examples/blob/master/Lan
                 // upload image to third party storage
                 var options = {
                     hostname: "qaflashdev.blob.core.windows.net",
-                    path: "/blackbauddocumentsvc/tenants/ef7ae0eb-af4b-41db-b9b2-47086cbecaba/documents/eebd1e44-970b-4831-acbb-7733801a5c74/Landscape_2.jpg?sv=2015-12-11&sr=b&sig=X4tUy3MBkJNn0Ld3smV6nn2JKY%2FTK0JtZkGyizthDkA%3D&se=2018-04-02T19:11:59Z&sp=rw",
+                    path: "/blackbauddocumentsvc/tenants/946e0397-718a-437a-b7d7-f9b5b273def8/documents/6e3e7c9f-3030-458a-bfb3-f55936f47f0f/Letter1.docx?sv=2015-12-11&sr=b&sig=XO8nzVvuWPT65FT%2B2EquYAAbuEzh%2F%2BfvrreZC0DEN54%3D&se=2018-04-03T17%3A08%3A45Z&sp=rw",
                     method: "PUT",
                     headers: {
                         "x-ms-blob-type": "BlockBlob",
@@ -24,14 +24,14 @@ jimp.read('https://github.com/recurser/exif-orientation-examples/blob/master/Lan
                     encoding: null
                 }
                 console.log('test');
-                http.request(options, function (error, response) {
-                    console.log('hi');
-                    if (error) {
-                        console.log('Error sending message: ', error);
-                    } else {
-                        console.log('Response: ', response.body);
-                    }
+                var req = http.request(options, function (response) {
+                	if (response.statusCode < 200 || response.statusCode >= 300) {
+                    	console.log('Bad response received: ', response.statusCode, response.statusMessage);
+                	} else {
+                    	console.log('Success! ', response.statusCode, response.statusMessage);
+                	}
                 });
+                req.end();
             })
 }).catch(function (err) {
     console.error(err);
