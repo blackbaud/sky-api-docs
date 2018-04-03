@@ -14,6 +14,17 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-04-04
+
+### Changed
+
+We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
+
+###Announcement: Released Display Name Enhancement for Constituent API* 
+Constituent names displayed in the API will now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This will initially affect the default name values on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints. Moving forward, display name settings will be configurable from the web view, and any changes made to the default display name format will similarly be reflected in the API.
+
+Additionally, changing the display name configuration will increment `date_modified` values on all constituents in the given organization’s database. This impact will not occur until display name configuration options are available in the Raiser’s Edge NXT web view.
+
 ## 2018-03-29
 
 ### New
@@ -54,7 +65,7 @@ Raiser's Edge NXT recently introduced a new security setting for Solicit Codes. 
 
 ### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
-Raiser's Edge NXT recently introduced a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
+Raiser's Edge NXT will soon introduce a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
 
 ## February
 
