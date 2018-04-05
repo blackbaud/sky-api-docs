@@ -20,6 +20,9 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
 
+###Announcement: Released Solicit Code Security Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+The Constituent API now respects the new Solicit Code security setting available in the Raiser's Edge NXT database view. This affects the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
+
 ## 2018-03-29
 
 ### New
