@@ -21,7 +21,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
 
 ###Announcement: Released Display Name Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
-Constituent names in the API now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This initially affects the default name values on the Constituent GET, search, and list endpoints, and on the Relationship GET and list endpoints. Moving forward, display name settings will be configurable from the web view, and the API will reflect any changes to the display name format.
+Constituent names in the API now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This initially affects the default name values on the Constituent [GET]({{stache.config.portal_endpoints_constituent_get}}), [search]({{stache.config.portal_endpoints_constituent_search}}), and [list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoints, and on the Relationship [GET]({{stache.config.portal_endpoints_constituent_relationship_get_list}}) and [list]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoints. Moving forward, display name settings will be configurable from the web view, and the API will reflect any changes to the display name format.
 
 In addition, when a supervisor user changes the display name configuration settings, the `date_modified` value will increment on all constituents in the organization's database. This impact will not occur until display name configuration options are available in the Raiser's Edge NXT web view, slated for release in mid-April.
 
@@ -68,7 +68,7 @@ Raiser's Edge NXT recently introduced a new security setting in the database vie
 
 ### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
-Raiser's Edge NXT will soon introduce a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints.
+Raiser's Edge NXT will soon introduce a new configuration setting for how to display names in the product. The API will soon reflect this configuration option for consistency. This will affect constituent name properties on the Constituent [GET]({{stache.config.portal_endpoints_constituent_get}}), [search]({{stache.config.portal_endpoints_constituent_search}}), and [list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoints, and on the Relationship [GET]({{stache.config.portal_endpoints_constituent_relationship_get_list}}) and [list]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoints.
 
 ## February
 
@@ -233,7 +233,7 @@ Added the following endpoints:
 
 #### Changed
 
- - The [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
+ - The [Relationship list (Single constituent)]({{ stache.config. }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
  - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes options to filter custom fields based on their categories and values. The optional `category` and `value` parameters filter the results to only custom fields with the specified categories and values.
  - The [Currency configuration]({{stache.config.portal_endpoints_currency_configuration_get}}) endpoint now returns the `iso_alpha_2_code` property on the [currency configuration]({{ stache.config.portal_contracts }}#CurrencyConfiguration) entity.
 
