@@ -20,10 +20,13 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
 
-###Announcement: Released Display Name Enhancement for Constituent API* 
-Constituent names displayed in the API will now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This will initially affect the default name values on the Constituent GET, search, and list endpoints, as well as the Relationship GET and list endpoints. Moving forward, display name settings will be configurable from the web view, and any changes made to the default display name format will similarly be reflected in the API.
+###Announcement: Released Display Name Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+Constituent names in the API now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This initially affects the default name values on the Constituent GET, search, and list endpoints, and on the Relationship GET and list endpoints. Moving forward, display name settings will be configurable from the web view, and the API will reflect any changes to the display name format.
 
-Additionally, changing the display name configuration will increment `date_modified` values on all constituents in the given organization’s database. This impact will not occur until display name configuration options are available in the Raiser’s Edge NXT web view.
+In addition, when a supervisor user changes the display name configuration settings, the `date_modified` value will increment on all constituents in the organization's database. This impact will not occur until display name configuration options are available in the Raiser's Edge NXT web view, slated for release in mid-April.
+
+###Announcement: Released Solicit Code Security Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+The Constituent API now respects the new Solicit Code security setting available in the Raiser's Edge NXT database view. This affects the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
 
 ## 2018-03-29
 
@@ -59,7 +62,7 @@ Added the following endpoints:
 
 ### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 
-Raiser's Edge NXT recently introduced a new security setting for Solicit Codes. The API will soon reflect this setting for consistency, and that will affect the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
+Raiser's Edge NXT recently introduced a new security setting in the database view for Solicit Codes. The API will soon reflect this setting for consistency, and that will affect the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
 
 ## 2018-03-20
 
