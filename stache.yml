@@ -439,10 +439,10 @@ portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_f
 
 # Assignments
 portal_endpoints_fundraising_assignments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+portal_endpoints_fundraising_assignments_create: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+portal_endpoints_fundraising_assignments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
+portal_endpoints_fundraising_assignments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
 portal_endpoints_fundraising_types_get: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
-portal_endpoints_fundraising_assignment_create: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
-portal_endpoints_fundraising_assignment_edit: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
-portal_endpoints_fundraising_assignment_delete: <%= stache.config.portal_endpoints_fundraising %>operations/TBD/
 
 # Attachment Tags
 portal_endpoints_fundraising_attachment_tags_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a6f2005d7dcde0d446fe1c0/
