@@ -233,7 +233,7 @@ Added the following endpoints:
 
 #### Changed
 
- - The [Relationship list (Single constituent)]({{ stache.config. }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
+ - The [Relationship list (Single constituent)]({{ stache.config.portal_endpoints_constituent_relationship_get_list }}) and [Relationship list (All constituents)]({{ stache.config.portal_endpoints_constituent_relationship_get_all_list }}) endpoints now return the `reciprocal_relationship_id` property on the [relationship]({{ stache.config.portal_contracts }}#Relationship) entity.
  - The [Constituent custom field list (All constituents)]({{stache.config.portal_endpoints_all_constituent_custom_field_get_list}}) endpoint now includes options to filter custom fields based on their categories and values. The optional `category` and `value` parameters filter the results to only custom fields with the specified categories and values.
  - The [Currency configuration]({{stache.config.portal_endpoints_currency_configuration_get}}) endpoint now returns the `iso_alpha_2_code` property on the [currency configuration]({{ stache.config.portal_contracts }}#CurrencyConfiguration) entity.
 
