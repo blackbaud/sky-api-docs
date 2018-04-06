@@ -29,17 +29,22 @@ Added the following endpoints:
         <th>Route</th>
       </tr>
     </thead>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignment_create }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignments_get_list }}">
+        <td>Fundraiser assignment list (Single fundraiser)</td>
+        <td>POST</td>
+        <td>/fundraisers/{fundraiser_id}/assignments</td>
+      </tr>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignments_create }}">
         <td>Fundraiser assignment (Create)</td>
         <td>POST</td>
         <td>/fundraisers/assignments</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignment_edit }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignments_edit }}">
         <td>Fundraiser assignment (Edit)</td>
         <td>PATCH</td>
         <td>/fundraisers/assignments/{assignment_id}</td>
       </tr>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignment_delete }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignments_delete }}">
         <td>Fundraiser assignment (Delete)</td>
         <td>DELETE</td>
         <td>/fundraisers/assignments/{assignment_id}</td>
