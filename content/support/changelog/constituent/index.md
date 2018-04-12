@@ -39,7 +39,7 @@ Added the following endpoint:
     </table>
   </div>
 
-  <strong>&#42;</strong> We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with a new [Fundraiser assignment list (Single constituent)]({{stache.config.portal_endpoints_fundraiserassignment_get_list}}) endpoint. The route for the new endpoint is `/constituents/{constituent_id}/fundraiserassignments`. We will continue to support deprecated endpoints for v1 of the Constituent API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
+  <strong>&#42;</strong> We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with the Fundraiser assignment list (Single constituent) endpoint. We will continue to support deprecated endpoint for v1 of the Constituent API, but we recommend transitioning to the new endpoint for a more robust and consistent response.
 
 ## 2018-04-06
 
