@@ -406,7 +406,7 @@ portal_endpoints_action_custom_fields_get_category_details: <%= stache.config.po
 
 # Fundraiser
 portal_endpoints_fundraiser_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f17/
-portal_endpoints_fundraiserassignment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
+portal_endpoints_fundraiserassignment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD-reminder/
 portal_endpoints_constituent_fundraiser_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
 
 # Prospect Status
