@@ -14,7 +14,7 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-04-09
+## 2018-04-16
 
 ### New
 
@@ -31,7 +31,7 @@ Added the following endpoints:
     </thead>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignments_get_list }}">
         <td>Fundraiser assignment list (Single fundraiser)</td>
-        <td>POST</td>
+        <td>GET</td>
         <td>/fundraisers/{fundraiser_id}/assignments</td>
       </tr>
       <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_fundraising_assignments_create }}">
