@@ -6,7 +6,7 @@
 <ol>
 <li>From an <a href="{{ stache.config.portal_endpoints }}" target="_blank"><strong>Endpoint Reference</strong></a>, click  <strong>Try it</strong>. For example, in the Constituent Endpoint Reference, select the <strong>Constituent (Get)</strong> endpoint and click <strong>Try it</strong>. This enables the {{ stache.config.dev_console_name }}.<br />
 <img src="/assets/img/getting_started_step3b_api_reference.png" alt="API Reference" title="API Reference")></li>
-<li>Under <strong>Query parameters</strong>, enter a sample parameter. For example, enter `280` for the `constituentId` parameter.</li>
+<li>Under <strong>Query parameters</strong>, enter a sample parameter. For example, enter <code>280</code> for the <code>constituentId</code> parameter.</li>
 <li>Under <strong>Headers</strong>, select the <strong>show/hide</strong> icon in the <code>{{ stache.config.subscription_keyname }}</code> field.  The value reflects the selected subscription key from the <strong>Authorization</strong> section.
 <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> The  <strong>Request URL</strong> and <strong>HTTP request</strong> change based on the    values for the parameter and request header field values.</bb-alert></p>
 
