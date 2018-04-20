@@ -636,6 +636,9 @@ portal_endpoints_journal_entry_batch_get: <%= stache.config.portal_endpoints_GL 
 # Journal Entry Batch List
 portal_endpoints_journal_entry_batch_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1df/
 
+# Journal Entry Batch Patch
+portal_endpoints_journal_entry_batch_patch: <%= stache.config.portal_endpoints_GL %>operations/5ad8fa51d7dcde1210d72b06/
+
 # Journal Entry Batch Post
 portal_endpoints_journal_entry_batch_post: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d73b/
 

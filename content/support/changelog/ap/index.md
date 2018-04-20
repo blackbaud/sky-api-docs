@@ -14,9 +14,81 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-03-30
+## 2018-04-20
 
 ### Changed
+
+We made several changes to the  [Invoice attachment]({{ stache.config.portal_endpoints_invoice_attachment_post }}) endpoint:
+- The endpoint now supports Physical attachments (previously only supported Link attachments)
+- Note the shape of the request in JSON form:
+<pre class="language-javascript"><code>
+{
+  "parent_id": 0,
+  "name": "string",
+  "url": "string",
+  "type": "Link",
+  "media_type": "string",
+  "file": {
+    "ContentLength": 0,
+    "ContentType": "string",
+    "FileName": "string",
+    "InputStream": {
+      "CanRead": true,
+      "CanSeek": true,
+      "CanTimeout": true,
+      "CanWrite": true,
+      "Length": 0,
+      "Position": 0,
+      "ReadTimeout": 0,
+      "WriteTimeout": 0
+      }
+   }
+}
+</code></pre>
+
+    - The `type` field now accepts `Physical` (defaults to `Link` if not provided)
+    - A `url` is not required for `Physical` attachments
+    - A `file` must be provided for `Physical` attachments
+    - A `url` must be provided for `Link` attachments
+    - The new `file` field is `HttpPostedFileBase`
+
+- The request must be a multipart/form-data request. For example,
+
+<pre class="language-javascript"><code>
+public static Task<HttpResponseMessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
+        {
+            var httpContent = new MultipartFormDataContent();
+            var streamContent = new StreamContent(content.File.InputStream);
+            var ContentDisposition = new ContentDispositionHeaderValue("form-data");
+            ContentDisposition.Name = "File";
+            ContentDisposition.FileName = content.File.FileName;
+            streamContent.Headers.ContentDisposition = ContentDisposition;
+            streamContent.Headers.ContentType = new MediaTypeHeaderValue(content.File.ContentType);
+            httpContent.Add(streamContent);
+            httpContent.Add(new StringContent(content.ParentId.ToString()), "ParentId");
+            httpContent.Add(new StringContent(content.Name), "Name");
+            httpContent.Add(new StringContent(content.Type.ToString()), "Type");
+            httpContent.Add(new StringContent(content.MediaType.ToString()), "MediaType");
+            
+            var request = new HttpRequestMessage(HttpMethod.Post, route)
+            {
+                Content = httpContent
+            };
+            return SendAsync(client, request);
+        }
+
+</code></pre>
+
+- JSON requests for url attachments will work the same as they did prior to this release
+- JSON requests containing files will fail or ignore the file if  `type` is set to `link`
+- JSON request field names need to use snake casing, such as `parent_id` and `media_type` whereas multipart/form-data requests need to use camel case, such as `ParentId` and `MediaType`
+
+
+## March 2018
+
+### 2018-03-30
+
+#### Changed
 
 For the  [Invoice (List)]({{ stache.config.portal_endpoints_invoice_list }}) endpoint, we made the following changes:
 - The `payment_method` of the invoice is now returned in the listed objects, which includes `EFT`,  `Credit card`,  `Bank draft`, or `Check`.
