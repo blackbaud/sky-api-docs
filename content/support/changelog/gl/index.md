@@ -14,9 +14,46 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-03-02
+## 2018-04-20
 
 ### New
+Added the following endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_journal_entry_batch_patch }}">
+				<td>Journal entry batch</td>
+				<td>PATCH</td>
+				<td>/journalentrybatches/{batch_id}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+With the new endpoint, note the following:
+
+- You can edit the `description`, `create_interfund_sets`, and `create_bank_account_adjustments` values of an existing journal entry batch.
+- Posted journal entry batches cannot be edited.
+- Omitting a field from a PATCH request does not edit that field with a default value. In the example below, only `create_interfund_entries` is edited, but the other fields are not.
+
+<pre class="language-javascript"><code>{
+        “create_interfund_sets”: false
+}
+</code></pre>
+
+## March
+
+### 2018-03-02
+
+#### New
 Added the following endpoints:
 
 <div class="table-responsive">
@@ -53,7 +90,7 @@ Added the following endpoints:
 	</table>
 </div>
 
-### Changed
+#### Changed
 For the  [Period summary process (Start)]({{ stache.config.portal_endpoints_period_summary_process_start }}) endpoint, a `fiscal_period_id` was previously required. Now, when no object is sent or when a `fiscal_period_id` with value 0 is sent, all open and unoptimized fiscal periods are summarized.
 
 ## January 2018
