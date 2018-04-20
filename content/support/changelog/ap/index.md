@@ -55,7 +55,7 @@ We made several changes to the  [Invoice attachment]({{ stache.config.portal_end
 - The request must be a multipart/form-data request. For example,
 
 <pre class="language-javascript"><code>
-public static Task<HttpResponseMessage> PostCreateAttachmentAsMultiPartDataFormAsync(this HttpClient client, string route, CreateAttachment content)
+public static Task<HttpResponseMessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
         {
             var httpContent = new MultipartFormDataContent();
             var streamContent = new StreamContent(content.File.InputStream);
