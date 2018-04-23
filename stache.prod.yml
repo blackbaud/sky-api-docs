@@ -6,7 +6,7 @@
 sub_domain: blackbaud.com
 portal_product_route_prefix: sky
 authorization_hostname: oauth2.sky.<%= stache.config.sub_domain %>
-developer_app_management_url: https://developerapp.sky.blackbaud.com/applications
+developer_app_management_url: https://developer.blackbaud.com/skyapi-apps
 
 # =============================================
 # ADMIN TOOLBAR
