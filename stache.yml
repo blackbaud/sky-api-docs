@@ -770,6 +770,13 @@ portal_endpoints_invoice_custom_field_list: <%= stache.config.portal_endpoints_A
 # Vendor Custom Field List
 portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a4a/
 
+# =============================================
+# Payments API Endpoints
+# =============================================
+
+# Payments API
+portal_endpoints_payments: <%= stache.config.portal_endpoints %>payments/
+
 # Sample portal contract url  https://apidocs.sky.blackbaud.com/api/constituent-entity-reference#Action
 portal_contracts_menu: <%= stache.config.base %>api/entity-reference/
 portal_contracts: <%= stache.config.base %>api/entity-reference/constituent
