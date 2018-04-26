@@ -13,6 +13,9 @@ title: Issues
 # Issues
 If you find an issue, please [contact us]({{ stache.config.support_need_help_url }}).
 
+## 2018-04-26
+We are aware of a discrepancy in the values being returned by the [Address list (Single constituent)]({{stache.config.portal_endpoints_constituent_address_get_list}}) and [Address list (All constituents)]({{stache.config.portal_endpoints_address_get_list}}) endpoints. We are actively working to resolve this issue and will post an update as soon as it is available. 
+
 ## 2017-12-12
 We are aware of an issue with the new [Period summary]({{stache.config.portal_endpoints_period_summary_process_start}})
 and [Period summary list]({{stache.config.portal_endpoints_period_summary_list}}) endpoints returning incorrect balances
