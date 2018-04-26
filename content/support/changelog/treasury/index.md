@@ -14,9 +14,18 @@ title: Treasury (Beta) Changelog
 
 Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-17
+## 2018-04-26
 
 ### Changed
+
+- For the  [Bank account (List)]({{ stache.config.portal_endpoints_bank_account_list }}) endpoint, the `bank_name` field is now included in the list of returned objects separate from `account_name`.
+- The  [Bank account register (List)]({{ stache.config.portal_endpoints_bank_account_register_list }}), [Checks (List)]({{ stache.config.portal_endpoints_checks_list }}), [Deposits (List)]({{ stache.config.portal_endpoints_deposits_list }}), and [Adjustments (List)]({{ stache.config.portal_endpoints_adjustments_list }}) endpoints now return the `transaction_id` field. This field helps to ensure that "register" items correctly map to checks, deposits, and adjustments.
+
+## January 2018
+
+### 2018-01-17
+
+#### Changed
 
 For the  [Checks (List)]({{ stache.config.portal_endpoints_checks_list }}) endpoint, we made the following changes:
 
