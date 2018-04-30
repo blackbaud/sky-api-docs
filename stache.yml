@@ -130,6 +130,7 @@ support: <%= stache.config.base %>support/
 support_community: https://community.blackbaud.com/developer
 support_changelog: <%= stache.config.support %>changelog/
 support_changelog_gl: <%= stache.config.support %>changelog/gl
+support_changelog_payments: <%= stache.config.support %>changelog/payments
 support_ideas: <%= stache.config.support %>ideas/
 support_ideas_url: https://blackbaud-developer.ideas.aha.io/ideas
 support_faq: <%= stache.config.support %>faq/
