@@ -45,6 +45,11 @@ APIs:
     location: opportunity
     title: Opportunity (Beta)
   -
+  #   description: "Monitor this page to keep up with the latest changes to the Payments API."
+  #   icon: fa-credit-card
+  #   location: payments
+  #   title: Payments (Beta)
+  # -
     description: "Monitor this page to keep up with the latest changes to the Treasury API."
     icon: fa-money
     location: treasury
