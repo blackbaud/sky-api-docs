@@ -5,7 +5,7 @@ description: Information on additions and changes for the School API (Beta).
 order: 210
 published: true
 showInNav: false
-icon: fa fa-credit-card
+icon: fa fa-graduation-cap
 back_to_top: true
 title: Payments (Beta) Changelog
 ---
