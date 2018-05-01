@@ -820,6 +820,14 @@ portal_profile: <%= stache.config.portal %>developer/
 portal_auth_dropdown: "Blackbaud OAuth 2.0 Service"
 
 # =============================================
+# School API Endpoints
+# =============================================
+
+# school API
+portal_endpoints_school: <%= stache.config.portal_endpoints %>school/
+
+
+# =============================================
 # API Terms
 # =============================================
 subscription_keyname: bb-api-subscription-key

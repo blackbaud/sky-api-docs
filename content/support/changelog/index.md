@@ -50,6 +50,11 @@ APIs:
   #   location: payments
   #   title: Payments (Beta)
   # -
+  #   description: "Monitor this page to keep up with the latest changes to the School API."
+  #   icon: fa-graduation-cap
+  #   location: school
+  #   title: School (Beta)
+  # -
     description: "Monitor this page to keep up with the latest changes to the Treasury API."
     icon: fa-money
     location: treasury
