@@ -7,7 +7,7 @@ published: true
 showInNav: false
 icon: fa fa-graduation-cap
 back_to_top: true
-title: Payments (Beta) Changelog
+title: School (Beta) Changelog
 ---
 
 # {{ name }}
