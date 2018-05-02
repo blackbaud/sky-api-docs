@@ -19,7 +19,7 @@ showInNav: false
   <div class="text-center">
     <h1 class="tutorial">{{ name }}</h1>
 
-<p class="lead tutorial">To get started using the Payments (Beta) API, follow this step-by-step guide. After you complete this tutorial, you'll have your Blackbaud developer account, a subscription key, and you'll learn how to try our {{ stache.config.product_name_short }} console.</p>
+<p class="lead tutorial">To get started using the Payments API (Beta), follow this step-by-step guide. After you complete this tutorial, you'll have your Blackbaud developer account, a subscription key, and you'll learn how to try our {{ stache.config.product_name_short }} console.</p>
 <p class="lead tutorial">For information about changes to the Payments API (Beta), see the <a href="https://apidocs.sky.blackbaud.com/support/changelog/payments/">changelog</a>.</p>
 
   <ul class="slide-container">
