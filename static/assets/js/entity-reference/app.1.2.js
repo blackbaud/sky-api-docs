@@ -11,7 +11,6 @@
         bindings: {
             entity: '<',
             showRequired: '@',
-            tableClasses: '@'
         }
     });
 
@@ -20,9 +19,8 @@
         controller: 'OperationEntityCtrl as ctrl',
         bindings: {
             swaggerUrl: '@',
-            entityName: '@',
-            tableClasses: '@',
-            operationId: '@'
+            operationId: '@',
+            baseLinkUrl: '@'
         }
     });
 
@@ -133,7 +131,6 @@
     function OperationEntityCtrl($http, $sce, bbWait) {
         var self = this;
         this.$onInit = onInit;
-        console.log("inside OperationEntityCtrl");
 
         function onInit() {
             bbWait.beginPageWait({});
@@ -144,24 +141,46 @@
 
         function handleSuccess(response) {
             handleSwaggerResponseData(response.data);
-            console.log("SUCCESS: " + self.entity);
         }
 
         function handleSwaggerResponseData(swagger) {
             self.swagger = swagger;
-            var whiteList = [self.entityName];
+            var whiteList = getEntityNamesFromOperationId(swagger, self.operationId);
             var blackList = [];
-            self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce);
+            self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce, self.baseLinkUrl);
         }
 
         function handleError(response) {
             self.showErrorMessage = true;
-            console.log("ERROR: " + response);
+        }
+
+        function getEntityNamesFromOperationId(swagger, operationId){
+            return Object.keys(swagger.paths)
+                .map(function(pathName) {
+                    var entityNames = [],
+                        path = swagger.paths[pathName];
+
+                    Object.keys(path).forEach(function(methodName) {
+                        var method = path[methodName];
+                        if (method.operationId === operationId){
+                            Object.keys(method.parameters)
+                                .filter(function(parameterName) {
+                                    var parameter = method.parameters[parameterName];
+                                    return parameter.in === "body";
+                                })
+                                .map(function(parameterName) {
+                                    var parameter = method.parameters[parameterName];
+                                    entityNames.push(parameter.schema.$ref.replace("#/definitions/", ""))
+                                });
+                            return;
+                        }
+                    });
+                    return entityNames;
+                });
         }
     }
 
-    function getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, showDescriptions, $sce) {
-        console.log(Object.keys(swagger.definitions));
+    function getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, showDescriptions, $sce, baseLinkUrl) {
         return Object.keys(swagger.definitions)
             .map(function(name) {
                 var definition = swagger.definitions[name];
@@ -177,9 +196,9 @@
 
                  Object.keys(entity.details.properties).forEach(function(propertyName) {
                     var property = entity.details.properties[propertyName];
-                    buildDisplayId(property, swagger.definitions);
-                    property.descriptionHtml = $sce.trustAsHtml(property.description);
+                    appendPropertyDisplayFields(property, swagger.definitions, baseLinkUrl);
                     property.required = definition.required && definition.required.includes(propertyName);
+                    property.descriptionHtml = $sce.trustAsHtml(property.description);
                  });
 
                 return entity;
@@ -224,8 +243,9 @@
         return property && property.type && property.type === "array";
     }
 
-    function buildDisplayId(property, definitions) {
-        var displayName = "",
+    function appendPropertyDisplayFields(property, definitions, baseLinkUrl) {
+        var baseLink = baseLinkUrl ? baseLinkUrl + "#" : "#",
+            displayName = "",
             refName;
 
         if (isArray(property) && property.items.$ref) {
@@ -236,13 +256,14 @@
         }
 
         if (refName){
-            property.displayId = definitions[refName]['x-display-id'] || getPropertyDisplayName(definitions[refName]);
-            property.displayName = displayName + (definitions[refName]['x-display-name'] || getPropertyDisplayName(definitions[refName]));
+            var refObject = definitions[refName];
+            if (!refObject['x-hidden']){
+                property.displayId = baseLink + (definitions[refName]['x-display-id'] || refName);
+            }
+            property.displayName = displayName + (definitions[refName]['x-display-name'] || refName).toLowerCase();
         } else {
-            property.displayId = property['x-display-id'] || getPropertyDisplayName(property);
             property.displayName = displayName + (property['x-display-name'] || getPropertyDisplayName(property));
         }
-
     }
 
     function getPropertyDisplayName(property) {
