@@ -1,0 +1,8 @@
+<div name="{{entity.displayId}}" ng-repeat="entity in ctrl.entities">
+    <p>&nbsp;</p>
+    <p>{{entity.description}}<p>
+    <p>The <strong>{{entity.displayName}}</strong> entity has the following properties:</p>
+
+    <bb-entity-table entity=entity show-required="true" />
+</div>
+

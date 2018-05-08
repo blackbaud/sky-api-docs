@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table table-hover {{$ctrl.tableClasses}}">
+        <thead>
+            <tr>
+                <th class="entityref_property"><strong>Property</strong></th>
+                <th ng-show="{{ $ctrl.showRequired }}" class="entityref_type"><strong>Required</strong></th>
+                <th class="entityref_type"><strong>Type</strong></th>
+                <th class="entityref_description"><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="(property_name, property) in $ctrl.entity.details.properties">
+                <td>{{property_name}}</td>
+                <td ng-show="{{ $ctrl.showRequired }}" class="col-md-1 text-center"><i ng-show="property.required" class="fa fa-check text-success" aria-hidden="true" title="Property is required"></i><span ng-show="property.required" class="sr-only">Property is required</span></td>
+                <td>
+                    <span ng-show="!property.ref">{{property.displayName}}</span>
+                    <a ng-show="!!property.ref" ng-href="#{{property.displayId}}">{{property.displayName}}</a>
+                </td>
+                <td>
+                    <span ng-bind-html="property.descriptionHtml"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div ng-if="$ctrl.entity.additionalInfoHtml" ng-bind-html="$ctrl.entity.additionalInfoHtml"></div>

@@ -4,6 +4,27 @@
     var app = angular.module('entityReferenceApp', ['sky', 'ui.bootstrap', 'LocalStorageModule']);
 
     app.controller('EntityReferenceCtrl', ['$window', '$http', '$sce', '$timeout', 'bbWait', 'localStorageService', '$rootScope', EntityReferenceCtrl]);
+    app.controller('OperationEntityCtrl', ['$http', '$sce', 'bbWait', OperationEntityCtrl]);
+
+    app.component('bbEntityTable', {
+        templateUrl: '/assets/views/entitytable.html',
+        bindings: {
+            entity: '<',
+            showRequired: '@',
+            tableClasses: '@'
+        }
+    });
+
+    app.component('bbOperationEntityTable', {
+        templateUrl: '/assets/views/operationentities.html',
+        controller: 'OperationEntityCtrl as ctrl',
+        bindings: {
+            swaggerUrl: '@',
+            entityName: '@',
+            tableClasses: '@',
+            operationId: '@'
+        }
+    });
 
     app.component('bbEntityReference', {
         templateUrl: '/assets/views/entities.html',
@@ -64,7 +85,7 @@
             self.swagger = swagger;
             var whiteList = self.whiteList ? self.whiteList.split(',') : [];
             var blackList = self.blackList ? self.blackList.split(',') : [];
-            self.entities = getEntitiesFromSwagger(swagger, whiteList, blackList);
+            self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, self.showDescriptions, $sce);
 
             // Need to delay allowing digest cycle to run and additionally
             // give a little extra time to prevent rescrolling back to top due to
@@ -80,106 +101,6 @@
 
         function handleError(response) {
             self.showErrorMessage = true;
-        }
-
-        function getEntitiesFromSwagger(swagger, whiteList, blackList) {
-            return Object.keys(swagger.definitions)
-                .sort(function(a, b) {
-                    var keyA = getRefDisplayName(a, swagger.definitions);
-                    var keyB = getRefDisplayName(b, swagger.definitions);
-
-                    if (keyA < keyB) {
-                        return -1;
-                    }
-
-                    if (keyA > keyB) {
-                        return 1;
-                    }
-
-                    // keys are equal (shouldn't happen in our swagger)
-                    return 0;
-                })
-                .map(function(name) {
-                    var definition = swagger.definitions[name];
-                    return {
-                        name: name,
-                        displayName: definition['x-display-name'] || name,
-                        displayId: definition['x-display-id'] || name,
-                        details: definition,
-                        description: self.showDescriptions ? definition.description : null,
-                        additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info'])
-                    };
-                })
-                .filter(function(entity) {
-                    if (whiteList.length > 0) {
-                        return whiteList.find(function(name) {
-                            return entity.name == name;
-                        });
-                    }
-                    if (blackList.length > 0) {
-                        return !blackList.find(function(name) {
-                            return entity.name == name;
-                        });
-                    }
-                    return !!entity.details.properties && !entity.details['x-hidden'];
-                })
-                .map(function(entity)
-                {
-                    return setDisplayTypesOnEntity(entity, swagger.definitions);
-                });
-        }
-
-        function setDisplayTypesOnEntity(entity, definitions) {
-            Object.keys(entity.details.properties).forEach(function(propertyName) {
-                var property = entity.details.properties[propertyName];
-                property.isArray = (property.type === "array");
-
-                if (property.isArray) {
-                    property.items.ref = (property.items.$ref && property.items.$ref.replace("#/definitions/", ""));
-                    property.items.displayType = buildDisplayName(property.items, definitions);
-                    property.items.displayId = buildDisplayId(property.items, definitions);
-                } else {
-                    property.ref = property.$ref && property.$ref.replace("#/definitions/", "");
-                    property.displayType = buildDisplayName(property, definitions);
-                    property.displayId = buildDisplayId(property, definitions);
-                }
-
-                property.descriptionHtml = $sce.trustAsHtml(property.description);
-            });
-            return entity;
-        }
-
-        function getRefDisplayName(ref, definitions) {
-            if (ref) {
-                return (definitions[ref]['x-display-name'] || ref).toLowerCase();
-            }
-        }
-
-        function buildDisplayName(property, definitions) {
-            
-            return getRefDisplayName(property.ref, definitions) || getTypeFormattedName(property);
-        }
-
-        function buildDisplayId(property, definitions) {
-            if (property.ref) {
-                return (definitions[property.ref]['x-display-id'] || property.ref);
-            }
-
-            return getTypeFormattedName(property);
-        }
-
-        function getTypeFormattedName(property) {
-
-            // Conversion table for swagger format to display text.
-            var formatDisplayNames = {
-                'date-time': 'dateTime'
-            };
-
-            if (property.format) {
-                return formatDisplayNames[property.format] || property.type;
-            } else {
-                return property.type;
-            }
         }
 
         function scrollToHash() {
@@ -208,4 +129,143 @@
             return index === -1 ? hash : hash.substr(index+3); // This was +1 before 1.6. If we do something to remove the #! prefix, change this back
         }
     }
+
+    function OperationEntityCtrl($http, $sce, bbWait) {
+        var self = this;
+        this.$onInit = onInit;
+        console.log("inside OperationEntityCtrl");
+
+        function onInit() {
+            bbWait.beginPageWait({});
+            $http.get(self.swaggerUrl)
+              .then(handleSuccess, handleError)
+              .finally(function() { bbWait.endPageWait(); });
+        }
+
+        function handleSuccess(response) {
+            handleSwaggerResponseData(response.data);
+            console.log("SUCCESS: " + self.entity);
+        }
+
+        function handleSwaggerResponseData(swagger) {
+            self.swagger = swagger;
+            var whiteList = [self.entityName];
+            var blackList = [];
+            self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce);
+        }
+
+        function handleError(response) {
+            self.showErrorMessage = true;
+            console.log("ERROR: " + response);
+        }
+    }
+
+    function getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, showDescriptions, $sce) {
+        console.log(Object.keys(swagger.definitions));
+        return Object.keys(swagger.definitions)
+            .map(function(name) {
+                var definition = swagger.definitions[name];
+                var entity = {
+                    name: name,
+                    displayName: definition['x-display-name'] || name,
+                    displayId: definition['x-display-id'] || name,
+                    details: definition,
+                    description: showDescriptions ? definition.description : null,
+                    additionalInfoHtml: $sce.trustAsHtml(definition['x-additional-info']),
+                    hidden: !!definition.properties && !definition['x-hidden']
+                };
+
+                 Object.keys(entity.details.properties).forEach(function(propertyName) {
+                    var property = entity.details.properties[propertyName];
+                    buildDisplayId(property, swagger.definitions);
+                    property.descriptionHtml = $sce.trustAsHtml(property.description);
+                    property.required = definition.required && definition.required.includes(propertyName);
+                 });
+
+                return entity;
+            })
+            .filter(function(entity) {
+                if (whiteList.length > 0) {
+                    return whiteList.find(function(name) {
+                        return entity.name == name;
+                    });
+                }
+                if (blackList.length > 0) {
+                    return !blackList.find(function(name) {
+                        return entity.name == name;
+                    });
+                }
+                return !!entity.hidden;
+            })
+            .sort(function(a, b) {
+                var keyA = a.displayId;
+                var keyB = b.displayId;
+
+                if (keyA < keyB) {
+                    return -1;
+                }
+
+                if (keyA > keyB) {
+                    return 1;
+                }
+
+                // keys are equal (shouldn't happen in our swagger)
+                return 0;
+            });
+    }
+
+    function getRefDisplayName(ref, definitions) {
+        if (ref) {
+            return (definitions[ref]['x-display-name'] || definitions[ref]['x-display-name']).toLowerCase();
+        }
+    }
+
+    function isArray(property){
+        return property && property.type && property.type === "array";
+    }
+
+    function buildDisplayId(property, definitions) {
+        var displayName = "",
+            refName;
+
+        if (isArray(property) && property.items.$ref) {
+            displayName = "array of ";
+            refName = property.items.$ref.replace("#/definitions/", "");
+        } else if (property.$ref) {
+            refName = property.$ref.replace("#/definitions/", "");
+        }
+
+        if (refName){
+            property.displayId = definitions[refName]['x-display-id'] || getPropertyDisplayName(definitions[refName]);
+            property.displayName = displayName + (definitions[refName]['x-display-name'] || getPropertyDisplayName(definitions[refName]));
+        } else {
+            property.displayId = property['x-display-id'] || getPropertyDisplayName(property);
+            property.displayName = displayName + (property['x-display-name'] || getPropertyDisplayName(property));
+        }
+
+    }
+
+    function getPropertyDisplayName(property) {
+
+        // Conversion table for swagger format to display text. https://swagger.io/specification/#data-types-13
+        var formatDisplayNames = {
+            'date-time': 'dateTime',
+            'date': 'date',
+            'double': 'double',
+            'float': 'float',
+            'int64': 'long',
+            'byte': 'byte',
+            'binary': 'binary',
+            'password': 'password'
+        };
+
+        if (property.format) {
+            return formatDisplayNames[property.format] || property.type;
+        } else if (property.type) {
+            return property.type;
+        }
+
+        return property.name;
+    }
+
 })();
