@@ -138,7 +138,7 @@ showInNav: false
 </li>
 
 <li class="slide">
-<h2 class="tutorial">Step 9 &#8211; Next steps</h2>
+<h2 class="tutorial">Step 8 &#8211; Next steps</h2>
 <div class="row">
   <div class="col-md-12" style="text-align: left;">
 <p>Once you’ve gotten started with the Payments API, you can use available resources to build an application using Payments API.</p>
