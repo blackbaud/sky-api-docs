@@ -42,7 +42,7 @@ showInNav: false
 <li>Click <strong>Review terms and subscribe</strong>. The SKY API Terms of Use will appear in a pop-up window.</li>
 <li>Review and agree to the Terms of Use.</li>
 <li>To submit your request, click <strong>Add subscription</strong>.</li></ol>
-<p style="text-align: left;">Blackbaud approves all subscription requests for the Payments API. You will receive an email notification when your request is approved. After it is approved, you can view the subscription details within your developer <strong><a href="https://developer.sky.blackbaud.com/developer/">profile</a></strong>. Note that, for developers using multiple APIs, the Payments API subscription is different than your other SKY API subscription.</p>
+<p style="text-align: left;">Blackbaud approves all subscription requests for the Payments API. You will receive an email notification when your request is approved. After it is approved, you can view the subscription details within your developer <strong><a href="https://developer.sky.blackbaud.com/developer/">profile</a></strong>. For developers using multiple APIs, note that the Payments API subscription is different than your other SKY API subscription.</p>
 
 </div></div>
 
