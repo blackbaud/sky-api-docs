@@ -703,7 +703,7 @@ portal_endpoints_transaction_code_list: <%= stache.config.portal_endpoints_GL %>
 # Transaction Code Value List
 portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d744/
 
-# Transaction Distribution Search
+# Transaction Distribution List
 portal_endpoints_transaction_distribution_search: <%= stache.config.portal_endpoints_GL %>operations/576aaed7a9db950830404b56/
 
 # =============================================
