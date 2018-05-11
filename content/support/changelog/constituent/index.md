@@ -14,6 +14,11 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-05-10
+
+### Announcement: Released Action Category Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})    
+We updated the Constituent API Action category value from `Phone Call` to `Phone call`. This change impacts the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
+
 ## 2018-04-25
 
 ### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
