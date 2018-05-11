@@ -245,29 +245,41 @@
 
         function appendPropertyDisplayFields(property, definitions, baseLinkUrl) {
           var baseLink = baseLinkUrl ? baseLinkUrl + '#' : '#',
-          displayName = '',
-          refName;
+          displayProps;
 
-          if (isArray(property) && property.items.$ref) {
-            displayName = 'array of ';
-            refName = property.items.$ref.replace('#/definitions/', '');
-          } else if (property.$ref) {
+          if (isArray(property)) {
+            displayProps = createDisplayFields('array of ', baseLink, property.items, definitions);
+          } else {
+            displayProps = createDisplayFields('', baseLink, property, definitions);
+          }
+          property.displayName = displayProps.displayName;
+          property.displayId = displayProps.displayId;
+        }
+
+        function createDisplayFields(displayNamePrefix, baseLink, property, definitions) {
+          var displayId,
+              displayName,
+              refName,
+              refObject;
+
+          if (property.$ref) {
             refName = property.$ref.replace('#/definitions/', '');
+            refObject = definitions[refName];
+            displayName = displayNamePrefix + (refObject['x-display-name'] || refName).toLowerCase();
+            if (!refObject['x-hidden']) {
+              displayId = baseLink + (refObject['x-display-id'] || refName);
+            }
+          } else {
+            displayName = displayNamePrefix + getPropertyDisplayName(property);
           }
 
-          if (refName){
-            var refObject = definitions[refName];
-            if (!refObject['x-hidden']){
-              property.displayId = baseLink + (definitions[refName]['x-display-id'] || refName);
-            }
-            property.displayName = displayName + (definitions[refName]['x-display-name'] || refName).toLowerCase();
-          } else {
-            property.displayName = displayName + (property['x-display-name'] || getPropertyDisplayName(property));
+          return { 
+            displayName: displayName,
+            displayId: displayId
           }
         }
 
         function getPropertyDisplayName(property) {
-
         // Conversion table for swagger format to display text. https://swagger.io/specification/#data-types-13
         var formatDisplayNames = {
           'date-time': 'dateTime',
