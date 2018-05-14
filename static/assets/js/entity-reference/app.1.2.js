@@ -194,12 +194,14 @@
               hidden: !!definition.properties && !definition['x-hidden']
             };
 
-            Object.keys(entity.details.properties).forEach(function(propertyName) {
-              var property = entity.details.properties[propertyName];
-              appendPropertyDisplayFields(property, swagger.definitions, baseLinkUrl);
-              property.required = definition.required && definition.required.includes(propertyName);
-              property.descriptionHtml = $sce.trustAsHtml(property.description);
-            });
+            if (entity.details && entity.details.properties) {
+              Object.keys(entity.details.properties).forEach(function(propertyName) {
+                var property = entity.details.properties[propertyName];
+                appendPropertyDisplayFields(property, swagger.definitions, baseLinkUrl);
+                property.required = definition.required && definition.required.includes(propertyName);
+                property.descriptionHtml = $sce.trustAsHtml(property.description);
+              });
+            }
 
             return entity;
           })
