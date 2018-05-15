@@ -14,6 +14,31 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-05-15
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+       <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_document_Create }}">
+        <td>Document (Create)</td>
+        <td>POST</td>
+        <td>/documents</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## 2018-05-11
 
 ### Announcement: Released Action Category Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})    
