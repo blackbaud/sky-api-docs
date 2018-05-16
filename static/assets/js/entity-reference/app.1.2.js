@@ -11,10 +11,11 @@
     <table class="table table-hover table-striped">\
         <thead>\
             <tr>\
-                <td class="entityref_property"><strong>Property</strong></th>\
-                <td ng-show="{{ $ctrl.showRequired }}" class="entityref_type"><strong>Required</strong></th>\
-                <td class="entityref_type"><strong>Type</strong></th>\
-                <td class="entityref_description"><strong>Description</strong></th>\
+                <th class="col-md-3"><strong>Property</strong></th>\
+                <th ng-show="{{ $ctrl.showRequired }}" class="col-md-1"><strong>Required</strong></th>\
+                <th class="col-md-1"><strong>Type</strong></th>\
+                <th ng-show="{{ $ctrl.showRequired }}" class="col-md-7"><strong>Description</strong></th>\
+                <th ng-show="{{ !$ctrl.showRequired }}" class="col-md-8"><strong>Description</strong></th>\
             </tr>\
         </thead>\
         <tbody>\
@@ -35,13 +36,12 @@
 <div ng-if="$ctrl.entity.additionalInfoHtml" ng-bind-html="$ctrl.entity.additionalInfoHtml"></div>',
     bindings: {
       entity: '<',
-      showRequired: '@',
+      showRequired: '<',
     }
   });
 
   app.component('bbOperationEntityTable', {
     template: '<div name="{{entity.displayId}}" ng-repeat="entity in ctrl.entities">\
-    <p>&nbsp;</p>\
     <p>{{entity.description}}<p>\
     <p>The <strong>{{entity.displayName}}</strong> entity has the following properties:</p>\
 \
