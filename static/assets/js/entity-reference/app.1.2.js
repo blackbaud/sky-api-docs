@@ -7,7 +7,32 @@
   app.controller('OperationEntityCtrl', ['$http', '$sce', 'bbWait', OperationEntityCtrl]);
 
   app.component('bbEntityTable', {
-    templateUrl: '/assets/views/entitytable.html',
+    template: '<div class="table-responsive">\
+    <table class="table table-hover table-striped">\
+        <thead>\
+            <tr>\
+                <td class="entityref_property"><strong>Property</strong></th>\
+                <td ng-show="{{ $ctrl.showRequired }}" class="entityref_type"><strong>Required</strong></th>\
+                <td class="entityref_type"><strong>Type</strong></th>\
+                <td class="entityref_description"><strong>Description</strong></th>\
+            </tr>\
+        </thead>\
+        <tbody>\
+            <tr ng-repeat="(property_name, property) in $ctrl.entity.details.properties">\
+                <td>{{property_name}}</td>\
+                <td ng-show="{{ $ctrl.showRequired }}" class="col-md-1 text-center"><i ng-show="property.required" class="fa fa-check text-success" aria-hidden="true" title="Property is required"></i><span ng-show="property.required" class="sr-only">Property is required</span></td>\
+                <td>\
+                    <span ng-show="!property.displayId">{{property.displayName}}</span>\
+                    <a ng-show="!!property.displayId" ng-href="{{property.displayId}}">{{property.displayName}}</a>\
+                </td>\
+                <td>\
+                    <span ng-bind-html="property.descriptionHtml"></span>\
+                </td>\
+            </tr>\
+        </tbody>\
+    </table>\
+</div>\
+<div ng-if="$ctrl.entity.additionalInfoHtml" ng-bind-html="$ctrl.entity.additionalInfoHtml"></div>',
     bindings: {
       entity: '<',
       showRequired: '@',
@@ -15,7 +40,13 @@
   });
 
   app.component('bbOperationEntityTable', {
-    templateUrl: '/assets/views/operationentities.html',
+    template: '<div name="{{entity.displayId}}" ng-repeat="entity in ctrl.entities">\
+    <p>&nbsp;</p>\
+    <p>{{entity.description}}<p>\
+    <p>The <strong>{{entity.displayName}}</strong> entity has the following properties:</p>\
+\
+    <bb-entity-table entity=entity show-required="true" />\
+</div>',
     controller: 'OperationEntityCtrl as ctrl',
     bindings: {
       swaggerUrl: '@',
@@ -131,8 +162,10 @@
         function OperationEntityCtrl($http, $sce, bbWait) {
           var self = this;
           this.$onInit = onInit;
+          console.log("inside operation entity ctrl");
 
           function onInit() {
+            console.log("inside onInit");
             bbWait.beginPageWait({});
             $http.get(self.swaggerUrl)
             .then(handleSuccess, handleError)
@@ -140,6 +173,7 @@
           }
 
           function handleSuccess(response) {
+            console.log("inside handleSuccess");
             handleSwaggerResponseData(response.data);
           }
 
@@ -148,10 +182,13 @@
             var whiteList = getEntityNamesFromOperationId(swagger, self.operationId);
             var blackList = [];
             self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce, self.baseLinkUrl);
+            debugger;
           }
 
           function handleError(response) {
+            console.log("inside handleError");
             self.showErrorMessage = true;
+            debugger;
           }
 
           function getEntityNamesFromOperationId(swagger, operationId){
