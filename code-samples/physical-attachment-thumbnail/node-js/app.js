@@ -10,63 +10,63 @@ var subscriptionKey = "secret_key";
 var createDocumentResponse;
 
 var options = {
-	uri: "https://api.sky.blackbaud.com/constituent/v1/documents",
-	method: "POST",
-	headers: {
-		"Authorization": jwt,
-		"bb-api-subscription-key": subscriptionKey,
-	},
-	body: {
-		"file_name": "businesscard.jpg",
-		"upload_thumbnail": true
-	},
-	json: true
+    uri: "https://api.sky.blackbaud.com/constituent/v1/documents",
+    method: "POST",
+    headers: {
+        "Authorization": jwt,
+        "bb-api-subscription-key": subscriptionKey,
+    },
+    body: {
+        "file_name": "businesscard.jpg",
+        "upload_thumbnail": true
+    },
+    json: true
 }
 
 request(options, function(err, res, body) {
-	if (err) {
-		console.log(err);
-	} else {
-		createDocumentResponse = res;
-	}
+    if (err) {
+        console.log(err);
+    } else {
+        createDocumentResponse = res;
+    }
 });
 
 jimp.read('https://github.com/recurser/exif-orientation-examples/blob/master/Landscape_2.jpg?raw=true')
-	.then(function (image) {
-		// resize and crop image to 100px by 100px keeping the image centered
-		image.cover(100, 100)
-			// apply any exif orientation transforms
-			.exifRotate() 
-			.getBuffer(jimp.MIME_JPEG, function(err, buffer) {
-				// make request using info from thumbnail_upload_request with buffer
+    .then(function (image) {
+        // resize and crop image to 100px by 100px keeping the image centered
+        image.cover(100, 100)
+            // apply any exif orientation transforms
+            .exifRotate() 
+            .getBuffer(jimp.MIME_JPEG, function(err, buffer) {
+                // make request using info from thumbnail_upload_request with buffer
 
-				if (createDocumentResponse || createDocumentResponse.body || createDocumentResponse.body.thumbnail_upload_request) {
-					var thumbnailReqInfo = createDocumentResponse.body.thumbnail_upload_request;
+                if (createDocumentResponse || createDocumentResponse.body || createDocumentResponse.body.thumbnail_upload_request) {
+                    var thumbnailReqInfo = createDocumentResponse.body.thumbnail_upload_request;
 
-					// build headers
-					var headers = {};
-					for (var header of thumbnailReqInfo.headers) {
-						headers[header['name']] = header["value"]
-					}
+                    // build headers
+                    var headers = {};
+                    for (var header of thumbnailReqInfo.headers) {
+                        headers[header['name']] = header["value"]
+                    }
 
-					var options = {
-						uri: thumbnailReqInfo.url,
-						headers: headers,
-						method: thumbnailReqInfo.method,
-						body: buffer					
-					}
-					request(options, function(err, res, body) {
-						if (err) {
-							console.log(err);
-						} else {
-							// request is successful and the thumbnail has been uploaded
-							console.log(JSON.stringify(res, null, 2));	
-						}
-					});
-				}
-			})
+                    var options = {
+                        uri: thumbnailReqInfo.url,
+                        headers: headers,
+                        method: thumbnailReqInfo.method,
+                        body: buffer                    
+                    }
+                    request(options, function(err, res, body) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            // request is successful and the thumbnail has been uploaded
+                            console.log(JSON.stringify(res, null, 2));  
+                        }
+                    });
+                }
+            })
 }).catch(function (err) {
-	console.error(err);
+    console.error(err);
 });
 
 app.get('/', function (req, res) {
