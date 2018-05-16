@@ -50,7 +50,7 @@ namespace ConsoleApp1
                 // auto orient using exif data
                 image.AutoOrient();
 
-                // make PUT request to thumbnail_upload_url using buffer
+                // make request using info from thumbnail_upload_request with buffer
             }
         }
     }

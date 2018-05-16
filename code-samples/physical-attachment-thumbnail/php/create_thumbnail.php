@@ -63,6 +63,6 @@ switch($imagick_orientation)
     break;
 }
 
-// make PUT request to thumbnail_upload_url using $i
+// make request to using the info from thumbnail_upload_request with $i
 
 ?>

@@ -9,7 +9,7 @@ jimp.read('https://github.com/recurser/exif-orientation-examples/blob/master/Lan
             // apply any exif orientation transforms
             .exifRotate() 
             .getBuffer(jimp.MIME_JPEG, function(err, buffer) {
-                // make PUT request to thumbnail_upload_url with buffer
+                // make request using info from thumbnail_upload_request with buffer
             })
 }).catch(function (err) {
     console.error(err);
