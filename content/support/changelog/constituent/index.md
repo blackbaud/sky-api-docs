@@ -30,7 +30,7 @@ Added the following endpoint:
       </tr>
     </thead>
     <tbody>
-      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_document_Create }}">
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_document_create }}">
         <td>Document (Create)</td>
         <td>POST</td>
         <td>/documents</td>
