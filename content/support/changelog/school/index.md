@@ -14,6 +14,38 @@ title: School (Beta) Changelog
 
 Monitor this page to keep up with the [School API (Beta)]({{ stache.config.portal_endpoints_school }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 25 May 2018
+
+### New
+
+Added the following endpoint(s):
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Method</th>
+          <th>Route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-url="{{stache.config.portal_endpoints_student_single_section_list}}">
+          <td>Student list (single section)</td>
+          <td>GET</td>
+          <td>/academics/sections/{section_id}/students</td>
+        </tr>
+         <tr class="clickable-row" data-url="{{stache.config.portal_endpoints_user_extended_list}}">
+          <td>User extended list</td>
+          <td>GET</td>
+          <td>/users/extended?base_role_ids={base_role_ids}[&marker]</td>
+        </tr>
+         
+        
+      </tbody>
+    </table>
+</div>
+
 ## 15 May 2018
 
 ### New
