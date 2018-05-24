@@ -14,9 +14,20 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-04-20
+## 2018-05-24
 
-### New
+### Changed
+We made changes to the following endpoints:
+
+- The [Transaction distribution (List)]({{ stache.config.portal_endpoints_transaction_distribution_search }}) endpoint now returns proper `account_class` information.
+- The [Journal entry batch (GET)]({{ stache.config.portal_endpoints_journal_entry_batch_get }}) endpoint now returns the correct number of `journal_entries`.
+- In the [Period summary process (GET)]({{ stache.config.portal_endpoints_period_summary_process }}) endpoint, the `status` field has been enumerated and all values can now be seen in the Period summary process schema.
+
+## April
+
+### 2018-04-20
+
+#### New
 Added the following endpoint:
 
 <div class="table-responsive">
