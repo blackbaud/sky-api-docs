@@ -18,7 +18,10 @@ Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_
 
 ### Announcement: Breaking Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
-We will implement new operation ID values in our Swagger definition to address an issue where breaking changes in our API management tool alter the operation IDs. The change will also affect the URLs for our endpoint reference.
+We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
+
+Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
+
 
 ## January
 
