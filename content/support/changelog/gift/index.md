@@ -14,9 +14,17 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-01-29
+## 2018-05-25
 
-###New
+### Announcement: Breaking Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+
+We will implement new operation ID values in our Swagger definition to address an issue where breaking changes in our API management tool alter the operation IDs. The change will also affect the URLs for our endpoint reference.
+
+## January
+
+### 2018-01-29
+
+#### New
 
 Added the following endpoint:
 
@@ -39,7 +47,7 @@ Added the following endpoint:
   </table>
 </div>
 
-### Changed
+#### Changed
 
 We added the `date` property to the [attachment]({{ stache.config.gift_entity_reference }}#Attachment) entity.
 

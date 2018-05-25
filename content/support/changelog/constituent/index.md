@@ -14,6 +14,21 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-05-25
+
+### New
+We added the following properties to the [action]({{ stache.config.constituent_entity_reference }}#Action) entity:
+
+- The new `computed_status` property computes the status based on the `completed` and `date` properties when the system is not configured to use custom action statuses. Otherwise, the field calculates the status based on the action's `date` property and whether the `status` property is configured as "Completed."
+- The new `status_code` property specifies the action status code. Available values are in the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574f4bc7d7dcde0740edb96a"><b>Action Status</b></a> table. This property is only returned when the system is configured to use custom action statuses.
+
+These properties are available in the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}), [Action list (All constituents)]({{ stache.config.portal_endpoints_action_get_list }}), and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
+
+### Announcement: Breaking Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+
+We will implement new operation ID values in our Swagger definition to address an issue where breaking changes in our API management tool alter the operation IDs. The change will also affect the URLs for our endpoint reference.
+
+
 ## 2018-05-15
 
 ### New
@@ -44,14 +59,16 @@ Added the following endpoint:
 ### Announcement: Released Action Category Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})    
 We updated the Constituent API Action category value from `Phone Call` to `Phone call`. This change impacts the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
 
-## 2018-04-25
+## April
 
-### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+###2018-04-25
+
+#### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 We will update the Constituent API Action category value from `Phone Call` to `Phone call` for consistency across all endpoints. This change will impact the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
 
-## 2018-04-13
+### 2018-04-13
 
-### New
+#### New
 
 Added the following endpoint:
 
@@ -76,18 +93,18 @@ Added the following endpoint:
 
   <strong>&#42;</strong> We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with the [Fundraiser assignment list (Single constituent)]({{stache.config.portal_endpoints_fundraiserassignment_get_list}}) endpoint. We will continue to support deprecated endpoint for v1 of the Constituent API, but we recommend transitioning to the new endpoint for a more robust and consistent response.
 
-## 2018-04-06
+### 2018-04-06
 
-### Changed
+#### Changed
 
 We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
 
-### Announcement: Released Display Name Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+#### Announcement: Released Display Name Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 Constituent names in the API now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This initially affects the default name values on the Constituent [GET]({{stache.config.portal_endpoints_constituent_get}}), [search]({{stache.config.portal_endpoints_constituent_search}}), and [list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoints, and on the Relationship [GET]({{stache.config.portal_endpoints_constituent_relationship_get_list}}) and [list]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoints. Moving forward, display name settings will be configurable from the web view, and the API will reflect any changes to the display name format.
 
 In addition, when a supervisor user changes the display name configuration settings, the `date_modified` value will increment on all constituents in the organization's database. This impact will not occur until display name configuration options are available in the Raiser's Edge NXT web view, slated for release in mid-April.
 
-### Announcement: Released Solicit Code Security Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+#### Announcement: Released Solicit Code Security Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 The Constituent API now respects the new Solicit Code security setting available in the Raiser's Edge NXT database view. This affects the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
 
 ## March
