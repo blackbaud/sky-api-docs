@@ -19,7 +19,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 ### New
 We added the following properties to the [action]({{ stache.config.constituent_entity_reference }}#Action) entity:
 
-- The new `computed_status` property computes the status based on the `completed` and `date` properties when the system is not configured to use custom action statuses. Otherwise, the field calculates the status based on the action's `date` property and whether action's `status` property is configured as "Completed."
+- The new `computed_status` property computes the status based on the `completed` and `date` properties when the system is not configured to use custom action statuses. Otherwise, the field calculates the status based on the action's `date` property and whether the `status` property is configured as "Completed."
 - The new `status_code` property specifies the action status code. Available values are in the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574f4bc7d7dcde0740edb96a"><b>Action Status</b></a> table. This property is only returned when the system is configured to use custom action statuses.
 
 These properties are available in the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}), [Action list (All constituents)]({{ stache.config.portal_endpoints_action_get_list }}), and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
