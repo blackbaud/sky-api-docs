@@ -14,9 +14,18 @@ title: Fundraising (Beta) Changelog
 
 Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-04-19
+## 2018-05-25
 
-### New
+### Announcement: Breaking Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+
+We will implement new operation ID values in our Swagger definition to address an issue where breaking changes in our API management tool alter the operation IDs. The change will also affect the URLs for our endpoint reference.
+
+
+## April
+
+### 2018-04-19
+
+#### New
 
 Added the following endpoints:
 
