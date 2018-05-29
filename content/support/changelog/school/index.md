@@ -14,7 +14,7 @@ title: School (Beta) Changelog
 
 Monitor this page to keep up with the [School API (Beta)]({{ stache.config.portal_endpoints_school }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 25 May 2018
+## 30 May 2018
 
 ### New
 
