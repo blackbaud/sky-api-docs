@@ -506,25 +506,25 @@ portal_endpoints_fundraising_fund_categories_get: <%= stache.config.portal_endpo
 portal_endpoints_gift: <%= stache.config.portal_endpoints %>58bdd5edd7dcde06046081d6/
 
 # Gifts
-portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc449/
-portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44a/
-portal_endpoints_gift_create: <%= stache.config.portal_endpoints_gift %>operations/59f23b2bd7dcde16a4285c15/
-portal_endpoints_gift_subtypes_get_list: <%= stache.config.portal_endpoints_gift %>operations/598a0dd6d7dcde047cb504ce/
+portal_endpoints_gift_get: <%= stache.config.portal_endpoints_gift %>operations/GetGift/
+portal_endpoints_gift_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGifts/
+portal_endpoints_gift_create: <%= stache.config.portal_endpoints_gift %>operations/CreateGift/
+portal_endpoints_gift_subtypes_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGiftSubtypes/
 
 # Gift Custom Fields
-portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44f/
-portal_endpoints_all_gift_custom_field_get_list: <%= stache.config.portal_endpoints_gift %>operations/59b1527ea9db950e3431e62b/
-portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcd
-portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dce
-portal_endpoints_gift_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcb
-portal_endpoints_gift_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_gift %>operations/58ffbb6fd7dcde101c712dcc
+portal_endpoints_gift_custom_fields_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGiftCustomFieldsSingleGift/
+portal_endpoints_all_gift_custom_field_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGiftCustomFieldsAllGifts/
+portal_endpoints_gift_custom_fields_create: <%= stache.config.portal_endpoints_gift %>operations/CreateGiftCustomField
+portal_endpoints_gift_custom_fields_edit: <%= stache.config.portal_endpoints_gift %>operations/EditGiftCustomField
+portal_endpoints_gift_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGiftCustomFieldCategories
+portal_endpoints_gift_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGiftCustomFieldCategoryValues
 
 # Gift Attachments
-portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44b/
-portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44c/
-portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44e/
-portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/58bdd5efd7dcde0f547bc44d/
-portal_endpoints_gift_attachment_tags_get: <%= stache.config.portal_endpoints_gift %>operations/5a6f1feca9db951348db41e3/
+portal_endpoints_gift_attachment_get_list: <%= stache.config.portal_endpoints_gift %>operations/ListGiftAttachmentListSingleGift/
+portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift %>operations/CreateGiftAttachment/
+portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/EditGiftAttachment/
+portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/DeleteGiftAttachment/
+portal_endpoints_gift_attachment_tags_get: <%= stache.config.portal_endpoints_gift %>operations/ListAttachmentTags/
 
 # =============================================
 #       Opportunity API ENDPOINTS
