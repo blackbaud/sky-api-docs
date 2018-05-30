@@ -341,7 +341,7 @@
   }
 
   function reorderEntities(entities, whiteList) {
-    if (whiteList) {
+    if (whiteList && whiteList > 0) {
       var newList = [];
       whiteList.forEach(function(entityName) {
         newList.push(entities.find(function(entity) {
