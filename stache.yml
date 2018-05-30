@@ -214,6 +214,10 @@ portal_endpoints_constituent_get_list: <%= stache.config.portal_endpoints_consti
 portal_endpoints_constituent_update: <%= stache.config.portal_endpoints_constituent %>operations/EditConstituent
 portal_endpoints_constituent_search: <%= stache.config.portal_endpoints_constituent %>operations/SearchConstituent
 portal_endpoints_constituent_profilepic_get: <%= stache.config.portal_endpoints_constituent %>operations/GetConstituentProfilePicture/
+portal_endpoints_constituent_titles_get_list:  <%= stache.config.portal_endpoints_constituent %>operations/ListTitles/
+portal_endpoints_constituent_suffixes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListSuffixes/
+portal_endpoints_constituent_maritalstatustypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListMaritalStatuses/
+
 
 # Constituent Actions
 portal_endpoints_constituent_action_get: <%= stache.config.portal_endpoints_constituent %>operations/GetAction/
@@ -336,66 +340,54 @@ portal_endpoints_constituent_phone_delete: <%= stache.config.portal_endpoints_co
 portal_endpoints_constituent_phonetypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListPhoneTypes/
 
 # Constituent Relationship
-portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2c/
-portal_endpoints_constituent_relationship_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/5a217434d7dcde0864d8a944/
-portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61e/
-portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/598a0dd7d7dcde047cb504d0/
-portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c61f/
-portal_endpoints_constituent_organization_contact_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/58ff9b68a9db95103873c620/
+portal_endpoints_constituent_relationship_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentRelationshipsSingleConstituent/
+portal_endpoints_constituent_relationship_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentRelationshipsAllConstituents/
+portal_endpoints_constituent_relationship_create: <%= stache.config.portal_endpoints_constituent %>operations/CreateConstituentRelationship/
+portal_endpoints_constituent_relationship_edit: <%= stache.config.portal_endpoints_constituent %>operations/EditConstituentRelationship/
+portal_endpoints_constituent_relationship_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListRelationshipTypes/
+portal_endpoints_constituent_organization_contact_type_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListOrganizationContactTypes/
 
 # Constituent Gifts Lifetime Giving
-portal_endpoints_constituent_lifetimegiving_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f1a/
-portal_endpoints_constituent_firstgift_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f16/
-portal_endpoints_constituent_latestgift_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f19/
-portal_endpoints_constituent_greatestgift_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f18/
+portal_endpoints_constituent_lifetimegiving_get: <%= stache.config.portal_endpoints_constituent %>operations/GetConstituentGivingSummaryLifetime/
+portal_endpoints_constituent_firstgift_get: <%= stache.config.portal_endpoints_constituent %>operations/GetConstituentGiftFirst/
+portal_endpoints_constituent_latestgift_get: <%= stache.config.portal_endpoints_constituent %>operations/GetConstituentGiftLatest/
+portal_endpoints_constituent_greatestgift_get: <%= stache.config.portal_endpoints_constituent %>operations/GetConstituentGiftGreatest/
 
 # Constituent Custom Field
-portal_endpoints_constituent_customfield_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0e/
-portal_endpoints_all_constituent_custom_field_get_list: <%= stache.config.portal_endpoints_constituent %>operations/582a40e2d7dcde0bdc6e6e4a/
-portal_endpoints_constituent_customfield_create: <%= stache.config.portal_endpoints_constituent %>operations/5792743ba9db950cc00caa91/
-portal_endpoints_constituent_customfield_update: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f10/
-portal_endpoints_constituent_customfield_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f11/
-portal_endpoints_constituent_customfield_value_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f0f/
+portal_endpoints_constituent_customfield_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentCustomFieldsSingleConstituent/
+portal_endpoints_all_constituent_custom_field_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentCustomFieldsAllConstituents/
+portal_endpoints_constituent_customfield_create: <%= stache.config.portal_endpoints_constituent %>operations/CreateConstituentCustomField/
+portal_endpoints_constituent_customfield_update: <%= stache.config.portal_endpoints_constituent %>operations/EditConstituentCustomField/
+portal_endpoints_constituent_customfield_delete: <%= stache.config.portal_endpoints_constituent %>operations/DeleteConstituentCustomField/
+portal_endpoints_constituent_customfield_value_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentCustomFieldCategoryValues/
+portal_endpoints_customfieldcatagories_constituent_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentCustomFieldCategories/
+portal_endpoints_customfieldcategories_constituent_details_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentCustomFieldCategoryDetails/
 
 # Constituent Ratings
-portal_endpoints_constituent_ratings_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f29/
-portal_endpoints_constituent_ratings_create: <%= stache.config.portal_endpoints_constituent %>operations/57d02d5ca9db950f507ab048/
-portal_endpoints_constituent_ratings_edit: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2a/
-portal_endpoints_constituent_ratings_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f2b/
-portal_endpoints_constituent_ratings_sources_get: <%= stache.config.portal_endpoints_constituent %>operations/57d97f1fd7dcde099c1c7e2c/
-portal_endpoints_constituent_ratings_categories_get: <%= stache.config.portal_endpoints_constituent %>operations/57d97f1fd7dcde099c1c7e2b/
-portal_endpoints_constituent_ratings_category_values_get: <%= stache.config.portal_endpoints_constituent %>operations/584f0e96a9db950f30fd9b44/
-
-# Custom Field Catagories - Constituent
-portal_endpoints_customfieldcatagories_constituent_get_list: <%= stache.config.portal_endpoints_constituent %>operations/577e6f83a9db950becc6199e/
-portal_endpoints_customfieldcategories_constituent_details_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5abce177d7dcde1390f9f8a6/
-
-# Types - Titles
-portal_endpoints_constituent_titles_get_list:  <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf2/
-
-# Types - Suffixes
-portal_endpoints_constituent_suffixes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf1/
-
-# Types - Marital Statuses
-portal_endpoints_constituent_maritalstatustypes_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5776b79aa9db9508f8609bf0/
+portal_endpoints_constituent_ratings_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentRatingsSingleConstituent/
+portal_endpoints_constituent_ratings_create: <%= stache.config.portal_endpoints_constituent %>operations/CreateConstituentRating/
+portal_endpoints_constituent_ratings_edit: <%= stache.config.portal_endpoints_constituent %>operations/EditConstituentRating/
+portal_endpoints_constituent_ratings_delete: <%= stache.config.portal_endpoints_constituent %>operations/DeleteConstituentRating/
+portal_endpoints_constituent_ratings_sources_get: <%= stache.config.portal_endpoints_constituent %>operations/ListRatingSources/
+portal_endpoints_constituent_ratings_categories_get: <%= stache.config.portal_endpoints_constituent %>operations/ListRatingCategories/
+portal_endpoints_constituent_ratings_category_values_get: <%= stache.config.portal_endpoints_constituent %>operations/ListRatingCategoryValues/
 
 # Currency Configurations
-portal_endpoints_currency_configuration_get: <%= stache.config.portal_endpoints_constituent %>operations/57bb5b29a9db951840d1d207/
+portal_endpoints_currency_configuration_get: <%= stache.config.portal_endpoints_constituent %>operations/GetCurrencyConfiguration/
 
 # Constituent Communication Preferences
-portal_endpoints_constituent_communication_preferences_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f06/
-portal_endpoints_constituent_communication_preferences_create: <%= stache.config.portal_endpoints_constituent %>operations/57ac8b82d7dcde1010c0647c/
-portal_endpoints_constituent_communication_preferences_edit: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f07
-portal_endpoints_constituent_communication_preferences_delete: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f08/
-portal_endpoints_constituent_communication_preferences_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57ac8b82d7dcde1010c0647b/
+portal_endpoints_constituent_communication_preferences_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentCommunicationPreferencesSingleConstituent/
+portal_endpoints_constituent_communication_preferences_create: <%= stache.config.portal_endpoints_constituent %>operations/CreateConstituentCommunicationPreference/
+portal_endpoints_constituent_communication_preferences_edit: <%= stache.config.portal_endpoints_constituent %>operations/EditConstituentCommunicationPreference
+portal_endpoints_constituent_communication_preferences_delete: <%= stache.config.portal_endpoints_constituent %>operations/DeleteConstituentCommunicationPreference/
+portal_endpoints_constituent_communication_preferences_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListCommunicationPreferences/
 
 # Fundraiser
-portal_endpoints_fundraiser_get_list: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f17/
-portal_endpoints_fundraiserassignment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/5ad0f22ad7dcde1210d729ff/
-portal_endpoints_constituent_fundraiser_types_get_list: <%= stache.config.portal_endpoints_constituent %>operations/TBD/
+portal_endpoints_fundraiser_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentFundraisersSingleConstituent/
+portal_endpoints_fundraiserassignment_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentFundraiserAssignmentsSingleConstituent/
 
 # Prospect Status
-portal_endpoints_prospect_status_get: <%= stache.config.portal_endpoints_constituent %>operations/57f2a40cd7dcde099c1c7f28/
+portal_endpoints_prospect_status_get: <%= stache.config.portal_endpoints_constituent %>operations/GetConstituentProspectStatus/
 
 # =============================================
 #       Fundraising API ENDPOINTS
