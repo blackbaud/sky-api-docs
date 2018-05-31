@@ -534,27 +534,27 @@ portal_endpoints_gift_attachment_tags_get: <%= stache.config.portal_endpoints_gi
 portal_endpoints_opportunity: <%= stache.config.portal_endpoints %>58e3b2597c1af25c58b9c4e3/
 
 # Opportunities
-portal_endpoints_opportunity_get: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a9/
-portal_endpoints_opportunity_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a7/
-portal_endpoints_opportunity_create: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a8/
-portal_endpoints_opportunity_edit: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8aa/
-portal_endpoints_opportunity_status_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8ab/
-portal_endpoints_opportunity_purpose_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8ac/
+portal_endpoints_opportunity_get: <%= stache.config.portal_endpoints_opportunity %>operations/GetOpportunity/
+portal_endpoints_opportunity_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunities/
+portal_endpoints_opportunity_create: <%= stache.config.portal_endpoints_opportunity %>operations/CreateOpportunity/
+portal_endpoints_opportunity_edit: <%= stache.config.portal_endpoints_opportunity %>operations/EditOpportunity/
+portal_endpoints_opportunity_status_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunityStatuses/
+portal_endpoints_opportunity_purpose_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunityPurposes/
 
 # Custom Fields
-portal_endpoints_opportunity_custom_field_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a1/
-portal_endpoints_opportunity_custom_field_create: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a4/
-portal_endpoints_opportunity_custom_field_edit: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a6/
-portal_endpoints_opportunity_custom_field_delete: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a5/
-portal_endpoints_opportunity_custom_field_categories_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a2/
-portal_endpoints_opportunity_custom_field_category_values_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8a3/
+portal_endpoints_opportunity_custom_field_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunityCustomFieldsSingleOpportunity/
+portal_endpoints_opportunity_custom_field_create: <%= stache.config.portal_endpoints_opportunity %>operations/CreateOpportunityCustomField/
+portal_endpoints_opportunity_custom_field_edit: <%= stache.config.portal_endpoints_opportunity %>operations/EditOpportunityCustomField/
+portal_endpoints_opportunity_custom_field_delete: <%= stache.config.portal_endpoints_opportunity %>operations/DeleteOpportunityCustomField/
+portal_endpoints_opportunity_custom_field_categories_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunityCustomFieldCategories/
+portal_endpoints_opportunity_custom_field_category_values_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunityCustomFieldCategoryValues/
 
 # Attachments
-portal_endpoints_opportunity_attachment_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8ad/
-portal_endpoints_opportunity_attachment_create: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8ae/
-portal_endpoints_opportunity_attachment_edit: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8b0/
-portal_endpoints_opportunity_attachment_delete: <%= stache.config.portal_endpoints_opportunity %>operations/58e3b27ba9db950fa048c8af/
-portal_endpoints_opportunity_attachment_tags_get: <%= stache.config.portal_endpoints_opportunity %>operations/5a68e77fa9db951348db40ee/
+portal_endpoints_opportunity_attachment_get_list: <%= stache.config.portal_endpoints_opportunity %>operations/ListOpportunityAttachmentsSingleOpportunity/
+portal_endpoints_opportunity_attachment_create: <%= stache.config.portal_endpoints_opportunity %>operations/CreateOpportunityAttachment/
+portal_endpoints_opportunity_attachment_edit: <%= stache.config.portal_endpoints_opportunity %>operations/EditOpportunityAttachment/
+portal_endpoints_opportunity_attachment_delete: <%= stache.config.portal_endpoints_opportunity %>operations/DeleteOpportunityAttachment/
+portal_endpoints_opportunity_attachment_tags_get: <%= stache.config.portal_endpoints_opportunity %>operations/ListAttachmentTags/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
