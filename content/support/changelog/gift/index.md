@@ -14,11 +14,40 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-05-31
+## 2018-06-01
 
 ### Announcement: Breaking Changes for [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Gift API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
+
+
+#### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+       <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_gift_document_create }}">
+        <td>Document (Create)</td>
+        <td>POST</td>
+        <td>/documents</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+#### Changed
+
+We added the `id` property to the [gift split]({{ stache.config.gift_entity_reference }}#GiftSplit) entity.
 
 ## 2018-05-25
 
