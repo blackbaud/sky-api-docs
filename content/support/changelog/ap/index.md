@@ -14,9 +14,62 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-04-20
+## 2018-06-01
 
-### Changed
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_invoice_edit_patch }}">
+				<td>Invoice edit</td>
+				<td>PATCH</td>
+				<td>/invoices/{invoice_id}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+With the new endpoint, note the following:
+
+- You can edit the following values of an existing invoice:
+            - `vendor_id`
+            - `vendor_name`
+            - `invoice_number`
+            - `invoice_date`
+            - `due_date`
+            - `balance`
+            - `description`
+            - `status`
+            - `invoice_payment_details`
+            - `post_status`
+            - `post_date`
+            - `distribution_discounts`
+            - `distributions`
+            - `custom_fields`
+- Posted and paid invoices cannot be edited.
+- An invoice cannot be updated to `Posted`, `Paid`, or `Partially Paid`.
+- Omitting a field from a PATCH request does not edit that field with a default value. In the example below, only `description` is edited, but the other fields are not.
+
+<pre class="language-javascript"><code>{
+        “description”: "edited description"
+}
+</code></pre>
+
+## April 2018
+
+### 2018-04-20
+
+#### Changed
 
 We made several changes to the  [Invoice attachment]({{ stache.config.portal_endpoints_invoice_attachment_post }}) endpoint:
 - The endpoint now supports Physical attachments (previously only supported Link attachments)
