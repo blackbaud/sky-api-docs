@@ -555,6 +555,7 @@ portal_endpoints_opportunity_attachment_create: <%= stache.config.portal_endpoin
 portal_endpoints_opportunity_attachment_edit: <%= stache.config.portal_endpoints_opportunity %>operations/EditOpportunityAttachment/
 portal_endpoints_opportunity_attachment_delete: <%= stache.config.portal_endpoints_opportunity %>operations/DeleteOpportunityAttachment/
 portal_endpoints_opportunity_attachment_tags_get: <%= stache.config.portal_endpoints_opportunity %>operations/ListAttachmentTags/
+portal_endpoints_opportunity_document_create: <%= stache.config.portal_endpoints_opportunity %>operations/CreateDocument/
 
 # =============================================
 # 			General Ledger API ENDPOINTS
