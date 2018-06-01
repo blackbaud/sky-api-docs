@@ -143,7 +143,7 @@ showInNav: false
   <div class="col-md-12" style="text-align: left;">
 <p>Once you’ve gotten started with the Payments API, you can use available resources to build an application using Payments API.</p>
 <ol><li>Learn how to <strong><a href="https://apidocs.sky.blackbaud.com/docs/createapp/">create an application</a></strong> with SKY API.<br />
-<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> During this Closed Beta phase, you will not be able to complete Step 3 of this tutorial on your own for apps using Payments API. Instead, <strong><a href="mailto:skyapi@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20join%20Payments%20API%20Preview%20group">contact us</a></strong> with your application ID so we can activate it on your behalf.</bb-alert></p></li>
+<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> During this Closed Beta phase, you will not be able to complete Step 3 of this tutorial on your own for apps using Payments API. Instead, <strong><a href="mailto:skyapi@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20activate%20Payments%20API%20application">contact us</a></strong> with your application ID so we can activate it on your behalf.</bb-alert></p></li>
 <li>Learn how <strong><a href="https://apidocs.sky.blackbaud.com/docs/authorization/">Authorization</a></strong> works, including the associated <strong><a href="https://apidocs.sky.blackbaud.com/docs/code/auth-code-flow/">tutorials</a></strong> and <strong><a href="https://apidocs.sky.blackbaud.com/docs/code/">code samples</a></strong>.</li>
   <li>Subscribe to <strong><a href="https://skyapi.statuspage.io/">SKY API status</a></strong> updates.</li>
 </ol>
