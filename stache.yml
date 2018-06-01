@@ -763,6 +763,9 @@ portal_endpoints_AP: <%= stache.config.portal_endpoints %>57a342f1d7dcde1c28a749
 # Invoice List
 portal_endpoints_invoice_list: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d8/
 
+# Invoice Edit Patch
+portal_endpoints_invoice_edit_patch: <%= stache.config.portal_endpoints_AP %>operations/5b105679d7dcde09dcb2a978/
+
 # Vendor List
 portal_endpoints_vendor_list: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063db/
 
