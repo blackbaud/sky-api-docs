@@ -41,7 +41,7 @@ Added the following endpoint:
 
 With the new endpoint, note the following:
 
-- You can edit the following values of an existing invoice:
+- You can edit the following properties of an existing invoice:
             - `vendor_id`
             - `vendor_name`
             - `invoice_number`
@@ -56,10 +56,9 @@ With the new endpoint, note the following:
             - `distribution_discounts`
             - `distributions`
             - `custom_fields`
-- Posted and paid invoices cannot be edited.
-- An invoice cannot be updated to `Posted`, `Paid`, or `Partially Paid`.
-- Omitting a field from a PATCH request does not edit that field with a default value. In the example below, only `description` is edited, but the other fields are not.
-
+- You cannot edit `Posted` or `Paid invoices`.
+- You cannot update an invoice to change the status to `Posted`, `Paid`, or `Partially Paid`.
+- If you omit fields from PATCH requests, the endpoint does not edit them with default values. For example, the following code sample only edits the `description` property.
 <pre class="language-javascript"><code>{
         “description”: "edited description"
 }
