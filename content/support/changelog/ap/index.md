@@ -47,7 +47,6 @@ With the new endpoint, note the following:
             - `invoice_number`
             - `invoice_date`
             - `due_date`
-            - `balance`
             - `description`
             - `status`
             - `invoice_payment_details`
