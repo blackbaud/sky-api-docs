@@ -422,81 +422,82 @@ portal_endpoints_prospect_status_get: <%= stache.config.portal_endpoints_constit
 portal_endpoints_fundraising: <%= stache.config.portal_endpoints %>58bdd6c8d7dcde06046081d7/
 
 # Appeals
-portal_endpoints_appeal_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc453/
-portal_endpoints_appeals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e2/
+portal_endpoints_appeal_get: <%= stache.config.portal_endpoints_fundraising %>operations/GetAppeal/
+portal_endpoints_appeals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListAppeals/
 
 # Appeal Custom Fields
-portal_endpoints_appeal_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc454/
-portal_endpoints_appeal_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc455/
-portal_endpoints_appeal_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc457/
-portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc456/
-portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc458/
-portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc459/
+portal_endpoints_appeal_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListAppealCustomFieldsSingleAppeal/
+portal_endpoints_appeal_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateAppealCustomField/
+portal_endpoints_appeal_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditAppealCustomField/
+portal_endpoints_appeal_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteAppealCustomField/
+portal_endpoints_appeal_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListAppealCustomFieldCategories/
+portal_endpoints_appeal_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListAppealCustomFieldCategoryValues/
 
 # Appeal Attachments
-portal_endpoints_appeal_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e00f/
-portal_endpoints_appeal_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e010/
-portal_endpoints_appeal_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e012/
-portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e011/
+portal_endpoints_appeal_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListAppealAttachmentsSingleAppeal/
+portal_endpoints_appeal_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateAppealAttachment/
+portal_endpoints_appeal_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditAppealAttachment/
+portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteAppealAttachment/
+portal_endpoints_fundraising_document_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateDocument/
 
 # Assignments
-portal_endpoints_fundraising_assignments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/5ad64755a9db9517f8d9767d/
-portal_endpoints_fundraising_assignments_create: <%= stache.config.portal_endpoints_fundraising %>operations/5ad64755a9db9517f8d9767f/
-portal_endpoints_fundraising_assignments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/5ad64755a9db9517f8d97681/
-portal_endpoints_fundraising_assignments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/5ad64755a9db9517f8d97680/
-portal_endpoints_fundraising_types_get: <%= stache.config.portal_endpoints_fundraising %>operations/5ad64755a9db9517f8d9767e/
+portal_endpoints_fundraising_assignments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundraiserAssignmentsSingleFundraiser/
+portal_endpoints_fundraising_assignments_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateFundraiserAssignment/
+portal_endpoints_fundraising_assignments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditFundraiserAssignment/
+portal_endpoints_fundraising_assignments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteFundraiserAssignment/
+portal_endpoints_fundraising_types_get: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundraiserTypes/
 
 # Attachment Tags
-portal_endpoints_fundraising_attachment_tags_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a6f2005d7dcde0d446fe1c0/
+portal_endpoints_fundraising_attachment_tags_get: <%= stache.config.portal_endpoints_fundraising %>operations/ListAttachmentTags/
 
 # Campaigns
-portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45a/
-portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e3/
+portal_endpoints_campaign_get: <%= stache.config.portal_endpoints_fundraising %>operations/GetCampaign/
+portal_endpoints_campaigns_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListCampaigns/
 
 # Campaign Custom Fields
-portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45b/
-portal_endpoints_campaign_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45c/
-portal_endpoints_campaign_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45e/
-portal_endpoints_campaign_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45d/
-portal_endpoints_campaign_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc45f/
-portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc460/
+portal_endpoints_campaign_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListCampaignCustomFieldsSingleCampaign/
+portal_endpoints_campaign_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateCampaignCustomField/
+portal_endpoints_campaign_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditCampaignCustomField/
+portal_endpoints_campaign_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteCampaignCustomField/
+portal_endpoints_campaign_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListCampaignCustomFieldCategories/
+portal_endpoints_campaign_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListCampaignCustomFieldCategoryValues/
 
 # Campaign Attachments
-portal_endpoints_campaign_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e013/
-portal_endpoints_campaign_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e014/
-portal_endpoints_campaign_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e016/
-portal_endpoints_campaign_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e015/
+portal_endpoints_campaign_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListCampaignAttachmentsSingleCampaign/
+portal_endpoints_campaign_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateCampaignAttachment/
+portal_endpoints_campaign_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditCampaignAttachment/
+portal_endpoints_campaign_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteCampaignAttachment/
 
 # Funds
-portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc461/
-portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58e665a3d7dcde151856b9e4/
+portal_endpoints_fund_get: <%= stache.config.portal_endpoints_fundraising %>operations/GetFund/
+portal_endpoints_funds_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFunds/
 
 # Fund Custom Fields
-portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc462/
-portal_endpoints_fund_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc463/
-portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc465/
-portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc464/
-portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc466/
-portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/58bdd6c9d7dcde0f547bc467/
+portal_endpoints_fund_custom_fields_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundCustomFieldsSingleFund/
+portal_endpoints_fund_custom_fields_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateFundCustomField/
+portal_endpoints_fund_custom_fields_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditFundCustomField/
+portal_endpoints_fund_custom_fields_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteFundCustomField/
+portal_endpoints_fund_custom_fields_categories_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundCustomFieldCategories/
+portal_endpoints_fund_custom_fields_category_values_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundCustomFieldCategoryValues/
 
 # Fund Attachments
-portal_endpoints_fund_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e017/
-portal_endpoints_fund_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e018/
-portal_endpoints_fund_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e01a/
-portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/59a0a953d7dcde05b0b2e019/
+portal_endpoints_fund_attachments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundAttachmentsSingleFund/
+portal_endpoints_fund_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateFundAttachment/
+portal_endpoints_fund_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditFundAttachment/
+portal_endpoints_fund_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteFundAttachment/
 
 # Packages
-portal_endpoints_package_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a341d17d7dcde09d06dbaff/
+portal_endpoints_package_get: <%= stache.config.portal_endpoints_fundraising %>operations/GetPackage/
 
 # Goal Categories
-portal_endpoints_fundraising_goals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a481/
-portal_endpoints_fundraising_goals_create: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47f/
-portal_endpoints_fundraising_goals_edit: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a483/
-portal_endpoints_fundraising_goals_delete: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a482/
-portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a480/
-portal_endpoints_fundraising_appeal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47c/
-portal_endpoints_fundraising_campaign_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47d/
-portal_endpoints_fundraising_fund_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/5a95bd03a9db95028cc3a47e/
+portal_endpoints_fundraising_goals_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundraiserGoalsSingleFundraiser/
+portal_endpoints_fundraising_goals_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateFundraiserGoal/
+portal_endpoints_fundraising_goals_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditFundraiserGoal/
+portal_endpoints_fundraising_goals_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteFundraiserGoal/
+portal_endpoints_goal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundraiserGoalCategories/
+portal_endpoints_fundraising_appeal_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/ListAppealCategories/
+portal_endpoints_fundraising_campaign_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/ListCampaignCategories/
+portal_endpoints_fundraising_fund_categories_get: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundCategories/
 
 # =============================================
 #       Gift API ENDPOINTS
