@@ -14,6 +14,12 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-06-01
+
+### Announcement: Breaking Changes for [Constituent]({{ stache.config.portal_endpoints_constituent }}) API
+
+We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Constituent API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
+
 ## 2018-05-25
 
 ### New
