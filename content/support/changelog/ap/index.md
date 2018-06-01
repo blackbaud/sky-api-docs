@@ -56,7 +56,7 @@ With the new endpoint, note the following:
             - `distribution_discounts`
             - `distributions`
             - `custom_fields`
-- You cannot edit `Posted` or `Paid invoices`.
+- You cannot edit `Posted` or `Paid` invoices.
 - You cannot update an invoice to change the status to `Posted`, `Paid`, or `Partially Paid`.
 - If you omit fields from PATCH requests, the endpoint does not edit them with default values. For example, the following code sample only edits the `description` property.
 <pre class="language-javascript"><code>{
