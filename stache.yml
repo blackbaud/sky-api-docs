@@ -438,6 +438,7 @@ portal_endpoints_appeal_attachments_get_list: <%= stache.config.portal_endpoints
 portal_endpoints_appeal_attachments_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateAppealAttachment/
 portal_endpoints_appeal_attachments_edit: <%= stache.config.portal_endpoints_fundraising %>operations/EditAppealAttachment/
 portal_endpoints_appeal_attachments_delete: <%= stache.config.portal_endpoints_fundraising %>operations/DeleteAppealAttachment/
+portal_endpoints_fundraising_document_create: <%= stache.config.portal_endpoints_fundraising %>operations/CreateDocument/
 
 # Assignments
 portal_endpoints_fundraising_assignments_get_list: <%= stache.config.portal_endpoints_fundraising %>operations/ListFundraiserAssignmentsSingleFundraiser/
