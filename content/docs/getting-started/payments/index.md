@@ -30,7 +30,7 @@ showInNav: false
 <li class="slide">
 <h2 class="tutorial">Step 2 &#8211; Join the Payments API Preview group</h2>
 <p style="text-align: left;">To view and use the Payments API during Closed Beta, you must be a member of the Payments API Preview group and signed in with your Blackbaud developer account. Otherwise, you will see an error page.</p>
-<p style="text-align: left;"><strong><a href="mailto:skyapi@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20join%20Payments%20API%20Preview%20group">Contact us</a></strong> to request joining this group. We will reply to confirm when you’ve been added, so you can continue with next steps.</p></li>
+<p style="text-align: left;"><strong><a href="mailto:skyapi@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20join%20Payments%20API%20Preview%20group">Contact us</a></strong> to request joining this group. Please include your name and your organization's name. We will reply to confirm when you’ve been added, so you can continue with next steps.</p></li>
 
 <li class="slide">
 <h2 class="tutorial">Step 3 &#8211; Get Payments API subscription keys </h2>
