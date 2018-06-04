@@ -152,10 +152,8 @@
   function OperationEntityCtrl($window, $http, $sce, bbWait, $rootScope) {
     var self = this;
     this.$onInit = onInit;
-    console.log("inside operation entity ctrl");
 
     function onInit() {
-      console.log("inside onInit");
       bbWait.beginPageWait({});
       $http.get(self.swaggerUrl)
       .then(handleSuccess, handleError)
@@ -163,7 +161,6 @@
     }
 
     function handleSuccess(response) {
-      console.log("inside handleSuccess");
       handleSwaggerResponseData(response.data);
     }
 
@@ -172,12 +169,10 @@
       var whiteList = getEntityNamesFromOperationId(swagger, self.operationId);
       var blackList = [];
       self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce, self.baseLinkUrl);
-      debugger;
     }
 
 
     function handleError(response) {
-      console.log("inside handleError");
       self.showErrorMessage = true;
     }
 
@@ -341,7 +336,7 @@
   }
 
   function reorderEntities(entities, whiteList) {
-    if (whiteList && whiteList > 0) {
+    if (whiteList && whiteList.length > 0) {
       var newList = [];
       whiteList.forEach(function(entityName) {
         newList.push(entities.find(function(entity) {
