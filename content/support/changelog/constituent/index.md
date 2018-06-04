@@ -16,7 +16,7 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 ## 2018-06-01
 
-### Announcement: Breaking Changes for [Constituent]({{ stache.config.portal_endpoints_constituent }}) API
+### Announcement: Changes for [Constituent]({{ stache.config.portal_endpoints_constituent }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Constituent API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
@@ -30,7 +30,7 @@ We added the following properties to the [action]({{ stache.config.constituent_e
 
 These properties are available in the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}), [Action list (All constituents)]({{ stache.config.portal_endpoints_action_get_list }}), and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
 
-### Announcement: Breaking Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 
