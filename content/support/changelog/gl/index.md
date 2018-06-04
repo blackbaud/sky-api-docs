@@ -14,9 +14,19 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-05-24
+## 2018-06-04
 
-### Changed
+### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
+
+We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
+
+Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
+
+## May
+
+### 2018-05-24
+
+#### Changed
 We made changes to the following endpoints:
 
 - The [Transaction distribution (List)]({{ stache.config.portal_endpoints_transaction_distribution_search }}) endpoint now returns proper `account_class` information.
@@ -104,7 +114,7 @@ Added the following endpoints:
 #### Changed
 For the  [Period summary process (Start)]({{ stache.config.portal_endpoints_period_summary_process_start }}) endpoint, a `fiscal_period_id` was previously required. Now, when no object is sent or when a `fiscal_period_id` with value 0 is sent, all open and unoptimized fiscal periods are summarized.
 
-## January 2018
+## January
 
 ### 2018-01-17
 
@@ -112,7 +122,7 @@ For the  [Period summary process (Start)]({{ stache.config.portal_endpoints_peri
 
 For the  [Journal entry batch (Post)]({{ stache.config.portal_endpoints_journal_entry_batch_post }}) endpoint, `transaction_code_value` can now include `“”` empty string for `value`.
 
-## November 2017
+## 2017
 
 ### 2017-11-20
 
@@ -147,8 +157,6 @@ Added the following endpoints:
 		</tbody>
 	</table>
 </div>
-
-## August 2017
 
 ### 2017-08-14
 
@@ -223,8 +231,6 @@ Added the following endpoints:
 	</table>
 </div>
 
-## June 2017
-
 ### 2017-06-15
 
 #### Changed
@@ -234,8 +240,6 @@ We made several changes to the [Get Account (Search)]({{ stache.config.portal_en
 - The following properties are now returned: `date_added`, `date_modified`, `added_by`, and `modified_by`.
 
 - The `last_modified` filter is now included. This filter causes the response to only include results where `date_modified` is greater than or equal to the `last_modified` filter value.
-
-## May 2017
 
 ### 2017-05-05
 
@@ -289,8 +293,6 @@ We increased the maximum record limit from 500 to 5000 on the following Get endp
 		</tbody>
 	</table>
 </div>
-
-## January 2017
 
 ### 2017-01-18
 
