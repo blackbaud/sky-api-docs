@@ -176,7 +176,7 @@
     }
 
     function getEntityNamesFromOperationId(swagger, operationId){
-      var entityNames = [], summaries = [];
+      var entityNames = [];
 
       Object.keys(swagger.paths).forEach(function(pathName) {
         var path = swagger.paths[pathName];
@@ -186,7 +186,6 @@
           if (method.operationId === operationId){
             return true;
           }
-          summaries.push(method.summary);
         })
         .forEach(function(methodName) {
           var method = path[methodName];
@@ -205,14 +204,18 @@
               parameterRefObject = swagger.definitions[parameterRefName];
               if (parameterRefObject) { 
                 if (!isArray(parameterRefObject)){
-                  entityNames.push(parameterRefName)
-                  getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+                  if (!entityNames.contains(parameterRefName)){
+                    entityNames.push(parameterRefName);
+                    getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+                  }
                 } else {
                   if (parameterRefObject.items && parameterRefObject.items.$ref) {
                     parameterRefName = getRefNameFromRefAddress(parameterRefObject.items.$ref)
                     parameterRefObject = swagger.definitions[parameterRefName];
-                    entityNames.push(parameterRefName)
-                    getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+                    if (!entityNames.contains(parameterRefName)){
+                      entityNames.push(parameterRefName)
+                      getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+                    }
                   }
                 }
               }
@@ -222,6 +225,7 @@
       });
       return entityNames;
     }
+
 
     function getEntityNamesOfChildProperties(entity, swagger, entityNames){
       if (entity.properties) {
@@ -238,8 +242,10 @@
           if (refName){
             refObject = swagger.definitions[refName];
             if (refObject){
-              entityNames.push(refName);
-              getEntityNamesOfChildProperties(refObject, swagger, entityNames);
+              if (!entityNames.contains(refName)){
+                entityNames.push(refName);
+                getEntityNamesOfChildProperties(refObject, swagger, entityNames);
+              }
             }
           }
         });
