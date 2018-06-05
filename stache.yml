@@ -525,6 +525,7 @@ portal_endpoints_gift_attachment_create: <%= stache.config.portal_endpoints_gift
 portal_endpoints_gift_attachment_edit: <%= stache.config.portal_endpoints_gift %>operations/EditGiftAttachment/
 portal_endpoints_gift_attachment_delete: <%= stache.config.portal_endpoints_gift %>operations/DeleteGiftAttachment/
 portal_endpoints_gift_attachment_tags_get: <%= stache.config.portal_endpoints_gift %>operations/ListAttachmentTags/
+portal_endpoints_gift_document_create: <%= stache.config.portal_endpoints_gift %>operations/CreateDocument/
 
 # =============================================
 #       Opportunity API ENDPOINTS
