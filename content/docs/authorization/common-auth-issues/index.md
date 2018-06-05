@@ -148,7 +148,7 @@ You may also see this when you [refresh an access token](/docs/authorization/aut
 
 When making calls to the SKY API, be sure to provide either your primary or secondary subscription key with the request.
 
-The subscription key represents a subscription to a specific {{ stache.config.api_type_name }} product and is associated with your developer account. To get a subscription key, you'll need to sign up for a Blackbaud developer account and get an approved subscription. Once you have an approved subscription, you can view the subscription keys within your <a href="{{ stache.config.portal_profile }}" target= "_blank">profile</a>.  The subscription key value is passed with each request to the {{ stache.config.api_type_name }} via the  `bb-api-subscription-key` request header. See <a href="{{ stache.config.guide_getting_started }}" target="_blank">Getting Started</a> for instructions on how to obtain a subscription key and an example of using the subscription key in a call to the API.
+The subscription key represents a subscription to a specific {{ stache.config.api_type_name }} product and is associated with your developer account. To get a subscription key, you'll need to sign up for a Blackbaud developer account and get an approved subscription. Once you have an approved subscription, you can view the subscription keys within your <a href="{{ stache.config.portal_profile }}" target= "_blank">profile</a>.  The subscription key value is passed with each request to the {{ stache.config.api_type_name }} via the  `Bb-Api-Subscription-Key` request header. See <a href="{{ stache.config.guide_getting_started }}" target="_blank">Getting Started</a> for instructions on how to obtain a subscription key and an example of using the subscription key in a call to the API.
 
 ### missing/invalid authorization header
 
@@ -165,7 +165,7 @@ It's a common mistake to forget to prepend the `access_token` value with `Bearer
 <pre><code class="language-http">GET {{ stache.config.resource_url }}/constituents/280 HTTP/1.1
 Host: {{ stache.config.resource_hostname }}
 Authorization: Bearer eyJ0eXAiOiJKV1...CTtP0CQ
-bb-api-subscription-key: 77f137116...480d633
+Bb-Api-Subscription-Key: 77f137116...480d633
 </code></pre>
 
 #### Expired Token

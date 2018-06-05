@@ -35,7 +35,7 @@ See our <a href="{{ stache.config.support_issues }}">Issues</a> page for any exi
 ### How do I pass security credentials from my application to the {{ stache.config.api_type_name }}?
 
 To call the {{ stache.config.api_type_name }}, your application will need to provide two things:
-1. Your developer subscription key - this key represents Blackbaud's permission for you to call the API, and it should be sent as part of the `bb-api-subscription-key` request header.
+1. Your developer subscription key - this key represents Blackbaud's permission for you to call the API, and it should be sent as part of the `Bb-Api-Subscription-Key` request header.
 
 2. An access token - this represents a Blackbaud customer's permission for you to access their data, and it should be sent as part of the `authorization` request header.  This token is associated with the authenticated user's account and organization, and can only be used to access data to which the user has permission.
 
@@ -89,7 +89,7 @@ See [Authorization]({{ stache.config.guide_web_api_authorization }}).
 
 ### Do you support cross-origin resource sharing to allow you to interact securely with our API from within the browser?
 
-Yes, we've enabled <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> support in the  {{ stache.config.api_type_name }}.  We allow all origins (*), support the <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>PATCH</code>, and <code>DELETE</code> methods, and allow <code>bb-api-subscription-key</code>, <code>authorization</code>, <code>accept</code>, and <code>content-type</code> request headers.
+Yes, we've enabled <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> support in the  {{ stache.config.api_type_name }}.  We allow all origins (*), support the <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>PATCH</code>, and <code>DELETE</code> methods, and allow <code>Bb-Api-Subscription-Key</code>, <code>authorization</code>, <code>accept</code>, and <code>content-type</code> request headers.
 
 ## Tokens
 
@@ -115,7 +115,7 @@ In any case, be sure to store access tokens and refresh tokens securely in your 
 
 ### What is the purpose of the subscription key?
 
-The subscription key is associated with your developer account and must be provided as part of the `bb-api-subscription-key` header when calling the {{ stache.config.api_type_name }}.  It represents our permission for you to call the API, and we also use it to enforce usage limits (see <a href="{{ stache.config.guide_basics }}#rate-limits">Rate limits</a> and <a href="{{ stache.config.guide_basics }}#quotas">Quotas</a>) to ensure that the API performs well for everyone.  We also aggregate API call analytics associated with your subscription to show you how your apps are performing within the <a href="{{ stache.config.portal_analytics }}">Analytics</a> area of the portal.
+The subscription key is associated with your developer account and must be provided as part of the `Bb-Api-Subscription-Key` header when calling the {{ stache.config.api_type_name }}.  It represents our permission for you to call the API, and we also use it to enforce usage limits (see <a href="{{ stache.config.guide_basics }}#rate-limits">Rate limits</a> and <a href="{{ stache.config.guide_basics }}#quotas">Quotas</a>) to ensure that the API performs well for everyone.  We also aggregate API call analytics associated with your subscription to show you how your apps are performing within the <a href="{{ stache.config.portal_analytics }}">Analytics</a> area of the portal.
 
 See <a href="{{ stache.config.guide_basics }}#subscription">Subscription</a>.
 

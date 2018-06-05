@@ -49,7 +49,7 @@ showInNav: false
 <div class="row">
   <div class="col-md-12" style="text-align: left;">
 <h3>About your subscription</h3> 
-<p style="text-align: left;">Your developer profile provides details about your API subscriptions. Each <strong><a href="https://apidocs.sky.blackbaud.com/docs/basics/#!#subscription">subscription</a></strong> contains a <strong>Primary key</strong> and a <strong>Secondary key</strong>. You can use either key as the subscription key value for the <code>bb-api-subscription-key</code> request header in calls to the API.</p>
+<p style="text-align: left;">Your developer profile provides details about your API subscriptions. Each <strong><a href="https://apidocs.sky.blackbaud.com/docs/basics/#!#subscription">subscription</a></strong> contains a <strong>Primary key</strong> and a <strong>Secondary key</strong>. You can use either key as the subscription key value for the <code>Bb-Api-Subscription-Key</code> request header in calls to the API.</p>
 <img src="/assets/img/getting_started_step_2_subscription.png" >
 
 </div></div>
