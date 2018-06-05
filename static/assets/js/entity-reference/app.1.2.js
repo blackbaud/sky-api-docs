@@ -175,7 +175,7 @@
       self.showErrorMessage = true;
     }
 
-    function getEntityNamesFromOperationId(swagger, operationId){
+    function getEntityNamesFromOperationId(swagger, operationId) {
       var entityNames = [];
 
       Object.keys(swagger.paths).forEach(function(pathName) {
@@ -183,7 +183,7 @@
         Object.keys(path)
         .filter(function(methodName) {
           var method = path[methodName];
-          if (method.operationId === operationId){
+          if (method.operationId === operationId) {
             return true;
           }
         })
@@ -199,12 +199,12 @@
             parameterRefName,
             parameterRefObject;
 
-            if (parameter.schema && parameter.schema.$ref){
+            if (parameter.schema && parameter.schema.$ref) {
               parameterRefName = getRefNameFromRefAddress(parameter.schema.$ref);
               parameterRefObject = swagger.definitions[parameterRefName];
               if (parameterRefObject) { 
-                if (!isArray(parameterRefObject)){
-                  if (!entityNames.contains(parameterRefName)){
+                if (!isArray(parameterRefObject)) {
+                  if (!entityNames.contains(parameterRefName)) {
                     entityNames.push(parameterRefName);
                     getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
                   }
@@ -212,7 +212,7 @@
                   if (parameterRefObject.items && parameterRefObject.items.$ref) {
                     parameterRefName = getRefNameFromRefAddress(parameterRefObject.items.$ref)
                     parameterRefObject = swagger.definitions[parameterRefName];
-                    if (!entityNames.contains(parameterRefName)){
+                    if (!entityNames.contains(parameterRefName)) {
                       entityNames.push(parameterRefName)
                       getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
                     }
@@ -226,8 +226,7 @@
       return entityNames;
     }
 
-
-    function getEntityNamesOfChildProperties(entity, swagger, entityNames){
+    function getEntityNamesOfChildProperties(entity, swagger, entityNames) {
       if (entity.properties) {
         Object.keys(entity.properties).forEach(function(propertyName) {
           var property = entity.properties[propertyName],
@@ -239,10 +238,10 @@
           } else if (isArray(property) && property.items.$ref) {
             refName = getRefNameFromRefAddress(property.items.$ref);
           }
-          if (refName){
+          if (refName) {
             refObject = swagger.definitions[refName];
-            if (refObject){
-              if (!entityNames.contains(refName)){
+            if (refObject) {
+              if (!entityNames.contains(refName)) {
                 entityNames.push(refName);
                 getEntityNamesOfChildProperties(refObject, swagger, entityNames);
               }
@@ -361,7 +360,7 @@
     }
   }
 
-  function isArray(property){
+  function isArray(property) {
     return property && property.type && property.type === 'array';
   }
 
