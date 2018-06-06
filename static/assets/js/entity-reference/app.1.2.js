@@ -50,8 +50,7 @@
     controller: 'OperationEntityCtrl as ctrl',
     bindings: {
       swaggerUrl: '@',
-      operationId: '@',
-      baseLinkUrl: '@'
+      operationId: '@'
     }
   });
 
@@ -152,10 +151,8 @@
   function OperationEntityCtrl($window, $http, $sce, bbWait, $rootScope) {
     var self = this;
     this.$onInit = onInit;
-    console.log("inside operation entity ctrl");
 
     function onInit() {
-      console.log("inside onInit");
       bbWait.beginPageWait({});
       $http.get(self.swaggerUrl)
       .then(handleSuccess, handleError)
@@ -163,7 +160,6 @@
     }
 
     function handleSuccess(response) {
-      console.log("inside handleSuccess");
       handleSwaggerResponseData(response.data);
     }
 
@@ -171,28 +167,25 @@
       self.swagger = swagger;
       var whiteList = getEntityNamesFromOperationId(swagger, self.operationId);
       var blackList = [];
-      self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce, self.baseLinkUrl);
-      debugger;
+      self.entities = getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, true, $sce);
     }
 
 
     function handleError(response) {
-      console.log("inside handleError");
       self.showErrorMessage = true;
     }
 
-    function getEntityNamesFromOperationId(swagger, operationId){
-      var entityNames = [], summaries = [];
+    function getEntityNamesFromOperationId(swagger, operationId) {
+      var entityNames = [];
 
       Object.keys(swagger.paths).forEach(function(pathName) {
         var path = swagger.paths[pathName];
         Object.keys(path)
         .filter(function(methodName) {
           var method = path[methodName];
-          if (method.operationId === operationId){
+          if (method.operationId === operationId) {
             return true;
           }
-          summaries.push(method.summary);
         })
         .forEach(function(methodName) {
           var method = path[methodName];
@@ -206,18 +199,24 @@
             parameterRefName,
             parameterRefObject;
 
-            if (parameter.schema && parameter.schema.$ref){
+            if (parameter.schema && parameter.schema.$ref) {
               parameterRefName = getRefNameFromRefAddress(parameter.schema.$ref);
               parameterRefObject = swagger.definitions[parameterRefName];
-              if (!isArray(parameterRefObject)){
-                entityNames.push(parameterRefName)
-                getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
-              } else {
-                if (parameterRefObject.items && parameterRefObject.items.$ref) {
-                  parameterRefName = getRefNameFromRefAddress(parameterRefObject.items.$ref)
-                  parameterRefObject = swagger.definitions[parameterRefName];
-                  entityNames.push(parameterRefName)
-                  getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+              if (parameterRefObject) { 
+                if (!isArray(parameterRefObject)) {
+                  if (!entityNames.contains(parameterRefName)) {
+                    entityNames.push(parameterRefName);
+                    getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+                  }
+                } else {
+                  if (parameterRefObject.items && parameterRefObject.items.$ref) {
+                    parameterRefName = getRefNameFromRefAddress(parameterRefObject.items.$ref)
+                    parameterRefObject = swagger.definitions[parameterRefName];
+                    if (!entityNames.contains(parameterRefName)) {
+                      entityNames.push(parameterRefName)
+                      getEntityNamesOfChildProperties(parameterRefObject, swagger, entityNames)
+                    }
+                  }
                 }
               }
             }
@@ -227,7 +226,7 @@
       return entityNames;
     }
 
-    function getEntityNamesOfChildProperties(entity, swagger, entityNames){
+    function getEntityNamesOfChildProperties(entity, swagger, entityNames) {
       if (entity.properties) {
         Object.keys(entity.properties).forEach(function(propertyName) {
           var property = entity.properties[propertyName],
@@ -239,11 +238,13 @@
           } else if (isArray(property) && property.items.$ref) {
             refName = getRefNameFromRefAddress(property.items.$ref);
           }
-          if (refName){
+          if (refName) {
             refObject = swagger.definitions[refName];
-            if (refObject['x-hidden']){
-              entityNames.push(refName);
-              getEntityNamesOfChildProperties(refObject, swagger, entityNames);
+            if (refObject) {
+              if (!entityNames.contains(refName)) {
+                entityNames.push(refName);
+                getEntityNamesOfChildProperties(refObject, swagger, entityNames);
+              }
             }
           }
         });
@@ -252,7 +253,7 @@
           if (property.items.$ref) {
             refName = getRefNameFromRefAddress(property.items.$ref);
             refObject = swagger.definitions[refName];
-            if (refObject['x-hidden']){
+            if (refObject) {
               entityNames.push(refName);
               getEntityNamesOfChildProperties(refObject, swagger, entityNames);
             }
@@ -292,7 +293,7 @@
     return index === -1 ? hash : hash.substr(index+3); // This was +1 before 1.6. If we do something to remove the #! prefix, change this back
   }
 
-  function getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, showDescriptions, $sce, baseLinkUrl) {
+  function getDisplayEntitiesFromSwagger(swagger, whiteList, blackList, showDescriptions, $sce) {
     var entities = Object.keys(swagger.definitions)
     .map(function(name) {
       var definition = swagger.definitions[name];
@@ -328,7 +329,7 @@
         if (definition.properties) {
           Object.keys(definition.properties).forEach(function(propertyName) {
             var property = definition.properties[propertyName];
-            appendPropertyDisplayFields(property, swagger.definitions, baseLinkUrl);
+            appendPropertyDisplayFields(property, swagger.definitions);
             property.required = definition.required && definition.required.includes(propertyName);
             property.descriptionHtml = $sce.trustAsHtml(property.description);
           });
@@ -341,7 +342,7 @@
   }
 
   function reorderEntities(entities, whiteList) {
-    if (whiteList && whiteList > 0) {
+    if (whiteList && whiteList.length > 0) {
       var newList = [];
       whiteList.forEach(function(entityName) {
         newList.push(entities.find(function(entity) {
@@ -359,23 +360,23 @@
     }
   }
 
-  function isArray(property){
+  function isArray(property) {
     return property && property.type && property.type === 'array';
   }
 
-  function appendPropertyDisplayFields(property, definitions, baseLinkUrl) {
+  function appendPropertyDisplayFields(property, definitions) {
     var displayProps;
 
     if (isArray(property)) {
-      displayProps = createDisplayFields('array of ', baseLinkUrl, property.items, definitions);
+      displayProps = createDisplayFields('array of ', property.items, definitions);
     } else {
-      displayProps = createDisplayFields('', baseLinkUrl, property, definitions);
+      displayProps = createDisplayFields('', property, definitions);
     }
     property.displayName = displayProps.displayName;
     property.displayId = displayProps.displayId;
   }
 
-  function createDisplayFields(displayNamePrefix, baseLinkUrl, property, definitions) {
+  function createDisplayFields(displayNamePrefix, property, definitions) {
     var displayId,
     displayName,
     refName,
@@ -386,10 +387,6 @@
       refObject = definitions[refName];
       displayName = displayNamePrefix + (refObject['x-display-name'] || refName).toLowerCase();
       displayId = '#' + (refObject['x-display-id'] || refName);
-
-      if (!refObject['x-hidden'] && baseLinkUrl) {
-        displayId = baseLinkUrl + displayId;
-      }
     } else {
       displayName = displayNamePrefix + getPropertyDisplayName(property);
     }
