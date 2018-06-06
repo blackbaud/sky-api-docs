@@ -103,8 +103,10 @@ showInNav: false
 <li>The <strong>HTTP request</strong> is populated with the <code>Authorization:Bearer </code>  header. This represents the access token for the request.<br />
 </li>
 <li>Click <strong>Send</strong> to submit the API request.</li>
-<li>The response includes a status, latency, and content including JSON data for the requested endpoint.</li>
-  </ol></div></div>
+<li>The response includes a status, latency, and content including JSON data for the requested endpoint.</br>
+<img title="Result result" alt="Request result" src="/assets/img/getting_started_step4_request_result.png"/> </li>
+
+</ol></div></div>
   
 </li>
 
