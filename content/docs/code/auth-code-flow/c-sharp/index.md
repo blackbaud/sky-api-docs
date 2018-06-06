@@ -42,7 +42,7 @@ For this tutorial, we strip down the user interface to highlight the Authorizati
 
 ## Step 1 &mdash; Get Your Keys
 
-If you have not already done so, complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a **Primary key** and **Secondary key**. You can use either key as the subscription key value for the `bb-api-subscription-key` request header in calls to the API.
+If you have not already done so, complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a **Primary key** and **Secondary key**. You can use either key as the subscription key value for the `Bb-Api-Subscription-Key` request header in calls to the API.
 
 ### {{ stache.config.sandbox_name }} Tenant
 

@@ -28,7 +28,7 @@ namespace Blackbaud.Demo.SyncToRE
                 // find your subscription key at https://developer.sky.blackbaud.com/developer
                 DefaultParameters =
                 {
-                    new Parameter() { Type = ParameterType.HttpHeader, Name = "bb-api-subscription-key", Value = subscriptionKey }
+                    new Parameter() { Type = ParameterType.HttpHeader, Name = "Bb-Api-Subscription-Key", Value = subscriptionKey }
                 }
             };
         }
