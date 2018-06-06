@@ -860,7 +860,7 @@ portal_endpoints_year_list: <%= stache.config.portal_endpoints_school %>operatio
 # =============================================
 # API Terms
 # =============================================
-subscription_keyname: bb-api-subscription-key
+subscription_keyname: Bb-Api-Subscription-Key
 
 bbauth:
   isEnabled: true

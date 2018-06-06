@@ -39,7 +39,7 @@ For this tutorial, we strip down the user interface to highlight the Authorizati
 
 ## Step 1 &mdash; Get Your Keys
 
-If you have not already done so, complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a **Primary key** and **Secondary key**. You can use either key as the subscription key value for the `bb-api-subscription-key` request header in calls to the API.
+If you have not already done so, complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a **Primary key** and **Secondary key**. You can use either key as the subscription key value for the `Bb-Api-Subscription-Key` request header in calls to the API.
 
 ### {{ stache.config.sandbox_name }} Tenant
 
@@ -313,7 +313,7 @@ return $response;
     <pre><code class="language-php">&lt;?php
     ...
         self::$headers = array(
-        'bb-api-subscription-key: ' . AUTH_SUBSCRIPTION_KEY,
+        'Bb-Api-Subscription-Key: ' . AUTH_SUBSCRIPTION_KEY,
         'Authorization: Bearer ' . Session::getAccessToken(),
         'Content-type: application/x-www-form-urlencoded'
         );
@@ -327,7 +327,7 @@ return $response;
     }
     ...</code></pre>
 
-    <p>The `bb-api-subscription-key` value represents your Blackbaud developer account's approved subscription to an API product. You can use your account's **Primary key** or **Secondary key**. The `Authorization` value represents your authorization to use the API. The `Authorization` header starts with `Bearer` followed by a space and then the value for the access token.</p>
+    <p>The `Bb-Api-Subscription-Key` value represents your Blackbaud developer account's approved subscription to an API product. You can use your account's **Primary key** or **Secondary key**. The `Authorization` value represents your authorization to use the API. The `Authorization` header starts with `Bearer` followed by a space and then the value for the access token.</p>
   	<p>A call to the  [Constituent (Get) endpoint]({{ stache.config.portal_endpoints_constituent_get }}) retrieves constituent data and sends it back to the browser.</p>
     <pre><code class="language-javascript">    
 function get(request, endpoint, callback) {

@@ -14,7 +14,7 @@ var options = {
     method: "POST",
     headers: {
         "Authorization": jwt,
-        "bb-api-subscription-key": subscriptionKey,
+        "Bb-Api-Subscription-Key": subscriptionKey,
     },
     body: {
         "file_name": "businesscard.jpg",
