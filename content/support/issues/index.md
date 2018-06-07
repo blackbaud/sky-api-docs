@@ -13,6 +13,9 @@ title: Issues
 # Issues
 If you find an issue, please [contact us]({{ stache.config.support_need_help_url }}).
 
+## 2018-06-07
+We are aware of an issue with the [Journal entry batch (GET)]({{stache.config.portal_endpoints_journal_entry_batch_get}}) endpoint. A timeout occurs when batches with large numbers of journal entries cannot be returned. We are working to resolve this issue and will post an update as soon as it is available.
+
 ## 2018-05-09
 We are aware of an issue with the [Transaction distribution (List)]({{stache.config.portal_endpoints_transaction_distribution_search}}) endpoint returning incorrect `account_class` information. We are working to resolve this issue and will post an update as soon as it is available.
 
