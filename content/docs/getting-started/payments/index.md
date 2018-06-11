@@ -82,11 +82,11 @@ showInNav: false
 <h2 class="tutorial">Step 5 &#8211; Try it</h2>
 <div class="row">
     <div class="col-md-12" style="text-align: left;">
-<p>When you are signed in, you can test the Payments API with the <a href="{{ stache.config.guide_basics_apiconsole }}"><strong>{{ stache.config.dev_console_name }}</strong></a>. </p>
+<p>When you are signed in, you can test the Payments API with the SKY API Console. </p>
 
 
 <ol>
-<li>From the <a href="https://developer.sky.blackbaud.com/docs/services/payments"><strong>Payments API Endpoint Reference</strong></a>, navigate to an endpoint such as <strong>GET Merchant account (List)</strong>, and click <strong>Try it</strong>. This activates the {{ stache.config.dev_console_name }}.</li>
+<li>From the <a href="https://developer.sky.blackbaud.com/docs/services/payments"><strong>Payments API Endpoint Reference</strong></a>, navigate to an endpoint such as <strong>GET Merchant account list</strong>, and click <strong>Try it</strong>. This activates the {{ stache.config.dev_console_name }}.</li>
 <li>Under <strong>Query parameters</strong>, enter a parameter. For example, enter <code>true</code> for the <code>include_inactive</code> parameter.</li>
 <li>Under <strong>Headers</strong>, select the <strong>Show/Hide</strong> icon in the <code>{{ stache.config.subscription_keyname }}</code> field.  The value reflects one of your Payments API subscription keys.
 <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> The  <strong>Request URL</strong> and <strong>HTTP request</strong> change based on the values for the parameter and request header field values.</bb-alert></p></li>
