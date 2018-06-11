@@ -50,7 +50,7 @@ showInNav: false
   <div class="col-md-12" style="text-align: left;">
 <h3>About your subscription</h3> 
 <p style="text-align: left;">Your developer profile provides details about your API subscriptions. Each <strong><a href="https://apidocs.sky.blackbaud.com/docs/basics/#!#subscription">subscription</a></strong> contains a <strong>Primary key</strong> and a <strong>Secondary key</strong>. You can use either key as the subscription key value for the <code>Bb-Api-Subscription-Key</code> request header in calls to the API.</p>
-<img src="/assets/img/getting_started_step_2_subscription.png" >
+<img src="/assets/img/payments_developer_profile_step_3.png" >
 
 </div></div>
 </li>
@@ -75,7 +75,7 @@ showInNav: false
 </ul></li>
 </ol>
 </div><div class="col-md-12" style="text-align: left;">
-<img src="/assets/img/getting_started_step4_payments_api_reference.png">
+<img src="/assets/img/payments_endpoint_ref_step_4.png">
 </div></li>
 
 <li class="slide">
