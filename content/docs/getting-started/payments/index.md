@@ -75,7 +75,7 @@ showInNav: false
 </ul></li>
 </ol>
 </div><div class="col-md-12" style="text-align: left;">
-<img src="/assets/img/getting_started_payments_step_endpoint_ref.png">
+<img src="/assets/img/getting_started_payments_step_4_endpoint_ref.png">
 </div></li>
 
 <li class="slide">
