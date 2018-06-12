@@ -542,148 +542,163 @@ portal_endpoints_opportunity_document_create: <%= stache.config.portal_endpoints
 portal_endpoints_GL: <%= stache.config.portal_endpoints %>56eb17a0a9db9516c46bff6f/
 
 # Account Cashflows Get
-portal_endpoints_account_cashflows_get: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e2/
+portal_endpoints_account_cashflows_get: <%= stache.config.portal_endpoints_GL %>operations/ListAccountCashflows/
 
 # Account Code List
-portal_endpoints_account_code_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d735/
+portal_endpoints_account_code_list: <%= stache.config.portal_endpoints_GL %>operations/ListAccountCodes/
 
 # Account Custom Fields List
-portal_endpoints_account_custom_fields_list: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e1/
+portal_endpoints_account_custom_fields_list: <%= stache.config.portal_endpoints_GL %>operations/ListAccountCustomFields/
 
 # Account Fund List
-portal_endpoints_account_fund_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d736/
+portal_endpoints_account_fund_list: <%= stache.config.portal_endpoints_GL %>operations/ListAccountFunds/
 
 # Account Get
-portal_endpoints_account_get: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e0/
+portal_endpoints_account_get: <%= stache.config.portal_endpoints_GL %>operations/GetAccount/
 
 # Account Search
-portal_endpoints_account_search: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1da/
+portal_endpoints_account_search: <%= stache.config.portal_endpoints_GL %>operations/SearchAccounts/
 
 # Account Segment Value List
-portal_endpoints_account_segment_value_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d733/
+portal_endpoints_account_segment_value_list: <%= stache.config.portal_endpoints_GL %>operations/GetAccountSegment/
 
 # Account Structure
-portal_endpoints_account_structure: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d734/
+portal_endpoints_account_structure: <%= stache.config.portal_endpoints_GL %>operations/ListAccountStructures/
 
 # Account Working Capitals List
-portal_endpoints_account_working_capitals_list: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e3/
+portal_endpoints_account_working_capitals_list: <%= stache.config.portal_endpoints_GL %>operations/ListAccountWorkingCapitals/
 
 # Budget Account List
-portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a43/
+portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetAccounts/
 
 # Budget Get
-portal_endpoints_budget_get: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a42/
+portal_endpoints_budget_get: <%= stache.config.portal_endpoints_GL %>operations/GetBudget/
 
 # Budget Grant List
-portal_endpoints_budget_grant_list: <%= stache.config.portal_endpoints_GL %>operations/590c806ed7dcde0c548cbd3e/
+portal_endpoints_budget_grant_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetGrants/
 
 # Budget List
-portal_endpoints_budget_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a41/
+portal_endpoints_budget_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgets/
+
+# Budget Post
+portal_endpoints_budget_post: <%= stache.config.portal_endpoints_GL %>operations/CreateBudget/
 
 # Budget Project List
-portal_endpoints_budget_project_list: <%= stache.config.portal_endpoints_GL %>operations/590c806ed7dcde0c548cbd3d/
+portal_endpoints_budget_project_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetProjects/
+
+# Budget Scenario Post
+portal_endpoints_budget_scenario_post: <%= stache.config.portal_endpoints_GL %>operations/CreateBudgetScenario/
+
+# Budget Scenario List
+portal_endpoints_budget_scenario_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetScenarios/
 
 # Class List
-portal_endpoints_class_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d737/
+portal_endpoints_class_list: <%= stache.config.portal_endpoints_GL %>operations/ListClasses/
 
 # Client Names List
-portal_endpoints_client_names_list: <%= stache.config.portal_endpoints_GL %>operations/5a9979d7a9db95028cc3a599/
+portal_endpoints_client_names_list: <%= stache.config.portal_endpoints_GL %>operations/ListClientNames/
 
 # Fiscal Year List
-portal_endpoints_fiscal_year_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d738/
+portal_endpoints_fiscal_year_list: <%= stache.config.portal_endpoints_GL %>operations/ListFiscalYears/
 
 # Grant Custom Field List
-portal_endpoints_grant_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/5a9979d7a9db95028cc3a59c/
+portal_endpoints_grant_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/ListGrantCustomFields/
 
 # Grant Status List
-portal_endpoints_grant_status_list: <%= stache.config.portal_endpoints_GL %>operations/5a9979d7a9db95028cc3a59a/
+portal_endpoints_grant_status_list: <%= stache.config.portal_endpoints_GL %>operations/ListGrantStatuses/
 
 # Grant Type List
-portal_endpoints_grant_type_list: <%= stache.config.portal_endpoints_GL %>operations/5a9979d7a9db95028cc3a59b/
+portal_endpoints_grant_type_list: <%= stache.config.portal_endpoints_GL %>operations/ListGrantTypes/
 
 # Journal Code List
-portal_endpoints_journal_code_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1db/
+portal_endpoints_journal_code_list: <%= stache.config.portal_endpoints_GL %>operations/ListJournalCodes/
 
 # Journal Entry Batch Attachment
-portal_endpoints_journal_entry_batch_attachment: <%= stache.config.portal_endpoints_GL %>operations/5991f90aa9db950d4c6fc35b/
+portal_endpoints_journal_entry_batch_attachment: <%= stache.config.portal_endpoints_GL %>operations/CreateJournalEntryBatchAttachment/
 
-# Journal Entry Batch Edit
-portal_endpoints_journal_entry_batch_edit: <%= stache.config.portal_endpoints_GL %>operations/572cf64ed7dcde0a9076b759/
+# Journal Entry Batch Delete
+portal_endpoints_journal_entry_batch_delete: <%= stache.config.portal_endpoints_GL %>operations/DeleteJournalEntryBatch/
 
 # Journal Entry Batch Get
-portal_endpoints_journal_entry_batch_get: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d739/
+portal_endpoints_journal_entry_batch_get: <%= stache.config.portal_endpoints_GL %>operations/GetJournalEntryBatch/
 
 # Journal Entry Batch List
-portal_endpoints_journal_entry_batch_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1df/
+portal_endpoints_journal_entry_batch_list: <%= stache.config.portal_endpoints_GL %>operations/ListJournalEntryBatches/
 
 # Journal Entry Batch Patch
-portal_endpoints_journal_entry_batch_patch: <%= stache.config.portal_endpoints_GL %>operations/5ad8fa51d7dcde1210d72b06/
+portal_endpoints_journal_entry_batch_patch: <%= stache.config.portal_endpoints_GL %>operations/EditJournalEntryBatch/
 
 # Journal Entry Batch Post
-portal_endpoints_journal_entry_batch_post: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d73b/
+portal_endpoints_journal_entry_batch_post: <%= stache.config.portal_endpoints_GL %>operations/Journal-entry-batch-Create/
+
+# Journal Entry Batch Post (Post)
+portal_endpoints_journal_entry_batch_post: <%= stache.config.portal_endpoints_GL %>operations/PostJournalEntryBatch/
+
+# Journal Entry Batch Validate
+portal_endpoints_journal_entry_batch_validate: <%= stache.config.portal_endpoints_GL %>operations/ValidateJournalEntryBatch/
+
+# Journal Entry Clear
+portal_endpoints_journal_entry_clear: <%= stache.config.portal_endpoints_GL %>operations/ClearJournalEntries/
 
 # Journal Entry Custom Field List
-portal_endpoints_journal_entry_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a44/
+portal_endpoints_journal_entry_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/ListJournalEntryCustomFields/
 
 # Journal Entry Post
-portal_endpoints_journal_entry_post: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d73d/
+portal_endpoints_journal_entry_post: <%= stache.config.portal_endpoints_GL %>operations/CreateJournalEntries/
 
 # Ledger Summary List
-portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a46/
+portal_endpoints_ledger_summary_list: <%= stache.config.portal_endpoints_GL %>operations/ListLedgerSummaries/
 
 # Media Type List
-portal_endpoints_gl_media_type_list: <%= stache.config.portal_endpoints_GL %>operations/5991f90ba9db950d4c6fc35c/
-
-# Project Custom Field List
-portal_endpoints_project_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/584707a7a9db950c3cb80a45/
-
-# Project Department List
-portal_endpoints_project_department_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d743/
-
-# Project Division List
-portal_endpoints_project_division_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d741/
-
-# Project Get
-portal_endpoints_project_get: <%= stache.config.portal_endpoints_GL %>operations/587fbcdbd7dcde0c1c24d1e4/
-
-# Project Location List
-portal_endpoints_project_location_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d742/
-
-# Project Post
-portal_endpoints_project_post: <%= stache.config.portal_endpoints_GL %>operations/5818add4a9db9503b8d3deed/
-
-# Project Type List
-portal_endpoints_project_type_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d73f/
-
-# Project Search
-portal_endpoints_project_search: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1e4/
-
-# Project Search Contact Create
-portal_endpoints_project_contact_create: <%= stache.config.portal_endpoints_GL %>operations/5818add4a9db9503b8d3deee/
-
-# Project Search Create
-portal_endpoints_project_create: <%= stache.config.portal_endpoints_GL %>operations/5818add4a9db9503b8d3deed/
-
-# Project Status List
-portal_endpoints_project_status_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d740/
+portal_endpoints_gl_media_type_list: <%= stache.config.portal_endpoints_GL %>operations/ListGeneralLedgerMediaTypes/
 
 # Period Summary List
-portal_endpoints_period_summary_list: <%= stache.config.portal_endpoints_GL %>operations/5a0f05caa9db95085cdda5f7/
+portal_endpoints_period_summary_list: <%= stache.config.portal_endpoints_GL %>operations/get-periodsummary-summaries/
 
 # Period Summary Process
-portal_endpoints_period_summary_process: <%= stache.config.portal_endpoints_GL %>operations/5a0f05caa9db95085cdda5f6/
+portal_endpoints_period_summary_process: <%= stache.config.portal_endpoints_GL %>operations/GetSummaryProcess/
 
 # Period Summary Process Start
-portal_endpoints_period_summary_process_start: <%= stache.config.portal_endpoints_GL %>operations/5a0f05caa9db95085cdda5f5/
+portal_endpoints_period_summary_process_start: <%= stache.config.portal_endpoints_GL %>operations/StartPeriodSummaryProcess/
+
+# Project Custom Field List
+portal_endpoints_project_custom_field_list: <%= stache.config.portal_endpoints_GL %>operations/ListProjectCustomFields/
+
+# Project Department List
+portal_endpoints_project_department_list: <%= stache.config.portal_endpoints_GL %>operations/ListProjectDepartments/
+
+# Project Division List
+portal_endpoints_project_division_list: <%= stache.config.portal_endpoints_GL %>operations/ListProjectDivisions/
+
+# Project Get
+portal_endpoints_project_get: <%= stache.config.portal_endpoints_GL %>operations/GetProject/
+
+# Project Location List
+portal_endpoints_project_location_list: <%= stache.config.portal_endpoints_GL %>operations/ListProjectLocations/
+
+# Project Post
+portal_endpoints_project_post: <%= stache.config.portal_endpoints_GL %>operations/CreateProject/
+
+# Project Type List
+portal_endpoints_project_type_list: <%= stache.config.portal_endpoints_GL %>operations/ListProjectTypes/
+
+# Project Search
+portal_endpoints_project_search: <%= stache.config.portal_endpoints_GL %>operations/SearchProjects/
+
+# Project Contact Post
+portal_endpoints_project_contact_create: <%= stache.config.portal_endpoints_GL %>operations/CreateProjectContact/
+
+# Project Status List
+portal_endpoints_project_status_list: <%= stache.config.portal_endpoints_GL %>operations/ListProjectStatuses/
 
 # Transaction Code List
-portal_endpoints_transaction_code_list: <%= stache.config.portal_endpoints_GL %>operations/57184309a9db950da495f1e5/
+portal_endpoints_transaction_code_list: <%= stache.config.portal_endpoints_GL %>operations/ListTransactionCodes/
 
 # Transaction Code Value List
-portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints_GL %>operations/57f566dbd7dcde0e5cf2d744/
+portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints_GL %>operations/ListTransactionCodeValuesSingleTransactionCode/
 
 # Transaction Distribution List
-portal_endpoints_transaction_distribution_search: <%= stache.config.portal_endpoints_GL %>operations/576aaed7a9db950830404b56/
+portal_endpoints_transaction_distribution_search: <%= stache.config.portal_endpoints_GL %>operations/ListTransactionDistributions/
 
 # =============================================
 # 			Treasury API ENDPOINTS
@@ -738,56 +753,68 @@ portal_endpoints_deposits_list: <%= stache.config.portal_endpoints_treasury %>op
 # Accounts Payable API
 portal_endpoints_AP: <%= stache.config.portal_endpoints %>57a342f1d7dcde1c28a749fe/
 
-# Invoice List
-portal_endpoints_invoice_list: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d8/
-
-# Invoice Edit Patch
-portal_endpoints_invoice_edit_patch: <%= stache.config.portal_endpoints_AP %>operations/5b105679d7dcde09dcb2a978/
-
-# Vendor List
-portal_endpoints_vendor_list: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063db/
+# Address Post
+portal_endpoints_address_post: <%= stache.config.portal_endpoints_AP %>operations/CreateVendorAddress/
 
 # Address List
-portal_endpoints_address_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24e/
+portal_endpoints_address_list: <%= stache.config.portal_endpoints_AP %>operations/ListVendorAddressesSingleVendor/
+
+# Contact method Post
+portal_endpoints_contact_method_post: <%= stache.config.portal_endpoints_AP %>operations/CreateVendorAddressContactMethod/
 
 # Contact method List
-portal_endpoints_contact_method_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c250/
-
-# Media Type List
-portal_endpoints_media_type_list: <%= stache.config.portal_endpoints_AP %>operations/5956574da9db95137833bc8b/
-
-# Note List
-portal_endpoints_note_list: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c252/
-
-# Invoice Get
-portal_endpoints_invoice_get: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24c/
-
-# Invoice Post
-portal_endpoints_invoice_post: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063d9/
-
-# Invoice Attachment Post
-portal_endpoints_invoice_attachment_post: <%= stache.config.portal_endpoints_AP %>operations/5956574da9db95137833bc8a/
+portal_endpoints_contact_method_list: <%= stache.config.portal_endpoints_AP %>operations/ListContactMethodsSingleVendorAddress/
 
 # Invoice 1099 Amount
-portal_endpoints_invoice_1099_amount: <%= stache.config.portal_endpoints_AP %>operations/590c805ca9db950f94838e5f/
+portal_endpoints_invoice_1099_amount: <%= stache.config.portal_endpoints_AP %>operations/GetInvoice1099Amount/
 
 # Invoice 1099 Box Numbers
-portal_endpoints_invoice_1099_box_numbers: <%= stache.config.portal_endpoints_AP %>operations/590c805ca9db950f94838e60/
+portal_endpoints_invoice_1099_box_numbers: <%= stache.config.portal_endpoints_AP %>operations/ListInvoice1099BoxNumbers/
 
-# Payment term List
-portal_endpoints_payment_term_list: <%= stache.config.portal_endpoints_AP %>operations/59de6625a9db951228cdd374/
-
-# Vendor Get
-portal_endpoints_vendor_get: <%= stache.config.portal_endpoints_AP %>operations/57fd3a66d7dcde060427c24d/
-
-# Vendor Post
-portal_endpoints_vendor_post: <%= stache.config.portal_endpoints_AP %>operations/57a342f2d7dcde1010c063dc/
+# Invoice Attachment Post
+portal_endpoints_invoice_attachment_post: <%= stache.config.portal_endpoints_AP %>operations/CreateInvoiceAttachment/
 
 # Invoice Custom Field List
-portal_endpoints_invoice_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a49/
+portal_endpoints_invoice_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/ListInvoiceCustomFields/
+
+# Invoice Patch
+portal_endpoints_invoice_edit_patch: <%= stache.config.portal_endpoints_AP %>operations/EditInvoice/
+
+# Invoice Get
+portal_endpoints_invoice_get: <%= stache.config.portal_endpoints_AP %>operations/GetInvoice/
+
+# Invoice List
+portal_endpoints_invoice_list: <%= stache.config.portal_endpoints_AP %>operations/ListInvoices/
+
+# Invoice Post
+portal_endpoints_invoice_post: <%= stache.config.portal_endpoints_AP %>operations/CreateInvoice/
+
+# Invoice Attachment Post
+portal_endpoints_invoice_attchment_post: <%= stache.config.portal_endpoints_AP %>operations/CreateInvoiceAttachment/
+
+# Media Type List
+portal_endpoints_media_type_list: <%= stache.config.portal_endpoints_AP %>operations/ListAccountsPayableMediaTypes/
+
+# Note List
+portal_endpoints_note_list: <%= stache.config.portal_endpoints_AP %>operations/ListVendorNotes/
+
+# Note Post
+portal_endpoints_note_post: <%= stache.config.portal_endpoints_AP %>operations/CreateVendorNote/
+
+# Payment term List
+portal_endpoints_payment_term_list: <%= stache.config.portal_endpoints_AP %>operations/ListPaymentTerms/
 
 # Vendor Custom Field List
-portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/584707a9a9db950c3cb80a4a/
+portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/ListVendorCustomFields/
+
+# Vendor Get
+portal_endpoints_vendor_get: <%= stache.config.portal_endpoints_AP %>operations/GetVendor/
+
+# Vendor List
+portal_endpoints_vendor_list: <%= stache.config.portal_endpoints_AP %>operations/ListVendors/
+
+# Vendor Post
+portal_endpoints_vendor_post: <%= stache.config.portal_endpoints_AP %>operations/CreateVendor/
 
 # =============================================
 # Payments API Endpoints
