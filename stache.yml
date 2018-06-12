@@ -708,43 +708,43 @@ portal_endpoints_transaction_distribution_search: <%= stache.config.portal_endpo
 portal_endpoints_treasury: <%= stache.config.portal_endpoints %>58e3b2880528ab71c796492e/
 
 # Adjustment Categories List
-portal_endpoints_adjustment_categories_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f7/
+portal_endpoints_adjustment_categories_list: <%= stache.config.portal_endpoints_treasury %>operations/ListAdjusmentCategoriesSingleBankAccount/
 
 # Adjustment Get
-portal_endpoints_adjustment_get: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f5/
+portal_endpoints_adjustment_get: <%= stache.config.portal_endpoints_treasury %>operations/GetBankAccountAdjustment/
 
 # Adjustments List
-portal_endpoints_adjustments_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f3/
+portal_endpoints_adjustments_list: <%= stache.config.portal_endpoints_treasury %>operations/ListAdjustmentsSingleBankAccount/
 
 # Adjustment Post
-portal_endpoints_adjustment_post: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f4/
+portal_endpoints_adjustment_post: <%= stache.config.portal_endpoints_treasury %>operations/CreateBankAccountAdjustment/
 
 # Bank Account List
-portal_endpoints_bank_account_list: <%= stache.config.portal_endpoints_treasury %>operations/58e3b295a9db950fa048c8b3/
+portal_endpoints_bank_account_list: <%= stache.config.portal_endpoints_treasury %>operations/ListBankAccounts/
 
 # Bank Account Register List
-portal_endpoints_bank_account_register_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f6/
+portal_endpoints_bank_account_register_list: <%= stache.config.portal_endpoints_treasury %>operations/ListRegisterTransactionsSingleBankAccount/
 
 # Cash Receipt Custom Field List
-portal_endpoints_cash_receipt_custom_field_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f9/
+portal_endpoints_cash_receipt_custom_field_list: <%= stache.config.portal_endpoints_treasury %>operations/ListCashReceiptCustomFields/
 
 # Cash Receipt Post
-portal_endpoints_cash_receipt_post: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6fe/
+portal_endpoints_cash_receipt_post: <%= stache.config.portal_endpoints_treasury %>operations/CreateCashReceipt/
 
 # Cash Receipts List
-portal_endpoints_cash_receipts_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6fd/
+portal_endpoints_cash_receipts_list: <%= stache.config.portal_endpoints_treasury %>operations/ListCashReceiptsSingleDeposit/
 
 # Checks List
-portal_endpoints_checks_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6f8/
+portal_endpoints_checks_list: <%= stache.config.portal_endpoints_treasury %>operations/ListChecksSingleBankAccount/
 
 # Deposit Get
-portal_endpoints_deposit_get: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6fc/
+portal_endpoints_deposit_get: <%= stache.config.portal_endpoints_treasury %>operations/GetDeposit/
 
 # Deposit Post
-portal_endpoints_deposit_post: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6fb/
+portal_endpoints_deposit_post: <%= stache.config.portal_endpoints_treasury %>operations/CreateDeposit/
 
 # Deposits List
-portal_endpoints_deposits_list: <%= stache.config.portal_endpoints_treasury %>operations/58fa5dadd7dcde0d7849c6fa/
+portal_endpoints_deposits_list: <%= stache.config.portal_endpoints_treasury %>operations/ListDepositsSingleBankAccount/
 
 # =============================================
 # 			Accounts Payable API ENDPOINTS
