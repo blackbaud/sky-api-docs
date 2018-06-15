@@ -43,7 +43,7 @@ For this tutorial, we strip down the user interface to highlight the Authorizati
 
 ## Step 1 &mdash; Get Your Keys
 
-If you have not already done so, complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a **Primary key** and **Secondary key**. You can use either key as the subscription key value for the `bb-api-subscription-key` request header in calls to the API.
+If you have not already done so, complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started guide</a>. The tutorial guides you through signing up for a Blackbaud developer account and requesting a subscription to an API product. After you are approved, your subscription contains a **Primary key** and **Secondary key**. You can use either key as the subscription key value for the `Bb-Api-Subscription-Key` request header in calls to the API.
 
 ### {{ stache.config.sandbox_name }} Tenant
 
@@ -386,7 +386,7 @@ The response redirects users to the home page and AppController. The AppControll
 <ul>
   <li>Open **/server/libs/sky.js** and **/server/routes/api.js**.</li>
   <li>
-    <p>The route in the app's main **index.js** file directs the request to the `getConstituent()` function in **/server/libs/sky.js**. The call is passed along to **/server/routes/api.js**, which interacts directly with {{ stache.config.product_name_short }} endpoints.  Eventually the call makes its way to the `proxy()` function. Here, we can see the use of the `bb-api-subscription-key` and `Authorization` request headers:</p>
+    <p>The route in the app's main **index.js** file directs the request to the `getConstituent()` function in **/server/libs/sky.js**. The call is passed along to **/server/routes/api.js**, which interacts directly with {{ stache.config.product_name_short }} endpoints.  Eventually the call makes its way to the `proxy()` function. Here, we can see the use of the `Bb-Api-Subscription-Key` and `Authorization` request headers:</p>
     <pre><code class="language-javascript">function proxy(request, method, endpoint, body, callback) {
     var options = {
         json: true,
@@ -394,7 +394,7 @@ The response redirects users to the home page and AppController. The AppControll
         body: body,
         url: '{{ stache.config.resource_url }}/v1/'' + endpoint,
         headers: {
-            'bb-api-subscription-key': process.env.AUTH_SUBSCRIPTION_KEY,
+            'Bb-Api-Subscription-Key': process.env.AUTH_SUBSCRIPTION_KEY,
             'Authorization': 'Bearer ' + request.session.ticket.access_token
         }
     };
@@ -405,7 +405,7 @@ The response redirects users to the home page and AppController. The AppControll
             console.log('Proxy Error: ', err);
         });
 }</code></pre>
-    <p>The `bb-api-subscription-key` value represents your Blackbaud developer account's approved subscription to an API product. You can use your account's **Primary key** or **Secondary key**. The `Authorization` value represents your authorization to use the API. The `Authorization` header starts with `Bearer` followed by a space and then the value for the access token.</p>
+    <p>The `Bb-Api-Subscription-Key` value represents your Blackbaud developer account's approved subscription to an API product. You can use your account's **Primary key** or **Secondary key**. The `Authorization` value represents your authorization to use the API. The `Authorization` header starts with `Bearer` followed by a space and then the value for the access token.</p>
   	<p>A call to the  [Constituent (Get) endpoint]({{ stache.config.portal_endpoints_constituent_get }}) retrieves constituent data and sends it back to the browser.</p>
     <pre><code class="language-javascript">    
 function get(request, endpoint, callback) {

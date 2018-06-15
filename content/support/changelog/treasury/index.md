@@ -14,14 +14,30 @@ title: Treasury (Beta) Changelog
 
 Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-04-26
+## 2018-06-12
 
-### Changed
+### Announcement: Changes for [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) API
+
+We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Treasury (Beta) API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
+
+## 2018-06-04
+
+### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
+
+We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
+
+Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
+
+## April
+
+### 2018-04-26
+
+#### Changed
 
 - For the  [Bank account (List)]({{ stache.config.portal_endpoints_bank_account_list }}) endpoint, the `bank_name` field is now included in the list of returned objects separate from `account_name`.
 - The  [Bank account register (List)]({{ stache.config.portal_endpoints_bank_account_register_list }}), [Checks (List)]({{ stache.config.portal_endpoints_checks_list }}), [Deposits (List)]({{ stache.config.portal_endpoints_deposits_list }}), and [Adjustments (List)]({{ stache.config.portal_endpoints_adjustments_list }}) endpoints now return the `transaction_id` field. This field helps to ensure that "register" items correctly map to checks, deposits, and adjustments.
 
-## January 2018
+## January
 
 ### 2018-01-17
 
@@ -33,7 +49,7 @@ For the  [Checks (List)]({{ stache.config.portal_endpoints_checks_list }}) endpo
 - The list is now sorted by check number (ascending).
 - We added the `starting_check_number` and `ending_check_number` variables to the check filter. When only `starting_check_number` is provided, a list of checks (starting with that number and higher) is returned. When only `ending_check_number` is provided, a list of checks (less than or equal to that number) is returned. When both variables are provided, a range of checks is returned.
 
-## April 2017
+## 2017
 
 ### 2017-04-25
 

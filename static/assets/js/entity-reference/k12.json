@@ -13,7 +13,7 @@
   "securityDefinitions": {
     "apiKeyHeader": {
       "type": "apiKey",
-      "name": "bb-api-subscription-key",
+      "name": "Bb-Api-Subscription-Key",
       "in": "header"
     },
     "apiKeyQuery": {
