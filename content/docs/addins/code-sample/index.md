@@ -1,7 +1,7 @@
 ---
 layout: layout-sidebar
 name: Add-in Code Sample
-order: 400
+order: 700
 published: true
 showInNav: true
 title: Add-in Code Sample

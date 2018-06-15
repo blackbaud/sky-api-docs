@@ -11,7 +11,7 @@ title: Add-ins
 
 # {{ name }}
 
-<bb-alert bb-alert-type="info"><strong>Important!</strong> This content is a preview of an upcoming capability for SKY API. Limited to beta participants, add-ins are coming soon to the SKY API developer portal. If you are interested in more info about add-ins, contact... </bb-alert>
+<bb-alert bb-alert-type="info"><strong>Important!</strong> This content is a preview of an upcoming capability for SKY API. Limited to beta participants, add-ins are coming soon to the SKY API Developer Portal. If you are interested in more info about add-ins, contact... </bb-alert>
 
 To customize and extend the capabilities of Blackbaud applications, 3rd-party customers, partners, and developers can create **add-ins** through their registered SKY API applications. Add-ins are associated with pre-defined “extension points” in the system – extension points represent the specific areas within the Blackbaud application user interface (UI) that support being customized. Currently, our first implementation of add-ins enable you to extend the functionality of our applications via external web apps running in an iframe on the page. This implmentation means that developers can choose **any** language, tools, or tech stack for their add-in(s). As such, add-ins require no plugin DLLs to deploy in Hosting, no specs to load, no schema changes required, and developers can release enhancements to their add-in(s) at their own discretion and on their own timeframes.
 
@@ -30,3 +30,5 @@ Extension points will vary by type and we’ll introduce new types of extension 
 <i class="fa fa-angle-double-right" aria-hidden="true"></i> Add-ins follow a “write-once, run everywhere” model, meaning that add-ins will appear and be functional within desktop, tablet, and mobile user experiences (no need to resort to browser extensions anymore).
 
 <i class="fa fa-angle-double-right" aria-hidden="true"></i> If supported by the 3rd-party system, developers can leverage a SSO model for add-ins, where the user need only authenticate to the 3rd-party system once.  The user can switch browsers or devices and continue working without having to re-authenticate.
+
+<br />

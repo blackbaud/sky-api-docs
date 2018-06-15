@@ -1,7 +1,7 @@
 ---
 layout: layout-sidebar
 name: Add-in Capabilities
-order: 100
+order: 400
 published: true
 showInNav: true
 title: Add-in Capabilities
@@ -10,8 +10,6 @@ title: Add-in Capabilities
 
 # {{ name }}
 
-
 ## Showing a Modal
-
 
 ## Other Capabilities

@@ -1,7 +1,7 @@
 ---
 layout: "layout-sidebar"
 name: Common Add-ins Issues
-order: 300
+order: 600
 published: true
 showInNav: true
 title: Add-ins
