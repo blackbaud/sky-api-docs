@@ -14,9 +14,68 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-04-13
+## 2018-06-01
+
+### Announcement: Changes for [Constituent]({{ stache.config.portal_endpoints_constituent }}) API
+
+We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Constituent API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
+
+## 2018-05-25
 
 ### New
+We added the following properties to the [action]({{ stache.config.constituent_entity_reference }}#Action) entity:
+
+- The new `computed_status` property computes the status based on the `completed` and `date` properties when the system is not configured to use custom action statuses. Otherwise, the field calculates the status based on the action's `date` property and whether the `status` property is configured as "Completed."
+- The new `status_code` property specifies the action status code. Available values are in the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574f4bc7d7dcde0740edb96a"><b>Action Status</b></a> table. This property is only returned when the system is configured to use custom action statuses.
+
+These properties are available in the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}), [Action list (All constituents)]({{ stache.config.portal_endpoints_action_get_list }}), and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
+
+### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+
+We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
+
+Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
+
+## 2018-05-15
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+       <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_document_create }}">
+        <td>Document (Create)</td>
+        <td>POST</td>
+        <td>/documents</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## 2018-05-11
+
+### Announcement: Released Action Category Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})    
+We updated the Constituent API Action category value from `Phone Call` to `Phone call`. This change impacts the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
+
+## April
+
+###2018-04-25
+
+#### Announcement: Future Enhancement Planned for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+We will update the Constituent API Action category value from `Phone Call` to `Phone call` for consistency across all endpoints. This change will impact the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
+
+### 2018-04-13
+
+#### New
 
 Added the following endpoint:
 
@@ -41,18 +100,18 @@ Added the following endpoint:
 
   <strong>&#42;</strong> We deprecated the [Fundraiser list (Single constituent)]({{stache.config.portal_endpoints_fundraiser_get_list}}) endpoint and replaced it with the [Fundraiser assignment list (Single constituent)]({{stache.config.portal_endpoints_fundraiserassignment_get_list}}) endpoint. We will continue to support deprecated endpoint for v1 of the Constituent API, but we recommend transitioning to the new endpoint for a more robust and consistent response.
 
-## 2018-04-06
+### 2018-04-06
 
-### Changed
+#### Changed
 
 We corrected an issue with the `last_modified` parameter on the [Relationship list (All constituents)]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoint, where returned results and the provided `sort_token` were keying off of `date_added` instead of `date_modified`.
 
-###Announcement: Released Display Name Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+#### Announcement: Released Display Name Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 Constituent names in the API now reflect the upcoming display name configuration setting in Raiser's Edge NXT. This initially affects the default name values on the Constituent [GET]({{stache.config.portal_endpoints_constituent_get}}), [search]({{stache.config.portal_endpoints_constituent_search}}), and [list]({{stache.config.portal_endpoints_constituent_get_list}}) endpoints, and on the Relationship [GET]({{stache.config.portal_endpoints_constituent_relationship_get_list}}) and [list]({{stache.config.portal_endpoints_constituent_relationship_get_all_list}}) endpoints. Moving forward, display name settings will be configurable from the web view, and the API will reflect any changes to the display name format.
 
 In addition, when a supervisor user changes the display name configuration settings, the `date_modified` value will increment on all constituents in the organization's database. This impact will not occur until display name configuration options are available in the Raiser's Edge NXT web view, slated for release in mid-April.
 
-###Announcement: Released Solicit Code Security Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
+#### Announcement: Released Solicit Code Security Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})
 The Constituent API now respects the new Solicit Code security setting available in the Raiser's Edge NXT database view. This affects the Communication Preference [GET]({{stache.config.portal_endpoints_constituent_communication_preferences_get_list}}), [POST]({{stache.config.portal_endpoints_constituent_communication_preferences_create}}), [PATCH]({{stache.config.portal_endpoints_constituent_communication_preferences_edit}}), and [DELETE]({{stache.config.portal_endpoints_constituent_communication_preferences_delete}}) endpoints.
 
 ## March
