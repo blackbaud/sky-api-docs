@@ -198,7 +198,7 @@ portal_ratelimit: <%= stache.config.portal %>usage-increase
 # NXT Application references
 # =============================================
 
-developer_app_management_url: https://developerapp.nxt.blackbaud-dev.com/applications
+developer_app_management_url: https://developer.blackbaud.com/apps
 
 # =============================================
 # CONSTITUENT API ENDPOINTS
