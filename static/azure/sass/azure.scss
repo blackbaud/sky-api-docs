@@ -202,7 +202,6 @@ body {
 
     .nav-pills {
       > li {
-        height: 1.5em;
         margin: 8px 0;
         border-left: transparent solid 5px;
 
@@ -213,26 +212,18 @@ body {
           font-weight: 600;
           font-size: 13px;
           margin: 0;
-          padding: 0 5px 5px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+          padding: 5px 10px 5px 5px;
 
           &:hover,
           &:focus {
-            overflow: visible;
-            position: absolute;
             background: #fff;
-            padding: 5px 10px 5px 5px;
-            margin-top: -5px;
             color: #8c8f90;
-            background-color: rgba(255,255,255,0.75);
-            text-shadow: 0 0px 2px #fff;
           }
         }
 
         &.active {
           border-left-color: $bb-color-blue;
+
           > a {
             color: #8c8f90;
             font-weight: 700;
@@ -243,6 +234,10 @@ body {
               color: #8c8f90;
             }
           }
+        }
+
+        & > li > a >.badge {
+          margin-left: 0;
         }
       }
     }
@@ -271,9 +266,6 @@ body {
       > .row > div > h2 {
         font-size: 32px;
         font-family: "Oswald",sans-serif;
-      }
-      > .panel > .panel-body > .col-md-3 {
-
       }
     }
 
