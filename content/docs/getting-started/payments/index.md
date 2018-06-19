@@ -97,7 +97,7 @@ showInNav: false
 <img title="Authorization Code" alt="Authorization Code" src="/assets/img/getting_started_step4_oauth.png"></li>
 <li>The Blackbaud OAuth 2.0 Service displays a <strong>SKY API Console</strong> pop-up window.</li>
  
-<li>Select your Blackbaud Merchant Services instance.</li>
+<li>Select your Blackbaud Merchant Services instance.<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> Your Blackbaud Merchant Services instance will not appear unless your admin has invited you to an environment and you have accepted the invite.</bb-alert></p></li>
 
 <li>Click <strong>Authorize</strong>.</li>
 <li>The <strong>HTTP request</strong> is populated with the <code>Authorization:Bearer </code>  header. This represents the access token for the request.<br />
