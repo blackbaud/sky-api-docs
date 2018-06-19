@@ -68,7 +68,9 @@ Added the following endpoint:
   </table>
 </div>
 
-## 2018-05-25
+## May
+
+### 2018-05-25
 
 ### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
