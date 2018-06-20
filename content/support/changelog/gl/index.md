@@ -14,6 +14,14 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-06-20
+
+### Changed
+We made changes to the following endpoints:
+
+- The [Journal entry batch (List)]({{ stache.config.portal_endpoints_journal_entry_batch_list }}) endpoint now includes a new `search_text` request parameter that can match `description` or `ui_batch_id`. For example, `?search_text=100` returns a list of batches with a `ui_batch_id` that contains "100" or a `description` that contains "100".
+- The [Budget (List)]({{ stache.config.portal_endpoints_budget_list }}) endpoint now includes a new `scenario_id` field that returns the scenario ID associated with the budget.
+
 ## 2018-06-12
 
 ### Announcement: Changes for [General Ledger]({{ stache.config.portal_endpoints_GL }}) API
