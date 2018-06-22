@@ -1,2 +1,2 @@
 [config]
-command = npm install -g blackbaud-stache-cli && stache deploy --no-color
+command = npm i blackbaud-stache-cli && bash .\node_modules\blackbaud-stache-cli\scripts\deploy.sh
