@@ -1,2 +1,2 @@
 [config]
-command = npm i blackbaud-stache-cli && bash .\node_modules\blackbaud-stache-cli\scripts\deploy.sh
+command = npm i && npm run grunt -- --gruntfile ./node_modules/blackbaud-stache-cli/gruntfile.js deploy --no-color --cwd=./ --cli=./
