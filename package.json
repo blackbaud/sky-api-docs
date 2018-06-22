@@ -9,6 +9,9 @@
   "version": "1.0.92",
   "description": "Blackbaud Documentation",
   "private": true,
+  "scripts": {
+    "grunt": "grunt"
+  },
   "dependencies": {
     "angular-local-storage": "^0.6.0",
     "blackbaud-stache": "latest",
