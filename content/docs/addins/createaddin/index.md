@@ -21,62 +21,60 @@ markdown: false
 <ul class="slide-container">
 <li class="slide">
 <h2 class="tutorial">Step 1 – Register your app</h2>
-<p>we recommend you create both a test and production apps</p>
+{{ include 'includes/addins/registerapp.md' }}
 </li>
 
 <li class="slide">
 <h2 class="tutorial">Step 2 – Application activation</h2>
-<p>Have your application activated in a testing tenant.</p>
+{{ include 'includes/addins/activateapp.md' }}
 </li>
 
 <li class="slide">
 <h2 class="tutorial">Step 3 – Register test add-in</h2>
-<p>Before you complete this step, you need to have a web application deployed so you can use the web applicatoin link when you register the add-in.</p>
-<p>For testing purposes, we recommend you register your add-in in your test tenant first</p>
-<p>Register the add-in
+<div style="text-align: left;">
+<bb-alert bb-alert-type="success">Before you complete this step, you need to have a web application deployed so you can use the web application link when you register the add-in.</bb-alert>
+<p>For quality purposes, we recommend you register and test your add-in before deploying to customers.</p>
 
-Now that my web application has been deployed, I can register it as part of my SKY API application by navigating to the SKY API developer portal and choosing “My applications” from the Developer Account menu to reach the applications page. From the list shown, I’ll navigate into the application details by clicking on the application name, and from there I can choose the “Add” button from within the Add-ins tile to create a new add-in definition:
-
-On this dialog, I just need to provide the URL for my web application and indicate the extension point - in this case, our tile represents an extension to the “Constituent Tile Dashboard”. I can also provide a friendly Name for the add-in, just to help distinguish it from other add-ins I might create later. The name itself is not currently presented to customers.
-
-A few notes about the URL:
-We do support local development, so if you’re able to serve the web site locally, you can provide a localhost:port value for the URL (for example: https://localhost:4000). To avoid mixed content problems in the browser, you’ll need to use https and have SSL configured locally.
-The URL must be a fully qualified URL, and can include static parameter values.
-
-That all! Once defined, the add-in will be shown for any customers who’ve enabled the SKY API application.</p>
+<ol>
+<li><p>From <a href="{{ stache.config.developer_app_management_url }}" target= "_blank">My Applications</a>, select the application name for which you want to register an Add-in.</p></li>
+<li><p>Under Add-ins, select <b>Add</b>. The Add add-in screen appears.</p>
+<p><img src="/assets/img/add_addin.png" class="img-responsive"></p>
 </li>
+<li><p>Enter a unique name for the add-in. This name is for your use only, Blackbaud solution users will not see it.</p></li>
+<li><p>Select the extension point for where you want to insert your add-in into the Blackbaud solution. For more information about extension points, see the <a href="/docs/addins/context">Extension Points Add-in</a> documentation.</p></li>
+<li><p>Specify the web application URL to use with your addin. The URL must be absolute and use HTTPS.</p>
+<p>We do support local development, so if you’re able to serve the web site locally, you can provide a localhost:port value for the URL (for example: https://localhost:4000). To avoid mixed content problems in the browser, you’ll need to use https and have SSL configured locally.
+The URL must be a fully qualified URL, and can include static parameter values.</p></li>
+<li><p>Select <b>Save</b>. Your new add-in definition appears in the Add-in tile.</p></li>
+</ol>
+
 
 <li class="slide">
-<h2 class="tutorial">Step 4 – Test the add-in</h2>
-<p>For testing purposes, we recommend you register your add-in in your test tenant first</p>
-<p>View the add-in within Raiser’s Edge NXT
+<h2 class="tutorial">Step 4 – Verify the add-in</h2>
+<div style="text-align: left;">
+<p>To ensure the add-in looks and works as you expect it to, after you register your add-in, we recommend you view the add-in within the Blackbaud solution.</p>
 
-The add-in feature is available in RENXT in production today, but it requires a special query param for now until we’re closer to GA. Within RENXT, you can add the following query parameter to tell the page to check for add-ins:
-&extendedFeatureConfiguration={"new_features":{"uiextensions":true}}
+<p>Today, Add-ins are only available to deploy into Raiser's Edge NXT. However, it requires a special query parameter until we’re closer to general availability. Within Raiser's Edge NXT, you can add the following query parameter to tell the page to check for add-ins:
+<pre><code>&extendedFeatureConfiguration={"new_features":{"uiextensions":true}}</code></pre></p>
 
-For example, you’d specify the query param on the constituent page like this:
-https://renxt.blackbaud.com/constituents/280?tenantid=YOURTENANTID&extendedFeatureConfiguration={"new_features":{"uiextensions":true}}
+<p>For example, you’d specify the query param on the constituent page like this:
+<pre><code>https://renxt.blackbaud.com/constituents/280?tenantid=YOURTENANTID&extendedFeatureConfiguration={"new_features":{"uiextensions":true}}</code></pre></p>
 
-When the page loads, our custom tile will appear (likely at the bottom of the page):
+<p>When the page loads, your custom add-in tile will appear.</p>
 </p>
-</li>
-
-<li class="slide">
-<h2 class="tutorial">Step 5 – Register the add-in</h2>
-<p>Once you feel like your add-in is ready, register your add-in in your production app.</p>
+</div>
 </li>
 
 <li class="slide">
 <h2 class="tutorial">Next Steps</h2>
-<p>If you are going to make API calls, you'll want to complete the Getting Started guide. If you also want to create an application that makes API calls, you'll want to complete the Create an Application tutorial.</p>
+<div style="text-align: left;">
+<ul>
+<li><p>If you are going to make API calls, you'll want to complete the <a href="/docs/getting-started/">Getting Started guide</a>.</li></p>
+<li><p>If you also want to create an application that makes API calls, you'll want to complete the <a href="/docs/createapp/">Create an Application tutorial</a>.</p></li>
+<li><p>If you want to support a single-sign-on (SSO) mechanism that can be used to correlate the Blackbaud user with a user in your add-in's native system, see the <a href="/docs/addins/addin-sso">SKY API Add-in SSO</a> documentation.</p></li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </section>
-
-
-
-
-
-
-

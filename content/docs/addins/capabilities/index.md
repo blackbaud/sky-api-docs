@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Add-in Capabilities
 order: 400
-published: true
+published: false
 showInNav: true
 title: Add-in Capabilities
 ---
