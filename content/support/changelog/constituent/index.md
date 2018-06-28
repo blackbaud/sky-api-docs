@@ -14,12 +14,33 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-06-28
+## 2018-06-29
 
 ### New
-- Added read only 'fundraiser_status' property to the [constituent]({{ stache.config.constituent_entity_reference }}#Constituent) entity.
 
-- Added 'fundraiser_status' filter to [Constituent list]({{ stache.config.portal_endpoints_constituent_get_list }}).
+Added the following endpoint:
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+       <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_constituent_membership_get_all_list }}">
+        <td>Membership list (All constituents)</td>
+        <td>GET</td>
+        <td>/memberships</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+- Added read only `fundraiser_status` property to the [constituent]({{ stache.config.constituent_entity_reference }}#Constituent) entity.
+
+- Added `fundraiser_status` filter to [Constituent list]({{ stache.config.portal_endpoints_constituent_get_list }}).
 
 - The optional `search_field` query parameter is now available on the [Constituent (Search)]({{stache.config.portal_endpoints_constituent_search}}) endpoint. It indicates the property to search with the provided `search_field` filter and will return the exact match if available.  Currently, this filter accepts `lookup_id`.
 
@@ -33,9 +54,11 @@ Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Constituent API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
-## 2018-05-25
+## May
 
-### New
+### 2018-05-25
+
+#### New
 We added the following properties to the [action]({{ stache.config.constituent_entity_reference }}#Action) entity:
 
 - The new `computed_status` property computes the status based on the `completed` and `date` properties when the system is not configured to use custom action statuses. Otherwise, the field calculates the status based on the action's `date` property and whether the `status` property is configured as "Completed."
@@ -49,9 +72,9 @@ We will implement new operation ID values in the OpenApi (fka Swagger) definitio
 
 Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
 
-## 2018-05-15
+### 2018-05-15
 
-### New
+#### New
 
 Added the following endpoint:
 
@@ -74,7 +97,7 @@ Added the following endpoint:
   </table>
 </div>
 
-## 2018-05-11
+### 2018-05-11
 
 ### Announcement: Released Action Category Enhancement for [Constituent API]({{ stache.config.portal_endpoints_constituent }})    
 We updated the Constituent API Action category value from `Phone Call` to `Phone call`. This change impacts the [Action (Get)]({{ stache.config.portal_endpoints_constituent_action_get }}) and [Action list (Single constituent)]({{ stache.config.portal_endpoints_constituent_action_get_list }}) endpoints.
