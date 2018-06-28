@@ -11,7 +11,7 @@ title: Add-ins
 
 # {{ name }}
 
-<bb-alert bb-alert-type="info"><strong>Note!</strong> This content is a preview of an upcoming capability that is limited to beta participants.  If you are interested in more info about add-ins, contact... </bb-alert>
+<bb-alert bb-alert-type="info"><strong>Note!</strong> This content is a preview of an upcoming capability that is limited to SKY API Add-in Beta participants. If you are interested in more info about SKY API Add-ins, contact ... </bb-alert>
 
 Add-ins allow developers to build complementary features that integrate deeply within the user interface of Blackbaud's solutions.  With add-ins, developers can use familiar web development technologies such as HTML, CSS, and JavaScript to augment selected areas of the product with new functionality.
 
