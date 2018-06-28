@@ -14,6 +14,19 @@ title: Constituent Changelog
 
 Monitor this page to keep up with the [Constituent API]({{ stache.config.portal_endpoints_constituent }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-06-28
+
+### New
+- Added read only 'fundraiser_status' property to the [constituent]({{ stache.config.constituent_entity_reference }}#Constituent) entity.
+
+- Added 'fundraiser_status' filter to [Constituent list]({{ stache.config.portal_endpoints_constituent_get_list }}).
+
+- The optional `search_field` query parameter is now available on the [Constituent (Search)]({{stache.config.portal_endpoints_constituent_search}}) endpoint. It indicates the property to search with the provided `search_field` filter and will return the exact match if available.  Currently, this filter accepts `lookup_id`.
+
+- The optional `computed_status` query parameter is now available on the [Action list (All constituents)]({{stache.config.portal_endpoints_action_get_list}}) endpoint. The filter can accept a single value of `Open`, `Completed`, or `PastDue` and will return constituent actions that match the filter.
+
+- Additionally, the optional `status_code` query parameter is now available on the [Action list (All constituents)]({{stache.config.portal_endpoints_action_get_list}}) endpoint. The parameter can be specified multiple times to imply a logical OR and filters the results to only include the items associated with the specified status code(s).  For example, `status_code=Pending&status_code=Sent` will return actions that match both `Pending` and `Sent` status codes.  Available values are in the <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/operations/574f4bc7d7dcde0740edb96a"><b>Action Status</b></a> table.
+
 ## 2018-06-01
 
 ### Announcement: Changes for [Constituent]({{ stache.config.portal_endpoints_constituent }}) API
