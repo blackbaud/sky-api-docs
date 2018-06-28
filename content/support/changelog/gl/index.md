@@ -33,20 +33,20 @@ Added the following endpoint:
 			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_journal_entry_batch_summary_get }}">
 				<td>Journal entry batch summary*</td>
 				<td>GET</td>
-				<td>/</td>
+				<td>/journalentrybatches/{batch_id}/summary</td>
 			</tr>
 		</tbody>
 		<tbody>
 			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_journal_entries_list }}">
 				<td>Journal entries (List)*</td>
 				<td>GET</td>
-				<td>/</td>
+				<td>/journalentrybatches/{batch_id}/journalentries</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-<strong>&#42;</strong> We deprecated the [Journal entry batch (GET)]({{ stache.config.portal_endpoints_journal_entry_batch_get }}) endpoint and replaced it with `Journal entry batch summary (Get)` and `Journal entries (List)` endpoints. We will continue to support deprecated endpoints for v1 of the General Ledger API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
+<strong>&#42;</strong> We deprecated the [Journal entry batch (GET)]({{ stache.config.portal_endpoints_journal_entry_batch_get }}) endpoint and replaced it with the [Journal entry batch summary (Get)]({{ stache.config.portal_endpoints_journal_entry_batch_summary_get }}) and [Journal entries (List)]({{ stache.config.portal_endpoints_journal_entries_list }}) endpoints. We will continue to support deprecated endpoints for v1 of the General Ledger API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
 
 ## 2018-06-20
 
