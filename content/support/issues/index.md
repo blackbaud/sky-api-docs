@@ -16,6 +16,9 @@ If you find an issue, please [contact us]({{ stache.config.support_need_help_url
 ## 2018-06-07
 We are aware of an issue with the [Journal entry batch (GET)]({{stache.config.portal_endpoints_journal_entry_batch_get}}) endpoint. A timeout occurs when batches with large numbers of journal entries cannot be returned. We are working to resolve this issue and will post an update as soon as it is available.
 
+### Resolved
+For the issue reported on 2018-06-07, we deprecated the [Journal entry batch (GET)]({{ stache.config.portal_endpoints_journal_entry_batch_get }}) endpoint and replaced it with the [Journal entry batch summary (Get)]({{ stache.config.portal_endpoints_journal_entry_batch_summary_get }}) and [Journal entries (List)]({{ stache.config.portal_endpoints_journal_entries_list }}) endpoints. We will continue to support deprecated endpoints for v1 of the General Ledger API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
+
 ## 2018-05-09
 We are aware of an issue with the [Transaction distribution (List)]({{stache.config.portal_endpoints_transaction_distribution_search}}) endpoint returning incorrect `account_class` information. We are working to resolve this issue and will post an update as soon as it is available.
 

@@ -614,6 +614,9 @@ portal_endpoints_grant_type_list: <%= stache.config.portal_endpoints_GL %>operat
 # Journal Code List
 portal_endpoints_journal_code_list: <%= stache.config.portal_endpoints_GL %>operations/ListJournalCodes/
 
+# Journal Entries (List)
+portal_endpoints_journal_entries_list: <%= stache.config.portal_endpoints_GL %>operations/ListJournalEntriesSingleJournalEntryBatch/
+
 # Journal Entry Batch Attachment
 portal_endpoints_journal_entry_batch_attachment: <%= stache.config.portal_endpoints_GL %>operations/CreateJournalEntryBatchAttachment/
 
@@ -634,6 +637,9 @@ portal_endpoints_journal_entry_batch_post: <%= stache.config.portal_endpoints_GL
 
 # Journal Entry Batch Post (Post)
 portal_endpoints_journal_entry_batch_post: <%= stache.config.portal_endpoints_GL %>operations/PostJournalEntryBatch/
+
+# Journal Entry Batch Summary
+portal_endpoints_journal_entry_batch_summary_get: <%= stache.config.portal_endpoints_GL %>operations/GetJournalEntryBatchSummary/
 
 # Journal Entry Batch Validate
 portal_endpoints_journal_entry_batch_validate: <%= stache.config.portal_endpoints_GL %>operations/ValidateJournalEntryBatch/
@@ -747,6 +753,13 @@ portal_endpoints_deposit_post: <%= stache.config.portal_endpoints_treasury %>ope
 # Deposits List
 portal_endpoints_deposits_list: <%= stache.config.portal_endpoints_treasury %>operations/ListDepositsSingleBankAccount/
 
+# Transaction Code List
+portal_endpoints_transaction_code_list_treasury: <%= stache.config.portal_endpoints_AP %>operations/ListTransactionCodes/
+
+# Transaction Code Value List
+portal_endpoints_transaction_code_value_list_treasury: <%= stache.config.portal_endpoints_AP %>operations/ListTransactionCodeValuesSingleTransactionCode/
+
+
 # =============================================
 # 			Accounts Payable API ENDPOINTS
 # =============================================
@@ -804,6 +817,12 @@ portal_endpoints_note_post: <%= stache.config.portal_endpoints_AP %>operations/C
 
 # Payment term List
 portal_endpoints_payment_term_list: <%= stache.config.portal_endpoints_AP %>operations/ListPaymentTerms/
+
+# Transaction Code List
+portal_endpoints_transaction_code_list_ap: <%= stache.config.portal_endpoints_AP %>operations/ListTransactionCodes/
+
+# Transaction Code Value List
+portal_endpoints_transaction_code_value_list_ap: <%= stache.config.portal_endpoints_AP %>operations/ListTransactionCodeValuesSingleTransactionCode/
 
 # Vendor Custom Field List
 portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/ListVendorCustomFields/
