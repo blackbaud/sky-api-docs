@@ -14,6 +14,41 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-06-28
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_code_list_ap }}">
+				<td>Transaction code (List)</td>
+				<td>GET</td>
+				<td>/transactioncodes</td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_code_value_list_ap }}">
+				<td>Transaction code value (List)</td>
+				<td>GET</td>
+				<td>/transactioncodes/{transaction_code_id}/value</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+These endpoints currently exist in the General Ledger API. We decided to include them in the Accounts Payable API (and Treasury API) because values from those endpoints may be required to create Accounts Payable (or Treasury) records.
+
+
 ## 2018-06-12
 
 ### Announcement: Changes for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}) API

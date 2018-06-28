@@ -14,6 +14,46 @@ title: Treasury (Beta) Changelog
 
 Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
+## 2018-06-28
+
+### New
+
+Added the following endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_code_list_treasury }}">
+				<td>Transaction code (List)</td>
+				<td>GET</td>
+				<td>/transactioncodes</td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_code_value_list_treasury }}">
+				<td>Transaction code value (List)</td>
+				<td>GET</td>
+				<td>/transactioncodes/{transaction_code_id}/value</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+These endpoints currently exist in the General Ledger API. We decided to include them in the Treasury API (and Accounts Payable API) because values from those endpoints may be required to create Treasury (or Accounts Payable) records.
+
+### Changed
+
+We fixed an issue for [Deposit (Get)]({{ stache.config.portal_endpoints_deposit_get }}) to set the `name` in `transaction_code_values` in `distribution_splits`.
+
+
+
 ## 2018-06-12
 
 ### Announcement: Changes for [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) API
