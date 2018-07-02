@@ -868,8 +868,6 @@ portal_endpoints_school_level_list: <%= stache.config.portal_endpoints_school %>
 # Offering type list GET
 portal_endpoints_offering_type_list: <%= stache.config.portal_endpoints_school %>operations/v1offeringtypesget
 
-
-
 # Phone type list GET
 portal_endpoints_phone_type_list: <%= stache.config.portal_endpoints_school %>operations/V1UsersPhonetypesGet
 
@@ -882,11 +880,17 @@ portal_endpoints_role_list: <%= stache.config.portal_endpoints_school %>operatio
 # Section list GET
 portal_endpoints_section_list: <%= stache.config.portal_endpoints_school %>operations/V1AcademicsSectionsGet
 
+# Sport list GET
+portal_endpoints_sport_list: <%= stache.config.portal_endpoints_school %>operations/V1AthleticsSportsGet
+
 # Student enrollment list  GET
 portal_endpoints_student_enrollement_list: <%= stache.config.portal_endpoints_school %>operations/v1academicsenrollmentsbystudent_idget
 
 # Student list (single section) GET
 portal_endpoints_student_single_section_list: <%= stache.config.portal_endpoints_school %>operations/V1AcademicsSectionsBySection_idStudentsGet
+
+# Team roster GET
+portal_endpoints_team_roster: <%= stache.config.portal_endpoints_school %>operations/V1AthleticsTeamsByTeam_idRosterGet
 
 # Term list  GET
 portal_endpoints_term_list: <%= stache.config.portal_endpoints_school %>operations/v1termsget
