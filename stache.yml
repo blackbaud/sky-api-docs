@@ -279,7 +279,7 @@ portal_endpoints_constituentcodetypes_get_list: <%= stache.config.portal_endpoin
 
 # Constituent Memberships
 portal_endpoints_constituent_membership_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentMembershipsSingleConstituent/
-portal_endpoints_constituent_membership_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentMembershipsAllConstituents/
+portal_endpoints_constituent_membership_get_all_list: <%= stache.config.portal_endpoints_constituent %>operations/ListMemberships/
 
 # Constituent Education
 portal_endpoints_constituent_education_get_list: <%= stache.config.portal_endpoints_constituent %>operations/ListConstituentEducationsSingleConstituent/
