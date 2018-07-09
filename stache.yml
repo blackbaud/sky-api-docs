@@ -838,6 +838,13 @@ portal_endpoints_vendor_list: <%= stache.config.portal_endpoints_AP %>operations
 portal_endpoints_vendor_post: <%= stache.config.portal_endpoints_AP %>operations/CreateVendor/
 
 # =============================================
+# 			Statistical Unit API ENDPOINTS
+# =============================================
+
+# Statistical Unit API
+portal_endpoints_statistical_unit: <%= stache.config.portal_endpoints %>ADDHERE/
+
+# =============================================
 # Payments API Endpoints
 # =============================================
 
