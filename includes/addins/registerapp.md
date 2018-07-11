@@ -1,10 +1,10 @@
-<p style="text-align: left;">To enable Add-ins in a customer's Blackbaud solution, the add-in needs to be associated with an application. The first step in this process is to register your application with SKY API.</p>
+<p style="text-align: left;">To enable Add-ins in your test instance of a Blackbaud solution, the add-in needs to be associated with an application. The first step in this process is to register your application with SKY API.</p>
 
 <div class="row">
   <div class="col-md-6" style="text-align: left;">
     <ol>
       <li><p>From <a href="{{ stache.config.developer_app_management_url }}" target= "_blank">My Applications</a>, click <b>Register app</b>.</p></li>
-      <li><p>Enter the name, description, and logo of your application, as well as your organization's name. This information appears for users when they enable access to your application during the <a href="{{ stache.config.guide_web_api_authorization }}" target="_blank">authorization process</a> or in their product.</p></li>
+      <li><p>Enter the name, description, and logo of your application, as well as your organization's name.</p></li>
       <li><p>In the <strong>Application website URL</strong> field, enter where users can learn more about your application online.</p></li>
       <li>
         <p>Specify the URIs to use to redirect users back to your application during the <a href="{{ stache.config.guide_web_api_authorization }}" target="_blank">authorization process</a>.

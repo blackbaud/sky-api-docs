@@ -1,7 +1,7 @@
 ---
 layout: layout-sidebar
 name: Overview
-order: 50
+order: 10
 published: true
 showInNav: true
 title: Overview

@@ -11,15 +11,15 @@ title: Add-ins
 
 # {{ name }}
 
-<bb-alert bb-alert-type="info"><strong>Note!</strong> This content is a preview of an upcoming capability that is limited to SKY API Add-in Beta participants. If you are interested in more info about SKY API Add-ins, contact ... </bb-alert>
+<bb-alert bb-alert-type="info"><strong>Note!</strong> This content is a preview of an upcoming capability that is limited to SKY API Add-in beta participants. If you are interested in more info about SKY API Add-ins, contact ... </bb-alert>
 
-Add-ins allow developers to build complementary features that integrate deeply within the user interface of Blackbaud's solutions.  With add-ins, developers can use familiar web development technologies such as HTML, CSS, and JavaScript to augment selected areas of the product with new functionality.
+Add-ins enable developers to build complementary features that integrate deeply within the user interface of Blackbaud's solutions.  With add-ins, developers can use familiar web development technologies such as HTML, CSS, and JavaScript to augment selected areas of the product with new functionality.
 
 ## Quick starts
 
 Learn how to create your first add-in:
 
-<a href="{{ stache.config.guide_addins }}/createaddin">
+<a href="{{ stache.config.guide_addins }}/build/createaddin">
     <img src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />    
     <div>Hello world</div>
 <a>
