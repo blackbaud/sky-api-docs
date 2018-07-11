@@ -14,9 +14,17 @@ title: Gift (Beta) Changelog
 
 Monitor this page to keep up with the [Gift API (Beta)]({{ stache.config.portal_endpoints_gift }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-06-05
+## 2018-07-11
 
-### Announcement: Changes for [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}) API
+### Announcement
+
+We will transition the [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}) API out of its current public beta phase and into a formal v1 release.
+
+## June
+
+### 2018-06-05
+
+#### Announcement: Changes for [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Gift API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
@@ -49,9 +57,11 @@ Added the following endpoint:
 
 We added the `id` property to the [gift split]({{ stache.config.gift_entity_reference }}#GiftSplit) entity.
 
-## 2018-05-25
+## May
 
-### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+### 2018-05-25
+
+#### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 
