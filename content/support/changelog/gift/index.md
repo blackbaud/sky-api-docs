@@ -1,13 +1,13 @@
 ---
 layout: layout-sidebar
 name: Gift (Beta)
-description: Information on additions and changes for the Gift API (Beta).
+description: Information on additions and changes for the Gift API.
 order: 175
 published: true
 showInNav: true
 icon: fa fa-gift
 back_to_top: true
-title: Gift (Beta) Changelog
+title: Gift Changelog
 ---
 
 # {{ name }}
@@ -51,7 +51,7 @@ We added the `id` property to the [gift split]({{ stache.config.gift_entity_refe
 
 ## 2018-05-25
 
-### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 

@@ -43,7 +43,7 @@ APIs:
     description: "Monitor this page to keep up with the latest changes to the Opportunity API."
     icon: fa-handshake-o
     location: opportunity
-    title: Opportunity (Beta)
+    title: Opportunity
   -
   #   description: "Monitor this page to keep up with the latest changes to the Payments API."
   #   icon: fa-credit-card

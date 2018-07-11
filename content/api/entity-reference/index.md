@@ -6,7 +6,7 @@ published: true
 showInNav: true
 showBreadcrumbs: false
 title: Entity Reference
-entity: 
+entity:
     - name: Accounts Payable
       description: Describes the entity and type representations for common items that the Accounts Payable API uses.
       icon: fa-university
@@ -27,7 +27,7 @@ entity:
       description: Describes the entity and type representations for common items that the Gift API uses.
       icon: fa-gift
       url: /api/entity-reference/gift
-    - name: Opportunity (Beta)
+    - name: Opportunity
       description: Describes the entity and type representations for common items that the Opportunity API uses.
       icon: fa-handshake-o
       url: /api/entity-reference/opportunity

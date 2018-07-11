@@ -40,7 +40,7 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
         <td>Used to manage gift information, including related entities such as acknowledgements, fundraisers, and receipts.</td>
       </tr>
       <tr>
-        <td class="nowrap">Opportunity (Beta)</td>
+        <td class="nowrap">Opportunity</td>
         <td><code class="language-http">{{ stache.config.opportunity_api_suffix }}</code></td>
         <td>Used to manage opportunity information, including related entities such as opportunity fundraisers and opportunity attachments.</td>
       </tr>
