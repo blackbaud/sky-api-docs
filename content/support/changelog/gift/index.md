@@ -16,7 +16,7 @@ Monitor this page to keep up with the [Gift API]({{ stache.config.portal_endpoin
 
 ## 2018-07-11
 
-### Announcement: Changes for [Gift API]({{ stache.config.portal_endpoints_gift }})
+### Announcement: Changes for [Gift]({{ stache.config.portal_endpoints_gift }}) API
 
 We will transition the [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}) API out of its current public beta phase and into a formal v1 release.
 
@@ -24,7 +24,7 @@ We will transition the [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}) 
 
 ### 2018-06-05
 
-#### Announcement: Changes for [Gift API]({{ stache.config.portal_endpoints_gift }})
+#### Announcement: Changes for [Gift]({{ stache.config.portal_endpoints_gift }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Gift API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 

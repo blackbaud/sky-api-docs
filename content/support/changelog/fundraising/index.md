@@ -16,7 +16,7 @@ Monitor this page to keep up with the [Fundraising API]({{ stache.config.portal_
 
 ## 2018-07-11
 
-### Announcement
+### Announcement: Changes for [Fundraising]({{ stache.config.portal_endpoints_fundraising }}) API
 
 We will transition the [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}) API out of its current public beta phase and into a formal v1 release.
 

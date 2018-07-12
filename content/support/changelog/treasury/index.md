@@ -16,7 +16,7 @@ Monitor this page to keep up with the [Treasury API]({{ stache.config.portal_end
 
 ## 2018-07-11
 
-### Announcement
+### Announcement: Changes for [Treasury API]({{ stache.config.portal_endpoints_treasury }})
 
 We will transition the [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) API out of its current public beta phase and into a formal v1 release.
 
