@@ -14,13 +14,21 @@ title: Opportunity Changelog
 
 Monitor this page to keep up with the [Opportunity API]({{ stache.config.portal_endpoints_opportunity }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-06-01
+## 2018-07-11
 
-### Announcement: Changes for [Opportunity]({{ stache.config.portal_endpoints_opportunity }}) API
+### Announcement: Changes for [Opportunity API]({{ stache.config.portal_endpoints_opportunity }})
+
+We will transition the [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) API out of its current public beta phase and into a formal v1 release.
+
+## June
+
+### 2018-06-01
+
+#### Announcement: Changes for [Opportunity API]({{ stache.config.portal_endpoints_opportunity }})
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Opportunity API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
-### New
+#### New
 
 Added the following endpoint:
 
@@ -43,7 +51,9 @@ Added the following endpoint:
   </table>
 </div>
 
-## 2018-05-25
+## May
+
+### 2018-05-25
 
 ### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising]({{ stache.config.portal_endpoints_fundraising }}), [Gift]({{ stache.config.portal_endpoints_gift }}), and [Opportunity]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
@@ -52,6 +62,7 @@ We will implement new operation ID values in the OpenApi (fka Swagger) definitio
 Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
 
 ## January
+
 ### 2018-01-24
 
 #### New

@@ -14,9 +14,17 @@ title: Fundraising Changelog
 
 Monitor this page to keep up with the [Fundraising API]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-06-19
+## 2018-07-11
 
-### New
+### Announcement
+
+We will transition the [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}) API out of its current public beta phase and into a formal v1 release.
+
+## June
+
+### 2018-06-19
+
+#### New
 
 Added the following endpoints:
 
@@ -39,13 +47,13 @@ Added the following endpoints:
   </table>
 </div>
 
-## 2018-06-01
+### 2018-06-01
 
 ### Announcement: Changes for [Fundraising]({{ stache.config.portal_endpoints_fundraising }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Fundraising API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
-### New
+#### New
 
 Added the following endpoint:
 
