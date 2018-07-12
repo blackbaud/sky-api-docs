@@ -1,18 +1,18 @@
 ---
 layout: layout-sidebar
-name: Treasury (Beta)
-description: Information on additions and changes for the Treasury API (Beta).
+name: Treasury
+description: Information on additions and changes for the Treasury API.
 order: 225
 published: true
 showInNav: true
 icon: fa fa-money
 back_to_top: true
-title: Treasury (Beta) Changelog
+title: Treasury Changelog
 ---
 
 # {{ name }}
 
-Monitor this page to keep up with the [Treasury API (Beta)]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
+Monitor this page to keep up with the [Treasury API]({{ stache.config.portal_endpoints_treasury }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
 ## 2018-06-28
 
@@ -56,13 +56,13 @@ We fixed an issue for [Deposit (Get)]({{ stache.config.portal_endpoints_deposit_
 
 ## 2018-06-12
 
-### Announcement: Changes for [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) API
+### Announcement: Changes for [Treasury]({{ stache.config.portal_endpoints_treasury }}) API
 
-We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Treasury (Beta) API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
+We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Treasury API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
 ## 2018-06-04
 
-### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
+### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury]({{ stache.config.portal_endpoints_treasury }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 

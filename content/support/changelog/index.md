@@ -28,7 +28,7 @@ APIs:
     description: "Monitor this page to keep up with the latest changes to the Fundraising API."
     icon: fa-line-chart
     location: fundraising
-    title: Fundraising (Beta)
+    title: Fundraising
   -
     description: "Monitor this page to keep up with the latest changes to the General Ledger API."
     icon: fa-book
@@ -38,12 +38,12 @@ APIs:
     description: "Monitor this page to keep up with the latest changes to the Gift API."
     icon: fa-gift
     location: gift
-    title: Gift (Beta)
+    title: Gift
   -
     description: "Monitor this page to keep up with the latest changes to the Opportunity API."
     icon: fa-handshake-o
     location: opportunity
-    title: Opportunity (Beta)
+    title: Opportunity
   -
   #   description: "Monitor this page to keep up with the latest changes to the Payments API."
   #   icon: fa-credit-card
@@ -63,7 +63,7 @@ APIs:
     description: "Monitor this page to keep up with the latest changes to the Treasury API."
     icon: fa-money
     location: treasury
-    title: Treasury (Beta)
+    title: Treasury 
 ---
 
 # {{ name }}

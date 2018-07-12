@@ -25,7 +25,7 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
         <td>Used to manage constituent information, including related entities such as addresses, phones, emails, and notes.</td>
       </tr>
       <tr>
-        <td class="nowrap">Fundraising (Beta)</td>
+        <td class="nowrap">Fundraising</td>
         <td><code class="language-http">{{ stache.config.fundraising_api_suffix }}</code></td>
         <td>Used to manage information within the fundraising hierarchy and related entities such as campaigns, funds, and appeals.</td>
       </tr>
@@ -35,17 +35,17 @@ Within this address, you'll find APIs (collections of related endpoints) coverin
         <td>Used to manage the general ledger, including accounts, projects, and journal entries.</td>
       </tr>
       <tr>
-        <td class="nowrap">Gift (Beta)</td>
+        <td class="nowrap">Gift</td>
         <td><code class="language-http">{{ stache.config.gift_api_suffix }}</code></td>
         <td>Used to manage gift information, including related entities such as acknowledgements, fundraisers, and receipts.</td>
       </tr>
       <tr>
-        <td class="nowrap">Opportunity (Beta)</td>
+        <td class="nowrap">Opportunity</td>
         <td><code class="language-http">{{ stache.config.opportunity_api_suffix }}</code></td>
         <td>Used to manage opportunity information, including related entities such as opportunity fundraisers and opportunity attachments.</td>
       </tr>
       <tr>
-        <td class="nowrap">Treasury (Beta)</td>
+        <td class="nowrap">Treasury</td>
         <td><code class="language-http">{{ stache.config.treasury_api_suffix }}</code></td>
         <td>Used to manage Treasury information, including related entities such as adjustments, checks, and deposits.</td>
       </tr>
