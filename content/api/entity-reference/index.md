@@ -6,7 +6,7 @@ published: true
 showInNav: true
 showBreadcrumbs: false
 title: Entity Reference
-entity: 
+entity:
     - name: Accounts Payable
       description: Describes the entity and type representations for common items that the Accounts Payable API uses.
       icon: fa-university
@@ -15,7 +15,7 @@ entity:
       description: Describes the entity and type representations for common items that the Constituent API uses.
       icon: fa-user
       url: /api/entity-reference/constituent
-    - name: Fundraising (Beta)
+    - name: Fundraising
       description: Describes the entity and type representations for common items that the Fundraising API uses.
       icon: fa-line-chart
       url: /api/entity-reference/fundraising
@@ -23,15 +23,15 @@ entity:
       description: Describes the entity and type representations for common items that the General Ledger API uses.
       icon: fa-book
       url: /api/entity-reference/general-ledger
-    - name: Gift (Beta)
+    - name: Gift
       description: Describes the entity and type representations for common items that the Gift API uses.
       icon: fa-gift
       url: /api/entity-reference/gift
-    - name: Opportunity (Beta)
+    - name: Opportunity
       description: Describes the entity and type representations for common items that the Opportunity API uses.
       icon: fa-handshake-o
       url: /api/entity-reference/opportunity
-    - name: Treasury (Beta)
+    - name: Treasury 
       description: Describes the entity and type representations for common items that the Treasury API uses.
       icon: fa-money
       url: /api/entity-reference/treasury
