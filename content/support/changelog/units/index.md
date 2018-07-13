@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Statistical Unit (Beta)
 description: Information on additions and changes for the Statistical Unit API (Beta).
-order: 230
+order: 223
 published: true
 showInNav: false
 icon: fa fa-balance-scale
