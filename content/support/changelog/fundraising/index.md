@@ -1,22 +1,22 @@
 ---
 layout: layout-sidebar
-name: Fundraising (Beta)
-description: Information on additions and changes for the Fundraising API (Beta).
+name: Fundraising
+description: Information on additions and changes for the Fundraising API.
 order: 125
 published: true
 showInNav: true
 icon: fa fa-line-chart
 back_to_top: true
-title: Fundraising (Beta) Changelog
+title: Fundraising Changelog
 ---
 
 # {{ name }}
 
-Monitor this page to keep up with the [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
+Monitor this page to keep up with the [Fundraising API]({{ stache.config.portal_endpoints_fundraising }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
 ## 2018-07-11
 
-### Announcement
+### Announcement: Changes for [Fundraising]({{ stache.config.portal_endpoints_fundraising }}) API
 
 We will transition the [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}) API out of its current public beta phase and into a formal v1 release.
 
@@ -49,7 +49,7 @@ Added the following endpoints:
 
 ### 2018-06-01
 
-#### Announcement: Changes for [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}) API
+### Announcement: Changes for [Fundraising]({{ stache.config.portal_endpoints_fundraising }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Fundraising API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
@@ -80,7 +80,7 @@ Added the following endpoint:
 
 ### 2018-05-25
 
-### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising (Beta)]({{ stache.config.portal_endpoints_fundraising }}), [Gift (Beta)]({{ stache.config.portal_endpoints_gift }}), and [Opportunity (Beta)]({{ stache.config.portal_endpoints_opportunity }}) APIs
+### Announcement: Changes Planned for [Constituent]({{ stache.config.portal_endpoints_constituent }}), [Fundraising]({{ stache.config.portal_endpoints_fundraising }}), [Gift]({{ stache.config.portal_endpoints_gift }}), and [Opportunity]({{ stache.config.portal_endpoints_opportunity }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 
@@ -195,7 +195,7 @@ We changed the URL for the [Goal categories (Get) endpoint]({{stache.config.port
 
 ### 2018-02-09
 
-#### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{stache.config.portal_endpoints_fundraising}})
+#### Announcement: Breaking Changes Planned for [Fundraising API]({{stache.config.portal_endpoints_fundraising}})
 
 We will change the URL for the [Goal categories (Get) endpoint]({{stache.config.portal_endpoints_goal_categories_get}}) to `/fundraisers/goals/categories`.
 
@@ -356,7 +356,7 @@ The [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campa
 
 ### 2017-04-28
 
-#### Announcement: Breaking Changes Planned for [Fundraising API (Beta)]({{ stache.config.portal_endpoints_fundraising }})
+#### Announcement: Breaking Changes Planned for [Fundraising API]({{ stache.config.portal_endpoints_fundraising }})
 
 We will update the default value of the `include_inactive` filter to `false` on the [Appeal list]({{ stache.config.portal_endpoints_appeals_get_list }}), [Campaign list]({{ stache.config.portal_endpoints_campaigns_get_list }}), and [Fund list]({{ stache.config.portal_endpoints_funds_get_list }}) endpoints to exclude inactive records by default. Currently, the filter defaults to `true` and includes inactive records when no value is supplied.
 
