@@ -57,7 +57,7 @@ APIs:
   # -
   #   description: "Monitor this page to keep up with the latest changes to the Statistical Unit API."
   #   icon: fa-balance-scale
-  #   location: statistical unit
+  #   location: units
   #   title: Statistical Unit (Beta)
   # -
     description: "Monitor this page to keep up with the latest changes to the Treasury API."
