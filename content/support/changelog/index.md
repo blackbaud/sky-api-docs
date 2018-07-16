@@ -55,9 +55,9 @@ APIs:
   #   location: school
   #   title: School (Beta)
   # -
-  #   description: "Monitor this page to keep up with the latest changes to the Statistical Unit API."
+  #   description: "Monitor this page to keep up with the latest changes to the Statistical Unit (Beta) API."
   #   icon: fa-balance-scale
-  #   location: units
+  #   location: statistical-unit
   #   title: Statistical Unit (Beta)
   # -
     description: "Monitor this page to keep up with the latest changes to the Treasury API."
