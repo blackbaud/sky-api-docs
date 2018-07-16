@@ -19,7 +19,7 @@ Add-ins enable developers to build complementary features that integrate deeply 
 
 Learn how to create your first add-in:
 
-<a href="{{ stache.config.guide_addins }}/build/createaddin">
+<a href="{{ stache.config.guide_addins }}/build-test/createaddin">
     <img src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />    
     <div>Hello world</div>
 <a>
