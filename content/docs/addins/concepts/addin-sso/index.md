@@ -1,7 +1,7 @@
 ---
 layout: layout-sidebar
 name: Add-in SSO
-order: 200
+order: 40
 published: true
 showInNav: true
 title: Add-in SSO
@@ -12,7 +12,7 @@ title: Add-in SSO
 
 SKY API add-ins support a single-sign-on (SSO) mechanism that can be used to correlate the Blackbaud user with a user in your add-in's native system.
 
-Within the <a href="https://github.com/blackbaud/sky-api-addin" target="_new">Add-in Client JavaScript library</a>, the AddinClient class provides a `getAuthtoken` function for getting a short-lived "user identity token" from the host page/application/SPA. This token is a signed value that is issued to the SKY API application and represents the Blackbaud user's identity.
+Within the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">Add-in Client JavaScript library</a>, the `AddinClient` class provides a `getAuthtoken` function for getting a short-lived "user identity token" from the host page/application/SPA. This token is a signed value that is issued to the SKY API application and represents the Blackbaud user's identity.
 
 The general flow is that when an add-in is initiated, it can request a user identity token from the host page using the `getAuthtoken` function. The host will in turn request a user identity token from the SKY API OAuth 2.0 service.  The token (a JWT) will be addressed to the SKY API application, and will contain the user's unique identifier (BBID).  The OAuth service will return the token to the host, and the host will pass the token to the add-in iframe.  The add-in can then pass the token to its own backend, where it can be validated and used to look up a user in the add-in's native system. If a user mapping exists, then the add-in can present content to the user. If no user mapping exists, the add-in can prompt the user to login. Once the user's identity in the native system is known, the add-in can persist the user mapping so that on subsequent loads the user doesn't have to log in again (even across devices).
 
@@ -30,10 +30,10 @@ client.getAuthToken().then((token) => {
   . . .
 });</pre></code>
 
-The following string represents a user identity token returned by the `getAuthToken` function:
+The following string represents a sample user identity token returned by the `getAuthToken` function:
 
 <p style="padding: 0 20px; word-wrap: break-word">
-eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjREVjZzVkxIM0FtU1JTbUZqMk04Wm5wWHU3WSJ9.eyJuYW1laWQiOiI4OTE4ZjljNC1iOGRhLTQxYWQtYjA0Mi1hMGU5ZWY3ZGI3OTkiLCJpc3MiOiJodHRwczovL29hdXRoMi5za3kuYmxhY2tiYXVkLmNvbS8iLCJhdWQiOiJiOWEwMmE0OS0wNGNiLTRiOWMtYTkwYy1kMjYyODcxYjU0N2QiLCJleHAiOjE1MjE1NzUxNTAsIm5iZiI6MTUyMTU3NDg1MH0.Vpy4VkLUyP_shvo8UqswiYtOdQ3Tlj0CJLgoW-up4Ns9p4R4qKBv8kJJ8WPRTKFlVNTuBWdMrQ1I07oSuiQ-Q4n3sD3TMsQwRQrv2is_IbGErzY7ZXDyZf0FwlSlzD7aQo6mOy8I7xOIFoyCa_dd87oX_0QdflaPZIAVhJHWV05f4cewlTlroz4G4MOBdDAVy3BGlygk3mQE7xcxMdkUHUAoLAyD4RN3M9lzPWzoD7KHxbm4d2ry8_IWPByYBkXd_yqtqYKgTa5sY2BCuUWHjN95rArdiC34ndaumLl3IKxW-pHbNTvs5KzHVdJUoDQkPraqktE1oEGiq2rOfxwCNQ
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjREVjZzVkxIM0FtU1JTbUZqMk04Wm5wWHU3WSJ9.eyJuYW1laWQiOiIxMjM0ZjVjNC1iOGRhLTQxYWQtYjAzMy1hMGU5ZWY3ZGI3OTkiLCJpc3MiOiJodHRwczovL29hdXRoMi5za3kuYmxhY2tiYXVkLmNvbS8iLCJhdWQiOiJiOWEwMmE0OS0wNGNiLTRiOWMtYTkwYy1kMjYyODcxYjU0N2QiLCJleHAiOjE1MjE1NzUxNTAsIm5iZiI6MTUyMTU3NDg1MH0.Cfy4VkLUyP_tvvo8UqswiYtOdQ3Tlj0CJLgoW-up4Ns9p4R4qKBv8kJJ8WPRTKFlVNTuBWdMrQ1I07oSuiQ
 </p>
 
 Here's a decoded version of the above user identity token:

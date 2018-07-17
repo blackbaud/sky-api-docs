@@ -4,13 +4,14 @@ name: Overview
 order: 10
 published: true
 showInNav: true
+back_to_top: true
 title: Overview
 ---
 {{ include stache.config.partial_header_edit }}
 
 # Add-ins {{ name }}
 
-Add-ins allow developers to build complementary features that integrate deeply within the user interface of Blackbaud's solutions.  With add-ins, developers can use familiar web development technologies such as HTML, CSS, and JavaScript to augment out-of-box product areas with new functionality.
+SKY Add-ins allow developers to build complementary features that integrate deeply within the user interface of Blackbaud's solutions.  With add-ins, developers can use familiar web development technologies such as HTML, CSS, and JavaScript to augment out-of-box product areas with new functionality.
 
 For example, with add-ins you can:
 * <strong>Add custom tiles to selected pages in the system</strong> - bring in data from external systems that is contextually relevant to the current record and provide streamlined workflows for business logic. 
@@ -18,9 +19,9 @@ For example, with add-ins you can:
 
 Add-ins are implemented as web applications that run external to the Blackbaud host application, so they can do almost anything that a webpage can do inside a browser. At runtime, the host application provides an isolated sandbox iframe that contains the add-in page, and provides context values needed to load the add-in.
 
-<img style="border:none" src="/assets/img/constituent-tile.png" alt="todo:  use a more appropriate image, perhaps clarify _exactly_ where the add-in content is rendered within the tile body, not header" />
+<img style="border:none" src="/assets/img/constituent-tile.png" />
 
-### Key features
+## Key features
 
 The add-ins framework provides the following:
 
@@ -31,19 +32,36 @@ The add-ins framework provides the following:
 * Communicate with the host application using SKY API.
 * Associated with SKY applications - when customers enable your SKY application, they'll see the add-ins you've defined.
 
-### Components of an add-in
+## Components of an add-in
 
 Add-ins are defined as part of your SKY application within the [SKY API developer portal](https://developer.sky.blackbaud.com/).  There are two basic components of an add-in: an extension point (described below) and the URL of your own web application.
 
-<img style="border:none" src="/assets/img/overview.png" alt="Overview" alt="todo:  use a more appropriate image" />
+<img style="border:none" src="/assets/img/overview.png" alt="Overview" />
 
-### Types of add-ins
+## Types of add-ins
 
-Add-ins are associated with specific locations within the Blackbaud user interface, known as <strong>extension points</strong>.  The extension point represents a named location in the product where add-ins can be rendered, and it defines both the "class" of add-in (tile, button, tab, etc.) as well as the shape of the context values that will be provided at runtime.
+Add-ins are associated with specific locations within the Blackbaud user interface, known as <a href="{{ stache.config.guide_addins }}concepts/extension-points"><strong>extension points</strong></a>.  The extension point represents a named location in the user interface where add-ins can be rendered, and it defines both the "class" of add-in (tile, button, tab, etc.) as well as the shape of the context values that will be provided at runtime.
+
+### Tile add-ins
+
+Tile add-ins can be created for for selected pages within the system that support a dashboard of tiles.  Custom tiles will persist state and location on a per-user basis along with other native tiles.
+
+<img style="border:none" src="/assets/img/tile-add-ins.png" alt="Tile add-ins" />
+
+### Button add-ins
+
+Button add-ins can be created for selected pages within the system that support page-level actions.
+
+<img style="border:none" src="/assets/img/button-add-ins.png" alt="Button add-ins" />
+
+### Tab add-ins
+
+Tab add-ins can be created for selected pages within the system that use tabs.
+
+<img style="border:none" src="/assets/img/tab-add-ins.png" alt="Tab add-ins" />
+
+### Future add-ins
 
 Over time, we'll introduce support for new types of add-ins and new extension points within the system.
 
-Currently, the following classes of add-ins can be created:
-* Constituent page tile dashboard - provides a way to inject custom tiles onto the constituent page
-
-todo:  this would be a potential location for documenting the "universe of extension points", and when we have more types of add-ins, we could enumerate examples of each here with some screen shots depicting how/where they are rendered
+<bb-alert bb-alert-type="info"><strong>Note!</strong> Stay informed as new extension points are introduced by following the <a href="https://apidocs.sky.blackbaud.com/support/changelog">SKY Add-ins changelog page</a>.</bb-alert>

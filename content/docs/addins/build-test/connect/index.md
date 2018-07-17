@@ -1,8 +1,8 @@
 ---
 layout: layout-sidebar
 name: Connecting to SKY API
-order: 300
-published: true
+order: 10
+published: false
 showInNav: true
 title: Connecting to SKY API
 markdown: false

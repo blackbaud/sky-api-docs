@@ -1,14 +1,16 @@
 ---
 layout: layout-sidebar
-name: Sample Add-in
-order: 700
+name: Hello world sample add-in
+order: 200
 published: true
 showInNav: true
-title: Sample Add-in
+title: Hello world sample add-in
 ---
 {{ include stache.config.partial_header_edit }}
 
 # {{ name }}
+
+In this article, we'll walk through the process of building a custom tile for the Constituent page using the SKY Add-in framework.
 
 ## Project scaffolding
  
@@ -30,16 +32,16 @@ Once Visual Studio has finished scaffolding my project, I’ll manually add a fe
  
 First, let’s add the HTML file.
 
-<img src="/assets/img/addin_html_file.jpg" class="img-responsive">
+<img style="border: none" src="/assets/img/addin_html_file.jpg" class="img-responsive">
 
 Next, add the JavaScript file.
 
-<img src="/assets/img/addin_js_file.jpg" class="img-responsive">
+<img style="border: none" src="/assets/img/addin_js_file.jpg" class="img-responsive">
 
 
 And finally, add the CSS file.
 
-<img src="/assets/img/addin_css_file.jpg" class="img-responsive">
+<img style="border: none" src="/assets/img/addin_css_file.jpg" class="img-responsive">
 
  
 ## Define the add-in markup
@@ -175,7 +177,7 @@ For example, you’d specify the query param on the constituent page like this: 
  
 When the page loads, our custom tile will appear (likely at the bottom of the page):
 
-<p><img src="/assets/img/addin_custom_tile.jpg" class="img-responsive"></p>
+<p><img style="border: none" src="/assets/img/addin_custom_tile.jpg" class="img-responsive"></p>
 
 ## Show contextual values
 
@@ -402,9 +404,9 @@ The complete JavaScript is shown here.
 After redeploying the add-in and refreshing the page, the context values will be shown.
 
 
-<p><img src="/assets/img/addin_identitytoken_renxt.jpg" class="img-responsive"></p>
+<p><img style="border: none" src="/assets/img/addin_identitytoken_renxt.jpg" class="img-responsive"></p>
 
 Clicking the button will fetch and display the user identity token, which should be treated as an opaque string on the client.
 
-<p><img src="/assets/img/addin_identitytoken_renxt_string.jpg" class="img-responsive"></p>
+<p><img style="border: none" src="/assets/img/addin_identitytoken_renxt_string.jpg" class="img-responsive"></p>
 

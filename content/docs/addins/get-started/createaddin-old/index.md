@@ -2,7 +2,7 @@
 layout: layout-sidebar
 name: Create an Add-in
 order: 100
-published: true
+published: false
 showInNav: true
 title: Create an Add-in
 ---
@@ -18,7 +18,7 @@ To successfully create an add-in with {{ stache.config.product_name_short }}, fo
 
 Since add-ins are web applications, you can use any framework/tech stack/libraries that you desire, both client-side and server-side.  For example, you can use ASP.NET, PHP, Node.js, MVC, Angular, React, etc. To see an example of an add-in that uses HTML, CSS, and Javscript web development technologies, see our <a href="{{ stache.config.guide_addins/build/code-sample }}>Sample Add-in</a> documentation.
 
-A requirement for SKY API Add-ins is that they must include the Add-in Client JavaScript library on the page to facilitate the interop with the host application.  This library is <a href="https://github.com/blackbaud/sky-api-addin" target="_new">open source on GitHub</a> and available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-api-addin" target="_new">NPM package</a>.
+A requirement for SKY API Add-ins is that they must include the Add-in Client JavaScript library on the page to facilitate the interop with the host application.  This library is <a href="https://github.com/blackbaud/sky-addin-client" target="_new">open source on GitHub</a> and available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_new">NPM package</a>.
 
 
 ## Step 2 - Deploy your add-in
