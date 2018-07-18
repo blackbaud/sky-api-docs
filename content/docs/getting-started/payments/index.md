@@ -38,7 +38,10 @@ showInNav: false
 <div class="row">
   <div class="col-md-12" style="text-align: left;">
 <h3>How to get API subscription keys?</h3>
-<ol><li>To request a subscription to the Payments API, from the <strong><a href="https://developer.sky.blackbaud.com/products/">Products page</a></strong> select <strong>Payments API Preview</strong>. If you don't see this option, make sure you completed step 2.</li>
+<ol><li>To request a subscription to the Payments API, from the <strong><a href="https://developer.sky.blackbaud.com/products/">Products page</a></strong> select <strong>Payments API Preview</strong>. 
+  
+  <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> This option is not the same as the <strong>SKY API Standard Edition</strong> subscription. If you don't see the <strong>Payments API Preview</strong> option, make sure you completed step 2.</bb-alert></p></li>
+ 
 <li>Click <strong>Review terms and subscribe</strong>. The SKY API Terms of Use will appear in a pop-up window.</li>
 <li>Review and agree to the Terms of Use.</li>
 <li>To submit your request, click <strong>Add subscription</strong>.</li></ol>
@@ -86,7 +89,7 @@ showInNav: false
 
 
 <ol>
-<li>From the <a href="https://developer.sky.blackbaud.com/docs/services/payments"><strong>Payments API Endpoint Reference</strong></a>, navigate to an endpoint such as <strong>GET Merchant account list</strong>, and click <strong>Try it</strong>. This activates the {{ stache.config.dev_console_name }}.</li>
+<li>From the <a href="https://developer.sky.blackbaud.com/docs/services/payments"><strong>Payments API Endpoint Reference</strong></a>, navigate to an endpoint such as <strong>GET Payment configuration list</strong>, and click <strong>Try it</strong>. This activates the {{ stache.config.dev_console_name }}.</li>
 <li>Under <strong>Query parameters</strong>, enter a parameter. For example, enter <code>true</code> for the <code>include_inactive</code> parameter.</li>
 <li>Under <strong>Headers</strong>, select the <strong>Show/Hide</strong> icon in the <code>{{ stache.config.subscription_keyname }}</code> field.  The value reflects one of your Payments API subscription keys.
 <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> The  <strong>Request URL</strong> and <strong>HTTP request</strong> change based on the values for the parameter and request header field values.</bb-alert></p></li>
