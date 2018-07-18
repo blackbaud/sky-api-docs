@@ -40,7 +40,7 @@ showInNav: false
 <h3>How to get API subscription keys?</h3>
 <ol><li>To request a subscription to the Payments API, from the <strong><a href="https://developer.sky.blackbaud.com/products/">Products page</a></strong> select <strong>Payments API Preview</strong>. 
   
-  <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong>This is option is not <strong>SKY API Standard Edition</strong> subscription. If you don't see <strong>Payments API Preview</strong>, make sure you completed step 2.</bb-alert></p></li>
+  <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> This option is not the same as the <strong>SKY API Standard Edition</strong> subscription. If you don't see the <strong>Payments API Preview</strong> option, make sure you completed step 2.</bb-alert></p></li>
  
 <li>Click <strong>Review terms and subscribe</strong>. The SKY API Terms of Use will appear in a pop-up window.</li>
 <li>Review and agree to the Terms of Use.</li>
