@@ -14,9 +14,95 @@ title: Accounts Payable Changelog
 
 Monitor this page to keep up with the [Accounts Payable API]({{ stache.config.portal_endpoints_AP }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-06-28
+## 2018-07-19
 
-### New
+### New 
+
+Added the following endpoint:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_vendor_attachment_post }}">
+				<td>Vendor attachment</td>
+				<td>POST</td>
+				<td>/vendors/attachments</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+The Vendor attachment endpoint supports physical attachments and link attachments. Note the shape of the request in JSON form:
+<pre class="language-javascript"><code>
+{
+  "parent_id": 0,
+  "name": "string",
+  "url": "string",
+  "type": "Link",
+  "media_type": "string",
+  "file": {
+    "ContentLength": 0,
+    "ContentType": "string",
+    "FileName": "string",
+    "InputStream": {
+      "CanRead": true,
+      "CanSeek": true,
+      "CanTimeout": true,
+      "CanWrite": true,
+      "Length": 0,
+      "Position": 0,
+      "ReadTimeout": 0,
+      "WriteTimeout": 0
+      }
+  }
+}
+</code></pre>
+
+- The `type` field accepts `Physical` or `Link` but defaults to `Link`.
+- The `url` field is required for link attachments but not for physical attachments.
+- <a href="https://msdn.microsoft.com/en-us/library/system.web.httppostedfilebase(v=vs.110).aspx">The `file` field is `HttpPostedFileBase`</a>. It is required for physical attachments but not for link attachments.
+- For physical attachments, requests must be `multipart/form-data`. For example:
+
+<pre class="language-javascript"><code>
+public static Task<HttpResponseMessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
+        {
+            var httpContent = new MultipartFormDataContent();
+            var streamContent = new StreamContent(content.File.InputStream);
+            var ContentDisposition = new ContentDispositionHeaderValue("form-data");
+            ContentDisposition.Name = "File";
+            ContentDisposition.FileName = content.File.FileName;
+            streamContent.Headers.ContentDisposition = ContentDisposition;
+            streamContent.Headers.ContentType = new MediaTypeHeaderValue(content.File.ContentType);
+            httpContent.Add(streamContent);
+            httpContent.Add(new StringContent(content.ParentId.ToString()), "ParentId");
+            httpContent.Add(new StringContent(content.Name), "Name");
+            httpContent.Add(new StringContent(content.Type.ToString()), "Type");
+            httpContent.Add(new StringContent(content.MediaType.ToString()), "MediaType");
+            
+            var request = new HttpRequestMessage(HttpMethod.Post, route)
+            {
+                Content = httpContent
+            };
+            return SendAsync(client, request);
+        }
+</code></pre>
+
+- In `application/json` requests, field names must use snake casing such as `parent_id` and `media_type`, whereas in `multipart/form-data` requests, field names must use camel case, such as `ParentId` and `MediaType`.
+- Link attachments should be sent as `application/json` formatted requests with the `file` field omitted.
+- If the `file` field is populated in `application/json` formatted requests, the request fails unless `type` is set to `Link` because then the request ignores the file.
+
+## June
+
+### 2018-06-28
+
+#### New
 
 Added the following endpoint:
 
@@ -49,23 +135,23 @@ Added the following endpoint:
 These endpoints currently exist in the General Ledger API. We decided to include them in the Accounts Payable API (and Treasury API) because values from those endpoints may be required to create Accounts Payable (or Treasury) records.
 
 
-## 2018-06-12
+### 2018-06-12
 
-### Announcement: Changes for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}) API
+#### Announcement: Changes for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Accounts Payable API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
-## 2018-06-04
+### 2018-06-04
 
-### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
+#### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 
 Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you’ll need to fix any compile-time errors in your code stemming from new method names.
 
-## 2018-06-01
+### 2018-06-01
 
-### New
+#### New
 
 Added the following endpoint:
 
