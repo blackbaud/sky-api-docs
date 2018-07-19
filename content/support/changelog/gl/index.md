@@ -14,9 +14,111 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-06-28
+## 2018-07-19
 
 ### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_budget_detail }}">
+				<td>Budget detail</td>
+				<td>GET</td>
+				<td>/budgets/{scenario_id}/details</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_budget_patch }}">
+				<td>Budget</td>
+				<td>PATCH</td>
+				<td>/budgets/{scenario_id}</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_budget_lines_list }}">
+				<td>Budget lines (List)</td>
+				<td>GET</td>
+				<td>/budgets/{scenario_id}/details/lines</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+### Changed
+
+We made several changes to the  [Journal entry batch attachment]({{ stache.config.portal_endpoints_journal_entry_batch_attachment }}) endpoint:
+- The endpoint now supports physical attachments. (Previously, it only supported link attachments.)
+- Note the shape of the request in JSON form:
+<pre class="language-javascript"><code>
+{
+  "parent_id": 0,
+  "name": "string",
+  "url": "string",
+  "type": "Link",
+  "media_type": "string",
+  "file": {
+    "ContentLength": 0,
+    "ContentType": "string",
+    "FileName": "string",
+    "InputStream": {
+      "CanRead": true,
+      "CanSeek": true,
+      "CanTimeout": true,
+      "CanWrite": true,
+      "Length": 0,
+      "Position": 0,
+      "ReadTimeout": 0,
+      "WriteTimeout": 0
+      }
+   }
+}
+</code></pre>
+
+- The `type` field now accepts `Physical` but defaults to `Link`.
+- The `url` is required for link attachments but not for physical attachments
+- <a href="https://msdn.microsoft.com/en-us/library/system.web.httppostedfilebase(v=vs.110).aspx">The `file` field is `HttpPostedFileBase`</a>. It is required for physical attachments but not for link attachments.
+- For physical attachments, requests must be `multipart/form-data`. For example:
+
+<pre class="language-javascript"><code>
+public static Task<HttpResponseMessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
+        {
+            var httpContent = new MultipartFormDataContent();
+            var streamContent = new StreamContent(content.File.InputStream);
+            var ContentDisposition = new ContentDispositionHeaderValue("form-data");
+            ContentDisposition.Name = "File";
+            ContentDisposition.FileName = content.File.FileName;
+            streamContent.Headers.ContentDisposition = ContentDisposition;
+            streamContent.Headers.ContentType = new MediaTypeHeaderValue(content.File.ContentType);
+            httpContent.Add(streamContent);
+            httpContent.Add(new StringContent(content.ParentId.ToString()), "ParentId");
+            httpContent.Add(new StringContent(content.Name), "Name");
+            httpContent.Add(new StringContent(content.Type.ToString()), "Type");
+            httpContent.Add(new StringContent(content.MediaType.ToString()), "MediaType");
+            
+            var request = new HttpRequestMessage(HttpMethod.Post, route)
+            {
+                Content = httpContent
+            };
+            return SendAsync(client, request);
+        }
+
+</code></pre>
+
+- In `application/json` requests, field names must use snake casing such as `parent_id` and `media_type`, whereas in `multipart/form-data` requests, field names must use camel case, such as `ParentId` and `MediaType`.
+- Link attachments should be sent as `application/json` formatted requests with the `file` field omitted.
+- If the `file` field is populated in `application/json` formatted requests, the request fails unless `type` is set to `Link` because then the request ignores the file.
+
+
+## June
+
+### 2018-06-28
+
+#### New
 
 Added the following endpoint:
 
@@ -48,23 +150,23 @@ Added the following endpoint:
 
 <strong>&#42;</strong> We deprecated the [Journal entry batch (GET)]({{ stache.config.portal_endpoints_journal_entry_batch_get }}) endpoint and replaced it with the [Journal entry batch summary (Get)]({{ stache.config.portal_endpoints_journal_entry_batch_summary_get }}) and [Journal entries (List)]({{ stache.config.portal_endpoints_journal_entries_list }}) endpoints. We will continue to support deprecated endpoints for v1 of the General Ledger API, but we recommend transitioning to the new endpoints for a more robust and consistent response.
 
-## 2018-06-20
+### 2018-06-20
 
-### Changed
+#### Changed
 We made changes to the following endpoints:
 
 - The [Journal entry batch (List)]({{ stache.config.portal_endpoints_journal_entry_batch_list }}) endpoint now includes a new `search_text` request parameter that can match `description` or `ui_batch_id`. For example, `?search_text=100` returns a list of batches with a `ui_batch_id` that contains "100" or a `description` that contains "100".
 - The [Budget (List)]({{ stache.config.portal_endpoints_budget_list }}) endpoint now includes a new `scenario_id` field that returns the scenario ID associated with the budget.
 
-## 2018-06-12
+### 2018-06-12
 
-### Announcement: Changes for [General Ledger]({{ stache.config.portal_endpoints_GL }}) API
+#### Announcement: Changes for [General Ledger]({{ stache.config.portal_endpoints_GL }}) API
 
 We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the General Ledger API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.
 
-## 2018-06-04
+### 2018-06-04
 
-### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
+#### Announcement: Changes Planned for [Accounts Payable]({{ stache.config.portal_endpoints_AP }}), [General Ledger]({{ stache.config.portal_endpoints_GL }}), and [Treasury (Beta)]({{ stache.config.portal_endpoints_treasury }}) APIs
 
 We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won’t need to change them again).
 
