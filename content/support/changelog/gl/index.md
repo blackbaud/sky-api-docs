@@ -41,7 +41,7 @@ Added the following endpoints:
 				<td>/budgets/{scenario_id}</td>
 			</tr>
 			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_budget_lines_list }}">
-				<td>Budget lines (List)</td>
+				<td>Budget detail lines (List)</td>
 				<td>GET</td>
 				<td>/budgets/{scenario_id}/details/lines</td>
 			</tr>
