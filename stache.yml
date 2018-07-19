@@ -573,14 +573,23 @@ portal_endpoints_account_working_capitals_list: <%= stache.config.portal_endpoin
 # Budget Account List
 portal_endpoints_budget_account_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetAccounts/
 
+# Budget Detail
+portal_endpoints_budget_detail: <%= stache.config.portal_endpoints_GL %>operations/GetBudgetDetail/
+
 # Budget Get
 portal_endpoints_budget_get: <%= stache.config.portal_endpoints_GL %>operations/GetBudget/
 
 # Budget Grant List
 portal_endpoints_budget_grant_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetGrants/
 
+# Budget Lines (List)
+portal_endpoints_budget_lines_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetLines/
+
 # Budget List
 portal_endpoints_budget_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgets/
+
+# Budget Patch
+portal_endpoints_budget_patch: <%= stache.config.portal_endpoints_GL %>operations/EditBudget/
 
 # Budget Post
 portal_endpoints_budget_post: <%= stache.config.portal_endpoints_GL %>operations/CreateBudget/
@@ -824,6 +833,9 @@ portal_endpoints_transaction_code_list_ap: <%= stache.config.portal_endpoints_AP
 
 # Transaction Code Value List
 portal_endpoints_transaction_code_value_list_ap: <%= stache.config.portal_endpoints_AP %>operations/ListTransactionCodeValuesSingleTransactionCode/
+
+# Vendor Attachment Post
+portal_endpoints_vendor_attachment_post: <%= stache.config.portal_endpoints_AP %>operations/CreateVendorAttachment/
 
 # Vendor Custom Field List
 portal_endpoints_vendor_custom_field_list: <%= stache.config.portal_endpoints_AP %>operations/ListVendorCustomFields/
