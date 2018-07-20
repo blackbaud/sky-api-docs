@@ -21,15 +21,17 @@ Each extension point defines its own "context", which represents the initial set
 
 For example, the <stache-code>Constituent Tile Dashboard</stache-code> defines the context as containing a `recordId` property representing the system record ID of the current constituent.  This means that, for constituent tiles, the following JSON shape will be made available through the context object at runtime:
 
-<code language-type="json">
-      {
-        "recordId": "280"
-      }
-</code>
+```json
+{
+  "recordId": "280"
+}
+```
 
 Additional contextual information about the current record can be obtained through SKY API as needed based on the initial set of context values.
 
 The following extension points have been defined:
+
+todo: improve this presentation
 
 ### Constituent
 

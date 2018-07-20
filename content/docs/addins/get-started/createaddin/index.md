@@ -21,7 +21,7 @@ Before you begin, make sure you've created a Blackbaud developer account as cove
 
 Since add-ins are web applications, you can use any framework/tech stack desired, both client-side and server-side.  For example, you can use ASP.NET, PHP, Node.js, MVC, Angular, React, etc.  To see an example of an add-in that uses plain HTML, CSS, and JavaScript, see our <a href="{{ stache.config.guide_addins/get-started/hello-world }}">Hello World</a> sample add-in walk-through.
 
-A requirement for SKY Add-ins is that the web application must include the Add-in Client JavaScript library on the page and instantiate the `AddinClient` class in order to facilitate the interop with the host application.  This library is available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_new">NPM package</a>, and more details can be found in the Readme.
+A requirement for SKY Add-ins is that the web application must include the Add-in Client JavaScript library on the page and instantiate the `AddinClient` class in order to facilitate the interop with the host application.  This library is available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_new">npm package</a>, and more details can be found in the Readme.
 
 At runtime, the add-in's web page will be rendered in a sandboxed iframe within the host application.  Note that add-ins are hidden by default until they are ready to be shown.  This gives the add-in an opportunity to perform any necessary initialization and logic to determine whether it should be visible or remain hidden.  When the add-in is ready to be shown, it will call the `ready` method provided in the `init` callback:  
 
@@ -54,7 +54,7 @@ For production, your add-in's web application can be deployed to any cloud, and 
 <ol>
 <li>From <a href="{{ stache.config.developer_app_management_url }}" target= "_blank">My Applications</a>, navigate to the detail page for your application by clicking on the application name link.</li>
 <li>Under Add-ins, select <b>Add</b> to launch the <b>Add add-in</b> dialog.
-<p><img src="/assets/img/add_addin.png" class="img-responsive"></p>
+<p><img style="border:none" src="/assets/img/add_addin.png" class="img-responsive"></p>
 </li>
 <li>Enter a unique name for the add-in. Currently, this value simply provides a reference for your use only - Blackbaud solution users will not see it.</li>
 <li>Specify the extension point for where you want to insert your add-in into the Blackbaud solution. For more information about extension points, see the <a href="{{ stache.config.guide_addins/concepts/extension-points }}">Extension points</a> documentation.</li>
@@ -66,6 +66,7 @@ At this point, your add-in will be provisioned for any existing customers who've
 
 ## Next steps
 
-<ul>
-<li>View the <a href="{{ stache.config.guide_addins/get-started/hello-world }}">Hello World</a> sample add-in walk-through.</li>
-</ul>
+* Get an <a href="{{ stache.config.guide_addins }}overview">overview</a> of the SKY Add-ins framework.
+* View the <a href="{{ stache.config.guide_addins }}get-started/hello-world">Hello World</a> sample to see a detailed walk-through of building an add-in.
+* View additional <a href="{{ stache.config.guide_addins }}/concepts">concepts</a> and capabilities associated with the SKY Add-ins framework.
+* View our <a href="{{ stache.config.guide_addins }}how-to-guides/addin-design">design guidelines</a> to read about building an effective and compelling user experience for your add-in.

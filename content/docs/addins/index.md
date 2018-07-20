@@ -10,11 +10,15 @@ title: Add-ins
 
 # {{ name }}
 
-<bb-alert bb-alert-type="info"><strong>Note!</strong> This content is a preview of an upcoming capability that is limited to SKY Add-in beta participants. If you are interested in participating in the beta program, please <a href="mailto:skyapi@blackbaud.com?subject=SKY%20Add-ins%20-%20Request%20to%20participate%20in%20Add-ins%20beta%20program">contact us</a>.</bb-alert>
+<bb-alert bb-alert-type="info"><strong>Note!</strong> This content is preview documentation for an upcoming capability that is limited to SKY Add-in beta participants. If you are interested in participating in the beta program, please <a href="mailto:skyapi@blackbaud.com?subject=SKY%20Add-ins%20-%20Request%20to%20participate%20in%20Add-ins%20beta%20program">contact us</a>.</bb-alert>
 
 SKY Add-ins enable developers to build complementary features that integrate deeply within the user interface of Blackbaud solutions.  With add-ins, developers can use familiar web development technologies such as HTML, CSS, and JavaScript to augment selected areas of the product with new functionality.  Add-ins run in the browser, so they work well in both desktop and mobile scenarios.
 
 Learn how to create SKY Add-ins with our quick starts, how-to guides, and reference documentation.
+
+## Overview
+
+Get an <a href="{{ stache.config.guide_addins }}overview">overview</a> of the SKY Add-ins framework.
 
 ## Quick starts
 
@@ -23,12 +27,12 @@ Learn how to create your first add-in:
 <div>
     <div style="text-align:center; display:inline-block; padding-right:25px">
         <a href="{{ stache.config.guide_addins }}get-started/createaddin">
-            <img style="border: none" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
+            <img style="border: none" class="img-responsive" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
             <div>Get started tutorial</div></a>
     </div>
     <div style="text-align:center; display:inline-block">
         <a href="{{ stache.config.guide_addins }}get-started/hello-world">
-            <img style="border: none" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
+            <img style="border: none" class="img-responsive" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
             <div>Hello world sample</div></a>
     </div>
 </div>
@@ -36,8 +40,8 @@ Learn how to create your first add-in:
 ## How-to guides
 * <a href="{{ stache.config.guide_addins }}how-to-guides/addin-design/">Design the user interface of an add-in</a>
 * <a href="{{ stache.config.guide_addins }}how-to-guides/addin-development/">Add-in development</a>
-* <a href="http://www.example.com">Test and debug an add-in</a>
-* <a href="http://www.example.com">Make your add-in available</a>
+<!-- * <a href="http://www.example.com">Test and debug an add-in</a>
+* <a href="http://www.example.com">Make your add-in available</a> -->
 
 ## Reference
 

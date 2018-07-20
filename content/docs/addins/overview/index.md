@@ -48,13 +48,13 @@ Tile add-ins can be created for for selected pages within the system that suppor
 
 <img style="border:none" src="/assets/img/tile-add-ins.png" alt="Tile add-ins" />
 
-### Button add-ins
+### Button add-ins (coming soon)
 
 Button add-ins can be created for selected pages within the system that support page-level actions.
 
 <img style="border:none" src="/assets/img/button-add-ins.png" alt="Button add-ins" />
 
-### Tab add-ins
+### Tab add-ins (coming soon) 
 
 Tab add-ins can be created for selected pages within the system that use tabs.
 
@@ -64,4 +64,11 @@ Tab add-ins can be created for selected pages within the system that use tabs.
 
 Over time, we'll introduce support for new types of add-ins and new extension points within the system.
 
-<bb-alert bb-alert-type="info"><strong>Note!</strong> Stay informed as new extension points are introduced by following the <a href="https://apidocs.sky.blackbaud.com/support/changelog">SKY Add-ins changelog page</a>.</bb-alert>
+<bb-alert bb-alert-type="info"><strong>Note!</strong> Stay informed as new extension points are introduced by following the <a href="https://apidocs.sky.blackbaud.com/support/changelog">SKY Add-ins changelog page</a>, and feel free to submit <a href="https://apidocs.sky.blackbaud.com/support/ideas">Ideas</a> for new types of add-ins and extension points.</bb-alert>
+
+## Next steps
+
+* View the <a href="{{ stache.config.guide_addins }}get-started/createaddin">Getting started</a> tutorial to learn more about how to build a SKY Add-in.
+* View the <a href="{{ stache.config.guide_addins }}get-started/hello-world">Hello World</a> sample to see a detailed walk-through of building an add-in.
+* View additional <a href="{{ stache.config.guide_addins }}/concepts">concepts</a> and capabilities associated with the SKY Add-ins framework.
+* View our <a href="{{ stache.config.guide_addins }}how-to-guides/addin-design">design guidelines</a> to read about building an effective and compelling user experience for your add-in.
