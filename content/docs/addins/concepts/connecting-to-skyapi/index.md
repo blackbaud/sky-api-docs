@@ -16,6 +16,7 @@ todo:
 - mention including envId in the authorization endpoint, to filter the environments shown to only the current environment
 - mention that for security reasons to prevent clickjacking the OAuth flow cannot be launched in the add-in’s iframe – it must be launched in a separate window (should be listed in the common issues section as well)
 - mention that the same technique can be used to OAuth into the 3rd-party system
+- discussion of context correlation of Blackbaud constructs (legal entity, environment, user) with similar concepts in external systems
 
 ### Initiate OAuth
 

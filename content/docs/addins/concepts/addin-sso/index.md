@@ -14,9 +14,9 @@ SKY add-ins support a single-sign-on (SSO) mechanism that can be used to correla
 
 Within the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">Add-in Client JavaScript library</a>, the `AddinClient` class provides a `getAuthtoken` function for getting a short-lived "user identity token" from the host application. This token is a signed value that is issued to the SKY API application and represents the Blackbaud user's identity.
 
-The general flow is that when an add-in is initiated, it can request a user identity token from the host page using the `getAuthtoken` function.  The host will in turn request a user identity token from the SKY API OAuth 2.0 service.  The user identity token (a <a href="https://jwt.io">JWT</a>), will be addressed to the SKY API application, and will contain the Blackbaud user's unique identifier.  The OAuth service will return the token to the host, and the host will pass the token to the add-in.  The add-in can then pass the token to its own backend, where it can be validated and used to look up a user in the add-in's native system.  If a user mapping exists, then the add-in can consider the user logged in, and immediately display content to the user.  If no user mapping exists, the add-in can prompt the user to login to the add-in's native system.  Once the user's identity in the native system is known, the add-in can persist the user mapping so that on subsequent loads the user doesn't have to log in again (even across devices).
+The general flow is that when an add-in is initiated, it can request a user identity token from the host page using the `getAuthtoken` function.  The host will in turn request a user identity token from the SKY API OAuth 2.0 service.  The user identity token (a <a href="https://jwt.io">JWT</a>), will be addressed to the SKY API application, and will contain the Blackbaud user's unique identifier.  The OAuth service will return the token to the host, and the host will pass the token to the add-in.  The add-in can then pass the user identity token (along with the environment ID provided as part of the initial context when the add-in is instantiated) to its own backend, where it can be validated and used to look up a user in the add-in's native system.  If a user mapping exists, then the add-in can consider the user logged in, and immediately display content to the user.  If no user mapping exists, the add-in can prompt the user to login to the add-in's native system.  Once the user's identity in the native system is known, the add-in can persist the user mapping so that on subsequent loads the user doesn't have to log in again (even across devices).
 
-Note that the user identity token is a JWT that is signed by the SKY API OAuth 2.0 service, but it cannot be used to make calls to the SKY API. It is purely used to convey the user's identity to the addin.  In order to make SKY API calls, a proper SKY API access token must be obtained.
+Note that the user identity token is signed by the SKY API OAuth 2.0 service, but it cannot be used to make calls to the SKY API. It is purely used to convey the user's identity to the add-in.  In order to make SKY API calls, a proper SKY API access token must be obtained.
 
 This flow is illustrated below:
 
@@ -91,3 +91,18 @@ catch (TokenValidationException ex)
 ```
 
 Once the token has been validated, the add-in's backend will know the Blackbaud user ID and can determine if a user mapping exists for a user in the add-in's native system.  If a mapping exists, then the add-in's backend can immediately present the content for the add-in.  If no user mapping exists, the add-in can prompt the user to login.
+
+### Correlating Blackbaud users with external systems
+
+For proper correlation with external systems, it is important to understand how Blackbaud models our customer base.  The following list describes several concepts within the data model:
+
+- Legal entity - We use the term `legal entity` to represent a top-level customer record in the system.  This could be a specific non-profit organization, an individual change agent, or even a Partner ISV.
+- Environment - An `environment` is a logical grouping of products and services that are available to a `legal entity`.  You can think of an environment as a container of various Blackbaud products and services - it is the unifying construct that faciltiates the inter-communication between those products and services.  A legal entity will typically have at least one environment, but some legal entities may have multiple environments used to serve various purposes (like testing, staging, production, regional chapters, etc.).
+- User - The term `user` refers to a specific Blackbaud ID user account.
+
+Within this data model, a single Blackbaud user can have access to multiple environments, and can even have access to environments across multiple organizations.  Therefore, it is important to properly consider both `User` _and_ `Environment` when establishing a link with an external system.  At runtime, the environment ID will be provided as part of the `args` object, and your add-in can request a user identity token using the `getAuthToken` method of the `AddinClient` class.   
+
+Note that details about the legal entity, environment, and user are returned as part of the `/token` endpoint response when obtaining SKY API access token.  For more information, see step 5 of the [Authorization Code Flow](/docs/authorization/auth-code-flow/#step-5--tokens-returned) documentation, and step 3 of the [Implicit Flow](/docs/authorization/implicit-flow/#step-3--access-token-provided) documentation.
+
+<bb-alert bb-alert-type="warning">
+<strong>Important!</strong> Be sure to properly account for these concepts when correlating data from your system.</bb-alert>

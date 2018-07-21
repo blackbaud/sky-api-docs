@@ -13,7 +13,25 @@ title: Extension points
 
 Each location within the Blackbaud application user interface that can be customized is known as an **extension point**.  
 
-The extension point represents a named location in the product where add-ins can be rendered, and it defines both the "class" of add-in (tile, button, tab, etc.), as well as the shape of the context values that will be provided at runtime. The set of extension points is expected to start small and expand over time based on priority.
+The extension point represents a named location in the product where add-ins can be rendered, and it defines both the "class" of add-in (tile, button, tab, etc.), as well as the shape of the context values that will be provided at runtime.  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Addin Client library documentation</a>, the context values for the extension point are made available to add-ins as part of the `args` object sent to the `init` callback function:
+
+```js
+  // BBSkyAddinClient is global here.
+  var client = new BBSkyAddinClient.AddinClient({
+    callbacks: {
+      init: (args) => {
+
+        // the context values are provided as part of the args object
+        context = args.context;
+
+        // most extension points provide the current record ID
+        currentRecordId = context.recordId;
+
+        ...
+      }
+    }
+  });
+```
 
 <bb-alert alertType="info">
 Each extension point defines its own "context", which represents the initial set of values that will be made available at runtime.  The context represents a contract with consumers (and thus it will be backwards compatible with future changes).
@@ -29,9 +47,7 @@ For example, the <stache-code>Constituent Tile Dashboard</stache-code> defines t
 
 Additional contextual information about the current record can be obtained through SKY API as needed based on the initial set of context values.
 
-The following extension points have been defined:
-
-todo: improve this presentation
+The following section describes the extension points that have been defined to date:
 
 ### Constituent
 
@@ -48,8 +64,24 @@ todo: improve this presentation
         <td>Constituent Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the constituent record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current constituent</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current constituent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -71,24 +103,72 @@ todo: improve this presentation
         <td>Invoice Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the invoice record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current invoice</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current invoice</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
       <tr>
         <td>Vendor Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the vendor record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current vendor</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current vendor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
       <tr>
         <td>Purchase Order Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the purchase order record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current purchase order</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current purchase order</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -110,24 +190,72 @@ todo: improve this presentation
         <td>Account Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the purchase order record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current purchase order</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current account</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
       <tr>
         <td>Project Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the project record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current project</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current project</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
       <tr>
         <td>Journal Entry Batch Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the journal entry batch record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current journal entry batch</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current journal entry batch</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -149,8 +277,24 @@ todo: improve this presentation
         <td>Bank Account Tile Dashboard</td>
         <td>
           <div>Tile dashboard on the bank account record page</div>
-          <div>The context object will contain the following properties:</div>
-          <div>`recordId` - The system record ID of the current bank account</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current bank account</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </td>
       </tr>
     </tbody>

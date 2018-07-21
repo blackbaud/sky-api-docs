@@ -46,19 +46,19 @@ Add-ins are associated with specific locations within the Blackbaud user interfa
 
 Tile add-ins can be created for for selected pages within the system that support a dashboard of tiles.  Custom tiles will persist state and location on a per-user basis along with other native tiles.
 
-<img style="border:none" src="/assets/img/tile-add-ins.png" alt="Tile add-ins" />
+<img style="border:solid 1px #E7E7E7" src="/assets/img/tile-add-ins.png" alt="Tile add-ins" />
 
 ### Button add-ins (coming soon)
 
 Button add-ins can be created for selected pages within the system that support page-level actions.
 
-<img style="border:none" src="/assets/img/button-add-ins.png" alt="Button add-ins" />
+<img style="border:solid 1px #E7E7E7" src="/assets/img/button-add-ins.png" alt="Button add-ins" />
 
 ### Tab add-ins (coming soon) 
 
 Tab add-ins can be created for selected pages within the system that use tabs.
 
-<img style="border:none" src="/assets/img/tab-add-ins.png" alt="Tab add-ins" />
+<img style="border:solid 1px #E7E7E7" src="/assets/img/tab-add-ins.png" alt="Tab add-ins" />
 
 ### Future add-ins
 
