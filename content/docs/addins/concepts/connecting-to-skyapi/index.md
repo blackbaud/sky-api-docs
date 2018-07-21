@@ -20,11 +20,13 @@ todo:
 
 ### Initiate OAuth
 
-Note that this round trips to the add-in's backend in order to properly obtain a `state` parameter to use when initiating the OAuth process.  The response of the /api/authorize call will redirect the browser to the SKY API OAuth 2.0 consent page.
+Note that this code round-trips to the add-in's backend in order to properly obtain a `state` parameter to use when initiating the OAuth process.  The response of the /api/authorize call will redirect the browser to the SKY API OAuth 2.0 consent page.
 
 ```js
 function connectToSkyApi() {
  
+    // call the add-in's backend to properly establish a state parameter and 
+    // initiate the SKY API OAuth process.  
     var url = "/api/authorize" +
       "?token=" + userIdentityToken +
       "&envid=" + initialArgs.envId;
@@ -36,7 +38,7 @@ function connectToSkyApi() {
       if (child.closed) {
         clearInterval(timer);
  
-        loadTile();
+        // if the user provided consent, the add-in's backend will have an access token for the user
       }
     }
   }

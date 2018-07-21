@@ -102,7 +102,7 @@ For proper correlation with external systems, it is important to understand how 
 
 Within this data model, a single Blackbaud user can have access to multiple environments, and can even have access to environments across multiple organizations.  Therefore, it is important to properly consider both `User` _and_ `Environment` when establishing a link with an external system.  At runtime, the environment ID will be provided as part of the `args` object, and your add-in can request a user identity token using the `getAuthToken` method of the `AddinClient` class.   
 
-Note that details about the legal entity, environment, and user are returned as part of the `/token` endpoint response when obtaining SKY API access token.  For more information, see step 5 of the [Authorization Code Flow](/docs/authorization/auth-code-flow/#step-5--tokens-returned) documentation, and step 3 of the [Implicit Flow](/docs/authorization/implicit-flow/#step-3--access-token-provided) documentation.
+Note that details about the legal entity, environment, and user are returned as part of the `/token` endpoint response when obtaining SKY API access token.  For more information, see step 5 of the [Authorization Code Flow](/docs/authorization/auth-code-flow/#step-5--tokens-returned) documentation, or step 3 of the [Implicit Flow](/docs/authorization/implicit-flow/#step-3--access-token-provided) documentation.
 
 <bb-alert bb-alert-type="warning">
-<strong>Important!</strong> Be sure to properly account for these concepts when correlating data from your system.</bb-alert>
+<strong>Important!</strong> Be sure to properly account for these concepts when presenting related data from your system.</bb-alert>

@@ -20,7 +20,7 @@ Using the information provided in the `init` arguments, the add-in should determ
 var client = new AddinClient({
 callbacks: {
     init: (args) => {
-    args.ready({ showUI: true, title: 'My Custom Tile Title' });
+      args.ready({ showUI: true, title: 'My Custom Tile Title' });
     }
 }
 });

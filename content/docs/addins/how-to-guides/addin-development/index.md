@@ -10,4 +10,7 @@ title: Add-in development
 
 # Develop your add-in
 
-discuss SDLC for add-ins
+todo:
+- discuss SDLC for add-ins
+- re-mention how add-ins are immediately available to customer who've enabled the application
+- discuss using a non-production SKY API app (or more precisely, a separate SKY API app dedicated for development and testing)
