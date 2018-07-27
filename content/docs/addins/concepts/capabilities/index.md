@@ -55,7 +55,7 @@ var client = new AddinClient({...});
 // provide some context values from the parent add-in to the modal add-in
 var modalContext = {
   someProperty: "Foo",
-  anotherPropertyy: "Bar"
+  anotherProperty: "Bar"
 };
 
 client.showModal({
