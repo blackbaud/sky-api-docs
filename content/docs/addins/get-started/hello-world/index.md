@@ -186,9 +186,7 @@ That all!  Once defined, the add-in will be shown for any customers who've enabl
 
 ## View the add-in
  
-The add-in feature is available in Raiser's Edge NXT in production today, but it requires a special query param for now until we're closer to GA.  Within Raiser's Edge NXT, you can add the following query parameter to tell the page to check for add-ins: `&extendedFeatureConfiguration={"new_features":{"uiextensions":true}}`
- 
-For example, you'd specify the query param on the constituent page like this: `https://renxt.blackbaud.com/constituents/280?tenantid=YOURTENANTID&extendedFeatureConfiguration={"new_features":{"uiextensions":true}}`
+To view your add-in, visit the page or area within the system where the add-in will be rendered (according to the definition of the extension point).
  
 When the page loads, our custom tile will appear (likely at the bottom of the page):
 
