@@ -88,6 +88,45 @@ The following section describes the extension points that have been defined to d
   </table>
 </div>
 
+### Gift
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Extension point</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gift Tile Dashboard</td>
+        <td>
+          <div>Tile dashboard on the gift record page</div>
+          <br />
+          <p>The context object will contain the following properties:</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>`recordId`</td>
+                  <td>The system record ID of the current gift</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ### Payables
 
 <div class="table-responsive">

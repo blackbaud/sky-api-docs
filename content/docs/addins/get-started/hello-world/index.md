@@ -158,9 +158,9 @@ We'll start with the basic minimal requirement to get a tile showing:
  
 ## Deploy the add-in
  
-At this point, we can deploy our web application – we could serve it locally (ex: https://localhost:4000), but in this case, Visual Studio makes it easy to publish to an Azure App service.  After publishing, the web application will be running at: `https://blackbaudaddinhelloworld.azurewebsites.net`
+At this point, we can deploy our web application. We could serve it locally (ex: https://localhost:4000), but in this case, Visual Studio makes it easy to publish to an Azure App service.  For the purpose of this walk-through, we'll publish the web application to: `https://blackbaudaddinhelloworld.azurewebsites.net` (of course, since we've already claimed this Azure App Service name, you'll need to publish your working sample application to a different url)
  
-…and of course we can view the tile at: `https://blackbaudaddinhelloworld.azurewebsites.net/helloworld.html`
+As you'd expect, we can view the tile at: `https://blackbaudaddinhelloworld.azurewebsites.net/helloworld.html`
 
 ## Register the add-in
 
@@ -173,13 +173,13 @@ On the application details page, select the **Add** button from within the **Add
 
 <p><img style="border:none" src="/assets/img/add_addin_hello_world.png" class="img-responsive"></p>
 
-On this dialog, we can provide the metadata about our add-in, including a friendly name to help distinguish this add-in from others we might create in the future, as well as the extension point (the location within the system where the add-in will be rendered) and the URL for the add-in itself.  In this case, we're building a custom tile for the constituent record page, so we'll choose the "Constituent Tile Dashboard" extension point.
+On this dialog, we can provide the metadata about our add-in, including a friendly name to help distinguish this add-in from others we might create in the future, as well as the extension point (the location within the system where the add-in will be rendered), and the URL for the add-in itself.  In this case, we're building a custom tile for the constituent record page, so we'll choose the "Constituent Tile Dashboard" extension point.
 
 A few notes about the URL:
 
-- It must be an absolute and fully qualified URL, but can include static parameter values.
-- It must use HTTPs to avoid mixed content problems in the browser.
-- We do support local development, so if you're able to serve the web site locally, you can provide a localhost:port value for the URL (for example:  https://localhost:4000).
+- It must be an absolute and fully qualified URL, but it can include static parameter values.
+- It must use HTTPS to avoid mixed content problems in the browser.
+- We do support local development, so if you're able to serve the web site locally, you can provide a `localhost` value for the URL (for example:  `https://localhost:4000`).
  
 <bb-alert bb-alert-type="success">
 That all!  Once defined, the add-in will be shown for any customers who've enabled the SKY API application.</bb-alert>
@@ -225,7 +225,7 @@ To show this value, we'll add the following markup to the HTML:
 </div>
 ``` 
 
-Next, we'll display context values that are specific to the extension point itself – in the case of a "Constituent Tile Dashboard" extension point, the context value will be the ID of the constituent.  This context value is provided along with the environment ID as part of the args sent to the init function, and we'll show it in the UI by adding the following markup:
+Next, we'll display context values that are specific to the extension point itself. In the case of a "Constituent Tile Dashboard" extension point, the context value will be the ID of the constituent.  This context value is provided along with the environment ID as part of the args sent to the init function, and we'll show it in the UI by adding the following markup:
 
 ```html
 <div>
@@ -305,7 +305,7 @@ The complete JavaScript is shown here.
 
 A final piece of contextual data that is available is the "user identity token".  This value can be used to convey the Blackbaud user ID in a secure fashion to the add-in's backend (where it can be validated and decoded).  Having this value on the server will provide a means of mapping the Blackbaud user to a user identity in the 3rd-party system.  Add-ins can obtain a user identity token by requesting it from the host page via the `getAuthToken` method of the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Add-in Client JavaScript library</a>.
  
-<bb-alert bb-alert-type="info">The "user identity token" is not the same as the SKY API access token, and cannot be used to make calls to the SKY API.  For proper security, add-ins should expect to initiate the SKY API OAuth 2.0 Authorization Code flow by rendering a "Connect to SKY API" button in the add-in's user interface.  The result of that operation will be a SKY API access token, which (along with the Blackbaud user ID and environment ID) can be persisted along with the native user identity in the 3rd-party system.</bb-alert>
+<bb-alert bb-alert-type="info">The "user identity token" is not the same as the SKY API access token and cannot be used to make calls to the SKY API.  For proper security, add-ins should expect to initiate the SKY API OAuth 2.0 Authorization Code flow by rendering a "Connect to SKY API" button in the add-in's user interface.  The result of that operation will be a SKY API access token, which (along with the Blackbaud user ID and environment ID) can be persisted along with the native user identity in the 3rd-party system.</bb-alert>
  
 For the purpose of this simple demo, we'll simply fetch and display the user identity token value.  Later tutorials will demonstrate how to pass this token to the add-in's backend for validation.
  

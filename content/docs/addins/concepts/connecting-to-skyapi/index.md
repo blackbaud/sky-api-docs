@@ -13,7 +13,7 @@ title: Connecting to SKY API
 
 In some cases, the contextual information made available to your add-in at runtime (the user's ID, the environment ID, and the current extension point context object) may be sufficient for your needs. Your add-in can surface contextual information from your system based on those runtimes values.
 
-In other cases however, your add-in may need to make calls to SKY API in order to function properly.  To call the SKY API, your add-in will need a SKY API access token - this requirement is in place to ensure proper security and handling of customer data.  If your web application already has an access token for the current user and environment (context values provided at runtime), then you can use it to make calls to the SKY API (refreshing the token if needed).  If not, you have some options for how your add-in can obtain a SKY API access token.  
+In other cases however, your add-in may need to make calls to SKY API in order to function properly.  To call the SKY API, your add-in will need a SKY API access token; this requirement is in place to ensure proper security and handling of customer data.  If your web application already has an access token for the current user and environment (context values provided at runtime), then you can use it to make calls to the SKY API (refreshing the token if needed).  If not, you have some options for how your add-in can obtain a SKY API access token.  
 
 ### Degrade your add-in's user interface
 
@@ -31,7 +31,7 @@ While more complex, we recommend using the Authorization Code flow because of th
 
 To properly initiate the SKY API OAuth process, your add-in should expect to include a `state` parameter that will be used to prevent against cross-site request forgery (CSRF) attacks.  As discussed in the [FAQ]({{ stache.config.support_faq }}), this value will be echoed back to your application's redirect endpoint when the user provides consent, and your application should expect to validate that the value echoed originated from your system.
 
-The following code sample shows a very basic technique of acquiring a SKY API access token - this code executes on the client, and works by showing a popup window that navigates to a `/skyapi/authorize` page within the add-in's web application.  Within this endpoint (server code not shown), a `state` parameter value is generated, and the response can return a 302 Redirect to the [SKY API Authorization]({{ stache.config.authorization_endpoint }}) page (including the `state` parameter). 
+The following code sample shows a very basic technique of acquiring a SKY API access token. This code executes on the client and works by showing a popup window that navigates to a `/skyapi/authorize` page within the add-in's web application.  Within this endpoint (server code not shown), a `state` parameter value is generated, and the response can return a 302 Redirect to the [SKY API Authorization]({{ stache.config.authorization_endpoint }}) page (including the `state` parameter). 
 
 The popup window will follow the redirect, and the user will be able to provide consent for your application.  Upon consent, the browser will be redirected again - this time to your application's registered redirect URI. The response from this endpoint in your web application can include some script that closes the popup browser window:
 
@@ -79,10 +79,10 @@ response_type=code
 &environment_id=YOURENVIRONMENTID</code></pre>
 
 <bb-alert bb-alert-type="warning">
-<strong>Important!</strong> If you omit this parameter, all environments accessible by the user will appear on the consent page which could result in the user choosing a different environment from the current one.</bb-alert>
+<strong>Important!</strong> If you omit this parameter, all environments accessible by the user will appear on the consent page, which could result in the user choosing an environment other than the one your add-in in operating within.</bb-alert>
 
 ### Protection against clickjacking
 
-To protect against <a href="https://www.owasp.org/index.php/Clickjacking">clickjacking</a> attacks, the SKY API Authorization page will be updated to prevent being rendered within an iframe.  This means your add-in will not be able to initiate the OAuth process within its own iframe.  You'll need initiate the OAuth process by launching a separate browser window as shown above.
+To protect against <a href="https://www.owasp.org/index.php/Clickjacking">clickjacking</a> attacks, the SKY API Authorization page will be updated to prevent being rendered within an iframe.  This means your add-in will not be able to initiate the OAuth process within its own iframe.  You'll need to initiate the OAuth process by launching a separate browser window as shown above.
 
 For more information on initiating the OAuth process, see [Authorization](/docs/authorization).

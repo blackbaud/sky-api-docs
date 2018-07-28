@@ -42,13 +42,13 @@ At runtime, the add-in's web page will be rendered in a sandboxed iframe within 
 
 ## Deploy your add-in
 
-In order to test your add-in, you can either deploy your web application to the cloud or serve it locally.  Note that for local development, you’ll need to use HTTPS and have SSL configured to avoid mixed content problems in the browser.  
+In order to _test_ your add-in, you can either deploy your web application to the cloud or serve it locally.  Note that for local development, you’ll need to use HTTPS and have SSL configured to avoid mixed content problems in the browser.  
 
-For production, your add-in's web application can be deployed to any cloud, and you control when and how your application is updated.
+For _production_, your add-in's web application can be deployed to any cloud, and you control when and how your application is updated.
 
 ## Register your add-in
 
-Add-ins are associated with SKY API applications, and are registered by providing some additional metadata about the add-in within the SKY API developer portal.
+Add-ins are associated with SKY API applications and are registered by providing some additional metadata about the add-in within the SKY API developer portal.
 
 <bb-alert bb-alert-type="warning">
 <strong>Important!</strong> Performing this step will immediately make your add-in visible to any existing customers who've enabled your SKY API application.  For development and testing purposes, we recommend using a non-production SKY API application to ensure your add-in functions properly before registering the add-in with your production application.</bb-alert>
