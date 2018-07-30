@@ -22,4 +22,4 @@ This technique can be used to introduce *new* add-ins in the future as well.  Fo
 
 ### Control your add-in's visibility
 
-Remember that add-ins are instantiated as hidden iframes on the page, and are only made visible when your code informs the host page.  You can use this to your advantage when building and testing by introducing logic that is only visible based on some contextually available value.  For example, you can limit visibility to your environment only, or you can whitelist user IDs (by correlating from the current Blackbaud user ID).
+Remember that add-ins are instantiated as hidden iframes on the page and are only made visible when your code informs the host page.  You can use this to your advantage when building and testing by introducing logic that is only visible based on some contextually available value.  For example, you can limit visibility to your environment only, or you can whitelist user IDs (by correlating from the current Blackbaud user ID).
