@@ -91,6 +91,7 @@ guide_code: <%= stache.config.base %>docs/code/
 guide_code_barkbaud: <%= stache.config.guide_code %>app-showcase/
 guide_registering_your_app: <%= stache.config.guide %>createapp/
 guide_create_app: <%= stache.config.guide %>createapp/
+guide_addins: <%= stache.config.guide %>addins/
 guide_web_api_authorization: <%= stache.config.guide %>authorization/
 guide_web_api_authorization_auth_code_flow: <%= stache.config.guide %>authorization/auth-code-flow/
 guide_web_api_authorization_implicit_flow: <%= stache.config.guide %>authorization/implicit-flow/

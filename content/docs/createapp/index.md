@@ -1,6 +1,6 @@
 ---
 layout: layout-tutorial
-name: Create an App
+name: Applications
 description: Learn how to successfully create an application with SKY API.
 order: 200
 published: true     
@@ -17,7 +17,7 @@ markdown: false
 
 <section class="section-padding bg-tutorial">
   <div class="text-center">
-    <h1 class="tutorial"> {{ name }} with {{ stache.config.product_name_short }}</h1>
+    <h1 class="tutorial"> Create an App with {{ stache.config.product_name_short }}</h1>
     <p class="lead tutorial">To successfully create an application with {{ stache.config.product_name_short }}, follow this step-by-step guide.</p>
     <p class="lead tutorial">Before you begin, be sure to complete the <a href="{{ stache.config.guide_getting_started }}">Getting Started</a> guide, where you'll get your  Blackbaud developer account, a subscription key, and learn how to explore the <a href="{{ stache.config.portal_endpoints }}" target="_blank">Endpoint Reference</a>.</p>
 
