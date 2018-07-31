@@ -5,14 +5,14 @@ description: Information on additions and changes for SKY API Add-ins.
 order: 60
 published: true
 showInNav: true
-icon: fa fa-cloud
+icon: fa fa-object-group
 back_to_top: true
 title: Add-ins Changelog
 ---
 
 # {{ name }}
 
-Monitor this page to keep up with common changes shared across all our APIs.
+Monitor this page to keep up with latest changes to SKY API Add-ins.
 
 ## 2018-07-31
 
