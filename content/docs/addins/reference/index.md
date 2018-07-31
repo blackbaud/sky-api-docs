@@ -21,7 +21,7 @@ Add-ins make use of a JavaScript library to facilitate the interop between the a
 
 ## User identity tokens
 
-To facilitate the single-sign-on experience, add-ins can obtain a `user identity token` (UIT) from the host applidcation.  This token can be used to securely correlate Blackbaud users with user accounts in the add-in's native system. Add-in developers should first validate the signature of the UIT against the OpenIDConnect endpoint within SKY API OAuth 2.0 service. The OpenIDConnect configuration can be found at:
+To facilitate the single-sign-on experience, add-ins can obtain a `user identity token` (UIT) from the host application.  This token can be used to securely correlate Blackbaud users with user accounts in the add-in's native system. Add-in developers should first validate the signature of the UIT against the OpenIDConnect endpoint within SKY API OAuth 2.0 service. The OpenIDConnect configuration can be found at:
 
 <a href="https://oauth2.sky.blackbaud.com/.well-known/openid-configuration" target="_new"><i class="fa fa-globe" aria-hidden="true"></i> SKY API OAuth 2.0 service OpenIDConnect configuration endpoint</a>
 
