@@ -296,7 +296,7 @@ $ npm install</code></pre>
 
 - Open **index.js** and **/server/routes/auth.js**.
 
-	The **Authroize** button prompt a request to the web server's `/auth/login` endpoint. The route in the app's main **index.js** file directs requests to the `getLogin()` function within **/server/routes/auth.js**.
+	The **Authorize** button prompt a request to the web server's `/auth/login` endpoint. The route in the app's main **index.js** file directs requests to the `getLogin()` function within **/server/routes/auth.js**.
 
 	<pre><code class="language-javascript">// Register our OAUTH2 routes
 app.get('/auth/authenticated', routes.auth.getAuthenticated);
