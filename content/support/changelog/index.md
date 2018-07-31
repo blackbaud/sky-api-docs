@@ -15,7 +15,7 @@ APIs:
     location: shared
     title: Shared
   -
-    description: "Monitor this page to keep up with latest changes to Add-ins."
+    description: "Monitor this page to keep up with latest changes to SKY API Add-ins."
     icon: fa-object-group
     location: addins
     title: Add-ins
