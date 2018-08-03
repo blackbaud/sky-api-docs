@@ -198,7 +198,7 @@ The tile looks and behaves like any native tile within the system - users can dr
 
 Now, let's update the UI to display the various contextual values that are made available to add-ins.
  
-First, we'll start by displaying the "environment ID" – you'll hear more about "environments" in the future, but for now you can think of the environment as a replacement for the concept of "tenant".  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Addin Client library documentation</a>, the environment ID is provided as part of the `args` sent to the `init` callback function:
+First, we'll start by displaying the "environment ID" – you'll hear more about "environments" in the future, but for now you can think of the environment as a replacement for the concept of "tenant".  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Add-in Client library documentation</a>, the environment ID is provided as part of the `args` sent to the `init` callback function:
 
 ```js
   // BBSkyAddinClient is global here.
