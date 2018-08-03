@@ -604,6 +604,21 @@ portal_endpoints_budget_scenario_post: <%= stache.config.portal_endpoints_GL %>o
 # Budget Scenario List
 portal_endpoints_budget_scenario_list: <%= stache.config.portal_endpoints_GL %>operations/ListBudgetScenarios/
 
+# Cash Management Distribution Set List
+portal_endpoints_cash_mgmt_list: <%= stache.config.portal_endpoints_GL %>operations/ListCashManagementDistributionSets/
+
+# Cash Management Distribution Set Get
+portal_endpoints_cash_mgmt_get: <%= stache.config.portal_endpoints_GL %>operations/GetCashManagementDistributionSet/
+
+# Cash Management Distribution Set Post
+portal_endpoints_cash_mgmt_post: <%= stache.config.portal_endpoints_GL %>operations/CreateCashManagementDistributionSet/
+
+# Cash Management Distribution Set Edit
+portal_endpoints_cash_mgmt_edit: <%= stache.config.portal_endpoints_GL %>operations/EditCashManagementDistributionSet/
+
+# Cash Management Distribution Set Delete
+portal_endpoints_cash_mgmt_delete: <%= stache.config.portal_endpoints_GL %>operations/DeleteCashManagementDistributionSet/
+
 # Class List
 portal_endpoints_class_list: <%= stache.config.portal_endpoints_GL %>operations/ListClasses/
 
@@ -717,6 +732,21 @@ portal_endpoints_transaction_code_value_list: <%= stache.config.portal_endpoints
 
 # Transaction Distribution List
 portal_endpoints_transaction_distribution_search: <%= stache.config.portal_endpoints_GL %>operations/ListTransactionDistributions/
+
+# Transaction Distribution Set List
+portal_endpoints_transaction_distribution_set_list: <%= stache.config.portal_endpoints_GL %>operations/ListTransactionDistributionSets/
+
+# Transaction Distribution Set Get
+portal_endpoints_transaction_distribution_set_get: <%= stache.config.portal_endpoints_GL %>operations/GetTransactionDistributionSet/
+
+# Transaction Distribution Set Post
+portal_endpoints_transaction_distribution_set_post: <%= stache.config.portal_endpoints_GL %>operations/CreateTransactionDistributionSet/
+
+# Transaction Distribution Set Edit
+portal_endpoints_transaction_distribution_set_edit: <%= stache.config.portal_endpoints_GL %>operations/EditTransactionDistributionSet/
+
+# Transaction Distribution Set Delete
+portal_endpoints_transaction_distribution_set_delete: <%= stache.config.portal_endpoints_GL %>operations/DeleteTransactionDistributionSet/
 
 # =============================================
 # 			Treasury API ENDPOINTS
