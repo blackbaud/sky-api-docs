@@ -14,9 +14,87 @@ title: General Ledger Changelog
 
 Monitor this page to keep up with the [General Ledger API]({{ stache.config.portal_endpoints_GL }}) latest changes and {{ stache.config.api_type_name }} service releases.
 
-## 2018-07-19
+## 2018-08-03
 
 ### New
+
+Added the following endpoints:
+
+<div class="table-responsive">
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Operation</th>
+				<th>Method</th>
+				<th>Route</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_cash_mgmt_list }}">
+				<td>Cash management distribution set (List)</td>
+				<td>GET</td>
+				<td>/distributionsets/cashmanagement</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_cash_mgmt_get }}">
+				<td>Cash management distribution set</td>
+				<td>GET</td>
+				<td>/distributionsets/cashmanagement/{set_id}</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_cash_mgmt_post }}">
+				<td>Cash management distribution set</td>
+				<td>POST</td>
+				<td>/distributionsets/cashmanagement/</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_cash_mgmt_edit }}">
+				<td>Cash management distribution set</td>
+				<td>PATCH</td>
+				<td>/distributionsets/cashmanagement/{set_id}</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_cash_mgmt_delete }}">
+				<td>Cash management distribution set</td>
+				<td>DELETE</td>
+				<td>/distributionsets/cashmanagement/{set_id}</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_set_list }}">
+				<td>Transaction distribution set (List)</td>
+				<td>GET</td>
+				<td>/distributionsets/transaction</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_set_get }}">
+				<td>Transaction distribution set</td>
+				<td>GET</td>
+				<td>/distributionsets/transaction/{set_id}</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_set_post }}">
+				<td>Transaction distribution set</td>
+				<td>POST</td>
+				<td>/distributionsets/transaction</td>
+			</tr>
+            <tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_set_edit }}">
+				<td>Transaction distribution set</td>
+				<td>PATCH</td>
+				<td>/distributionsets/transaction/{set_id}</td>
+			</tr>
+			<tr class="clickable-row" data-url="{{ stache.config.portal_endpoints_transaction_distribution_set_delete }}">
+				<td>Transaction distribution set</td>
+				<td>DELETE</td>
+				<td>/distributionsets/transaction/{set_id}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+### Changed
+
+- For the  [Journal entry batch - PATCH]({{ stache.config.portal_endpoints_journal_entry_batch_patch }}) endpoint, you can now edit the `batch_status` of unposted journal entry batches.
+- For the  [Budget - PATCH]({{ stache.config.portal_endpoints_budget_patch }}) endpoint, you can now patch `notes` on budget lines.
+- The  [Budget detail lines (List) - GET]({{ stache.config.portal_endpoints_budget_lines_list }}) endpoint now returns `notes` on budget lines.
+
+## July
+
+### 2018-07-19
+
+#### New
 
 Added the following endpoints:
 
@@ -49,7 +127,7 @@ Added the following endpoints:
 	</table>
 </div>
 
-### Changed
+#### Changed
 
 We made several changes to the  [Journal entry batch attachment]({{ stache.config.portal_endpoints_journal_entry_batch_attachment }}) endpoint:
 - The endpoint now supports physical attachments. (Previously, it only supported link attachments.)
