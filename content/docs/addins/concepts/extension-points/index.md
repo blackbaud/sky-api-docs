@@ -13,7 +13,7 @@ title: Extension points
 
 Each location within the Blackbaud application user interface that can be customized is known as an **extension point**.  
 
-The extension point represents a named location in the product where add-ins can be rendered, and it defines both the "class" of add-in (tile, button, tab, etc.), as well as the shape of the context values that will be provided at runtime.  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Addin Client library documentation</a>, the context values for the extension point are made available to add-ins as part of the `args` object sent to the `init` callback function:
+The extension point represents a named location in the product where add-ins can be rendered, and it defines both the "class" of add-in (tile, button, tab, etc.), as well as the shape of the context values that will be provided at runtime.  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Add-in Client library documentation</a>, the context values for the extension point are made available to add-ins as part of the `args` object sent to the `init` callback function:
 
 ```js
   // BBSkyAddinClient is global here.
