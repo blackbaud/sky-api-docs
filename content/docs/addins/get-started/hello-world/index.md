@@ -158,7 +158,7 @@ We'll start with the basic minimal requirement to get a tile showing:
  
 ## Deploy the add-in
  
-At this point, we can deploy our web application. We could serve it locally (ex: https://localhost:4000), but in this case, Visual Studio makes it easy to publish to an Azure App service.  For the purpose of this walk-through, we'll publish the web application to: `https://blackbaudaddinhelloworld.azurewebsites.net` (of course, since we've already claimed this Azure App Service name, you'll need to publish your working sample application to a different url)
+At this point, we can deploy our web application. We could serve it locally (ex: https://localhost:4000), but in this case, Visual Studio makes it easy to publish to an Azure App service.  For the purpose of this walk-through, we'll publish the web application to: `https://blackbaudaddinhelloworld.azurewebsites.net` (of course, since we've already claimed this Azure App Service name, you'll need to publish your working sample application to a different url).
  
 As you'd expect, we can view the tile at: `https://blackbaudaddinhelloworld.azurewebsites.net/helloworld.html`
 
