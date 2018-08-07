@@ -19,7 +19,7 @@ Before you begin, make sure you've created a Blackbaud developer account as cove
 
 ## Build your add-in
 
-Since add-ins are web applications, you can use any framework/tech stack desired, both client-side and server-side.  For example, you can use ASP.NET, PHP, Node.js, MVC, Angular, React, etc.  To see an example of an add-in that uses plain HTML, CSS, and JavaScript, see our <a href="{{ stache.config.guide_addins/get-started/hello-world }}">Hello World</a> sample add-in walk-through.
+Since add-ins are web applications, you can use any framework/tech stack desired, both client-side and server-side.  For example, you can use ASP.NET, PHP, Node.js, MVC, Angular, React, etc.  To see an example of an add-in that uses plain HTML, CSS, and JavaScript, see our <a href="{{ stache.config.guide_addins }}get-started/hello-world">Hello World</a> sample add-in walk-through.
 
 A requirement for SKY Add-ins is that the web application must include the Add-in Client JavaScript library on the page and instantiate the `AddinClient` class in order to facilitate the interop with the host application.  This library is available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_new">npm package</a>, and more details can be found in the Readme.
 

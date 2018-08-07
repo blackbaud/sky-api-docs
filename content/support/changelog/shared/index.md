@@ -14,6 +14,16 @@ title: Shared Changelog
 
 Monitor this page to keep up with common changes shared across all our APIs.
 
+## August 2018
+
+### 2018-08-03
+
+In an effort to simplify the channels of communication regarding SKY API, we've decided to remove the Disqus feature from the SKY API Developer Portal, and will instead provide a link to the <a href="https://community.blackbaud.com/forums/viewcategory/425">SKY API Community</a>.  This will allow us to have a more organized and structured medium for detailed responses/threads, and will ultimately enable broader participation and quicker responses to questions!
+
+We will ensure that any outstanding Disqus threads are resolved - going forward, please direct any questions/comments to the <a href="https://community.blackbaud.com/forums/viewcategory/425">SKY API Community</a>.
+
+![Comments](/assets/img/comments.png "Comments")
+
 ## May 2017
 
 ###2017-05-31
