@@ -26,4 +26,4 @@ callbacks: {
 });
 ```
 
-For more information, see the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">Add-in Client JavaScript library</a>
+For more information, see the <a href="https://github.com/blackbaud/sky-addin-client" target="_blank">Add-in Client JavaScript library</a>

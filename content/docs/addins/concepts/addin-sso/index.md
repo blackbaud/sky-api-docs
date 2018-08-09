@@ -12,7 +12,7 @@ title: Add-in single-sign-on (SSO)
 
 SKY add-ins support a single-sign-on (SSO) mechanism that can be used to correlate the current Blackbaud user with a user in the add-in's native system.
 
-Within the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">Add-in Client JavaScript library</a>, the `AddinClient` class provides a `getAuthtoken` function for getting a short-lived "user identity token" from the host application. This token is a signed value that is issued to the SKY API application and represents the Blackbaud user's identity.
+Within the <a href="https://github.com/blackbaud/sky-addin-client" target="_blank">Add-in Client JavaScript library</a>, the `AddinClient` class provides a `getAuthtoken` function for getting a short-lived "user identity token" from the host application. This token is a signed value that is issued to the SKY API application and represents the Blackbaud user's identity.
 
 The general flow is that when an add-in is initiated, it can request a user identity token from the host page using the `getAuthtoken` function.  The host will in turn request a user identity token from the SKY API OAuth 2.0 service.  The user identity token (a <a href="https://jwt.io">JWT</a>), will be addressed to the SKY API application and will contain the Blackbaud user's unique identifier.  The OAuth service will return the token to the host, and the host will pass the token to the add-in.  The add-in can then pass the user identity token (along with the environment ID provided as part of the initial context when the add-in is instantiated) to its own backend, where it can be validated and used to look up a user in the add-in's native system.  If a user mapping exists, then the add-in can consider the user logged in and immediately display content to the user.  If no user mapping exists, the add-in can prompt the user to login to the add-in's native system.  Once the user's identity in the native system is known, the add-in can persist the user mapping so that on subsequent loads the user doesn't have to log in again (even across devices).
 
@@ -58,9 +58,9 @@ Before looking for a user mapping, add-in developers should first validate the s
 
 The SKY API OpenIDConnect configuration can be found at:
  
- <a href="https://oauth2.sky.blackbaud.com/.well-known/openid-configuration" target="_new"><i class="fa fa-globe" aria-hidden="true"></i>    https://oauth2.sky.blackbaud.com/.well-known/openid-configuration</a>.
+ <a href="https://oauth2.sky.blackbaud.com/.well-known/openid-configuration" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>    https://oauth2.sky.blackbaud.com/.well-known/openid-configuration</a>.
 
-Developers building add-ins in .NET can make use of a Blackbaud-provided library to assist with validating the user identity token.  This library is distributed as a NuGet package named <a href="https://www.nuget.org/packages/Blackbaud.Addin.TokenAuthentication" target="_new"><i class="fa fa-globe" aria-hidden="true"></i> Blackbaud.Addin.TokenAuthentication</a>.
+Developers building add-ins in .NET can make use of a Blackbaud-provided library to assist with validating the user identity token.  This library is distributed as a NuGet package named <a href="https://www.nuget.org/packages/Blackbaud.Addin.TokenAuthentication" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i> Blackbaud.Addin.TokenAuthentication</a>.
 
 More information on how to use this library can be found in the readme.txt:
 

@@ -1,10 +1,10 @@
 ---
 layout: layout-sidebar
-name: Create an Add-in
+name: Create an add-in
 order: 100
 published: true
 showInNav: true
-title: Create an Add-in
+title: Create an add-in
 ---
 
 {{ include stache.config.partial_header_edit }}
@@ -21,7 +21,7 @@ Before you begin, make sure you've created a Blackbaud developer account as cove
 
 Since add-ins are web applications, you can use any framework/tech stack desired, both client-side and server-side.  For example, you can use ASP.NET, PHP, Node.js, MVC, Angular, React, etc.  To see an example of an add-in that uses plain HTML, CSS, and JavaScript, see our <a href="{{ stache.config.guide_addins }}get-started/hello-world">Hello World</a> sample add-in walk-through.
 
-A requirement for SKY Add-ins is that the web application must include the Add-in Client JavaScript library on the page and instantiate the `AddinClient` class in order to facilitate the interop with the host application.  This library is available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_new">npm package</a>, and more details can be found in the Readme.
+A requirement for SKY Add-ins is that the web application must include the Add-in Client JavaScript library on the page and instantiate the `AddinClient` class in order to facilitate the interop with the host application.  This library is available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_blank">npm package</a>, and more details can be found in the Readme.
 
 At runtime, the add-in's web page will be rendered in a sandboxed iframe within the host application.  Note that add-ins are hidden by default until they are ready to be shown.  This gives the add-in an opportunity to perform any necessary initialization and logic to determine whether it should be visible or remain hidden.  When the add-in is ready to be shown, it will call the `ready` method provided in the `init` callback:  
 
@@ -70,5 +70,6 @@ At this point, your add-in will be provisioned for any existing customers who've
 
 * Get an <a href="{{ stache.config.guide_addins }}overview">overview</a> of the SKY Add-ins framework.
 * View the <a href="{{ stache.config.guide_addins }}get-started/hello-world">Hello World</a> sample to see a detailed walk-through of building an add-in.
+* View the <a href="{{ stache.config.guide_addins }}get-started/skyux-tile">SKY UX tile</a> sample to see a detailed walk-through of building an add-in using SKY UX.
 * View additional <a href="{{ stache.config.guide_addins }}/concepts">concepts</a> and capabilities associated with the SKY Add-ins framework.
 * View our <a href="{{ stache.config.guide_addins }}how-to-guides/addin-design">design guidelines</a> to read about building an effective and compelling user experience for your add-in.

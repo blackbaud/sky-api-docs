@@ -10,7 +10,7 @@ title: Hello world sample add-in
 
 # {{ name }}
 
-In this article, we'll walk through the process of building a custom tile for the Constituent page using the SKY Add-in framework.  This add-in will be a pure client-side implementation using only vanilla HTML, CSS, and JavaScript (note that you can use any language or tech-stack you'd like however).
+In this article, we'll walk through the process of building a custom tile for the Constituent page using the SKY Add-in framework.  This add-in will be a pure client-side implementation using only vanilla HTML, CSS, and JavaScript (but note that you can use any language or tech-stack you'd like).
 
 ## Project scaffolding
  
@@ -59,13 +59,13 @@ Visual Studio will produce a very basic HTML file like this:
 </html>
 ```
  
-We're going to be using a few <a href="https://jquery.com/">jQuery</a> statements in our JavaScript, so we'll also add jQuery to the page by referencing the latest version from the jQuery CDN, as <a href="http://jquery.com/download/#using-jquery-with-a-cdn">documented on their website</a>.
+We're going to be using a few <a href="https://jquery.com" target="_blank">jQuery</a> statements in our JavaScript, so we'll also add jQuery to the page by referencing the latest version from the jQuery CDN, as <a href="http://jquery.com/download/#using-jquery-with-a-cdn" target="_blank">documented on their website</a>.
 
 ```html
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 ```
  
-Next, a requirement for SKY Add-ins is that they must include the Add-in Client JavaScript library on the page to facilitate the interop with the host application.  This library is <a href="https://github.com/blackbaud/sky-addin-client" target="_new">open source on GitHub</a> and available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_new">npm package</a>.  You can add it to the page a few different ways, but for simplicity here, we'll just reference it from one of the npm CDNs:
+Next, a requirement for SKY Add-ins is that they must include the Add-in Client JavaScript library on the page to facilitate the interop with the host application.  This library is <a href="https://github.com/blackbaud/sky-addin-client" target="_blank">open source on GitHub</a> and available as an <a href="https://www.npmjs.com/package/@blackbaud/sky-addin-client" target="_blank">npm package</a>.  You can add it to the page a few different ways, but for simplicity here, we'll just reference it from one of the npm CDNs:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@blackbaud/sky-addin-client@1.0.0/bundles/sky-addin-client.umd.min.js"></script>
@@ -131,7 +131,7 @@ First, we'll wrap our code in a self-executing function:
 }());
 ```
  
-As described in the <a href="https://github.com/blackbaud/sky-addin-client/blob/master/README.md" target="_new">sky-addin-client documentation</a>, Add-ins must be instantiated using the following JavaScript, which registers a callback with the host page.  This provides a mechanism for the host page to supply key contextual information to the add-in, and also provides a way for the add-in to inform the host page that it is ready to be rendered.  This allows add-in authors to conditionally display add-ins based on the context (ex: only show a tile for individuals who are board members). 
+As described in the <a href="https://github.com/blackbaud/sky-addin-client/blob/master/README.md" target="_blank">sky-addin-client documentation</a>, Add-ins must be instantiated using the following JavaScript, which registers a callback with the host page.  This provides a mechanism for the host page to supply key contextual information to the add-in, and also provides a way for the add-in to inform the host page that it is ready to be rendered.  This allows add-in authors to conditionally display add-ins based on the context (ex: only show a tile for individuals who are board members). 
  
 We'll start with the basic minimal requirement to get a tile showing:
  
@@ -164,7 +164,7 @@ As you'd expect, we can view the tile at: `https://blackbaudaddinhelloworld.azur
 
 ## Register the add-in
 
-Now that our web application has been deployed, we can register it as part of our SKY API application by navigating to the <a href="https://developer.sky.blackbaud.com">SKY API Developer Portal</a>. From the **Developer Account** menu, select **My Applications**, and navigate to the SKY API application for which we want to register the add-in. 
+Now that our web application has been deployed, we can register it as part of our SKY API application by navigating to the <a href="https://developer.sky.blackbaud.com" target="_blank">SKY API Developer Portal</a>. From the **Developer Account** menu, select **My Applications**, and navigate to the SKY API application for which we want to register the add-in. 
 
 <bb-alert bb-alert-type="warning">
 <strong>Important!</strong> When you add add-in details to your SKY API application, the add-in will immediately become visible to any existing customers who've already enabled your SKY API application (as well as any customers who may enable your application in the future).  For development and testing purposes, we recommend using a non-production SKY API application to ensure your add-in functions properly before registering the add-in with your production application.</bb-alert>
@@ -198,7 +198,7 @@ The tile looks and behaves like any native tile within the system - users can dr
 
 Now, let's update the UI to display the various contextual values that are made available to add-ins.
  
-First, we'll start by displaying the "environment ID" – you'll hear more about "environments" in the future, but for now you can think of the environment as a replacement for the concept of "tenant".  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Add-in Client library documentation</a>, the environment ID is provided as part of the `args` sent to the `init` callback function:
+First, we'll start by displaying the "environment ID" – you'll hear more about "environments" in the future, but for now you can think of the environment as a replacement for the concept of "tenant".  As described in the <a href="https://github.com/blackbaud/sky-addin-client" target="_blank">SKY Add-in Client library documentation</a>, the environment ID is provided as part of the `args` sent to the `init` callback function:
 
 ```js
   // BBSkyAddinClient is global here.
@@ -235,7 +235,7 @@ Next, we'll display context values that are specific to the extension point itse
 </div>
 ``` 
 
-You can find complete documentation for each extension point on the <a href="/docs/addins/concepts/extension-points">extension points</a> documentation page.
+You can find complete documentation for each extension point on the <a href="/docs/addins/concepts/extension-points" target="_blank">extension points</a> documentation page.
  
 So now our HTML looks like this:
  
@@ -303,7 +303,7 @@ The complete JavaScript is shown here.
 
 ## Fetch a user identity token
 
-A final piece of contextual data that is available is the "user identity token".  This value can be used to convey the Blackbaud user ID in a secure fashion to the add-in's backend (where it can be validated and decoded).  Having this value on the server will provide a means of mapping the Blackbaud user to a user identity in the 3rd-party system.  Add-ins can obtain a user identity token by requesting it from the host page via the `getAuthToken` method of the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">SKY Add-in Client JavaScript library</a>.
+A final piece of contextual data that is available is the "user identity token".  This value can be used to convey the Blackbaud user ID in a secure fashion to the add-in's backend (where it can be validated and decoded).  Having this value on the server will provide a means of mapping the Blackbaud user to a user identity in the 3rd-party system.  Add-ins can obtain a user identity token by requesting it from the host page via the `getAuthToken` method of the <a href="https://github.com/blackbaud/sky-addin-client" target="_blank">SKY Add-in Client JavaScript library</a>.
  
 <bb-alert bb-alert-type="info">The "user identity token" is not the same as the SKY API access token and cannot be used to make calls to the SKY API.  For proper security, add-ins should expect to initiate the SKY API OAuth 2.0 Authorization Code flow by rendering a "Connect to SKY API" button in the add-in's user interface.  The result of that operation will be a SKY API access token, which (along with the Blackbaud user ID and environment ID) can be persisted along with the native user identity in the 3rd-party system.</bb-alert>
  
@@ -451,5 +451,6 @@ Clicking the button will fetch and display the user identity token, which should
 
 * Get an <a href="{{ stache.config.guide_addins }}overview">overview</a> of the SKY Add-ins framework.
 * View the <a href="{{ stache.config.guide_addins }}get-started/createaddin">Getting started</a> tutorial to learn more about how to build a SKY Add-in.
+* View the <a href="{{ stache.config.guide_addins }}get-started/skyux-tile">SKY UX tile</a> sample to see a detailed walk-through of building an add-in using SKY UX.
 * View additional <a href="{{ stache.config.guide_addins }}/concepts">concepts</a> and capabilities associated with the SKY Add-ins framework.
 * View our <a href="{{ stache.config.guide_addins }}how-to-guides/addin-design">design guidelines</a> to read about building an effective and compelling user experience for your add-in.
