@@ -12,7 +12,7 @@ title: Add-in capabilities
 
 ### Showing a modal
 
-Using the <a href="https://github.com/blackbaud/sky-addin-client" target="_new">Add-in Client JavaScript library</a>, SKY Add-ins are capable of launching a "modal" user experience to show more details or gather additional input from the user.  The modal will be rendered in a separate full-screen iframe to maximize the available real estate (meaning, it will not be scoped to the bounds of the add-in's initial iframe).
+Using the <a href="https://github.com/blackbaud/sky-addin-client" target="_blank">Add-in Client JavaScript library</a>, SKY Add-ins are capable of launching a "modal" user experience to show more details or gather additional input from the user.  The modal will be rendered in a separate full-screen iframe to maximize the available real estate (meaning, it will not be scoped to the bounds of the add-in's initial iframe).
 
 To launch a modal, call the showModal function on the client, passing the URL for the modal and any context data needed by the modal:
 

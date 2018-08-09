@@ -70,5 +70,6 @@ Over time, we'll introduce support for new types of add-ins and new extension po
 
 * View the <a href="{{ stache.config.guide_addins }}get-started/createaddin">Getting started</a> tutorial to learn more about how to build a SKY Add-in.
 * View the <a href="{{ stache.config.guide_addins }}get-started/hello-world">Hello World</a> sample to see a detailed walk-through of building an add-in.
+* View the <a href="{{ stache.config.guide_addins }}get-started/skyux-tile">SKY UX tile</a> sample to see a detailed walk-through of building an add-in using SKY UX.
 * View additional <a href="{{ stache.config.guide_addins }}/concepts">concepts</a> and capabilities associated with the SKY Add-ins framework.
 * View our <a href="{{ stache.config.guide_addins }}how-to-guides/addin-design">design guidelines</a> to read about building an effective and compelling user experience for your add-in.

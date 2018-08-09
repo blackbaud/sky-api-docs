@@ -28,12 +28,20 @@ Learn how to create your first add-in:
     <div style="text-align:center; display:inline-block; padding-right:25px">
         <a href="{{ stache.config.guide_addins }}get-started/createaddin">
             <img style="border: none" class="img-responsive" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
-            <div>Get started tutorial</div></a>
+            <div>Get started tutorial</div>
+        </a>
     </div>
-    <div style="text-align:center; display:inline-block">
+    <div style="text-align:center; display:inline-block; padding-right:25px">
         <a href="{{ stache.config.guide_addins }}get-started/hello-world">
             <img style="border: none" class="img-responsive" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
-            <div>Hello world sample</div></a>
+            <div>Hello world sample</div>
+        </a>
+    </div>
+    <div style="text-align:center; display:inline-block">
+        <a href="{{ stache.config.guide_addins }}get-started/skyux-tile">
+            <img style="border: none" class="img-responsive" src="https://sky.blackbaudcdn.net/skyuxapps/host-assets/assets/nuget-package-thumbnail-v1.8114fffa845b0dba0fd2c04599e4e0e7cf5fe95a.png" />
+            <div>SKY UX tile sample</div>
+        </a>
     </div>
 </div>
 
@@ -45,6 +53,6 @@ Learn how to create your first add-in:
 
 ## Reference
 
-* <a href="https://github.com/blackbaud/sky-addin-client" target="_new"><i class="fa fa-github" aria-hidden="true"></i> SKY Add-in Client JavaScript library</a>
-* <a href="https://oauth2.sky.blackbaud.com/.well-known/openid-configuration" target="_new"><i class="fa fa-globe" aria-hidden="true"></i> SKY API OAuth 2.0 service OpenIDConnect configuration endpoint</a>
-* <a href="https://www.nuget.org/packages/Blackbaud.Addin.TokenAuthentication" target="_new"><i class="fa fa-globe" aria-hidden="true"></i> Blackbaud.Addin.TokenAuthentication</a>
+* <a href="https://github.com/blackbaud/sky-addin-client" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> SKY Add-in Client JavaScript library</a>
+* <a href="https://oauth2.sky.blackbaud.com/.well-known/openid-configuration" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i> SKY API OAuth 2.0 service OpenIDConnect configuration endpoint</a>
+* <a href="https://www.nuget.org/packages/Blackbaud.Addin.TokenAuthentication" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i> Blackbaud.Addin.TokenAuthentication</a>
