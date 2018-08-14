@@ -1,0 +1,29 @@
+
+<h1>{{ctrl.apiTitle}} Entity Reference {{ctrl.isDev ? "(DEV)" : ""}}</h1>
+<p>Updated: {{ctrl.lastUpdatedDate}}</p>
+
+<p>
+    This topic describes the entity and type representations for common items that the {{ctrl.apiTitle}} API uses. To learn
+    about how to set up your developer account and work with the SKY API, see the
+    <a ng-href="{{ ctrl.getStartedUrl }}">Getting Started</a> guide.
+</p>
+
+<p ng-show="ctrl.showErrorMessage" class="alert alert-danger">
+    There was an issue loading the Entity Reference for the {{ctrl.apiTitle}} API.
+</p>
+
+<ul id="entities">
+    <li ng-repeat="entity in ctrl.entities" style="margin: 0px">
+        <a ng-href="#{{entity.displayId}}">{{entity.displayName}}</a>
+    </li>
+</ul>
+
+<div name="{{entity.displayId}}" ng-repeat="entity in ctrl.entities">
+    <p>&nbsp;</p>
+    <h2>{{entity.displayName}}</h2>
+    <p>{{entity.description}}<p>
+    <p>The <strong>{{entity.displayName}}</strong> entity has the following properties:</p>
+
+    <bb-entity-table entity=entity show-required=false />
+</div>
+
