@@ -1,5 +1,5 @@
 ---
-layout: layout-container
+layout: layout-sidebar
 name: Changelog
 description: Information on additions, removals, and bug fixes of the API.
 order: 100
@@ -72,24 +72,9 @@ APIs:
 ---
 
 # {{ name }}
+<br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/support/changelog/">https://developer.blackbaud.com/skyapi/support/changelog/</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
 
-<div class="showcase">
-  <div class="clearfix"></div>
-  {{# eachWithMod APIs mod=3 }}
-    {{# if firstOrMod0 }}
-    <div class="row">
-    {{/ if }}
-      <div class="col-sm-6 col-md-4">
-        <i class="fa fa-fw fa-3x {{icon}} showcase-icon"></i>
-        <div class="showcase-desc">
-          <h2>
-            <a href="{{location}}">{{title}}</a>
-          </h2>
-          <p>{{description}}</p>
-        </div>
-      </div>
-    {{# if lastOrMod1 }}
-    </div>
-    {{/ if }}
-  {{/ eachWithMod }}
-</div>
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/support/changelog/' }, 10000); </script>

@@ -16,32 +16,9 @@ appShowcase:
 
 # {{name}}
 
-<div class="showcase">
-  <div class="clearfix"></div>
-  {{# eachWithMod appShowcase mod=3 }}
-    {{# if firstOrMod0 }}
-    <div class="row showcase-row">
-    {{/ if }}
-      <div class="col-sm-6 col-md-4">
-        <i class="fa fa-fw fa-3x {{ icon }} showcase-icon"></i>
-        <div class="showcase-desc">
-          <h2>{{ title }}</h2>
-          <p>{{ description }}</p>
-            {{# if repo }}<p>
-              <a class="btn btn-primary" href="{{ repo }}" target="_blank">
-                <i class="fa fa-github"></i> View on GitHub
-              </a></p>
-            {{/ if }}
-            {{# if demo }}
-            <p>
-              <a class="btn btn-default" href="{{ demo }}" target="_blank">
-                <i class="fa fa-globe"></i> View live demo
-              </a></p>
-            {{/ if }}
-        </div>
-      </div>
-    {{# if lastOrMod1 }}
-    </div>
-    {{/ if }}
-  {{/ eachWithMod }}
-</div>
+   <br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/docs/code/app-showcase/">https://developer.blackbaud.com/skyapi/docs/code/app-showcase</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
+
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/docs/code/app-showcase' }, 10000); </script>

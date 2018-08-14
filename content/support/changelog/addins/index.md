@@ -12,12 +12,9 @@ title: Add-ins Changelog
 
 # {{ name }}
 
-Monitor this page to keep up with latest changes to SKY Add-ins.
+<br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/support/changelog/addins">https://developer.blackbaud.com/skyapi/support/changelog/addins</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
 
-## 2018-07-31
-
-### New
-
-SKY Add-ins have been released for our Beta participants. Add-ins enable developers to build complementary features that integrate deeply within the user interface of Blackbaud's solutions. Add-ins are implemented as web applications that run external to the Blackbaud host application, so they can do almost anything that a webpage can do inside a browser.
-
-This initial release includes documentation on [what add-ins are](/docs/addins/overview), [how to create add-ins](/docs/addins/), what [extension points](/docs/addins/concepts/extension-points/) are available, and more!
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/support/changelog/addins' }, 10000); </script>

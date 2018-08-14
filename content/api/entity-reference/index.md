@@ -38,23 +38,9 @@ entity:
 ---
 
 <h1>{{ name }}</h1>
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="showcase row" stache-equal-height>
-<div class="clearfix"></div>
-{{# eachWithMod entity mod=3 }}
-{{# if firstOrMod0 }}
- <div class="row">
- {{/ if }}
-        <div class="col-sm-4">
-            <i class="fa fa-fw fa-3x {{ icon }} showcase-icon"></i>
-            <div class="showcase-desc">
-                <h2>
-                    <a href="{{ url }}">{{ name }}</a>
-                </h2>
-                <p>{{ description }}</p>
-            </div>
-        </div>
-        {{# if lastOrMod1 }}</div><br />{{/ if }}{{/ eachWithMod }}
-        </div></div></div></div>
+<br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/api/entity-reference">https://developer.blackbaud.com/skyapi/api/entity-reference</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
+
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/api/entity-reference' }, 10000); </script>
