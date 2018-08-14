@@ -13,12 +13,9 @@ title: Ideas
 
 # Ideas
 
-<br>
+<br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/support/ideas">https://developer.blackbaud.com/skyapi/support/ideas</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
 
-Have feedback on how to improve the {{ stache.config.api_type_name }} developer experience? Add your idea below, or vote and comment on existing ideas.
-
-<br>
-
-<iframe frameborder=0 width=900 height=2000 src="{{ stache.config.support_ideas_url }}">
-  <p>Your browser does not support iframes.</p>
-</iframe>
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/support/ideas' }, 10000); </script>

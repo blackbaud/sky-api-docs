@@ -11,79 +11,12 @@ back_to_top: true
 title: Basics
 ---
 
-{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
 
 # {{ name }}
 
-The following information provides an overview of some key concepts within the {{ stache.config.api_type_name }}.  We'll assume you have some familiarity with RESTful programming concepts and the associated tools and techniques for consuming web services.
+   <br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/docs/basics">https://developer.blackbaud.com/skyapi/docs/basics</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
 
-## Base URL 
-
-{{ include 'includes/basics/baseurl.md' }}
-
-## Scheme
-
-{{ include 'includes/basics/scheme.md' }}
-
-## Subscription
-
-{{ include 'includes/basics/subscription.md' }}
-
-
-## Authorization
-
-{{ include 'includes/basics/authorization.md' }}
-
-## HTTP verbs
-
-{{ include 'includes/basics/httpverbs.md' }}
-
-## Request headers
-
-{{ include 'includes/basics/requestheaders.md' }}
-
-## Content types
-
-{{ include 'includes/basics/contenttypes.md' }}
-
-## Regenerate your app secret
-
-{{ include 'includes/basics/appsecret.md' }}
-
-## Response status codes
-
-{{ include 'includes/basics/response.md' }}
-
-## Rate limits
-{{ include 'includes/basics/ratelimits.md' }}
-
-## Quotas
-
-{{ include 'includes/basics/quotas.md' }}
-
-## Pagination
-
-{{ include 'includes/basics/pagination.md' }}
-
-## Date formats
-
-{{ include 'includes/basics/dateformats.md' }}
-
-## Fuzzy dates
-
-{{ include 'includes/basics/fuzzydates.md' }}
-
-## Security
-
-{{ include 'includes/basics/security.md' }}
-
-## Activating the {{ stache.config.dev_console_name }}
-
-{{ include 'includes/basics/skyapiconsole.md' }}
-
-## Breaking changes
-
-{{ include 'includes/basics/breakingchanges.md' }}
-
-{{ include stache.config.partial_disqus }}
-
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/docs/basics' }, 10000); </script>
