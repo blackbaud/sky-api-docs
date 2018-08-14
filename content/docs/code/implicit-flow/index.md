@@ -8,5 +8,9 @@ title: Implicit Flow Code Samples
 ---
 
 # {{name}}
-<br />
-<p><bb-alert bb-alert-type="warning"><strong>Important!  </strong> Our code samples provide very basic examples of how to interact with the Blackbaud OAuth 2.0 Service.  You are free to choose the client library and method that best suit your needs when creating production-level applications.</bb-alert></p>
+   <br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/docs/code/implicit-flow">https://developer.blackbaud.com/skyapi/docs/code/implicit-flow</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
+
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/docs/code/implicit-flow' }, 10000); </script>

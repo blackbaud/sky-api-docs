@@ -7,13 +7,12 @@ icon: fa fa-fw fa-3x fa-chrome
 showBreadcrumbs: true
 ---
 
-{{ include stache.config.partial_header_edit }}
 
 # Implicit Flow - {{ name }}
 
-<a class="btn btn-primary" href="{{ stache.config.github_repo_implicit_flow_chrome_extension }}" target="blank"><i class="fa fa-github fa-lg"></i> GitHub</a>
+   <br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/docs/code/implicit-flow/">https://developer.blackbaud.com/skyapi/docs/code/implicit-flow</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
 
-Learn how to create a Chrome browser extension that interacts with Google's InboxSDK and SKY API constituent data via the OAuth 2.0 Implicit Flow.
-
-<a href="{{ stache.config.github_repo_implicit_flow_chrome_extension }}" target="_blank">View the source on GitHub <i class="fa fa-external-link"></i></a>
-
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/docs/code/implicit-flow' }, 10000); </script>

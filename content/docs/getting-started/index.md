@@ -2,48 +2,17 @@
 name: Getting Started
 description: Obtain the necessary knowledge to make API calls using our interactive <%= stache.config.dev_console_name %>
 order: 100
-layout: layout-tutorial
+layout: layout-sidebar
 published: true
 back_to_top: true
 title: Getting Started
-sidebarLayoutSecondaryColumn: col-lg-2 col-md-3 col-sm-12 sidebar-tutorial
-sidebarLayoutPrimaryColumn: col-lg-8 col-md-8 col-sm-12
-bootstrap_container: bg-tutorial
-markdown: false
 ---
 
-{{ include stache.config.partial_header_comments }}{{ include stache.config.partial_header_edit }}
+<h1>{{ name }}</h1>
 
-<section class="section-padding bg-tutorial">
-  <div class="text-center">
-    <h1 class="tutorial">{{ name }}</h1>
+<br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/docs/getting-started">https://developer.blackbaud.com/skyapi/docs/getting-started</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
 
-<p class="lead tutorial">To get started using {{ stache.config.product_name_short }}, follow this step-by-step guide. After you complete this tutorial, you'll have your Blackbaud developer account, a subscription key, and you'll learn how to try our {{ stache.config.product_name_short }} console.</p>
-
-  <ul class="slide-container">
-<li class="slide">
-<h2 class="tutorial">Step 1 &#8211; Set up a developer account</h2>
-{{ include 'includes/getting-started/step1.md' }}</li>
-
-<li class="slide">
-<h2 class="tutorial">Step 2 &#8211; Get a subscription key</h2>
-{{ include 'includes/getting-started/step2.md' }}</li>
-
-<li class="slide">
-<h2 class="tutorial">Step 3 &#8211; Activate the {{ stache.config.product_name_short }}  Console </h2>
-{{ include 'includes/shared/nxt-web-api/getting-started/step3.md' }}</li>
-
-<li class="slide">
-<h2 class="tutorial">Step 4 &#8211; View the Endpoint Reference</h2>
-{{ include 'includes/getting-started/step4.md' }}</li>
-
-<li class="slide">
-<h2 class="tutorial">Step 5 &#8211; Try it!</h2>
-{{ include 'includes/getting-started/step5.md' }}</li>
-
-<li class="slide">
-<h2 class="tutorial">Step 6 &#8211; Next steps</h2>
-{{ include 'includes/getting-started/step6.md' }}</li>
-
-</ul>
-{{ include stache.config.partial_disqus }}
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/docs/getting-started' }, 10000); </script>

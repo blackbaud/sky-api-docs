@@ -12,4 +12,9 @@ title: Payments (Beta) Changelog
 
 # {{ name }}
 
-Monitor this page to keep up with the [Payments API (Beta)]({{ stache.config.portal_endpoints_payments }}) latest changes and {{ stache.config.api_type_name }} service releases.
+<br />
+<bb-alert bb-alert-type="warning">This page has moved to **<a href="https://developer.blackbaud.com/skyapi/beta/payments/changelog/">https://developer.blackbaud.com/skyapi/beta/payments/changelog/</a>**. Redirecting in 10 seconds...
+</bb-alert>
+<br /> <br />
+
+<script> var timer = setTimeout(function() { window.location='https://developer.blackbaud.com/skyapi/beta/payments/changelog/' }, 10000); </script>

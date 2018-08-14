@@ -1,7 +1,7 @@
 ---
 layout: layout-container
 name: Managing your apps
-published: true     
+published: false     
 showInNav: false
 ---
 
