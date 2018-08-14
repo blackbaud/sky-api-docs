@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!-- Web.Config Configuration File -->
+<configuration>
+  <appSettings>
+    {{#if bbauth.isEnabled }}
+    <add key="AuthAddress" value="{{ bbauth.authAddress }}" />
+    <add key="RootUrl" value="{{ bbauth.rootUrl }}" />
+    <add key="ClientId" value="{{ bbauth.clientId }}" />
+    <add key="ForbiddenContent" value="This site is restricted to Blackbaud staff members." />
+    <add key="AnonymousPaths" value="{{ bbauth.anonymousPaths }}" />
+    <add key="AllowedEmailDomains" value="blackbaud.com;blackbaud.me;blackbaud.au;blackbaud.co.uk;blackbaud.ca;attentive.ly;microedge.com;smarttuition.com;everydayhero.com" />
+    {{/if}}
+  </appSettings>
+  <system.webServer>
+    <caching enabled="false" />
+    <modules runAllManagedModulesForAllRequests="true"/>
+    <validation validateIntegratedModeConfiguration="false" />
+    <staticContent>
+      <remove fileExtension=".svg" />
+      <remove fileExtension=".eot" />
+      <remove fileExtension=".woff" />
+      <remove fileExtension=".woff2" />
+      <remove fileExtension=".json" />
+      <mimeMap fileExtension=".svg" mimeType="image/svg+xml"  />
+      <mimeMap fileExtension=".eot" mimeType="application/vnd.ms-fontobject" />
+      <mimeMap fileExtension=".woff" mimeType="application/x-woff" />
+      <mimeMap fileExtension=".woff2" mimeType="application/x-woff2" />
+      <mimeMap fileExtension=".json" mimeType="application/json" />
+    </staticContent>
+    <httpProtocol>
+      <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="*" />
+      </customHeaders>
+    </httpProtocol>
+  </system.webServer>
+  <system.web>
+    <compilation targetFramework="4.6"/>
+    <httpRuntime targetFramework="4.6" />
+  </system.web>
+</configuration>

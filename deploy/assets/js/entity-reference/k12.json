@@ -1,0 +1,2854 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "School",
+    "version": "1.0",
+    "description": "This API is used to provide access to school information such as users, academics, admissions, athletics, content, lists, and general school info."
+  },
+  "host": "api.nxt.blackbaud-dev.com",
+  "basePath": "/school",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Bb-Api-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    },
+    "oauth2Blackbaud OAuth 2.0 ServiceAuthorizationCode": {
+      "type": "oauth2",
+      "scopes": {},
+      "flow": "accessCode",
+      "authorizationUrl": "https://oauth2.sky.blackbaud.com/authorization",
+      "tokenUrl": "https://oauth2.sky.blackbaud.com/token"
+    },
+    "oauth2Blackbaud OAuth 2.0 ServiceImplicit": {
+      "type": "oauth2",
+      "scopes": {},
+      "flow": "implicit",
+      "authorizationUrl": "https://oauth2.sky.blackbaud.com/authorization"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceAuthorizationCode": []
+    },
+    {
+      "apiKeyQuery": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceAuthorizationCode": []
+    },
+    {
+      "apiKeyHeader": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceImplicit": []
+    },
+    {
+      "apiKeyQuery": [],
+      "oauth2Blackbaud OAuth 2.0 ServiceImplicit": []
+    }
+  ],
+  "paths": {
+    "/v1/school/roles": {
+      "get": {
+        "description": "Returns a list of roles.",
+        "operationId": "59f0b18e9e4eda0d6c07bd23",
+        "summary": "Roles",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of role entities.",
+            "schema": {
+              "$ref": "#/definitions/RoleModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 3,
+                "value": [
+                  {
+                    "id": 122,
+                    "name": "Teacher",
+                    "hidden": false,
+                    "base_role_id": 15
+                  },
+                  {
+                    "id": 3456,
+                    "name": "Parent",
+                    "hidden": false,
+                    "base_role_id": 16
+                  },
+                  {
+                    "id": 3345,
+                    "name": "Student",
+                    "hidden": false,
+                    "base_role_id": 14
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/school/years": {
+      "get": {
+        "description": "Returns a list of school years.",
+        "operationId": "5a00b82f9e4eda0dfc0bcb0a",
+        "summary": "School Years",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of school year entities.",
+            "schema": {
+              "$ref": "#/definitions/YearModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "current_year": true,
+                    "published": true,
+                    "begin_date": "2017-06-01T00:00:00",
+                    "end_date": "2018-05-31T00:00:00",
+                    "school_year_label": "2017 - 2018"
+                  },
+                  {
+                    "id": 1,
+                    "current_year": false,
+                    "published": true,
+                    "begin_date": "2018-06-01T00:00:00",
+                    "end_date": "2019-05-31T00:00:00",
+                    "school_year_label": "2018 - 2019"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}/addresses": {
+      "get": {
+        "description": "Returns a list of addresses for a user.",
+        "operationId": "5a05ba949e4eda16a4e92991",
+        "summary": "Address (Get)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The immutable system record ID of the user to retrieve the addresses for.",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a <a href=\"https://apidocs.sky.blackbaud.com/api/entity-reference/k12/#!#Collection\">collection</a> of <a href=\"https://apidocs.sky.blackbaud.com/api/entity-reference/k12/#!#AddressModel\">address</a> entities.",
+            "schema": {
+              "$ref": "#/definitions/AddressModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "line_one": "555 Blackbaud Drive",
+                    "line_two": "Building B",
+                    "line_three": "CO: Developer",
+                    "city": "Bedford",
+                    "state": "NH",
+                    "postal_code": "03110",
+                    "country": "United States",
+                    "region": "New England",
+                    "province": "",
+                    "mailing_address": true,
+                    "primary": false,
+                    "user_id": 12345,
+                    "type_id": 1005,
+                    "links": [
+                      {
+                        "user_id": 12345,
+                        "type_id": 1005,
+                        "type": "Office",
+                        "primary": false,
+                        "shared": false
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "line_one": "555 Home Drive",
+                    "line_two": "",
+                    "line_three": "",
+                    "city": "Bedford",
+                    "state": "NH",
+                    "postal_code": "03110",
+                    "country": "United States",
+                    "region": "New England",
+                    "province": "",
+                    "mailing_address": true,
+                    "primary": true,
+                    "user_id": 12345,
+                    "type_id": 1767,
+                    "links": [
+                      {
+                        "user_id": 12345,
+                        "type_id": 1767,
+                        "type": "Home",
+                        "primary": false,
+                        "shared": false
+                      },
+                      {
+                        "user_id": 67890,
+                        "type_id": 1767,
+                        "type": "Home",
+                        "primary": false,
+                        "shared": true,
+                        "shared_user": "Amy Pond",
+                        "shared_relationship": "Companion"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "description": "Creates an address.",
+        "operationId": "5a7b135b9e4eda15fc3f9330",
+        "summary": "Address (Add)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user to create the address for",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "addressModel",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/AddressModel"
+            },
+            "description": "The data used to create the address."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}AddressesPost200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}/addresses/{address_id}": {
+      "patch": {
+        "description": "Edits a user's address.",
+        "operationId": "5a05ba949e4eda16a4e92992",
+        "summary": "Address (Edit)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The immutable system record ID of the user to retrieve the addresses for.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "address_id",
+            "in": "path",
+            "description": "Format - int32. The immutable system record ID of the address to edit.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "patchChanges[AddressModel]",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/PatchChanges[AddressModel]"
+            },
+            "description": "The Address changes. See the Address object for reference."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}Addresses{address_id}Patch200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/academics/sections": {
+      "get": {
+        "description": "Returns a list of sections. <b>Requires Academic Group Manager in the K12 system</b>.",
+        "operationId": "5a0c56039e4eda16a4e929a3",
+        "summary": "Sections",
+        "parameters": [
+          {
+            "name": "level_num",
+            "in": "query",
+            "description": "Format - int32. The school level number to get sections for.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "school_year",
+            "in": "query",
+            "description": "The school year to get sections for. Defaults to the current school year.",
+            "type": "string"
+          },
+          {
+            "name": "department_id",
+            "in": "query",
+            "description": "Format - int32. The department ID to get sections for. Can not be used in conjuction with Grade ID.",
+            "type": "integer"
+          },
+          {
+            "name": "grade_id",
+            "in": "query",
+            "description": "Format - int32. The grade ID to get sections for. Can not be used in conjuction with Department ID.",
+            "type": "integer"
+          },
+          {
+            "name": "offering_id",
+            "in": "query",
+            "description": "Format - int32. The offering ID to get sections for.",
+            "type": "integer"
+          },
+          {
+            "name": "duration_id",
+            "in": "query",
+            "description": "Format - int32. The duration ID to get sections for. Defaults to 0, which returns the current duration.",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of section entities.",
+            "schema": {
+              "$ref": "#/definitions/SectionModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 8410742,
+                    "parent_section_id": 4053350,
+                    "offering_id": 232364,
+                    "lead_section_id": 8410742,
+                    "name": "Cooking 101 - 1",
+                    "section_identifier": "1",
+                    "course_code": "",
+                    "room_id": 123456,
+                    "school_year": "2017-2018",
+                    "duration": {
+                      "id": 60558,
+                      "name": "2nd Semester"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/school/levels": {
+      "get": {
+        "description": "Returns a list of school levels.",
+        "operationId": "5a0c56039e4eda16a4e929a4",
+        "summary": "School Levels",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of school levels entities.",
+            "schema": {
+              "$ref": "#/definitions/LevelModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 3,
+                "value": [
+                  {
+                    "id": 454,
+                    "name": "Level One",
+                    "abbreviation": "T"
+                  },
+                  {
+                    "id": 455,
+                    "name": "Level Two",
+                    "abbreviation": "P"
+                  },
+                  {
+                    "id": 456,
+                    "name": "Level Three",
+                    "abbreviation": "S"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/academics/sections/{section_id}/assignments": {
+      "get": {
+        "description": "Returns a list of assignments for a section. <b>Requires Academic Group Manager in the K12 system</b>.",
+        "operationId": "5a0f52b49e4eda1384d170bc",
+        "summary": "Assignments",
+        "parameters": [
+          {
+            "name": "section_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the section.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "types",
+            "in": "query",
+            "description": "Returns results that match a comma separated list of assignment type IDs.",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "The <a href=\"https://www.blackbaud.com/files/support/helpfiles/education/k12/full-help/Content/bb-oncampus-assignments.html?Highlight=assignment%20status\">status</a> of the assignment. The status corresponds with static system options.",
+            "type": "string"
+          },
+          {
+            "name": "persona_id",
+            "in": "query",
+            "description": "Format - int32. The ID of the persona to get assignments. # = Faculty, 2 = Student. Defaults to 3",
+            "type": "integer"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Return assignments based on the entered string: expired, future, or all. All is the default sort value.",
+            "type": "string"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Returns results with Descriptions or Titles that match search string",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of assignment entities.",
+            "schema": {
+              "$ref": "#/definitions/AssignmentModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 8410742,
+                    "type_id": 1234,
+                    "name": "Cooking 101 - 1",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ostendit pedes et pectus. Si quicquam extra virtutem habeatur in bonis. Honesta oratio, Socratica, Platonis etiam. Duo Reges: constructio interrete. Quis istud possit, inquit, negare? Sin eam, quam Hieronymus, ne fecisset idem, ut voluptatem illam Aristippi in prima commendatione poneret.",
+                    "index_id": 1,
+                    "date": "2017-11-17T00:00:00",
+                    "due_date": "2017-11-19T00:00:00",
+                    "published": true,
+                    "publish_on_assigned": false,
+                    "type": "Homework",
+                    "enrolled": 4,
+                    "rank": 1,
+                    "major": false,
+                    "graded_count": 0,
+                    "status": 2,
+                    "discussion": false
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}/phones": {
+      "get": {
+        "description": "Returns a list of a users phone numbers",
+        "operationId": "5a2fec189e4eda1644716cb4",
+        "summary": "Phone list",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user.",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of phone entities.",
+            "schema": {
+              "$ref": "#/definitions/PhoneModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "number": "555-555-5555",
+                    "index_id": 1,
+                    "type_id": 1,
+                    "links": [
+                      {
+                        "type_id": 1,
+                        "user_id": 1234,
+                        "type": "Home",
+                        "shared": false
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "number": "555-555-5556",
+                    "index_id": 3,
+                    "type_id": 2,
+                    "links": [
+                      {
+                        "type_id": 2,
+                        "user_id": 1234,
+                        "type": "Wireless",
+                        "shared": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "description": "Creates a phone number.",
+        "operationId": "5a7b135b9e4eda15fc3f932f",
+        "summary": "Phone (Add)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user to create the phone number for",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "phoneModel",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/PhoneModel"
+            },
+            "description": "The data used to create the phone number."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}PhonesPost200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}/education": {
+      "get": {
+        "description": "Returns a list of a users education",
+        "operationId": "5a2fec189e4eda1644716cb5",
+        "summary": "Education",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user.",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of education entities.",
+            "schema": {
+              "$ref": "#/definitions/EducationModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "school": "Blackbaud Academy",
+                    "degree": "Computer Engineering",
+                    "grad_year": "2010",
+                    "major": "Software Development",
+                    "field": "Engineering",
+                    "sort_order": 1
+                  },
+                  {
+                    "id": 2,
+                    "school": "Blackbaud Academy",
+                    "degree": "Teaching",
+                    "grad_year": "2014",
+                    "major": "Software Development",
+                    "field": "Teaching",
+                    "sort_order": 2
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}/occupations": {
+      "get": {
+        "description": "Returns a list of a users occupations",
+        "operationId": "5a2fec189e4eda1644716cb6",
+        "summary": "Occupations",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user.",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of occupation entities.",
+            "schema": {
+              "$ref": "#/definitions/OccupationModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 1,
+                    "user_id": 2,
+                    "url": "http://blackbaud.com",
+                    "business_name": "Blackbaud",
+                    "title": "Staff Software Engineer",
+                    "industry": "Social Giving",
+                    "organization": "RDO",
+                    "name": "Software Developer",
+                    "matching_gift": true,
+                    "specialty": "Writing awesome code",
+                    "parent_company": "",
+                    "job_function": "Developer",
+                    "years_employed": 14,
+                    "current": true,
+                    "begin_date": "2004-10-25T00:00:00",
+                    "end_date": "2017-12-08T00:00:00"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users": {
+      "get": {
+        "description": "Returns a paginated list of users, limited to 100 users per page.",
+        "operationId": "5a2fec189e4eda1644716cb7",
+        "summary": "Users",
+        "parameters": [
+          {
+            "name": "roles",
+            "in": "query",
+            "description": "Comma delimited list of role IDs to get users for.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "first_name",
+            "in": "query",
+            "description": "Filter results by first name.",
+            "type": "string"
+          },
+          {
+            "name": "last_name",
+            "in": "query",
+            "description": "Filter results by last name.",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "description": "Filter results by e-mail.",
+            "type": "string"
+          },
+          {
+            "name": "maiden_name",
+            "in": "query",
+            "description": "Filter results by maiden name.",
+            "type": "string"
+          },
+          {
+            "name": "grad_year",
+            "in": "query",
+            "description": "The beginning date in a school year (ex. 2017).",
+            "type": "string"
+          },
+          {
+            "name": "end_grad_year",
+            "in": "query",
+            "description": "The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range.",
+            "type": "string"
+          },
+          {
+            "name": "marker",
+            "in": "query",
+            "description": "Format - int32. The record number to start at.",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of user entities.",
+            "schema": {
+              "$ref": "#/definitions/UserModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 1,
+                    "prefix": "Mr.",
+                    "first_name": "Ashley",
+                    "nick_name": "Awesome",
+                    "middle_name": "Michelle",
+                    "last_name": "Smith",
+                    "maiden_name": "Jones",
+                    "suffix": "",
+                    "email": "example@example.com",
+                    "email_active": true,
+                    "display": "Smith, Ashley (Awesome)",
+                    "deceased": false,
+                    "lost": false
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "description": "Creates a user.",
+        "operationId": "5a7b135b9e4eda15fc3f9333",
+        "summary": "Users (Add)",
+        "parameters": [
+          {
+            "name": "userModel",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/UserModel"
+            },
+            "description": "The data used to create the user."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1UsersPost200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}/relationships": {
+      "get": {
+        "description": "Returns a list of a users relationships",
+        "operationId": "5a3bc08c9e4eda038025e5ca",
+        "summary": "Relationships",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The ID of the user.",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of relationship entities.",
+            "schema": {
+              "$ref": "#/definitions/RelationshipModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 54,
+                    "first_name": "Clark",
+                    "last_name": "Kent",
+                    "relationship": 0,
+                    "primary": true,
+                    "resides_with": false,
+                    "contact": true,
+                    "comment": "This is an example comment",
+                    "show_parent": false,
+                    "user_one_role": "Associate",
+                    "type_id": 0,
+                    "parental_access": true,
+                    "list_as_parent": false,
+                    "tuition_responsible_signer": false,
+                    "user_one_id": 2861920,
+                    "user_two_id": 5078967
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/phonetypes": {
+      "get": {
+        "description": "Returns a list of phone types",
+        "operationId": "5a7b135b9e4eda15fc3f932d",
+        "summary": "Phone Types",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of phone type entities.",
+            "schema": {
+              "$ref": "#/definitions/PhoneTypeModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "type": "Home"
+                  },
+                  {
+                    "id": 2,
+                    "type": "Wireless"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/addresstypes": {
+      "get": {
+        "description": "Returns a list of address types",
+        "operationId": "5a7b135b9e4eda15fc3f932e",
+        "summary": "Address Types",
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of address type entities.",
+            "schema": {
+              "$ref": "#/definitions/AddressTypeModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 2,
+                "value": [
+                  {
+                    "id": 1,
+                    "type": "Home"
+                  },
+                  {
+                    "id": 2,
+                    "type": "Summer"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/sync": {
+      "get": {
+        "description": "Returns a paginated list of users.",
+        "operationId": "5a7b135b9e4eda15fc3f9331",
+        "summary": "Sync",
+        "parameters": [
+          {
+            "name": "base_role_ids",
+            "in": "query",
+            "description": "Comma delimited list of base role IDs to get users for",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "marker",
+            "in": "query",
+            "description": "Format - int32. The last user ID returned. Results will start with the next user in the result set",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of user entities.",
+            "schema": {
+              "$ref": "#/definitions/UserExtendedModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 1,
+                    "prefix": "Mr.",
+                    "first_name": "Ashley",
+                    "nick_name": "Awesome",
+                    "middle_name": "Michelle",
+                    "last_name": "Smith",
+                    "maiden_name": "Jones",
+                    "suffix": "",
+                    "email": "example@example.com",
+                    "email_active": true,
+                    "display": "Smith, Ashley (Awesome)",
+                    "deceased": false,
+                    "lost": false,
+                    "religion": "Buddisim",
+                    "ethnicity": "Caucasian",
+                    "profile_url": "http://example.com",
+                    "audit_date": "2018-01-12T00:00:00",
+                    "enroll_date": "2018-01-12T00:00:00",
+                    "depart_date": "2018-01-12T00:00:00",
+                    "last_sync_date": "2018-01-12T00:00:00",
+                    "host_id": "123456",
+                    "greeting": "",
+                    "retire_date": "2018-01-12T00:00:00",
+                    "affiliation": "",
+                    "citizenship": "United States",
+                    "personal_website": "",
+                    "deceased_date": "2018-01-12T00:00:00",
+                    "living_arrangement": "",
+                    "screen_name": "screenname",
+                    "chat_service": "aol",
+                    "gender": "Female",
+                    "personal_bio": "",
+                    "misc_bio": "",
+                    "custom_field_one": "",
+                    "custom_field_two": "",
+                    "custom_field_three": "",
+                    "custom_field_four": "",
+                    "custom_field_five": "",
+                    "custom_field_six": "",
+                    "custom_field_seven": "",
+                    "custom_field_eight": "",
+                    "custom_field_nine": "",
+                    "custom_field_ten": ""
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/changed": {
+      "get": {
+        "description": "Returns a paginated list of users where their data has been modified.",
+        "operationId": "5a7b135b9e4eda15fc3f9332",
+        "summary": "Changed",
+        "parameters": [
+          {
+            "name": "base_role_ids",
+            "in": "query",
+            "description": "Comma delimited list of base role IDs to get users for.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Format - date-time (as date-time in RFC3339). The date to begin looking for changes.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned when the operation succeeds. The response body contains a collection of user entities.",
+            "schema": {
+              "$ref": "#/definitions/UserExtendedModel"
+            },
+            "examples": {
+              "application/json": {
+                "count": 1,
+                "value": [
+                  {
+                    "id": 1,
+                    "prefix": "Mr.",
+                    "first_name": "Ashley",
+                    "nick_name": "Awesome",
+                    "middle_name": "Michelle",
+                    "last_name": "Smith",
+                    "maiden_name": "Jones",
+                    "suffix": "",
+                    "email": "example@example.com",
+                    "email_active": true,
+                    "display": "Smith, Ashley (Awesome)",
+                    "deceased": false,
+                    "lost": false,
+                    "religion": "Buddisim",
+                    "ethnicity": "Caucasian",
+                    "profile_url": "http://example.com",
+                    "audit_date": "2018-01-12T00:00:00",
+                    "enroll_date": "2018-01-12T00:00:00",
+                    "depart_date": "2018-01-12T00:00:00",
+                    "last_sync_date": "2018-01-12T00:00:00",
+                    "host_id": "123456",
+                    "greeting": "",
+                    "retire_date": "2018-01-12T00:00:00",
+                    "affiliation": "",
+                    "citizenship": "United States",
+                    "personal_website": "",
+                    "deceased_date": "2018-01-12T00:00:00",
+                    "living_arrangement": "",
+                    "screen_name": "screenname",
+                    "chat_service": "aol",
+                    "gender": "Female",
+                    "personal_bio": "",
+                    "misc_bio": "",
+                    "custom_field_one": "",
+                    "custom_field_two": "",
+                    "custom_field_three": "",
+                    "custom_field_four": "",
+                    "custom_field_five": "",
+                    "custom_field_six": "",
+                    "custom_field_seven": "",
+                    "custom_field_eight": "",
+                    "custom_field_nine": "",
+                    "custom_field_ten": ""
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/v1/users/{user_id}": {
+      "patch": {
+        "description": "Edits a user.",
+        "operationId": "5a7b135b9e4eda15fc3f9334",
+        "summary": "User (Edit)",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "Format - int32. The immutable system record ID of the user to update.",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "patchChanges[UserModel]",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/PatchChanges[UserModel]"
+            },
+            "description": "The User changes. See the User object for reference."
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/V1Users{user_id}Patch200ApplicationJsonResponse"
+            }
+          },
+          "400": {
+            "description": "Returned when the specified ID in the request URL is not in the appropriate format."
+          },
+          "403": {
+            "description": "Returned when the user does not have permission to the route."
+          },
+          "404": {
+            "description": "Returned when the specified action is not found."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Collection[AssignmentModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AssignmentModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "AssignmentModel": {
+      "description": "Assignment Model",
+      "required": [
+        "id",
+        "type_id",
+        "name",
+        "description",
+        "index_id",
+        "date",
+        "due_date",
+        "published",
+        "publish_on_assigned",
+        "type",
+        "enrolled",
+        "rank",
+        "major",
+        "graded_count",
+        "status",
+        "discussion"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the assignment",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "The Type ID of the assignment; the Type ID is a static system value.",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name of the assignment",
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of the assignment",
+          "type": "string"
+        },
+        "index_id": {
+          "format": "int32",
+          "description": "The index ID of the assignment",
+          "type": "integer"
+        },
+        "date": {
+          "format": "date-time",
+          "description": "The date the assignment was assigned; Uses ISO-8601 (24H) format: 2003-04-21T10:29:43",
+          "type": "string"
+        },
+        "due_date": {
+          "format": "date-time",
+          "description": "The date the assignment is due; Uses ISO-8601 (24H) format: 2003-04-21T10:29:43",
+          "type": "string"
+        },
+        "published": {
+          "description": "Returns True if the assignment is published",
+          "type": "boolean"
+        },
+        "publish_on_assigned": {
+          "description": "Returns True if assignment is published when it's assigned; based on the Date property",
+          "type": "boolean"
+        },
+        "type": {
+          "description": "The assignment type (ex. Homework, Essay)",
+          "type": "string"
+        },
+        "enrolled": {
+          "format": "int32",
+          "description": "The number of students enrolled in a class.",
+          "type": "integer"
+        },
+        "rank": {
+          "format": "int32",
+          "description": "Gets or sets the rank of the assignment",
+          "type": "integer"
+        },
+        "major": {
+          "description": "Whether the assignment is a major assignment or not; a major assignment is a user-defined value",
+          "type": "boolean"
+        },
+        "graded_count": {
+          "format": "int32",
+          "description": "Returns the number of assignments that have been graded",
+          "type": "integer"
+        },
+        "status": {
+          "format": "int32",
+          "description": "The status of the assignment",
+          "type": "integer"
+        },
+        "discussion": {
+          "description": "Returns True if Discussion is enabled; Discussion is a user-defined value.",
+          "type": "boolean"
+        }
+      },
+      "x-display-name": "Assignment"
+    },
+    "Collection[SectionModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SectionModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "SectionModel": {
+      "description": "Section Model",
+      "required": [
+        "id",
+        "parent_section_id",
+        "offering_id",
+        "lead_section_id",
+        "name",
+        "section_identifier",
+        "course_code",
+        "room_id",
+        "school_year"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the section",
+          "type": "integer"
+        },
+        "parent_section_id": {
+          "format": "int32",
+          "description": "The ID that leads you back to the offered section",
+          "type": "integer"
+        },
+        "offering_id": {
+          "format": "int32",
+          "description": "The ID of an offered course",
+          "type": "integer"
+        },
+        "lead_section_id": {
+          "format": "int32",
+          "description": "The ID of the first section in a series of terms",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The name of the section",
+          "type": "string"
+        },
+        "section_identifier": {
+          "description": "The identifier used to differentiate between multiple sections that contain a course; the Section Identifier is a user-entered value",
+          "type": "string"
+        },
+        "course_code": {
+          "description": "The identifier used to reference a course; the Course Code is a user-entered value",
+          "type": "string"
+        },
+        "room_id": {
+          "format": "int32",
+          "description": "The ID of the room the section is held in",
+          "type": "integer"
+        },
+        "school_year": {
+          "description": "The school year date range in which the section occurs",
+          "type": "string"
+        },
+        "duration": {
+          "$ref": "#/definitions/DurationModel",
+          "description": "The duration for the section"
+        }
+      },
+      "x-display-name": "Section"
+    },
+    "DurationModel": {
+      "description": "Duration Model",
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the duration",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The starting term of the section",
+          "type": "string"
+        }
+      }
+    },
+    "Collection[RoleModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RoleModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "RoleModel": {
+      "description": "Role Model",
+      "required": [
+        "id",
+        "name",
+        "hidden",
+        "base_role_id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of a role",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The label used to identify a role",
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Returns True if the role is hidden",
+          "type": "boolean"
+        },
+        "base_role_id": {
+          "format": "int32",
+          "description": "The ID used to associate roles with the original role; all roles are based upon preexisting base role IDs",
+          "type": "integer"
+        }
+      },
+      "x-display-name": "Role"
+    },
+    "Collection[YearModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/YearModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "YearModel": {
+      "description": "School Year Model",
+      "required": [
+        "id",
+        "current_year",
+        "published",
+        "begin_date",
+        "end_date",
+        "school_year_label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of a school year",
+          "type": "integer"
+        },
+        "current_year": {
+          "description": "Returns True if Current Year is enabled for the respective school year",
+          "type": "boolean"
+        },
+        "published": {
+          "description": "Gets or sets the published flag",
+          "type": "boolean"
+        },
+        "begin_date": {
+          "format": "date-time",
+          "description": "The begin date in a school year date range. Uses ISO-8601 (24H) format: 2003-04-21T10:29:43",
+          "type": "string"
+        },
+        "end_date": {
+          "format": "date-time",
+          "description": "The end date in a school year date range. Uses ISO-8601 (24H) format: 2003-04-21T10:29:43",
+          "type": "string"
+        },
+        "school_year_label": {
+          "description": "The label used to identify the range of dates in a school year",
+          "type": "string"
+        }
+      },
+      "x-display-name": "School Year"
+    },
+    "Collection[LevelModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LevelModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "LevelModel": {
+      "description": "Level Model",
+      "required": [
+        "id",
+        "name",
+        "abbreviation"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of a school level",
+          "type": "integer"
+        },
+        "name": {
+          "description": "The label used to identify a school level",
+          "type": "string"
+        },
+        "abbreviation": {
+          "description": "The abbrevation associated with a school level",
+          "type": "string"
+        }
+      },
+      "x-display-name": "Level"
+    },
+    "Collection[PhoneTypeModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhoneTypeModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "PhoneTypeModel": {
+      "description": "Phone Type Model",
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the phone type",
+          "type": "integer"
+        },
+        "type": {
+          "description": "The name of the phone type",
+          "type": "string"
+        }
+      }
+    },
+    "Collection[AddressTypeModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressTypeModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "AddressTypeModel": {
+      "description": "Address Type Model",
+      "required": [
+        "id",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the address type",
+          "type": "integer"
+        },
+        "type": {
+          "description": "The name of the address type",
+          "type": "string"
+        }
+      }
+    },
+    "Collection[PhoneModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhoneModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "PhoneModel": {
+      "description": "Phone Model",
+      "required": [
+        "id",
+        "number",
+        "index_id",
+        "user_id",
+        "type_id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the phone number",
+          "type": "integer"
+        },
+        "number": {
+          "description": "The phone number",
+          "type": "string"
+        },
+        "index_id": {
+          "format": "int32",
+          "description": "The Index ID of the phone number",
+          "type": "integer"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "The ID of the user the phone number belongs to",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "The TypeID of a phone number; the TypeID corresponds with the type of phone number (ex Cell, Work, Home)",
+          "type": "integer"
+        },
+        "links": {
+          "description": "Returns each instance of a phone type for each relationship to the user",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhoneTypeLinkModel"
+          }
+        }
+      },
+      "x-display-name": "Phone"
+    },
+    "PhoneTypeLinkModel": {
+      "description": "Phone Type Model",
+      "required": [
+        "type_id",
+        "user_id",
+        "type",
+        "shared",
+        "shared_user",
+        "shared_relationship"
+      ],
+      "type": "object",
+      "properties": {
+        "type_id": {
+          "format": "int32",
+          "description": "The ID of the phone type",
+          "type": "integer"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "The ID of the user",
+          "type": "integer"
+        },
+        "type": {
+          "description": "The name of the type",
+          "type": "string"
+        },
+        "shared": {
+          "description": "Returns true if changes to a phone number are made to all users with a shared relationship (Read Only)",
+          "type": "boolean"
+        },
+        "shared_user": {
+          "description": "The name of the shared user",
+          "type": "string"
+        },
+        "shared_relationship": {
+          "description": "The relationship of the shared user",
+          "type": "string"
+        }
+      },
+      "x-display-name": "Phone Type"
+    },
+    "AddressModel": {
+      "description": "Address Model",
+      "required": [
+        "id",
+        "line_one",
+        "line_two",
+        "line_three",
+        "city",
+        "state",
+        "postal_code",
+        "country",
+        "region",
+        "province",
+        "mailing_address",
+        "primary",
+        "user_id",
+        "type_id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the address",
+          "type": "integer"
+        },
+        "line_one": {
+          "description": "The first line of the address",
+          "type": "string"
+        },
+        "line_two": {
+          "description": "The second line of the address",
+          "type": "string"
+        },
+        "line_three": {
+          "description": "The third line of the address",
+          "type": "string"
+        },
+        "city": {
+          "description": "The city for the address",
+          "type": "string"
+        },
+        "state": {
+          "description": "The state for the address",
+          "type": "string"
+        },
+        "postal_code": {
+          "description": "The postal code for the address",
+          "type": "string"
+        },
+        "country": {
+          "description": "The country for the address",
+          "type": "string"
+        },
+        "region": {
+          "description": "The region for the address",
+          "type": "string"
+        },
+        "province": {
+          "description": "The province for the address",
+          "type": "string"
+        },
+        "mailing_address": {
+          "description": "Returns True if user accepts mail from the address",
+          "type": "boolean"
+        },
+        "primary": {
+          "description": "Returns true if the address is primary",
+          "type": "boolean"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "The ID of the user of the address",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "The type ID associated with an address that is based upon a user's primary relationship to the address",
+          "type": "integer"
+        },
+        "links": {
+          "description": "Returns each instance of an address type for each relationship to the user",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressTypeLinkModel"
+          }
+        }
+      },
+      "example": "{\r\n  \"id\": 1,\r\n  \"line_one\": \"555 Blackbaud Drive\",\r\n  \"line_two\": \"Building B\",\r\n  \"line_three\": \"CO: Developer\",\r\n  \"city\": \"Bedford\",\r\n  \"state\": \"NH\",\r\n  \"postal_code\": \"03110\",\r\n  \"country\": \"United States\",\r\n  \"region\": \"New England\",\r\n  \"province\": \"\",\r\n  \"mailing_address\": true,\r\n  \"primary\": false,\r\n  \"user_id\": 12345,\r\n  \"type_id\": 1005,\r\n  \"links\": [\r\n    {\r\n      \"user_id\": 12345,\r\n      \"type_id\": 1005,\r\n      \"type\": \"Office\",\r\n      \"primary\": false,\r\n      \"shared\": false\r\n    }\r\n  ]\r\n}",
+      "x-display-name": "Address"
+    },
+    "AddressTypeLinkModel": {
+      "description": "Address Type Model",
+      "required": [
+        "user_id",
+        "type_id",
+        "type",
+        "primary",
+        "shared",
+        "shared_user",
+        "shared_relationship"
+      ],
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "format": "int32",
+          "description": "The ID of the user",
+          "type": "integer"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "The ID of the type",
+          "type": "integer"
+        },
+        "type": {
+          "description": "The name of the address type",
+          "type": "string"
+        },
+        "primary": {
+          "description": "Returns true if the address is primary",
+          "type": "boolean"
+        },
+        "shared": {
+          "description": "Returns true if changes to an address are made to all users with a shared relationship (Read Only)",
+          "type": "boolean"
+        },
+        "shared_user": {
+          "description": "The name of the shared user",
+          "type": "string"
+        },
+        "shared_relationship": {
+          "description": "The relationship of the shared user",
+          "type": "string"
+        }
+      },
+      "x-display-name": "Address Type"
+    },
+    "Collection[AddressModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "Collection[EducationModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EducationModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "EducationModel": {
+      "description": "Education Model",
+      "required": [
+        "id",
+        "school",
+        "degree",
+        "grad_year",
+        "major",
+        "field",
+        "sort_order"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the education",
+          "type": "integer"
+        },
+        "school": {
+          "description": "The school name",
+          "type": "string"
+        },
+        "degree": {
+          "description": "The degree recieved",
+          "type": "string"
+        },
+        "grad_year": {
+          "description": "The graduation year. ex. 2017",
+          "type": "string"
+        },
+        "major": {
+          "description": "The major course(s) of study",
+          "type": "string"
+        },
+        "field": {
+          "description": "The field the major was received in",
+          "type": "string"
+        },
+        "sort_order": {
+          "format": "int32",
+          "description": "The order the education appears in the UI",
+          "type": "integer"
+        }
+      },
+      "x-display-name": "Education"
+    },
+    "Collection[OccupationModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OccupationModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "OccupationModel": {
+      "description": "Occupation Model",
+      "required": [
+        "id",
+        "user_id",
+        "url",
+        "business_name",
+        "title",
+        "industry",
+        "organization",
+        "name",
+        "matching_gift",
+        "specialty",
+        "parent_company",
+        "job_function",
+        "years_employed",
+        "current",
+        "begin_date",
+        "end_date"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the occupation",
+          "type": "integer"
+        },
+        "user_id": {
+          "format": "int32",
+          "description": "The ID of the user that the occupation belongs to",
+          "type": "integer"
+        },
+        "url": {
+          "description": "The URL of the business",
+          "type": "string"
+        },
+        "business_name": {
+          "description": "The business name",
+          "type": "string"
+        },
+        "title": {
+          "description": "The job title",
+          "type": "string"
+        },
+        "industry": {
+          "description": "The industry",
+          "type": "string"
+        },
+        "organization": {
+          "description": "The organization",
+          "type": "string"
+        },
+        "name": {
+          "description": "The occupation",
+          "type": "string"
+        },
+        "matching_gift": {
+          "description": "Returns True if the organization matches gifts",
+          "type": "boolean"
+        },
+        "specialty": {
+          "description": "The specialization",
+          "type": "string"
+        },
+        "parent_company": {
+          "description": "The businesses' parent company",
+          "type": "string"
+        },
+        "job_function": {
+          "description": "The function of the job*",
+          "type": "string"
+        },
+        "years_employed": {
+          "format": "int32",
+          "description": "The number of years employed",
+          "type": "integer"
+        },
+        "current": {
+          "description": "Returns True if the user is currently employed at the occupation",
+          "type": "boolean"
+        },
+        "begin_date": {
+          "format": "date-time",
+          "description": "The begin date of the occupation",
+          "type": "string"
+        },
+        "end_date": {
+          "format": "date-time",
+          "description": "The end date of the occupation",
+          "type": "string"
+        }
+      }
+    },
+    "Collection[RelationshipModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelationshipModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "RelationshipModel": {
+      "description": "Relationship Model",
+      "required": [
+        "id",
+        "first_name",
+        "last_name",
+        "relationship",
+        "primary",
+        "resides_with",
+        "contact",
+        "comment",
+        "show_parent",
+        "user_one_role",
+        "type_id",
+        "parental_access",
+        "list_as_parent",
+        "tuition_responsible_signer",
+        "user_one_id",
+        "user_two_id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID of the relationship between the queried user and an associated user",
+          "type": "integer"
+        },
+        "first_name": {
+          "description": "The first name of the user(s) associated with the queried user",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "The last name of the user(s) associated with the queried user",
+          "type": "string"
+        },
+        "relationship": {
+          "format": "int32",
+          "description": "The enum value that describes the relationship (ex. Parent_Child = 6)",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "type": "integer"
+        },
+        "primary": {
+          "description": "Returns True if the user in a relationship is the primary user",
+          "type": "boolean"
+        },
+        "resides_with": {
+          "description": "Returns True if Resides With is enabled in the UI. If enabled, then the user in a relationship resides with the queried user",
+          "type": "boolean"
+        },
+        "contact": {
+          "description": "Returns True if No Contact is enabled in the UI. If enabled, the user cannot be contacted by the queried user",
+          "type": "boolean"
+        },
+        "comment": {
+          "description": "A comment describing the relationship",
+          "type": "string"
+        },
+        "show_parent": {
+          "description": "Returns True if a parent's contact information is displayable in the directory",
+          "type": "boolean"
+        },
+        "user_one_role": {
+          "description": "The role of the user being queried",
+          "type": "string"
+        },
+        "type_id": {
+          "format": "int32",
+          "description": "The ID of the relationship type. The ID corresponds with static options in the UI",
+          "type": "integer"
+        },
+        "parental_access": {
+          "description": "Returns True if Parental Access is enabled in the UI for a relationship type",
+          "type": "boolean"
+        },
+        "list_as_parent": {
+          "description": "Returns True if List as Parent is enabled in the UI for a user. If enabled, the user can be listed in directories as the student's parent",
+          "type": "boolean"
+        },
+        "tuition_responsible_signer": {
+          "description": "Returns True if Responsible Signer is enabled in the UI for a user. If enabled, it indicates the user signs enrollment contracts in onBoard",
+          "type": "boolean"
+        },
+        "user_one_id": {
+          "format": "int32",
+          "description": "The ID of the user associated with user_two_id",
+          "type": "integer"
+        },
+        "user_two_id": {
+          "format": "int32",
+          "description": "The ID of the user associated with user_one_id",
+          "type": "integer"
+        }
+      },
+      "x-display-name": "Relationship"
+    },
+    "Collection[UserExtendedModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserExtendedModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "UserExtendedModel": {
+      "description": "User Extended Model",
+      "required": [
+        "id",
+        "prefix",
+        "first_name",
+        "nick_name",
+        "middle_name",
+        "last_name",
+        "maiden_name",
+        "suffix",
+        "email",
+        "email_active",
+        "display",
+        "deceased",
+        "lost",
+        "religion",
+        "ethnicity",
+        "profile_url",
+        "audit_date",
+        "enroll_date",
+        "depart_date",
+        "last_sync_date",
+        "username",
+        "host_id",
+        "greeting",
+        "retire_date",
+        "affiliation",
+        "citizenship",
+        "personal_website",
+        "deceased_date",
+        "living_arrangement",
+        "screen_name",
+        "chat_service",
+        "gender",
+        "personal_bio",
+        "misc_bio",
+        "custom_field_one",
+        "custom_field_two",
+        "custom_field_three",
+        "custom_field_four",
+        "custom_field_five",
+        "custom_field_six",
+        "custom_field_seven",
+        "custom_field_eight",
+        "custom_field_nine",
+        "custom_field_ten",
+        "occupations",
+        "addresses",
+        "relationships",
+        "education",
+        "phones",
+        "roles"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID associated with a user",
+          "type": "integer"
+        },
+        "prefix": {
+          "description": "The prefix of a user",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "The first name of a user",
+          "type": "string"
+        },
+        "nick_name": {
+          "description": "The nickname of a user",
+          "type": "string"
+        },
+        "middle_name": {
+          "description": "The middle name of a user",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "The last name of a user",
+          "type": "string"
+        },
+        "maiden_name": {
+          "description": "The maiden name of a user",
+          "type": "string"
+        },
+        "suffix": {
+          "description": "The suffix of a user",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of a user",
+          "type": "string"
+        },
+        "email_active": {
+          "description": "Returns true if the users e-mail is ok to send to",
+          "type": "boolean"
+        },
+        "display": {
+          "description": "Display name field generated from first name, last name, nickname, and grad year (read only)",
+          "type": "string"
+        },
+        "deceased": {
+          "description": "Returns true if deceased is selected under sensitive information in a personal profile ex: {last_name} {suffix*}, {first_name} {(maidenname*}) {grad_year*} *If not populated fields will not appear (read only)",
+          "type": "boolean"
+        },
+        "lost": {
+          "description": "Returns true if lost is selected under sensitive information in a personal profile (read only)",
+          "type": "boolean"
+        },
+        "religion": {
+          "description": "The religion field from a user profile",
+          "type": "string"
+        },
+        "ethnicity": {
+          "description": "The ethnicity field from a user profile",
+          "type": "string"
+        },
+        "profile_url": {
+          "description": "The profile url for a user profile",
+          "type": "string"
+        },
+        "audit_date": {
+          "format": "date-time",
+          "description": "The audit date from a user profile",
+          "type": "string"
+        },
+        "enroll_date": {
+          "format": "date-time",
+          "description": "The enroll date from a user profile",
+          "type": "string"
+        },
+        "depart_date": {
+          "format": "date-time",
+          "description": "The depart date from a user profile",
+          "type": "string"
+        },
+        "last_sync_date": {
+          "format": "date-time",
+          "description": "The last sync date of a user profile",
+          "type": "string"
+        },
+        "username": {
+          "description": "The username used to access the system",
+          "type": "string"
+        },
+        "host_id": {
+          "description": "The hostId in the user profile",
+          "type": "string"
+        },
+        "greeting": {
+          "description": "The greeting in the user profile",
+          "type": "string"
+        },
+        "retire_date": {
+          "format": "date-time",
+          "description": "The retire date in the user profile",
+          "type": "string"
+        },
+        "affiliation": {
+          "description": "The affiliation in the user profile",
+          "type": "string"
+        },
+        "citizenship": {
+          "description": "The citizenship field in the user profile",
+          "type": "string"
+        },
+        "personal_website": {
+          "description": "The personal website in the user profile",
+          "type": "string"
+        },
+        "deceased_date": {
+          "format": "date-time",
+          "description": "The deceased date in the user profile",
+          "type": "string"
+        },
+        "living_arrangement": {
+          "description": "The living arrangement in the user profile",
+          "type": "string"
+        },
+        "screen_name": {
+          "description": "The screen name in the user profile",
+          "type": "string"
+        },
+        "chat_service": {
+          "description": "The chat service in the user profile",
+          "type": "string"
+        },
+        "gender": {
+          "description": "The gender of the user",
+          "type": "string"
+        },
+        "personal_bio": {
+          "description": "The personal bio from the user profile",
+          "type": "string"
+        },
+        "misc_bio": {
+          "description": "The misc bio from the user profile",
+          "type": "string"
+        },
+        "custom_field_one": {
+          "description": "A custom feild on the user profile (one of ten)",
+          "type": "string"
+        },
+        "custom_field_two": {
+          "description": "A custom feild on the user profile (two of ten)",
+          "type": "string"
+        },
+        "custom_field_three": {
+          "description": "A custom feild on the user profile (three of ten)",
+          "type": "string"
+        },
+        "custom_field_four": {
+          "description": "A custom feild on the user profile (four of ten)",
+          "type": "string"
+        },
+        "custom_field_five": {
+          "description": "A custom feild on the user profile (five of ten)",
+          "type": "string"
+        },
+        "custom_field_six": {
+          "description": "A custom feild on the user profile (six of ten)",
+          "type": "string"
+        },
+        "custom_field_seven": {
+          "description": "A custom feild on the user profile (seven of ten)",
+          "type": "string"
+        },
+        "custom_field_eight": {
+          "description": "A custom feild on the user profile (eight of ten)",
+          "type": "string"
+        },
+        "custom_field_nine": {
+          "description": "A custom feild on the user profile (nine of ten)",
+          "type": "string"
+        },
+        "custom_field_ten": {
+          "description": "A custom feild on the user profile (ten of ten)",
+          "type": "string"
+        },
+        "occupations": {
+          "description": "List of the users occupations",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OccupationModel"
+          }
+        },
+        "addresses": {
+          "description": "List of the user addresses",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AddressModel"
+          }
+        },
+        "relationships": {
+          "description": "List of the user relationships",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelationshipModel"
+          }
+        },
+        "education": {
+          "description": "List of the user educational institutions",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EducationModel"
+          }
+        },
+        "phones": {
+          "description": "List of the user phone numbers",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhoneModel"
+          }
+        },
+        "roles": {
+          "description": "List of the user roles",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RoleModel"
+          }
+        }
+      },
+      "x-display-name": "User Extended"
+    },
+    "Collection[UserModel]": {
+      "description": "Represents a collection of items",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "description": "Gets the count of items in value",
+          "type": "integer",
+          "readOnly": true
+        },
+        "value": {
+          "description": "Gets or sets the collection",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserModel"
+          }
+        },
+        "next_link": {
+          "description": "For paginated responses, the URI for the next page of results",
+          "type": "string"
+        }
+      }
+    },
+    "UserModel": {
+      "description": "User Model",
+      "required": [
+        "id",
+        "prefix",
+        "first_name",
+        "nick_name",
+        "middle_name",
+        "last_name",
+        "maiden_name",
+        "suffix",
+        "email",
+        "email_active",
+        "display",
+        "deceased",
+        "lost"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "description": "The ID associated with a user",
+          "type": "integer"
+        },
+        "prefix": {
+          "description": "The prefix of a user",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "The first name of a user",
+          "type": "string"
+        },
+        "nick_name": {
+          "description": "The nickname of a user",
+          "type": "string"
+        },
+        "middle_name": {
+          "description": "The middle name of a user",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "The last name of a user",
+          "type": "string"
+        },
+        "maiden_name": {
+          "description": "The maiden name of a user",
+          "type": "string"
+        },
+        "suffix": {
+          "description": "The suffix of a user",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of a user",
+          "type": "string"
+        },
+        "email_active": {
+          "description": "Returns true if the users e-mail is ok to send to",
+          "type": "boolean"
+        },
+        "display": {
+          "description": "Display name field generated from first name, last name, nickname, and grad year (read only)",
+          "type": "string"
+        },
+        "deceased": {
+          "description": "Returns true if deceased is selected under sensitive information in a personal profile ex: {last_name} {suffix*}, {first_name} {(maidenname*}) {grad_year*} *If not populated fields will not appear (read only)",
+          "type": "boolean"
+        },
+        "lost": {
+          "description": "Returns true if lost is selected under sensitive information in a personal profile (read only)",
+          "type": "boolean"
+        }
+      },
+      "x-display-name": "User"
+    },
+    "PatchChanges[UserModel]": {
+      "description": "class",
+      "type": "object",
+      "properties": {},
+      "example": "{\r\n  \"id\": 1,\r\n  \"prefix\": \"Mrs.\",\r\n  \"first_name\": \"Ashley\",\r\n  \"nick_name\": \"Awesome\",\r\n  \"middle_name\": \"Michelle\",\r\n  \"last_name\": \"Smith\",\r\n  \"maiden_name\": \"Jones\",\r\n  \"suffix\": \"\",\r\n  \"email\": \"example@example.com\",\r\n  \"email_active\": true,\r\n  \"display\": \"Smith, Ashley (Awesome)\",\r\n  \"deceased\": false,\r\n  \"lost\": false\r\n}"
+    },
+    "PatchChanges[AddressModel]": {
+      "description": "class",
+      "type": "object",
+      "properties": {},
+      "example": "{\r\n  \"id\": 1,\r\n  \"line_one\": \"555 Blackbaud Drive\",\r\n  \"line_two\": \"Building B\",\r\n  \"line_three\": \"CO: Developer\",\r\n  \"city\": \"Bedford\",\r\n  \"state\": \"NH\",\r\n  \"postal_code\": \"03110\",\r\n  \"country\": \"United States\",\r\n  \"region\": \"New England\",\r\n  \"province\": \"\",\r\n  \"mailing_address\": true,\r\n  \"primary\": false,\r\n  \"user_id\": 12345,\r\n  \"type_id\": 1005,\r\n  \"links\": [\r\n    {\r\n      \"user_id\": 12345,\r\n      \"type_id\": 1005,\r\n      \"type\": \"Office\",\r\n      \"primary\": false,\r\n      \"shared\": false\r\n    }\r\n  ]\r\n}"
+    },
+    "V1Users{user_id}PhonesPost200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1Users{user_id}AddressesPost200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1UsersPost200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1Users{user_id}Patch200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "V1Users{user_id}Addresses{address_id}Patch200ApplicationJsonResponse": {
+      "format": "int32",
+      "type": "integer"
+    }
+  }
+}
